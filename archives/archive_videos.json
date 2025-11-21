@@ -862,7 +862,10 @@
     "date": "2021-07-22",
     "thumbnail": "https://i.ytimg.com/vi/eU6ifOgrGSk/mqdefault.jpg",
     "category": "ゲーム実況",
-    "keywords": ["グウェル・オス・ガール","叶","ポケモンユナイト"]
+    "keywords": ["グウェル・オス・ガール","叶","神田笑一","鷹宮リオン","ポケモンユナイト"],
+    "songs":[
+       {"title":"ゲーム実況","artist":["グウェル・オス・ガール","叶","神田笑一","鷹宮リオン"],"start":249}
+     ]
   },
   {
     "youtubeId": "xNOudkbNPRM",
@@ -871,7 +874,7 @@
     "date": "2021-07-22",
     "thumbnail": "https://i.ytimg.com/vi/xNOudkbNPRM/mqdefault.jpg",
     "category": "ゲーム実況",
-    "keywords": ["天宮こころ","愛園愛美","森中花咲","葉山舞鈴","花畑チャイカ","ポケモンユナイト"]
+    "keywords": ["天宮こころ","愛園愛美","森中花咲","葉山舞鈴","花畑チャイカ","ポケモンユナイト"],
   },
   {
     "youtubeId": "xNOudkbNPRM",
@@ -883,6 +886,18 @@
     "keywords": ["グウェル・オス・ガール","安土桃","先斗寧","伏見ガク","黛灰","レヴィ・エリファ","ベルモンド・バンデラス","オリバー・エバンス","오지유（オ・ジユ）","세피나（セフィナ）","나세라（ナ・セラ）"]
   },
   {
+    "youtubeId": "8PalxIarQeI",
+    "title": "【APEX】21万人記念企画！APEX凸待ち！～後編～【にじさんじ/える】",
+    "channel": "える",
+    "date": "2021-07-06",
+    "thumbnail": "https://i.ytimg.com/vi/8PalxIarQeI/mqdefault.jpg",
+    "category": ["雑談"]
+    "keywords": ["える","雪城眞尋"],
+     "songs":[
+       {"title":"凸待ち","artist":["える","雪城眞尋"],,"start":15367}
+     ]
+  },
+  {
     "youtubeId": "6EmZDSJ0u9U",
     "title": "【#にじさんじロケット団】真剣５本勝負　〜罰ゲームあり〜【にじさんじフミ/文野環/長尾景】",
     "channel": "フミ",
@@ -891,17 +906,107 @@
     "category": "企画",
     "keywords": ["フミ","文野環","フ景罪","にじさんじロケット団"]
   },
+  {
+    "youtubeId": "ec4W8_MAmc8",
+    "title": "【誕生日会】のんびり雑談しながら凸待ち！！【にじさんじ/渋谷ハジメ】",
+    "channel": "渋谷ハジメ",
+    "date": "2021-05-05",
+    "thumbnail": "https://i.ytimg.com/vi/ec4W8_MAmc8/mqdefault.jpg",
+    "category": ["雑談"]
+    "keywords": ["渋谷ハジメ"],
+     "songs":[
+       {"title":"凸待ち","artist":"渋谷ハジメ","start":15376}
+     ]
+  },
+  {
+    "youtubeId": "ld5tkN6eMiE",
+    "title": "【#長尾景アイドル力テスト】長尾景(自称原作)お披露目配信【にじさんじ/西園チグサ/長尾景】",
+    "channel": "西園チグサ",
+    "date": "2021-05-04",
+    "thumbnail": "https://i.ytimg.com/vi/ld5tkN6eMiE/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["西園チグサ","ながおちぐ"]
+  },
+  {
+    "youtubeId": "Al8V7wdp4k8",
+    "title": "【DMMスクラッチ】限定５枚！ヒスピのサイン入り色紙を出す【フ景罪/にじさんじ】",
+    "channel": "フミ",
+    "date": "2021-04-24",
+    "thumbnail": "https://i.ytimg.com/vi/Al8V7wdp4k8/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["フミ","フ景罪"]
+  },
+  {
+    "youtubeId": "Al8V7wdp4k8",
+    "title": "【ウマ娘】新ガチャ対決！14万の女 VS 3千円の男【西園チグサ/長尾景/にじさんじ】#ながおちぐ",
+    "channel": "西園チグサ",
+    "date": "2021-04-15",
+    "thumbnail": "https://i.ytimg.com/vi/Al8V7wdp4k8/mqdefault.jpg",
+    "category": "ゲーム実況",
+    "keywords": ["西園チグサ","ながおちぐ","ウマ娘 プリティーダービー"]
+  },
    {
+    "youtubeId": "xn1LNQwOa5o",
+    "title": "【APEXLEGENDS】トラウマのプラチナ耐久🔥￤ランク【雪城眞尋/にじさんじ】",
+    "channel": "にじさんじ",
+    "date": "2021-04-07",
+    "thumbnail": "https://i.ytimg.com/vi/xn1LNQwOa5o/mqdefault.jpg",
+    "category": ["ゲーム実況"]
+    "keywords": ["雪城眞尋","ふつまひ","Apex Legends"],
+     "songs":[
+       {"title":"突発コラボ","artist":,"雪城眞尋","start":11337}
+     ]
+  },
+  {
     "youtubeId": "Zeoiw0pry10",
     "title": "【#にじFes2021】にじさんじ Anniversary Festival 2021 公式無料生放送【DAY2】",
     "channel": "にじさんじ",
     "date": "2021-04-03",
     "thumbnail": "https://i.ytimg.com/vi/Zeoiw0pry10/mqdefault.jpg",
     "category": ["企画","公式企画・番組","ライブイベント","歌配信","にじフェス"]
-    "keywords": ["甲斐田晴","弦月藤士郎",,"VΔLZ","にじフェス"],
+    "keywords": ["甲斐田晴","弦月藤士郎","VΔLZ","にじフェス"],
      "songs":[
        {"title":"幕間、現世にて","artist":,"VΔLZ","start":15326}
      ]
+  },
+  {
+    "youtubeId": "K_v3_QO2HB0",
+    "title": "【#いちから中央銀行】ついに最終回、国税との戦いそして・・・【にじさんじ/鷹宮リオン】",
+    "channel": "鷹宮リオン",
+    "date": "2021-04-01",
+    "thumbnail": "https://i.ytimg.com/vi/K_v3_QO2HB0/mqdefault.jpg",
+    "category": "ゲーム実況",
+    "keywords": ["鷹宮リオン","早瀬走","葉加瀬冬雪","ベルモンド・バンデラス","天宮こころ","アルス・アルマル","","黛灰","マインクラフト"]
+  },
+  {
+    "youtubeId": "sMu-OhQjRS4",
+    "title": "【凸待ち】㊗11万人なので凸待ちをしてみました🎉【雪城眞尋/にじさんじ】",
+    "channel": "雪城眞尋",
+    "date": "2021-03-17",
+    "thumbnail": "https://i.ytimg.com/vi/sMu-OhQjRS4/mqdefault.jpg",
+    "category": ["雑談"]
+    "keywords": ["雪城眞尋","ふつまひ"],
+     "songs":[
+       {"title":"凸待ち","artist":,"雪城眞尋","start":5192}
+     ]
+  },
+  {
+    "youtubeId": "d3nR01W9itg",
+    "title": "【必ず概要欄をご確認ください】【声劇企画】第6回！にじさんじ声劇同好会！【成瀬鳴/相羽ういは/来栖夏芽/長尾景/西園チグサ/伏見ガク/にじさんじ】",
+    "channel": "成瀬鳴",
+    "date": "2021-03-07",
+    "thumbnail": "https://i.ytimg.com/vi/d3nR01W9itg/mqdefault.jpg",
+    "category": ["企画","雑談"],
+    "keywords": ["成瀬鳴","相羽ういは","来栖夏芽","西園チグサ","伏見ガク"]
+  },
+  {
+    "youtubeId": "NH9MUPTqFXc",
+    "title": "【フ景罪】令和２年度フミ様検定【にじさんじ/フミ/長尾景】",
+    "channel": "フミ",
+    "date": "2021-03-06",
+    "thumbnail": "https://i.ytimg.com/vi/NH9MUPTqFXc/mqdefault.jpg",
+    "category": ["企画","雑談"],
+    "keywords": ["フミ","フ景罪"]
   },
   {
     "youtubeId": "baCTro-aju0",
@@ -1223,6 +1328,7 @@
 
 
 ]
+
 
 
 
