@@ -1,0 +1,57 @@
+name: Update Nagao Archive Data
+
+on:
+  # 毎日、日本時間午前9時 (UTC 00:00) に自動実行する
+  schedule:
+    - cron: '0 0 * * *'
+  # 手動実行を可能にする
+  workflow_dispatch:
+
+jobs:
+  update_json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+        # GITHUB_TOKENの代わりにカスタムトークンを使用するため、fetch-depth: 0 を使用して履歴全体を取得し、プッシュできるようにする
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.OUKASUI_TOKEN }} # 👈 【重要】カスタムトークンを使用
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install google-api-python-client requests
+
+      - name: Configure Git for Commit
+        run: |
+          git config user.name "Archive Bot"
+          git config user.email "bot@users.noreply.github.com"
+          
+      - name: Run Archive Update Script
+        run: python update_archives.py
+        env:
+          # 👇 環境変数のマッピング（シークレットをPythonが期待する名前に渡す）
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.OUKASUI_TOKEN }} # 👈 【重要】GITHUB_TOKENとしてカスタムシークレットを渡す
+          
+          # スクリプト内で設定値を上書き (スクリプト内に直接書かれている値)
+          GITHUB_REPO_OWNER: keihanmatcha
+          GITHUB_REPO_NAME: keishiki
+          
+      - name: Commit and Push changes
+        # ステージングされている変更がある場合のみ実行する
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git add ${{ env.JSON_FILE_PATH }}
+            git commit -m "ARCHIVE_BOT: 長尾景アーカイブの自動更新"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+        env:
+          JSON_FILE_PATH: archives/archive_videos.json
