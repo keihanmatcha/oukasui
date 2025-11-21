@@ -22,7 +22,7 @@ CHANNELS = [
     {
         "id": "UCh-GyPNxvjTsza0ptjnkh1w",  # VΔLZ公式チャンネル
         "name": "VΔLZ",
-        "default_tags": ["VΔLZ"]
+        "default_tags": ["甲斐田晴","弦月藤士郎","VΔLZ"]
     }
 ]
 
@@ -258,4 +258,5 @@ def main():
         print("⚠️ 動画が1件も取得できませんでした。APIキーなどを確認してください。")
 
 if __name__ == "__main__":
+
     main()
