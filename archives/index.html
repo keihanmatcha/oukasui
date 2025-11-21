@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>動画アーカイブ｜長尾景非公式ファンサイト</title>
+  <link rel="icon" href="../images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="../images/Nagao-icon.png" sizes="512x512">
+  <link rel="apple-touch-icon" href="../images/Nagao-icon.png">
+  <link rel="canonical" href="https://oukasui.com/archives/">
+
+  <meta property="og:site_name" content="桜華水｜長尾景非公式ファンサイト　動画アーカイブ">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="桜華水｜長尾景非公式ファンサイト　動画アーカイブ">
+  <meta property="og:description" content="長尾景の全動画アーカイブ（配信・コラボなど）を検索・一覧表示できます。">
+  <meta property="og:url" content="https://oukasui.com/archives/">
+  <meta property="og:image" content="https://oukasui.com/images/ogp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="桜華水｜長尾景非公式ファンサイト　動画アーカイブ">
+  <meta name="twitter:description" content="長尾景の全動画アーカイブ（配信・コラボなど）を検索・一覧表示できます。">
+  <meta name="twitter:image" content="https://oukasui.com/images/ogp.png">
+
+  <style>
+    /* ===== 基本スタイル（元の曲検索ページから流用）===== */
+    :root{ --fg:#222; --muted:#4b5563; --accent:#625DA1; --bg:#fff; --border:#e5e7eb; --panel:#f8f8ff; }
+    html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif}
+    header{position:sticky;top:0;background:#fffcc;backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--border); z-index: 10;}
+    .wrap{max-width:1200px;margin-inline:auto;padding:14px 16px}
+    h1{margin:0 0 8px;font-size:20px}
+    /* toolbarの配置を調整 */
+    .toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap; justify-content: space-between;}
+    .searchbar{display:flex;gap:10px;align-items:center;flex:1}
+    .searchbar input{flex:1;padding:10px 12px;border:1px solid var(--border);border-radius:10px;font-size:16px}
+
+    /* ===== フィルタリングパネルのスタイル (新規/変更) ===== */
+    .filter-panel-wrapper {
+        background: #fdfdff;
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0;
+        margin-top: -1px;
+    }
+    .filter-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .filter-group:first-child { margin-top: 0; }
+    .filter-group dt {
+        font-weight: 700;
+        font-size: 14px;
+        color: var(--accent);
+        border-bottom: 2px solid #e5dfff;
+        padding-bottom: 4px;
+        margin-bottom: 5px;
+    }
+    .filter-group .archive__sort__select__label {
+    /* ul要素をグリッドコンテナにする */
+    display: grid;
+    list-style: none; /* リストマーカーを削除 */
+    padding-left: 0;
+    margin: 0;
+    /* 【メイン修正】3列表示を定義（幅140px以上で自動調整） */
+    grid-template-columns: repeat(3, minmax(140px, 1fr)); 
+    gap: 8px 15px; /* 縦横のギャップ */
+}
+
+/* リストアイテムの余白をリセット */
+.archive__sort__select__label li {
+    margin: 0;
+}
+/* ul > dd > ul の入れ子の要素に対しても、liに対して適用されるように修正（念のため） */
+.archive__sort__select__label li label {
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 6px 0;
+    color: var(--fg);
+    user-select: none;
+}
+.archive__sort__select__label li input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: var(--accent);
+}
+
+/* 【モバイル対応】900px以下では2列に調整 */
+@media (max-width: 900px) {
+    .filter-group .archive__sort__select__label {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px 10px;
+    }
+}
+    /* ... (他の.filter-list関連のCSSが続く) ... */
+    .filter-list {
+    display: grid;
+    /* 3列表示に修正 */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 8px 15px; /* 縦横のギャップを調整 */
+    }
+    
+    .filter-list label {
+        display: block;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 6px 0;
+        color: var(--fg);
+        user-select: none;
+    }
+    .filter-list input[type="checkbox"] {
+        margin-right: 8px;
+        accent-color: var(--accent);
+    }
+    .filter-actions {
+        margin-top: 20px;
+    }
+    .btn {
+        appearance: none; border: 0; cursor: pointer;
+        padding: 10px 16px; border-radius: 10px; font-weight: 700;
+        background: var(--accent); color: #fff;
+        transition: .15s ease;
+    }
+    .btn.secondary {
+        background: #f2efff; color: #4c46a6; border: 1px solid #e5dfff; font-weight: 600;
+    }
+
+    /* 2カラム */
+    .grid{display:grid;gap:16px;align-items:start;grid-template-columns:1.2fr .8fr;grid-template-areas:"list player"}
+    .grid.player-left{grid-template-columns:.8fr 1.2fr;grid-template-areas:"player list"}
+    @media (max-width: 900px){ .grid{grid-template-columns:1fr;grid-template-areas:"player" "list"} }
+
+    /* ===== リスト（動画表示用に大幅変更）===== */
+    .list{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 16px;
+        padding: 1px;
+    }
+    .video-card {
+        cursor: pointer;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+        background: #fafafa;
+        transition: box-shadow .15s ease, transform .15s ease;
+    }
+    .video-card:hover {
+        box-shadow: 0 4px 12px rgba(98,93,161,.15);
+        transform: translateY(-2px);
+    }
+    .video-card:nth-child(odd){ background: #f6f6fb; }
+    .video-card .thumbnail {
+        aspect-ratio: 16/9;
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+    .video-card .meta {
+        padding: 12px;
+    }
+    .video-card .title {
+        font-weight: 700;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 8px;
+        color: #111;
+        font-size: 15px;
+    }
+    .video-card .info {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: var(--muted);
+    }
+    .video-card .date {
+        font-variant-numeric: tabular-nums;
+    }
+    .video-card .tags-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px dashed var(--border);
+    }
+    /* カテゴリとキーワードの表示スタイル */
+    .category-badge {
+        font-size: 11px;
+        line-height: 1;
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #fff;
+    }
+    .keyword-badge {
+        font-size: 11px;
+        line-height: 1;
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: #f2efff;
+        color: #4c46a6;
+        border: 1px solid #e5dfff;
+    }
+
+    /* ===== プレイヤー（流用）===== */
+    .player-panel{position:sticky;top:84px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--panel)}
+    .player-head{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#f0f1ff;border-bottom:1px solid var(--border)}
+    .player-head .drag-handle{font-weight:700;opacity:.5;padding:0 6px;border-radius:6px;}
+    .player-title{font-size:14px;color:#333;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .player-sub{font-size:12px;color:var(--muted)}
+    .player-body{position:relative;aspect-ratio:16/9;width:100%;background:#000}
+    .player-body iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .player-foot{padding:10px 14px;border-top:1px solid var(--border);background:#fff}
+    .meta-line{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+    .setlist{max-height:420px;overflow:auto;border:1px solid var(--border);border-radius:10px;margin-top:8px}
+    .set-item{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border-top:1px solid var(--border);background:#fafafa;cursor:pointer}
+    .set-item:first-child{border-top:none}
+    .set-item:hover{background:#f3f4ff}
+    .set-item.active{background:#e9ecff}
+    .set-title{display:flex;flex-direction:column}
+    .set-song{font-weight:600}
+    .set-artist{font-size:12px;color:var(--muted)}
+    .set-time{font-variant-numeric:tabular-nums;color:#374151;white-space:nowrap}
+    .warn{margin-top:8px;padding:10px 12px;color:#92400e;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px}
+    
+    @media (min-width: 901px){
+      .player-col{ position: sticky; top: 84px; align-self:start; height: fit-content; z-index: 5; }
+      .player-panel{ position: static; }
+    }
+
+    .list-col{grid-area:list}
+    .player-col{grid-area:player}
+    .nothing{color:var(--muted);text-align:center;padding:20px;border:1px dashed var(--border);border-radius:12px; grid-column: 1 / -1; margin-top: 16px; margin-bottom: 16px;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:20px">
+      <a href="../index.html" class="brand" aria-label="HOME">
+      <span style="font-weight:700;color:#4c46a6">HOME</span>
+    </a>
+      <h1>📹 長尾景 動画検索</h1>
+      <div class="toolbar">
+        <div class="searchbar">
+            <input id="q" type="search" placeholder="動画タイトル・チャンネル名・キーワードで検索" autocomplete="off" />
+            <button id="resetSearch" class="btn secondary" type="button" style="padding: 10px 16px; border-radius: 10px; font-weight: 700; margin-left: 10px;">
+            リセット
+            </button>
+        </div>
+        <button id="toggleFilter" class="btn secondary" type="button" style="padding: 10px 16px; border-radius: 10px; font-weight: 700;">
+        絞り込みフィルターを開く
+        </button>
+    </div>
+  </header>
+
+  <div id="filterPanel" class="filter-panel-wrapper" style="display:none;">
+    <div class="wrap">
+      <dl class="filter-group">
+        <dt>CATEGORY (配信種別)</dt>
+        <dd>
+            <ul class="archive__sort__select__label">
+                        <li><label><input type="checkbox" name="get_cats[]" value="ゲーム実況"><span>ゲーム実況</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="雑談"><span>雑談</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="歌配信"><span>歌配信</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="歌動画"><span>歌動画</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="ダンス動画"><span>ダンス動画</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="ダンス配信"><span>ダンス配信</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="記念配信"><span>記念配信</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="お披露目配信"><span>お披露目配信</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="3D"><span>3D</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="企画"><span>企画</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="大会"><span>大会</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="ライブイベント"><span>ライブイベント</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="プロモーション"><span>プロモーション</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="公式企画・番組"><span>公式企画・番組</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="動画系"><span>動画系</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="公式切り抜き"><span>公式切り抜き</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="手描き動画"><span>手描き動画</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="ぷちさんじ"><span>ぷちさんじ</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="ゲスト出演"><span>ゲスト出演</span></label></li>
+                        <li><label><input type="checkbox" name="get_cats[]" value="提供等"><span>提供等</span></label></li>
+                        </ul>
+        </dd>
+      </dl>
+      <dl class="filter-group">
+        <dt>KEYWORDS (コラボ相手/詳細タグ)</dt>
+        <dd>
+            <ul class="archive__sort__select__label">
+                        <li><label><input type="checkbox" name="get_companion[]" value="愛園愛美"><span>愛園愛美</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="相羽ういは"><span>相羽ういは</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="赤城ウェン"><span>赤城ウェン</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="赤羽葉子"><span>赤羽葉子</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="アクシア・クローネ"><span>アクシア・クローネ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="朝日南アカネ"><span>朝日南アカネ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="飛鳥ひな"><span>飛鳥ひな</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="遠北千南"><span>遠北千南</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="安土桃"><span>安土桃</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="天ヶ瀬むゆ"><span>天ヶ瀬むゆ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="天宮こころ"><span>天宮こころ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="雨森小夜"><span>雨森小夜</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="アルス・アルマル"><span>アルス・アルマル</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="アンジュ・カトリーナ"><span>アンジュ・カトリーナ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="家長むぎ"><span>家長むぎ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="五十嵐梨花"><span>五十嵐梨花</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="石神のぞみ"><span>石神のぞみ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="出雲霞"><span>出雲霞</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="五木左京"><span>五木左京</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="伊波ライ"><span>伊波ライ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="戌亥とこ"><span>戌亥とこ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="イブラヒム"><span>イブラヒム</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="宇佐美リト"><span>宇佐美リト</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="宇志海いちご"><span>宇志海いちご</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="卯月コウ"><span>卯月コウ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="海妹四葉"><span>海妹四葉</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="エクス・アルビオ"><span>エクス・アルビオ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="えま★おうがすと"><span>えま★おうがすと</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="エリー・コニファー"><span>エリー・コニファー</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="える"><span>える</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="御伽原江良"><span>御伽原江良</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="小野町春香"><span>小野町春香</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="オリバー・エバンス"><span>オリバー・エバンス</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="魁星"><span>魁星</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="甲斐田晴"><span>甲斐田晴</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="加賀美ハヤト"><span>加賀美ハヤト</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="叶"><span>叶</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="鏑木ろこ"><span>鏑木ろこ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="神田笑一"><span>神田笑一</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="北小路ヒスイ"><span>北小路ヒスイ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="北見遊征"><span>北見遊征</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="雲母たまこ"><span>雲母たまこ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="ギルザレンⅢ世"><span>ギルザレンⅢ世</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="グウェル・オス・ガール"><span>グウェル・オス・ガール</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="葛葉"><span>葛葉</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="倉持めると"><span>倉持めると</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="黒井しば"><span>黒井しば</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="来栖夏芽"><span>来栖夏芽</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="郡道美玲"><span>郡道美玲</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="弦月藤士郎"><span>弦月藤士郎</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="剣持刀也"><span>剣持刀也</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="小清水透"><span>小清水透</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="小柳ロウ"><span>小柳ロウ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="佐伯イッテツ"><span>佐伯イッテツ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="早乙女ベリー"><span>早乙女ベリー</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="榊ネス"><span>榊ネス</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="酒寄颯馬"><span>酒寄颯馬</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="桜凛月"><span>桜凛月</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="笹木咲"><span>笹木咲</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="椎名唯華"><span>椎名唯華</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="シェリン・バーガンディ"><span>シェリン・バーガンディ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="栞葉るり"><span>栞葉るり</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="司賀りこ"><span>司賀りこ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="四季凪アキラ"><span>四季凪アキラ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="獅子堂あかり"><span>獅子堂あかり</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="静凛"><span>静凛</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="シスター・クレア"><span>シスター・クレア</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="渋谷ハジメ"><span>渋谷ハジメ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="ジョー・力一"><span>ジョー・力一</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="白雪巴"><span>白雪巴</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="周央サンゴ"><span>周央サンゴ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="健屋花那"><span>健屋花那</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="鈴鹿詩子"><span>鈴鹿詩子</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="鈴木勝"><span>鈴木勝</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="鈴原るる"><span>鈴原るる</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="鈴谷アキ"><span>鈴谷アキ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="瀬戸美夜子"><span>瀬戸美夜子</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="セラフ・ダズルガーデン"><span>セラフ・ダズルガーデン</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="ソフィア・ヴァレンタイン"><span>ソフィア・ヴァレンタイン</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="空星きらめ"><span>空星きらめ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="鷹宮リオン"><span>鷹宮リオン</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="立伝都々"><span>立伝都々</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="珠乃井ナナ"><span>珠乃井ナナ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="月ノ美兎"><span>月ノ美兎</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="でびでび・でびる"><span>でびでび・でびる</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="東堂コハク"><span>東堂コハク</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="ドーラ"><span>ドーラ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="轟京子"><span>轟京子</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="名伽尾アズマ"><span>名伽尾アズマ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="長尾景"><span>長尾景</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="七瀬すず菜"><span>七瀬すず菜</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="奈羅花"><span>奈羅花</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="成瀬鳴"><span>成瀬鳴</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="西園チグサ"><span>西園チグサ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="ニュイ・ソシエール"><span>ニュイ・ソシエール</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="葉加瀬冬雪"><span>葉加瀬冬雪</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="花畑チャイカ"><span>花畑チャイカ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="早瀬走"><span>早瀬走</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="葉山舞鈴"><span>葉山舞鈴</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="春崎エアル"><span>春崎エアル</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="樋口楓"><span>樋口楓</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="一橋綾人"><span>一橋綾人</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="緋八マナ"><span>緋八マナ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="壱百満天原サロメ"><span>壱百満天原サロメ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="風楽奏斗"><span>風楽奏斗</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="伏見ガク"><span>伏見ガク</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="フミ"><span>フミ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="文野環"><span>文野環</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="フレン・E・ルスタリオ"><span>フレン・E・ルスタリオ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="不破湊"><span>不破湊</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="ベルモンド・バンデラス"><span>ベルモンド・バンデラス</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="星川サラ"><span>星川サラ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="星導ショウ"><span>星導ショウ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="先斗寧"><span>先斗寧</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="本間ひまわり"><span>本間ひまわり</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="舞元啓介"><span>舞元啓介</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="魔界ノりりむ"><span>魔界ノりりむ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="ましろ爻"><span>ましろ爻</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="町田ちま"><span>町田ちま</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="魔使マオ"><span>魔使マオ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="黛灰"><span>黛灰</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="ミラン・ケストレル"><span>ミラン・ケストレル</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="叢雲カゲツ"><span>叢雲カゲツ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="メリッサ・キンレンカ"><span>メリッサ・キンレンカ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="森中花咲"><span>森中花咲</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="矢車りね"><span>矢車りね</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="社築"><span>社築</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="山神カルタ"><span>山神カルタ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="勇気ちひろ"><span>勇気ちひろ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="夕陽リリ"><span>夕陽リリ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="雪城眞尋"><span>雪城眞尋</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="夢月ロア"><span>夢月ロア</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="夢追翔"><span>夢追翔</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="夜見れな"><span>夜見れな</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="ラトナ・プティ"><span>ラトナ・プティ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="リゼ・ヘルエスタ"><span>リゼ・ヘルエスタ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="緑仙"><span>緑仙</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="竜胆尊"><span>竜胆尊</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="ルイス・キャミー"><span>ルイス・キャミー</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="ルンルン"><span>ルンルン</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="レイン・パターソン"><span>レイン・パターソン</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="レヴィ・エリファ"><span>レヴィ・エリファ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="レオス・ヴィンセント"><span>レオス・ヴィンセント</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="ローレン・イロアス"><span>ローレン・イロアス</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="渡会雲雀"><span>渡会雲雀</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="童田明治"><span>童田明治</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Amicia Michella"><span>Amicia Michella</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Xia-Ekavira"><span>Xia-Ekavira</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Zea-Cornelia"><span>Zea-Cornelia</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Taka Radjiman"><span>Taka Radjiman</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Derem Kado"><span>Derem Kado</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Nara Haramaung"><span>Nara Haramaung</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Hana Macchia"><span>Hana Macchia</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Mika Melatika"><span>Mika Melatika</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Miyu Ottavia"><span>Miyu Ottavia</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Layla Astroemeria"><span>Layla Astroemeria</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Riksa Dhirendra"><span>Riksa Dhirendra</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Reza Avanluna"><span>Reza Avanluna</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="아키라 레이（明楽 レイ）"><span>아키라 레이（明楽 レイ）</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="이로하（イ・ロハ）"><span>이로하（イ・ロハ）</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="오지유（オ・ジユ）"><span>오지유（オ・ジユ）</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="가온（ガオン）"><span>가온（ガオン）</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="신유야（シン・ユヤ）"><span>신유야（シン・ユヤ）</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="세피나（セフィナ）"><span>세피나（セフィナ）</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="소나기（ソ・ナギ）"><span>소나기（ソ・ナギ）</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="나세라（ナ・セラ）"><span>나세라（ナ・セラ）</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="하윤（ハ・ユン）"><span>하윤（ハ・ユン）</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="반하다（バン・ハダ）"><span>반하다（バン・ハダ）</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="민수하（ミン・スゥーハ）"><span>민수하（ミン・スゥーハ）</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="양나리（ヤン・ナリ）"><span>양나리（ヤン・ナリ）</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Ike Eveland"><span>Ike Eveland</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Aia Amare"><span>Aia Amare</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Yugo Asuma"><span>Yugo Asuma</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Vezalius Bandage"><span>Vezalius Bandage</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Uki Violeta"><span>Uki Violeta</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Enna Alouette"><span>Enna Alouette</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Elira Pendora"><span>Elira Pendora</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Endou Reimu"><span>Endou Reimu</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Kyoran Meloco"><span>Kyoran Meloco</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Kaelix Debonair"><span>Kaelix Debonair</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Sonny Brisko"><span>Sonny Brisko</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Selen Tatsuki"><span>Selen Tatsuki</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Torahime Kotoka"><span>Torahime Kotoka</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Petra Gurin"><span>Petra Gurin</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Pomu Rainpuff"><span>Pomu Rainpuff</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Maria Marionette"><span>Maria Marrionette</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Millie Parfait"><span>Millie Parfait</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Yamino Shu"><span>Yamino Shu</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Luca Kaneshiro"><span>Luca Kaneshiro</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Ren Zotto"><span>Ren Zotto</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="星弥"><span>星弥</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="Noor"><span>Noor</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="外部"><span>外部</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="字ぴろぱる"><span>字ぴろぱる</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="歌衣メイカ"><span>歌衣メイカ</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="渋谷ハル"><span>渋谷ハル</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="天開司"><span>天開司</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="百花繚乱"><span>百花繚乱</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="ぽんぽこちゃんねる"><span>ぽんぽこちゃんねる</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="松本吉弘"><span>松本吉弘</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="龍惺ろたん"><span>龍惺ろたん</span></label></li>
+                        </ul>
+        </dd>
+        <dd>
+            <ul class="archive__sort__select__label">
+                        <li><label><input type="checkbox" name="get_collabo[]" value="VΔLZ"><span>VΔLZ</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="エア景"><span>エア景</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="おりひめばるつ"><span>おりひめばるつ</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="園児組"><span>園児組</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="クソザコトレーナーズ"><span>クソザコトレーナーズ</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="Klime"><span>Klime</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="けいあい"><span>けいあい</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="southern,xxxx"><span>southern,xxxx</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="情報差分組"><span>情報差分組</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="女子騎士祓魔師鑑定士"><span>女子騎士祓魔師鑑定士</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="タメナンデス"><span>タメナンデス</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="チームヘラクレス"><span>チームヘラクレス</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="ながおちぐ"><span>ながおちぐ</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="にじさんじダンス部"><span>にじさんじダンス部</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="にじさんじ放課後ゲーム部"><span>にじさんじ放課後ゲーム部</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじベイブレード部"><span>にじさんじベイブレード部</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="にじさんじポケカ部"><span>にじさんじポケカ部</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="にじさんじロケット団"><span>にじさんじロケット団</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="にじさんじGTA救急隊"><span>にじさんじGTA救急隊</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="にじ飯調査隊"><span>にじ飯調査隊</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="年長組"><span>年長組</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="フ景罪"><span>フ景罪</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="ふつまひ"><span>ふつまひ</span></label></li>
+                        <li><label><input type="checkbox" name="get_collabo[]" value="めにまにかんぱにー"><span>めにまにかんぱにー</span></label></li>
+                        </ul>
+        </dd>
+        <dd>
+            <ul class="archive__sort__select__label">
+                        <li><label><input type="checkbox" name="get_series[]" value="アイドルマスター SideM"><span>アイドルマスター SideM</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="あつまれどうぶつの森"><span>あつまれどうぶつの森</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Apex Legends"><span>Apex Legends</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ARK:Survival Ascended"><span>ARK:Survival Ascended</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ARK:Survival Evolved"><span>ARK:Survival Evolved</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ARK-アイランドマップ"><span>ARK-アイランドマップ</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ARK-ラグナロクマップ"><span>ARK-ラグナロクマップ</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ARK-エクスティンクションマップ"><span>ARK-エクスティンクションマップ</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ARK-クリスタルアイルズマップ"><span>ARK-クリスタルアイルズマップ</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ASTRONEER"><span>ASTRONEER</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Blazing Sails"><span>Blazing Sails</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Cooking Simulator"><span>Cooking Simulator</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Dead by Daylight"><span>Dead by Daylight</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="eFootball ウイニングイレブン"><span>eFootball ウイニングイレブン</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Fall Guys"><span>Fall Guys</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Getting Over It"><span>Getting Over It</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Get To Work"><span>Get To Work</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Golf It!"><span>Golf It!</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Human: Fall Flat"><span>Human: Fall Flat</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Left 4 Dead 2"><span>Left 4 Dead 2</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="maimai"><span>maimai</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Nintendo Switch Sports"><span>Nintendo Switch Sports</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Operation: Tango"><span>Operation: Tango</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="oOvercooked!2"><span>Overcooked!2</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Overwatch"><span>Overwatch</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Overwatch2"><span>Overwatch2</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Papers, Please"><span>Papers, Please</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Portal2"><span>Portal2</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="PowerWash Simulator"><span>PowerWash Simulator</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="PUBG"><span>PUBG</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="slither.io/wormax.io"><span>slither.io/wormax.io</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Stray"><span>Stray</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Ultimate Chicken Horse"><span>Ultimate Chicken Horse</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="UNDERTALE"><span>UNDERTALE</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Unrailed!"><span>Unrailed!</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="VALORANT"><span>VALORANT</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ito(イト)"><span>ito(イト)</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="エアホッケー"><span>エアホッケー</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="オバケイドロ!"><span>オバケイドロ!</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="くそいサイト"><span>くそいサイト</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="グランド・セフト・オートV"><span>グランド・セフト・オートV</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="クロノ・トリガー"><span>クロノ・トリガー</span></label></li>
+
+                        <li><label><input type="checkbox" name="get_series[]" value="原神"><span>原神</span></label></li>
+
+                        <li><label><input type="checkbox" name="get_series[]" value="幻塔"><span>幻塔</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ゴッドフィールド"><span>ゴッドフィールド</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="シャドウバース"><span>シャドウバース</span></label></li>
+
+                        <li><label><input type="checkbox" name="get_series[]" value="雀魂"><span>雀魂</span></label></li>
+
+                        <li><label><input type="checkbox" name="get_series[]" value="白猫GOLF"><span>白猫GOLF</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="スイカゲーム"><span>スイカゲーム</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="スーパーモンキーボール バナナランブル"><span>スーパーモンキーボール バナナランブル</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Splatoon"><span>Splatoon</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Splatoon2"><span>Splatoon2</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Splatoon3"><span>Splatoon3</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="世界のアソビ大全51"><span>世界のアソビ大全51</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ゼルダの伝説 ブレス オブ ザ ワイルド"><span>ゼルダの伝説 ブレス オブ ザ ワイルド</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="太鼓の達人"><span>太鼓の達人</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="大乱闘スマッシュブラザーズSPECIAL"><span>大乱闘スマッシュブラザーズSPECIAL</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="テトリス99"><span>テトリス99</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ダンガンロンパ"><span>ダンガンロンパ</span></label></li>
+
+                        <li><label><input type="checkbox" name="get_series[]" value="刀剣乱舞"><span>刀剣乱舞</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="デトロイト"><span>デトロイト</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Twisted Wonderland"><span>Twisted Wonderland</span></label></li>
+
+                        <li><label><input type="checkbox" name="get_series[]" value="ドキドキ文芸部"><span>ドキドキ文芸部</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ネコトモ"><span>ネコトモ</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="バイオハザード ヴィレッジ"><span>バイオハザード ヴィレッジ</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="パワフルプロ野球2024-2025"><span>パワフルプロ野球2024-2025</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ロジェクトセカイ カラフルステージ！ feat. 初音ミク"><span>プロジェクトセカイ カラフルステージ！ feat. 初音ミク</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ポーカーチェイス"><span>ポーカーチェイス</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ポケットモンスター"><span>ポケットモンスター</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Pokémon Trading Card Game Pocket"><span>Pokémon Trading Card Game Pocket</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ポケモン-シャイニングパール"><span>ポケモン-シャイニングパール</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ポケモン-スカーレット"><span>ポケモン-スカーレット</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ポケモン-ソード"><span>ポケモン-ソード</span></label></li>
+
+                        <li><label><input type="checkbox" name="get_series[]" value="マインクラフト"><span>マインクラフト</span></label></li>
+
+                        <li><label><input type="checkbox" name="get_series[]" value="マリオシリーズ"><span>マリオシリーズ</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="スーパーマリオブラザーズ"><span>スーパーマリオブラザーズ</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="スーパーマリオメーカー2"><span>スーパーマリオメーカー2</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="マリオカート8DX"><span>マリオカート8DX</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="マリオカートワールド"><span>マリオカートワールド</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="マリオパーティ"><span>マリオパーティ</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="その他マリオシリーズ"><span>その他マリオシリーズ</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="みんなで空気読み。"><span>みんなで空気読み。</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="メイド イン ワリオ"><span>メイド イン ワリオ</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="桃太郎電鉄"><span>桃太郎電鉄</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="モンスターストライク"><span>モンスターストライク</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="モンスターハンター：ワールド"><span>モンスターハンター：ワールド</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="星のカービィシリーズ"><span>星のカービィシリーズ</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="リズム天国"><span>リズム天国</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="レイトン教授と不思議な町"><span>レイトン教授と不思議な町</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="任天堂"><span>任天堂</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="パチスロ"><span>パチスロ</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="ホラーゲーム"><span>ホラーゲーム</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Chilla's Art"><span>Chilla's Art</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="PACIFY"><span>PACIFY</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Poppy Playtime"><span>Poppy Playtime</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="Protein for Muscle"><span>Protein for Muscle</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="R.E.P.O."><span>R.E.P.O.</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="青鬼"><span>青鬼</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="その他ホラーゲーム"><span>その他ホラーゲーム</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="カードゲーム"><span>カードゲーム</span></label></li>
+                        <li><label><input type="checkbox" name="get_series[]" value="その他ゲーム"><span>その他ゲーム</span></label></li>
+                        </ul>
+        </dd>
+        <dd>
+            <ul class="archive__sort__select__label">
+                        <li><label><input type="checkbox" name="get_program[]" value="SYMPHONIA Day2"><span>SYMPHONIA Day2</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="LOCK ON FLEEK"><span>LOCK ON FLEEK</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="にじ鯖夏祭り"><span>にじ鯖夏祭り</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="VΔLZ1st 一唱入魂"><span>VΔLZ1st 一唱入魂</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="VΔLZ2nd 三華の樂"><span>VΔLZ2nd 三華の樂</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="VTuber最協決定戦"><span>VTuber最協決定戦</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="VTuberのあそびば"><span>VTuberのあそびば</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="くろのわーるがなんかやる"><span>くろのわーるがなんかやる</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="Talking in English Collab"><span>Talking in English Collab</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="ゲームる？ゲームる！"><span>ゲームる？ゲームる！</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="だいさんじ甲子園"><span>だいさんじ甲子園</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="神域甲子園"><span>神域甲子園</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="にじワイテ人狼RPG"><span>にじワイテ人狼RPG</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="格付けマリカ"><span>格付けマリカ</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじイカ祭り"><span>にじさんじイカ祭り</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじスマブラ杯"><span>にじさんじスマブラ杯</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="ミリしらスト６チャレンジ"><span>ミリしらスト６チャレンジ</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじイヤホンガンガンゲーム"><span>にじさんじイヤホンガンガンゲーム</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="ケイナガオの楽屋裏"><span>ケイナガオの楽屋裏</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="Nagao's Kitchen"><span>Nagao's Kitchen</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="初心者講座"><span>初心者講座</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="にじ飯調査隊"><span>にじ飯調査隊</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="たい変"><span>たい変</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="にじフェス"><span>にじフェス</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじのTOYBOX！"><span>にじさんじのTOYBOX！</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじのハッピーアワー!!"><span>にじさんじのハッピーアワー!!</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじのB級バラエティ(仮)"><span>にじさんじのB級バラエティ(仮)</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじMIX UP!!"><span>にじさんじMIX UP!!</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじユニット歌謡祭2022"><span>にじさんじユニット歌謡祭2022</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじ歌謡祭2024"><span>にじさんじ歌謡祭2024</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="にじクイ"><span>にじクイ</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="木10！ろふまお塾"><span>木10！ろふまお塾</span></label></li>
+                        <li><label><input type="checkbox" name="get_program[]" value="ヤシロ&ササキのレバガチャダイパン"><span>ヤシロ&ササキのレバガチャダイパン</span></label></li>
+                        </ul>
+        </dd>
+    </dl>
+
+      <div class="filter-actions">
+        <button id="applyFilterBtn" class="btn" type="button">
+          この条件で絞り込む
+        </button>
+        <button id="clearFilterBtn" class="btn secondary" type="button">
+          全て解除
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <div id="grid" class="grid player-left">
+      <aside class="player-col">
+        <div class="player-panel" id="playerPanel" style="display:none">
+          <div class="player-head">
+            <span class="drag-handle" aria-label="Move">≡</span>
+            <div>
+              <div class="player-title" id="playerTitle">（動画タイトル）</div>
+              <div class="player-sub" id="playerMeta">YYYY.MM.DD / チャンネル名</div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center"><a id="openYT" href="#" target="_blank" rel="noopener" style="font-size:12px;color:var(--accent);text-decoration:none">YouTubeで開く ↗</a></div>
+          </div>
+          <div class="player-body"><iframe id="ytFrame" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+          <div class="player-foot">
+            <div class="meta-line"><strong>セットリスト</strong>（※動画内セットリストがあれば表示）</div>
+            <div class="setlist" id="setlist"></div>
+            <div id="embedWarn" class="warn" style="display:none">この動画はページ内再生が許可されていない可能性があります。<a id="warnLink" href="#" target="_blank" rel="noopener">YouTubeで開く</a> をお試しください。</div>
+          </div>
+        </div>
+      </aside>
+      <section class="list-col">
+        <div id="list" class="list"></div>
+        <div id="empty" class="nothing" style="display:none">該当する結果がありません。</div>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    // --- DOM要素の定義 ---
+    const $list = document.getElementById('list');
+    const $empty = document.getElementById('empty');
+    const $q = document.getElementById('q');
+    const $resetSearch = document.getElementById('resetSearch');
+    
+    // 新しいフィルタUIの要素
+    const $toggleFilter = document.getElementById('toggleFilter');
+    const $filterPanel = document.getElementById('filterPanel');
+    const $applyFilterBtn = document.getElementById('applyFilterBtn');
+    const $clearFilterBtn = document.getElementById('clearFilterBtn');
+
+    // プレイヤー関連の要素（元のコードから流用）
+    const $panel = document.getElementById('playerPanel');
+    const $yt = document.getElementById('ytFrame');
+    const $title = document.getElementById('playerTitle');
+    const $meta = document.getElementById('playerMeta');
+    const $open = document.getElementById('openYT');
+    const $warn = document.getElementById('embedWarn');
+    const $warnLink = document.getElementById('warnLink');
+    const $setlist = document.getElementById('setlist');
+
+
+    // --- ユーティリティ関数（元のコードから流用） ---
+    const pad = n => String(n).padStart(2,'0');
+    const ymdToDots = ymd => { const [y,m,d] = (ymd||'').split('-'); return y?`${y}.${pad(m)}.${pad(d)}`:''; };
+
+    function toSeconds(v){
+      if(v==null) return 0;
+      if (typeof v === 'number') return Math.max(0, v|0);
+      if (/^\d+$/.test(v)) return Math.max(0, parseInt(v,10));
+      //const p = String(v).split(':'.map(Number));
+      const p = String(v).split(':').map(Number);
+      if (p.length===3) return p[0]*3600 + p[1]*60 + p[2];
+      if (p.length===2) return p[0]*60 + p[1];
+      return 0;
+    }
+    const hms = sec => { sec=toSeconds(sec); const h=Math.floor(sec/3600), m=Math.floor(sec%3600/60), s=Math.floor(sec%60); return `${pad(h)}:${pad(m)}:${pad(s)}`; };
+
+    let player=null, apiReady=false;
+   /// プレイヤーオブジェクトが生成されたときに実行されるコールバック関数
+    //window.onYouTubeIframeAPIReady = function() {
+        // API準備完了時に、ここでプレイヤーオブジェクトを初期化します。
+        // ただし、自動再生を防ぐため、初期化はまだ行いません。
+    //};
+    window.onYouTubeIframeAPIReady = ()=>{ apiReady = true; };
+    function loadVideo(id, start=0){
+      $warn.style.display='none';
+      const startSec = toSeconds(start);
+      const url = `https://www.youtube-nocookie.com/embed/${id}?start=${startSec}&autoplay=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
+
+      if(apiReady){
+        if(!player){
+          player = new YT.Player('ytFrame', {
+            playerVars:{rel:0,modestbranding:1,playsinline:1},
+            events:{ onError:()=>($warn.style.display='block') }
+          });
+        }
+        try{
+          player.loadVideoById({videoId:id, startSeconds:startSec});
+          return;
+        }catch(e){}
+      }
+      $yt.src = url;
+    }
+
+    // --- データとフィルタ状態 ---
+    let ALL_VIDEOS=[]; 
+
+    //if ($resetSearch) {
+        //$resetSearch.addEventListener('click', () => {
+        // 検索欄をクリア
+        //$q.value = ''; 
+        // 全てのチェックボックスを解除 (clearAllCheckboxes関数を呼び出し)
+       // clearAllCheckboxes();
+        // フィルタを適用してリストを全表示に戻す
+       // applyFilter();
+       // $panel.style.display = 'none'; 
+    //});
+    //}
+    
+    // 取得したJSONデータを動画リストとして利用
+    function buildVideos(videos){
+      const videoMap = new Map();
+      for (const v of videos) {
+        if (!v.youtubeId) continue;
+        
+        // JSONデータから category と keywords を取得 (フォールバックあり)
+        // 注意: JSONの category/keywords には、チェックボックスの value (例: "game", "aizono-manami") と同じ値が入っている必要があります。
+        const category = v.category || '未分類';
+        const keywords = Array.isArray(v.keywords) ? v.keywords.filter(Boolean) : [];
+        
+        const video = {
+            youtubeId: v.youtubeId,
+            title: v.title || '',
+            channel: v.channel || '不明',
+            date: v.date || '',
+            thumbnail: v.thumbnail || `https://i.ytimg.com/vi/${v.youtubeId}/mqdefault.jpg`,
+            category: category,
+            keywords: keywords,
+            songs: Array.isArray(v.songs) ? v.songs : [],
+            // 検索テキストに category と keywords を含める
+            searchText: `${v.title||''} ${v.channel||''} ${category} ${keywords.join(' ')}`.toLowerCase()
+        };
+        videoMap.set(v.youtubeId, video);
+      }
+      
+      ALL_VIDEOS = Array.from(videoMap.values()).sort((a,b)=> b.date.localeCompare(a.date));
+    }
+
+    // --- フィルタヘルパー関数 ---
+    function getSelectedFilters() {
+        // 1. カテゴリー (name="get_cats[]" のチェックボックス)
+        const selectedCategories = Array.from(document.querySelectorAll('input[name="get_cats[]"]:checked'))
+                                       .map(input => input.value);
+        
+        // 2. キーワード（コラボ相手, シリーズ, 番組名など）の結合
+        const keywordInputs = document.querySelectorAll(
+            'input[name="get_companion[]"]:checked,' + 
+            'input[name="get_series[]"]:checked,' + 
+            'input[name="get_collabo[]"]:checked,' +
+            'input[name="get_program[]"]:checked'
+        );
+        const selectedKeywords = Array.from(keywordInputs).map(input => input.value);
+        
+        return { selectedCategories, selectedKeywords };
+    }
+
+    function clearAllCheckboxes() {
+        // 全てのチェックボックスを解除
+        document.querySelectorAll('#filterPanel input[type="checkbox"]').forEach(input => {
+            input.checked = false;
+        });
+    }
+    function performFullReset() {
+        // 1. 検索欄とフィルタをクリア
+        $q.value = ''; 
+        clearAllCheckboxes();
+        applyFilter();
+
+        // 2. プレイヤーを停止 (ここを修正・有効化)
+        // YouTube APIのオブジェクトが存在し、停止メソッドが使える場合
+        if (player && typeof player.stopVideo === 'function') {
+            player.stopVideo();
+        }
+        
+        // 【重要】iframeのソースを強制的に空にする
+        // APIの準備が間に合っていない場合やエラー時に確実に音を止めるための保険です
+        $yt.src = 'about:blank';
+
+        // 3. パネルを非表示にする
+        $panel.style.display = 'none';
+   }
+
+    // リセットボタン ($resetSearch) の処理
+    if ($resetSearch) {
+        // 上記で定義した関数を呼び出す
+        $resetSearch.addEventListener('click', performFullReset);
+    }
+    
+    // 「全て解除」ボタン ($clearFilterBtn) の処理
+    // ※こちらはフィルタ解除だけで動画は止めなくて良い場合はそのままでOKですが、
+    // 「全てリセット」という挙動なら performFullReset を呼ぶ方が自然かもしれません。
+    // 現在の仕様（動画は止めない）ならこのままでOKです。
+    $clearFilterBtn.addEventListener('click', () => {
+        clearAllCheckboxes();
+        applyFilter();
+    });
+    
+    //function performFullReset() {
+    // 1. 検索欄とフィルタをクリア
+   // $q.value = ''; 
+    //clearAllCheckboxes();
+    //applyFilter();
+    // 2. プレイヤーを停止
+    //if (player && player.stopVideo) {
+        // YouTube Player APIの stopVideo() メソッドを呼び出す
+        //player.stopVideo();
+        // ② <iframe>のソースをブランクに設定し、動画の読み込みを強制解除する（音声停止を保証）
+    //$yt.src = 'about:blank'; 
+    //}
+    // 3. パネルを非表示にする
+    //$panel.style.display = 'none';
+   //}
+    // リセットボタン ($resetSearch) の処理
+    ////if ($resetSearch) {
+    //① APIプレイヤーが使える場合は、APIで停止する
+    //$resetSearch.addEventListener('click', performFullReset);
+    //}
+     // 「全て解除」ボタン ($clearFilterBtn) の処理
+    //$clearFilterBtn.addEventListener('click', performFullReset);
+
+    
+    // --- フィルタロジック ---
+    function applyFilter() {
+        const q = ($q.value || '').trim().toLowerCase();
+        const { selectedCategories, selectedKeywords } = getSelectedFilters();
+
+        const filteredVideos = ALL_VIDEOS.filter(v => {
+            
+            // 1. カテゴリーフィルタ (OR条件: 選択なし または 選択したカテゴリのいずれかに一致)
+            const categoryOk = selectedCategories.length === 0 || selectedCategories.some(catValue => v.category === catValue);
+
+            // 2. キーワードフィルタ (AND条件: 選択なし または 選択したキーワード全てに一致)
+            const keywordOk = selectedKeywords.length === 0 || 
+                              selectedKeywords.every(k => (v.keywords || []).includes(k));
+
+            // 3. テキスト検索 (searchText全体に対して行う)
+            const textOk = !q || v.searchText.includes(q);
+
+            return categoryOk && keywordOk && textOk;
+        });
+
+        renderRows(filteredVideos);
+    }
+    
+    // --- イベントリスナー ---
+    // 検索窓の変更は即時反映（利便性のため）
+    $q.addEventListener('input', applyFilter);
+
+    $toggleFilter.addEventListener('click', () => {
+        const isHidden = $filterPanel.style.display === 'none';
+        $filterPanel.style.display = isHidden ? 'block' : 'none';
+        $toggleFilter.textContent = isHidden ? '絞り込みフィルターを閉じる' : '絞り込みフィルターを開く';
+    });
+    
+    // 「絞り込む」ボタンが押されたときにフィルタを実行
+    $applyFilterBtn.addEventListener('click', applyFilter);
+    
+    $clearFilterBtn.addEventListener('click', () => {
+        clearAllCheckboxes();
+        applyFilter();
+    });
+    
+    // 検索テキストをセットし、フィルターを適用する (カード内のキーワードクリック用)
+    function fillSearch(text){ 
+      if(!text) return; 
+      $q.value=text; 
+      // テキスト検索時はチェックボックスのフィルタは解除
+      clearAllCheckboxes();
+      applyFilter(); 
+    }
+
+
+    // ===== リスト描画 (動画カード) - 修正済み =====
+    function renderRows(videos){
+      $list.innerHTML='';
+      if(!videos.length){ 
+        $empty.style.display='block'; 
+        return; 
+      }
+      $empty.style.display='none';
+
+      for(const v of videos){
+        const card = document.createElement('div');
+        card.className = 'video-card';
+        
+        // カテゴリバッジとキーワードバッジを作成
+        const categoryBadge = `<span class="category-badge">${v.category}</span>`;
+        // JSONのkeywordsから3つまでキーワードを表示
+        const keywordsHtml = v.keywords.slice(0, 3).map(t => `<span class="keyword-badge">${t}</span>`).join('');
+        
+        // tags-rowにカテゴリーとキーワードを表示するように変更
+        card.innerHTML = `
+          <img class="thumbnail" src="${v.thumbnail}" alt="${v.title}のサムネイル" loading="lazy">
+          <div class="meta">
+            <div class="title">${v.title}</div>
+            <div class="info">
+              <span class="channel">${v.channel}</span>
+              <span class="date">${ymdToDots(v.date)}</span>
+            </div>
+            <div class="tags-row">
+              ${categoryBadge}
+              ${keywordsHtml}
+            </div>
+          </div>
+        `;
+
+        card.addEventListener('click', e => {
+            // バッジがクリックされた場合は検索に反映
+            if (e.target.classList.contains('category-badge') || e.target.classList.contains('keyword-badge')) {
+                const text = e.target.textContent;
+                fillSearch(text); 
+                return; 
+            }
+
+            // カード全体がクリックされたらプレイヤーを起動
+            $title.textContent = v.title;
+            $meta.textContent = `${ymdToDots(v.date)} / ${v.channel}`;
+            $open.href = `https://www.youtube.com/watch?v=${v.youtubeId}`;
+            $warnLink.href = $open.href;
+            renderSetlist(v, v.youtubeId, 0);
+            loadVideo(v.youtubeId, 0);
+            $panel.style.display = 'block';
+            // 浮動プレイヤーの位置を更新
+            window.updateFloatOnPlay && window.updateFloatOnPlay();
+            $panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+
+        $list.appendChild(card);
+      }
+    }
+
+    // ===== セットリスト描画 (元のコードから流用) =====
+    function renderSetlist(video, id, activeStart){
+      $setlist.innerHTML='';
+      if (!video.songs || video.songs.length === 0) {
+        $setlist.innerHTML = '<div style="padding: 10px 14px; color: var(--muted); font-size: 14px;">この動画にはセットリストが登録されていません。</div>';
+        return;
+      }
+
+      for(const s of (video.songs||[])){
+        const sec = toSeconds(s.start);
+        const item=document.createElement('div');
+        item.className='set-item'+(sec===activeStart?' active':'');
+        item.innerHTML=`<div class="set-title"><div class="set-song">${s.title}</div><div class="set-artist">${s.artist}</div></div><div class="set-time">${hms(sec)}〜</div>`;
+        item.addEventListener('click', ()=>{
+          loadVideo(id, sec);
+          $title.textContent = `${video.title}（${hms(sec)}〜）`;
+          $open.href = `https://www.youtube.com/watch?v=${id}&t=${sec}s`;
+          [...$setlist.children].forEach(el=>el.classList.remove('active'));
+          item.classList.add('active');
+        });
+        $setlist.appendChild(item);
+      }
+    }
+    
+
+    // ===== データ読み込みと初期化 =====
+    fetch('archive_videos.json') 
+      .then(r=>r.json())
+      .then(videos=>{ buildVideos(videos); applyFilter(); })
+      .catch(err=>{ console.error(err); $empty.style.display='block'; $empty.textContent='archive_videos.json の読み込みに失敗しました。'; });
+
+    
+    // ===== 浮動プレイヤー制御（元のコードから流用）=====
+    (function(){
+      const mq = window.matchMedia('(max-width: 900px)');
+      const headerH = document.querySelector('header')?.offsetHeight || 70;
+      const $playerCol = document.querySelector('.player-col');
+
+      function setFloat(enable){
+          const canFloat = enable && $panel.style.display !== 'none';
+          document.body.classList.toggle('has-float', canFloat);
+          $panel.classList.toggle('is-float', canFloat);
+      }
+
+      let io = null;
+      function attachObserver(){
+          if(io){ io.disconnect(); io = null; }
+          if(!mq.matches){ setFloat(false); return; }
+
+          io = new IntersectionObserver((entries)=>{
+              for(const e of entries){
+                  const visible = e.isIntersecting && e.intersectionRatio > 0.6;
+                  setFloat(!visible);
+              }
+          }, { root: null, rootMargin: `-${headerH + 8}px 0px 0px 0px`, threshold: [0, 0.6, 1] });
+          if($playerCol) io.observe($playerCol);
+      }
+      mq.addEventListener('change', attachObserver);
+      window.addEventListener('load', attachObserver);
+      window.updateFloatOnPlay = function(){
+          setTimeout(attachObserver, 100);
+      };
+
+      // ドラッグ移動（モバイル用）
+      const head = $panel.querySelector('.player-head');
+      if(!head) return;
+      let dragging = false, startX=0, startY=0, startLeft=0, startTop=0;
+      function px(n){ return `${Math.round(n)}px`; }
+      function onDown(e){
+          if(!$panel.classList.contains('is-float')) return;
+          dragging = true;
+          const rect = $panel.getBoundingClientRect();
+          startLeft = rect.left; startTop = rect.top;
+          const p = (e.touches?.[0] || e);
+          startX = p.clientX; startY = p.clientY;
+          $panel.style.right = 'auto'; $panel.style.bottom = 'auto';
+          $panel.style.left = px(startLeft); $panel.style.top = px(startTop);
+          document.addEventListener('mousemove', onMove);
+          document.addEventListener('touchmove', onMove, {passive:false});
+          document.addEventListener('mouseup', onUp);
+          document.addEventListener('touchend', onUp);
+      }
+      function onMove(e){
+          if(!dragging) return;
+          const p = (e.touches?.[0] || e);
+          const dx = p.clientX - startX, dy = p.clientY - startY;
+          const vw = window.innerWidth, vh = window.innerHeight;
+          const r = $panel.getBoundingClientRect();
+          let L = startLeft + dx, T = startTop + dy;
+          L = Math.min(vw - r.width - 8, Math.max(8, L));
+          T = Math.min(vh - r.height - 8, Math.max(8, T));
+          $panel.style.left = px(L); $panel.style.top = px(T);
+          e.preventDefault?.();
+      }
+      function onUp(){
+          dragging = false;
+          document.removeEventListener('mousemove', onMove);
+          document.removeEventListener('touchmove', onMove);
+          document.removeEventListener('mouseup', onUp);
+          document.removeEventListener('touchend', onUp);
+      }
+      head.addEventListener('mousedown', onDown);
+      head.addEventListener('touchstart', onDown, {passive:true});
+    })();
+  </script>
+</body>
+</html>
