@@ -892,13 +892,108 @@
     "keywords": ["フミ","文野環","フ景罪","にじさんじロケット団"]
   },
   {
+    "youtubeId": "tgPjz4yA4Bw",
+    "title": "【#にじさんじ煩悩】除夜の鐘でみんなの煩悩108個をはらう【にじさんじ/リゼ・ヘルエスタ】",
+    "channel": "リゼ・ヘルエスタ",
+    "date": "2020-12-31",
+    "thumbnail": "https://i.ytimg.com/vi/tgPjz4yA4Bw/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["リゼ・ヘルエスタ","月ノ美兎"],
+    "songs":[
+      {"title":"煩悩","artist":["リゼ・ヘルエスタ","月ノ美兎"],"start":9107
+  },
+   {
+    "youtubeId": "Ui8nltznLts",
+    "title": "【マリカ８DX】１２時間で強くしてください(後編)【にじさんじ/フミ/長尾景/#フ景罪】",
+    "channel": "フミ",
+    "date": "2020-12-12",
+    "thumbnail": "https://i.ytimg.com/vi/Ui8nltznLts/mqdefault.jpg",
+    "category": "ゲーム実況",
+    "keywords": ["フミ","フ景罪","マリオカート8DX"]
+  },
+  {
     "youtubeId": "wXKuM8yqExM",
     "title": "【マリカ８DX】１２時間で強くしてください(前編)【にじさんじ/フミ/長尾景/#フ景罪】",
     "channel": "フミ",
-    "date": "2021-12-12",
+    "date": "2020-12-12",
     "thumbnail": "https://i.ytimg.com/vi/wXKuM8yqExM/mqdefault.jpg",
     "category": "ゲーム実況",
-    "keywords": ["フミ","文野環","フ景罪","マリカ８DX"]
+    "keywords": ["フミ","フ景罪","マリオカート8DX"]
+  },
+  {
+    "youtubeId": "kPWxODmNwWw",
+    "title": "【VΔLZコラボ】雑談とか歌とか。【甲斐田晴/弦月藤士郎/長尾景/にじさんじ】",
+    "channel": "弦月藤士郎",
+    "date": "2020-12-08",
+    "thumbnail": "https://i.ytimg.com/vi/kPWxODmNwWw/mqdefault.jpg",
+    "category":  ["雑談","歌配信"],
+    "keywords": ["弦月藤士郎","甲斐田晴","VΔLZ"]
+  },
+  {
+    "youtubeId": "jBlfM6jBve4",
+    "title": "【VΔLZコラボ】雑談とか歌とか。【甲斐田晴/弦月藤士郎/長尾景/にじさんじ】",
+    "channel": "弦月藤士郎",
+    "date": "2020-12-08",
+    "thumbnail": "https://i.ytimg.com/vi/jBlfM6jBve4/mqdefault.jpg",
+    "category":  ["雑談","歌配信"],
+    "keywords": ["弦月藤士郎","甲斐田晴","VΔLZ"]
+  },
+  {
+    "youtubeId": "IWHfLKS6fIw",
+    "title": "【ポケモン銀|#無音ポケモン】無音ポケモンの悲劇(楽しい)再び【弦月藤士郎/長尾景/にじさんじ】",
+    "channel": "弦月藤士郎",
+    "date": "2020-11-22",
+    "thumbnail": "https://i.ytimg.com/vi/IWHfLKS6fIw/mqdefault.jpg",
+    "category": ["企画","ゲーム実況"],
+    "keywords": ["弦月藤士郎","園児組","ポケットモンスター 金・銀"]
+  },
+  {
+    "youtubeId": "xs_Y_fkEBqA",
+    "title": "【クソマロ作曲配信】技術をふんだんに使ってクソマロの歌ってみたを作ってみた。【弦月藤士郎/長尾景/にじさんじ】",
+    "channel": "弦月藤士郎",
+    "date": "2020-11-14",
+    "thumbnail": "https://i.ytimg.com/vi/xs_Y_fkEBqA/mqdefault.jpg",
+    "category": ["企画","歌配信"],
+    "keywords": ["弦月藤士郎","園児組","フミ","フ景罪"]
+  },
+  {
+    "youtubeId": "P5sKBbihErs",
+    "title": "【＃フ景罪】アルティメットチキンホースで勝たせてください【にじさんじフミ】】",
+    "channel": "フミ",
+    "date": "2021-10-29",
+    "thumbnail": "https://i.ytimg.com/vi/P5sKBbihErs/mqdefault.jpg",
+    "category": ["ゲーム実況","公式切り抜き"],
+    "keywords": ["フミ","フ景罪","マリオカート8DX"]
+  },
+  {
+    "youtubeId": "05U_hNkW3Ek",
+    "title": "【 価値観共有ゲーム 】ito【にじさんじ】",
+    "channel": "グウェル・オス・ガール",
+    "date": "2020-08-14",
+    "thumbnail": "https://i.ytimg.com/vi/05U_hNkW3Ek/mqdefault.jpg"糸
+    "category": ["ゲーム実況"],
+    "keywords": ["グウェル・オス・ガール","三枝明那","ベルモンド・バンデラス","黛灰","相羽ういは","早瀬走","弦月藤士郎","ito(イト)"]
+  },
+  {
+    "youtubeId": "c8d3W9nnWfc",
+    "title": "【コラボ】VΔLZオフ歌コラボ 10月編【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】",
+    "channel": "甲斐田晴",
+    "date": "2020-10-18",
+    "thumbnail": "https://i.ytimg.com/vi/c8d3W9nnWfc/mqdefault.jpg",
+    "category": ["歌配信"],
+    "keywords": ["甲斐田晴","弦月藤士郎","VΔLZ"]
+  },
+  {
+    "youtubeId": "M-PZDbBKaNY",
+    "title": "【凸待ち】10万人記念ポッキーなめ凸待ち！【にじさんじフミ】",
+    "channel": "フミ",
+    "date": "2020-10-01",
+    "thumbnail": "https://i.ytimg.com/vi/M-PZDbBKaNY/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["フミ"],
+    "songs":[
+      {"title":"凸待ち","artist":"フミ","start":448}
+    ]
   },
   {
     "youtubeId": "eU6ifOgrGSk",
@@ -908,6 +1003,18 @@
     "thumbnail": "https://i.ytimg.com/vi/eU6ifOgrGSk/mqdefault.jpg",
     "category": "企画",
     "keywords": ["文野環"]
+  },
+  {
+    "youtubeId": "_S92SxULqJk",
+    "title": "【１０万記念配信】渋谷ハジメ１０万人までの軌跡を振り返ろう【にじさんじ/渋谷ハジメ】",
+    "channel": "渋谷ハジメ",
+    "date": "2020-09-13",
+    "thumbnail": "https://i.ytimg.com/vi/_S92SxULqJk/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["渋谷ハジメ"],
+    "songs":[
+      {"title":"凸待ち","artist":"渋谷ハジメ","start":3787}
+    ]
   },
   {
     "youtubeId": "Q96dQNyCm4I",
@@ -937,6 +1044,15 @@
     "keywords": ["黛灰"]
   },
   {
+    "youtubeId": "B7jAhda3_lI",
+    "title": "【 にじさんじ 】ちま！しば！ひな！【グウェル・オス・ガール / 長尾景】",
+    "channel": "グウェル・オス・ガール",
+    "date": "2020-08-14",
+    "thumbnail": "https://i.ytimg.com/vi/B7jAhda3_lI/mqdefault.jpg",
+    "category": ["動画系"],
+    "keywords": ["グウェル・オス・ガール"]
+  },
+  {
     "youtubeId": "wxR7KPBfkzY",
     "title": "【#にじさんじ大乱闘】にじさんじ杯のシェリン【シェリン/にじさんじ】",
     "channel": "シェリン・バーガンディ",
@@ -944,6 +1060,33 @@
     "thumbnail": "https://i.ytimg.com/vi/wxR7KPBfkzY/mqdefault.jpg",
     "category": "大会",
     "keywords": ["シェリン・バーガンディ","にじさんじ大乱闘"]
+  },
+  {
+    "youtubeId": "x-RA-zK_Z88",
+    "title": "【語彙力喪失ゲーム】あのアレなヤバイ動物【グウェル・オス・ガール / フミ / 長尾景 / 来栖夏芽 / にじさんじ】",
+    "channel": "グウェル・オス・ガール",
+    "date": "2020-08-08",
+    "thumbnail": "https://i.ytimg.com/vi/x-RA-zK_Z88/mqdefault.jpg",
+    "category": ["雑談","企画"],
+    "keywords": ["グウェル・オス・ガール","フミ","来栖夏芽"]
+  },
+  {
+    "youtubeId": "xxmsLFef-cQ",
+    "title": "リスナーから募集したカードでバトル！？#桜魔カード でデュエル！【長尾景/弦月藤士郎/甲斐田晴/にじさんじ】",
+    "channel": "甲斐田晴",
+    "date": "2020-08-05",
+    "thumbnail": "https://i.ytimg.com/vi/xxmsLFef-cQ/mqdefault.jpg",
+    "category": ["雑談","企画"],
+    "keywords": ["甲斐田晴","弦月藤士郎","VΔLZ"]
+  },
+  {
+    "youtubeId": "7md7v9hG61o",
+    "title": "【歌枠】VΔLZでオフ歌！最高じゃん！！【甲斐田晴/弦月藤士郎/長尾景/にじさんじ】",
+    "channel": "弦月藤士郎",
+    "date": "2020-08-02",
+    "thumbnail": "https://i.ytimg.com/vi/7md7v9hG61o/mqdefault.jpg",
+    "category": ["雑談","歌配信"],
+    "keywords": ["弦月藤士郎","甲斐田晴","VΔLZ"]
   },
   {
     "youtubeId": "XIf1zaFbvE4",
@@ -964,6 +1107,18 @@
     "keywords": ["甲斐田晴","弦月藤士郎","VΔLZ"]
   },
   {
+    "youtubeId": "USpDa4Q95AA",
+    "title": "【調査】これ誰の願い事？にじライバー達の願いを集めてみた！【星川サラ/フミ/山神カルタ/にじさんじ】",
+    "channel": "星川サラ",
+    "date": "2020-07-07",
+    "thumbnail": "https://i.ytimg.com/vi/USpDa4Q95AA/mqdefault.jpg",
+    "category": ["企画"],
+    "keywords": ["星川サラ","フミ","山神カルタ"],
+    "songs":[
+      {"title":"これ誰の願い事？","artist":["星川サラ","フミ","山神カルタ"],"start":3885}
+    ]
+  },
+  {
     "youtubeId": "WUwLEgOyiak",
     "title": "【歌枠】オフコラボでいくぞ！オフライン歌枠！【弦月藤士郎/長尾景/にじさんじ】",
     "channel": "弦月藤士郎",
@@ -971,8 +1126,70 @@
     "thumbnail": "https://i.ytimg.com/vi/WUwLEgOyiak/mqdefault.jpg",
     "category": ["歌配信"],
     "keywords": ["弦月藤士郎","園児組"]
+  },
+  {
+    "youtubeId": "A1He7SK7f-o",
+    "title": "【水平思考ゲーム】ウミガメのスープ【VΔLZ / グウェル・オス・ガール/にじさんじ】",
+    "channel": "グウェル・オス・ガール",
+    "date": "2020-05-30",
+    "thumbnail": "https://i.ytimg.com/vi/A1He7SK7f-o/mqdefault.jpg",
+    "category": ["企画"],
+    "keywords":  ["グウェル・オス・ガール","甲斐田晴","弦月藤士郎","VΔLZ"]
+  },
+  {
+    "youtubeId": "lyrnRU4WI8Q",
+    "title": "緑仙、やれ。",
+    "channel": "渋谷ハジメ",
+    "date": "2020-05-29",
+    "thumbnail": "https://i.ytimg.com/vi/lyrnRU4WI8Q/mqdefault.jpg",
+    "category": ["企画"],
+    "keywords": ["でびでび・でびる","緑仙"],
+    "songs":[
+      {"title":"本当にあった怖い話","artist":["でびでび・でびる","緑仙"],"start":130}
+    ]
+  },
+  {
+    "youtubeId": "YD32aEI6otY",
+    "title": "【ラジオ/VΔLZコラボ】VΔLZラジオ ～桜魔の国よりお届けします～【弦月藤士郎/長尾景/甲斐田晴】",
+    "channel": "甲斐田晴",
+    "date": "2020-05-29",
+    "thumbnail": "https://i.ytimg.com/vi/YD32aEI6otY/mqdefault.jpg",
+    "category": ["企画"],
+    "keywords": ["甲斐田晴","弦月藤士郎","VΔLZ"]
+  },
+  {
+    "youtubeId": "KSFcUOm-2hY",
+    "title": "【ARK: Survival Evolved】塗装野郎Aチーム 城塗装編【グウェル・オス・ガール / レヴィ・エリファ / にじさんじ】 #起きろレヴィ",
+    "channel": "グウェル・オス・ガール",
+    "date": "2020-05-10",
+    "thumbnail": "https://i.ytimg.com/vi/KSFcUOm-2hY/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["グウェル・オス・ガール","ARK: Survival Evolved"]
+  },
+  {
+    "youtubeId": "lyrnRU4WI8Q",
+    "title": "【誕生日配信】すべてのファンに感謝して迎える誕生日【にじさんじ/渋谷ハジメ】",
+    "channel": "渋谷ハジメ",
+    "date": "2020-05-05",
+    "thumbnail": "https://i.ytimg.com/vi/lyrnRU4WI8Q/mqdefault.jpg",
+    "category": ["雑談"],
+    "keywords": ["渋谷ハジメ"],
+    "songs":[
+      {"title":"凸待ち","artist":"渋谷ハジメ","start":4030}
+    ]
+  },
+  {
+    "youtubeId": "aJBa266cJxg",
+    "title": "【おえかきの森】同期コラボ ～おえかきの森大合戦～【VΔLZ/にじさんじ】",
+    "channel": "甲斐田晴",
+    "date": "2020-04-08",
+    "thumbnail": "https://i.ytimg.com/vi/aJBa266cJxg/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["甲斐田晴","弦月藤士郎","VΔLZ","おえかきの森"]
   }
+  
   
 
 
 ]
+
