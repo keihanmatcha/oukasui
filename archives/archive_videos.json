@@ -579,7 +579,7 @@
     "channel": "雪城眞尋",
     "date": "2023-02-02",
     "thumbnail": "https://i.ytimg.com/vi/YcefJ7RQGSc/mqdefault.jpg",
-    "category": "踊り",
+    "category": "踊り動画",
     "keywords": ["雪城眞尋","ふつまひ"]
   },
   {
@@ -588,7 +588,7 @@
     "channel": "にじさんじ",
     "date": "2023-01-22",
     "thumbnail": "https://i.ytimg.com/vi/HCtBjFTvcBI/mqdefault.jpg",
-    "category": "ライブイベント",
+    "category": "ライブイベント,踊り配信",
     "keywords": ["叶", "神田笑一","ベルモンド・バンデラス","southern,xxxx","にじさんじユニット歌謡祭"]
   },
   {
@@ -973,5 +973,6 @@
     "keywords": ["弦月藤士郎","園児組"]
   }
   
+
 
 ]
