@@ -856,6 +856,27 @@
     "keywords": ["北小路ヒスイ","三枝明那","加賀美ハヤト","伏見ガク","舞元啓介","渋谷ハル","にじさんじ甲子園"]
   },
   {
+    "youtubeId": "xu5a2emYb90",
+    "title": "【誕生日凸待ち】初凸待ち！誰か来るかな？【弦月藤士郎/にじさんじ】",
+    "channel": "弦月藤士郎",
+    "date": "2020-07-30",
+    "thumbnail": "https://i.ytimg.com/vi/xu5a2emYb90/mqdefault.jpg",
+    "category": ["雑談"],
+    "keywords": ["弦月藤士郎","園児組"],
+    "songs":[
+       {"title":"凸待ち","artist":"弦月藤士郎","start":4329}
+     ]
+  },
+  {
+    "youtubeId": "vxJ5rm3UYtk",
+    "title": "【ごちゃごちゃゲーム実況】ゲームしちゃう系長尾景【弦月藤士郎/長尾景/にじさんじ】",
+    "channel": "弦月藤士郎",
+    "date": "2020-07-29",
+    "thumbnail": "https://i.ytimg.com/vi/vxJ5rm3UYtk/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["弦月藤士郎","園児組","その他ゲーム"]
+  },
+  {
     "youtubeId": "eU6ifOgrGSk",
     "title": "【ポケモンユナイト】ランクやります【にじさんじ/グウェル・オス・ガール】",
     "channel": "グウェル・オス・ガール",
@@ -1328,6 +1349,7 @@
 
 
 ]
+
 
 
 
