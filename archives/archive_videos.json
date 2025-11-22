@@ -357,15 +357,6 @@
     "keywords": ["星川サラ", "フミ","山神カルタ","甲斐田晴","弦月藤士郎","おりひめばるつ","VΔLZ","フ景罪"]
   },
   {
-    "youtubeId": "KVVr7M2iIQo",
-    "title": "【闇堕ち！？】激アツシーンでヒーローがいいそうなセリフを考えろ！ヒーローセリフ選手権【#にじトイ 無料パート】 #32",
-    "channel": "にじさんじ",
-    "date": "2023-10-05",
-    "thumbnail": "https://i.ytimg.com/vi/KVVr7M2iIQo/mqdefault.jpg",
-    "category": ["公式企画・番組"],
-    "keywords": ["成瀬鳴","伊波ライ","にじさんじのTOYBOX！"]
-  },
-  {
     "youtubeId": "egJodKpJIxY",
     "title": "【#おりひめばるつ 】無言マリパ。～実況に月語ルを添えて～【にじさんじ】",
     "channel": "星川サラ",
@@ -373,6 +364,15 @@
     "thumbnail": "https://i.ytimg.com/vi/egJodKpJIxY/mqdefault.jpg",
     "category": "ゲーム実況",
     "keywords": ["星川サラ", "フミ","山神カルタ","甲斐田晴","弦月藤士郎","おりひめばるつ","VΔLZ","フ景罪","マリオパーティ"]
+  },
+  {
+    "youtubeId": "KVVr7M2iIQo",
+    "title": "【闇堕ち！？】激アツシーンでヒーローがいいそうなセリフを考えろ！ヒーローセリフ選手権【#にじトイ 無料パート】 #32",
+    "channel": "にじさんじ",
+    "date": "2023-09-04",
+    "thumbnail": "https://i.ytimg.com/vi/KVVr7M2iIQo/mqdefault.jpg",
+    "category": ["公式企画・番組"],
+    "keywords": ["成瀬鳴","伊波ライ","にじさんじのTOYBOX！"]
   },
   {
     "youtubeId": "bnceSG8ecmY",
@@ -2185,6 +2185,7 @@
 
 
 ]
+
 
 
 
