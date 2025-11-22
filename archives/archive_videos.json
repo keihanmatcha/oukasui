@@ -774,6 +774,39 @@
     "keywords": ["成瀬鳴","舞元啓介"]
   },
   {
+    "youtubeId": "RlcgZ96TXxY",
+    "title": "【#パワプロ2022/対戦】ドラフト指名で獲得した選手達で自操作対決するぞ！【小野町春香/長尾景/#にじさんじON砲】",
+    "channel": "小野町春香",
+    "date": "2022-05-14",
+    "thumbnail": "https://i.ytimg.com/vi/RlcgZ96TXxY/mqdefault.jpg",
+    "category": ["企画"],
+    "keywords": [小野町春香","パワプロ野球"]
+  },
+  {
+    "youtubeId": "EBytyBktfD0",
+    "title": "【#弦月藤士郎3D】桜魔の国よりお披露目しますか。【弦月藤士郎/にじさんじ】",
+    "channel": "弦月藤士郎",
+    "date": "2022-05-13",
+    "thumbnail": "https://i.ytimg.com/vi/EBytyBktfD0/mqdefault.jpg",
+    "category": ["企画","3D","お披露目"],
+    "keywords": [弦月藤士郎","甲斐田晴","VΔLZ"],
+     "songs":[
+      {"title":"桜魔の国","artist":"VΔLZ","start":620}
+    ]
+  },
+  {
+    "youtubeId": "0Y6YjpvZpU4",
+    "title": "【第４部】ラストスパート！！一気にいくぞ！！２４時間生放送！！終われるのか！？ぽんぽこ24vol.6 ～フューチャー～",
+    "channel": "ぽんぽこ",
+    "date": "2022-05-08",
+    "thumbnail": "https://i.ytimg.com/vi/0Y6YjpvZpU4/mqdefault.jpg",
+    "category": "企画",
+    "keywords": [兎麹まり","ピーナッツくん","舞元啓介","ばあちゃる","橘ひなの","一ノ瀬うるは","英リサ","神威きゅぴ","八雲ぺに"],
+     "songs":[
+      {"title":"ぽこリーグ","artist":[兎麹まり","ピーナッツくん","舞元啓介","ばあちゃる","橘ひなの","一ノ瀬うるは",,"英リサ","神威きゅぴ","八雲ぺに"],"start":18850}
+    ]
+  },
+  {
     "youtubeId": "fetc0Exwa8M",
     "title": "【 #甲斐田晴3D 】今日はきっと、皆の笑顔で晴れるから【甲斐田晴/にじさんじ】",
     "channel": "甲斐田晴",
@@ -794,7 +827,7 @@
     "category": "企画",
     "keywords": ["フミ","フ景罪"],
      "songs":[
-      {"title":"画面共有","artist":"フミ","start":300}
+      {"title":"長尾お披露目振り返り","artist":"フミ","start":300}
     ]
   },
   {
@@ -804,7 +837,7 @@
     "date": "2022-05-03",
     "thumbnail": "https://i.ytimg.com/vi/4HyzppeJo-U/mqdefault.jpg",
     "category": "ゲーム実況",
-    "keywords": ["笹木咲","하윤（ハ・ユン）","VALORANT"],
+    "keywords":"オリバー・エバンス",
      "songs":[
       {"title":"画面共有","artist":"オリバー・エバンス","start":3369},
       {"title":"画面共有","artist":"オリバー・エバンス","start":15336}
@@ -1595,6 +1628,7 @@
 
 
 ]
+
 
 
 
