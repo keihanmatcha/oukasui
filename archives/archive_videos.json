@@ -671,7 +671,40 @@
     "date": "2022-11-03",
     "thumbnail": "https://i.ytimg.com/vi/eqPaPJhy-Js/mqdefault.jpg",
     "category": "雑談",
-    "keywords": ["ベルモンド・バンデラス"]
+    "keywords": ["ベルモンド・バンデラス"],
+     "songs":[{"title":"凸待ち","artist":"ベルモンド・バンデラス","start":7200}]
+  },
+  {
+    "youtubeId": "r-ktFn_dXOk",
+    "title": "【minecraft】にじさんじ大運動会 本配信【にじさんじ/桜凛月】",
+    "channel": "桜凛月",
+    "date": "2022-10-17",
+    "thumbnail": "https://i.ytimg.com/vi/r-ktFn_dXOk/mqdefault.jpg",
+    "category": ["大会","ゲーム実況"]
+    "keywords": ["桜凛月","Nara Haramaung","세피나（セフィナ）","めにまにかんぱにー","マインクラフト"]
+  },
+  {
+    "youtubeId": "QVwJc_tjQys",
+    "title": "【#にじさんじ大運動会2022】メンバー発表&チーム分け抽選会",
+    "channel": "桜凛月",
+    "date": "2022-10-17",
+    "thumbnail": "https://i.ytimg.com/vi/QVwJc_tjQys/mqdefault.jpg",
+    "category": "記念配信",
+    "keywords": ["桜凛月","Nara Haramaung","세피나（セフィナ）","めにまにかんぱにー","マインクラフト"]
+  },
+  {
+    "youtubeId": "s9UfUGUD_HY",
+    "title": "花畑チャイカとスプラトゥーン3 我らひきにく連合 椎名んとことプラベ練習",
+    "channel": "花畑チャイカ",
+    "date": "2022-10-16",
+    "thumbnail": "https://i.ytimg.com/vi/s9UfUGUD_HY/mqdefault.jpg",
+    "category": "ゲーム実況",
+    "keywords": ["花畑チャイカ","夕陽リリ","レヴィ・エリファ","하윤（ハ・ユン）","Splatoon3"],
+    "songs":[
+      {"title":"対戦","artist":["花畑チャイカ","夕陽リリ","レヴィ・エリファ","하윤（ハ・ユン）"],"start":11680},
+      {"title":"対戦","artist":["花畑チャイカ","夕陽リリ","レヴィ・エリファ","하윤（ハ・ユン）"],"start":15391},
+      {"title":"対戦","artist":["花畑チャイカ","夕陽リリ","レヴィ・エリファ","하윤（ハ・ユン）"],"start":16222}
+    ]
   },
   {
     "youtubeId": "s9UfUGUD_HY",
@@ -679,8 +712,17 @@
     "channel": "竜胆尊",
     "date": "2022-10-15",
     "thumbnail": "https://i.ytimg.com/vi/s9UfUGUD_HY/mqdefault.jpg",
-    "category": "企画",
-    "keywords": ["竜胆尊","健屋花那"]
+    "category": "ゲーム実況",
+    "keywords": ["竜胆尊","健屋花那","Splatoon3"]
+  },
+  {
+    "youtubeId": "eKV07LrIRJs",
+    "title": "【スプラトゥーン３】フミ様をS様にしてください！耐久【＃フ景罪 にじさんじ フミ 長尾景】",
+    "channel": "フミ",
+    "date": "2022-10-12",
+    "thumbnail": "https://i.ytimg.com/vi/eKV07LrIRJs/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["フミ","フ景罪","Splatoon3"]
   },
   {
     "youtubeId": "H0D3R3FALb0",
@@ -688,7 +730,7 @@
     "channel": "にじさんじ",
     "date": "2022-10-11",
     "thumbnail": "https://i.ytimg.com/vi/H0D3R3FALb0/mqdefault.jpg",
-    "category": ["公式企画・番組","ライブイベント"],
+    "category": ["公式企画・番組"],
     "keywords": ["セラフ・ダズルガーデン","樋口楓","にじさんじのTOYBOX！"]
   },
   {
@@ -1766,6 +1808,7 @@
 
 
 ]
+
 
 
 
