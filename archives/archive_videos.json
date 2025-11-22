@@ -810,11 +810,23 @@
     "keywords": ["甲斐田晴","夢追翔","弦月藤士郎","VΔLZ"]
   },
   {
-    "youtubeId": "1cOjJOEGHZk",
+    "youtubeId": "GNrO6f-Leks",
+    "title": "【スマブラSP】最後のファイターは誰だ！？みんなの予想は当たるか！？同時視聴【ベルモンド・バンデラス/にじさんじ】",
+    "channel": "ベルモンド・バンデラス",
+    "date": "2021-08-13",
+    "thumbnail": "https://i.ytimg.com/vi/GNrO6f-Leks/mqdefault.jpg",
+    "category": "記念配信",
+    "keywords": ["ベルモンド・バンデラス","オリバー・エバンス","세피나（セフィナ）","하윤（ハ・ユン）","大乱闘スマッシュブラザーズSPECIAL"],
+    "songs":[
+      {"title":"長尾の予想","artist":"ベルモンド・バンデラス","start":2245}
+    ]
+  },
+  {
+    "youtubeId": "xPciGjjfzLo",
     "title": "【凸待ち&雑談】🎉みんなの『おめでとう』が聞きたくて.。🍰#雪城眞尋生誕祭2021【雪城眞尋/にじさんじ】",
     "channel": "雪城眞尋",
-    "date": "2021-09-24",
-    "thumbnail": "https://i.ytimg.com/vi/1cOjJOEGHZk/mqdefault.jpg",
+    "date": "2021-09-26",
+    "thumbnail": "https://i.ytimg.com/vi/xPciGjjfzLo/mqdefault.jpg",
     "category": "雑談",
     "keywords": ["雪城眞尋"],
     "songs":[
@@ -1426,6 +1438,7 @@
 
 
 ]
+
 
 
 
