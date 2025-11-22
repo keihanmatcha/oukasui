@@ -420,6 +420,18 @@
     "keywords": ["星川サラ"]
   },
   {
+    "youtubeId": "gHihFjfOaD8",
+    "title": "【##にじ甲2023 】スポーツバーDERAS 2023 ドラフト会議応援配信【ベルモンド・バンデラス/にじさんじ】",
+    "channel": "ベルモンド・バンデラス",
+    "date": "2023-07-01",
+    "thumbnail": "https://i.ytimg.com/vi/gHihFjfOaD8/mqdefault.jpg",
+    "category": "記念配信",
+    "keywords": ["ベルモンド・バンデラス","エリー・コニファ","오지유（オ・ジユ）","나세라（ナ・セラ）","伏見ガク","Petra Gurin","にじさんじ甲子園"],
+    "songs":[
+      {"title":"通話","artist": "ベルモンド・バンデラス","start":5750}
+    ]
+  },
+  {
     "youtubeId": "en4OHDIWelE",
     "title": "【 3D企画 】にじさんじ風船ドッジボール【 #にじさんじドッジボール 】",
     "channel": "フミ",
@@ -2113,6 +2125,7 @@
 
 
 ]
+
 
 
 
