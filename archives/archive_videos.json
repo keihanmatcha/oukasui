@@ -420,13 +420,59 @@
     "keywords": ["星川サラ"]
   },
   {
+    "youtubeId": "en4OHDIWelE",
+    "title": "【 3D企画 】にじさんじ風船ドッジボール【 #にじさんじドッジボール 】",
+    "channel": "フミ",
+    "date": "2023-06-27",
+    "thumbnail": "https://i.ytimg.com/vi/en4OHDIWelE/mqdefault.jpg",
+    "category": ["企画","3D"]
+    "keywords": ["グウェル・オス・ガール","花畑チャイカ","ベルモンド・バンデラス","加賀美ハヤト","オリバー・エバンス"]
+  },
+   {
+    "youtubeId": "天宮こころ",
+    "title": "*.┊みんなで観戦┊#にじさんじ花鳥風月戦 第3回　いっしょに応援しよー！✊ˎˊ˗（　天宮こころ / にじさんじ　）",
+    "channel": "天宮こころ",
+    "date": "2023-06-24",
+    "thumbnail": "https://i.ytimg.com/vi/y5M6OZKhJjI/mqdefault.jpg",
+    "category": "記念配信",
+    "keywords": ["天宮こころ"],
+    "songs":[
+      {"title":"通話","artist": "天宮こころ","start":4115}
+    ]
+  },
+  {
     "youtubeId": "M8kvqVKi760",
     "title": "【スプラトゥーン3】信じてるぞスシコラ君！！！！【にじさんじ/東堂コハク】",
     "channel": "東堂コハク",
     "date": "2023-06-21",
     "thumbnail": "https://i.ytimg.com/vi/M8kvqVKi760/mqdefault.jpg",
     "category": "ゲーム実況",
-    "keywords": ["東堂コハク","Splatoon3"]
+    "keywords": ["東堂コハク","Splatoon3"],
+    "songs":[
+      {"title":"ゲスト","artist": "東堂コハク","start":9040}
+    ]
+  },
+  {
+    "youtubeId": "ZOJE2Qx1eK8",
+    "title": "ついに3Ⅾが見れるんだから！次回、【#春崎エアル３D】お披露目スタンバイ！【春崎エアル/にじさんじ】",
+    "channel": "Hana Macchia",
+    "date": "2023-06-16",
+    "thumbnail": "https://i.ytimg.com/vi/ZOJE2Qx1eK8/mqdefault.jpg",
+    "category": ["3D","お披露目配信"],
+    "keywords": ["春崎エアル","オリバー・エバンス"],
+    "songs":[
+      {"title":"ゲスト","artist": ["春崎エアル","オリバー・エバンス"],"start":1625}
+    ]
+    
+  },
+  {
+    "youtubeId": "2-srAwh6dCc",
+    "title": "【#フ景罪価値観ジャッジメント】絶対に意見が合わない討論会 【にじさんじフミ/長尾景】",
+    "channel": "フミ",
+    "date": "2023-06-04",
+    "thumbnail": "https://i.ytimg.com/vi/2-srAwh6dCc/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["フミ","フ景罪"]
   },
   {
     "youtubeId": "or9nukkYwrQ",
@@ -436,6 +482,15 @@
     "thumbnail": "https://i.ytimg.com/vi/or9nukkYwrQ/mqdefault.jpg",
     "category": "企画",
     "keywords": ["星川サラ","甲斐田晴","弦月藤士郎","VΔLZ","フ景罪"]
+  },
+  {
+    "youtubeId": "UqsdRQzJVNw",
+    "title": "【#フミ野たまき】徹底検証!?犬山たまきとフミの声は似てるのか？【文野環/星川サラ/神田笑一/長尾景】",
+    "channel": "不破湊",
+    "date": "2023-05-30",
+    "thumbnail": "https://i.ytimg.com/vi/UqsdRQzJVNw/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["犬山たまき", "フミ","文野環","星川サラ","神田笑一"]
   },
   {
     "youtubeId": "HgQCYuHMDtA",
@@ -2058,6 +2113,7 @@
 
 
 ]
+
 
 
 
