@@ -710,7 +710,7 @@
     "channel": "にじさんじ",
     "date": "2022-12-11",
     "thumbnail": "https://i.ytimg.com/vi/67vgvGmuN1o/mqdefault.jpg",
-    "category": ["ゲーム実況","大会"]
+    "category": ["ゲーム実況","大会"],
     "keywords": ["剣持刀也","マリオカート8DX"],
     "songs":[{
       "title":"通話","artist":"剣持刀也","start":22710
@@ -1954,6 +1954,7 @@
 
 
 ]
+
 
 
 
