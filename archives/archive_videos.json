@@ -774,6 +774,36 @@
     "keywords": ["成瀬鳴","舞元啓介"]
   },
   {
+    "youtubeId": "mi67FcqTwYk",
+    "title": "〖 誕生日凸待ち 〗˗ˋˏ 対戦よろしくおねがいしますˎˊ˗ ( 天宮こころ / にじさんじ )",
+    "channel": "天宮こころ",
+    "date": "2022-07-01",
+    "thumbnail": "https://i.ytimg.com/vi/mi67FcqTwYk/mqdefault.jpg",
+    "category": ["雑談"],
+    "keywords": ["天宮こころ","ベルモンド・バンデラス"],
+     "songs":[
+      {"title":"天宮こころ","artist":"VΔLZ","start":9115}
+    ]
+  },
+  {
+    "youtubeId": "C31UYsrAAhQ",
+    "title": "【 #VΔLZ3Dライブ 】3人揃って初めての３Dライブ！【長尾景/弦月藤士郎/甲斐田晴】",
+    "channel": "甲斐田晴",
+    "date": "2022-06-25",
+    "thumbnail": "https://i.ytimg.com/vi/C31UYsrAAhQ/mqdefault.jpg",
+    "category": ["ライブイベント","3D","お披露目"],
+    "keywords": ["甲斐田晴","弦月藤士郎","VΔLZ"]
+  },
+  {
+    "youtubeId": "1gGnLhpP2k4",
+    "title": "【Switch Sports】現役JK(17)と現役28歳(28)との真剣勝負🔥🔥🔥【にじさんじ/ながおちぐ】",
+    "channel": "西園ちぐさ",
+    "date": "2022-05-25",
+    "thumbnail": "https://i.ytimg.com/vi/1gGnLhpP2k4/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["西園ちぐさ","ながおちぐ","Nintendo Switch Sports"]
+  },
+  {
     "youtubeId": "RlcgZ96TXxY",
     "title": "【#パワプロ2022/対戦】ドラフト指名で獲得した選手達で自操作対決するぞ！【小野町春香/長尾景/#にじさんじON砲】",
     "channel": "小野町春香",
@@ -1628,6 +1658,7 @@
 
 
 ]
+
 
 
 
