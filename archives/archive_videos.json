@@ -683,6 +683,15 @@
     "keywords": ["竜胆尊","健屋花那"]
   },
   {
+    "youtubeId": "H0D3R3FALb0",
+    "title": "【#にじトイ】にじさんじのTOYBOX！ #11【無料パート】",
+    "channel": "にじさんじ",
+    "date": "2022-10-11",
+    "thumbnail": "https://i.ytimg.com/vi/H0D3R3FALb0/mqdefault.jpg",
+    "category": ["公式企画・番組","ライブイベント"],
+    "keywords": ["セラフ・ダズルガーデン","樋口楓","にじさんじのTOYBOX！"]
+  },
+  {
     "youtubeId": "B0PmQPVxDas",
     "title": "【Splatoon3】長尾さんの、スパッタリー講座！【セラフ・ダズルガーデン/にじさんじ】",
     "channel": "セラフ・ダズルガーデン",
@@ -707,7 +716,8 @@
     "date": "2022-10-01",
     "thumbnail": "https://i.ytimg.com/vi/bRlmsR_-MWg/mqdefault.jpg",
     "category": ["公式企画・番組","ライブイベント"],
-    "keywords": ["Selen Tatsuki","にじフェス2022"]
+    "keywords": ["Selen Tatsuki","にじフェス"],
+    "songs":[{"title":"にじフェス突発配信","artist":"Selen Tatsuki","start":23960}]
   },
   {
     "youtubeId": "MMf6oI558Sk",
@@ -717,6 +727,16 @@
     "thumbnail": "https://i.ytimg.com/vi/MMf6oI558Sk/mqdefault.jpg",
     "category": "企画",
     "keywords": ["雪城眞尋","ふつまひ"]
+  },
+   {
+    "youtubeId": "IgIXKRDGnOY",
+    "title": "【#まひまひ誕生日】告知あり！誕生日凸待ち🎉おめでとうって言われたくて！【雪城眞尋/にじさんじ】",
+    "channel": "雪城眞尋",
+    "date": "2022-09-26",
+    "thumbnail": "https://i.ytimg.com/vi/IgIXKRDGnOY/mqdefault.jpg",
+    "category": ["雑談"],
+    "keywords": ["雪城眞尋","ふつまひ"],
+    "songs":[{"title":"凸待ち","artist":"雪城眞尋","start":4214}]
   },
   {
     "youtubeId": "AvLzYtLjQbY",
@@ -733,7 +753,7 @@
     "channel": "成瀬鳴",
     "date": "2022-09-22",
     "thumbnail": "https://i.ytimg.com/vi/H3jPYglXptY/mqdefault.jpg",
-    "category": ["3Dお披露目","3D"],
+    "category": ["お披露目配信","3D"],
     "keywords": ["成瀬鳴","舞元啓介"]
   },
   {
@@ -1746,6 +1766,7 @@
 
 
 ]
+
 
 
 
