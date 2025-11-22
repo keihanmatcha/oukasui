@@ -798,7 +798,7 @@
     "date": "2021-12-23",
     "thumbnail": "https://i.ytimg.com/vi/nAcs_ql67kY/mqdefault.jpg",
     "category": "ゲーム実況",
-    "keywords": ["雪城眞尋","ふつまひ",マリオカート8DX"]
+    "keywords": ["雪城眞尋","ふつまひ","マリオカート8DX"]
   },
   {
     "youtubeId": "TN-NWhcYvyc",
@@ -807,7 +807,7 @@
     "date": "2021-12-11",
     "thumbnail": "https://i.ytimg.com/vi/TN-NWhcYvyc/mqdefault.jpg",
     "category": "ゲーム実況",
-    "keywords": ["フミ","フ景罪",マリオカート8DX"]
+    "keywords": ["フミ","フ景罪","マリオカート8DX"]
   },
   {
     "youtubeId": "-atU2A9jitE",
@@ -816,7 +816,7 @@
     "date": "2021-12-11",
     "thumbnail": "https://i.ytimg.com/vi/-atU2A9jitE/mqdefault.jpg",
     "category": "ゲーム実況",
-    "keywords": ["フミ","フ景罪",マリオカート8DX"]
+    "keywords": ["フミ","フ景罪","マリオカート8DX"]
   },
   {
     "youtubeId": "CMtKMnacpVs",
@@ -1528,6 +1528,7 @@
 
 
 ]
+
 
 
 
