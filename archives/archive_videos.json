@@ -774,6 +774,52 @@
     "keywords": ["成瀬鳴","舞元啓介"]
   },
   {
+    "youtubeId": "fetc0Exwa8M",
+    "title": "【 #甲斐田晴3D 】今日はきっと、皆の笑顔で晴れるから【甲斐田晴/にじさんじ】",
+    "channel": "甲斐田晴",
+    "date": "2022-05-06",
+    "thumbnail": "https://i.ytimg.com/vi/fetc0Exwa8M/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["甲斐田晴","年長組"],
+     "songs":[
+      {"title":"ドラマパート","artist":"甲斐田晴","start":600}
+    ]
+  },
+  {
+    "youtubeId": "4HyzppeJo-U",
+    "title": "【＃にZIP】だいたい最近のにじさんじニュース 5/6 ゲスト：長尾景さん【にじさんじフミ】",
+    "channel": "フミ",
+    "date": "2022-05-06",
+    "thumbnail": "https://i.ytimg.com/vi/4HyzppeJo-U/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["フミ","フ景罪"],
+     "songs":[
+      {"title":"画面共有","artist":"フミ","start":300}
+    ]
+  },
+  {
+    "youtubeId": "4HyzppeJo-U",
+    "title": "【Jump King】20万人記念まさかの２枠目、Jump King耐久！！？【オリバー・エバンス/にじさんじ】",
+    "channel": "オリバー・エバンス",
+    "date": "2022-05-03",
+    "thumbnail": "https://i.ytimg.com/vi/4HyzppeJo-U/mqdefault.jpg",
+    "category": "ゲーム実況",
+    "keywords": ["笹木咲","하윤（ハ・ユン）","VALORANT"],
+     "songs":[
+      {"title":"画面共有","artist":"オリバー・エバンス","start":3369},
+      {"title":"画面共有","artist":"オリバー・エバンス","start":15336},
+    ]
+  },
+  {
+    "youtubeId": "RXOqKwAyHWM",
+    "title": "【 香水 】VΔLZが力を合わせて全問正解を目指す！【甲斐田晴/弦月藤士郎/長尾景】",
+    "channel": "甲斐田晴",
+    "date": "2022-05-01",
+    "thumbnail": "https://i.ytimg.com/vi/RXOqKwAyHWM/mqdefault.jpg",
+    "category": "プロモーション",
+    "keywords": ["甲斐田晴","弦月藤士郎","VΔLZ"]
+  },
+  {
     "youtubeId": "qrcQBzFk0zI",
     "title": "【VALORANT】ヴァロ練しなきゃやば。教えて教えて教えて【にじさんじ/笹木咲】",
     "channel": "笹木咲",
@@ -1549,6 +1595,7 @@
 
 
 ]
+
 
 
 
