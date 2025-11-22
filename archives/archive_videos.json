@@ -833,7 +833,7 @@
     "channel": "雪城眞尋",
     "date": "2021-11-26",
     "thumbnail": "https://i.ytimg.com/vi/MsZygFYE0AM/mqdefault.jpg",
-    "category": ["お披露目配信","3D"]
+    "category": ["お披露目配信","3D"],
     "keywords": ["雪城眞尋","える"],
     "songs":[
       {"title":"新衣装","artist":["雪城眞尋","える"],"start":931}
@@ -1528,6 +1528,7 @@
 
 
 ]
+
 
 
 
