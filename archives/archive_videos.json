@@ -609,13 +609,58 @@
     "keywords": ["星川サラ", "イブラヒム","鈴木勝","アルス・アルマル"]
   },
   {
+    "youtubeId": "y4BmwwdLtNE",
+    "title": "【スプラトゥーン3】ただのボディーガードが伝説を目指すだけ_02【レイン・パターソン/にじさんじ】",
+    "channel": "レイン・パターソン",
+    "date": "2022-12-26",
+    "thumbnail": "https://i.ytimg.com/vi/y4BmwwdLtNE/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["レイン・パターソン","弦月藤士郎","社築","Splatoon3"],
+    "songs":[{
+      "title":"凸待ち","artist":["レイン・パターソン","弦月藤士郎","社築"],"start":2520
+    }]
+  },
+  {
+    "youtubeId": "vX4IfQvynx0",
+    "title": "【 24時間配信 】Part1 クリスマスは独りじゃないよ！やったね！【 にじさんじ /神田笑一 】",
+    "channel": "神田笑一",
+    "date": "2022-12-24",
+    "thumbnail": "https://i.ytimg.com/vi/vX4IfQvynx0/mqdefault.jpg",
+    "category": ["雑談"],
+    "keywords": ["神田笑一"],
+    "songs":[{
+      "title":"凸待ち","artist":"神田笑一","start":17876
+    }]
+  },
+  {
     "youtubeId": "OgwDeoMud0k",
     "title": "【#コハック3D】東堂堂々、3Dお披露目ちゅう〜✨【にじさんじ/東堂コハク】",
     "channel": "東堂コハク",
     "date": "2022-12-23",
     "thumbnail": "https://i.ytimg.com/vi/OgwDeoMud0k/mqdefault.jpg",
     "category": ["3D","歌配信","踊り配信","お披露目配信"],
-    "keywords": ["東堂コハク", "山神カルタ","Klime"]
+    "keywords": ["東堂コハク", "山神カルタ","Klime"],
+    "songs":[{
+      "title":"逆凸","artist":"Klime","start":2007
+    }]
+  },
+  {
+    "youtubeId": "PzX6R6xHZuo",
+    "title": "オフコラボ　クリスマス会２【#にじさんじロケット団】【長尾景/文野環/フミ】【にじさんじ】",
+    "channel": "文野環",
+    "date": "2022-12-23",
+    "thumbnail": "https://i.ytimg.com/vi/PzX6R6xHZuo/mqdefault.jpg",
+    "category": ["企画"],
+    "keywords": ["文野環", "フミ","にじさんじロケット団"]
+  },
+  {
+    "youtubeId": "Rd6yTFvTPaU",
+    "title": "【オフコラボ】ABCクリパ～！3人でケーキ作るしプレゼント交換する！【長尾景/える/雪城眞尋/にじさんじ】",
+    "channel": "雪城眞尋",
+    "date": "2022-12-21",
+    "thumbnail": "https://i.ytimg.com/vi/Rd6yTFvTPaU/mqdefault.jpg",
+    "category": ["企画"],
+    "keywords": ["雪城眞尋", "える"]
   },
   {
     "youtubeId": "gLlyNYv10fY",
@@ -625,6 +670,18 @@
     "thumbnail": "https://i.ytimg.com/vi/gLlyNYv10fY/mqdefault.jpg",
     "category": ["3D","企画","ゲーム実況"],
     "keywords": ["グウェル・オス・ガール", "三枝明那","オリバー・エバンス"]
+  },
+  {
+    "youtubeId": "xK_f0ClO9Fg",
+    "title": "【#MILLIECAKE2022】+1 level up ✨ ☆⭒NIJISANJI EN ✧ Millie Parfait ☆⭒",
+    "channel": "Millie Parfait",
+    "date": "2022-12-12",
+    "thumbnail": "https://i.ytimg.com/vi/xK_f0ClO9Fg/mqdefault.jpg",
+    "category": ["雑談"],
+    "keywords": ["Millie Parfait"],
+   "songs":[{
+      "title":"逆凸","artist":"四季凪アキラ","start":25582
+    }]
   },
   {
     "youtubeId": "Bjnx0OSKTpk",
@@ -641,8 +698,23 @@
     "channel": "四季凪アキラ",
     "date": "2022-12-12",
     "thumbnail": "https://i.ytimg.com/vi/CZcI8LKO_SU/mqdefault.jpg",
-    "category": ["雑談","歌配信"],
-    "keywords": ["四季凪アキラ"]
+    "category": ["雑談"],
+    "keywords": ["四季凪アキラ"],
+    "songs":[{
+      "title":"逆凸","artist":"四季凪アキラ","start":11985
+    }]
+  },
+  {
+    "youtubeId": "67vgvGmuN1o",
+    "title": "【マリオカート8DX】第5回マリオカートにじさんじ杯　予選【#マリカにじさんじ杯】",
+    "channel": "にじさんじ",
+    "date": "2022-12-11",
+    "thumbnail": "https://i.ytimg.com/vi/67vgvGmuN1o/mqdefault.jpg",
+    "category": ["ゲーム実況","大会"]
+    "keywords": ["剣持刀也","マリオカート8DX"],
+    "songs":[{
+      "title":"通話","artist":"剣持刀也","start":22710
+    }]
   },
   {
     "youtubeId": "UtkfcXMtq9c",
@@ -1882,6 +1954,7 @@
 
 
 ]
+
 
 
 
