@@ -837,13 +837,34 @@
     "keywords": ["本間ひまわり","ポケモンユナイト"]
   },
   {
+    "youtubeId": "FSbhokNhPE4",
+    "title": "【#にじさんじ甲子園 2021夏】スポーツバーDERAS 本戦Aリーグ応援配信【ベルモンド・バンデラス/にじさんじ】",
+    "channel": "ベルモンド・バンデラス",
+    "date": "2021-08-13",
+    "thumbnail": "https://i.ytimg.com/vi/FSbhokNhPE4/mqdefault.jpg",
+    "category": "記念配信",
+    "keywords": ["ベルモンド・バンデラス","にじさんじ甲子園"],
+    "songs":[
+      {"title":"FSbhokNhPE4","artist":"ベルモンド・バンデラス","start":13740}
+    ]
+  },
+  {
     "youtubeId": "O4NIvfEOxw0",
     "title": "打ち上げ　観戦枠【北小路ヒスイ/にじさんじ】",
     "channel": "小野町春香",
     "date": "2021-08-12",
     "thumbnail": "https://i.ytimg.com/vi/O4NIvfEOxw0/mqdefault.jpg",
     "category": "雑談",
-    "keywords": ["小野町春香","パワプロ"]
+    "keywords": ["小野町春香","パワフルプロ野球"]
+  },
+  {
+    "youtubeId": "2_YsW5GEIF0",
+    "title": "【長尾景】忖度師襲来!?非オタ？プレミ？モールス信号の人とは…#けいたま 対談バトル!!【犬山たまき】",
+    "channel": "犬山たまき",
+    "date": "2021-08-10",
+    "thumbnail": "https://i.ytimg.com/vi/2_YsW5GEIF0/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["犬山たまき"]
   },
   {
     "youtubeId": "t7r1VlP0fuI",
@@ -853,6 +874,15 @@
     "thumbnail": "https://i.ytimg.com/vi/t7r1VlP0fuI/mqdefault.jpg",
     "category": "記念配信",
     "keywords": ["北小路ヒスイ","三枝明那","加賀美ハヤト","伏見ガク","舞元啓介","渋谷ハル","にじさんじ甲子園"]
+  },
+  {
+    "youtubeId": "HX2SJdFiKsk",
+    "title": "【#にじイレまつり】超攻撃型わくわく町内会サッカー【にじさんじ/加賀美ハヤト】",
+    "channel": "加賀美ハヤト",
+    "date": "2021-08-08",
+    "thumbnail": "https://i.ytimg.com/vi/HX2SJdFiKsk/mqdefault.jpg",
+    "category": "記念配信",
+    "keywords": ["加賀美ハヤト","不破湊","雪城眞尋","黛灰","神田笑一","フレン・E・ルスタリオ","弦月藤士郎","叶","花畑チャイカ","ルイス・キャミー"]
   },
   {
     "youtubeId": "xu5a2emYb90",
@@ -1348,6 +1378,7 @@
 
 
 ]
+
 
 
 
