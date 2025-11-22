@@ -645,6 +645,15 @@
     "keywords": ["Selen Tatsuki","にじフェス2022"]
   },
   {
+    "youtubeId": "H3jPYglXptY",
+    "title": "【必ず概要欄をご確認ください】【#成瀬鳴3D】3Dお披露目だよ。【成瀬鳴/にじさんじ】",
+    "channel": "にじさんじ",
+    "date": "2022-09-22",
+    "thumbnail": "https://i.ytimg.com/vi/H3jPYglXptY/mqdefault.jpg",
+    "category": ["3Dお披露目","3D"],
+    "keywords": ["成瀬鳴","舞元啓介"]
+  },
+  {
     "youtubeId": "Elxfr2fscN4",
     "title": "🎮【Splatoon3】 はじめてのスプラ！First time splatoon ｗ. Nagao先生 【JP】",
     "channel": "민수하（ミン・スゥーハ）",
@@ -735,6 +744,16 @@
     "keywords": ["星川サラ","Splatoon3"]
   },
   {
+    "youtubeId": "rn5cqrZb9VA",
+    "title": "【#にじさんじ甲子園 2022】スポーツバーDERAS 2022 本戦Aリーグ応援配信【ベルモンド・バンデラス/にじさんじ】",
+    "channel": "にじさんじ",
+    "date": "2022-08-12",
+    "thumbnail": "https://i.ytimg.com/vi/rn5cqrZb9VA/mqdefault.jpg",
+    "category": "記念配信",
+    "keywords": ["ベルモンド・バンデラス","오지유（オ・ジユ）","세피나（セフィナ）","나세라（ナ・セラ）","にじさんじ甲子園"],
+    "songs":[{"title":,"artist":["ベルモンド・バンデラス","오지유（オ・ジユ）","세피나（セフィナ）","나세라（ナ・セラ）"],"start":2120}]
+  },
+  {
     "youtubeId": "68DrBpcq1pU",
     "title": "【愛なんて】にじさんじのB級バラエティ（仮）＃35【いらねぇよ】",
     "channel": "にじさんじ",
@@ -744,13 +763,13 @@
     "keywords": ["イブラヒム","早瀬走","周央サンゴ","でびでび・でびる","フレン・E・ルスタリオ","にじさんじのB級バラエティ（仮）"]
   },
     {
-    "youtubeId": "H3jPYglXptY",
-    "title": "【必ず概要欄をご確認ください】【#成瀬鳴3D】3Dお披露目だよ。【成瀬鳴/にじさんじ】",
-    "channel": "成瀬鳴",
+    "youtubeId": "NUx2A-zNd0Q",
+    "title": "【#にじさんじラジオ体操部】にじライバー健康計画８日目 / 2022年【不破湊/にじさんじ】",
+    "channel": "不破湊",
     "date": "2022-08-10",
-    "thumbnail": "https://i.ytimg.com/vi/H3jPYglXptY/mqdefault.jpg",
-    "category": "3D",
-    "keywords": ["成瀬鳴","舞元啓介"]
+    "thumbnail": "https://i.ytimg.com/vi/NUx2A-zNd0Q/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["不破湊"]
   },
   {
     "youtubeId": "UnmP8EgEwTs",
@@ -771,11 +790,11 @@
     "keywords": ["グウェル・オス・ガール","安土桃","先斗寧","伏見ガク","黛灰","レヴィ・エリファ","ベルモンド・バンデラス","オリバー・エバンス","오지유（オ・ジユ）","세피나（セフィナ）","나세라（ナ・セラ）"]
   },
   {
-    "youtubeId": "H3jPYglXptY",
+    "youtubeId": "t63ROGw5YV8",
     "title": "【 同時視聴 】にじさんじ甲子園2022 ドラフト会議【 #にじさんじ甲子園 】",
     "channel": "グウェル・オス・ガール",
     "date": "2022-07-09",
-    "thumbnail": "https://i.ytimg.com/vi/H3jPYglXptY/mqdefault.jpg",
+    "thumbnail": "https://i.ytimg.com/vi/t63ROGw5YV8/mqdefault.jpg",
     "category": "記念配信",
     "keywords": ["グウェル・オス・ガール","세피나（セフィナ）","나세라（ナ・セラ）","にじさんじ甲子園"]
   },
@@ -1688,6 +1707,7 @@
 
 
 ]
+
 
 
 
