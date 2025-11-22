@@ -546,6 +546,27 @@
     "keywords": ["桜凛月"]
   },
   {
+    "youtubeId": "PdNKvHKs03c",
+    "title": "【ゲスト：長尾景・小松昌平・柳原哲也】深町寿成のVバラ！！！＃５ 無料パート",
+    "channel": "深町寿成のVバラ！！！",
+    "date": "2023-03-28",
+    "thumbnail": "https://i.ytimg.com/vi/PdNKvHKs03c/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["深町寿成","小松昌平","柳原哲也"]
+  },
+  {
+    "youtubeId": "hkzSZdJ4dGI",
+    "title": "文野環5周年記念　逆凸配信☆☆　【にじさんじ】",
+    "channel": "文野環",
+    "date": "2023-03-15",
+    "thumbnail": "https://i.ytimg.com/vi/hkzSZdJ4dGI/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["文野環"],
+    "songs":[{
+      "title":"凸待ち","artist":"文野環","start":15060
+    }]
+  },
+  {
     "youtubeId": "rn435DshtOA",
     "title": "【スプラ3】私の大学にもビッグラン来たらいいのにな委員会【先斗寧/にじさんじ】",
     "channel": "先斗寧",
@@ -553,6 +574,33 @@
     "thumbnail": "https://i.ytimg.com/vi/rn435DshtOA/mqdefault.jpg",
     "category": "ゲーム実況",
     "keywords": ["先斗寧","Splatoon3"]
+  },
+  {
+    "youtubeId": "19GzZPKUhns",
+    "title": "【原神 | Genshin】ディシア引くまでやめれま10!!～VΔLZ編～【甲斐田晴/弦月藤士郎/長尾景/にじさんじ】",
+    "channel": "弦月藤士郎",
+    "date": "2023-03-03",
+    "thumbnail": "https://i.ytimg.com/vi/19GzZPKUhns/mqdefault.jpg",
+    "category": ["ゲーム実況"]
+    "keywords": ["弦月藤士郎","甲斐田晴","VΔLZ","原神"]
+  },
+  {
+    "youtubeId": "J1Qz5WuGaj0",
+    "title": "【 #VΔLZオフ歌 】久々のVΔLZオフ歌！重大告知もアリ！【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】",
+    "channel": "甲斐田晴",
+    "date": "2023-02-26",
+    "thumbnail": "https://i.ytimg.com/vi/J1Qz5WuGaj0/mqdefault.jpg",
+    "category": ["歌配信","ライブイベント"]
+    "keywords": ["甲斐田晴","弦月藤士郎","VΔLZ"]
+  },
+  {
+    "youtubeId": "T8sJd21qjII",
+    "title": "【#タメナンデス 解散！？】※タメがまったり雑談したりお便り読んだりする配信です【オリバー・エバンス/長尾景/にじさんじ】",
+    "channel": "オリバー・エバンス",
+    "date": "2023-02-17",
+    "thumbnail": "https://i.ytimg.com/vi/T8sJd21qjII/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["オリバー・エバンス","タメナンデス"]
   },
   {
     "youtubeId": "9SVsj50MDqc",
@@ -1954,6 +2002,7 @@
 
 
 ]
+
 
 
 
