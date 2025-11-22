@@ -825,7 +825,7 @@
     "date": "2021-09-11",
     "thumbnail": "https://i.ytimg.com/vi/kxMfIY3g-Xo/mqdefault.jpg",
     "category": "ゲーム実況",
-    "keywords": ["葛葉","ポケモンユナイト"]
+    "keywords": ["葛葉","ポケットモンスター-ユナイト"]
   },
   {
     "youtubeId": "XxjEo76WdXY",
@@ -834,7 +834,7 @@
     "date": "2021-09-10",
     "thumbnail": "https://i.ytimg.com/vi/XxjEo76WdXY/mqdefault.jpg",
     "category": "ゲーム実況",
-    "keywords": ["本間ひまわり","ポケモンユナイト"]
+    "keywords": ["本間ひまわり","ポケットモンスター-ユナイト"]
   },
   {
     "youtubeId": "FSbhokNhPE4",
@@ -912,7 +912,7 @@
     "date": "2021-07-22",
     "thumbnail": "https://i.ytimg.com/vi/XMRvrr1D_MQ/mqdefault.jpg",
     "category": "ゲーム実況",
-    "keywords": ["グウェル・オス・ガール","叶","神田笑一","鷹宮リオン","ポケモンユナイト"],
+    "keywords": ["グウェル・オス・ガール","叶","神田笑一","鷹宮リオン","ポケットモンスター-ユナイト"],
     "songs":[
        {"title":"ゲーム実況","artist":["グウェル・オス・ガール","叶","神田笑一","鷹宮リオン"],"start":249}
      ]
@@ -1378,6 +1378,7 @@
 
 
 ]
+
 
 
 
