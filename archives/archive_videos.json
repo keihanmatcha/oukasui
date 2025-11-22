@@ -590,7 +590,7 @@
     "channel": "弦月藤士郎",
     "date": "2023-03-03",
     "thumbnail": "https://i.ytimg.com/vi/19GzZPKUhns/mqdefault.jpg",
-    "category": ["ゲーム実況"]
+    "category": ["ゲーム実況"],
     "keywords": ["弦月藤士郎","甲斐田晴","VΔLZ","原神"]
   },
   {
@@ -599,7 +599,7 @@
     "channel": "甲斐田晴",
     "date": "2023-02-26",
     "thumbnail": "https://i.ytimg.com/vi/J1Qz5WuGaj0/mqdefault.jpg",
-    "category": ["歌配信","ライブイベント"]
+    "category": ["歌配信","ライブイベント"],
     "keywords": ["甲斐田晴","弦月藤士郎","VΔLZ"]
   },
   {
@@ -2011,6 +2011,7 @@
 
 
 ]
+
 
 
 
