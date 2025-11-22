@@ -837,7 +837,7 @@
     "date": "2022-05-03",
     "thumbnail": "https://i.ytimg.com/vi/4HyzppeJo-U/mqdefault.jpg",
     "category": "ゲーム実況",
-    "keywords":"オリバー・エバンス",
+    "keywords":["オリバー・エバンス"],
      "songs":[
       {"title":"画面共有","artist":"オリバー・エバンス","start":3369},
       {"title":"画面共有","artist":"オリバー・エバンス","start":15336}
@@ -1628,6 +1628,7 @@
 
 
 ]
+
 
 
 
