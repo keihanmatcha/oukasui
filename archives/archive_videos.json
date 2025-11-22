@@ -587,7 +587,7 @@
     "channel": "にじさんじ",
     "date": "2023-01-22",
     "thumbnail": "https://i.ytimg.com/vi/SjuAIIe0Op0/mqdefault.jpg",
-    "category": "ライブイベント,踊り配信",
+    "category": ["ライブイベント,踊り配信"],
     "keywords": ["叶", "神田笑一","ベルモンド・バンデラス","southern,xxxx","にじさんじユニット歌謡祭"]
   },
   {
@@ -1348,6 +1348,7 @@
 
 
 ]
+
 
 
 
