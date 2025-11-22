@@ -627,6 +627,15 @@
     "keywords": ["グウェル・オス・ガール", "三枝明那","オリバー・エバンス"]
   },
   {
+    "youtubeId": "Bjnx0OSKTpk",
+    "title": "【 にじさんじ 】アルティメットチキンホース【グウェル・オス・ガール/長尾景/春崎エアル/ナギ】",
+    "channel": "グウェル・オス・ガール",
+    "date": "2022-12-12",
+    "thumbnail": "https://i.ytimg.com/vi/Bjnx0OSKTpk/mqdefault.jpg",
+    "category": "ゲーム実況",
+    "keywords": ["グウェル・オス・ガール","春崎エアル","소나기（ソ・ナギ）","アルティメットチキンホース"]
+  },
+  {
     "youtubeId": "CZcI8LKO_SU",
     "title": "誕生日記念！12月12日だから「12人逆凸」するよ！最後にお知らせも…！？【#四季凪アキラ生誕祭2022 /にじさんじ/VOLTACTION】",
     "channel": "四季凪アキラ",
@@ -635,7 +644,33 @@
     "category": ["雑談","歌配信"],
     "keywords": ["四季凪アキラ"]
   },
-
+  {
+    "youtubeId": "UtkfcXMtq9c",
+    "title": "【マリオカート８ デラックス】#タメナンデス 運転ヤバい教授と祓魔師指導員の地獄教習所【オリバー・エバンス/長尾景/にじさんじ】",
+    "channel": "オリバー・エバンス",
+    "date": "2022-12-05",
+    "thumbnail": "https://i.ytimg.com/vi/UtkfcXMtq9c/mqdefault.jpg",
+    "category": "ゲーム実況",
+    "keywords": ["オリバー・エバンス","タメナンデス","マリオカート8DX"]
+  },
+  {
+    "youtubeId": "KxNYSL20STU",
+    "title": "【FIFAワールドカップ2022】頑張れサッカー日本代表！vsクロアチア代表　日本代表応援枠！【にじさんじ/舞元啓介】",
+    "channel": "舞元啓介",
+    "date": "2022-12-05",
+    "thumbnail": "https://i.ytimg.com/vi/KxNYSL20STU/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["舞元啓介","伏見ガク","成瀬鳴","ベルモンド・バンデラス"]
+  },
+  {
+    "youtubeId": "NvevP0qwPz4",
+    "title": "【FIFAワールドカップ2022】頑張れサッカー日本代表！vsスペイン代表　日本代表応援枠！【にじさんじ/舞元啓介】",
+    "channel": "舞元啓介",
+    "date": "2022-12-02",
+    "thumbnail": "https://i.ytimg.com/vi/NvevP0qwPz4/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["舞元啓介","伏見ガク","緑仙"]
+  },
   {
     "youtubeId": "E44wD2UzuYc",
     "title": " 【オフ動画】15歳と29歳で1日食事交換してみた！【ふつまひジェネギャング第2回/長尾景/雪城眞尋】",
@@ -644,6 +679,26 @@
     "thumbnail": "https://i.ytimg.com/vi/E44wD2UzuYc/mqdefault.jpg",
     "category": "企画",
     "keywords": ["雪城眞尋","ふつまひ"]
+  },
+  {
+    "youtubeId": "pJIwIwsUfBU",
+    "title": "【#メイカワンマンライブ】友達に応援VTRくださいっていったら63人もの方が用意してくれました；；【歌衣メイカ】",
+    "channel": "Miyu Ottavia",
+    "date": "2022-11-27",
+    "thumbnail": "https://i.ytimg.com/vi/pJIwIwsUfBU/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["歌衣メイカ"],
+    "songs":[{"title":"VTR","artist":"歌衣メイカ","start":16172}]
+  },
+  {
+    "youtubeId": "rg0yKFg6I4A",
+    "title": "【凸待ち】totsumachi n chill【NIJISANJI | Miyu Ottavia】",
+    "channel": "Miyu Ottavia",
+    "date": "2022-11-27",
+    "thumbnail": "https://i.ytimg.com/vi/rg0yKFg6I4A/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["Miyu Ottavia"],
+    "songs":[{"title":"凸待ち","artist":"Miyu Ottavia","start":10197}]
   },
   {
     "youtubeId": "7HhS5jUWGns",
@@ -670,7 +725,7 @@
     "date": "2022-11-21",
     "thumbnail": "https://i.ytimg.com/vi/5nPQrv-AQrk/mqdefault.jpg",
     "category": "雑談",
-    "keywords": ["소나기（ソ・ナギ）","春崎エアル","グウェル・オス・ガール","ポケモン-スカーレットバイオレット"],
+    "keywords": ["소나기（ソ・ナギ）","春崎エアル","グウェル・オス・ガール","ポケットモンスター-スカーレットバイオレット"],
      "songs":[{"title":"通話","artist":["소나기（ソ・ナギ）","春崎エアル","グウェル・オス・ガール"],"start":14824}]
   },
   {
@@ -1827,6 +1882,7 @@
 
 
 ]
+
 
 
 
