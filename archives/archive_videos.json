@@ -774,6 +774,18 @@
     "keywords": ["成瀬鳴","舞元啓介"]
   },
   {
+    "youtubeId": "qrcQBzFk0zI",
+    "title": "【VALORANT】ヴァロ練しなきゃやば。教えて教えて教えて【にじさんじ/笹木咲】",
+    "channel": "笹木咲",
+    "date": "2022-02-23",
+    "thumbnail": "https://i.ytimg.com/vi/qrcQBzFk0zI/mqdefault.jpg",
+    "category": "ゲーム実況",
+    "keywords": ["笹木咲","하윤（ハ・ユン）,"VALORANT"],
+     "songs":[
+      {"title":"対戦","artist":"ベルモンド・バンデラス","start":7520}
+    ]
+  },
+  {
     "youtubeId": "2AbBtLl3JtA",
     "title": "【APEX】ランクプラチナ＠２＠２＠２＠２一生俺は1人なのか…？【雪城眞尋/にじさんじ】",
     "channel": "雪城眞尋",
@@ -1537,6 +1549,7 @@
 
 
 ]
+
 
 
 
