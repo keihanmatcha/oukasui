@@ -375,6 +375,48 @@
     "keywords": ["星川サラ", "フミ","山神カルタ","甲斐田晴","弦月藤士郎","おりひめばるつ","VΔLZ","フ景罪","マリオパーティ"]
   },
   {
+    "youtubeId": "bnceSG8ecmY",
+    "title": "【#長尾景アイドル力テスト】これが成長した長尾景(アイドルの姿)だ！告知もアリ！【にじさんじ/西園チグサ/長尾景】",
+    "channel": "西園チグサ",
+    "date": "2023-08-16",
+    "thumbnail": "https://i.ytimg.com/vi/bnceSG8ecmY/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["西園チグサ","ながおちぐ"]
+  },
+  {
+    "youtubeId": "ydkZWu2guVk",
+    "title": "【#にじ甲2023 】スポーツバーDERAS 2023 本戦Ａリーグ応援配信【ベルモンド・バンデラス/にじさんじ】",
+    "channel": "ベルモンド・バンデラス",
+    "date": "2023-08-11",
+    "thumbnail": "https://i.ytimg.com/vi/ydkZWu2guVk/mqdefault.jpg",
+    "category": "記念配信",
+    "keywords": ["ベルモンド・バンデラス","민수하（ミン・スゥーハ）","神田笑一","オリバー・エバンス","にじさんじ甲子園"],
+    "songs":[
+      {"title":"通話","artist": ["ベルモンド・バンデラス","민수하（ミン・スゥーハ）","神田笑一","オリバー・エバンス"],"start":23672}
+    ]
+  },
+  {
+    "youtubeId": "qw0Kf4e3pXI",
+    "title": "🌊【Study】 수하의 한국어 교실 Korean Class for Seoul Popcon w. Nagao, Seraph 【KR/JP】",
+    "channel": "민수하（ミン・スゥーハ）",
+    "date": "2023-08-08",
+    "thumbnail": "https://i.ytimg.com/vi/qw0Kf4e3pXI/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["민수하（ミン・スゥーハ）","セラフ・ダズルガーデン"]
+  },
+  {
+    "youtubeId": "pge4c06ZbO0",
+    "title": "【誕生日凸待ち】ねえねえ祝って～～！！！🌟【にじさんじ/星川サラ】#星川サラ誕生日2023",
+    "channel": "星川サラ",
+    "date": "2023-08-07",
+    "thumbnail": "https://i.ytimg.com/vi/pge4c06ZbO0/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["星川サラ"],
+    "songs":[
+      {"title":"凸待ち","artist": "星川サラ","start":6960}
+    ]
+  },
+  {
     "youtubeId": "BN4S6ENL_Ys",
     "title": "【ガチ】メンバーオーディション失敗！？手当たり次第逆凸してみた【#にじさんじバンド】",
     "channel": "にじさんじ",
@@ -2143,6 +2185,7 @@
 
 
 ]
+
 
 
 
