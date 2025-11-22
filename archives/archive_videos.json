@@ -811,11 +811,23 @@
   },
   {
     "youtubeId": "1cOjJOEGHZk",
+    "title": "【凸待ち&雑談】🎉みんなの『おめでとう』が聞きたくて.。🍰#雪城眞尋生誕祭2021【雪城眞尋/にじさんじ】",
+    "channel": "雪城眞尋",
+    "date": "2021-09-24",
+    "thumbnail": "https://i.ytimg.com/vi/1cOjJOEGHZk/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["雪城眞尋"],
+    "songs":[
+      {"title":"練習","artist":"雪城眞尋","start":1220}
+    ]
+  },
+  {
+    "youtubeId": "1cOjJOEGHZk",
     "title": "【#レバガチャスマブラ運動会】スマブラ楽しい大会【にじさんじ/緑仙】",
     "channel": "緑仙",
     "date": "2021-09-24",
     "thumbnail": "https://i.ytimg.com/vi/1cOjJOEGHZk/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況","大会"],
     "keywords": ["緑仙","神田笑一","成瀬鳴","大乱闘スマッシュブラザーズSPECIAL"]
   },
   {
@@ -824,7 +836,7 @@
     "channel": "にじさんじ",
     "date": "2021-09-24",
     "thumbnail": "https://i.ytimg.com/vi/1cOjJOEGHZk/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況","大会"],
     "keywords": ["シェリン・バーガンディ","笹木咲","葛葉","弦月藤士郎","渋谷ハジメ","天宮こころ","椎名唯華","アクシア・クローネ","グウェル・オス・ガール","空星きらめ","北小路ヒスイ","雪城眞尋","社築","大乱闘スマッシュブラザーズSPECIAL"]
   },
   {
@@ -845,7 +857,7 @@
     "category": "ゲーム実況",
     "keywords": ["葛葉","アルス・アルマル","ポケットモンスター-ユナイト"],
     "songs":[
-      {"title":"練習","artist":["葛葉","アルス・アルマル"]"start":13873}
+      {"title":"練習","artist":["葛葉","アルス・アルマル"],"start":13873}
     ]
   },
   {
@@ -1414,6 +1426,7 @@
 
 
 ]
+
 
 
 
