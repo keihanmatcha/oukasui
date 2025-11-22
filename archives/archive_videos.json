@@ -647,7 +647,7 @@
   {
     "youtubeId": "H3jPYglXptY",
     "title": "【必ず概要欄をご確認ください】【#成瀬鳴3D】3Dお披露目だよ。【成瀬鳴/にじさんじ】",
-    "channel": "にじさんじ",
+    "channel": "成瀬鳴",
     "date": "2022-09-22",
     "thumbnail": "https://i.ytimg.com/vi/H3jPYglXptY/mqdefault.jpg",
     "category": ["3Dお披露目","3D"],
@@ -778,7 +778,7 @@
     "thumbnail": "https://i.ytimg.com/vi/rn5cqrZb9VA/mqdefault.jpg",
     "category": "記念配信",
     "keywords": ["ベルモンド・バンデラス","오지유（オ・ジユ）","세피나（セフィナ）","나세라（ナ・セラ）","にじさんじ甲子園"],
-    "songs":[{"title":,"artist":["ベルモンド・バンデラス","오지유（オ・ジユ）","세피나（セフィナ）","나세라（ナ・セラ）"],"start":2120}]
+    "songs":[{"title":"応援","artist":["ベルモンド・バンデラス","오지유（オ・ジユ）","세피나（セフィナ）","나세라（ナ・セラ）"],"start":2120}]
   },
   {
     "youtubeId": "68DrBpcq1pU",
@@ -1734,6 +1734,7 @@
 
 
 ]
+
 
 
 
