@@ -834,14 +834,17 @@
     "date": "2021-09-10",
     "thumbnail": "https://i.ytimg.com/vi/XxjEo76WdXY/mqdefault.jpg",
     "category": "ゲーム実況",
-    "keywords": ["本間ひまわり","ポケットモンスター-ユナイト"]
+    "keywords": ["本間ひまわり","ポケットモンスター-ユナイト"],
+    "songs":[
+      {"title":"練習","artist":"本間ひまわり","start":355}
+    ]
   },
   {
-    "youtubeId": "FSbhokNhPE4",
+    "youtubeId": "TkwERQ9PT94",
     "title": "【19万人記念】本当に無計画だから0人で終わるかもしれない凸待ち【えま★おうがすと/にじさんじ所属】",
     "channel": "えま★おうがすと",
     "date": "2021-09-09",
-    "thumbnail": "https://i.ytimg.com/vi/FSbhokNhPE4/mqdefault.jpg",
+    "thumbnail": "https://i.ytimg.com/vi/TkwERQ9PT94/mqdefault.jpg",
     "category": "雑談",
     "keywords": ["えま★おうがすと"],
     "songs":[
@@ -1390,6 +1393,7 @@
 
 
 ]
+
 
 
 
