@@ -663,6 +663,25 @@
     "category": "公式企画・番組",
     "keywords": ["健屋花那","不破湊","弦月藤士郎","園児組","にじクイ"]
   },
+  {
+    "youtubeId": "5nPQrv-AQrk",
+    "title": "【ポケモンSV】 ポケモン知識まったくないけど勝ちます",
+    "channel": "소나기（ソ・ナギ）",
+    "date": "2022-11-21",
+    "thumbnail": "https://i.ytimg.com/vi/5nPQrv-AQrk/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["소나기（ソ・ナギ）","春崎エアル","グウェル・オス・ガール","ポケモン-スカーレットバイオレット"],
+     "songs":[{"title":"通話","artist":["소나기（ソ・ナギ）","春崎エアル","グウェル・オス・ガール"],"start":14824}]
+  },
+  {
+    "youtubeId": "dGnMjO39mZw",
+    "title": "【Overcooked® 2】クビにならないはずのアットホームなバイト場所。~大会おつかれさま会【本間ひまわり/にじさんじ】",
+    "channel": "本間ひまわり",
+    "date": "2022-11-05",
+    "thumbnail": "https://i.ytimg.com/vi/dGnMjO39mZw/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["本間ひまわり","鷹宮リオン","来栖夏芽","Overcooked 2","Splatoon3"]
+  },
 
   {
     "youtubeId": "eqPaPJhy-Js",
@@ -678,7 +697,7 @@
     "youtubeId": "r-ktFn_dXOk",
     "title": "【minecraft】にじさんじ大運動会 本配信【にじさんじ/桜凛月】",
     "channel": "桜凛月",
-    "date": "2022-10-17",
+    "date": "2022-10-23",
     "thumbnail": "https://i.ytimg.com/vi/r-ktFn_dXOk/mqdefault.jpg",
     "category": ["大会","ゲーム実況"],
     "keywords": ["桜凛月","Nara Haramaung","세피나（セフィナ）","めにまにかんぱにー","マインクラフト"]
@@ -1808,6 +1827,7 @@
 
 
 ]
+
 
 
 
