@@ -838,6 +838,18 @@
   },
   {
     "youtubeId": "FSbhokNhPE4",
+    "title": "【19万人記念】本当に無計画だから0人で終わるかもしれない凸待ち【えま★おうがすと/にじさんじ所属】",
+    "channel": "えま★おうがすと",
+    "date": "2021-09-09",
+    "thumbnail": "https://i.ytimg.com/vi/FSbhokNhPE4/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["えま★おうがすと"],
+    "songs":[
+      {"title":"凸待ち","artist":"えま★おうがすと","start":8440}
+    ]
+  },
+  {
+    "youtubeId": "FSbhokNhPE4",
     "title": "【#にじさんじ甲子園 2021夏】スポーツバーDERAS 本戦Aリーグ応援配信【ベルモンド・バンデラス/にじさんじ】",
     "channel": "ベルモンド・バンデラス",
     "date": "2021-08-13",
@@ -845,7 +857,7 @@
     "category": "記念配信",
     "keywords": ["ベルモンド・バンデラス","にじさんじ甲子園"],
     "songs":[
-      {"title":"FSbhokNhPE4","artist":"ベルモンド・バンデラス","start":13740}
+      {"title":"応援","artist":"ベルモンド・バンデラス","start":13740}
     ]
   },
   {
@@ -1378,6 +1390,7 @@
 
 
 ]
+
 
 
 
