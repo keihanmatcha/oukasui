@@ -983,7 +983,7 @@
     "channel": "にじさんじ",
     "date": "2021-04-03",
     "thumbnail": "https://i.ytimg.com/vi/Zeoiw0pry10/mqdefault.jpg",
-    "category": ["企画","公式企画・番組","ライブイベント","歌配信","にじフェス"]
+    "category": ["企画","公式企画・番組","ライブイベント","歌配信","にじフェス"],
     "keywords": ["甲斐田晴","弦月藤士郎","VΔLZ","にじフェス"],
      "songs":[
        {"title":"幕間、現世にて","artist":"VΔLZ","start":15326}
@@ -1348,6 +1348,7 @@
 
 
 ]
+
 
 
 
