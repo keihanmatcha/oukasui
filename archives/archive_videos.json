@@ -474,6 +474,15 @@
     "keywords": ["星川サラ", "フミ","山神カルタ","甲斐田晴","弦月藤士郎","おりひめばるつ","VΔLZ","フ景罪","Gartic Phone"]
   },
   {
+    "youtubeId": "8_uOPEmc6o0",
+    "title": "【Day1】アンドハニー5周年記念！２夜連続 #にじアンドハニー ライブを開催するぞ！【イブラヒム/にじさんじ】",
+    "channel": "イブラヒム",
+    "date": "2023-05-03",
+    "thumbnail": "https://i.ytimg.com/vi/8_uOPEmc6o0/mqdefault.jpg",
+    "category": "プロモーション",
+    "keywords": ["イブラヒム", "フレン・E・ルスタリオ","アルス・アルマル"]
+  },
+  {
     "youtubeId": "cPbBqp-HHIc",
     "title": "長尾くんと！なついアドバンスのゲーム色々やる！！【ゲームボーイアドバンス Nintendo Switch Online】【にじさんじ / 伏見ガク】",
     "channel": "伏見ガク",
@@ -489,7 +498,20 @@
     "date": "2023-04-30",
     "thumbnail": "https://i.ytimg.com/vi/2XpuGpAU-7s/mqdefault.jpg",
     "category": "3D",
-    "keywords": ["Hana Macchia","西園チグサ","健屋花那"]
+    "keywords": ["Hana Macchia","西園チグサ","健屋花那"],
+    "songs":[
+      {"title":"ゲスト","artist": ["Hana Macchia","西園チグサ","健屋花那"],"start":925}
+    ]
+    
+  },
+  {
+    "youtubeId": "3EX71OK4cAY",
+    "title": "【ドカポンキングダムコネクト】友情が崩壊するゲームをやります #クソザコトレーナーズ【グウェル・オス・ガール/長尾景/春崎エアル/ナギ】",
+    "channel": "グウェル・オス・ガール",
+    "date": "2023-04-24",
+    "thumbnail": "https://i.ytimg.com/vi/3EX71OK4cAY/mqdefault.jpg",
+    "category": "ゲーム実況",
+    "keywords": ["グウェル・オス・ガール","春崎エアル","소나기（ソ・ナギ）","クソザコトレーナーズ",その他ゲーム"]
   },
   {
     "youtubeId": "oIFLvanqFhk",
@@ -526,6 +548,19 @@
     "thumbnail": "https://i.ytimg.com/vi/o8_aRToI4BI/mqdefault.jpg",
     "category": "公式企画・番組",
     "keywords": ["Petra Gurin", "たい変","伏見ガク","Elira Pendra"]
+  }, 
+  {
+    "youtubeId": "1aHAxm1rubk",
+    "title": "【スマブラSP】圧倒的リハビリ【長尾景/にじさんじ】",
+    "channel": "長尾景",
+    "date": "2023-04-07",
+    "thumbnail": "https://i.ytimg.com/vi/1aHAxm1rubk/mqdefault.jpg",
+    "category": "ゲーム実況",
+    "keywords": ["緑仙","Fulgur Ovid","大乱闘スマッシュブラザーズSPECIAL"],
+    "songs":[
+      {"title":"対戦","artist":"緑仙","start":5596},
+      {"title":"対戦","artist":"Fulgur Ovid","start":7827}
+    ]
   },
   {
     "youtubeId": "IKigqYPc40o",
@@ -537,13 +572,25 @@
     "keywords": ["Petra Gurin", "たい変","西園チグサ","Luca Kaneshiro"]
   },
   {
+    "youtubeId": "Ee1oY5TSqp8",
+    "title": "【Geoguessr】急遽久々の日本旅行！！！【弦月藤士郎/長尾景/にじさんじ】",
+    "channel": "弦月藤士郎",
+    "date": "2023-04-04",
+    "thumbnail": "https://i.ytimg.com/vi/Ee1oY5TSqp8/mqdefault.jpg",
+    "category": "3D",
+    "keywords": ["弦月藤士郎","園児組"]
+  },
+  {
     "youtubeId": "EUIBpgViz7U",
     "title": "【 3D LIVE】BIRTHDAY LIVE SPACE TRAVEL【にじさんじ/桜凛月】",
     "channel": "桜凛月",
     "date": "2023-04-01",
     "thumbnail": "https://i.ytimg.com/vi/EUIBpgViz7U/mqdefault.jpg",
     "category": "3D",
-    "keywords": ["桜凛月"]
+    "keywords": ["桜凛月"],
+    "songs":[
+      {"title":"ゲスト","artist":"桜凛月","start":837}
+    ]
   },
   {
     "youtubeId": "PdNKvHKs03c",
@@ -2011,6 +2058,7 @@
 
 
 ]
+
 
 
 
