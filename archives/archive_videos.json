@@ -774,15 +774,27 @@
     "keywords": ["成瀬鳴","舞元啓介"]
   },
   {
+    "youtubeId": "KooybSz4qEg",
+    "title": "〖 ＃にじさんじサマープール 〗with/SELEN,POMU,NINA,LAYLA˗ˋˏ寝坊組といっしょにˎˊ˗ （ 天宮こころ / にじさんじ ）",
+    "channel": "天宮こころ",
+    "date": "2022-07-07",
+    "thumbnail": "https://i.ytimg.com/vi/KooybSz4qEg/mqdefault.jpg",
+    "category": ["雑談"],
+    "keywords": ["天宮こころ"],
+     "songs":[
+      {"title":"通話","artist":"天宮こころ","start":5687}
+    ]
+  },
+  {
     "youtubeId": "mi67FcqTwYk",
     "title": "〖 誕生日凸待ち 〗˗ˋˏ 対戦よろしくおねがいしますˎˊ˗ ( 天宮こころ / にじさんじ )",
     "channel": "天宮こころ",
     "date": "2022-07-01",
     "thumbnail": "https://i.ytimg.com/vi/mi67FcqTwYk/mqdefault.jpg",
     "category": ["雑談"],
-    "keywords": ["天宮こころ","ベルモンド・バンデラス"],
+    "keywords": ["凸待ち","ベルモンド・バンデラス"],
      "songs":[
-      {"title":"天宮こころ","artist":"VΔLZ","start":9115}
+      {"title":"天宮こころ","artist":"天宮こころ","start":9115}
     ]
   },
   {
@@ -1658,6 +1670,7 @@
 
 
 ]
+
 
 
 
