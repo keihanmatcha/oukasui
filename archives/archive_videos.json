@@ -285,6 +285,18 @@
     "keywords": ["黒井しば"]
   },
   {
+    "youtubeId": "VMiyylxk45Y",
+    "title": "【#フミ様24万人記念24時間配信】感謝のぶっ続け２４時間配信🔥 〜真・後編〜【にじさんじフミ】",
+    "channel": "フミ",
+    "date": "2023-12-29",
+    "thumbnail": "https://i.ytimg.com/vi/VMiyylxk45Y/mqdefault.jpg",
+    "category": ["雑談"],
+    "keywords": ["フミ"],
+    "songs":[
+      {"title":"逆凸","artist":"フミ","start":12440}
+    ]
+  },
+  {
     "youtubeId": "qTMA7Qg5pTY",
     "title": "【＃相羽ういは3D新衣装】これが私からの最後のお披露目。【相羽ういは/にじさんじ】",
     "channel": "相羽ういは",
@@ -321,6 +333,18 @@
     "keywords": ["Petra Gurin","たい変"]
   },
   {
+    "youtubeId": "5ESXILcf1j4",
+    "title": "【【歌枠】100曲歌いきるまでスタジオから帰れません‼【にじさんじ | 緑仙】",
+    "channel": "緑仙",
+    "date": "2023-10-28",
+    "thumbnail": "https://i.ytimg.com/vi/5ESXILcf1j4/mqdefault.jpg",
+    "category": ["歌配信","雑談"],
+    "keywords": ["緑仙","弦月藤士郎"],
+    "songs":[
+      {"title":"助っ人","artist":["緑仙","弦月藤士郎"],"start":18478}
+    ]
+  },
+  {
     "youtubeId": "cv2tvoIcyTg",
     "title": "【スプラトゥーン3】にじスプラDREAMMATCH＜本配信＞【#にじスプラDREAMMATCH】",
     "channel": "にじさんじ",
@@ -330,6 +354,15 @@
     "keywords": ["エクス・アルビオ", "平岩康佑","長尾景","先斗寧","弦月藤士郎","星導ショウ","フレン・E・ルスタリオ","にじスプラDREAMMATCH","Splatoon3","女子騎士祓魔師鑑定士"]
   },
   {
+    "youtubeId": "zJGC7AN8YUA",
+    "title": "【パワプロ2023】世怜音高校 VS なろう景高校 いざ本戦🔥【#ながおちぐ甲子園】",
+    "channel": "西園チグサ",
+    "date": "2023-10-08",
+    "thumbnail": "https://i.ytimg.com/vi/zJGC7AN8YUA/mqdefault.jpg",
+    "category": ["公式企画・番組","ゲーム実況"],
+    "keywords": ["西園チグサ","ながおちぐ","パワプロ野球"]
+  },
+  {
     "youtubeId": "gkyQO35Kl10",
     "title": "【Gang Beast】先輩 vs 後輩 大乱闘！ 【 #VΔLZ × #HEROES AGF2023記念コラボ】",
     "channel": "にじさんじ",
@@ -337,6 +370,18 @@
     "thumbnail": "https://i.ytimg.com/vi/gkyQO35Kl10/mqdefault.jpg",
     "category": ["公式企画・番組","ゲーム実況"],
     "keywords": ["弦月藤士郎","甲斐田晴","叢雲カゲツ","緋八マナ","Vezalius Bandage","VΔLZ","Gang Beast","AGF2023"]
+  },
+  {
+    "youtubeId": "Y8VnKzPIjgs",
+    "title": "【#コハック生誕祭2023】パーチー会場はこちらっ！【にじさんじ/東堂コハク】",
+    "channel": "東堂コハク",
+    "date": "2023-09-29",
+    "thumbnail": "https://i.ytimg.com/vi/Y8VnKzPIjgs/mqdefault.jpg",
+    "category": ["雑談"],
+    "keywords": ["東堂コハク"],
+    "songs":[{
+      "title":"凸待ち","artist":"東堂コハク","start":5688
+    }]
   },
   {
     "youtubeId": "WdQkHzLqGzA",
@@ -2197,6 +2242,7 @@
 
 
 ]
+
 
 
 
