@@ -348,6 +348,18 @@
     "keywords": ["夕陽リリ","相羽ういは","セラフ・ダズルガーデン","山神カルタ","天ケ瀬むゆ","にじさんじダンス部"]
   },
   {
+    "youtubeId": "13oik_k_WHY",
+    "title": "にじさんじライバーが『この夏どう過ごしたか』集めてみた。【四季凪アキラ/シスター・クレア/にじさんじ】",
+    "channel": "四季凪アキラ",
+    "date": "2023-09-15",
+    "thumbnail": "https://i.ytimg.com/vi/13oik_k_WHY/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["四季凪アキラ","シスター・クレア"],
+    "songs":[
+      {"title":"この夏どう過ごしたか","artist": ["四季凪アキラ","シスター・クレア"],"start":1100}
+    ]
+  },
+  {
     "youtubeId": "x0_tjuGvGI8",
     "title": "東京サマーセッション / Covered by おりひめばるつ",
     "channel": "星川サラ",
@@ -2185,6 +2197,7 @@
 
 
 ]
+
 
 
 
