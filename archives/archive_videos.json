@@ -816,7 +816,25 @@
     "date": "2021-09-24",
     "thumbnail": "https://i.ytimg.com/vi/1cOjJOEGHZk/mqdefault.jpg",
     "category": "ゲーム実況",
-    "keywords": ["緑仙","神田笑一","成瀬鳴"]
+    "keywords": ["緑仙","神田笑一","成瀬鳴","大乱闘スマッシュブラザーズSPECIAL"]
+  },
+  {
+    "youtubeId": "1cOjJOEGHZk",
+    "title": "レバガチャダイパン杯 にじさんじ秋のスマブラ大運動会2021【大乱闘スマッシュブラザーズ SPECIAL】",
+    "channel": "にじさんじ",
+    "date": "2021-09-24",
+    "thumbnail": "https://i.ytimg.com/vi/1cOjJOEGHZk/mqdefault.jpg",
+    "category": "ゲーム実況",
+    "keywords": ["シェリン・バーガンディ","笹木咲","葛葉","弦月藤士郎","渋谷ハジメ","天宮こころ","椎名唯華","アクシア・クローネ","グウェル・オス・ガール","空星きらめ","北小路ヒスイ","雪城眞尋","社築","大乱闘スマッシュブラザーズSPECIAL"]
+  },
+  {
+    "youtubeId": "ylMn4UeAZVk",
+    "title": "【スマブラ】基本操作を教えてくれるそうです【＃フ景罪】",
+    "channel": "フミ",
+    "date": "2021-09-21",
+    "thumbnail": "https://i.ytimg.com/vi/ylMn4UeAZVk/mqdefault.jpg",
+    "category": "ゲーム実況",
+    "keywords": ["フミ","フ景罪","ポケットモンスター-ユナイト","大乱闘スマッシュブラザーズSPECIAL"]
   },
   {
     "youtubeId": "kxMfIY3g-Xo",
@@ -825,7 +843,10 @@
     "date": "2021-09-11",
     "thumbnail": "https://i.ytimg.com/vi/kxMfIY3g-Xo/mqdefault.jpg",
     "category": "ゲーム実況",
-    "keywords": ["葛葉","ポケットモンスター-ユナイト"]
+    "keywords": ["葛葉","アルス・アルマル","ポケットモンスター-ユナイト"],
+    "songs":[
+      {"title":"練習","artist":["葛葉","アルス・アルマル"]"start":13873}
+    ]
   },
   {
     "youtubeId": "XxjEo76WdXY",
@@ -1393,6 +1414,7 @@
 
 
 ]
+
 
 
 
