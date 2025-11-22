@@ -975,7 +975,7 @@
     "category": ["ゲーム実況"]
     "keywords": ["雪城眞尋","ふつまひ","Apex Legends"],
      "songs":[
-       {"title":"突発コラボ","artist":,"雪城眞尋","start":11337}
+       {"title":"突発コラボ","artist":"雪城眞尋","start":11337}
      ]
   },
   {
@@ -1008,7 +1008,7 @@
     "category": ["雑談"]
     "keywords": ["雪城眞尋","ふつまひ"],
      "songs":[
-       {"title":"凸待ち","artist":,"雪城眞尋","start":5192}
+       {"title":"凸待ち","artist":"雪城眞尋","start":5192}
      ]
   },
   {
@@ -1349,6 +1349,7 @@
 
 
 ]
+
 
 
 
