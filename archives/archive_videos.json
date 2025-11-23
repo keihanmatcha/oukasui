@@ -248,6 +248,15 @@
     "category": ["企画","3D"],
     "keywords": ["レオス・ヴィンセント","ベルモンド・バンデラス","風楽奏斗","渡会雲雀","春崎エアル","成瀬鳴","オリバー・エバンス","外部"]
   },
+  {
+    "youtubeId": "BKvkMIayv0o",
+    "title": "【#神域リーグ2024】この状況、松ならどうする！チームヘラクレス神域対策編！【#松本焼肉夜露司苦レス】",
+    "channel": "緑仙",
+    "date": "2024-05-22",
+    "thumbnail": "https://i.ytimg.com/vi/BKvkMIayv0o/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["緑仙","龍惺ろたん","松本吉弘","チームヘラクレス","神域リーグ"]
+  },
     {
     "youtubeId": "rEGclj0XA18",
     "title": "【禁断尻ラジオ】お世話になった高知が〇〇〇まみれに…！【長尾景・江口拓也・西山宏太朗】",
@@ -256,6 +265,46 @@
     "thumbnail": "https://i.ytimg.com/vi/rEGclj0XA18/mqdefault.jpg",
     "category": ["ゲーム実況"],
     "keywords": ["江口拓也","西山宏太朗","桃太郎電鉄"]
+  },
+  {
+    "youtubeId": "Ok8rf1J8Zpc",
+    "title": "VS練習で力を取り戻す #マリカにじさんじ杯",
+    "channel": "イブラヒム",
+    "date": "2024-05-02",
+    "thumbnail": "https://i.ytimg.com/vi/Ok8rf1J8Zpc/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["イブラヒム"],
+    "songs":[{"title":"対戦","artist":"緑仙","start":10240}
+  },
+  {
+    "youtubeId": "Jw4Zz3OKeug",
+    "title": "【#マリカにじさんじ杯】潰し屋レオス タイマンでライバーたちを分からせていく【レオス・ヴィンセント 】",
+    "channel": "ゲーム実況",
+    "date": "2024-04-24",
+    "thumbnail": "https://i.ytimg.com/vi/Jw4Zz3OKeug/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["レオス・ヴィンセント","フレン・E・ルスタリオ"],
+    "songs":[{"title":"対戦","artist":"緑仙","start":4681}
+  },
+  {
+    "youtubeId": "1EMsU_VRP6s",
+    "title": "【#緑仙誕生祭2024】100曲歌いきったら新衣装お披露目と重大告知をします🐼🎉【にじさんじ | 緑仙】",
+    "channel": "緑仙",
+    "date": "2024-04-16",
+    "thumbnail": "https://i.ytimg.com/vi/1EMsU_VRP6s/mqdefault.jpg",
+    "category": ["歌配信"],
+    "keywords": ["緑仙"],
+    "songs":[{"title":"助っ人","artist":"緑仙","start":13828}
+  },
+  {
+    "youtubeId": "wWUdTOyOK_w",
+    "title": "【APEX】プラチナ4からの脱出を試みる。w/りつきんTV【にじさんじ/える】",
+    "channel": "える",
+    "date": "2021-03-28",
+    "thumbnail": "https://i.ytimg.com/vi/wWUdTOyOK_w/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["える","桜凛月","Apex Legends"],
+    "songs":[{"title":"参戦","artist":["える","桜凛月"],"start":2560}
   },
   {
     "youtubeId": "xyHUNNdcKLU",
@@ -2325,6 +2374,7 @@
 
 
 ]
+
 
 
 
