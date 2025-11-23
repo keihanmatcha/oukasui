@@ -213,13 +213,43 @@
     "keywords": ["伏見ガク","ベルモンド・バンデラス","笹木咲","花畑チャイカ","フレン・E・ルスタリオ","春崎エアル","佐伯イッテツ","にじさんじ放課後ゲーム部"]
   },
   {
+    "youtubeId": "uU8mt8EphkQ",
+    "title": "【#神域リーグ2024 第六節】 第16試合～第18試合【ネット麻雀リーグ戦】",
+    "channel": "天開司",
+    "date": "2024-07-16",
+    "thumbnail": "https://i.ytimg.com/vi/uU8mt8EphkQ/mqdefault.jpg",
+    "category": ["ゲーム実況","大会"],
+    "keywords": ["天開司","松本吉弘","龍惺ろたん","緑仙","チームヘラクレス","神域リーグ"]
+  },
+  {
     "youtubeId": "U6Zw6PG3BiE",
     "title": "【#にじさんじ放課後ゲーム部】カービィのエアライドオフ対戦会【にじさんじ / 伏見ガク】",
     "channel": "Shu Yamino",
     "date": "2024-07-13",
     "thumbnail": "https://i.ytimg.com/vi/U6Zw6PG3BiE/mqdefault.jpg",
     "category": ["企画","3D","お披露目配信"],
-    "keywords": ["Shu Yamino","戌亥とこ","フレン・E・ルスタリオ","レイン・パターソン","オリバー・エバンス"]
+    "keywords": ["Shu Yamino","戌亥とこ","フレン・E・ルスタリオ","レイン・パターソン","オリバー・エバンス"],
+    "songs":[
+      {"title":"ゲスト","artist":["Shu Yamino","戌亥とこ","フレン・E・ルスタリオ","レイン・パターソン","オリバー・エバンス"],"start":1346}
+    ]
+  },
+  {
+    "youtubeId": "Co5i0G3gSo8",
+    "title": "【#神域リーグ2024 第五節】 第13試合～第15試合【ネット麻雀リーグ戦】",
+    "channel": "天開司",
+    "date": "2024-07-09",
+    "thumbnail": "https://i.ytimg.com/vi/Co5i0G3gSo8/mqdefault.jpg",
+    "category": ["ゲーム実況","大会"],
+    "keywords": ["天開司","松本吉弘","龍惺ろたん","緑仙","チームヘラクレス","神域リーグ"]
+  },
+  {
+    "youtubeId": "GW_CFk4irWE",
+    "title": "神域リーグ第5節！応援会場【#松本焼肉夜露司苦レス】",
+    "channel": "松本吉弘",
+    "date": "2024-07-09",
+    "thumbnail": "https://i.ytimg.com/vi/GW_CFk4irWE/mqdefault.jpg",
+    "category": ["ゲーム実況","大会","記念配信"],
+    "keywords": ["松本吉弘","龍惺ろたん","緑仙","チームヘラクレス","神域リーグ"]
   },
    {
     "youtubeId": "Co5i0G3gSo8",
@@ -2461,6 +2491,7 @@
 
 
 ]
+
 
 
 
