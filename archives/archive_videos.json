@@ -221,6 +221,36 @@
     "category": ["企画","3D","お披露目配信"],
     "keywords": ["Shu Yamino","戌亥とこ","フレン・E・ルスタリオ","レイン・パターソン","オリバー・エバンス"]
   },
+   {
+    "youtubeId": "Co5i0G3gSo8",
+    "title": "【#神域リーグ2024 第四節】 第10試合～第12試合【ネット麻雀リーグ戦】",
+    "channel": "天開司",
+    "date": "2024-06-24",
+    "thumbnail": "https://i.ytimg.com/vi/Co5i0G3gSo8/mqdefault.jpg",
+    "category": ["ゲーム実況","大会"],
+    "keywords": ["天開司","松本吉弘","龍惺ろたん","緑仙","チームヘラクレス","神域リーグ"]
+  },
+  {
+    "youtubeId": "u17Ebd6Bmh4",
+    "title": "神域リーグ第4節　ヘラクレス楽屋配信【松本吉弘-まつもとぐみ】",
+    "channel": "松本吉弘",
+    "date": "2024-06-24",
+    "thumbnail": "https://i.ytimg.com/vi/u17Ebd6Bmh4/mqdefault.jpg",
+    "category": ["ゲーム実況","大会","記念配信"],
+    "keywords": ["松本吉弘","龍惺ろたん","緑仙","チームヘラクレス","神域リーグ"],
+    "songs":[
+      {"title":"応援","artist":"松本吉弘","start":2073}
+    ]
+  },
+  {
+    "youtubeId": "r-ktFn_dXOk",
+    "title": "【minecraft】えっ？！めにまにカンパニーで企画成功させないと告知できないんですか？！【にじさんじ/桜凛月】",
+    "channel": "桜凛月",
+    "date": "2024-06-16",
+    "thumbnail": "https://i.ytimg.com/vi/r-ktFn_dXOk/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["桜凛月","세피나（セフィナ）","めにまにかんぱにー","マインクラフト"]
+  },
   {
     "youtubeId": "WuKUmHlor4w",
     "title": "【凸待ち｜スマブラSP】来年まで待てない庭師の【えくすとら、まっち。】　#にじさんじスマブラ杯 ｜『大乱闘スマッシュブラザーズSP』【にじさんじ / ミラン・ケストレル】",
@@ -2431,6 +2461,7 @@
 
 
 ]
+
 
 
 
