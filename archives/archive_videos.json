@@ -9,6 +9,18 @@
     "keywords": ["早瀬走"]
   },
   {
+    "youtubeId": "JRmnbHTx8S8",
+    "title": "【歌枠】１０月１０日の都々の日に１０人呼んでデュエット祭り！！【立伝都々/にじさんじ】",
+    "channel": "立伝都々",
+    "date": "2025-10-10",
+    "thumbnail": "https://i.ytimg.com/vi/JRmnbHTx8S8/mqdefault.jpg",
+    "category": ["歌配信"],
+    "keywords": ["立伝都々"],
+    "songs":[
+        {"title":"歌","artist":["立伝都々"],"start":4714}
+    ]
+  },
+  {
     "youtubeId": "Irg4sIu0vI4",
     "title": "【 にじさんじ】最初で最後の凸待ち【グウェル・オス・ガール】",
     "channel": "グウェル・オス・ガール",
@@ -3051,6 +3063,7 @@
 
 
 ]
+
 
 
 
