@@ -195,6 +195,19 @@
     "keywords": ["町田ちま","戌亥とこ","甲斐田晴","VΔLZ"]
   },
   {
+    "youtubeId": "yhziHYHGoDA",
+    "title": "【スプラトゥーン3】デンタルワイパー練習ニキ【春崎エアル/にじさんじ】",
+    "channel": "春崎エアル",
+    "date": "2024-10-03",
+    "thumbnail": "https://i.ytimg.com/vi/yhziHYHGoDA/mqdefault.jpg",
+    "category": ["3D","お披露目配信"],
+    "keywords": ["春崎エアル","Splatoon3"],
+    "songs":[
+      {"title":"チャット","artist": ["春崎エアル"],"start":3444}
+    ]
+    
+  },
+  {
     "youtubeId": "1r0TFZh5io0",
     "title": "にじジャン珠十七局目 これが俺のスタイル！得意役麻雀！",
     "channel": "雀魂",
@@ -1004,7 +1017,7 @@
   {
     "youtubeId": "ZOJE2Qx1eK8",
     "title": "ついに3Ⅾが見れるんだから！次回、【#春崎エアル３D】お披露目スタンバイ！【春崎エアル/にじさんじ】",
-    "channel": "Hana Macchia",
+    "channel": "春崎エアル",
     "date": "2023-06-16",
     "thumbnail": "https://i.ytimg.com/vi/ZOJE2Qx1eK8/mqdefault.jpg",
     "category": ["3D","お披露目配信"],
@@ -2662,6 +2675,7 @@
 
 
 ]
+
 
 
 
