@@ -9,6 +9,18 @@
     "keywords": ["早瀬走"]
   },
   {
+    "youtubeId": "4eMfG4CjoBU",
+    "title": "【 #マイクラ肝試し2025 】晴レ星で謎解きに挑戦するそうです【甲斐田晴/にじさんじ】",
+    "channel": "甲斐田晴",
+    "date": "2025-10-05",
+    "thumbnail": "https://i.ytimg.com/vi/4eMfG4CjoBU/mqdefault.jpg",
+    "category": "ゲーム実況",
+    "keywords": ["甲斐田晴", "星川サラ","山神カルタ","フミ","マインクラフト"],
+    "songs":[{
+      "title":"通話","artist":["甲斐田晴", "星川サラ","山神カルタ","フミ"],"start":12330
+    }]
+  },
+  {
     "youtubeId": "Gwqw4lsQQGQ",
     "title": "【#コハック生誕祭2025】誕生日のコハク様は逆凸がしたい！！！【にじさんじ/東堂コハク】",
     "channel": "東堂コハク",
@@ -3026,6 +3038,7 @@
 
 
 ]
+
 
 
 
