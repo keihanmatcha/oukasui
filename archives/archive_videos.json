@@ -9,6 +9,18 @@
     "keywords": ["早瀬走"]
   },
   {
+    "youtubeId": "FMxOkyJDNrI",
+    "title": "【 歌枠 / #町田ちま7周年 】ゲストあり！専用ステージ公開あり！周年記念50曲耐久ッ！！！🌈Singing Stream【にじさんじ/町田ちま】",
+    "channel": "町田ちま",
+    "date": "2025-09-07",
+    "thumbnail": "https://i.ytimg.com/vi/FMxOkyJDNrI/mqdefault.jpg",
+    "category": "歌配信",
+    "keywords": ["町田ちま"],
+    "songs": [
+      { "title": "ゲスト", "artist":["町田ちま"], "start": 1975 }
+    ]
+  },
+  {
     "youtubeId": "JvLcevPp1DM",
     "title": "【minecraft】遂に！1.21.8！めにまにカンパニー探索のお時間です【にじさんじ/桜凛月】",
     "channel": "桜凛月",
@@ -2984,6 +2996,7 @@
 
 
 ]
+
 
 
 
