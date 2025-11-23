@@ -78,6 +78,18 @@
     ]
   },
   {
+    "youtubeId": "fKvNkUy4VD8",
+    "title": "【 #めるち爆誕2025 】誕生日カウントダウン!! 告知をかけてミリしらなミームでビンゴ凸待ち!!【倉持めると/にじさんじ】",
+    "channel": "倉持めると",
+    "date": "2025-05-18",
+    "thumbnail": "https://i.ytimg.com/vi/fKvNkUy4VD8/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["倉持めると"],
+    "songs": [
+      { "title": "凸待ち", "artist": "倉持めると", "start": 14670 }
+    ]
+  },
+  {
     "youtubeId": "PBJ_8-YHPMc",
     "title": "【#にじ飯調査隊】第4回 見たことない変わった食べ物を探せ‼ ゲスト : ましろ🍚【にじさんじ | 緑仙 | 伏見ガク | 長尾景】",
     "channel": "緑仙",
@@ -2888,6 +2900,7 @@
 
 
 ]
+
 
 
 
