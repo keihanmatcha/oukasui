@@ -204,6 +204,57 @@
     "keywords": ["星川サラ"]
   },
   {
+    "youtubeId": "3JfVNlNx7VA",
+    "title": "【#ぐみひゃく】松本吉弘＆因幡はねるの「ぐみいん100人できるかな？」第27回ゲスト：長尾景(にじさんじ)【因幡はねる / ななしいんく】",
+    "channel": "因幡はねる",
+    "date": "2024-07-30",
+    "thumbnail": "https://i.ytimg.com/vi/3JfVNlNx7VA/mqdefault.jpg",
+    "category": ["企画"],
+    "keywords": ["因幡はねる","松本吉弘"],
+    "songs":[
+      {"title":"ゲスト","artist":["因幡はねる","松本吉弘"],"start":1791}
+    ]
+  },
+  {
+    "youtubeId": "zkJsCuwUmDo",
+    "title": "【minecraft】整地！酒！ギラホスを見る！【にじさんじ/桜凛月】",
+    "channel": "桜凛月",
+    "date": "2024-07-28",
+    "thumbnail": "https://i.ytimg.com/vi/zkJsCuwUmDo/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["桜凛月","세피나（セフィナ）","めにまにかんぱにー","マインクラフト"],
+    "songs":[
+      {"title":"ゲスト","artist":["桜凛月","세피나（セフィナ）","めにまにかんぱにー"],"start":1791}
+    ]
+  },
+  {
+    "youtubeId": "6p6MP11PBUg",
+    "title": "【#神域リーグ2024 第七節】 第19試合～第21試合【ネット麻雀リーグ戦】",
+    "channel": "天開司",
+    "date": "2024-07-23",
+    "thumbnail": "https://i.ytimg.com/vi/6p6MP11PBUg/mqdefault.jpg",
+    "category": ["ゲーム実況","大会"],
+    "keywords": ["天開司","松本吉弘","龍惺ろたん","緑仙","チームヘラクレス","神域リーグ"]
+  },
+  {
+    "youtubeId": "rVuQEWOXZ2A",
+    "title": "【#神域リーグ2024】第7節控室配信！とっぷおぶとっぷってこと！？！？ 【#松本焼肉夜露司苦レス】",
+    "channel": "龍惺ろたん",
+    "date": "2024-07-23",
+    "thumbnail": "https://i.ytimg.com/vi/rVuQEWOXZ2A/mqdefault.jpg",
+    "category": ["ゲーム実況","大会","記念配信"],
+    "keywords": ["龍惺ろたん","松本吉弘","緑仙","チームヘラクレス","神域リーグ"]
+  },
+  {
+    "youtubeId": "w3G_9atg2K8k",
+    "title": "【minecraft】今年も炎上船やる！！から でっかいの作っちゃおっか！！【にじさんじ/桜凛月】",
+    "channel": "桜凛月",
+    "date": "2024-07-21",
+    "thumbnail": "https://i.ytimg.com/vi/w3G_9atg2K8/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["桜凛月","세피나（セフィナ）","민수하（ミン・スゥーハ）","めにまにかんぱにー","マインクラフト"]
+  },
+  {
     "youtubeId": "7asOdQYleKE",
     "title": "【#にじさんじ放課後ゲーム部】カービィのエアライドオフ対戦会【にじさんじ / 伏見ガク】",
     "channel": "伏見ガク",
@@ -2491,6 +2542,7 @@
 
 
 ]
+
 
 
 
