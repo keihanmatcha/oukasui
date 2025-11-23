@@ -87,6 +87,18 @@
     "keywords": ["緑仙", "伏見ガク","にじ飯調査隊","ましろ爻"]
   },
   {
+    "youtubeId": "LTvFcj9qnBw",
+    "title": "【#不破湊生誕祭2025】ゲーム、お披露目、凸待ち、歌枠 ※告知あり【不破湊/にじさんじ】",
+    "channel": "不破湊",
+    "date": "2025-04-18",
+    "thumbnail": "https://i.ytimg.com/vi/LTvFcj9qnBw/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["不破湊"],
+    "songs": [
+      { "title": "凸待ち", "artist": "不破湊", "start": 1353 }
+    ]
+  },
+  {
     "youtubeId": "McfgHhmZhug",
     "title": "【NBAコラボ】20チーム、組み合わせ発表！【戌亥とこ/長尾景/闇ノシュウ】",
     "channel": "Shu Yamino",
@@ -2858,6 +2870,7 @@
 
 
 ]
+
 
 
 
