@@ -312,7 +312,18 @@
     "date": "2023-12-24",
     "thumbnail": "https://i.ytimg.com/vi/Dp_hBaDNKns/mqdefault.jpg",
     "category": ["公式企画・番組","ライブイベント"],
-    "keywords": ["Luca Kaneshiro","Kotoka Torahime","Ren Zotto","にじフェス2023"]
+    "keywords": ["Luca Kaneshiro","Kotoka Torahime","Ren Zotto","にじフェス"],
+     "songs":[{"title":"饗宴無双！長尾景のおもてなし","artist":["Luca Kaneshiro","Kotoka Torahime","Ren Zotto"],"start":5956}]
+  },
+  {
+    "youtubeId": "BqX-jwptb5k",
+    "title": "【ライブ本編】にじさんじフェス2023 前夜祭/ 無料パート",
+    "channel": "にじさんじ",
+    "date": "2023-12-24",
+    "thumbnail": "https://i.ytimg.com/vi/BqX-jwptb5k/mqdefault.jpg",
+    "category": ["公式企画・番組","ライブイベント"],
+    "keywords":["甲斐田晴","弦月藤士郎","VΔLZ","にじフェス"],
+    "songs":[{"title":"SHOOTING DELTA","artist":"VΔLZ","start":5920}]
   },
   {
     "youtubeId": "IcjaiHTHzQU",
@@ -322,6 +333,15 @@
     "thumbnail": "https://i.ytimg.com/vi/IcjaiHTHzQU/mqdefault.jpg",
     "category": "公式企画・番組",
     "keywords": ["月ノ美兎","ジョー・力一","リゼ・ヘルエスタ","星川サラ","不破湊","壱百満天原サロメ","渡会雲雀","SYMPHONIA Day2"]
+  },
+  {
+    "youtubeId": "ZJ-sHesbU8A",
+    "title": "【 人生ゲーム 】仲良く人生ゲームをやる会【グウェル・オス・ガール/長尾景/春崎エアル/ナギ】",
+    "channel": "グウェル・オス・ガール",
+    "date": "2023-12-02",
+    "thumbnail": "https://i.ytimg.com/vi/ZJ-sHesbU8A/mqdefault.jpg",
+    "category": "ゲーム実況",
+    "keywords": ["グウェル・オス・ガール","春崎エアル","소나기（ソ・ナギ）","クソザコトレーナーズ","その他ゲーム"]
   },
   {
     "youtubeId": "kIY9XNTNPyk",
@@ -2269,6 +2289,7 @@
 
 
 ]
+
 
 
 
