@@ -9,6 +9,19 @@
     "keywords": ["早瀬走"]
   },
   {
+    "youtubeId": "Irg4sIu0vI4",
+    "title": "【 にじさんじ】最初で最後の凸待ち【グウェル・オス・ガール】",
+    "channel": "グウェル・オス・ガール",
+    "date": "2025-10-08",
+    "thumbnail": "https://i.ytimg.com/vi/Irg4sIu0vI4/mqdefault.jpg",
+    "category": ["雑談"],
+    "keywords": ["グウェル・オス・ガール"],
+    "songs":[
+      {"title":"凸待ち","artist":"グウェル・オス・ガール","start":18295},
+      {"title":"メッセージ","artist":"グウェル・オス・ガール","start":30137}
+    ]
+  },
+  {
     "youtubeId": "4eMfG4CjoBU",
     "title": "【 #マイクラ肝試し2025 】晴レ星で謎解きに挑戦するそうです【甲斐田晴/にじさんじ】",
     "channel": "甲斐田晴",
@@ -3038,6 +3051,7 @@
 
 
 ]
+
 
 
 
