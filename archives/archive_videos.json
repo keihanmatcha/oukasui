@@ -231,6 +231,39 @@
     "keywords": ["ミラン・ケストレル","大乱闘スマッシュブラザーズ SPECIAL","にじさんじスマブラ杯"]
   },
   {
+    "youtubeId": "aQeOMFl5uGk",
+    "title": "【お知らせあり】※23時からは神域リーグの牌譜振り返り！🎉龍惺ろたん爆誕祭～前夜祭～🎉【龍惺ろたん】",
+    "channel": "龍惺ろたん",
+    "date": "2024-06-07",
+    "thumbnail": "https://i.ytimg.com/vi/aQeOMFl5uGk/mqdefault.jpg",
+    "category": ["雑談"],
+    "keywords": ["龍惺ろたん","チームヘラクレス"],
+    "songs":[
+      {"title":"凸待ち","artist":"龍惺ろたん","start":5591}
+    ]
+  },
+   {
+    "youtubeId": "opJoEXmbEp8",
+    "title": "【#逆人生ゲーム】借金が多いやつが勝ち！そいつが神域初登板ってまじ？【にじさんじ | 緑仙】",
+    "channel": "緑仙",
+    "date": "2024-06-03",
+    "thumbnail": "https://i.ytimg.com/vi/opJoEXmbEp8/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["緑仙","龍惺ろたん","松本吉弘","チームヘラクレス","神域リーグ"]
+  },
+  {
+    "youtubeId": "Po_xeslPDhU",
+    "title": "【 #にじさんじスマブラ杯 】大会本番！！やれんのか教授！？【オリバー・エバンス/にじさんじ】",
+    "channel": "オリバー・エバンス",
+    "date": "2024-06-02",
+    "thumbnail": "https://i.ytimg.com/vi/Po_xeslPDhU/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["イブラヒム","大乱闘スマッシュブラザーズ SPECIAL","にじさんじスマブラ杯"],
+    "songs":[
+      {"title":"対戦","artist":"オリバー・エバンス","start":10240}
+    ]
+  },
+  {
     "youtubeId": "WZlmy6zV31g",
     "title": "【#にじさんじスマブラ杯】大会本番！PKフリーズ！【榊ネス/にじさんじ】",
     "channel": "榊ネス",
@@ -247,6 +280,24 @@
     "thumbnail": "https://i.ytimg.com/vi/jPe3jrsty0M/mqdefault.jpg",
     "category": ["企画","3D"],
     "keywords": ["レオス・ヴィンセント","ベルモンド・バンデラス","風楽奏斗","渡会雲雀","春崎エアル","成瀬鳴","オリバー・エバンス","外部"]
+  },
+  {
+    "youtubeId": "y8dBhf6RVZM",
+    "title": "【#雀魂 コラボ】#神域リーグ2024 ヘラクレスお勉強会！！【龍惺ろたん/松本吉弘/緑仙/長尾景】",
+    "channel": "龍惺ろたん",
+    "date": "2024-05-30",
+    "thumbnail": "https://i.ytimg.com/vi/y8dBhf6RVZM/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["龍惺ろたん","緑仙","松本吉弘","チームヘラクレス","神域リーグ"]
+  },
+   {
+    "youtubeId": "vr32C5c5jes",
+    "title": "【#神域リーグ2024】新人の中で神域に詳しいのは誰だ！【#神域新人クイズバトル】",
+    "channel": "緑仙",
+    "date": "2024-05-29",
+    "thumbnail": "https://i.ytimg.com/vi/vr32C5c5jes/mqdefault.jpg",
+    "category": ["ゲーム実況"],
+    "keywords": ["緑仙","龍惺ろたん","える","ゴモリー","チームヘラクレス","神域リーグ"]
   },
   {
     "youtubeId": "BKvkMIayv0o",
@@ -2380,6 +2431,7 @@
 
 
 ]
+
 
 
 
