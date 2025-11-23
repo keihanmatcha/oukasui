@@ -284,7 +284,7 @@
     "thumbnail": "https://i.ytimg.com/vi/Jw4Zz3OKeug/mqdefault.jpg",
     "category": ["ゲーム実況"],
     "keywords": ["レオス・ヴィンセント","フレン・E・ルスタリオ"],
-    "songs":[{"title":"対戦","artist":"緑仙","start":4681}
+    "songs":[{"title":"対戦","artist":"緑仙","start":4681}]
   },
   {
     "youtubeId": "1EMsU_VRP6s",
@@ -2374,6 +2374,7 @@
 
 
 ]
+
 
 
 
