@@ -294,7 +294,7 @@
     "thumbnail": "https://i.ytimg.com/vi/1EMsU_VRP6s/mqdefault.jpg",
     "category": ["歌配信"],
     "keywords": ["緑仙"],
-    "songs":[{"title":"助っ人","artist":"緑仙","start":13828}
+    "songs":[{"title":"助っ人","artist":"緑仙","start":13828}]
   },
   {
     "youtubeId": "wWUdTOyOK_w",
@@ -304,7 +304,7 @@
     "thumbnail": "https://i.ytimg.com/vi/wWUdTOyOK_w/mqdefault.jpg",
     "category": ["ゲーム実況"],
     "keywords": ["える","桜凛月","Apex Legends"],
-    "songs":[{"title":"参戦","artist":["える","桜凛月"],"start":2560}
+    "songs":[{"title":"参戦","artist":["える","桜凛月"],"start":2560}]
   },
   {
     "youtubeId": "xyHUNNdcKLU",
@@ -2374,6 +2374,7 @@
 
 
 ]
+
 
 
 
