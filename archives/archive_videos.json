@@ -18,6 +18,18 @@
     "keywords": ["緑仙", "葉加瀬冬雪","渡会雲雀","先斗寧","小清水透","SitR名古屋"]
   },
   {
+    "youtubeId": "vi2tZ6D0YHs",
+    "title": "【第10話】助っ人登場！？ドラム＆ボーカル凸待ち！！ #ほしふれんず【星川サラ/フレン/にじさんじ】",
+    "channel": "星川サラ",
+    "date": "2025-06-25",
+    "thumbnail": "https://i.ytimg.com/vi/vi2tZ6D0YHs/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["星川サラ","フレン・E・ルスタリオ","五木左京"],
+    "songs": [
+      { "title": "凸待ち", "artist":["星川サラ","フレン・E・ルスタリオ","五木左京"], "start": 2708 }
+    ]
+  },
+  {
     "youtubeId": "PVlfZRAPNsA",
     "title": "「VΔLZ美容室」OPEN！？アシスタント募集中 #にじメデュラ【弦月藤士郎/長尾景/甲斐田晴】",
     "channel": "甲斐田晴",
@@ -2918,6 +2930,7 @@
 
 
 ]
+
 
 
 
