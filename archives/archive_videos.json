@@ -132,6 +132,15 @@
     "keywords": ["赤城ウェン","雀魂"]
   },
   {
+    "youtubeId": "BgOjAX3IjuQ",
+    "title": "【 スーパーマリオパーティジャンボリー 】これが、ジャンボリー・・・ #4L2K 【北小路ヒスイ/にじさんじ】",
+    "channel": "北小路ヒスイ",
+    "date": "2024-12-08",
+    "thumbnail": "https://i.ytimg.com/vi/BgOjAX3IjuQ/mqdefault.jpg",
+    "category": "ゲーム実況",
+    "keywords": ["北小路ヒスイ","える","四季アキラ","スーパーマリオパーティジャンボリー"]
+  },
+  {
     "youtubeId": "gXxK5HKNngU",
     "title": "塗りまくれ！にじさんじイカ祭り2024 - Day2【スプラトゥーン3】#にじイカ祭り2024",
     "channel": "にじさんじ",
@@ -170,20 +179,29 @@
   {
     "youtubeId": "7sL6jdoQN50",
     "title": "【雀魂】#神域リーグ2024 エキシビションに向けて！神域1年生組集合～！【にじさんじ/える】",
-    "channel": "緑仙",
+    "channel": "える",
     "date": "2024-11-10",
     "thumbnail": "https://i.ytimg.com/vi/7sL6jdoQN50/mqdefault.jpg",
     "category": ["ゲーム実況"],
     "keywords": ["える","龍惺ろたん","ゴモリー","雀魂","神域リーグ"]
   },
   {
-    "youtubeId": "NA2WbjQadq4",
-    "title": "【#おりひめばるつとファンデ美容液】未来の肌を育む!?彩る美容液 って…なんだ？【星川サラ/フミ/山神カルタ/弦月藤士郎/長尾景/甲斐田晴】",
-    "channel": "甲斐田晴",
-    "date": "2024-10-30",
-    "thumbnail": "https://i.ytimg.com/vi/NA2WbjQadq4/mqdefault.jpg",
-    "category": "プロモーション",
-    "keywords": ["星川サラ", "フミ","山神カルタ","甲斐田晴","弦月藤士郎","おりひめばるつ","VΔLZ","フ景罪"]
+    "youtubeId": "g_n-9fug6Hw",
+    "title": "【#最強ノンデリ大乱闘】ノンデリ大乱闘⚖️渋谷ハル vs 長尾景 vs 熊谷タクマ🔥【犬山たまき/星川サラ/フミ/かなえ先生】",
+    "channel": "犬山たまき",
+    "date": "2024-10-15",
+    "thumbnail": "https://i.ytimg.com/vi/g_n-9fug6Hw/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["犬山たまき", "星川サラ","かなえ先生","渋谷ハル","熊谷タクマ"]
+  },
+  {
+    "youtubeId": "vRmTndyyX44",
+    "title": "【#犬山恋愛研究所】ノンデリ＆メンヘラ恋愛相談💘【犬山たまき/星川サラ/長尾景/北小路ヒスイ】",
+    "channel": "犬山たまき",
+    "date": "2024-10-15",
+    "thumbnail": "https://i.ytimg.com/vi/vRmTndyyX44/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["星川サラ","北小路ヒスイ","犬山たまき"]
   },
   {
     "youtubeId": "oblWZs_OSM8",
@@ -232,7 +250,6 @@
     "songs":[
       {"title":"チャット","artist": ["春崎エアル"],"start":3444}
     ]
-    
   },
   {
     "youtubeId": "1r0TFZh5io0",
@@ -2702,6 +2719,7 @@
 
 
 ]
+
 
 
 
