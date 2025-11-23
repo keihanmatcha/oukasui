@@ -105,6 +105,51 @@
     "keywords": ["浅沼晋太郎","土田玲央","前野智昭"]
   },
   {
+    "youtubeId": "pIvG-qRr3lE",
+    "title": "【優勝賞金100万円】にじさんじ スーパーじゃんけん大会【#にじさんじ】",
+    "channel": "レオス・ヴィンセント",
+    "date": "2025-01-25",
+    "thumbnail": "https://i.ytimg.com/vi/pIvG-qRr3lE/mqdefault.jpg",
+    "category": ["企画"],
+    "keywords": ["レオス・ヴィンセント","フレン・E・ルスタリオ"],
+    "songs":[
+      {"title":"参戦","artist":["レオス・ヴィンセント","フレン・E・ルスタリオ"],"start":8926}
+    ]
+  },
+  {
+    "youtubeId": "AMY2926e6fM",
+    "title": "#格付けしあうノンデリ男達【犬山たまき/渋谷ハル/長尾景/かなえ先生/熊谷タクマ】",
+    "channel": "犬山たまき",
+    "date": "2025-01-23",
+    "thumbnail": "https://i.ytimg.com/vi/AMY2926e6fM/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["犬山たまき","かなえ先生","渋谷ハル","熊谷タクマ"]
+  },
+  {
+    "youtubeId": "Yv2uBNzS5O0",
+    "title": "雀魂 ｜ にじさんじ麻雀杯2025同時視聴＆相談所はこちら🐼💭",
+    "channel": "緑仙",
+    "date": "2025-01-11",
+    "thumbnail": "https://i.ytimg.com/vi/Yv2uBNzS5O0/mqdefault.jpg",
+    "category": ["記念配信"],
+    "keywords": ["緑仙","雀魂"],
+    "songs":[
+      {"title":"通話","artist":["緑仙"],"start":18963}
+    ]
+  },
+  {
+    "youtubeId": "qCrpuDZBppg",
+    "title": "*. 雀魂┊ライバー@3 天宮、お前・・・記憶が・・・ˎˊ˗（　天宮こころ / にじさんじ　）",
+    "channel": "天宮こころ",
+    "date": "2025-01-11",
+    "thumbnail": "https://i.ytimg.com/vi/qCrpuDZBppg/mqdefault.jpg",
+    "category": ["記念配信"],
+    "keywords": ["天宮こころ","弦月藤士郎","ミラン・ケストレル","雀魂"],
+    "songs":[
+      {"title":"通話","artist":["緑仙"],"start":4316}
+    ]
+  },
+  {
     "youtubeId": "9b7sDvPkhrg",
     "title": "【正月気分】羽根つきならぬ「ジャズミントン」で珍プレー連発＆書き初め大会 #ロクフリにじさんじ",
     "channel": "にじさんじ",
@@ -2758,6 +2803,7 @@
 
 
 ]
+
 
 
 
