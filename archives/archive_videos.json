@@ -274,7 +274,7 @@
     "thumbnail": "https://i.ytimg.com/vi/Ok8rf1J8Zpc/mqdefault.jpg",
     "category": ["ゲーム実況"],
     "keywords": ["イブラヒム"],
-    "songs":[{"title":"対戦","artist":"緑仙","start":10240}
+    "songs":[{"title":"対戦","artist":"イブラヒム","start":10240}]
   },
   {
     "youtubeId": "Jw4Zz3OKeug",
@@ -2374,6 +2374,7 @@
 
 
 ]
+
 
 
 
