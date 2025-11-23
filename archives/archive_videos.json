@@ -210,10 +210,7 @@
     "date": "2024-07-30",
     "thumbnail": "https://i.ytimg.com/vi/3JfVNlNx7VA/mqdefault.jpg",
     "category": ["企画"],
-    "keywords": ["因幡はねる","松本吉弘"],
-    "songs":[
-      {"title":"ゲスト","artist":["因幡はねる","松本吉弘"],"start":1791}
-    ]
+    "keywords": ["因幡はねる","松本吉弘"]
   },
   {
     "youtubeId": "zkJsCuwUmDo",
@@ -2542,6 +2539,7 @@
 
 
 ]
+
 
 
 
