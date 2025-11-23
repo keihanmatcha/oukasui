@@ -274,7 +274,9 @@
     "thumbnail": "https://i.ytimg.com/vi/Ok8rf1J8Zpc/mqdefault.jpg",
     "category": ["ゲーム実況"],
     "keywords": ["イブラヒム"],
-    "songs":[{"title":"対戦","artist":"イブラヒム","start":10240}]
+    "songs":[
+      {"title":"対戦","artist":"イブラヒム","start":10240}
+    ]
   },
   {
     "youtubeId": "Jw4Zz3OKeug",
@@ -284,7 +286,9 @@
     "thumbnail": "https://i.ytimg.com/vi/Jw4Zz3OKeug/mqdefault.jpg",
     "category": ["ゲーム実況"],
     "keywords": ["レオス・ヴィンセント","フレン・E・ルスタリオ"],
-    "songs":[{"title":"対戦","artist":"緑仙","start":4681}]
+    "songs":[
+      {"title":"対戦","artist":"緑仙","start":4681}
+    ]
   },
   {
     "youtubeId": "1EMsU_VRP6s",
@@ -294,7 +298,9 @@
     "thumbnail": "https://i.ytimg.com/vi/1EMsU_VRP6s/mqdefault.jpg",
     "category": ["歌配信"],
     "keywords": ["緑仙"],
-    "songs":[{"title":"助っ人","artist":"緑仙","start":13828}]
+    "songs":[
+      {"title":"助っ人","artist":"緑仙","start":13828}
+    ]
   },
   {
     "youtubeId": "wWUdTOyOK_w",
@@ -2374,6 +2380,7 @@
 
 
 ]
+
 
 
 
