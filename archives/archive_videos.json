@@ -132,6 +132,36 @@
     "keywords": ["赤城ウェン","雀魂"]
   },
   {
+    "youtubeId": "krRrjUUUJgA",
+    "title": "にじさんじ歌謡祭2024 ！全編無料のDay3を同時視聴する！w/おりひめばるつ【にじさんじ】#にじ歌謡祭2024",
+    "channel": "星川サラ",
+    "date": "2024-12-22",
+    "thumbnail": "https://i.ytimg.com/vi/krRrjUUUJgA/mqdefault.jpg",
+    "category": "プロモーション",
+    "keywords":  ["星川サラ", "フミ","山神カルタ","甲斐田晴","弦月藤士郎","おりひめばるつ","VΔLZ","フ景罪","にじさんじ歌謡祭2024"]
+  },
+  {
+    "youtubeId": "Cj6qVVDU3as",
+    "title": "【全編無料】にじさんじ歌謡祭2024 Day3 #にじ歌謡祭2024",
+    "channel": "にじさんじ",
+    "date": "2024-12-22",
+    "thumbnail": "https://i.ytimg.com/vi/Cj6qVVDU3as/mqdefault.jpg",
+    "category": ["ライブイベント","歌配信","公式企画・番組"]
+    "keywords":["桜凛月", "세피나（セフィナ）","めにまにかんぱにー","にじさんじ歌謡祭2024"],
+    "songs":[
+      {"title":"めにまにかんぱにー","artist": ["桜凛月", "세피나（セフィナ）","めにまにかんぱにー"],"start":4359}
+    ]
+  },
+  {
+    "youtubeId": "sbpzBOedulY",
+    "title": "【恋愛相談】お前達の前に立っているのは、200年以上生きたエルフ【長尾景/える/にじさんじ】",
+    "channel": "える",
+    "date": "2024-12-16",
+    "thumbnail": "https://i.ytimg.com/vi/sbpzBOedulY/mqdefault.jpg",
+    "category": "雑談",
+    "keywords": ["える"]
+  },
+  {
     "youtubeId": "BgOjAX3IjuQ",
     "title": "【 スーパーマリオパーティジャンボリー 】これが、ジャンボリー・・・ #4L2K 【北小路ヒスイ/にじさんじ】",
     "channel": "北小路ヒスイ",
@@ -2728,6 +2758,7 @@
 
 
 ]
+
 
 
 
