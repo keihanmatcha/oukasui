@@ -195,6 +195,27 @@
     "keywords": ["町田ちま","戌亥とこ","甲斐田晴","VΔLZ"]
   },
   {
+    "youtubeId": "1r0TFZh5io0",
+    "title": "にじジャン珠十七局目 これが俺のスタイル！得意役麻雀！",
+    "channel": "雀魂",
+    "date": "2024-09-24",
+    "thumbnail": "https://i.ytimg.com/vi/1r0TFZh5io0/mqdefault.jpg",
+    "category": ["ゲーム実況","大会","記念配信"],
+    "keywords": ["舞元啓介","空星きらめ","多井隆晴","外部","雀魂"]
+  },
+  {
+    "youtubeId": "QRWpfbPduOE",
+    "title": "【凸待ち】にじさんじで1番の『後輩』になってみた。【にじさんじ/える】",
+    "channel": "える",
+    "date": "2021-09-14",
+    "thumbnail": "https://i.ytimg.com/vi/QRWpfbPduOE/mqdefault.jpg",
+    "category": ["雑談"],
+    "keywords": ["える"],
+     "songs":[
+       {"title":"凸待ち","artist":["える"],"start":1079}
+     ]
+  },
+  {
     "youtubeId": "xupgAkqTk0M",
     "title": "神域リーグ2024 ヘラクレスお疲れ様会【松本焼肉夜露司苦レス】",
     "channel": "松本吉弘",
@@ -2641,6 +2662,7 @@
 
 
 ]
+
 
 
 
