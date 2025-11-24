@@ -13,12 +13,18 @@ GITHUB_REPO_OWNER = "keihanmatcha"
 GITHUB_REPO_NAME = "oukasui"
 JSON_FILE_PATH = "archives/archive_videos.json"
 
+# 【重要】過去どこまで遡るかの設定
+# 1ページあたり50件取得します。
+# 100ページ設定なら、50件×100 = 5000件まで遡れます。（これなら2020年まで余裕で届きます）
+# ※この新方式ならAPI消費量が少ないので、この数でも問題ありません。
+MAX_PAGES_TO_FETCH = 100 
+
 # チャンネル情報
 CHANNELS = [
     {
         "id": "UCXW4MqCQn-jCaxlX-nn-BYg",
         "name": "長尾景"
-        # fixed_tags がないので、自動的に「追加タグなし」として処理されます（エラーになりません）
+        # fixed_tags がないので、自動的に「追加タグなし」として処理されます
     },
     {
         "id": "UCh-GyPNxvjTsza0ptjnkh1w",  # VΔLZ公式チャンネル
@@ -148,7 +154,6 @@ def analyze_video_tags(title, fixed_tags):
                 detected_keywords.append(keyword)
 
     # 3. チャンネル固有の固定タグを追加 (タイトルになくてもappend)
-    # fixed_tagsが空なら何もしない（エラーにならない）
     if fixed_tags:
         for tag in fixed_tags:
             if tag not in detected_keywords:
@@ -157,49 +162,76 @@ def analyze_video_tags(title, fixed_tags):
     return detected_category, detected_keywords
 
 
-# --- 4. YouTube APIから動画を取得 ---
-def fetch_youtube_videos(channel_id, channel_name, fixed_tags, api_key):
-    # APIキーチェック
-    if not api_key or api_key == "YOUR_YOUTUBE_API_KEY":
-        print(f"⚠️ Error: {channel_name} の取得をスキップ（APIキー未設定）")
-        return []
-
-    youtube = build('youtube', 'v3', developerKey=api_key)
-    
+# --- 4. YouTube APIから動画を取得（新方式：PlaylistItems使用） ---
+# チャンネルIDから「アップロード済み動画リスト」のIDを取得する関数
+def get_uploads_playlist_id(youtube, channel_id):
     try:
-        request = youtube.search().list(
-            part='snippet',
-            channelId=channel_id,
-            type='video',
-            order='date',
-            maxResults=10
-        )
-        response = request.execute()
+        resp = youtube.channels().list(part='contentDetails', id=channel_id).execute()
+        return resp['items'][0]['contentDetails']['relatedPlaylists']['uploads']
     except Exception as e:
-        print(f"❌ Error: {channel_name} 取得エラー: {e}")
-        return []
-    
-    videos = []
-    for item in response.get('items', []):
-        snippet = item['snippet']
-        published_date = datetime.strptime(snippet['publishedAt'][:10], '%Y-%m-%d').strftime('%Y-%m-%d')
-        video_title = snippet['title']
-        
-        # 自動タグ判定 (fixed_tagsを渡す)
-        category, keywords = analyze_video_tags(video_title, fixed_tags)
+        print(f"❌ Error getting playlist ID for {channel_id}: {e}")
+        return None
 
-        videos.append({
-            "youtubeId": item['id']['videoId'],
-            "title": video_title,
-            "channel": channel_name,
-            "date": published_date,
-            "thumbnail": f"https://i.ytimg.com/vi/{item['id']['videoId']}/mqdefault.jpg",
-            "category": category,
-            "keywords": keywords,
-            "songs": []
-        })
+# 指定されたプレイリストから全動画を取得する関数
+def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
+    videos = []
+    next_page_token = None
+    page_count = 0
     
-    print(f"ℹ️ {channel_name}: {len(videos)} 件取得成功")
+    # MAX_PAGES_TO_FETCH ページ分だけ繰り返し取得
+    while page_count < MAX_PAGES_TO_FETCH:
+        try:
+            request = youtube.playlistItems().list(
+                part='snippet,contentDetails',
+                playlistId=playlist_id,
+                maxResults=50,
+                pageToken=next_page_token
+            )
+            response = request.execute()
+            
+            items = response.get('items', [])
+            if not items:
+                break
+
+            for item in items:
+                snippet = item['snippet']
+                # 公開日時 (例: 2020-01-01T00:00:00Z)
+                published_at = snippet.get('publishedAt')
+                if not published_at: continue
+                
+                # 日付のみ抽出
+                dt = datetime.strptime(published_at[:10], '%Y-%m-%d')
+                published_date = dt.strftime('%Y-%m-%d')
+                
+                video_id = item['contentDetails']['videoId']
+                video_title = snippet['title']
+                
+                # 自動タグ判定
+                category, keywords = analyze_video_tags(video_title, fixed_tags)
+                
+                videos.append({
+                    "youtubeId": video_id,
+                    "title": video_title,
+                    "channel": channel_name,
+                    "date": published_date,
+                    "thumbnail": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg",
+                    "category": category,
+                    "keywords": keywords,
+                    "songs": []
+                })
+
+            next_page_token = response.get('nextPageToken')
+            page_count += 1
+            print(f"   Running... {channel_name}: {len(videos)} 件取得中 (Page {page_count}/{MAX_PAGES_TO_FETCH})")
+            
+            if not next_page_token:
+                break
+                
+        except Exception as e:
+            print(f"❌ Error fetching playlist items: {e}")
+            break
+            
+    print(f"ℹ️ {channel_name}: 合計 {len(videos)} 件取得成功")
     return videos
 
 
@@ -236,12 +268,14 @@ def update_github_json(new_videos):
         if new_video['youtubeId'] not in existing_ids:
             merged_videos.append(new_video)
             added_count += 1
-            print(f"🆕 追加: {new_video['title']}")
-            print(f"   └ Cat: {new_video['category']} / Tags: {new_video['keywords']}")
+            # 数が多いのでログ出力を抑制
+            # print(f"🆕 追加: {new_video['title']}")
     
     if added_count == 0:
         print("✅ 新しい動画はありませんでした。")
         return
+
+    print(f"📦 合計 {added_count} 件の新しい動画をマージしました。")
 
     # 日付順にソート
     merged_videos.sort(key=lambda x: x.get('date', '1900-01-01'), reverse=True)
@@ -252,7 +286,7 @@ def update_github_json(new_videos):
 
     # PUT: 更新コミット
     commit_data = {
-        "message": f"ARCHIVE_BOT: {added_count} 件追加 (自動タグ付与)",
+        "message": f"ARCHIVE_BOT: {added_count} 件追加 (全件取得モード)",
         "content": new_content_base64
     }
     if existing_sha:
@@ -269,17 +303,24 @@ def update_github_json(new_videos):
 
 # --- 6. メイン処理 ---
 def main():
-    print("--- 長尾景＆VΔLZ アーカイブ更新スクリプト開始 ---")
+    print("--- 長尾景＆VΔLZ アーカイブ全件更新スクリプト開始 ---")
     
     if not YOUTUBE_API_KEY or not GITHUB_TOKEN:
         print("❌ エラー: 環境変数 (YOUTUBE_API_KEY, GITHUB_TOKEN) が設定されていません")
         return
     
+    youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
     all_new_videos = []
+
     for ch in CHANNELS:
-        # fixed_tags があれば取得、なければ空リスト。これで書き忘れエラーは起きません
+        # 1. チャンネルIDからアップロードリストIDを取得
+        playlist_id = get_uploads_playlist_id(youtube, ch['id'])
+        if not playlist_id:
+            continue
+            
+        # 2. プレイリストから全動画を取得
         fixed_tags = ch.get('fixed_tags', [])
-        videos = fetch_youtube_videos(ch['id'], ch['name'], fixed_tags, YOUTUBE_API_KEY)
+        videos = fetch_videos_from_playlist(youtube, playlist_id, ch['name'], fixed_tags)
         all_new_videos.extend(videos)
     
     if all_new_videos:
