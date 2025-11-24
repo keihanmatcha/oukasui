@@ -93,26 +93,13 @@
         gap: 8px 10px;
     }
 }
-    /* ... (他の.filter-list関連のCSSが続く) ... */
-    .filter-list {
-    display: grid;
-    /* 3列表示に修正 */
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 8px 15px; /* 縦横のギャップを調整 */
+/* 【新規追加】狭いスマホ画面 (max-width: 560px) で1列表示に切り替え */
+@media (max-width: 560px) {
+    .filter-group .archive__sort__select__label {
+        grid-template-columns: 1fr;
     }
+}
     
-    .filter-list label {
-        display: block;
-        cursor: pointer;
-        font-size: 14px;
-        padding: 6px 0;
-        color: var(--fg);
-        user-select: none;
-    }
-    .filter-list input[type="checkbox"] {
-        margin-right: 8px;
-        accent-color: var(--accent);
-    }
     .filter-actions {
         margin-top: 20px;
     }
@@ -134,9 +121,17 @@
     /* ===== リスト（動画表示用に大幅変更）===== */
     .list{
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        /* ここを調整 */
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
         gap: 16px;
         padding: 1px;
+    }
+    /* 【リストの2列化を強制するメディアクエリを追加】 */
+    @media (max-width: 560px) {
+        .list {
+            /* 狭い画面では最小値を下げて2列を強制表示させる */
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
     }
     .video-card {
         cursor: pointer;
@@ -236,7 +231,19 @@
     .list-col{grid-area:list}
     .player-col{grid-area:player}
     .nothing{color:var(--muted);text-align:center;padding:20px;border:1px dashed var(--border);border-radius:12px; grid-column: 1 / -1; margin-top: 16px; margin-bottom: 16px;}
-  </style>
+    /* 【新規追加】フローティングプレイヤー用のスタイル (元のコードに含まれていたためそのまま維持) */
+    .is-float {
+        position: fixed !important;
+        bottom: 10px;
+        right: 10px;
+        z-index: 1000;
+        width: min(calc(100vw - 20px), 320px);
+        box-shadow: 0 4px 12px rgba(0,0,0,.2);
+        transform: none !important;
+    }
+    .is-float .player-head { display: none; }
+    .has-float { padding-bottom: 150px; }
+</style>
 </head>
 <body>
   <header>
@@ -1161,6 +1168,7 @@
 </body>
 
 </html>
+
 
 
 
