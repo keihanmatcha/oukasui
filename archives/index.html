@@ -1,3 +1,71 @@
+動画再生画面（プレーヤー）がクリックするたびに大きくなってしまう現象、およびその他の挙動の不安定さは、**YouTubeプレーヤーの読み込みロジック（`loadVideo`関数）の不具合**が原因である可能性が高いです。
+
+具体的には、プレーヤーを「新しく作る処理」と「既存のものを更新する処理」が競合し、iframeが二重に生成されたり、スタイルが崩れたりしていると考えられます。
+
+以下の修正を行うことで、この「謎に大きくなる」バグを解消し、動作を安定させます。
+
+-----
+
+### 🛠️ JavaScriptの修正（`loadVideo`関数の完全書き換え）
+
+`<script>`タグ内にある `loadVideo` 関数を、以下の**修正版コード**にすべて置き換えてください。
+
+この修正版では、プレーヤーが既に存在する場合は**必ず再利用**し、存在しない場合のみ**新規作成**するように厳格に分岐させています。これにより、iframeの重複やレイアウト崩れを防ぎます。
+
+```javascript
+    // ===== 修正版: 安定した動画読み込み関数 =====
+    function loadVideo(id, start=0){
+      $warn.style.display='none';
+      const startSec = toSeconds(start);
+
+      // 1. API準備完了 & プレーヤー作成済みの場合は、既存プレーヤーで動画をロード
+      if(apiReady && player && typeof player.loadVideoById === 'function'){
+         try {
+             player.loadVideoById({videoId: id, startSeconds: startSec});
+         } catch(e) {
+             console.error("Player Error:", e);
+         }
+         return;
+      }
+
+      // 2. API準備完了 & プレーヤー未作成の場合は、新規作成
+      if(apiReady && !player){
+         // 念のため、対象要素がiframeであることを確認（再生成時のトラブル防止）
+         // 既存のytFrameがあればそれをターゲットにする
+         const target = document.getElementById('ytFrame');
+         if(!target) return; 
+
+         player = new YT.Player('ytFrame', {
+            height: '100%',
+            width: '100%',
+            videoId: id,
+            playerVars: { 
+                start: startSec, 
+                autoplay: 1, 
+                rel: 0, 
+                modestbranding: 1, 
+                playsinline: 1 
+            },
+            events: {
+                onError: () => { $warn.style.display='block'; }
+            }
+         });
+         return;
+      }
+
+      // 3. API未完了時のフォールバック (iframeのsrcを直接書き換え)
+      const url = `https://www.youtube-nocookie.com/embed/${id}?start=${startSec}&autoplay=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
+      if($yt) $yt.src = url;
+    }
+```
+
+-----
+
+### 📝 コード全体の確認
+
+念のため、この修正を適用した**完全なHTMLコード**を以下に記載します。これをコピー＆ペーストして上書き保存すれば、レイアウト崩れやバグが解消されるはずです。
+
+```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -17,6 +85,7 @@
   <meta property="og:image" content="https://oukasui.com/images/ogp.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="桜華水｜長尾景非公式ファンサイト　動画アーカイブ">
   <meta name="twitter:description" content="長尾景の全動画アーカイブ（配信・コラボなど）を検索・一覧表示できます。">
@@ -59,6 +128,14 @@
     .grid{display:grid;gap:16px;align-items:start;grid-template-columns:1.2fr .8fr;grid-template-areas:"list player"}
     .grid.player-left{grid-template-columns:.8fr 1.2fr;grid-template-areas:"player list"}
     
+    @media (min-width: 901px){
+      .player-col{ position: sticky; top: 84px; align-self:start; height: fit-content; z-index: 5; }
+      .player-panel{ position: static; }
+    }
+    .list-col{grid-area:list}
+    .player-col{grid-area:player}
+    .nothing{color:var(--muted);text-align:center;padding:20px;border:1px dashed var(--border);border-radius:12px; grid-column: 1 / -1; margin-top: 16px; margin-bottom: 16px;}
+
     /* リスト (PC) */
     .list{ display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; padding: 1px; }
 
@@ -86,14 +163,6 @@
     .player-foot{padding:10px 14px;border-top:1px solid var(--border);background:#fff}
     .meta-line{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
     .warn{margin-top:8px;padding:10px 12px;color:#92400e;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px}
-    
-    @media (min-width: 901px){
-      .player-col{ position: sticky; top: 84px; align-self:start; height: fit-content; z-index: 5; }
-      .player-panel{ position: static; }
-    }
-    .list-col{grid-area:list}
-    .player-col{grid-area:player}
-    .nothing{color:var(--muted);text-align:center;padding:20px;border:1px dashed var(--border);border-radius:12px; grid-column: 1 / -1; margin-top: 16px; margin-bottom: 16px;}
 
     /* セットリスト (2列グリッド) */
     .setlist { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); border-radius: 10px; margin-top: 8px; max-height: 420px; overflow: auto; }
@@ -166,25 +235,6 @@
       </div>
     </div>
   </header>
-  <body>
-  <header>
-    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:20px">
-      <a href="../index.html" class="brand" aria-label="HOME">
-      <span style="font-weight:700;color:#4c46a6">HOME</span>
-    </a>
-      <h1>📹 長尾景 動画検索</h1>
-      <div class="toolbar">
-        <div class="searchbar">
-            <input id="q" type="search" placeholder="動画タイトル・チャンネル名・キーワードで検索" autocomplete="off" />
-            <button id="resetSearch" class="btn secondary" type="button" style="padding: 10px 16px; border-radius: 10px; font-weight: 700; margin-left: 10px;">
-            リセット
-            </button>
-        </div>
-        <button id="toggleFilter" class="btn secondary" type="button" style="padding: 10px 16px; border-radius: 10px; font-weight: 700;">
-        絞り込みフィルターを開く
-        </button>
-    </div>
-  </header>
 
   <div id="filterPanel" class="filter-panel-wrapper" style="display:none;">
     <div class="wrap">
@@ -192,26 +242,26 @@
         <dt>CATEGORY (配信種別)</dt>
         <dd>
             <ul class="archive__sort__select__label">
-                        <li><label><input type="checkbox" name="get_cats[]" value="ゲーム実況"><span>ゲーム実況</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="雑談"><span>雑談</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="歌配信"><span>歌配信</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="歌動画"><span>歌動画</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="ダンス動画"><span>ダンス動画</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="ダンス配信"><span>ダンス配信</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="記念配信"><span>記念配信</span></label></li>
-              　　　　　 <li><label><input type="checkbox" name="get_cats[]" value="殺陣"><span>殺陣</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="お披露目配信"><span>お披露目配信</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="3D"><span>3D</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="企画"><span>企画</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="大会"><span>大会</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="ライブイベント"><span>ライブイベント</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="プロモーション"><span>プロモーション</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="公式企画・番組"><span>公式企画・番組</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="動画系"><span>動画系</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="公式切り抜き"><span>公式切り抜き</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="手描き動画"><span>手描き動画</span></label></li>
-                        <li><label><input type="checkbox" name="get_cats[]" value="ぷちさんじ"><span>ぷちさんじ</span></label></li>
-                        </ul>
+                <li><label><input type="checkbox" name="get_cats[]" value="ゲーム実況"><span>ゲーム実況</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="雑談"><span>雑談</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="歌配信"><span>歌配信</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="歌動画"><span>歌動画</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="ダンス動画"><span>ダンス動画</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="ダンス配信"><span>ダンス配信</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="記念配信"><span>記念配信</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="殺陣"><span>殺陣</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="お披露目配信"><span>お披露目配信</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="3D"><span>3D</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="企画"><span>企画</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="大会"><span>大会</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="ライブイベント"><span>ライブイベント</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="プロモーション"><span>プロモーション</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="公式企画・番組"><span>公式企画・番組</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="動画系"><span>動画系</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="公式切り抜き"><span>公式切り抜き</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="手描き動画"><span>手描き動画</span></label></li>
+                <li><label><input type="checkbox" name="get_cats[]" value="ぷちさんじ"><span>ぷちさんじ</span></label></li>
+            </ul>
         </dd>
       </dl>
       <dl class="filter-group">
@@ -637,133 +687,6 @@
                         </ul>
         </dd>
     </dl>
-
-      <div class="filter-actions">
-        <button id="applyFilterBtn" class="btn" type="button">
-          この条件で絞り込む
-        </button>
-        <button id="clearFilterBtn" class="btn secondary" type="button">
-          全て解除
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <main class="wrap">
-    <div id="grid" class="grid player-left">
-      <aside class="player-col">
-        <div class="player-panel" id="playerPanel" style="display:none">
-          <div class="player-head">
-            <span class="drag-handle" aria-label="Move">≡</span>
-            <div>
-              <div class="player-title" id="playerTitle">（動画タイトル）</div>
-              <div class="player-sub" id="playerMeta">YYYY.MM.DD / チャンネル名</div>
-            </div>
-            <div style="display:flex;gap:8px;align-items:center"><a id="openYT" href="#" target="_blank" rel="noopener" style="font-size:12px;color:var(--accent);text-decoration:none">YouTubeで開く ↗</a></div>
-          </div>
-          <div class="player-body"><iframe id="ytFrame" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-          <div class="player-foot">
-            <div class="meta-line"><strong>セットリスト</strong>（※動画内セットリストがあれば表示）</div>
-            <div class="setlist" id="setlist"></div>
-            <div id="embedWarn" class="warn" style="display:none">この動画はページ内再生が許可されていない可能性があります。<a id="warnLink" href="#" target="_blank" rel="noopener">YouTubeで開く</a> をお試しください。</div>
-          </div>
-        </div>
-      </aside>
-      <section class="list-col">
-        <div id="list" class="list"></div>
-        <div id="empty" class="nothing" style="display:none">該当する結果がありません。</div>
-      </section>
-    </div>
-  </main>
-
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script>
-    // --- DOM要素の定義 ---
-    const $list = document.getElementById('list');
-    const $empty = document.getElementById('empty');
-    const $q = document.getElementById('q');
-    const $resetSearch = document.getElementById('resetSearch');
-    
-    // 新しいフィルタUIの要素
-    const $toggleFilter = document.getElementById('toggleFilter');
-    const $filterPanel = document.getElementById('filterPanel');
-    const $applyFilterBtn = document.getElementById('applyFilterBtn');
-    const $clearFilterBtn = document.getElementById('clearFilterBtn');
-
-    // プレイヤー関連の要素（元のコードから流用）
-    const $panel = document.getElementById('playerPanel');
-    const $yt = document.getElementById('ytFrame');
-    const $title = document.getElementById('playerTitle');
-    const $meta = document.getElementById('playerMeta');
-    const $open = document.getElementById('openYT');
-    const $warn = document.getElementById('embedWarn');
-    const $warnLink = document.getElementById('warnLink');
-    const $setlist = document.getElementById('setlist');
-
-
-    // --- ユーティリティ関数（元のコードから流用） ---
-    const pad = n => String(n).padStart(2,'0');
-    const ymdToDots = ymd => { const [y,m,d] = (ymd||'').split('-'); return y?`${y}.${pad(m)}.${pad(d)}`:''; };
-
-    function toSeconds(v){
-      if(v==null) return 0;
-      if (typeof v === 'number') return Math.max(0, v|0);
-      if (/^\d+$/.test(v)) return Math.max(0, parseInt(v,10));
-      //const p = String(v).split(':'.map(Number));
-      const p = String(v).split(':').map(Number);
-      if (p.length===3) return p[0]*3600 + p[1]*60 + p[2];
-      if (p.length===2) return p[0]*60 + p[1];
-      return 0;
-    }
-    const hms = sec => { sec=toSeconds(sec); const h=Math.floor(sec/3600), m=Math.floor(sec%3600/60), s=Math.floor(sec%60); return `${pad(h)}:${pad(m)}:${pad(s)}`; };
-
-    let player=null, apiReady=false;
-   /// プレイヤーオブジェクトが生成されたときに実行されるコールバック関数
-    //window.onYouTubeIframeAPIReady = function() {
-        // API準備完了時に、ここでプレイヤーオブジェクトを初期化します。
-        // ただし、自動再生を防ぐため、初期化はまだ行いません。
-    //};
-    window.onYouTubeIframeAPIReady = ()=>{ apiReady = true; };
-    function loadVideo(id, start=0){
-      $warn.style.display='none';
-      const startSec = toSeconds(start);
-      const url = `https://www.youtube-nocookie.com/embed/${id}?start=${startSec}&autoplay=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
-
-      if(apiReady){
-        if(!player){
-          player = new YT.Player('ytFrame', {
-            playerVars:{rel:0,modestbranding:1,playsinline:1},
-            events:{ onError:()=>($warn.style.display='block') }
-          });
-        }
-        try{
-          player.loadVideoById({videoId:id, startSeconds:startSec});
-          return;
-        }catch(e){}
-      }
-      $yt.src = url;
-
-  <div id="filterPanel" class="filter-panel-wrapper" style="display:none;">
-    <div class="wrap">
-      <dl class="filter-group">
-        <dt>CATEGORY (配信種別)</dt>
-        <dd>
-            <ul class="archive__sort__select__label">
-                <li><label><input type="checkbox" name="get_cats[]" value="ゲーム実況"><span>ゲーム実況</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="雑談"><span>雑談</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="歌配信"><span>歌配信</span></label></li>
-                </ul>
-        </dd>
-      </dl>
-      <dl class="filter-group">
-        <dt>KEYWORDS</dt>
-        <dd>
-            <ul class="archive__sort__select__label">
-                <li><label><input type="checkbox" name="get_companion[]" value="長尾景"><span>長尾景</span></label></li>
-                <li><label><input type="checkbox" name="get_collabo[]" value="VΔLZ"><span>VΔLZ</span></label></li>
-                </ul>
-        </dd>
-      </dl>
       <div class="filter-actions">
         <button id="applyFilterBtn" class="btn" type="button">この条件で絞り込む</button>
         <button id="clearFilterBtn" class="btn secondary" type="button">全て解除</button>
@@ -838,20 +761,33 @@
 
     let player=null, apiReady=false;
     window.onYouTubeIframeAPIReady = ()=>{ apiReady = true; };
+
+    // ===== 修正版: 安定した動画読み込み関数 =====
     function loadVideo(id, start=0){
       $warn.style.display='none';
       const startSec = toSeconds(start);
-      const url = `https://www.youtube-nocookie.com/embed/${id}?start=${startSec}&autoplay=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
-      if(apiReady){
-        if(!player){
-          player = new YT.Player('ytFrame', {
-            playerVars:{rel:0,modestbranding:1,playsinline:1},
-            events:{ onError:()=>($warn.style.display='block') }
-          });
-        }
-        try{ player.loadVideoById({videoId:id, startSeconds:startSec}); return; }catch(e){}
+
+      // 1. 既存プレーヤー再利用
+      if(apiReady && player && typeof player.loadVideoById === 'function'){
+         try { player.loadVideoById({videoId: id, startSeconds: startSec}); } catch(e) { console.error("Player Error:", e); }
+         return;
       }
-      $yt.src = url;
+
+      // 2. 新規プレーヤー作成
+      if(apiReady && !player){
+         const target = document.getElementById('ytFrame');
+         if(!target) return; 
+         player = new YT.Player('ytFrame', {
+            height: '100%', width: '100%', videoId: id,
+            playerVars: { start: startSec, autoplay: 1, rel: 0, modestbranding: 1, playsinline: 1 },
+            events: { onError: () => { $warn.style.display='block'; } }
+         });
+         return;
+      }
+
+      // 3. フォールバック
+      const url = `https://www.youtube-nocookie.com/embed/${id}?start=${startSec}&autoplay=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
+      if($yt) $yt.src = url;
     }
 
     let ALL_VIDEOS=[];
@@ -923,7 +859,6 @@
             if (player && typeof player.stopVideo === 'function') { player.stopVideo(); }
             $yt.src = 'about:blank';
             $panel.style.display = 'none';
-            window.scrollTo(0, 0);
         });
     }
 
@@ -1042,7 +977,7 @@
       window.addEventListener('load', attachObserver);
       window.updateFloatOnPlay = function(){ setTimeout(attachObserver, 100); };
       
-      // ドラッグ処理 (省略可能だが維持)
+      // ドラッグ処理
       const head = $panel.querySelector('.player-head');
       if(!head) return;
       let dragging = false, startX=0, startY=0, startLeft=0, startTop=0;
