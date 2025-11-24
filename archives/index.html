@@ -23,7 +23,7 @@
   <meta name="twitter:description" content="長尾景の全動画アーカイブ（配信・コラボなど）を検索・一覧表示できます。">
   <meta name="twitter:image" content="https://oukasui.com/images/ogp.png">
 
- <style>
+<style>
     /* ===== 基本スタイル（元の曲検索ページから流用）===== */
     :root{ --fg:#222; --muted:#4b5563; --accent:#625DA1; --bg:#fff; --border:#e5e7eb; --panel:#f8f8ff; }
     html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif}
@@ -93,7 +93,7 @@
         gap: 8px 10px;
     }
 }
-/* 以前の560pxでの1列化設定を削除しました */
+/* 以前の560pxでの1列化設定は削除済み */
     
     .filter-actions {
         margin-top: 20px;
@@ -121,13 +121,42 @@
         gap: 16px;
         padding: 1px;
     }
-    /* 【リストの2列化を強制するメディアクエリを追加/修正】 */
+    
+    /* 【リストの2列化を強制するメディアクエリ】 */
     @media (max-width: 560px) {
         .list {
             /* 狭い画面では 1fr 1fr で2等分し、確実に2列を強制表示させます */
             grid-template-columns: 1fr 1fr;
+            /* 2列にしたことで隙間が狭くなったため、ギャップを調整できます（オプション） */
+            gap: 10px; 
+        }
+        
+        /* 1. タイトルを1行に制限し、高さを固定 */
+        .video-card .title {
+            -webkit-line-clamp: 1; /* 1行に制限 */
+            height: 1.4em; /* 高さ固定 (1行分の高さ) */
+            margin-bottom: 4px; /* 余白を減らす */
+            font-size: 13px; /* フォントサイズを少し小さく */
+        }
+        
+        /* 2. タグ情報を完全に非表示 */
+        .video-card .tags-row {
+            display: none;
+        }
+        
+        /* 3. 情報（チャンネル名）を非表示にし、日付のみにする */
+        .video-card .info {
+            font-size: 11px; /* フォントサイズを最小限に */
+        }
+        .video-card .info .channel {
+            /* チャンネル名を表示せず、日付のみを残す */
+            display: none; 
+        }
+        .video-card .meta {
+             padding: 8px; /* パディングも最小限に */
         }
     }
+    
     .video-card {
         cursor: pointer;
         border: 1px solid var(--border);
@@ -168,7 +197,9 @@
         color: var(--muted);
     }
     .video-card .date {
+        /* 日付を右寄せにするため、flexを適用 */
         font-variant-numeric: tabular-nums;
+        margin-left: auto; 
     }
     .video-card .tags-row {
         display: flex;
@@ -1163,6 +1194,7 @@
 </body>
 
 </html>
+
 
 
 
