@@ -92,6 +92,24 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 8px 10px;
     }
+    
+    /* ★★★ 修正箇所: wrapの左右パディングを解除し、リストを画面端まで広げる ★★★ */
+    .wrap {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    /* ヘッダー内の要素のパディングは維持（リセットボタンなどを端に寄せないように） */
+    header .wrap {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* リスト要素自体に、パディングの代わりとして余白を設ける (端に張り付きすぎないため) */
+    .list {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 }
 /* 以前の560pxでの1列化設定は削除済み */
     
@@ -246,14 +264,16 @@
     .player-foot{padding:10px 14px;border-top:1px solid var(--border);background:#fff}
     .meta-line{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
     
-    /* ===== セットリストの表示形式を2列グリッド表示に修正 ===== */
+    /* ===== セットリストの表示形式を2列グリッド表示に修正 (PC/モバイル共通) ===== */
     .setlist {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* PCとモバイルで2列を維持 */
         gap: 0; 
         border: 1px solid var(--border); 
         border-radius: 10px;
         margin-top: 8px;
+        max-height: 420px; 
+        overflow: auto;
     }
     .set-item {
         display: flex;
@@ -299,22 +319,18 @@
         white-space: nowrap;
     }
 
-    /* モバイル表示時のセットリスト調整 */
+    /* モバイル表示時のセットリスト調整 (1列設定を削除し、2列を維持します) */
     @media (max-width: 560px) {
-        .setlist {
-            grid-template-columns: 1fr; /* 1列に戻す */
-            gap: 0;
-        }
+        /* モバイルでのセットリストの調整はPCと同じ2列を維持 */
+        
         .set-item {
-            border-right: none; /* 縦線を削除 */
-            border-bottom: 1px solid var(--border);
+            border-right: 1px solid var(--border); /* 縦線を維持 */
         }
-        /* モバイルでは最後の項目以外に下線をつける（全ての項目に下線が適用されます） */
-        .setlist .set-item:last-child {
-            border-bottom: none !important;
+        .set-item:nth-child(2n + 1) {
+            border-right: none; /* 右端の項目の縦線を削除 */
         }
     }
-
+    
     .warn{margin-top:8px;padding:10px 12px;color:#92400e;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px}
     
     @media (min-width: 901px){
@@ -325,6 +341,27 @@
     .list-col{grid-area:list}
     .player-col{grid-area:player}
     .nothing{color:var(--muted);text-align:center;padding:20px;border:1px dashed var(--border);border-radius:12px; grid-column: 1 / -1; margin-top: 16px; margin-bottom: 16px;}
+    
+    /* 【モーダル表示用のCSS】 */
+    .player-active .list-col {
+        display: none !important; /* 動画リストを非表示にする */
+    }
+    .player-active header {
+        display: none; /* ヘッダーを非表示にする */
+    }
+    .player-active .wrap {
+        padding: 0; /* 再生画面を広げるためにパディングを解除 */
+    }
+    .player-active .player-col {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999; /* 最前面に表示 */
+        height: 100vh; /* 画面全体を覆う */
+        overflow: scroll; /* コンテンツが長い場合にスクロール可能にする */
+        width: 100%;
+        background: var(--bg);
+    }
     /* 【新規追加】フローティングプレイヤー用のスタイル (元のコードに含まれていたためそのまま維持) */
     .is-float {
         position: fixed !important;
@@ -1352,6 +1389,7 @@ if ($closePlayer) {
 </body>
 
 </html>
+
 
 
 
