@@ -122,12 +122,12 @@
         padding: 1px;
     }
     
-    /* 【リストの2列化を強制するメディアクエリ】 */
+    /* 【リストの2列化と情報制限を行うメディアクエリ】 */
     @media (max-width: 560px) {
         .list {
             /* 狭い画面では 1fr 1fr で2等分し、確実に2列を強制表示させます */
             grid-template-columns: 1fr 1fr;
-            /* 2列にしたことで隙間が狭くなったため、ギャップを調整できます（オプション） */
+            /* 2列にしたことで隙間が狭くなったため、ギャップを調整できます */
             gap: 10px; 
         }
         
@@ -141,22 +141,29 @@
         
         /* 2. タグ情報を完全に非表示 */
         .video-card .tags-row {
-            display: none;
+            display: none; /* ← これでタグ全体が非表示になります */
         }
         
         /* 3. 情報（チャンネル名）を非表示にし、日付のみにする */
         .video-card .info {
+            /* 日付を左寄せにするため、justify-contentを調整 */
+            justify-content: flex-start;
             font-size: 11px; /* フォントサイズを最小限に */
         }
         .video-card .info .channel {
             /* チャンネル名を表示せず、日付のみを残す */
             display: none; 
         }
+        .video-card .date {
+            /* 日付のみを左寄せ表示 */
+            margin-left: 0;
+        }
         .video-card .meta {
              padding: 8px; /* パディングも最小限に */
         }
     }
     
+    /* --- デフォルト（901px以上）のスタイル --- */
     .video-card {
         cursor: pointer;
         border: 1px solid var(--border);
@@ -197,9 +204,8 @@
         color: var(--muted);
     }
     .video-card .date {
-        /* 日付を右寄せにするため、flexを適用 */
         font-variant-numeric: tabular-nums;
-        margin-left: auto; 
+        margin-left: auto; /* デフォルトで右寄せに戻すための修正 */
     }
     .video-card .tags-row {
         display: flex;
@@ -1194,6 +1200,7 @@
 </body>
 
 </html>
+
 
 
 
