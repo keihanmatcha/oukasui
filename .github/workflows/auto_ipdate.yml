@@ -1,7 +1,7 @@
 name: Update Nagao Archive Data
 
 on:
-  # 毎日、日本時間午前9時 (UTC 00:00) に自動実行する
+  # 毎日 日本時間 9:00 (UTC 0:00) に自動実行
   schedule:
     - cron: '0 0 * * *'
   # 手動実行を可能にする
@@ -14,10 +14,9 @@ jobs:
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v4
-        # GITHUB_TOKENの代わりにカスタムトークンを使用するため、fetch-depth: 0 を使用して履歴全体を取得し、プッシュできるようにする
         with:
-          fetch-depth: 0
-          token: ${{ secrets.OUKASUI_TOKEN }} # 👈 【重要】カスタムトークンを使用
+          # API経由で更新するため通常は不要ですが、プライベートリポジトリ等の場合に備えて設定
+          token: ${{ secrets.OUKASUI_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -25,33 +24,17 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
+        # 必要なライブラリをインストール
         run: pip install google-api-python-client requests
 
-      - name: Configure Git for Commit
-        run: |
-          git config user.name "Archive Bot"
-          git config user.email "bot@users.noreply.github.com"
-          
       - name: Run Archive Update Script
+        # ここでPythonスクリプトを実行し、API経由で直接更新コミットを行います
         run: python update_archives.py
         env:
-          # 👇 環境変数のマッピング（シークレットをPythonが期待する名前に渡す）
+          # Secretsを環境変数としてスクリプトに渡す
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.OUKASUI_TOKEN }} # 👈 【重要】GITHUB_TOKENとしてカスタムシークレットを渡す
+          GITHUB_TOKEN: ${{ secrets.OUKASUI_TOKEN }}
           
-          # スクリプト内で設定値を上書き (スクリプト内に直接書かれている値)
+          # スクリプト内のデフォルト値を上書きしたい場合は設定（そのままで良ければ削除可）
           GITHUB_REPO_OWNER: keihanmatcha
           GITHUB_REPO_NAME: keishiki
-          
-      - name: Commit and Push changes
-        # ステージングされている変更がある場合のみ実行する
-        run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            git add ${{ env.JSON_FILE_PATH }}
-            git commit -m "ARCHIVE_BOT: 長尾景アーカイブの自動更新"
-            git push
-          else
-            echo "No changes to commit."
-          fi
-        env:
-          JSON_FILE_PATH: archives/archive_videos.json
