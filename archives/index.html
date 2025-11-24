@@ -1155,28 +1155,56 @@
     }
 
     // ===== セットリスト描画 (元のコードから流用) =====
-    function renderSetlist(video, id, activeStart){
-      $setlist.innerHTML='';
-      if (!video.songs || video.songs.length === 0) {
+    // ===== セットリスト描画 (修正版: JSONデータ形式を維持) =====
+function renderSetlist(video, id, activeStart){
+    const $setlist = document.getElementById('setlist');
+    const $title = document.getElementById('playerTitle');
+    const $open = document.getElementById('openYT');
+    
+    $setlist.innerHTML='';
+
+    if (!video.songs || video.songs.length === 0) {
         $setlist.innerHTML = '<div style="padding: 10px 14px; color: var(--muted); font-size: 14px;">この動画にはセットリストが登録されていません。</div>';
         return;
-      }
+    }
 
-      for(const s of (video.songs||[])){
+    // アーティスト名をスラッシュ区切りで整形するヘルパー関数
+    const formatArtist = (artist) => {
+        if (Array.isArray(artist)) {
+            // 配列の場合: スラッシュで結合して返す
+            return artist.join(' / ');
+        }
+        // 単一の文字列の場合: そのまま返す
+        return artist || '';
+    };
+
+    for(const s of (video.songs||[])){
         const sec = toSeconds(s.start);
         const item=document.createElement('div');
         item.className='set-item'+(sec===activeStart?' active':'');
-        item.innerHTML=`<div class="set-title"><div class="set-song">${s.title}</div><div class="set-artist">${s.artist}</div></div><div class="set-time">${hms(sec)}〜</div>`;
+        
+        const artistName = formatArtist(s.artist);
+        
+        // 修正: 新しいCSS構造と、データに基づいた整形済みテキストを適用
+        item.innerHTML=`
+            <div class="set-title">
+                <div class="set-song">${s.title}</div>
+                <div class="set-artist"> / ${artistName}</div> 
+            </div>
+            <div class="set-time">${hms(sec)}〜</div>
+        `;
+        
         item.addEventListener('click', ()=>{
-          loadVideo(id, sec);
-          $title.textContent = `${video.title}（${hms(sec)}〜）`;
-          $open.href = `https://www.youtube.com/watch?v=${id}&t=${sec}s`;
-          [...$setlist.children].forEach(el=>el.classList.remove('active'));
-          item.classList.add('active');
+            loadVideo(id, sec);
+            $title.textContent = `${video.title}（${hms(sec)}〜）`;
+            $open.href = `https://www.youtube.com/watch?v=${id}&t=${sec}s`;
+            [...$setlist.children].forEach(el=>el.classList.remove('active'));
+            item.classList.add('active');
         });
         $setlist.appendChild(item);
-      }
     }
+}
+// ----------------------------------------------------
     
 
     // ===== データ読み込みと初期化 =====
@@ -1258,10 +1286,65 @@
       head.addEventListener('mousedown', onDown);
       head.addEventListener('touchstart', onDown, {passive:true});
     })();
+    // --- プレイヤー制御とモーダル切り替えの追加 ---
+const $closePlayer = document.getElementById('closePlayer');
+const $grid = document.getElementById('grid'); // grid要素を取得
+
+// モバイルでカードをタップした時の処理を更新
+const originalRenderRows = renderRows;
+renderRows = function(videos) {
+    originalRenderRows(videos);
+    
+    // 新しいイベントリスナーをリスト内のカードに再設定
+    document.querySelectorAll('.video-card').forEach(card => {
+        card.onclick = (e) => {
+            // バッジがクリックされた場合は検索に反映
+            if (e.target.classList.contains('category-badge') || e.target.classList.contains('keyword-badge')) {
+                const text = e.target.textContent;
+                fillSearch(text);
+                return;
+            }
+
+            // (元のカードタップ処理をここで行う)
+            // ... (元のカードタップ処理のロジックをここに移植してください) ...
+            
+            // 【新規追加】モバイルでの再生画面フル表示制御
+            const mq = window.matchMedia('(max-width: 900px)').matches;
+            if (mq) {
+                document.body.classList.add('player-active');
+            }
+            
+            // 浮動プレイヤーの位置を更新 (既存のコードを維持)
+            window.updateFloatOnPlay && window.updateFloatOnPlay();
+            $panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        };
+    });
+};
+
+
+if ($closePlayer) {
+    $closePlayer.addEventListener('click', () => {
+        // 1. <body>からクラスを削除してリスト表示を戻す
+        document.body.classList.remove('player-active');
+
+        // 2. プレーヤーを停止
+        if (player && typeof player.stopVideo === 'function') {
+            player.stopVideo();
+        }
+        $yt.src = 'about:blank';
+        
+        // 3. プレーヤーパネルを非表示にする
+        $panel.style.display = 'none';
+
+        // 4. リストの先頭に戻る
+        window.scrollTo(0, 0);
+    });
+}
   </script>
 </body>
 
 </html>
+
 
 
 
