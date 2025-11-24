@@ -18,7 +18,7 @@ CHANNELS = [
     {
         "id": "UCXW4MqCQn-jCaxlX-nn-BYg",
         "name": "長尾景",
-        "default_tags": [] 
+        "default_tags": []
     },
     {
         "id": "UCh-GyPNxvjTsza0ptjnkh1w",  # VΔLZ公式チャンネル
@@ -28,8 +28,6 @@ CHANNELS = [
 ]
 
 # --- 2. 自動タグ付け用の辞書定義 ---
-# HTMLの value 値と一致させる必要があります
-
 # カテゴリ候補 (HTMLの順序・内容に準拠)
 CATEGORY_list = [
     "ゲーム実況", "雑談", "歌配信", "歌動画", "ダンス動画", "ダンス配信", 
@@ -145,11 +143,7 @@ def analyze_video_tags(title, default_tags):
             break 
     
     # 2. キーワード判定
-    # 注意: タイトルに「ARK」しかなくても「ARK:Survival Evolved」をつけたい場合は
-    # 別途マッピング処理が必要ですが、ここではHTMLの値をそのまま探します。
     for keyword in KEYWORD_list:
-        # キーワードとタイトルの両方を小文字にして比較
-        # (例: "Apex Legends" を検索し、タイトルに "apex legends" があればヒット)
         if keyword.lower() in title_lower:
             if keyword not in detected_keywords:
                 detected_keywords.append(keyword)
@@ -292,6 +286,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
