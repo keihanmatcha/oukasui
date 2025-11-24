@@ -37,4 +37,4 @@ jobs:
           
           # スクリプト内のデフォルト値を上書きしたい場合は設定（そのままで良ければ削除可）
           GITHUB_REPO_OWNER: keihanmatcha
-          GITHUB_REPO_NAME: keishiki
+          GITHUB_REPO_NAME: oukasui
