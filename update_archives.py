@@ -17,7 +17,8 @@ JSON_FILE_PATH = "archives/archive_videos.json"
 CHANNELS = [
     {
         "id": "UCXW4MqCQn-jCaxlX-nn-BYg",
-        "name": "長尾景"
+        "name": "長尾景",
+        "default_tags": [] 
     },
     {
         "id": "UCh-GyPNxvjTsza0ptjnkh1w",  # VΔLZ公式チャンネル
@@ -291,5 +292,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
