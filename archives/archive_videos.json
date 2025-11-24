@@ -2941,8 +2941,8 @@
     "channel": "シェリン・バーガンディ",
     "date": "2020-08-09",
     "thumbnail": "https://i.ytimg.com/vi/wxR7KPBfkzY/mqdefault.jpg",
-    "category": "大会",
-    "keywords": ["シェリン・バーガンディ","にじさんじ大乱闘"]
+    "category": ["大会","ゲーム実況"],
+    "keywords": ["シェリン・バーガンディ","にじさんじ大乱闘","大乱闘スマッシュブラザーズSPECIAL"]
   },
   {
     "youtubeId": "x-RA-zK_Z88",
@@ -3075,6 +3075,7 @@
 
 
 ]
+
 
 
 
