@@ -22,22 +22,24 @@ CHANNELS = [
     {
         "id": "UCh-GyPNxvjTsza0ptjnkh1w",  # VΔLZ公式チャンネル
         "name": "VΔLZ",
-        "default_tags": ["甲斐田晴","弦月藤士郎","VΔLZ"]
+        "default_tags": ["甲斐田晴", "弦月藤士郎", "VΔLZ"]
     }
 ]
 
 # --- 2. 自動タグ付け用の辞書定義 ---
-# カテゴリ候補 (優先順位の高い順)
+# HTMLの value 値と一致させる必要があります
+
+# カテゴリ候補 (HTMLの順序・内容に準拠)
 CATEGORY_list = [
     "ゲーム実況", "雑談", "歌配信", "歌動画", "ダンス動画", "ダンス配信", 
-    "記念配信", "お披露目配信", "3D", "企画", "大会", "ライブイベント", 
+    "記念配信", "殺陣", "お披露目配信", "3D", "企画", "大会", "ライブイベント", 
     "プロモーション", "公式企画・番組", "動画系", "公式切り抜き", 
     "手描き動画", "ぷちさんじ", "ゲスト出演", "提供等"
 ]
 
-# キーワード候補
+# キーワード候補 (HTMLの全ての value を網羅)
 KEYWORD_list = [
-    # コラボ相手
+    # --- コラボ相手 (Nijisanji & 外部 & 声優) ---
     "愛園愛美", "相羽ういは", "赤城ウェン", "赤羽葉子", "アクシア・クローネ", "朝日南アカネ", "飛鳥ひな", 
     "遠北千南", "安土桃", "天ヶ瀬むゆ", "天宮こころ", "雨森小夜", "アルス・アルマル", "アンジュ・カトリーナ", 
     "家長むぎ", "五十嵐梨花", "石神のぞみ", "出雲霞", "五木左京", "伊波ライ", "戌亥とこ", "イブラヒム", 
@@ -58,45 +60,72 @@ KEYWORD_list = [
     "森中花咲", "矢車りね", "社築", "山神カルタ", "勇気ちひろ", "夕陽リリ", "雪城眞尋", "夢月ロア", 
     "夢追翔", "夜見れな", "ラトナ・プティ", "リゼ・ヘルエスタ", "緑仙", "竜胆尊", "ルイス・キャミー", 
     "ルンルン", "レイン・パターソン", "レヴィ・エリファ", "レオス・ヴィンセント", "ローレン・イロアス", 
-    "渡会雲雀", "童田明治", "Amicia Michella", "Xia-Ekavira", "Zea-Cornelia", "Taka Radjiman", 
+    "渡会雲雀", "童田明治", 
+    # EN / ID / KR
+    "Amicia Michella", "Xia-Ekavira", "Zea-Cornelia", "Taka Radjiman", 
     "Derem Kado", "Nara Haramaung", "Hana Macchia", "Mika Melatika", "Miyu Ottavia", "Layla Astroemeria", 
-    "Riksa Dhirendra", "Reza Avanluna", "아키라 레이", "明楽 レイ", "이로하", "イ・ロハ", "오지유", "オ・ジユ", 
-    "가온", "ガオン", "신유야", "シン・ユヤ", "세피나", "セフィナ", "소나기", "ソ・ナギ", "나세라", "ナ・セラ", 
-    "하윤", "ハ・ユン", "반하다", "バン・ハダ", "민수하", "ミン・スゥーハ", "양나리", "ヤン・ナリ", 
+    "Riksa Dhirendra", "Reza Avanluna", 
+    "아키라 레이（明楽 レイ）", "이로하（イ・ロハ）", "오지유（オ・ジユ）", 
+    "가온（ガオン）", "신유야（シン・ユヤ）", "세피나（セフィナ）", "소나기（ソ・ナギ）", 
+    "나세라（ナ・セラ）", "하윤（ハ・ユン）", "반하다（バン・ハダ）", "민수하（ミン・スゥーハ）", "양나리（ヤン・ナリ）", 
     "Ike Eveland", "Aia Amare", "Yugo Asuma", "Vezalius Bandage", "Uki Violeta", "Enna Alouette", 
-    "Elira Pendora", "Endou Reimu", "Kyoran Meloco", "Kaelix Debonair", "Sonny Brisko", "Selen Tatsuki", 
+    "Elira Pendora", "Endou Reimu", "Fulgur Ovid", "Kyoran Meloco", "Kaelix Debonair", "Sonny Brisko", "Selen Tatsuki", 
     "Torahime Kotoka", "Petra Gurin", "Pomu Rainpuff", "Maria Marionette", "Millie Parfait", "Yamino Shu", 
-    "Luca Kaneshiro", "Ren Zotto", "星弥", "Noor", "外部", "字ぴろぱる", "歌衣メイカ", "渋谷ハル", 
-    "天開司", "百花繚乱", "ぽんぽこちゃんねる", "松本吉弘", "龍惺ろたん",
-    # コラボ名
-    "VΔLZ", "エア景", "おりひめばるつ", "園児組", "クソザコトレーナーズ", "Klime", "けいあい", 
+    "Luca Kaneshiro", "Ren Zotto", "星弥", "Noor", 
+    # 外部・声優・その他
+    "外部", "字ぴろぱる", "歌衣メイカ", "渋谷ハル", "熊谷タクマ", "かなえ先生", "天開司", 
+    "浅沼晋太郎", "伊東健人", "デンジャーD", "てんぐ・横山ミル", "ヤースー", "藤川Q", "寺島惇太", "百花繚乱", 
+    "ぽんぽこ", "ピーナッツくん", "ばあちゃる", "英リサ", "兎麹まり", "一ノ瀬うるは", "神威きゅぴ", 
+    "橘ひなの", "八雲ぺに", "ゴモリー", "多井隆晴", "松本吉弘", "前野智昭", "土田玲央", "平川大輔", "龍惺ろたん",
+
+    # --- コラボ・ユニット名 ---
+    "VΔLZ", "エア景", "おりひめばるつ", "園児組", "年長組", "クソザコトレーナーズ", "Klime", "けいあい", 
     "southern,xxxx", "情報差分組", "女子騎士祓魔師鑑定士", "タメナンデス", "チームヘラクレス", 
     "ながおちぐ", "にじさんじダンス部", "にじさんじ放課後ゲーム部", "にじさんじベイブレード部", 
-    "にじさんじポケカ部", "にじさんじロケット団", "にじさんじGTA救急隊", "にじ飯調査隊", "年長組", 
+    "にじさんじポケカ部", "にじさんじロケット団", "にじさんじGTA救急隊", "にじ飯調査隊", 
     "フ景罪", "ふつまひ", "めにまにかんぱにー",
-    # シリーズ
-    "アイドルマスター SideM", "あつまれどうぶつの森", "Apex Legends", "ARK", "ASTRONEER", "Blazing Sails", 
-    "Cooking Simulator", "Dead by Daylight", "eFootball", "ウイニングイレブン", "Fall Guys", 
-    "Getting Over It", "Get To Work", "Golf It!", "Human: Fall Flat", "Left 4 Dead 2", "maimai", 
-    "Nintendo Switch Sports", "Operation: Tango", "Overcooked", "Overwatch", "Papers, Please", "Portal2", 
-    "PowerWash Simulator", "PUBG", "slither.io", "wormax.io", "Stray", "Ultimate Chicken Horse", 
-    "UNDERTALE", "Unrailed!", "VALORANT", "ito", "イト", "エアホッケー", "オバケイドロ", "くそいサイト", 
-    "グランド・セフト・オート", "GTA", "クロノ・トリガー", "原神", "幻塔", "ゴッドフィールド", 
-    "シャドウバース", "雀魂", "白猫GOLF", "スイカゲーム", "スーパーモンキーボール", "Splatoon", 
-    "スプラトゥーン", "世界のアソビ大全", "ゼルダの伝説", "太鼓の達人", "スマブラ", "大乱闘スマッシュブラザーズ", 
-    "テトリス99", "ダンガンロンパ", "刀剣乱舞", "デトロイト", "Twisted Wonderland", "ツイステ", 
-    "ドキドキ文芸部", "ネコトモ", "バイオハザード", "パワフルプロ野球", "パワプロ", "プロセカ", 
-    "プロジェクトセカイ", "ポーカーチェイス", "ポケットモンスター", "ポケモン", "ポケカ", "マインクラフト", 
-    "マイクラ", "マリオ", "空気読み", "メイド イン ワリオ", "桃太郎電鉄", "モンスターストライク", 
-    "モンハン", "モンスターハンター", "星のカービィ", "リズム天国", "レイトン教授", "任天堂", "パチスロ", 
-    "ホラー", "Chilla's Art", "PACIFY", "Poppy Playtime", "Protein for Muscle", "R.E.P.O.", "青鬼", 
-    # 番組・イベント
-    "SYMPHONIA", "LOCK ON FLEEK", "にじ鯖夏祭り", "一唱入魂", "三華の樂", "VTuber最協決定戦", 
-    "VTuberのあそびば", "くろのわーるがなんかやる", "Talking in English", "ゲームる？ゲームる！", 
-    "だいさんじ甲子園", "神域甲子園", "人狼RPG", "格付けマリカ", "にじさんじイカ祭り", "スマブラ杯", 
-    "スト６", "イヤホンガンガンゲーム", "ケイナガオの楽屋裏", "Nagao's Kitchen", "初心者講座", 
-    "たい変", "にじフェス", "TOYBOX", "ハッピーアワー", "B級バラエティ", "MIX UP", "歌謡祭", 
-    "にじクイ", "ろふまお塾", "レバガチャダイパン"
+
+    # --- ゲームシリーズ ---
+    "アイドルマスター SideM", "あつまれどうぶつの森", "Apex Legends", 
+    "ARK:Survival Ascended", "ARK:Survival Evolved", "ARK-アイランドマップ", "ARK-ラグナロクマップ", 
+    "ARK-エクスティンクションマップ", "ARK-クリスタルアイルズマップ", 
+    "ASTRONEER", "Blazing Sails", "Cooking Simulator", "Dead by Daylight", 
+    "eFootball ウイニングイレブン", "ウマ娘　プリティダービー", "おえかきの森", 
+    "Fall Guys", "Getting Over It", "Gartic Phones", "Get To Work", "Golf It!", 
+    "Human: Fall Flat", "Left 4 Dead 2", "maimai", "Nintendo Switch Sports", 
+    "Operation: Tango", "Overcooked!2", "Overwatch", "Overwatch2", "Papers, Please", 
+    "Portal2", "PowerWash Simulator", "PUBG", "slither.io/wormax.io", "Stray", 
+    "Ultimate Chicken Horse", "UNDERTALE", "Unrailed!", "VALORANT", 
+    "ito(イト)", "エアホッケー", "オバケイドロ!", "くそいサイト", "コードネーム", 
+    "グランド・セフト・オートV", "クロノ・トリガー", "原神", "幻塔", "ゴッドフィールド", 
+    "シャドウバース", "雀魂", "白猫GOLF", "スイカゲーム", "ストリートファイター6", 
+    "スーパーモンキーボール バナナランブル", 
+    "Splatoon", "Splatoon2", "Splatoon3", 
+    "世界のアソビ大全51", "ゼルダの伝説 ブレス オブ ザ ワイルド", "太鼓の達人", 
+    "大乱闘スマッシュブラザーズSPECIAL", "テトリス99", "ダンガンロンパ", "刀剣乱舞", "デトロイト", 
+    "Twisted Wonderland", "ドキドキ文芸部", "ネコトモ", "バイオハザード ヴィレッジ", "パワフルプロ野球", 
+    "プロジェクトセカイ カラフルステージ！ feat. 初音ミク", "ポーカーチェイス", "ポケットモンスター", 
+    "ポケットモンスター-金・銀", "ポケットモンスター-ユナイト", "Pokémon Trading Card Game Pocket", 
+    "ポケットモンスター-シャイニングパール", "ポケットモンスター-スカーレットバイオレット", "ポケモン-ソード", 
+    "マインクラフト", 
+    "マリオシリーズ", "スーパーマリオブラザーズ", "スーパーマリオメーカー2", 
+    "マリオカート8DX", "マリオカートワールド", "マリオパーティ", "その他マリオシリーズ", 
+    "みんなで空気読み。", "メイド イン ワリオ", "桃太郎電鉄", "モンスターストライク", 
+    "モンスターハンター：ワールド", "星のカービィシリーズ", "リズム天国", "レイトン教授と不思議な町", 
+    "任天堂", "パチスロ", "ホラーゲーム", "Chilla's Art", "PACIFY", "Poppy Playtime", 
+    "Protein for Muscle", "R.E.P.O.", "青鬼", "その他ホラーゲーム", "カードゲーム", "その他ゲーム",
+
+    # --- 番組・イベント ---
+    "SYMPHONIA Day2", "LOCK ON FLEEK", "にじ鯖夏祭り", 
+    "VΔLZ1st 一唱入魂", "VΔLZ2nd 三華の樂", 
+    "VTuber最協決定戦", "VTuberのあそびば", "くろのわーるがなんかやる", "Talking in English Collab", 
+    "ゲームる？ゲームる！", "だいさんじ甲子園", "にじさんじ甲子園", "にじワイテ人狼RPG", 
+    "格付けマリカ", "にじさんじイカ祭り", "にじさんじスマブラ杯", "にじさんじマリカ杯", 
+    "ミリしらスト６チャレンジ", "にじさんじイヤホンガンガンゲーム", 
+    "ケイナガオの楽屋裏", "Nagao's Kitchen", "初心者講座", "たい変", "にじフェス", 
+    "にじさんじのTOYBOX！", "にじさんじのハッピーアワー!!", "にじさんじのB級バラエティ(仮)", 
+    "にじさんじMIX UP!!", "にじさんじユニット歌謡祭2022", "にじさんじ歌謡祭2024", 
+    "にじクイ", "木10！ろふまお塾", "ヤシロ&ササキのレバガチャダイパン"
 ]
 
 # --- 3. タグ判定関数 ---
@@ -115,8 +144,11 @@ def analyze_video_tags(title, default_tags):
             break 
     
     # 2. キーワード判定
+    # 注意: タイトルに「ARK」しかなくても「ARK:Survival Evolved」をつけたい場合は
+    # 別途マッピング処理が必要ですが、ここではHTMLの値をそのまま探します。
     for keyword in KEYWORD_list:
-        # キーワードとタイトルの両方を小文字にして比較 (例: "APEX" と "Apex" を同一視)
+        # キーワードとタイトルの両方を小文字にして比較
+        # (例: "Apex Legends" を検索し、タイトルに "apex legends" があればヒット)
         if keyword.lower() in title_lower:
             if keyword not in detected_keywords:
                 detected_keywords.append(keyword)
@@ -258,5 +290,4 @@ def main():
         print("⚠️ 動画が1件も取得できませんでした。APIキーなどを確認してください。")
 
 if __name__ == "__main__":
-
     main()
