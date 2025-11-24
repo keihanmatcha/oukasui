@@ -235,7 +235,7 @@
     "channel": "長尾景",
     "date": "2025-11-14",
     "thumbnail": "https://i.ytimg.com/vi/T1oRuSoIbi4/mqdefault.jpg",
-    "category": "未分類",
+    "category": "公式切り抜き",
     "keywords": [
       "にじさんじ放課後ゲーム部"
     ],
@@ -247,7 +247,7 @@
     "channel": "長尾景",
     "date": "2025-11-13",
     "thumbnail": "https://i.ytimg.com/vi/BwEhSOM2hlo/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": "公式切り抜き",
     "keywords": [
       "格付けマリカ"
     ],
@@ -391,7 +391,7 @@
     "channel": "長尾景",
     "date": "2025-11-08",
     "thumbnail": "https://i.ytimg.com/vi/Uoiz3x5ClPw/mqdefault.jpg",
-    "category": ["公式切り抜き","手描き動画"],
+    "category": ["公式切り抜き"],
     "keywords": [
       "山神カルタ"
     ],
@@ -427,7 +427,7 @@
     "channel": "長尾景",
     "date": "2025-11-07",
     "thumbnail": "https://i.ytimg.com/vi/vChmu6hj1rQ/mqdefault.jpg",
-    "category": "未分類",
+    "category": "公式切り抜き",
     "keywords": [
       "フミ",
       "フ景罪"
@@ -440,8 +440,8 @@
     "channel": "長尾景",
     "date": "2025-11-07",
     "thumbnail": "https://i.ytimg.com/vi/lvL6F-jEGWA/mqdefault.jpg",
-    "category": "3D",
-    "keywords": [],
+    "category": ["3D","ゲーム実況"]
+    "keywords": ["マインクラフト"],
     "songs": []
   },
   {
@@ -460,8 +460,8 @@
     "channel": "長尾景",
     "date": "2025-11-05",
     "thumbnail": "https://i.ytimg.com/vi/xhAcaAS_SFo/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
+    "category": ["公式切り抜き","手描き動画"],
+    "keywords": ["える"],
     "songs": []
   },
   {
@@ -471,7 +471,7 @@
     "date": "2025-11-04",
     "thumbnail": "https://i.ytimg.com/vi/HxGd2jKnefo/mqdefault.jpg",
     "category": "未分類",
-    "keywords": [],
+    "keywords": ["ゲーム実況"],
     "songs": []
   },
   {
@@ -480,7 +480,7 @@
     "channel": "長尾景",
     "date": "2025-11-04",
     "thumbnail": "https://i.ytimg.com/vi/TmXF7vL3LJU/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌動画",
     "keywords": [],
     "songs": []
   },
@@ -490,7 +490,7 @@
     "channel": "長尾景",
     "date": "2025-11-03",
     "thumbnail": "https://i.ytimg.com/vi/guBM1ckejJk/mqdefault.jpg",
-    "category": "殺陣",
+    "category": ["殺陣","踊り動画","動画系"]
     "keywords": [],
     "songs": []
   },
@@ -500,7 +500,7 @@
     "channel": "長尾景",
     "date": "2025-11-03",
     "thumbnail": "https://i.ytimg.com/vi/MJGiJ-ueoAI/mqdefault.jpg",
-    "category": "未分類",
+    "category": "公式切り抜き",
     "keywords": [],
     "songs": []
   },
@@ -510,7 +510,7 @@
     "channel": "長尾景",
     "date": "2025-11-02",
     "thumbnail": "https://i.ytimg.com/vi/ToPoCrAR2nY/mqdefault.jpg",
-    "category": "未分類",
+    "category": "大会",
     "keywords": [
       "格付けマリカ"
     ],
@@ -522,7 +522,7 @@
     "channel": "長尾景",
     "date": "2025-11-02",
     "thumbnail": "https://i.ytimg.com/vi/yWH_v6AedCs/mqdefault.jpg",
-    "category": "未分類",
+    "category": "公式切り抜き",
     "keywords": [
       "格付けマリカ"
     ],
@@ -534,7 +534,7 @@
     "channel": "長尾景",
     "date": "2025-11-02",
     "thumbnail": "https://i.ytimg.com/vi/1gYkW893LN0/mqdefault.jpg",
-    "category": "未分類",
+    "category": ["公式切り抜き","手描き動画"]
     "keywords": [],
     "songs": []
   },
@@ -554,7 +554,7 @@
     "channel": "長尾景",
     "date": "2025-11-01",
     "thumbnail": "https://i.ytimg.com/vi/pm0HKT3CZJA/mqdefault.jpg",
-    "category": "未分類",
+    "category": "企画",
     "keywords": [
       "Nagao's Kitchen"
     ],
@@ -567,7 +567,7 @@
     "date": "2025-10-31",
     "thumbnail": "https://i.ytimg.com/vi/_Eu4r1RIXnc/mqdefault.jpg",
     "category": [
-      "歌配信"
+      "企画"
     ],
     "keywords": [
       "森中花咲",
@@ -594,7 +594,7 @@
     "channel": "VΔLZ",
     "date": "2025-10-31",
     "thumbnail": "https://i.ytimg.com/vi/Gw97yK3Dl8E/mqdefault.jpg",
-    "category": "未分類",
+    "category": "踊り配信",
     "keywords": [
       "甲斐田晴",
       "弦月藤士郎",
@@ -619,7 +619,7 @@
     "date": "2025-10-30",
     "thumbnail": "https://i.ytimg.com/vi/ke8CiBj31Ak/mqdefault.jpg",
     "category": "3D",
-    "keywords": [],
+    "keywords": ["マインクラフト"],
     "songs": []
   },
   {
@@ -628,7 +628,7 @@
     "channel": "長尾景",
     "date": "2025-10-30",
     "thumbnail": "https://i.ytimg.com/vi/tutRXXWP6jQ/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌動画",
     "keywords": [],
     "songs": []
   },
@@ -648,7 +648,7 @@
     "channel": "長尾景",
     "date": "2025-10-29",
     "thumbnail": "https://i.ytimg.com/vi/6ylR-WTStj4/mqdefault.jpg",
-    "category": "未分類",
+    "category": "公式切り抜き",
     "keywords": [],
     "songs": []
   },
@@ -658,7 +658,7 @@
     "channel": "長尾景",
     "date": "2025-10-28",
     "thumbnail": "https://i.ytimg.com/vi/LKHaKQCYPZE/mqdefault.jpg",
-    "category": "未分類",
+    "category": "公式切り抜き",
     "keywords": [
       "ルンルン"
     ],
@@ -680,7 +680,7 @@
     "channel": "長尾景",
     "date": "2025-10-27",
     "thumbnail": "https://i.ytimg.com/vi/l_gKXOg4jJM/mqdefault.jpg",
-    "category": "未分類",
+    "category": "動画系",
     "keywords": [],
     "songs": []
   },
@@ -690,8 +690,8 @@
     "channel": "長尾景",
     "date": "2025-10-27",
     "thumbnail": "https://i.ytimg.com/vi/IbwX6R7WBHQ/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
+    "category": "ゲーム実況",
+    "keywords": ["マインクラフト"],
     "songs": []
   },
   {
@@ -710,8 +710,8 @@
     "channel": "長尾景",
     "date": "2025-10-26",
     "thumbnail": "https://i.ytimg.com/vi/25SDp5APdTs/mqdefault.jpg",
-    "category": "3D",
-    "keywords": [],
+    "category": ["3D","ゲーム実況"]
+    "keywords": ["牧場物語"],
     "songs": []
   },
   {
@@ -720,9 +720,9 @@
     "channel": "長尾景",
     "date": "2025-10-25",
     "thumbnail": "https://i.ytimg.com/vi/lJwKMuXR3vg/mqdefault.jpg",
-    "category": "未分類",
+    "category": "公式切り抜き",
     "keywords": [
-      "える"
+      
     ],
     "songs": []
   },
@@ -732,7 +732,7 @@
     "channel": "長尾景",
     "date": "2025-10-25",
     "thumbnail": "https://i.ytimg.com/vi/Ay0upRgd77o/mqdefault.jpg",
-    "category": "未分類",
+    "category": "大会",
     "keywords": [],
     "songs": []
   },
@@ -742,7 +742,7 @@
     "channel": "長尾景",
     "date": "2025-10-25",
     "thumbnail": "https://i.ytimg.com/vi/vuECWPA0Nno/mqdefault.jpg",
-    "category": "未分類",
+    "category": "大会",
     "keywords": [],
     "songs": []
   },
@@ -752,7 +752,7 @@
     "channel": "VΔLZ",
     "date": "2025-10-24",
     "thumbnail": "https://i.ytimg.com/vi/zMVXXbECWTI/mqdefault.jpg",
-    "category": "未分類",
+    "category": "企画",
     "keywords": [
       "甲斐田晴",
       "弦月藤士郎",
@@ -766,7 +766,7 @@
     "channel": "長尾景",
     "date": "2025-10-24",
     "thumbnail": "https://i.ytimg.com/vi/oP3mLrM8CQ8/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌動画",
     "keywords": [],
     "songs": []
   },
@@ -786,8 +786,8 @@
     "channel": "長尾景",
     "date": "2025-10-22",
     "thumbnail": "https://i.ytimg.com/vi/f96Bs6trZf4/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
+    "category": "ゲーム実況",
+    "keywords": ["開店コンビニ日記"],
     "songs": []
   },
   {
@@ -796,7 +796,7 @@
     "channel": "長尾景",
     "date": "2025-10-22",
     "thumbnail": "https://i.ytimg.com/vi/sE2un9wlfwA/mqdefault.jpg",
-    "category": "未分類",
+    "category": "企画",
     "keywords": [
       "にじ鯖夏祭り"
     ],
@@ -808,8 +808,8 @@
     "channel": "長尾景",
     "date": "2025-10-21",
     "thumbnail": "https://i.ytimg.com/vi/hK6XkcDANw0/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
+    "category": "ゲーム実況",
+    "keywords": ["Splatoon3"],
     "songs": []
   },
   {
@@ -818,7 +818,7 @@
     "channel": "長尾景",
     "date": "2025-10-21",
     "thumbnail": "https://i.ytimg.com/vi/NeOvoa9EhEQ/mqdefault.jpg",
-    "category": "未分類",
+    "category": "公式切り抜き",
     "keywords": [
       "える"
     ],
@@ -830,7 +830,7 @@
     "channel": "長尾景",
     "date": "2025-10-21",
     "thumbnail": "https://i.ytimg.com/vi/c7TIFaXA_WY/mqdefault.jpg",
-    "category": "未分類",
+    "category": "ゲーム実況",
     "keywords": [
       "あつまれどうぶつの森"
     ],
@@ -842,7 +842,7 @@
     "channel": "長尾景",
     "date": "2025-10-20",
     "thumbnail": "https://i.ytimg.com/vi/Ex5A_0k4Qbo/mqdefault.jpg",
-    "category": "未分類",
+    "category": "公式切り抜き",
     "keywords": [
       "える",
       "雪城眞尋"
@@ -855,7 +855,7 @@
     "channel": "長尾景",
     "date": "2025-10-19",
     "thumbnail": "https://i.ytimg.com/vi/kCIEYpspOSw/mqdefault.jpg",
-    "category": "3D",
+    "category": ["3D","楽器配信"]
     "keywords": [],
     "songs": []
   },
@@ -865,7 +865,7 @@
     "channel": "長尾景",
     "date": "2025-10-19",
     "thumbnail": "https://i.ytimg.com/vi/2GeOHzBVROc/mqdefault.jpg",
-    "category": "未分類",
+    "category": "公式切り抜き",
     "keywords": [],
     "songs": []
   },
@@ -876,7 +876,7 @@
     "date": "2025-10-19",
     "thumbnail": "https://i.ytimg.com/vi/DBqz3JWPMJE/mqdefault.jpg",
     "category": "3D",
-    "keywords": [],
+    "keywords": ["おにぎり屋さんシミュレーター"],
     "songs": []
   },
   {
@@ -886,7 +886,7 @@
     "date": "2025-10-18",
     "thumbnail": "https://i.ytimg.com/vi/iZAn1THJ8QQ/mqdefault.jpg",
     "category": "未分類",
-    "keywords": [],
+    "keywords": ["PADDLE PADDLE PADDLE","渚トラウト"],
     "songs": []
   },
   {
@@ -895,7 +895,7 @@
     "channel": "長尾景",
     "date": "2025-10-18",
     "thumbnail": "https://i.ytimg.com/vi/GZDjcuGyxXg/mqdefault.jpg",
-    "category": "未分類",
+    "category": "踊り動画",
     "keywords": [],
     "songs": []
   },
@@ -917,7 +917,7 @@
     "channel": "VΔLZ",
     "date": "2025-10-17",
     "thumbnail": "https://i.ytimg.com/vi/LCxhiaJrQZk/mqdefault.jpg",
-    "category": "未分類",
+    "category": "踊り動画",
     "keywords": [
       "甲斐田晴",
       "弦月藤士郎",
@@ -931,7 +931,7 @@
     "channel": "長尾景",
     "date": "2025-10-17",
     "thumbnail": "https://i.ytimg.com/vi/_5oj5EBznrY/mqdefault.jpg",
-    "category": "未分類",
+    "category": "公式切り抜き",
     "keywords": [],
     "songs": []
   },
@@ -941,7 +941,7 @@
     "channel": "長尾景",
     "date": "2025-10-16",
     "thumbnail": "https://i.ytimg.com/vi/R-5M_6Fa_Xo/mqdefault.jpg",
-    "category": "未分類",
+    "category": "企画",
     "keywords": [
       "える",
       "佐伯イッテツ",
@@ -957,7 +957,7 @@
     "channel": "長尾景",
     "date": "2025-10-16",
     "thumbnail": "https://i.ytimg.com/vi/ULA4oIL3hNY/mqdefault.jpg",
-    "category": "未分類",
+    "category": "公式切り抜き",
     "keywords": [],
     "songs": []
   },
@@ -967,8 +967,8 @@
     "channel": "長尾景",
     "date": "2025-10-15",
     "thumbnail": "https://i.ytimg.com/vi/t0CVKXM8_n0/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
+    "category": "ゲーム実況",
+    "keywords": ["ストリートファイター６"],
     "songs": []
   },
   {
@@ -977,7 +977,7 @@
     "channel": "長尾景",
     "date": "2025-10-15",
     "thumbnail": "https://i.ytimg.com/vi/BBUWRjqbnHI/mqdefault.jpg",
-    "category": "未分類",
+    "category": "企画",
     "keywords": [],
     "songs": []
   },
@@ -987,7 +987,7 @@
     "channel": "長尾景",
     "date": "2025-10-15",
     "thumbnail": "https://i.ytimg.com/vi/TIi1scOOAys/mqdefault.jpg",
-    "category": "未分類",
+    "category": "公式切り抜き",
     "keywords": [],
     "songs": []
   },
@@ -997,7 +997,7 @@
     "channel": "VΔLZ",
     "date": "2025-10-14",
     "thumbnail": "https://i.ytimg.com/vi/DGu3zwp1k2A/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌動画",
     "keywords": [
       "VΔLZ",
       "甲斐田晴",
@@ -1011,11 +1011,11 @@
     "channel": "長尾景",
     "date": "2025-10-14",
     "thumbnail": "https://i.ytimg.com/vi/MNWUfgygmfs/mqdefault.jpg",
-    "category": "未分類",
+    "category": "ゲーム実況",
     "keywords": [
       "黒井しば",
       "桜凛月",
-      "ルンルン"
+      "ルンルン","マインクラフト"
     ],
     "songs": []
   },
