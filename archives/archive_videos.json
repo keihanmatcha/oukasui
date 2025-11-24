@@ -2247,7 +2247,7 @@
     "channel": "甲斐田晴",
     "date": "2022-05-06",
     "thumbnail": "https://i.ytimg.com/vi/fetc0Exwa8M/mqdefault.jpg",
-    "category": "企画",
+    "category": ["お披露目配信","3D"],
     "keywords": ["甲斐田晴","年長組"],
      "songs":[
       {"title":"ドラマパート","artist":"甲斐田晴","start":600}
@@ -3075,6 +3075,7 @@
 
 
 ]
+
 
 
 
