@@ -10,7 +10,7 @@ import requests
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", "YOUR_YOUTUBE_API_KEY")
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "YOUR_GITHUB_TOKEN")
 GITHUB_REPO_OWNER = "keihanmatcha"
-GITHUB_REPO_NAME = "keishiki"
+GITHUB_REPO_NAME = "oukasui"
 JSON_FILE_PATH = "archives/archive_videos.json"
 
 # チャンネル情報
@@ -291,4 +291,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
