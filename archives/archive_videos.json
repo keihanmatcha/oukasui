@@ -601,7 +601,7 @@
     "channel": "春崎エアル",
     "date": "2024-10-03",
     "thumbnail": "https://i.ytimg.com/vi/yhziHYHGoDA/mqdefault.jpg",
-    "category": ["3D","お披露目配信"],
+    "category": ["3D"],
     "keywords": ["春崎エアル","Splatoon3"],
     "songs":[
       {"title":"チャット","artist": ["春崎エアル"],"start":3444}
@@ -3075,6 +3075,7 @@
 
 
 ]
+
 
 
 
