@@ -1308,8 +1308,13 @@ renderRows = function(videos) {
                 return;
             }
 
-            // (元のカードタップ処理をここで行う)
-            // ... (元のカードタップ処理のロジックをここに移植してください) ...
+            $title.textContent = v.title;
+            $meta.textContent = `${ymdToDots(v.date)} / ${v.channel}`;
+            $open.href = `https://www.youtube.com/watch?v=${v.youtubeId}`;
+            $warnLink.href = $open.href;
+            renderSetlist(v, v.youtubeId, 0);
+            loadVideo(v.youtubeId, 0);
+            $panel.style.display = 'block';
             
             // 【新規追加】モバイルでの再生画面フル表示制御
             const mq = window.matchMedia('(max-width: 900px)').matches;
@@ -1347,6 +1352,7 @@ if ($closePlayer) {
 </body>
 
 </html>
+
 
 
 
