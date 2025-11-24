@@ -139,9 +139,11 @@
             font-size: 13px; /* フォントサイズを少し小さく */
         }
         
-        /* 2. タグ情報を完全に非表示 */
-        .video-card .tags-row {
-            display: none; /* ← これでタグ全体が非表示になります */
+        /* 2. タグ情報を完全に非表示 (修正済み) */
+        .video-card .tags-row,
+        .category-badge,
+        .keyword-badge {
+            display: none !important; /* !important を追加して確実に非表示にします */
         }
         
         /* 3. 情報（チャンネル名）を非表示にし、日付のみにする */
@@ -1200,6 +1202,7 @@
 </body>
 
 </html>
+
 
 
 
