@@ -96,23 +96,22 @@
     accent-color: var(--accent);
 }
 
-/* 【モバイル対応】900px以下では2列に調整 (560px以下にも適用されます) */
+/* 【モバイル対応】900px以下でのスタイル調整 */
 @media (max-width: 900px) {
     .filter-group .archive__sort__select__label {
         grid-template-columns: repeat(2, 1fr);
         gap: 8px 10px;
     }
     
-    /* ★修正箇所: メインコンテンツのパディングを解除し、コンテンツを画面端まで広げる ★ */
+    /* ★修正箇所: メインコンテンツの左右パディングを強制的に0にする★ */
     main .wrap,
     #filterPanel .wrap {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 0 !important; 
+        padding-right: 0 !important;
     }
     
-    /* リスト項目全体に左右の余白を設ける (端に張り付きすぎないため) */
-    .list,
-    .filter-group {
+    /* リスト要素自体に、左右の余白（カードの左右パディングの代わり）を設ける */
+    .list {
         padding-left: 8px;
         padding-right: 8px;
     }
@@ -152,7 +151,6 @@
             grid-template-columns: 1fr 1fr;
             /* 2列にしたことで隙間が狭くなったため、ギャップを調整できます */
             gap: 10px; 
-            /* 900pxブレイクポイントでパディングが設定されているため、ここでは維持 */
         }
         
         /* 1. タイトルを1行に制限し、高さを固定 */
@@ -381,6 +379,8 @@
     .is-float .player-head { display: none; }
     .has-float { padding-bottom: 150px; }
 </style>
+
+  
 </head>
 <body>
   <header>
@@ -1395,6 +1395,7 @@ if ($closePlayer) {
 </body>
 
 </html>
+
 
 
 
