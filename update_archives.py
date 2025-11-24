@@ -6,7 +6,7 @@ from googleapiclient.discovery import build
 import requests
 
 # --- 1. 設定値 ---
-# 環境変数から取得 (設定されていない場合はデフォルト値を使用)
+# 環境変数から取得
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", "YOUR_YOUTUBE_API_KEY")
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "YOUR_GITHUB_TOKEN")
 GITHUB_REPO_OWNER = "keihanmatcha"
@@ -17,18 +17,18 @@ JSON_FILE_PATH = "archives/archive_videos.json"
 CHANNELS = [
     {
         "id": "UCXW4MqCQn-jCaxlX-nn-BYg",
-        "name": "長尾景",
-        "default_tags": []
+        "name": "長尾景"
+        # fixed_tags がないので、自動的に「追加タグなし」として処理されます（エラーになりません）
     },
     {
         "id": "UCh-GyPNxvjTsza0ptjnkh1w",  # VΔLZ公式チャンネル
         "name": "VΔLZ",
-        "default_tags": ["甲斐田晴", "弦月藤士郎", "VΔLZ"]
+        # このチャンネルの動画には、以下のタグを無条件で追加(append)します
+        "fixed_tags": ["甲斐田晴", "弦月藤士郎", "VΔLZ"]
     }
 ]
 
 # --- 2. 自動タグ付け用の辞書定義 ---
-# カテゴリ候補 (HTMLの順序・内容に準拠)
 CATEGORY_list = [
     "ゲーム実況", "雑談", "歌配信", "歌動画", "ダンス動画", "ダンス配信", 
     "記念配信", "殺陣", "お披露目配信", "3D", "企画", "大会", "ライブイベント", 
@@ -36,7 +36,6 @@ CATEGORY_list = [
     "手描き動画", "ぷちさんじ"
 ]
 
-# キーワード候補 (HTMLの全ての value を網羅)
 KEYWORD_list = [
     # --- コラボ相手 (Nijisanji & 外部 & 声優) ---
     "愛園愛美", "相羽ういは", "赤城ウェン", "赤羽葉子", "アクシア・クローネ", "朝日南アカネ", "飛鳥ひな", 
@@ -128,36 +127,38 @@ KEYWORD_list = [
 ]
 
 # --- 3. タグ判定関数 ---
-def analyze_video_tags(title, default_tags):
+def analyze_video_tags(title, fixed_tags):
     """タイトルからカテゴリとキーワードを自動判定する"""
     detected_category = "未分類"
     detected_keywords = []
 
-    # 検索用にタイトルを小文字化（大文字小文字の揺らぎを吸収するため）
+    # 検索用にタイトルを小文字化
     title_lower = str(title).lower()
     
-    # 1. カテゴリ判定 (最初にヒットしたものを採用)
+    # 1. カテゴリ判定
     for cat in CATEGORY_list:
-        if cat in title: # カテゴリは日本語が多いのでそのまま判定でOK
+        if cat in title:
             detected_category = cat
             break 
     
-    # 2. キーワード判定
+    # 2. キーワード判定 (タイトルに含まれるものを検出)
     for keyword in KEYWORD_list:
         if keyword.lower() in title_lower:
             if keyword not in detected_keywords:
                 detected_keywords.append(keyword)
 
-    # 3. チャンネルごとのデフォルトタグを追加
-    for tag in default_tags:
-        if tag not in detected_keywords:
-            detected_keywords.append(tag)
+    # 3. チャンネル固有の固定タグを追加 (タイトルになくてもappend)
+    # fixed_tagsが空なら何もしない（エラーにならない）
+    if fixed_tags:
+        for tag in fixed_tags:
+            if tag not in detected_keywords:
+                detected_keywords.append(tag)
             
     return detected_category, detected_keywords
 
 
 # --- 4. YouTube APIから動画を取得 ---
-def fetch_youtube_videos(channel_id, channel_name, default_tags, api_key):
+def fetch_youtube_videos(channel_id, channel_name, fixed_tags, api_key):
     # APIキーチェック
     if not api_key or api_key == "YOUR_YOUTUBE_API_KEY":
         print(f"⚠️ Error: {channel_name} の取得をスキップ（APIキー未設定）")
@@ -184,8 +185,8 @@ def fetch_youtube_videos(channel_id, channel_name, default_tags, api_key):
         published_date = datetime.strptime(snippet['publishedAt'][:10], '%Y-%m-%d').strftime('%Y-%m-%d')
         video_title = snippet['title']
         
-        # 自動タグ判定
-        category, keywords = analyze_video_tags(video_title, default_tags)
+        # 自動タグ判定 (fixed_tagsを渡す)
+        category, keywords = analyze_video_tags(video_title, fixed_tags)
 
         videos.append({
             "youtubeId": item['id']['videoId'],
@@ -276,7 +277,9 @@ def main():
     
     all_new_videos = []
     for ch in CHANNELS:
-        videos = fetch_youtube_videos(ch['id'], ch['name'], ch['default_tags'], YOUTUBE_API_KEY)
+        # fixed_tags があれば取得、なければ空リスト。これで書き忘れエラーは起きません
+        fixed_tags = ch.get('fixed_tags', [])
+        videos = fetch_youtube_videos(ch['id'], ch['name'], fixed_tags, YOUTUBE_API_KEY)
         all_new_videos.extend(videos)
     
     if all_new_videos:
