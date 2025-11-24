@@ -490,7 +490,7 @@
     "channel": "長尾景",
     "date": "2025-11-03",
     "thumbnail": "https://i.ytimg.com/vi/guBM1ckejJk/mqdefault.jpg",
-    "category": ["殺陣","踊り動画","動画系"]
+    "category": ["殺陣","踊り動画","動画系"],
     "keywords": [],
     "songs": []
   },
@@ -534,7 +534,7 @@
     "channel": "長尾景",
     "date": "2025-11-02",
     "thumbnail": "https://i.ytimg.com/vi/1gYkW893LN0/mqdefault.jpg",
-    "category": ["公式切り抜き","手描き動画"]
+    "category": ["公式切り抜き","手描き動画"],
     "keywords": [],
     "songs": []
   },
@@ -710,7 +710,7 @@
     "channel": "長尾景",
     "date": "2025-10-26",
     "thumbnail": "https://i.ytimg.com/vi/25SDp5APdTs/mqdefault.jpg",
-    "category": ["3D","ゲーム実況"]
+    "category": ["3D","ゲーム実況"],
     "keywords": ["牧場物語"],
     "songs": []
   },
@@ -855,7 +855,7 @@
     "channel": "長尾景",
     "date": "2025-10-19",
     "thumbnail": "https://i.ytimg.com/vi/kCIEYpspOSw/mqdefault.jpg",
-    "category": ["3D","楽器配信"]
+    "category": ["3D","楽器配信"],
     "keywords": [],
     "songs": []
   },
