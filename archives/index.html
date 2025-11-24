@@ -139,11 +139,11 @@
             font-size: 13px; /* フォントサイズを少し小さく */
         }
         
-        /* 2. タグ情報を完全に非表示 (修正済み) */
+        /* 2. タグ情報を完全に非表示 */
         .video-card .tags-row,
         .category-badge,
         .keyword-badge {
-            display: none !important; /* !important を追加して確実に非表示にします */
+            display: none !important; 
         }
         
         /* 3. 情報（チャンネル名）を非表示にし、日付のみにする */
@@ -217,7 +217,6 @@
         padding-top: 10px;
         border-top: 1px dashed var(--border);
     }
-    /* カテゴリとキーワードの表示スタイル */
     .category-badge {
         font-size: 11px;
         line-height: 1;
@@ -246,15 +245,76 @@
     .player-body iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
     .player-foot{padding:10px 14px;border-top:1px solid var(--border);background:#fff}
     .meta-line{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
-    .setlist{max-height:420px;overflow:auto;border:1px solid var(--border);border-radius:10px;margin-top:8px}
-    .set-item{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border-top:1px solid var(--border);background:#fafafa;cursor:pointer}
-    .set-item:first-child{border-top:none}
-    .set-item:hover{background:#f3f4ff}
-    .set-item.active{background:#e9ecff}
-    .set-title{display:flex;flex-direction:column}
-    .set-song{font-weight:600}
-    .set-artist{font-size:12px;color:var(--muted)}
-    .set-time{font-variant-numeric:tabular-nums;color:#374151;white-space:nowrap}
+    
+    /* ===== セットリストの表示形式を2列グリッド表示に修正 ===== */
+    .setlist {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0; 
+        border: 1px solid var(--border); 
+        border-radius: 10px;
+        margin-top: 8px;
+    }
+    .set-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px 12px;
+        border-top: none !important;
+        border-bottom: 1px solid var(--border); 
+        border-right: 1px solid var(--border); /* 縦線を追加 */
+        background: #fafafa;
+        cursor: pointer;
+    }
+    .set-item:nth-child(2n + 1) {
+        border-right: none; /* 右端の項目の縦線を削除 */
+    }
+    .setlist .set-item:nth-last-child(-n + 2) {
+        border-bottom: none !important;
+    }
+    .setlist .set-item:last-child:nth-child(odd) {
+        border-right: none;
+    }
+    .set-title {
+        flex-direction: row; 
+        align-items: center;
+        gap: 8px;
+    }
+    .set-song {
+        font-weight: 600;
+    }
+    .set-song::before {
+        content: "🎵 "; 
+        font-weight: normal;
+        color: var(--accent);
+    }
+    .set-artist {
+        font-size: 14px; 
+        color: var(--fg);
+        opacity: 0.8; 
+    }
+    .set-time {
+        font-size: 14px; 
+        color: var(--muted);
+        white-space: nowrap;
+    }
+
+    /* モバイル表示時のセットリスト調整 */
+    @media (max-width: 560px) {
+        .setlist {
+            grid-template-columns: 1fr; /* 1列に戻す */
+            gap: 0;
+        }
+        .set-item {
+            border-right: none; /* 縦線を削除 */
+            border-bottom: 1px solid var(--border);
+        }
+        /* モバイルでは最後の項目以外に下線をつける（全ての項目に下線が適用されます） */
+        .setlist .set-item:last-child {
+            border-bottom: none !important;
+        }
+    }
+
     .warn{margin-top:8px;padding:10px 12px;color:#92400e;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px}
     
     @media (min-width: 901px){
@@ -1202,6 +1262,7 @@
 </body>
 
 </html>
+
 
 
 
