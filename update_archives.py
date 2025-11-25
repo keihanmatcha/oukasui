@@ -96,7 +96,7 @@ KEYWORD_list = [
     "ASTRONEER", "Blazing Sails", "Cooking Simulator", "Dead by Daylight", 
     "eFootball ウイニングイレブン", "ウマ娘　プリティダービー", "おえかきの森", 
     "Fall Guys", "Getting Over It", "Gartic Phones", "Get To Work", "Golf It!", 
-    "Human: Fall Flat", "Left 4 Dead 2", "maimai", "Nintendo Switch Sports", 
+    "Human: Fall Flat", "Left 4 Dead 2", "maimai", "Nintendo Switch Sports", "ヒューマンフォールフラット",
     "Operation: Tango", "Overcooked!2", "Overwatch", "Overwatch2", "Papers, Please", 
     "Portal2", "PowerWash Simulator", "PUBG", "slither.io/wormax.io", "Stray", 
     "Ultimate Chicken Horse", "UNDERTALE", "Unrailed!", "VALORANT", 
@@ -104,10 +104,10 @@ KEYWORD_list = [
     "グランド・セフト・オートV", "クロノ・トリガー", "原神", "幻塔", "ゴッドフィールド", 
     "シャドウバース", "雀魂", "白猫GOLF", "スイカゲーム", "ストリートファイター6", 
     "スーパーモンキーボール バナナランブル", 
-    "Splatoon", "Splatoon2", "Splatoon3", 
-    "世界のアソビ大全51", "ゼルダの伝説 ブレス オブ ザ ワイルド", "太鼓の達人", 
-    "大乱闘スマッシュブラザーズSPECIAL", "テトリス99", "ダンガンロンパ", "刀剣乱舞", "デトロイト", 
-    "ツイステッドワンダーランド", "ドキドキ文芸部", "ネコトモ", "バイオハザード ヴィレッジ", "パワフルプロ野球", 
+    "Splatoon", "Splatoon2", "Splatoon3", "スプラ","スプラ2","スプラ3",
+    "世界のアソビ大全51", "ゼルダの伝説 ブレス オブ ザ ワイルド", "太鼓の達人", "ツイステッドワンダーランド",
+    "大乱闘スマッシュブラザーズSPECIAL", "テトリス99", "ダンガンロンパ", "刀剣乱舞", "デトロイト", "マイクラ",
+    "ツイステッドワンダーランド", "ドキドキ文芸部", "ネコトモ", "バイオハザード ヴィレッジ", "パワフルプロ野球", "ロックマンエグゼ","パワプロ",
     "プロジェクトセカイ カラフルステージ！ feat. 初音ミク", "ポーカーチェイス", "ポケットモンスター", 
     "ポケットモンスター-金・銀", "ポケットモンスター-ユナイト", "Pokémon Trading Card Game Pocket", 
     "ポケットモンスター-シャイニングパール", "ポケットモンスター-スカーレットバイオレット", "ポケモン-ソード", 
@@ -116,8 +116,8 @@ KEYWORD_list = [
     "マリオカート8DX", "マリオカートワールド", "マリオパーティ", "その他マリオシリーズ", 
     "みんなで空気読み。", "メイド イン ワリオ", "桃太郎電鉄", "モンスターストライク", 
     "モンスターハンター：ワールド", "星のカービィシリーズ", "リズム天国", "レイトン教授と不思議な町", 
-    "任天堂", "パチスロ", "ホラーゲーム", "Chilla's Art", "PACIFY", "Poppy Playtime", 
-    "Protein for Muscle", "R.E.P.O.", "青鬼", "その他ホラーゲーム", "カードゲーム", "その他ゲーム",
+    "任天堂", "パチスロ", "ホラーゲーム", "Chilla's Art", "PACIFY", "Poppy Playtime", "完全爆弾解除マニュアル:Keep Talking and Nobody Explodes",
+    "Protein for Muscle", "R.E.P.O.", "青鬼", "その他ホラーゲーム", "カードゲーム", "その他ゲーム","Five Nights at Freddy's","Getting Over It","Left 4 Dead 2",
 
     # --- 番組・イベント ---
     "SYMPHONIA Day2", "LOCK ON FLEEK", "にじ鯖夏祭り", 
@@ -330,3 +330,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
