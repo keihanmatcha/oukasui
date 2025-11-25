@@ -2818,15 +2818,11 @@
     "thumbnail": "https://i.ytimg.com/vi/kPWxODmNwWw/mqdefault.jpg",
     "category":  ["雑談","歌配信"],
     "keywords": ["弦月藤士郎","甲斐田晴","VΔLZ"],
-     { "title": "香水", "artist": "瑛人", "start":31  },
-
-      { "title": "おどるポンポコリン", "artist": " B.B.クィーンズ【ちびまる子ちゃん】", "start":31  },
-
+    "songs": [
+      { "title": "香水", "artist": "瑛人", "start":31  },
       { "title": "丸の内サディスティック", "artist": "椎名林檎", "start":263  },
-  { "title": "浮世の演舞", "artist": "VΔLZ", "start":879  }
-
-    ],
-
+      { "title": "浮世の演舞", "artist": "VΔLZ", "start":879  }
+    ]
   },
   {
     "youtubeId": "jBlfM6jBve4",
