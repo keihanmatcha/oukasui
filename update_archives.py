@@ -120,7 +120,7 @@ KEYWORD_list = [
     "Protein for Muscle", "R.E.P.O.", "青鬼", "その他ホラーゲーム", "カードゲーム", "その他ゲーム","Five Nights at Freddy's","Getting Over It","Left 4 Dead 2",
 
     # --- 番組・イベント ---
-    "SYMPHONIA Day2", "LOCK ON FLEEK", "にじ鯖夏祭り", 
+    "SYMPHONIA Day2", "LOCK ON FLEEK", "にじ鯖夏祭り","VTuberエンジョイカジュアル交流戦",
     "VΔLZ1st 一唱入魂", "VΔLZ2nd 三華の樂", 
     "VTuber最協決定戦", "VTuberのあそびば", "くろのわーるがなんかやる", "Talking in English Collab", 
     "ゲームる？ゲームる！", "だいさんじ甲子園", "にじさんじ甲子園", "にじワイテ人狼RPG", 
@@ -330,6 +330,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
