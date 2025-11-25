@@ -74,7 +74,7 @@ KEYWORD_list = [
     "나세라（ナ・セラ）", "하윤（ハ・ユン）", "반하다（バン・ハダ）", "민수하（ミン・スゥーハ）", "양나리（ヤン・ナリ）", 
     "Ike Eveland", "Aia Amare", "Yugo Asuma", "Vezalius Bandage", "Uki Violeta", "Enna Alouette", 
     "Elira Pendora", "Endou Reimu", "Fulgur Ovid", "Kyoran Meloco", "Kaelix Debonair", "Sonny Brisko", "Selen Tatsuki", 
-    "Torahime Kotoka", "Petra Gurin", "Pomu Rainpuff", "Maria Marionette", "Millie Parfait", "Yamino Shu", 
+    "Torahime Kotoka", "Petra Gurin", "Pomu Rainpuff", "Maria Marionette", "Millie Parfait", "Shu Yamino", 
     "Luca Kaneshiro", "Ren Zotto", "星弥", "Noor", 
     # 外部・声優・その他
     "外部", "字ぴろぱる", "歌衣メイカ", "渋谷ハル", "熊谷タクマ", "かなえ先生", "天開司", 
@@ -106,14 +106,14 @@ KEYWORD_list = [
     "スーパーモンキーボール バナナランブル", 
     "Splatoon", "Splatoon2", "Splatoon3","スプラトゥーン","スプラトゥーン2","スプラトゥーン3",
     "世界のアソビ大全51", "ゼルダの伝説 ブレス オブ ザ ワイルド", "太鼓の達人", "ツイステッドワンダーランド","逆水寒",
-    "大乱闘スマッシュブラザーズSPECIAL", "テトリス99", "ダンガンロンパ", "刀剣乱舞", "デトロイト", "マイクラ",
+    "大乱闘スマッシュブラザーズSPECIAL", "テトリス99", "ダンガンロンパ", "刀剣乱舞", "デトロイト", "マイクラ",大乱闘スマッシュブラザーズ","ツイステ",
     "ツイステッドワンダーランド", "ドキドキ文芸部", "ネコトモ", "バイオハザード ヴィレッジ", "パワフルプロ野球", "ロックマンエグゼ","パワプロ","プロセカ",
     "プロジェクトセカイ カラフルステージ！ feat. 初音ミク", "ポーカーチェイス","ポケットモンスター", 
     "ポケットモンスター-金・銀", "ポケットモンスター-ユナイト", "Pokémon Trading Card Game Pocket", 
     "ポケットモンスター-シャイニングパール", "ポケットモンスター-スカーレットバイオレット", "ポケモン-ソード",
     "マインクラフト","マリカ",
     "マリオシリーズ", "スーパーマリオブラザーズ", "スーパーマリオメーカー2", 
-    "マリオカート8DX", "マリオカートワールド", "マリオパーティ", "その他マリオシリーズ", "マリカ8DX",
+    "マリオカート8DX", "マリオカートワールド", "マリオパーティ", "その他マリオシリーズ", "マリカ8DX","マリカ",
     "みんなで空気読み。", "メイド イン ワリオ", "桃太郎電鉄", "モンスターストライク", 
     "モンスターハンター：ワールド", "星のカービィシリーズ", "リズム天国", "レイトン教授と不思議な町", 
     "任天堂", "パチスロ", "ホラーゲーム", "Chilla's Art", "PACIFY", "Poppy Playtime", "Keep Talking and Nobody Explodes",
@@ -330,5 +330,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
