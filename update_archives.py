@@ -14,9 +14,6 @@ GITHUB_REPO_NAME = "oukasui"
 JSON_FILE_PATH = "archives/archive_videos.json"
 
 # 【重要】過去どこまで遡るかの設定
-# 1ページあたり50件取得します。
-# 100ページ設定なら、50件×100 = 5000件まで遡れます。（これなら2020年まで余裕で届きます）
-# ※この新方式ならAPI消費量が少ないので、この数でも問題ありません。
 MAX_PAGES_TO_FETCH = 100 
 
 # チャンネル情報
@@ -24,12 +21,10 @@ CHANNELS = [
     {
         "id": "UCXW4MqCQn-jCaxlX-nn-BYg",
         "name": "長尾景"
-        # fixed_tags がないので、自動的に「追加タグなし」として処理されます
     },
     {
         "id": "UCh-GyPNxvjTsza0ptjnkh1w",  # VΔLZ公式チャンネル
         "name": "VΔLZ",
-        # このチャンネルの動画には、以下のタグを無条件で追加(append)します
         "fixed_tags": ["甲斐田晴", "弦月藤士郎", "VΔLZ"]
     }
 ]
@@ -37,7 +32,7 @@ CHANNELS = [
 # --- 2. 自動タグ付け用の辞書定義 ---
 CATEGORY_list = [
     "ゲーム実況", "雑談", "歌配信", "歌動画", "踊り動画", "踊り配信",
-    "記念配信", "殺陣", "お披露目配信", "3D", "企画", "大会", "ライブイベント","楽器配信"
+    "記念配信", "殺陣", "お披露目配信", "3D", "企画", "大会", "ライブイベント", "楽器配信", # ←カンマ追加
     "プロモーション", "公式企画・番組", "動画系", "公式切り抜き",
     "手描き動画", "ぷちさんじ"
 ]
@@ -132,52 +127,60 @@ KEYWORD_list = [
     "にじクイ", "木10！ろふまお塾", "ヤシロ&ササキのレバガチャダイパン"
 ]
 
+# ★表記ゆれ変換辞書 (1対1で記述する必要があります)
 TAG_CONVERSION_MAP = {
     "マイクラ": "マインクラフト",
-    ["マリカ","マリオカート8デラックス"]: "マリオカート8DX",   
-    ["スプラ","スプラトゥーン"]: "Splatoon",
-    ["スプラ2","スプラトゥーン2"]: "Splatoon2",
-    ["スプラ3","スプラトゥーン3"]: "Splatoon3",
-    "あつ森":"あつまれどうぶつの森",
-    "サイスタ":"アイドルマスター SideM GROWING STARS",
-    "大乱闘スマッシュブラザーズSP",:"大乱闘スマッシュブラザーズSPECIAL",
-    "ツイステ":"ツイステッドワンダーランド",
-    "デトロイト":"Detroit Become Human",
-    "剣盾":"ポケットモンスター-ソード・シールド",
-    "L4D2":"Left 4 Dead 2",
-    "スト6":"ストリートファイター6",
-    ["Apex","APEX","エペ"]:"Apex Legends",
-    "ポケカ":"Pokémon Trading Card Game Pocket",
-    "パワプロ":"パワプロ野球",
-    "プロセカ":"プロジェクトセカイ カラフルステージ！ feat. 初音ミク",
-    "ヒューマンフォールフラット":"Human: Fall Flat",
-    "ながおげん":"園児組",
-    "ましろ":"ましろ爻",
-    "えある":"春崎エアル",
-    "エアル":"春崎エアル",
-    "歌枠":"歌配信",
-    "歌ってみた":"歌動画",
-    "踊ってみた":"踊り動画",
-    "ダンス動画":"踊り動画",
-    "ダンス配信":"踊り配信",
-    "ベース練習":"楽器配信",
-    "弾いて":"楽器配信",
-    "弾ける":"楽器配信",
+    "マリカ": "マリオカート8DX",
+    "マリオカート8デラックス": "マリオカート8DX",
+    "スプラ": "Splatoon",
+    "スプラトゥーン": "Splatoon",
+    "スプラ2": "Splatoon2",
+    "スプラトゥーン2": "Splatoon2",
+    "スプラ3": "Splatoon3",
+    "スプラトゥーン3": "Splatoon3",
+    "あつ森": "あつまれどうぶつの森",
+    "サイスタ": "アイドルマスター SideM GROWING STARS",
+    "大乱闘スマッシュブラザーズSP": "大乱闘スマッシュブラザーズSPECIAL", # コロン修正
+    "ツイステ": "ツイステッドワンダーランド",
+    "デトロイト": "Detroit Become Human",
+    "剣盾": "ポケットモンスター-ソード・シールド",
+    "L4D2": "Left 4 Dead 2",
+    "スト6": "ストリートファイター6",
+    "Apex": "Apex Legends",
+    "APEX": "Apex Legends",
+    "エペ": "Apex Legends",
+    "ポケカ": "Pokémon Trading Card Game Pocket",
+    "パワプロ": "パワフルプロ野球",
+    "プロセカ": "プロジェクトセカイ カラフルステージ！ feat. 初音ミク",
+    "ヒューマンフォールフラット": "Human: Fall Flat",
+    "ながおげん": "園児組",
+    "ましろ": "ましろ爻",
+    "えある": "春崎エアル",
+    "エアル": "春崎エアル",
+    "歌枠": "歌配信",
+    "歌ってみた": "歌動画",
+    "踊ってみた": "踊り動画",
+    "ダンス動画": "踊り動画",
+    "ダンス配信": "踊り配信",
+    "ベース練習": "楽器配信",
+    "弾いて": "楽器配信",
+    "弾ける": "楽器配信",
+    "めにまに": "めにまにカンパニー",
+    "めにまにかんぱにー": "めにまにカンパニー",
     "タメジャナインデス":"タメナンデス",
-    "めにまに":"めにまにカンパニー",
-    "めにまにかんぱにー":"めにまにカンパニー",
-    "OW":"Overwatch",
-    "OW2":"Overwatch2",
-    "ウマ娘":"ウマ娘　プリティダービー",
-    "ポケモン銀":"ポケットモンスター-金・銀",
-    "ポケモン金":"ポケットモンスター-金・銀",
-    "ポケモンユナイト":"ポケットモンスター-金・銀",
-    "ポケモンSV":"ポケットモンスター-ユナイト",
-    "ポケモンサファイア":"ポケットモンスター-ルビー・サファイア",
-    "ポケモンFRLG":"ポケットモンスター-ファイアレッド・リーフグリーン",
-    "ポケモンBDSP":"ポケットモンスター-ブリリアントダイヤモンド・シャイニングパール"
+    "OW": "Overwatch",
+    "OW2": "Overwatch2",
+    "ウマ娘": "ウマ娘　プリティダービー",
+    "ポケモン銀": "ポケットモンスター-金・銀",
+    "ポケモン金": "ポケットモンスター-金・銀",
+    "ポケモンユナイト": "ポケットモンスター-ユナイト", # 修正
+    "ポケモンSV": "ポケットモンスター-スカーレットバイオレット", # 修正
+    "ポケモンサファイア": "ポケットモンスター-ルビー・サファイア",
+    "ポケモンFRLG": "ポケットモンスター-ファイアレッド・リーフグリーン",
+    "ポケモンBDSP": "ポケットモンスター-ブリリアントダイヤモンド・シャイニングパール"
 }
-# ★ユニット・メンバー定義: "ユニット名": ["メンバーA", "メンバーB", ...]
+
+# ★ユニット・メンバー定義
 UNIT_GROUP_MAP = {
     "VΔLZ": ["甲斐田晴", "弦月藤士郎"],
     "フ景罪": ["フミ"],
@@ -187,11 +190,10 @@ UNIT_GROUP_MAP = {
     "園児組": ["弦月藤士郎"],
     "年長組": ["甲斐田晴"],
     "けいあい": ["相羽ういは"],
-    "Klime": ["甲斐田晴", "弦月藤士郎"],
+    "Klime": ["山神カルタ", "東堂コハク"], 
     "組体操": ["渋谷ハジメ", "夕陽リリ"],
-    "クソザコトレーナーズ": ["春崎エアル","グウェル・オス・ガール","グウェル・オス・ガール","소나기（ソ・ナギ）"],
+    "クソザコトレーナーズ": ["春崎エアル","グウェル・オス・ガール","소나기（ソ・ナギ）"], 
     "ケイトララ": ["渚トラウト"],
-    "Klime": ["山神カルタ", "東堂コハク"],
     "情報差分組": ["赤城ウェン","星導ショウ","榊ネス"],
     "女子騎士祓魔師鑑定士": ["フレン・E・ルスタリオ","先斗寧","星導ショウ"],
     "スプラ四天王": ["笹木咲","春崎エアル","不破湊"],
@@ -205,29 +207,32 @@ UNIT_GROUP_MAP = {
     "『絶え間なく突撃』": ["奈羅花","渡会雲雀","榊ネス"],
     "にじさんじポケカ部": ["花畑チャイカ","舞元啓介","葉加瀬冬雪","加賀美ハヤト","倉持めると","赤城ウェン","栞葉るり","榊ネス"],
     "にじさんじラジオ体操部": ["月ノ美兎","勇気ちひろ","える","樋口楓","渋谷ハジメ", "伏見ガク", "ギルザレンIII世", "剣持刀也","叶","笹木咲",
-                    "椎名唯華","ドーラ", "轟京子", "シスター・クレア", "花畑チャイカ", "社築","鈴木勝", "緑仙", "鷹宮リオン", "舞元啓介", "でびでび・でびる", "桜凛月",
-                    "町田ちま", "ジョー・力一", "ベルモンド・バンデラス", "矢車りね", "黒井しば", "童田明治", "小野町春香", "戌亥とこ", "三枝明那",
-                    "雪城眞尋", "レヴィ・エリファ", "葉加瀬冬雪", "加賀美ハヤト", "夜見れな", "黛灰", "アルス・アルマル", "相羽ういは", "天宮こころ",
-                    "エリー・コニファー", "ラトナ・プティ", "早瀬走", "健屋花那", "フミ", "星川サラ", "えま★おうがすと", "ルイス・キャミー",
-                    "不破湊", "白雪巴", "グウェル・オス・ガール", "ましろ爻", "奈羅花", "来栖夏芽", "フレン・E・ルスタリオ", "メリッサ・キンレンカ",
-                    "イブラヒム","弦月藤士郎", "甲斐田晴", "北小路ヒスイ", "西園チグサ", "アクシア・クローネ", "ローレン・イロアス",
-                    "レオス・ヴィンセント", "オリバー・エバンス", "レイン・パターソン", "海妹四葉", "壱百満天原サロメ", "風楽奏斗", "渡会雲雀",
-                    "四季凪アキラ", "セラフ・ダズルガーデン", "Taka Radjiman", "Zea-Cornelia", "Riksa Dhirendra", "Nara Haramaung",
-                    "Layla Alstroemeria", "Bonnivier Pranaja", "Derem Kado", "Xia-Ekavira", "Mika Melatika","소나기（ソ・ナギ）",
-                    "양나리（ヤン・ナリ）","하윤（ハ・ユン）","오지유（オ・ジユ）","세피나（セフィナ）","나세라（ナ・セラ）",
-                    "小清水透", "獅子堂あかり", "鏑木ろこ", "五十嵐梨花", "石神のぞみ",
-                    "ソフィア・ヴァレンタイン", "倉持めると", "佐伯イッテツ", "赤城ウェン", "宇佐美リト","緋八マナ", "星導ショウ",
-                    "叢雲カゲツ", "小柳ロウ", "伊波ライ", "Elira Pendora", "Pomu Rainpuff", "Petra Gurin", "Enna Alouette",
-                    "Reimu Endou", "Millie Parfait", "Luca Kaneshiro", "Shu Yamino", "Yugo Asuma", "Sonny Brisko", "Uki Violeta",
-                    "Aia Amare", "あばだんご"],
+                        "椎名唯華","ドーラ", "轟京子", "シスター・クレア", "花畑チャイカ", "社築","鈴木勝", "緑仙", "鷹宮リオン", "舞元啓介", "でびでび・でびる", "桜凛月",
+                        "町田ちま", "ジョー・力一", "ベルモンド・バンデラス", "矢車りね", "黒井しば", "童田明治", "小野町春香", "戌亥とこ", "三枝明那",
+                        "雪城眞尋", "レヴィ・エリファ", "葉加瀬冬雪", "加賀美ハヤト", "夜見れな", "黛灰", "アルス・アルマル", "相羽ういは", "天宮こころ",
+                        "エリー・コニファー", "ラトナ・プティ", "早瀬走", "健屋花那", "フミ", "星川サラ", "えま★おうがすと", "ルイス・キャミー",
+                        "不破湊", "白雪巴", "グウェル・オス・ガール", "ましろ爻", "奈羅花", "来栖夏芽", "フレン・E・ルスタリオ", "メリッサ・キンレンカ",
+                        "イブラヒム","弦月藤士郎", "甲斐田晴", "北小路ヒスイ", "西園チグサ", "アクシア・クローネ", "ローレン・イロアス",
+                        "レオス・ヴィンセント", "オリバー・エバンス", "レイン・パターソン", "海妹四葉", "壱百満天原サロメ", "風楽奏斗", "渡会雲雀",
+                        "四季凪アキラ", "セラフ・ダズルガーデン", "Taka Radjiman", "Zea-Cornelia", "Riksa Dhirendra", "Nara Haramaung",
+                        "Layla Alstroemeria", "Bonnivier Pranaja", "Derem Kado", "Xia-Ekavira", "Mika Melatika","소나기（ソ・ナギ）",
+                        "양나리（ヤン・ナリ）","하윤（ハ・ユン）","오지유（オ・ジユ）","세피나（セフィナ）","나세라（ナ・セラ）",
+                        "小清水透", "獅子堂あかり", "鏑木ろこ", "五十嵐梨花", "石神のぞみ",
+                        "ソフィア・ヴァレンタイン", "倉持めると", "佐伯イッテツ", "赤城ウェン", "宇佐美リト","緋八マナ", "星導ショウ",
+                        "叢雲カゲツ", "小柳ロウ", "伊波ライ", "Elira Pendora", "Pomu Rainpuff", "Petra Gurin", "Enna Alouette",
+                        "Reimu Endou", "Millie Parfait", "Luca Kaneshiro", "Shu Yamino", "Yugo Asuma", "Sonny Brisko", "Uki Violeta",
+                        "Aia Amare", "あばだんご"],
     "バベルの景": ["オリバー・エバンス","ベルモンド・バンデラス"],
     "めにまにカンパニー": ["桜凛月","Nara Haramaung","세피나（セフィナ）"],
-    "忖度フィニッシャーズ": ["える","愛園愛美"],
     "にじGTA救急隊": ["樋口楓","森中花咲","桜凛月","成瀬鳴","小野町春香","三枝明那","健屋花那","グウェル・オス・ガール","弦月藤士郎",
                  "甲斐田晴","민수하（ミン・スゥーハ）", "오지유（オ・ジユ）", "세피나（セフィナ）", "宇佐美リト", "魁星", "Maria Marionette", "Vezalius Bandage"],
+    "忖度フィニッシャーズ": ["える","愛園愛美"],
+    "にじメン歌リレー":["三枝明那","弦月藤士郎","神田笑一","ジョー・力一","加賀美ハヤト","不破湊","夢追翔"],
+     "にじ漢歌祭り":["北見遊征","セラフ・ダズルガーデン","酒寄","榊ネス","伊波ライ","ミラン・ケストレル","風楽奏斗","ジョー・力一","甲斐田晴","宇佐美リト","緋八マナ","渚トラウト"],
+    "だいさんじ甲子園":["緑仙","グウェル・オス・ガール","榊ネス"]
 }
 
-# --- 3. タグ判定関数 ---
+# --- 3. タグ判定関数 (すべて統合しました) ---
 def analyze_video_tags(title, fixed_tags):
     """タイトルからカテゴリとキーワードを自動判定する"""
     detected_category = "未分類"
@@ -248,61 +253,16 @@ def analyze_video_tags(title, fixed_tags):
             if keyword not in detected_keywords:
                 detected_keywords.append(keyword)
 
-    # 3. チャンネル固有の固定タグを追加 (タイトルになくてもappend)
-    if fixed_tags:
-        for tag in fixed_tags:
-            if tag not in detected_keywords:
-                detected_keywords.append(tag)
-            
-    return detected_category, detected_keywords
-
-# --- 3. タグ判定関数 ---
-def analyze_video_tags(title, fixed_tags):
-    """タイトルからカテゴリとキーワードを自動判定する"""
-    detected_category = "未分類"
-    detected_keywords = []
-
-    # 検索用にタイトルを小文字化
-    title_lower = str(title).lower()
-    
-    # 1. カテゴリ判定
-    for cat in CATEGORY_list:
-        if cat in title:
-            detected_category = cat
-            break 
-    
-    # 2. キーワード判定 (タイトルに含まれるものを検出)
-    for keyword in KEYWORD_list:
-        if keyword.lower() in title_lower:
-            if keyword not in detected_keywords:
-                detected_keywords.append(keyword)
-
-    # ---------------------------------------------------------
-    # 表記ゆれ・略称から正式タグを追加する処理
-    # ---------------------------------------------------------
+    # 3. 表記ゆれ・略称から正式タグを追加する処理
     for slang, formal_tag in TAG_CONVERSION_MAP.items():
         # タイトルに略称(マイクラ等)が含まれているか？
-        if slang in title_lower:
+        if slang.lower() in title_lower:
             # 正式名称(マインクラフト等)がまだタグになければ追加
             if formal_tag not in detected_keywords:
                 detected_keywords.append(formal_tag)
-    # ---------------------------------------------------------
 
-    # 3. チャンネル固有の固定タグを追加 (タイトルになくてもappend)
-    if fixed_tags:
-        for tag in fixed_tags:
-            if tag not in detected_keywords:
-                detected_keywords.append(tag)
-            
-    return detected_category, detected_keywords
-def analyze_video_tags(title, fixed_tags):
-    # ... (これまでの処理: カテゴリ判定、キーワード判定、表記ゆれ変換) ...
-    
-    # ---------------------------------------------------------
-    # ★追加部分: ユニットとメンバーの相互補完
-    # ---------------------------------------------------------
+    # 4. ユニットとメンバーの相互補完
     for unit_name, members in UNIT_GROUP_MAP.items():
-        
         # 【パターン1】ユニット名があるのに、メンバーが入っていない場合 → メンバーを追加
         if unit_name in detected_keywords:
             for member in members:
@@ -315,9 +275,8 @@ def analyze_video_tags(title, fixed_tags):
         if has_all_members:
             if unit_name not in detected_keywords:
                 detected_keywords.append(unit_name)
-    # ---------------------------------------------------------
 
-    # 3. チャンネル固有の固定タグを追加 (タイトルになくてもappend)
+    # 5. チャンネル固有の固定タグを追加 (タイトルになくてもappend)
     if fixed_tags:
         for tag in fixed_tags:
             if tag not in detected_keywords:
@@ -325,8 +284,8 @@ def analyze_video_tags(title, fixed_tags):
             
     return detected_category, detected_keywords
 
-# --- 4. YouTube APIから動画を取得（新方式：PlaylistItems使用） ---
-# チャンネルIDから「アップロード済み動画リスト」のIDを取得する関数
+
+# --- 4. YouTube APIから動画を取得 ---
 def get_uploads_playlist_id(youtube, channel_id):
     try:
         resp = youtube.channels().list(part='contentDetails', id=channel_id).execute()
@@ -335,7 +294,6 @@ def get_uploads_playlist_id(youtube, channel_id):
         print(f"❌ Error getting playlist ID for {channel_id}: {e}")
         return None
 
-# 指定されたプレイリストから全動画を取得する関数
 def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
     videos = []
     next_page_token = None
@@ -431,8 +389,6 @@ def update_github_json(new_videos):
         if new_video['youtubeId'] not in existing_ids:
             merged_videos.append(new_video)
             added_count += 1
-            # 数が多いのでログ出力を抑制
-            # print(f"🆕 追加: {new_video['title']}")
     
     if added_count == 0:
         print("✅ 新しい動画はありませんでした。")
@@ -476,12 +432,10 @@ def main():
     all_new_videos = []
 
     for ch in CHANNELS:
-        # 1. チャンネルIDからアップロードリストIDを取得
         playlist_id = get_uploads_playlist_id(youtube, ch['id'])
         if not playlist_id:
             continue
             
-        # 2. プレイリストから全動画を取得
         fixed_tags = ch.get('fixed_tags', [])
         videos = fetch_videos_from_playlist(youtube, playlist_id, ch['name'], fixed_tags)
         all_new_videos.extend(videos)
@@ -493,14 +447,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-
-
-
