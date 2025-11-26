@@ -96,7 +96,7 @@ KEYWORD_list = [
     "ASTRONEER", "Blazing Sails", "Cooking Simulator", "Dead by Daylight", 
     "eFootball ウイニングイレブン", "ウマ娘　プリティダービー", "おえかきの森", 
     "Fall Guys", "Getting Over It", "Gartic Phones", "Get To Work", "Golf It!", "Fast Food Simulator",
-    "Human: Fall Flat", "Left 4 Dead 2", "maimai", "Nintendo Switch Sports", "ヒューマンフォールフラット",
+    "Human: Fall Flat", "Left 4 Dead 2", "maimai", "Nintendo Switch Sports",
     "Operation: Tango", "Overcooked!2", "Overwatch", "Overwatch2", "Papers, Please", "PEAK",
     "Portal2", "PowerWash Simulator", "PUBG", "slither.io/wormax.io", "Stray", "BLEACH","ラブラブスクールデイズ","断罪室",
     "Ultimate Chicken Horse", "UNDERTALE", "Unrailed!", "VALORANT", 
@@ -104,20 +104,20 @@ KEYWORD_list = [
     "グランド・セフト・オートV", "クロノ・トリガー", "原神", "幻塔", "ゴッドフィールド", "7days to die","逆凸","ゆびをふる縛り",
     "シャドウバース", "雀魂", "白猫GOLF", "スイカゲーム", "ストリートファイター6", 
     "スーパーモンキーボール バナナランブル", "やわらかあたま塾","ゴブリン・ノーム・ホーン","マイクラ肝試し","ゲームモーション研究会","同時視聴","凸待ち",
-    "Splatoon", "Splatoon2", "Splatoon3","スプラトゥーン","スプラトゥーン2","スプラトゥーン3","おにぎり屋さんシミュレーター","全国一般人常識チェック",
+    "Splatoon", "Splatoon2", "Splatoon3","おにぎり屋さんシミュレーター","全国一般人常識チェック",
     "世界のアソビ大全51", "ゼルダの伝説 ブレス オブ ザ ワイルド", "太鼓の達人", "ツイステッドワンダーランド","逆水寒","開店コンビニ日記","牧場物語",
-    "大乱闘スマッシュブラザーズSPECIAL", "テトリス99", "ダンガンロンパ", "刀剣乱舞", "デトロイト", "マイクラ","大乱闘スマッシュブラザーズ","ツイステ",
-    "ツイステッドワンダーランド", "ドキドキ文芸部", "ネコトモ", "バイオハザード ヴィレッジ", "パワフルプロ野球", "ロックマンエグゼ","パワプロ","プロセカ",
+    "大乱闘スマッシュブラザーズSPECIAL", "テトリス99", "ダンガンロンパ", "刀剣乱舞","Detroit Become Human","大乱闘スマッシュブラザーズ",
+    "ツイステッドワンダーランド", "ドキドキ文芸部", "ネコトモ", "バイオハザード ヴィレッジ", "パワフルプロ野球","ロックマンエグゼ","パワプロ","プロセカ",
     "プロジェクトセカイ カラフルステージ！ feat. 初音ミク", "ポーカーチェイス","ポケットモンスター", 
     "ポケットモンスター-金・銀", "ポケットモンスター-ユナイト", "Pokémon Trading Card Game Pocket", 
-    "ポケットモンスター-シャイニングパール", "ポケットモンスター-スカーレットバイオレット", "ポケモン-剣盾",
-    "マインクラフト","マリカ",
+    "ポケットモンスター-シャイニングパール", "ポケットモンスター-スカーレットバイオレット", "ポケットモンスター-ソード・シールド",
+    "マインクラフト",
     "マリオシリーズ", "スーパーマリオブラザーズ", "スーパーマリオメーカー2", 
-    "マリオカート8DX", "マリオカートワールド", "マリオパーティ", "その他マリオシリーズ", "マリカ8DX","マリカ","サイスタ",
+    "マリオカート8DX", "マリオカートワールド", "マリオパーティ", "その他マリオシリーズ",
     "みんなで空気読み。", "メイド イン ワリオ", "桃太郎電鉄", "モンスターストライク", 
     "モンスターハンター：ワールド", "星のカービィシリーズ", "リズム天国", "レイトン教授と不思議な町", "一致するまで終われまテン!!",
-    "任天堂", "パチスロ", "ホラーゲーム", "Chilla's Art", "PACIFY", "Poppy Playtime", "Keep Talking and Nobody Explodes",
-    "Protein for Muscle", "R.E.P.O.", "青鬼", "その他ホラーゲーム", "カードゲーム", "その他ゲーム","Five Nights at Freddy's","Getting Over It","Left 4 Dead 2",
+    "任天堂", "パチスロ", "ホラーゲーム", "Chilla's Art", "PACIFY", "Poppy Playtime","Keep Talking and Nobody Explodes",
+    "Protein for Muscle", "R.E.P.O.", "青鬼", "その他ホラーゲーム", "カードゲーム", "その他ゲーム","Five Nights at Freddy's","Getting Over It",
 
     # --- 番組・イベント ---
     "SYMPHONIA Day2", "LOCK ON FLEEK", "にじ鯖夏祭り","VTuberエンジョイカジュアル交流戦","ベース","歳の差バラエティ(?)",
@@ -131,6 +131,33 @@ KEYWORD_list = [
     "にじさんじMIX UP!!", "にじさんじユニット歌謡祭2022", "にじさんじ歌謡祭2024", "にじマイクラ占領戦","全肯定長尾景",
     "にじクイ", "木10！ろふまお塾", "ヤシロ&ササキのレバガチャダイパン"
 ]
+
+TAG_CONVERSION_MAP = {
+    "マイクラ": "マインクラフト",
+    ["マリカ","マリオカート8デラックス"]: "マリオカート8DX",   
+    ["スプラ","スプラトゥーン"]: "Splatoon",
+    ["スプラ2","スプラトゥーン2"]: "Splatoon2",
+    ["スプラ3","スプラトゥーン3"]: "Splatoon3",
+    "あつ森":"あつまれどうぶつの森",
+    "サイスタ":"アイドルマスター SideM GROWING STARS",
+    "大乱闘スマッシュブラザーズSP",:"大乱闘スマッシュブラザーズSPECIAL",
+    "ツイステ":"ツイステッドワンダーランド",
+    "デトロイト":"Detroit Become Human",
+    "剣盾":"ポケットモンスター-ソード・シールド",
+    "L4D2":"Left 4 Dead 2",
+    "スト6":"ストリートファイター6",
+    ["Apex","APEX","エペ"]:"Apex Legends",
+    "ポケカ":"Pokémon Trading Card Game Pocket",
+    "パワプロ":"パワプロ野球",
+    "プロセカ":
+    "ヒューマンフォールフラット":"Human: Fall Flat",
+    "OW":"Overwatch",
+    "OW2":"Overwatch2",
+    
+    
+    
+    "ポケモン": "ポケットモンスター", # ポケモン -> ポケットモンスター
+}
 
 # --- 3. タグ判定関数 ---
 def analyze_video_tags(title, fixed_tags):
@@ -330,6 +357,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
