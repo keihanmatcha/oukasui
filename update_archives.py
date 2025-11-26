@@ -92,7 +92,7 @@ KEYWORD_list = [
     "eFootball ウイニングイレブン", "ウマ娘　プリティダービー", "おえかきの森", 
     "Fall Guys", "Getting Over It", "Gartic Phones", "Get To Work", "Golf It!", "Fast Food Simulator",
     "Human: Fall Flat", "Left 4 Dead 2", "maimai", "Nintendo Switch Sports",
-    "Operation: Tango", "Overcooked!2", "Overwatch", "Overwatch2", "Papers, Please", "PEAK",
+    "Operation: Tango", "Overcooked!2", "Overwatch", "Overwatch2", "Papers, Please", "PEAK","カービィのエアライダー"
     "Portal2", "PowerWash Simulator", "PUBG", "slither.io/wormax.io", "Stray", "BLEACH","ラブラブスクールデイズ","断罪室",
     "Ultimate Chicken Horse", "UNDERTALE", "Unrailed!", "VALORANT", 
     "ito(イト)", "エアホッケー", "オバケイドロ!", "くそいサイト", "コードネーム", "にじさんじ共通テスト","恋愛相談","Raft",
@@ -457,3 +457,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
