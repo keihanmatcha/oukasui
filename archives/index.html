@@ -877,11 +877,25 @@
     }
 
     // --- データ読み込み ---
-    fetch('archive_videos.json') 
-      .then(r=>r.json())
-      .then(videos=>{ buildVideos(videos); applyFilter(); })
-      .catch(err=>{ console.error(err); $empty.style.display='block'; $empty.textContent='archive_videos.json の読み込みに失敗しました。'; });
-
+    // --- データ読み込み (2つのファイルを並列で取得して結合) ---
+    Promise.all([
+        fetch('archive_videos.json').then(r => r.ok ? r.json() : []),
+        fetch('external_videos.json').then(r => r.ok ? r.json() : [])
+    ])
+    .then(([autoVideos, manualVideos]) => {
+        // 2つの配列を結合
+        const combinedVideos = [...autoVideos, ...manualVideos];
+        
+        // データ構築と表示
+        buildVideos(combinedVideos);
+        applyFilter();
+    })
+    .catch(err => {
+        console.error(err);
+        $empty.style.display = 'block';
+        $empty.textContent = 'データの読み込みに失敗しました。';
+    });
+    
     // --- フローティング (PC用) ---
     (function(){
       const mq = window.matchMedia('(max-width: 900px)');
@@ -943,5 +957,6 @@
   </script>
 </body>
 </html>
+
 
 
