@@ -629,7 +629,7 @@ def update_github_json(new_videos):
         existing_content = content_info['content']
         existing_sha = content_info['sha']
         try:
-            decoded_content = base64.b64decode(existing_content).decode('utf-8')
+            decoded_content = base64.b64decode(existing_content).decode('utf-8-sig')
             existing_videos = json.loads(decoded_content)
         except json.JSONDecodeError:
             print("❌ 【重要】GitHub上のJSONファイルの構文が壊れています。処理を停止します。")
@@ -747,6 +747,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
