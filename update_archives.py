@@ -140,7 +140,7 @@ TAG_CONVERSION_MAP = {
     "テトリス":"テトリス99",
     "Speaking English Practice":"Talking in English Collab",
     "にじスプラDREAMDEATHMATCH":"にじスプラDREAM DEATHMATCH"
-    "V最協":""VTuber最協決定戦",
+    "V最協":"VTuber最協決定戦",
     "にじマイクラ占領戦":"にじマイクラ聖地占領戦",
     "あつ森": "あつまれどうぶつの森",
     "サイスタ": "アイドルマスター SideM GROWING STARS",
@@ -747,6 +747,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
