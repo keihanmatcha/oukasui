@@ -87,13 +87,13 @@ KEYWORD_GROUPS = {
         "おえかきの森", "Fall Guys", "Getting Over It", "Gartic Phones", "Get To Work", "Golf It!",
         "Fast Food Simulator", "Human: Fall Flat", "Left 4 Dead 2", "maimai", "Nintendo Switch Sports",
         "Operation: Tango", "Overcooked!2", "Overwatch", "Overwatch2", "Papers, Please", "PEAK", "Portal2",
-        "PowerWash Simulator", "PUBG", "slither.io/wormax.io", "Stray", "BLEACH","ラブラブスクールデイズ",
+        "PowerWash Simulator", "PUBG", "slither.io/wormax.io", "Stray", "BLEACH","ラブラブスクールデイズ","Unpacking",
         "断罪室", "Ultimate Chicken Horse", "UNDERTALE", "Unrailed!", "VALORANT", "ito(イト)", "エアホッケー",
         "オバケイドロ!", "くそいサイト", "コードネーム", "にじさんじ共通テスト","恋愛相談","Raft","遊戯王",
         "グランド・セフト・オートV", "クロノ・トリガー", "原神", "幻塔", "ゴッドフィールド", "7days to die",
-        "逆凸","ゆびをふる", "シャドウバース", "雀魂", "白猫GOLF", "スイカゲーム", "ストリートファイター6",
+        "ゆびをふる", "シャドウバース", "雀魂", "白猫GOLF", "スイカゲーム", "ストリートファイター6",
         "スーパーモンキーボール バナナランブル", "やわらかあたま塾","ゴブリン・ノーム・ホーン",
-        "マイクラ肝試し","ゲームモーション研究会","同時視聴","凸待ち", "Splatoon", "Splatoon2", "Splatoon3",
+        "マイクラ肝試し","ゲームモーション研究会","Splatoon", "Splatoon2", "Splatoon3",
         "おにぎり屋さんシミュレーター","全国一般人常識チェック", "世界のアソビ大全51",
         "ゼルダの伝説 ブレス オブ ザ ワイルド", "太鼓の達人", "ツイステッドワンダーランド","逆水寒",
         "開店コンビニ日記","牧場物語", "大乱闘スマッシュブラザーズSPECIAL", "テトリス99", "ダンガンロンパ",
@@ -121,10 +121,10 @@ KEYWORD_GROUPS = {
         "マリカにじさんじ杯","にじスプラDREAMDEATHMATCH","にじスプラ大会", "ミリしらスト６チャレンジ",
         "にじさんじイヤホンガンガンゲーム", "おながましろの心霊対談", "ケイナガオの楽屋裏",
         "Nagao's Kitchen", "初心者講座", "たい変", "にじフェス", "視聴者参加型","にじさんじ麻雀杯",
-        "にじさんじのTOYBOX！", "にじさんじのハッピーアワー!!", "にじさんじのB級バラエティ(仮)",
-        "桜魔大戦譚","にじさんじ大運動会", "にじさんじMIX UP!!", "にじさんじユニット歌謡祭2022",
+        "にじさんじのTOYBOX！", "にじさんじのハッピーアワー!!", "にじさんじのB級バラエティ(仮)","同時視聴","凸待ち",
+        "桜魔大戦譚","にじさんじ大運動会", "にじさんじMIX UP!!", "にじさんじユニット歌謡祭2022","逆凸","NIJIMelodyTime",
         "にじさんじ歌謡祭2024", "にじマイクラ占領戦","全肯定長尾景", "にじクイ", "木10！ろふまお塾","KZHCUP","にじさんじVALORANTカスタム",
-        "ヤシロ&ササキのレバガチャダイパン","にじプロセカ大会","カラフェス","にじエペ祭","神域リーグ","にじさんじ遊戯王マスターデュエル"
+        "ヤシロ&ササキのレバガチャダイパン","レバガチャダイパン杯","にじプロセカ大会","カラフェス","にじエペ祭","神域リーグ","にじさんじ遊戯王マスターデュエル"
     ]
 }
 
@@ -138,9 +138,11 @@ TAG_CONVERSION_MAP = {
     "スプラ3": "Splatoon3",
     "スプラトゥーン3": "Splatoon3",
     "テトリス":"テトリス99",
+    "お絵描きの森":"おえかきの森",
     "Speaking English Practice":"Talking in English Collab",
-    "にじスプラDREAMDEATHMATCH":"にじスプラDREAM DEATHMATCH",
+    "にじスプラDREAM DEATHMATCH":"にじスプラDREAMDEATHMATCH",
     "V最協":"VTuber最協決定戦",
+    "レバガチャ運動会":"レバガチャダイパン杯"
     "にじマイクラ占領戦":"にじマイクラ聖地占領戦",
     "あつ森": "あつまれどうぶつの森",
     "サイスタ": "アイドルマスター SideM GROWING STARS",
@@ -150,6 +152,7 @@ TAG_CONVERSION_MAP = {
     "剣盾": "ポケットモンスター-ソード・シールド",
     "L4D2": "Left 4 Dead 2",
     "スト6": "ストリートファイター6",
+    :"Power Wash Simulator"
     "Apex": "Apex Legends",
     "APEX": "Apex Legends",
     "エペ": "Apex Legends",
@@ -159,6 +162,8 @@ TAG_CONVERSION_MAP = {
     "プロセカ": "プロジェクトセカイ カラフルステージ！ feat. 初音ミク",
     "ヒューマンフォールフラット": "Human: Fall Flat",
     "ながおげん": "園児組",
+    "社畜王子": "春崎エアル",
+    "モンハンライズ":"モンスターハンターライズ",
     "ましろ": "ましろ爻",
     "えある": "春崎エアル",
     "エアル": "春崎エアル",
@@ -758,6 +763,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
