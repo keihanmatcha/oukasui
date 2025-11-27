@@ -1,134 +1,108 @@
 import os
 import json
 import base64
+import re
 from datetime import datetime
 from googleapiclient.discovery import build
 import requests
-import sys # 停止用にインポート
+import sys
 
 # --- 1. 設定値 ---
-# 環境変数から取得
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", "YOUR_YOUTUBE_API_KEY")
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "YOUR_GITHUB_TOKEN")
 GITHUB_REPO_OWNER = "keihanmatcha"
 GITHUB_REPO_NAME = "oukasui"
 JSON_FILE_PATH = "archives/archive_videos.json"
-
-# 【重要】過去どこまで遡るかの設定
 MAX_PAGES_TO_FETCH = 100
 
-# チャンネル情報
 CHANNELS = [
     {
         "id": "UCXW4MqCQn-jCaxlX-nn-BYg",
         "name": "長尾景"
     },
     {
-        "id": "UCh-GyPNxvjTsza0ptjnkh1w",  # VΔLZ公式チャンネル
+        "id": "UCh-GyPNxvjTsza0ptjnkh1w",
         "name": "VΔLZ",
         "fixed_tags": ["甲斐田晴", "弦月藤士郎", "VΔLZ"]
     }
 ]
 
+# 管理対象のチャンネル名リスト（これ以外のチャンネルの動画は更新時に保護する）
+MANAGED_CHANNEL_NAMES = [ch["name"] for ch in CHANNELS]
+
 # --- 2. 自動タグ付け用の辞書定義 ---
-CATEGORY_list = [
+CATEGORY_LIST = [
     "ゲーム実況", "雑談", "歌配信", "歌動画", "踊り動画", "踊り配信",
-    "記念配信", "殺陣", "お披露目配信", "3D", "企画", "大会", "ライブイベント", "楽器配信",
-    "プロモーション", "公式企画・番組", "動画系", "公式切り抜き",
-    "手描き動画", "ぷちさんじ"
+    "記念配信", "殺陣", "お披露目配信", "3D", "企画", "大会",
+    "ライブイベント", "楽器配信", "プロモーション", "公式企画・番組",
+    "動画系", "公式切り抜き", "手描き動画", "ぷちさんじ"
 ]
 
-KEYWORD_list = [
-    # --- コラボ相手 (Nijisanji & 外部 & 声優) ---
-    "愛園愛美", "相羽ういは", "赤城ウェン", "赤羽葉子", "アクシア・クローネ", "朝日南アカネ", "飛鳥ひな", 
-    "遠北千南", "安土桃", "天ヶ瀬むゆ", "天宮こころ", "雨森小夜", "アルス・アルマル", "アンジュ・カトリーナ", 
-    "家長むぎ", "五十嵐梨花", "石神のぞみ", "出雲霞", "五木左京", "伊波ライ", "戌亥とこ", "イブラヒム", 
-    "宇佐美リト", "宇志海いちご", "卯月コウ", "海妹四葉", "エクス・アルビオ", "えま★おうがすと", 
-    "エリー・コニファー", "える", "御伽原江良", "小野町春香", "オリバー・エバンス", "魁星", "甲斐田晴", 
-    "加賀美ハヤト","蝸堂みかる","綺沙良","叶", "鏑木ろこ", "神田笑一", "北小路ヒスイ", "北見遊征", "雲母たまこ", "ギルザレンⅢ世", 
-    "グウェル・オス・ガール", "葛葉", "倉持めると", "黒井しば", "来栖夏芽", "郡道美玲", "弦月藤士郎", 
-    "剣持刀也","梢桃音","小清水透", "小柳ロウ", "佐伯イッテツ", "早乙女ベリー", "榊ネス", "酒寄颯馬", "桜凛月", 
-    "笹木咲", "椎名唯華", "シェリン・バーガンディ", "栞葉るり", "司賀りこ", "四季凪アキラ", "獅子堂あかり", 
-    "静凛", "シスター・クレア", "渋谷ハジメ","篠宮ゆの","城瀬いすみ", "ジョー・力一", "白雪巴", "周央サンゴ", "健屋花那", "鈴鹿詩子", 
-    "皇れお","鈴木勝", "鈴原るる", "鈴谷アキ", "瀬戸美夜子", "セラフ・ダズルガーデン", "ソフィア・ヴァレンタイン", 
-    "空星きらめ", "鷹宮リオン", "立伝都々", "珠乃井ナナ", "月ノ美兎", "でびでび・でびる", "東堂コハク","十河ののは",
-    "ドーラ", "轟京子", "名伽尾アズマ","渚トラウト", "七瀬すず菜", "奈羅花", "成瀬鳴", "西園チグサ", "ニュイ・ソシエール", "猫屋敷美紅",
-    "葉加瀬冬雪", "花畑チャイカ", "早瀬走", "葉山舞鈴", "春崎エアル","花籠つばさ", "樋口楓", "一橋綾人", "緋八マナ", 
-    "壱百満天原サロメ", "風楽奏斗", "伏見ガク", "フミ", "文野環", "フレン・E・ルスタリオ", "不破湊", 
-    "ベルモンド・バンデラス", "星川サラ", "星導ショウ", "先斗寧", "本間ひまわり", "舞元啓介", "魔界ノりりむ", 
-    "ましろ爻", "町田ちま", "魔使マオ", "黛灰", "ミラン・ケストレル", "叢雲カゲツ", "メリッサ・キンレンカ", 
-    "森中花咲", "矢車りね","夜牛詩乃", "社築", "山神カルタ", "勇気ちひろ", "夕陽リリ", "雪城眞尋", "夢月ロア", 
-    "夢追翔", "夜見れな", "ラトナ・プティ", "リゼ・ヘルエスタ", "緑仙", "竜胆尊", "ルイス・キャミー", 
-    "ルンルン", "レイン・パターソン", "レヴィ・エリファ", "レオス・ヴィンセント", "ローレン・イロアス", 
-    "渡会雲雀", "童田明治", 
-    # EN / ID / KR
-    "Amicia Michella", "Xia-Ekavira", "Zea-Cornelia", "Taka Radjiman", 
-    "Derem Kado", "Nara Haramaung", "Hana Macchia", "Mika Melatika", "Miyu Ottavia", "Layla Astroemeria", 
-    "Riksa Dhirendra", "Reza Avanluna", 
-    "아키라 레이（明楽 レイ）", "이로하（イ・ロハ）", "오지유（オ・ジユ）", 
-    "가온（ガオン）", "신유야（シン・ユヤ）", "세피나（セフィナ）", "소나기（ソ・ナギ）", 
-    "나세라（ナ・セラ）", "하윤（ハ・ユン）", "반하다（バン・ハダ）", "민수하（ミン・スゥーハ）", "양나리（ヤン・ナリ）", 
-    "Ike Eveland", "Aia Amare", "Yugo Asuma", "Vezalius Bandage", "Uki Violeta", "Enna Alouette", 
-    "Elira Pendora", "Endou Reimu", "Fulgur Ovid", "Kyoran Meloco", "Kaelix Debonair", "Sonny Brisko", "Selen Tatsuki", 
-    "Torahime Kotoka", "Petra Gurin", "Pomu Rainpuff", "Maria Marionette", "Millie Parfait", "Shu Yamino", 
-    "Luca Kaneshiro", "Ren Zotto", "星弥", "Noor", 
-    # 外部・声優・その他
-    "外部", "字ぴろぱる", "歌衣メイカ", "渋谷ハル", "熊谷タクマ", "かなえ先生", "天開司", 
-    "浅沼晋太郎", "伊東健人", "デンジャーD", "てんぐ・横山ミル", "ヤースー", "藤川Q", "寺島惇太", "百花繚乱", 
-    "ぽんぽこ", "ピーナッツくん", "ばあちゃる", "英リサ", "兎麹まり", "一ノ瀬うるは", "神威きゅぴ", 
-    "橘ひなの", "八雲ぺに", "ゴモリー", "多井隆晴", "松本吉弘", "前野智昭", "土田玲央", "平川大輔", "龍惺ろたん",
+KEYWORD_GROUPS = {
+    "MEMBERS": [
+        # "える" は誤検知防止のため除外済み（特別判定ロジックへ）
+        "愛園愛美", "相羽ういは", "赤城ウェン", "赤羽葉子", "アクシア・クローネ", "朝日南アカネ", "飛鳥ひな", "遠北千南", "安土桃", "天ヶ瀬むゆ", "天宮こころ", "雨森小夜", "アルス・アルマル", "アンジュ・カトリーナ", "家長むぎ", "五十嵐梨花", "石神のぞみ", "出雲霞", "五木左京", "伊波ライ", "戌亥とこ", "イブラヒム", "宇佐美リト", "宇志海いちご", "卯月コウ", "海妹四葉", "エクス・アルビオ", "えま★おうがすと", "エリー・コニファー", "御伽原江良", "小野町春香", "オリバー・エバンス", "魁星", "甲斐田晴", "加賀美ハヤト","蝸堂みかる","綺沙良","叶", "鏑木ろこ", "神田笑一", "北小路ヒスイ", "北見遊征", "雲母たまこ", "ギルザレンⅢ世", "グウェル・オス・ガール", "葛葉", "倉持めると", "黒井しば", "来栖夏芽", "郡道美玲", "弦月藤士郎", "剣持刀也","梢桃音","小清水透", "小柳ロウ", "佐伯イッテツ", "早乙女ベリー", "榊ネス", "酒寄颯馬", "桜凛月", "笹木咲", "椎名唯華", "シェリン・バーガンディ", "栞葉るり", "司賀りこ", "四季凪アキラ", "獅子堂あかり", "静凛", "シスター・クレア", "渋谷ハジメ","篠宮ゆの","城瀬いすみ", "ジョー・力一", "白雪巴", "周央サンゴ", "健屋花那", "鈴鹿詩子", "皇れお","鈴木勝", "鈴原るる", "鈴谷アキ", "瀬戸美夜子", "セラフ・ダズルガーデン", "ソフィア・ヴァレンタイン", "空星きらめ", "鷹宮リオン", "立伝都々", "珠乃井ナナ", "月ノ美兎", "でびでび・でびる", "東堂コハク","十河ののは", "ドーラ", "轟京子", "名伽尾アズマ","渚トラウト", "七瀬すず菜", "奈羅花", "成瀬鳴", "西園チグサ", "ニュイ・ソシエール", "猫屋敷美紅", "葉加瀬冬雪", "花畑チャイカ", "早瀬走", "葉山舞鈴", "春崎エアル","花籠つばさ", "樋口楓", "一橋綾人", "緋八マナ", "壱百満天原サロメ", "風楽奏斗", "伏見ガク", "フミ", "文野環", "フレン・E・ルスタリオ", "不破湊", "ベルモンド・バンデラス", "星川サラ", "星導ショウ", "先斗寧", "本間ひまわり", "舞元啓介", "魔界ノりりむ", "ましろ爻", "町田ちま", "魔使マオ", "黛灰", "ミラン・ケストレル", "叢雲カゲツ", "メリッサ・キンレンカ", "森中花咲", "矢車りね","夜牛詩乃", "社築", "山神カルタ", "勇気ちひろ", "夕陽リリ", "雪城眞尋", "夢月ロア", "夢追翔", "夜見れな", "ラトナ・プティ", "リゼ・ヘルエスタ", "緑仙", "竜胆尊", "ルイス・キャミー", "ルンルン", "レイン・パターソン", "レヴィ・エリファ", "レオス・ヴィンセント", "ローレン・イロアス", "渡会雲雀", "童田明治",
+        # EN / ID / KR
+        "Amicia Michella", "Xia-Ekavira", "Zea-Cornelia", "Taka Radjiman", "Derem Kado", "Nara Haramaung", "Hana Macchia", "Mika Melatika", "Miyu Ottavia", "Layla Astroemeria", "Riksa Dhirendra", "Reza Avanluna", "아키라 레이（明楽 レイ）", "이로하（イ・ロハ）", "오지유（オ・ジユ）", "가온（ガオン）", "신유야（シン・ユヤ）", "세피나（セフィナ）", "소나기（ソ・ナギ）", "나세라（ナ・セラ）", "하윤（ハ・ユン）", "반하다（バン・ハダ）", "민수하（ミン・スゥーハ）", "양나리（ヤン・ナリ）", "Ike Eveland", "Aia Amare", "Yugo Asuma", "Vezalius Bandage", "Uki Violeta", "Enna Alouette", "Elira Pendora", "Endou Reimu", "Fulgur Ovid", "Kyoran Meloco", "Kaelix Debonair", "Sonny Brisko", "Selen Tatsuki", "Torahime Kotoka", "Petra Gurin", "Pomu Rainpuff", "Maria Marionette", "Millie Parfait", "Shu Yamino", "Luca Kaneshiro", "Ren Zotto", "星弥", "Noor",
+        # 外部・声優・その他
+        "字ぴろぱる", "歌衣メイカ", "渋谷ハル", "熊谷タクマ", "かなえ先生", "天開司", "浅沼晋太郎", "伊東健人", "デンジャーD", "てんぐ・横山ミル", "ヤースー", "藤川Q", "寺島惇太", "百花繚乱", "ぽんぽこ", "ピーナッツくん", "ばあちゃる", "英リサ", "兎麹まり", "一ノ瀬うるは", "神威きゅぴ", "橘ひなの", "八雲ぺに", "ゴモリー", "多井隆晴", "松本吉弘", "前野智昭", "土田玲央", "平川大輔", "龍惺ろたん"
+    ],
+    "UNITS": [
+        "VΔLZ", "エア景", "おりひめばるつ", "園児組", "年長組", "クソザコトレーナーズ", "Klime", "けいあい",
+        "Southern,xxxx", "情報差分組", "女子騎士祓魔師鑑定士", "タメナンデス", "チームヘラクレス",
+        "ながおちぐ", "にじさんじダンス部", "にじさんじ放課後ゲーム部", "にじさんじベイブレード部",
+        "にじさんじポケカ部", "にじさんじロケット団", "にじさんじGTA救急隊", "にじ飯調査隊",
+        "SitR名古屋", "フ景罪", "ふつまひ", "めにまにかんぱにー","えなかき"
+    ],
+    "GAMES": [
+        "アイドルマスター SideM", "あつまれどうぶつの森", "Apex Legends", "A Little to the Left",
+        "ARK:Survival Ascended", "ARK:Survival Evolved", "ARK-アイランドマップ", "ARK-ラグナロクマップ",
+        "ARK-エクスティンクションマップ", "ARK-クリスタルアイルズマップ", "ASTRONEER", "Blazing Sails",
+        "Cooking Simulator", "Dead by Daylight", "eFootball ウイニングイレブン", "ウマ娘　プリティダービー",
+        "おえかきの森", "Fall Guys", "Getting Over It", "Gartic Phones", "Get To Work", "Golf It!",
+        "Fast Food Simulator", "Human: Fall Flat", "Left 4 Dead 2", "maimai", "Nintendo Switch Sports",
+        "Operation: Tango", "Overcooked!2", "Overwatch", "Overwatch2", "Papers, Please", "PEAK", "Portal2",
+        "PowerWash Simulator", "PUBG", "slither.io/wormax.io", "Stray", "BLEACH","ラブラブスクールデイズ",
+        "断罪室", "Ultimate Chicken Horse", "UNDERTALE", "Unrailed!", "VALORANT", "ito(イト)", "エアホッケー",
+        "オバケイドロ!", "くそいサイト", "コードネーム", "にじさんじ共通テスト","恋愛相談","Raft",
+        "グランド・セフト・オートV", "クロノ・トリガー", "原神", "幻塔", "ゴッドフィールド", "7days to die",
+        "逆凸","ゆびをふる", "シャドウバース", "雀魂", "白猫GOLF", "スイカゲーム", "ストリートファイター6",
+        "スーパーモンキーボール バナナランブル", "やわらかあたま塾","ゴブリン・ノーム・ホーン",
+        "マイクラ肝試し","ゲームモーション研究会","同時視聴","凸待ち", "Splatoon", "Splatoon2", "Splatoon3",
+        "おにぎり屋さんシミュレーター","全国一般人常識チェック", "世界のアソビ大全51",
+        "ゼルダの伝説 ブレス オブ ザ ワイルド", "太鼓の達人", "ツイステッドワンダーランド","逆水寒",
+        "開店コンビニ日記","牧場物語", "大乱闘スマッシュブラザーズSPECIAL", "テトリス99", "ダンガンロンパ",
+        "刀剣乱舞","Detroit Become Human","大乱闘スマッシュブラザーズ", "ツイステッドワンダーランド",
+        "ドキドキ文芸部", "ネコトモ", "バイオハザード ヴィレッジ", "パワフルプロ野球","ロックマンエグゼ",
+        "パワプロ","プロセカ", "プロジェクトセカイ カラフルステージ！ feat. 初音ミク", "ポーカーチェイス",
+        "ポケットモンスター", "ポケットモンスター-金・銀", "ポケットモンスター-ユナイト",
+        "Pokémon Trading Card Game Pocket","ポケットモンスター-ファイアレッド・リーフグリーン",
+        "ポケットモンスター-ルビー・サファイア", "ポケットモンスター-ブリリアントダイヤモンド・シャイニングパール",
+        "ポケットモンスター-スカーレットバイオレット", "ポケットモンスター-ソード・シールド",
+        "Pokémon LEGENDS アルセウス", "マインクラフト", "マリオシリーズ", "スーパーマリオブラザーズ",
+        "スーパーマリオメーカー2", "マリオカート8DX", "マリオカートワールド", "マリオパーティ",
+        "その他マリオシリーズ", "みんなで空気読み。", "メイド イン ワリオ", "桃太郎電鉄", "モンスターストライク",
+        "モンスターハンター：ワールド", "星のカービィシリーズ", "リズム天国", "レイトン教授と不思議な町",
+        "一致するまで終われまテン!!", "任天堂", "パチスロ", "ホラーゲーム", "Chilla's Art", "PACIFY",
+        "Poppy Playtime","Keep Talking and Nobody Explodes", "Protein for Muscle", "R.E.P.O.", "青鬼",
+        "その他ホラーゲーム", "カードゲーム", "その他ゲーム","Five Nights at Freddy's","Getting Over It"
+    ],
+    "PROGRAMS": [
+        "SYMPHONIA Day2", "LOCK ON FLEEK", "にじ鯖夏祭り","VTuberエンジョイカジュアル交流戦",
+        "ベース","歳の差バラエティ(?)", "VΔLZ1st 一唱入魂", "VΔLZ2nd 三華の樂", "にじ漢歌祭り",
+        "にじメンメドレー", "VTuber最協決定戦", "VTuberのあそびば", "くろのわーるがなんかやる",
+        "Talking in English Collab", "ゲームる？ゲームる！", "だいさんじ甲子園", "にじさんじ甲子園",
+        "にじワイテ人狼RPG", "格付けマリカ", "にじさんじイカ祭り", "にじさんじスマブラ杯",
+        "マリカにじさんじ杯","にじスプラDREAMDEATHMATCH","にじスプラ大会", "ミリしらスト６チャレンジ",
+        "にじさんじイヤホンガンガンゲーム", "おながましろの心霊対談", "ケイナガオの楽屋裏",
+        "Nagao's Kitchen", "初心者講座", "たい変", "にじフェス", "視聴者参加型",
+        "にじさんじのTOYBOX！", "にじさんじのハッピーアワー!!", "にじさんじのB級バラエティ(仮)",
+        "桜魔大戦譚","にじさんじ大運動会", "にじさんじMIX UP!!", "にじさんじユニット歌謡祭2022",
+        "にじさんじ歌謡祭2024", "にじマイクラ占領戦","全肯定長尾景", "にじクイ", "木10！ろふまお塾",
+        "ヤシロ&ササキのレバガチャダイパン", "外部"
+    ]
+}
 
-    # --- コラボ・ユニット名 ---
-    "VΔLZ", "エア景", "おりひめばるつ", "園児組", "年長組", "クソザコトレーナーズ", "Klime", "けいあい", 
-    "Southern,xxxx", "情報差分組", "女子騎士祓魔師鑑定士", "タメナンデス", "チームヘラクレス", 
-    "ながおちぐ", "にじさんじダンス部", "にじさんじ放課後ゲーム部", "にじさんじベイブレード部", 
-    "にじさんじポケカ部", "にじさんじロケット団", "にじさんじGTA救急隊", "にじ飯調査隊","SitR名古屋",
-    "フ景罪", "ふつまひ", "めにまにかんぱにー","えなかき",
-
-    # --- ゲームシリーズ ---
-    "アイドルマスター SideM", "あつまれどうぶつの森", "Apex Legends", "A Little to the Left",
-    "ARK:Survival Ascended", "ARK:Survival Evolved", "ARK-アイランドマップ", "ARK-ラグナロクマップ", 
-    "ARK-エクスティンクションマップ", "ARK-クリスタルアイルズマップ", 
-    "ASTRONEER", "Blazing Sails", "Cooking Simulator", "Dead by Daylight", 
-    "eFootball ウイニングイレブン", "ウマ娘　プリティダービー", "おえかきの森", 
-    "Fall Guys", "Getting Over It", "Gartic Phones", "Get To Work", "Golf It!", "Fast Food Simulator",
-    "Human: Fall Flat", "Left 4 Dead 2", "maimai", "Nintendo Switch Sports",
-    "Operation: Tango", "Overcooked!2", "Overwatch", "Overwatch2", "Papers, Please", "PEAK",
-    "Portal2", "PowerWash Simulator", "PUBG", "slither.io/wormax.io", "Stray", "BLEACH","ラブラブスクールデイズ","断罪室",
-    "Ultimate Chicken Horse", "UNDERTALE", "Unrailed!", "VALORANT", 
-    "ito(イト)", "エアホッケー", "オバケイドロ!", "くそいサイト", "コードネーム", "にじさんじ共通テスト","恋愛相談","Raft",
-    "グランド・セフト・オートV", "クロノ・トリガー", "原神", "幻塔", "ゴッドフィールド", "7days to die","逆凸","ゆびをふる",
-    "シャドウバース", "雀魂", "白猫GOLF", "スイカゲーム", "ストリートファイター6", 
-    "スーパーモンキーボール バナナランブル", "やわらかあたま塾","ゴブリン・ノーム・ホーン","マイクラ肝試し","ゲームモーション研究会","同時視聴","凸待ち",
-    "Splatoon", "Splatoon2", "Splatoon3","おにぎり屋さんシミュレーター","全国一般人常識チェック",
-    "世界のアソビ大全51", "ゼルダの伝説 ブレス オブ ザ ワイルド", "太鼓の達人", "ツイステッドワンダーランド","逆水寒","開店コンビニ日記","牧場物語",
-    "大乱闘スマッシュブラザーズSPECIAL", "テトリス99", "ダンガンロンパ", "刀剣乱舞","Detroit Become Human","大乱闘スマッシュブラザーズ",
-    "ツイステッドワンダーランド", "ドキドキ文芸部", "ネコトモ", "バイオハザード ヴィレッジ", "パワフルプロ野球","ロックマンエグゼ","パワプロ","プロセカ",
-    "プロジェクトセカイ カラフルステージ！ feat. 初音ミク", "ポーカーチェイス","ポケットモンスター", 
-    "ポケットモンスター-金・銀", "ポケットモンスター-ユナイト", "Pokémon Trading Card Game Pocket","ポケットモンスター-ファイアレッド・リーフグリーン","ポケットモンスター-ルビー・サファイア",
-    "ポケットモンスター-ブリリアントダイヤモンド・シャイニングパール", "ポケットモンスター-スカーレットバイオレット", "ポケットモンスター-ソード・シールド","Pokémon LEGENDS アルセウス",
-    "マインクラフト",
-    "マリオシリーズ", "スーパーマリオブラザーズ", "スーパーマリオメーカー2", 
-    "マリオカート8DX", "マリオカートワールド", "マリオパーティ", "その他マリオシリーズ",
-    "みんなで空気読み。", "メイド イン ワリオ", "桃太郎電鉄", "モンスターストライク", 
-    "モンスターハンター：ワールド", "星のカービィシリーズ", "リズム天国", "レイトン教授と不思議な町", "一致するまで終われまテン!!",
-    "任天堂", "パチスロ", "ホラーゲーム", "Chilla's Art", "PACIFY", "Poppy Playtime","Keep Talking and Nobody Explodes",
-    "Protein for Muscle", "R.E.P.O.", "青鬼", "その他ホラーゲーム", "カードゲーム", "その他ゲーム","Five Nights at Freddy's","Getting Over It",
-
-    # --- 番組・イベント ---
-    "SYMPHONIA Day2", "LOCK ON FLEEK", "にじ鯖夏祭り","VTuberエンジョイカジュアル交流戦","ベース","歳の差バラエティ(?)",
-    "VΔLZ1st 一唱入魂", "VΔLZ2nd 三華の樂", "にじ漢歌祭り","にじメンメドレー",
-    "VTuber最協決定戦", "VTuberのあそびば", "くろのわーるがなんかやる", "Talking in English Collab", 
-    "ゲームる？ゲームる！", "だいさんじ甲子園", "にじさんじ甲子園", "にじワイテ人狼RPG", 
-    "格付けマリカ", "にじさんじイカ祭り", "にじさんじスマブラ杯","マリカにじさんじ杯","にじスプラDREAMDEATHMATCH","にじスプラ大会",
-    "ミリしらスト６チャレンジ", "にじさんじイヤホンガンガンゲーム", "おながましろの心霊対談",
-    "ケイナガオの楽屋裏", "Nagao's Kitchen", "初心者講座", "たい変", "にじフェス", "視聴者参加型",
-    "にじさんじのTOYBOX！", "にじさんじのハッピーアワー!!", "にじさんじのB級バラエティ(仮)", "桜魔大戦譚","にじさんじ大運動会",
-    "にじさんじMIX UP!!", "にじさんじユニット歌謡祭2022", "にじさんじ歌謡祭2024", "にじマイクラ占領戦","全肯定長尾景",
-    "にじクイ", "木10！ろふまお塾", "ヤシロ&ササキのレバガチャダイパン"
-]
-
-# ★表記ゆれ変換辞書
 TAG_CONVERSION_MAP = {
     "マイクラ": "マインクラフト",
     "マリカ": "マリオカート8DX",
@@ -184,7 +158,121 @@ TAG_CONVERSION_MAP = {
     "ポケモンBDSP": "ポケットモンスター-ブリリアントダイヤモンド・シャイニングパール"
 }
 
-# ★ユニット・メンバー定義
+HANDLE_TO_NAME_MAP = {
+    "@KaidaHaru": "甲斐田晴",
+    "@GenzukiTojiro": "弦月藤士郎",
+    "@NagaoKei": "長尾景",
+    "@valz_ch": "VΔLZ",
+    "@Fumi": "フミ",
+    "@HoshikawaSara": "星川サラ",
+    "@YamagamiKaruta": "山神カルタ",
+    "@TodoKohaku": "東堂コハク",
+    "@OliverEvans": "オリバー・エバンス",
+    "@HarusakiAir": "春崎エアル",
+    "@NishizonoChigusa": "西園チグサ",
+    "@LainPaterson": "レイン・パターソン",
+    "@SeraphDazzlegarden": "セラフ・ダズルガーデン",
+    "@ShibuyaHajime": "渋谷ハジメ",
+    "@YuhiRiri": "夕陽リリ",
+    "@Elu": "える",
+    "@SukoyaKana": "健屋花那",
+    "@GweluOsGar": "グウェル・オス・ガール",
+    "@AkagiWen": "赤城ウェン",
+    "@HoshirubeSho": "星導ショウ",
+    "@SakakiNess": "榊ネス",
+    "@FrenELustario": "フレン・E・ルスタリオ",
+    "@PontoNei": "先斗寧",
+    "@SasakiSaku": "笹木咲",
+    "@FuwaMinato": "不破湊",
+    "@YukishiroMahiro": "雪城眞尋",
+    "@OnomachiHaruka": "小野町春香",
+    "@kuramochimerto": "倉持めると",
+    "@SaegusaAkina": "三枝明那",
+    "@MayuzumiKai": "黛灰",
+    "@HonmaHimawari": "本間ひまわり",
+    "@TakamiyaRion": "鷹宮リオン",
+    "@KurusuNatsume": "来栖夏芽",
+    "@Naraka": "奈羅花",
+    "@WataraiHibari": "渡会雲雀",
+    "@Ryushen": "緑仙",
+    "@HakaseFuyuki": "葉加瀬冬雪",
+    "@KoshimizuToru": "小清水透",
+    "@HanabatakeChaika": "花畑チャイカ",
+    "@MaimotoKeisuke": "舞元啓介",
+    "@KagamiHayato": "加賀美ハヤト",
+    "@ShiorihaRuri": "栞葉るり",
+    "@TsukinoMito": "月ノ美兎",
+    "@YukiChihiro": "勇気ちひろ",
+    "@HiguchiKaede": "樋口楓",
+    "@FushimiGaku": "伏見ガク",
+    "@GilzarenIII": "ギルザレンIII世",
+    "@KenmochiToya": "剣持刀也",
+    "@Kanae": "叶",
+    "@ShiinaYuika": "椎名唯華",
+    "@Dola": "ドーラ",
+    "@TodorokiKyoko": "轟京子",
+    "@SisterClaire": "シスター・クレア",
+    "@YashiroKizuku": "社築",
+    "@SuzukiMasaru": "鈴木勝",
+    "@MachidaChima": "町田ちま",
+    "@JoeRikiichi": "ジョー・力一",
+    "@BelmondBanderas": "ベルモンド・バンデラス",
+    "@YagurumaRine": "矢車りね",
+    "@KuroiShiba": "黒井しば",
+    "@WarabedaMeiji": "童田明治",
+    "@InuiToko": "戌亥とこ",
+    "@LeviElipha": "レヴィ・エリファ",
+    "@YorumiRena": "夜見れな",
+    "@ArsAlmal": "アルス・アルマル",
+    "@AibaUiha": "相羽ういは",
+    "@AmamiyaKokoro": "天宮こころ",
+    "@ElieConifer": "エリー・コニファー",
+    "@RatnaPetit": "ラトナ・プティ",
+    "@HayaseSou": "早瀬走",
+    "EmmaAugust": "えま★おうがすと",
+    "@LuisCammy": "ルイス・キャミー",
+    "@ShirayukiTomoe": "白雪巴",
+    "@MashiroMeme": "ましろ爻",
+    "@MelissaKinrenka": "メリッサ・キンレンカ",
+    "@Ibrahim": "イブラヒム",
+    "@KitakojiHisui": "北小路ヒスイ",
+    "@AxiaCrone": "アクシア・クローネ",
+    "@LaurenIroas": "ローレン・イロアス",
+    "@LeosVincent": "レオス・ヴィンセント",
+    "@UmiseYotsuha": "海妹四葉",
+    "@HyakumantenbaraSalome": "壱百満天原サロメ",
+    "@FurakuKanato": "風楽奏斗",
+    "@ShikinagiAkira": "四季凪アキラ",
+    "@ShishidoAkari": "獅子堂あかり",
+    "@KaburagiRoco": "鏑木ろこ",
+    "@IgarashiRika": "五十嵐梨花",
+    "@IshigamiNozomi": "石神のぞみ",
+    "@Sophia_Valentine": "ソフィア・ヴァレンタイン",
+    "@SaikiIttetsu": "佐伯イッテツ",
+    "@UsamiRito": "宇佐美リト",
+    "@HibachiMana": "緋八マナ",
+    "@MurakumoKagetsu": "叢雲カゲツ",
+    "@KoyanagiRou": "小柳ロウ",
+    "@InamiRai": "伊波ライ",
+    "@kaise": "魁星",
+    "@KitamiYusei": "北見遊征",
+    "@NagisaTrout": "渚トラウト",
+    "@MilanKestrel": "ミラン・ケストレル",
+    "@SakayoriSoma": "酒寄颯馬",
+    "@NanaseSuzuna": "七瀬すず菜",
+    "@TogawaNonoha": "十河ののは",
+    "@KozueMone": "梢桃音",
+    "@LunLun_nijisanji": "ルンルン",
+    "@ShiroseIsumi": "城瀬いすみ",
+    "@KiraraTamako": "雲母たまこ",
+    "@Saotomeberry": "早乙女ベリー",
+    "@KadooMikaru": "蝸堂みかる",
+    "@ShigaRiko": "司賀りこ",
+    "@ShinomiyaYuno": "篠宮ゆの",
+    "@Kisara_nijisanji": "綺沙良",
+    "@NekoyashikiMiku": "猫屋敷美紅"
+}
+
 UNIT_GROUP_MAP = {
     "VΔLZ": ["甲斐田晴", "弦月藤士郎"],
     "フ景罪": ["フミ"],
@@ -194,9 +282,9 @@ UNIT_GROUP_MAP = {
     "園児組": ["弦月藤士郎"],
     "年長組": ["甲斐田晴"],
     "けいあい": ["相羽ういは"],
-    "Klime": ["山神カルタ", "東堂コハク"], 
+    "Klime": ["山神カルタ", "東堂コハク"],
     "組体操": ["渋谷ハジメ", "夕陽リリ"],
-    "クソザコトレーナーズ": ["春崎エアル","グウェル・オス・ガール","소나기（ソ・ナギ）"], 
+    "クソザコトレーナーズ": ["春崎エアル","グウェル・オス・ガール","소나기（ソ・ナギ）"],
     "ケイトララ": ["渚トラウト"],
     "情報差分組": ["赤城ウェン","星導ショウ","榊ネス"],
     "女子騎士祓魔師鑑定士": ["フレン・E・ルスタリオ","先斗寧","星導ショウ"],
@@ -211,26 +299,12 @@ UNIT_GROUP_MAP = {
     "『絶え間なく突撃』": ["奈羅花","渡会雲雀","榊ネス"],
     "SitR名古屋":["緑仙","葉加瀬冬雪","渡会雲雀","先斗寧","小清水透"],
     "にじさんじポケカ部": ["花畑チャイカ","舞元啓介","葉加瀬冬雪","加賀美ハヤト","倉持めると","赤城ウェン","栞葉るり","榊ネス"],
-    "にじさんじラジオ体操部": ["月ノ美兎","勇気ちひろ","える","樋口楓","渋谷ハジメ", "伏見ガク", "ギルザレンIII世", "剣持刀也","叶","笹木咲",
-                        "椎名唯華","ドーラ", "轟京子", "シスター・クレア", "花畑チャイカ", "社築","鈴木勝", "緑仙", "鷹宮リオン", "舞元啓介", "でびでび・でびる", "桜凛月",
-                        "町田ちま", "ジョー・力一", "ベルモンド・バンデラス", "矢車りね", "黒井しば", "童田明治", "小野町春香", "戌亥とこ", "三枝明那",
-                        "雪城眞尋", "レヴィ・エリファ", "葉加瀬冬雪", "加賀美ハヤト", "夜見れな", "黛灰", "アルス・アルマル", "相羽ういは", "天宮こころ",
-                        "エリー・コニファー", "ラトナ・プティ", "早瀬走", "健屋花那", "フミ", "星川サラ", "えま★おうがすと", "ルイス・キャミー",
-                        "不破湊", "白雪巴", "グウェル・オス・ガール", "ましろ爻", "奈羅花", "来栖夏芽", "フレン・E・ルスタリオ", "メリッサ・キンレンカ",
-                        "イブラヒム","弦月藤士郎", "甲斐田晴", "北小路ヒスイ", "西園チグサ", "アクシア・クローネ", "ローレン・イロアス",
-                        "レオス・ヴィンセント", "オリバー・エバンス", "レイン・パターソン", "海妹四葉", "壱百満天原サロメ", "風楽奏斗", "渡会雲雀",
-                        "四季凪アキラ", "セラフ・ダズルガーデン", "Taka Radjiman", "Zea-Cornelia", "Riksa Dhirendra", "Nara Haramaung",
-                        "Layla Alstroemeria", "Bonnivier Pranaja", "Derem Kado", "Xia-Ekavira", "Mika Melatika","소나기（ソ・ナギ）",
-                        "양나리（ヤン・ナリ）","하윤（ハ・ユン）","오지유（オ・ジユ）","세피나（セフィナ）","나세라（ナ・セラ）",
-                        "小清水透", "獅子堂あかり", "鏑木ろこ", "五十嵐梨花", "石神のぞみ",
-                        "ソフィア・ヴァレンタイン", "倉持めると", "佐伯イッテツ", "赤城ウェン", "宇佐美リト","緋八マナ", "星導ショウ",
-                        "叢雲カゲツ", "小柳ロウ", "伊波ライ", "Elira Pendora", "Pomu Rainpuff", "Petra Gurin", "Enna Alouette",
-                        "Reimu Endou", "Millie Parfait", "Luca Kaneshiro", "Shu Yamino", "Yugo Asuma", "Sonny Brisko", "Uki Violeta",
-                        "Aia Amare", "あばだんご"],
+    "にじさんじラジオ体操部": [
+        "月ノ美兎","勇気ちひろ","える","樋口楓","渋谷ハジメ", "伏見ガク", "ギルザレンIII世", "剣持刀也","叶","笹木咲", "椎名唯華","ドーラ", "轟京子", "シスター・クレア", "花畑チャイカ", "社築","鈴木勝", "緑仙", "鷹宮リオン", "舞元啓介", "でびでび・でびる", "桜凛月", "町田ちま", "ジョー・力一", "ベルモンド・バンデラス", "矢車りね", "黒井しば", "童田明治", "小野町春香", "戌亥とこ", "三枝明那", "雪城眞尋", "レヴィ・エリファ", "葉加瀬冬雪", "加賀美ハヤト", "夜見れな", "黛灰", "アルス・アルマル", "相羽ういは", "天宮こころ", "エリー・コニファー", "ラトナ・プティ", "早瀬走", "健屋花那", "フミ", "星川サラ", "えま★おうがすと", "ルイス・キャミー", "不破湊", "白雪巴", "グウェル・オス・ガール", "ましろ爻", "奈羅花", "来栖夏芽", "フレン・E・ルスタリオ", "メリッサ・キンレンカ", "イブラヒム","弦月藤士郎", "甲斐田晴", "北小路ヒスイ", "西園チグサ", "アクシア・クローネ", "ローレン・イロアス", "レオス・ヴィンセント", "オリバー・エバンス", "レイン・パターソン", "海妹四葉", "壱百満天原サロメ", "風楽奏斗", "渡会雲雀", "四季凪アキラ", "セラフ・ダズルガーデン", "Taka Radjiman", "Zea-Cornelia", "Riksa Dhirendra", "Nara Haramaung", "Layla Alstroemeria", "Bonnivier Pranaja", "Derem Kado", "Xia-Ekavira", "Mika Melatika","소나기（ソ・ナギ）", "양나리（ヤン・ナリ）","하윤（ハ・ユン）","오지유（オ・ジユ）","세피나（セフィナ）","나세라（ナ・セラ）", "小清水透", "獅子堂あかり", "鏑木ろこ", "五十嵐梨花", "石神のぞみ", "ソフィア・ヴァレンタイン", "倉持めると", "佐伯イッテツ", "赤城ウェン", "宇佐美リト","緋八マナ", "星導ショウ", "叢雲カゲツ", "小柳ロウ", "伊波ライ", "Elira Pendora", "Pomu Rainpuff", "Petra Gurin", "Enna Alouette", "Reimu Endou", "Millie Parfait", "Luca Kaneshiro", "Shu Yamino", "Yugo Asuma", "Sonny Brisko", "Uki Violeta", "Aia Amare", "あばだんご"
+    ],
     "バベルの景": ["オリバー・エバンス","ベルモンド・バンデラス"],
     "めにまにカンパニー": ["桜凛月","Nara Haramaung","세피나（セフィナ）"],
-    "にじGTA救急隊": ["樋口楓","森中花咲","桜凛月","成瀬鳴","小野町春香","三枝明那","健屋花那","グウェル・オス・ガール","弦月藤士郎",
-                 "甲斐田晴","민수하（ミン・スゥーハ）", "오지유（オ・ジユ）", "세피나（セフィナ）", "宇佐美リト", "魁星", "Maria Marionette", "Vezalius Bandage"],
+    "にじGTA救急隊": ["樋口楓","森中花咲","桜凛月","成瀬鳴","小野町春香","三枝明那","健屋花那","グウェル・オス・ガール","弦月藤士郎", "甲斐田晴","민수하（ミン・スゥーハ）", "오지유（オ・ジユ）", "세피나（セフィナ）", "宇佐美リト", "魁星", "Maria Marionette", "Vezalius Bandage"],
     "忖度フィニッシャーズ": ["える","愛園愛美"],
     "にじメン歌リレー":["三枝明那","弦月藤士郎","神田笑一","ジョー・力一","加賀美ハヤト","不破湊","夢追翔"],
     "にじ漢歌祭り":["北見遊征","セラフ・ダズルガーデン","酒寄颯馬","榊ネス","伊波ライ","ミラン・ケストレル","風楽奏斗","ジョー・力一","甲斐田晴","宇佐美リト","緋八マナ","渚トラウト"],
@@ -238,57 +312,67 @@ UNIT_GROUP_MAP = {
 }
 
 # --- 3. タグ判定関数 ---
-def analyze_video_tags(title, fixed_tags):
-    """タイトルからカテゴリとキーワードを自動判定する"""
+def analyze_video_tags(title, description, fixed_tags):
     detected_category = "未分類"
-    detected_keywords = []
-
-    # 検索用にタイトルを小文字化
-    title_lower = str(title).lower()
+    detected_keywords = set()
     
+    title_lower = str(title).lower()
+    description_lower = str(description).lower() if description else ""
+
     # 1. カテゴリ判定
-    for cat in CATEGORY_list:
+    for cat in CATEGORY_LIST:
         if cat in title:
             detected_category = cat
-            break 
-    
-    # 2. キーワード判定 (タイトルに含まれるものを検出)
-    for keyword in KEYWORD_list:
-        if keyword.lower() in title_lower:
-            if keyword not in detected_keywords:
-                detected_keywords.append(keyword)
+            break
 
-    # 3. 表記ゆれ・略称から正式タグを追加する処理
+    # 2. キーワード判定
+    for group_name, keyword_list in KEYWORD_GROUPS.items():
+        for keyword in keyword_list:
+            if keyword.lower() in title_lower:
+                detected_keywords.add(keyword)
+
+    # 3. 「える」の特別判定処理
+    if re.search(r'【[^】]*える[^】]*】', title):
+        detected_keywords.add("える")
+
+    # 4. 表記ゆれ・略称から正式タグを追加
     for slang, formal_tag in TAG_CONVERSION_MAP.items():
-        # タイトルに略称(マイクラ等)が含まれているか？
         if slang.lower() in title_lower:
-            # 正式名称(マインクラフト等)がまだタグになければ追加
-            if formal_tag not in detected_keywords:
-                detected_keywords.append(formal_tag)
+            detected_keywords.add(formal_tag)
 
-    # 4. ユニットとメンバーの相互補完
+    # 5. ハンドルネーム(@xxxx)の検出
+    found_handles = re.findall(r'(@[\w\.\-]+)', description_lower)
+    for handle in found_handles:
+        if handle in HANDLE_TO_NAME_MAP:
+            detected_keywords.add(HANDLE_TO_NAME_MAP[handle])
+
+    # 6. ユニットとメンバーの相互補完
     for unit_name, members in UNIT_GROUP_MAP.items():
-        # 【パターン1】ユニット名があるのに、メンバーが入っていない場合 → メンバーを追加
         if unit_name in detected_keywords:
             for member in members:
-                if member not in detected_keywords:
-                    detected_keywords.append(member)
+                detected_keywords.add(member)
+        if set(members).issubset(detected_keywords):
+            detected_keywords.add(unit_name)
 
-        # 【パターン2】メンバーが全員揃っているのに、ユニット名がない場合 → ユニット名を追加
-        #  (全員揃っているかチェック)
-        has_all_members = all(member in detected_keywords for member in members)
-        if has_all_members:
-            if unit_name not in detected_keywords:
-                detected_keywords.append(unit_name)
-
-    # 5. チャンネル固有の固定タグを追加 (タイトルになくてもappend)
+    # 7. チャンネル固有の固定タグを追加
     if fixed_tags:
         for tag in fixed_tags:
-            if tag not in detected_keywords:
-                detected_keywords.append(tag)
-            
-    return detected_category, detected_keywords
+            detected_keywords.add(tag)
 
+    # 8. 追加要件: ゲーム名が含まれる場合のカテゴリ処理
+    has_game_keyword = False
+    games_set = set(KEYWORD_GROUPS["GAMES"])
+    if not detected_keywords.isdisjoint(games_set):
+        has_game_keyword = True
+    
+    if has_game_keyword:
+        if detected_category == "未分類":
+            detected_category = "ゲーム実況"
+        elif detected_category != "ゲーム実況":
+            # 既にカテゴリ(例:コラボ)が入っているなら、ゲーム実況をキーワードに追加
+            detected_keywords.add("ゲーム実況")
+
+    return detected_category, list(detected_keywords)
 
 # --- 4. YouTube APIから動画を取得 ---
 def get_uploads_playlist_id(youtube, channel_id):
@@ -304,7 +388,6 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
     next_page_token = None
     page_count = 0
     
-    # MAX_PAGES_TO_FETCH ページ分だけ繰り返し取得
     while page_count < MAX_PAGES_TO_FETCH:
         try:
             request = youtube.playlistItems().list(
@@ -314,26 +397,25 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
                 pageToken=next_page_token
             )
             response = request.execute()
-            
             items = response.get('items', [])
+            
             if not items:
                 break
-
+                
             for item in items:
                 snippet = item['snippet']
-                # 公開日時 (例: 2020-01-01T00:00:00Z)
                 published_at = snippet.get('publishedAt')
-                if not published_at: continue
+                if not published_at:
+                    continue
                 
-                # 日付のみ抽出
                 dt = datetime.strptime(published_at[:10], '%Y-%m-%d')
                 published_date = dt.strftime('%Y-%m-%d')
                 
                 video_id = item['contentDetails']['videoId']
                 video_title = snippet['title']
+                video_description = snippet.get('description', '')
                 
-                # 自動タグ判定
-                category, keywords = analyze_video_tags(video_title, fixed_tags)
+                category, keywords = analyze_video_tags(video_title, video_description, fixed_tags)
                 
                 videos.append({
                     "youtubeId": video_id,
@@ -345,7 +427,7 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
                     "keywords": keywords,
                     "songs": []
                 })
-
+            
             next_page_token = response.get('nextPageToken')
             page_count += 1
             print(f"   Running... {channel_name}: {len(videos)} 件取得中 (Page {page_count}/{MAX_PAGES_TO_FETCH})")
@@ -360,7 +442,6 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
     print(f"ℹ️ {channel_name}: 合計 {len(videos)} 件取得成功")
     return videos
 
-
 # --- 5. GitHub更新処理 ---
 def update_github_json(new_videos):
     headers = {
@@ -369,9 +450,11 @@ def update_github_json(new_videos):
         "X-GitHub-Api-Version": "2022-11-28",
     }
     contents_url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{JSON_FILE_PATH}"
-    
-    # GET: 既存ファイルの取得
+
+    # 既存ファイルの取得
     response = requests.get(contents_url, headers=headers)
+    existing_videos = []
+    existing_sha = None
 
     if response.status_code == 200:
         content_info = response.json()
@@ -381,63 +464,93 @@ def update_github_json(new_videos):
             decoded_content = base64.b64decode(existing_content).decode('utf-8')
             existing_videos = json.loads(decoded_content)
         except json.JSONDecodeError:
-            # ★★★ ここが重要 ★★★
-            # 手動で編集したJSONに構文ミス（コンマ忘れなど）があると、ここでエラーになります。
-            # 前回のコードはここで「[] (空っぽ)」にしてしまっていましたが、
-            # 今回は「エラーを出して停止」するように変えたので、データが消えることはありません。
-            print("❌ 【重要】GitHub上のJSONファイルの構文が壊れているため、処理を停止します。")
-            print("   手動編集でコンマを忘れていないかなどを確認してください。")
-            print("   （データ保護のため、上書きせずに終了します）")
+            print("❌ 【重要】GitHub上のJSONファイルの構文が壊れています。処理を停止します。")
             sys.exit(1)
         except Exception as e:
             print(f"❌ 予期せぬエラー: {e}")
             sys.exit(1)
     else:
-        print(f"❌ ファイルが見つかりません。初回実行ですか？ Status: {response.status_code}")
-        # ファイルがない場合のみ空でスタートするなら [] にしますが、
-        # 既存データがあるはずなのにここに来るのはおかしいので、念のため停止します。
-        # existing_videos = [] 
-        sys.exit(1) 
+        print(f"❌ ファイルが見つかりません: {response.status_code}")
+        sys.exit(1)
 
-    # --- 安全なマージ処理 ---
-    existing_ids = {v['youtubeId'] for v in existing_videos}
-    merged_videos = existing_videos.copy()
+    # --- 保護対象と更新対象の分離 ---
+    preserved_videos = [v for v in existing_videos if v.get('channel') not in MANAGED_CHANNEL_NAMES]
+    managed_videos = [v for v in existing_videos if v.get('channel') in MANAGED_CHANNEL_NAMES]
     
+    print(f"🛡️ 保護対象（他チャンネル等）: {len(preserved_videos)} 件")
+    print(f"🔄 更新対象（管理チャンネル）: {len(managed_videos)} 件")
+
+    managed_map = {v['youtubeId']: v for v in managed_videos}
+    updated_count = 0
     added_count = 0
+
     for new_video in new_videos:
-        if new_video['youtubeId'] not in existing_ids:
-            merged_videos.append(new_video)
+        vid_id = new_video['youtubeId']
+        
+        if vid_id in managed_map:
+            # === 既存動画の場合: songs保護ロジック ===
+            existing_record = managed_map[vid_id]
+            is_changed = False
+            
+            if 'songs' not in existing_record:
+                existing_record['songs'] = []
+            
+            # category更新
+            current_cat = existing_record.get('category', '未分類')
+            inferred_cat = new_video['category']
+            
+            if current_cat == '未分類' and inferred_cat != '未分類':
+                existing_record['category'] = inferred_cat
+                is_changed = True
+            elif current_cat != '未分類' and inferred_cat != '未分類' and current_cat != inferred_cat:
+                current_keywords = set(existing_record.get('keywords', []))
+                if inferred_cat not in current_keywords:
+                    existing_record['keywords'].append(inferred_cat)
+                is_changed = True
+            
+            # keywords更新
+            old_keywords_set = set(existing_record.get('keywords', []))
+            new_keywords_set = set(new_video['keywords'])
+            diff = new_keywords_set - old_keywords_set
+            
+            if diff:
+                existing_record['keywords'].extend(list(diff))
+                is_changed = True
+            
+            if is_changed:
+                updated_count += 1
+            managed_map[vid_id] = existing_record
+            
+        else:
+            # === 新規動画の場合 ===
+            managed_map[vid_id] = new_video
             added_count += 1
-    
-    if added_count == 0:
-        print("✅ 新しい動画はありませんでした。既存データは変更されません。")
+
+    if added_count == 0 and updated_count == 0:
+        print("✅ 管理対象チャンネルに変更はありませんでした。")
         return
 
-    print(f"📦 合計 {added_count} 件の新しい動画をマージしました。")
-
-    # 日付順にソート
-    merged_videos.sort(key=lambda x: x.get('date', '1900-01-01'), reverse=True)
-
-    # JSON生成とエンコード
-    new_content_bytes = json.dumps(merged_videos, indent=2, ensure_ascii=False).encode('utf-8')
+    # --- データの結合と保存 ---
+    final_videos_list = preserved_videos + list(managed_map.values())
+    final_videos_list.sort(key=lambda x: x.get('date', '1900-01-01'), reverse=True)
+    
+    print(f"📦 コミット準備: 新規{added_count}件, 更新{updated_count}件, 総数{len(final_videos_list)}件")
+    
+    new_content_bytes = json.dumps(final_videos_list, indent=2, ensure_ascii=False).encode('utf-8')
     new_content_base64 = base64.b64encode(new_content_bytes).decode('utf-8')
 
-    # PUT: 更新コミット
     commit_data = {
-        "message": f"ARCHIVE_BOT: {added_count} 件追加",
-        "content": new_content_base64
+        "message": f"ARCHIVE_BOT: Add {added_count}, Update {updated_count} (Total {len(final_videos_list)})",
+        "content": new_content_base64,
+        "sha": existing_sha
     }
-    if existing_sha:
-        commit_data["sha"] = existing_sha
-    
+
     put_res = requests.put(contents_url, headers=headers, json=commit_data)
-    
     if put_res.status_code in [200, 201]:
-        print(f"🚀 GitHubコミット完了: {added_count}件追加しました！")
+        print(f"🚀 GitHubコミット完了！")
     else:
         print(f"❌ コミット失敗: {put_res.status_code}")
         print(put_res.text)
-
 
 # --- 6. メイン処理 ---
 def main():
@@ -446,9 +559,9 @@ def main():
     if not YOUTUBE_API_KEY or not GITHUB_TOKEN:
         print("❌ エラー: 環境変数 (YOUTUBE_API_KEY, GITHUB_TOKEN) が設定されていません")
         return
-    
+
     youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
-    all_new_videos = []
+    fetched_videos = []
 
     for ch in CHANNELS:
         playlist_id = get_uploads_playlist_id(youtube, ch['id'])
@@ -457,10 +570,10 @@ def main():
             
         fixed_tags = ch.get('fixed_tags', [])
         videos = fetch_videos_from_playlist(youtube, playlist_id, ch['name'], fixed_tags)
-        all_new_videos.extend(videos)
-    
-    if all_new_videos:
-        update_github_json(all_new_videos)
+        fetched_videos.extend(videos)
+
+    if fetched_videos:
+        update_github_json(fetched_videos)
     else:
         print("⚠️ 動画が1件も取得できませんでした。APIキーなどを確認してください。")
 
