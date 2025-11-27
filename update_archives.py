@@ -368,31 +368,7 @@ def analyze_video_tags(title, description, fixed_tags):
         elif detected_category != "ゲーム実況":
             # 既にカテゴリ(例:コラボ)が入っているなら、ゲーム実況をキーワードに追加
             detected_keywords.add("ゲーム実況")
-    if has_game_keyword:
-        if detected_category == "未分類":
-            detected_category = "歌動画"
-        elif detected_category != "歌動画":
-            # 既にカテゴリ(例:コラボ)が入っているなら、ゲーム実況をキーワードに追加
-            detected_keywords.add("歌動画")
-    if has_game_keyword:
-        if detected_category == "未分類":
-            detected_category = "歌配信"
-        elif detected_category != "ゲーム実況":
-            # 既にカテゴリ(例:コラボ)が入っているなら、ゲーム実況をキーワードに追加
-            detected_keywords.add("歌配信")
-    if has_game_keyword:
-        if detected_category == "未分類":
-            detected_category = "楽器配信・動画"
-        elif detected_category != "楽器配信・動画":
-            # 既にカテゴリ(例:コラボ)が入っているなら、ゲーム実況をキーワードに追加
-            detected_keywords.add("楽器配信・動画")
-    if has_game_keyword:
-        if detected_category == "未分類":
-            detected_category = "ゲーム実況"
-        elif detected_category != "ゲーム実況":
-            # 既にカテゴリ(例:コラボ)が入っているなら、ゲーム実況をキーワードに追加
-            detected_keywords.add("踊り動画")
-
+  
     return detected_category, list(detected_keywords)
 # --- 4. YouTube API ---
 def get_uploads_playlist_id(youtube, channel_id):
@@ -547,5 +523,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
