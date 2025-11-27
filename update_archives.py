@@ -89,7 +89,7 @@ KEYWORD_GROUPS = {
         "Operation: Tango", "Overcooked!2", "Overwatch", "Overwatch2", "Papers, Please", "PEAK", "Portal2",
         "PowerWash Simulator", "PUBG", "slither.io/wormax.io", "Stray", "BLEACH","ラブラブスクールデイズ",
         "断罪室", "Ultimate Chicken Horse", "UNDERTALE", "Unrailed!", "VALORANT", "ito(イト)", "エアホッケー",
-        "オバケイドロ!", "くそいサイト", "コードネーム", "にじさんじ共通テスト","恋愛相談","Raft",
+        "オバケイドロ!", "くそいサイト", "コードネーム", "にじさんじ共通テスト","恋愛相談","Raft","遊戯王",
         "グランド・セフト・オートV", "クロノ・トリガー", "原神", "幻塔", "ゴッドフィールド", "7days to die",
         "逆凸","ゆびをふる", "シャドウバース", "雀魂", "白猫GOLF", "スイカゲーム", "ストリートファイター6",
         "スーパーモンキーボール バナナランブル", "やわらかあたま塾","ゴブリン・ノーム・ホーン",
@@ -109,22 +109,22 @@ KEYWORD_GROUPS = {
         "その他マリオシリーズ", "みんなで空気読み。", "メイド イン ワリオ", "桃太郎電鉄", "モンスターストライク",
         "モンスターハンター：ワールド", "星のカービィシリーズ", "リズム天国", "レイトン教授と不思議な町",
         "一致するまで終われまテン!!", "任天堂", "パチスロ", "ホラーゲーム", "Chilla's Art", "PACIFY",
-        "Poppy Playtime","Keep Talking and Nobody Explodes", "Protein for Muscle", "R.E.P.O.", "青鬼",
-        "その他ホラーゲーム", "カードゲーム", "その他ゲーム","Five Nights at Freddy's","Getting Over It"
+        "Poppy Playtime","Keep Talking and Nobody Explodes", "Protein for Muscle", "R.E.P.O.", "青鬼","RTA",
+        "その他ホラーゲーム", "カードゲーム", "その他ゲーム","Five Nights at Freddy's","Getting Over It","V最協",V祭協"
     ],
     "PROGRAMS": [
         "SYMPHONIA Day2", "LOCK ON FLEEK", "にじ鯖夏祭り","VTuberエンジョイカジュアル交流戦",
-        "ベース","歳の差バラエティ(?)", "VΔLZ1st 一唱入魂", "VΔLZ2nd 三華の樂", "にじ漢歌祭り",
-        "にじメンメドレー", "VTuber最協決定戦", "VTuberのあそびば", "くろのわーるがなんかやる",
+        "ベース","歳の差バラエティ(?)", "一唱入魂", "三華の樂", "にじ漢歌祭り",
+        "にじメンメドレー", "VTuber最協決定戦","V祭協","VTuberのあそびば", "くろのわーるがなんかやる",
         "Talking in English Collab", "ゲームる？ゲームる！", "だいさんじ甲子園", "にじさんじ甲子園",
         "にじワイテ人狼RPG", "格付けマリカ", "にじさんじイカ祭り", "にじさんじスマブラ杯",
         "マリカにじさんじ杯","にじスプラDREAMDEATHMATCH","にじスプラ大会", "ミリしらスト６チャレンジ",
         "にじさんじイヤホンガンガンゲーム", "おながましろの心霊対談", "ケイナガオの楽屋裏",
-        "Nagao's Kitchen", "初心者講座", "たい変", "にじフェス", "視聴者参加型",
+        "Nagao's Kitchen", "初心者講座", "たい変", "にじフェス", "視聴者参加型","にじさんじ麻雀杯",
         "にじさんじのTOYBOX！", "にじさんじのハッピーアワー!!", "にじさんじのB級バラエティ(仮)",
         "桜魔大戦譚","にじさんじ大運動会", "にじさんじMIX UP!!", "にじさんじユニット歌謡祭2022",
-        "にじさんじ歌謡祭2024", "にじマイクラ占領戦","全肯定長尾景", "にじクイ", "木10！ろふまお塾",
-        "ヤシロ&ササキのレバガチャダイパン", "外部"
+        "にじさんじ歌謡祭2024", "にじマイクラ占領戦","全肯定長尾景", "にじクイ", "木10！ろふまお塾","KZHCUP","にじさんじVALORANTカスタム",
+        "ヤシロ&ササキのレバガチャダイパン","にじプロセカ大会","カラフェス","にじエペ祭","神域リーグ","にじさんじ遊戯王マスターデュエル"
     ]
 }
 
@@ -133,11 +133,15 @@ TAG_CONVERSION_MAP = {
     "マリカ": "マリオカート8DX",
     "マリオカート8デラックス": "マリオカート8DX",
     "スプラ": "Splatoon",
-    "スプラトゥーン": "Splatoon",
     "スプラ2": "Splatoon2",
     "スプラトゥーン2": "Splatoon2",
     "スプラ3": "Splatoon3",
     "スプラトゥーン3": "Splatoon3",
+    "テトリス":"テトリス99",
+    "Speaking English Practice":"Talking in English Collab",
+    "にじスプラDREAMDEATHMATCH":"にじスプラDREAM DEATHMATCH"
+    "V最協":""VTuber最協決定戦",
+    "にじマイクラ占領戦":"にじマイクラ聖地占領戦",
     "あつ森": "あつまれどうぶつの森",
     "サイスタ": "アイドルマスター SideM GROWING STARS",
     "大乱闘スマッシュブラザーズSP": "大乱闘スマッシュブラザーズSPECIAL",
@@ -434,15 +438,7 @@ HANDLE_TO_NAME_MAP = {
     "@OmaruPolka":"尾丸ポルカ",
     "@TakaneLui":"鷹嶺ルイ",
     "@MoriCalliope":"森カリオペ",
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    "@Inaba_Haneru":"因幡はねる"
 }
 
 UNIT_GROUP_MAP = {
@@ -751,6 +747,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
