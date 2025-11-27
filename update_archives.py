@@ -133,6 +133,7 @@ TAG_CONVERSION_MAP = {
     "マリカ": "マリオカート8DX",
     "マリオカート8デラックス": "マリオカート8DX",
     "スプラ": "Splatoon",
+    "モンハンワイルズ":"モンスターハンターワイルズ",
     "スプラトゥーン": "Splatoon",
     "スプラ2": "Splatoon2",
     "スプラトゥーン2": "Splatoon2",
@@ -158,6 +159,7 @@ TAG_CONVERSION_MAP = {
     "APEX": "Apex Legends",
     "エペ": "Apex Legends",
     "歌枠": "歌配信",
+    "歌って": "歌動画",
     "歌ってみた": "歌動画",
     "COVER": "歌動画",
     "Cover": "歌動画",
@@ -523,6 +525,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
