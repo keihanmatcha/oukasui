@@ -110,7 +110,7 @@ KEYWORD_GROUPS = {
         "モンスターハンター：ワールド", "星のカービィシリーズ", "リズム天国", "レイトン教授と不思議な町",
         "一致するまで終われまテン!!", "任天堂", "パチスロ", "ホラーゲーム", "Chilla's Art", "PACIFY",
         "Poppy Playtime","Keep Talking and Nobody Explodes", "Protein for Muscle", "R.E.P.O.", "青鬼","RTA",
-        "その他ホラーゲーム", "カードゲーム", "その他ゲーム","Five Nights at Freddy's","Getting Over It","V最協",V祭協"
+        "その他ホラーゲーム", "カードゲーム", "その他ゲーム","Five Nights at Freddy's","Getting Over It","V最協","V祭協"
     ],
     "PROGRAMS": [
         "SYMPHONIA Day2", "LOCK ON FLEEK", "にじ鯖夏祭り","VTuberエンジョイカジュアル交流戦",
@@ -747,6 +747,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
