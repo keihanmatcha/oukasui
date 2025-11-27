@@ -45,7 +45,7 @@ KEYWORD_GROUPS = {
         "安土桃", "天ヶ瀬むゆ", "天宮こころ", "雨森小夜", "アルス・アルマル", "アンジュ・カトリーナ", "家長むぎ", "五十嵐梨花",
         "石神のぞみ", "出雲霞", "五木左京", "伊波ライ", "戌亥とこ", "イブラヒム", "宇佐美リト", "宇志海いちご", "卯月コウ",
         "海妹四葉", "エクス・アルビオ", "えま★おうがすと", "エリー・コニファー", "御伽原江良", "小野町春香", "オリバー・エバンス",
-        "魁星", "甲斐田晴", "加賀美ハヤト", "蝸堂みかる", "綺沙良", "叶", "鏑木ろこ", "神田笑一", "北小路ヒスイ", "北見遊征", "雲母たまこ",
+        "魁星", "甲斐田晴", "加賀美ハヤト", "蝸堂みかる", "綺沙良", "鏑木ろこ", "神田笑一", "北小路ヒスイ", "北見遊征", "雲母たまこ",
         "ギルザレンⅢ世", "グウェル・オス・ガール", "葛葉", "倉持めると", "黒井しば", "来栖夏芽", "郡道美玲", "弦月藤士郎", "剣持刀也",
         "梢桃音", "小清水透", "小柳ロウ", "佐伯イッテツ", "早乙女ベリー", "榊ネス", "酒寄颯馬", "桜凛月", "笹木咲", "椎名唯華", "シェリン・バーガンディ",
         "栞葉るり", "司賀りこ", "四季凪アキラ", "獅子堂あかり", "静凛", "シスター・クレア", "渋谷ハジメ", "篠宮ゆの", "城瀬いすみ", "ジョー・力一",
@@ -305,6 +305,45 @@ def analyze_video_tags(title, description, fixed_tags):
         if cat in title:
             detected_category = cat
             break
+    # 2. キーワード判定
+    for group_name, keyword_list in KEYWORD_GROUPS.items():
+        for keyword in keyword_list:
+            if keyword.lower() in title_lower:
+                detected_keywords.add(keyword)
+
+    # 3. 「える」の特別判定処理
+    if re.search(r'【[^】]*える[^】]*】', title):
+        detected_keywords.add("える")
+
+    # 3. 「叶」の特別判定処理
+    if re.search(r'【[^】]*叶[^】]*】', title):
+        detected_keywords.add("叶")
+
+
+    # 4. 表記ゆれ・略称から正式タグを追加
+    for slang, formal_tag in TAG_CONVERSION_MAP.items():
+        if slang.lower() in title_lower:
+            detected_keywords.add(formal_tag)
+
+    # 5. ハンドルネーム(@xxxx)の検出
+    found_handles = re.findall(r'(@[\w\.\-]+)', description_lower)
+    for handle in found_handles:
+        if handle in HANDLE_TO_NAME_MAP:
+            detected_keywords.add(HANDLE_TO_NAME_MAP[handle])
+
+    # 6. ユニットとメンバーの相互補完
+    for unit_name, members in UNIT_GROUP_MAP.items():
+        if unit_name in detected_keywords:
+            for member in members:
+                detected_keywords.add(member)
+        if set(members).issubset(detected_keywords):
+            detected_keywords.add(unit_name)
+
+    # 7. チャンネル固有の固定タグを追加
+    if fixed_tags:
+        for tag in fixed_tags:
+            detected_keywords.add(tag)
+
 
     for group_name, keyword_list in KEYWORD_GROUPS.items():
         for keyword in keyword_list:
@@ -478,3 +517,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
