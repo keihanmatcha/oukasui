@@ -34,7 +34,7 @@ MANAGED_CHANNEL_NAMES = [ch["name"] for ch in CHANNELS]
 CATEGORY_LIST = [
     "ゲーム実況", "雑談", "歌配信", "歌動画", "踊り動画", "踊り配信",
     "記念配信", "殺陣", "お披露目配信", "3D", "企画", "大会",
-    "ライブイベント", "楽器配信", "プロモーション", "公式企画・番組",
+    "ライブイベント", "楽器配信・動画", "プロモーション", "公式企画・番組",
     "動画系", "公式切り抜き", "手描き動画", "ぷちさんじ"
 ]
 
@@ -157,6 +157,16 @@ TAG_CONVERSION_MAP = {
     "Apex": "Apex Legends",
     "APEX": "Apex Legends",
     "エペ": "Apex Legends",
+    "歌枠": "歌配信",
+    "歌ってみた": "歌動画",
+    "COVER": "歌動画",
+    "Cover": "歌動画",
+    "踊ってみた": "踊り動画",
+    "ダンス動画": "踊り動画",
+    "ダンス配信": "踊り配信",
+    "ベース練習": "楽器配信・動画",
+    "弾いて": "楽器配信・動画",
+    "弾ける": "楽器配信・動画",
     "ポケカ": "Pokémon Trading Card Game Pocket",
     "パワプロ": "パワフルプロ野球",
     "にじさんじマリカ杯": "マリカにじさんじ杯",
@@ -168,16 +178,8 @@ TAG_CONVERSION_MAP = {
     "ましろ": "ましろ爻",
     "えある": "春崎エアル",
     "エアル": "春崎エアル",
-    "歌枠": "歌配信",
-    "歌ってみた": "歌動画",
-    "COVER": "歌動画",
-    "Cover": "歌動画",
-    "踊ってみた": "踊り動画",
-    "ダンス動画": "踊り動画",
-    "ダンス配信": "踊り配信",
-    "ベース練習": "楽器配信",
-    "弾いて": "楽器配信",
-    "弾ける": "楽器配信",
+    "スプラトゥーン３": "Splatoon3",
+    "スプラトゥーン２": "Splatoon2",
     "めにまに": "めにまにカンパニー",
     "めにまにかんぱにー": "めにまにカンパニー",
     "タメジャナインデス": "タメナンデス",
@@ -295,16 +297,24 @@ UNIT_GROUP_MAP = {
     "だいさんじ甲子園":["緑仙","グウェル・オス・ガール","榊ネス"]
 }
 # --- 3. タグ判定 ---
+# --- 3. タグ判定関数 (修正版) ---
 def analyze_video_tags(title, description, fixed_tags):
     detected_category = "未分類"
     detected_keywords = set()
+    
     title_lower = str(title).lower()
     description_lower = str(description).lower() if description else ""
 
+    # ★修正ポイント: ハンドルネームマップのキーをすべて小文字に変換した新しい辞書を作る
+    # これにより、定義が "@KaidaHaru" でも "@kaidaharu" として検索できるようになる
+    handle_map_lower = {k.lower(): v for k, v in HANDLE_TO_NAME_MAP.items()}
+
+    # 1. カテゴリ判定
     for cat in CATEGORY_LIST:
         if cat in title:
             detected_category = cat
             break
+
     # 2. キーワード判定
     for group_name, keyword_list in KEYWORD_GROUPS.items():
         for keyword in keyword_list:
@@ -319,17 +329,19 @@ def analyze_video_tags(title, description, fixed_tags):
     if re.search(r'【[^】]*叶[^】]*】', title):
         detected_keywords.add("叶")
 
-
     # 4. 表記ゆれ・略称から正式タグを追加
     for slang, formal_tag in TAG_CONVERSION_MAP.items():
         if slang.lower() in title_lower:
             detected_keywords.add(formal_tag)
 
     # 5. ハンドルネーム(@xxxx)の検出
+    # 概要欄から @xxxx を抽出（description_lowerを使っているので抽出結果は小文字）
     found_handles = re.findall(r'(@[\w\.\-]+)', description_lower)
+    
     for handle in found_handles:
-        if handle in HANDLE_TO_NAME_MAP:
-            detected_keywords.add(HANDLE_TO_NAME_MAP[handle])
+        # ★修正: 小文字化した辞書を使って検索する
+        if handle in handle_map_lower:
+            detected_keywords.add(handle_map_lower[handle])
 
     # 6. ユニットとメンバーの相互補完
     for unit_name, members in UNIT_GROUP_MAP.items():
@@ -344,26 +356,44 @@ def analyze_video_tags(title, description, fixed_tags):
         for tag in fixed_tags:
             detected_keywords.add(tag)
 
-
-    for group_name, keyword_list in KEYWORD_GROUPS.items():
-        for keyword in keyword_list:
-            if keyword.lower() in title_lower:
-                detected_keywords.add(keyword)
-
-    if fixed_tags:
-        for tag in fixed_tags:
-            detected_keywords.add(tag)
-
-    # ゲーム判定
+    # 8. 追加要件: ゲーム名が含まれる場合のカテゴリ処理
+    has_game_keyword = False
     games_set = set(KEYWORD_GROUPS["GAMES"])
     if not detected_keywords.isdisjoint(games_set):
+        has_game_keyword = True
+    
+    if has_game_keyword:
         if detected_category == "未分類":
             detected_category = "ゲーム実況"
         elif detected_category != "ゲーム実況":
+            # 既にカテゴリ(例:コラボ)が入っているなら、ゲーム実況をキーワードに追加
             detected_keywords.add("ゲーム実況")
+    if has_game_keyword:
+        if detected_category == "未分類":
+            detected_category = "歌動画"
+        elif detected_category != "歌動画":
+            # 既にカテゴリ(例:コラボ)が入っているなら、ゲーム実況をキーワードに追加
+            detected_keywords.add("歌動画")
+    if has_game_keyword:
+        if detected_category == "未分類":
+            detected_category = "歌配信"
+        elif detected_category != "ゲーム実況":
+            # 既にカテゴリ(例:コラボ)が入っているなら、ゲーム実況をキーワードに追加
+            detected_keywords.add("歌配信")
+    if has_game_keyword:
+        if detected_category == "未分類":
+            detected_category = "楽器配信・動画"
+        elif detected_category != "楽器配信・動画":
+            # 既にカテゴリ(例:コラボ)が入っているなら、ゲーム実況をキーワードに追加
+            detected_keywords.add("楽器配信・動画")
+    if has_game_keyword:
+        if detected_category == "未分類":
+            detected_category = "ゲーム実況"
+        elif detected_category != "ゲーム実況":
+            # 既にカテゴリ(例:コラボ)が入っているなら、ゲーム実況をキーワードに追加
+            detected_keywords.add("踊り動画")
 
     return detected_category, list(detected_keywords)
-
 # --- 4. YouTube API ---
 def get_uploads_playlist_id(youtube, channel_id):
     try:
@@ -517,4 +547,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
