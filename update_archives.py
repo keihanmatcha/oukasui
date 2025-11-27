@@ -611,6 +611,7 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
     return videos
 
 # --- 5. GitHub更新処理 ---
+# --- 5. GitHub更新処理 ---
 def update_github_json(new_videos):
     headers = {
         "Authorization": f"token {GITHUB_TOKEN}",
@@ -629,10 +630,20 @@ def update_github_json(new_videos):
         existing_content = content_info['content']
         existing_sha = content_info['sha']
         try:
+            # ★変更点1: 'utf-8-sig' にすることでBOM付きファイルに対応
             decoded_content = base64.b64decode(existing_content).decode('utf-8-sig')
             existing_videos = json.loads(decoded_content)
-        except json.JSONDecodeError:
-            print("❌ 【重要】GitHub上のJSONファイルの構文が壊れています。処理を停止します。")
+        except json.JSONDecodeError as e:
+            # ★変更点2: エラーの詳細を表示して、原因を特定しやすくする
+            print(f"❌ 【重要】GitHub上のJSONファイルの構文が壊れています。")
+            print(f"   エラー詳細: {e}")
+            # エラー箇所の前後を表示（デバッグ用）
+            try:
+                start = max(0, e.pos - 20)
+                end = min(len(decoded_content), e.pos + 20)
+                print(f"   該当箇所付近: ...{decoded_content[start:end]}...")
+            except:
+                pass
             sys.exit(1)
         except Exception as e:
             print(f"❌ 予期せぬエラー: {e}")
@@ -719,7 +730,7 @@ def update_github_json(new_videos):
     else:
         print(f"❌ コミット失敗: {put_res.status_code}")
         print(put_res.text)
-
+        
 # --- 6. メイン処理 ---
 def main():
     print("--- 長尾景＆VΔLZ アーカイブ全件更新スクリプト開始 ---")
@@ -747,6 +758,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
