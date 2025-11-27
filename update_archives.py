@@ -279,12 +279,14 @@ HANDLE_TO_NAME_MAP = {
     "@MurakumoKagetsu": "叢雲カゲツ",
     "@KoyanagiRou": "小柳ロウ",
     "@InamiRai": "伊波ライ",
-    "@kaise": "魁星",
+    "@kaisei": "魁星",
     "@KitamiYusei": "北見遊征",
     "@NagisaTrout": "渚トラウト",
     "@MilanKestrel": "ミラン・ケストレル",
     "@SakayoriSoma": "酒寄颯馬",
     "@NanaseSuzuna": "七瀬すず菜",
+    "@HitotsubashiAyato": "一橋綾人",
+    "@ItsukiSakyo": "五木左京",
     "@TogawaNonoha": "十河ののは",
     "@KozueMone": "梢桃音",
     "@LunLun_nijisanji": "ルンルン",
@@ -293,6 +295,8 @@ HANDLE_TO_NAME_MAP = {
     "@Saotomeberry": "早乙女ベリー",
     "@KadooMikaru": "蝸堂みかる",
     "@ShigaRiko": "司賀りこ",
+    "@TachitsuteToto": "立伝都々",
+    "@TamanoiNana": "珠乃井ナナ",
     "@ShinomiyaYuno": "篠宮ゆの",
     "@Kisara_nijisanji": "綺沙良",
     "@NekoyashikiMiku": "猫屋敷美紅",
@@ -747,5 +751,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
