@@ -80,7 +80,7 @@ KEYWORD_GROUPS = {
         "SitR名古屋", "フ景罪", "ふつまひ", "めにまにかんぱにー","えなかき"
     ],
     "GAMES": [
-        "アイドルマスター SideM", "あつまれどうぶつの森", "Apex Legends", "A Little to the Left","BUCK SHOT ROULETTE",
+        "アイドルマスター SideM", "あつまれどうぶつの森", "Apex Legends", "A Little to the Left","BUCK SHOT ROULETTE","ARK",
         "ARK:Survival Ascended", "ARK:Survival Evolved", "ARK-アイランドマップ", "ARK-ラグナロクマップ","ときめきメモリアル",
         "ARK-エクスティンクションマップ", "ARK-クリスタルアイルズマップ", "ASTRONEER", "Blazing Sails",
         "Cooking Simulator", "Dead by Daylight", "eFootball ウイニングイレブン", "ウマ娘　プリティダービー",
@@ -763,6 +763,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
