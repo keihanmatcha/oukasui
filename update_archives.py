@@ -12,8 +12,14 @@ YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", "YOUR_YOUTUBE_API_KEY")
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "YOUR_GITHUB_TOKEN")
 GITHUB_REPO_OWNER = "keihanmatcha"
 GITHUB_REPO_NAME = "oukasui"
-JSON_FILE_PATH = "archives/archive_videos.json"
 MAX_PAGES_TO_FETCH = 100
+JSON_FILE_PATH = "archives/archive_videos.json" # 自動更新用ファイル
+
+CHANNELS = [
+    { "id": "UCXW4MqCQn-jCaxlX-nn-BYg", "name": "長尾景" },
+    { "id": "UCh-GyPNxvjTsza0ptjnkh1w", "name": "VΔLZ", "fixed_tags": ["甲斐田晴", "弦月藤士郎", "VΔLZ"] }
+]
+
 
 CHANNELS = [
     {
@@ -486,6 +492,18 @@ UNIT_GROUP_MAP = {
 
 # --- 3. タグ判定関数 ---
 def analyze_video_tags(title, description, fixed_tags):
+    # (元のコードと同じロジック)
+    detected_category = "未分類"
+    detected_keywords = set()
+    title_lower = str(title).lower()
+    description_lower = str(description).lower() if description else ""
+
+    for cat in CATEGORY_LIST:
+        if cat in title:
+            detected_category = cat
+            break
+
+def analyze_video_tags(title, description, fixed_tags):
     detected_category = "未分類"
     detected_keywords = set()
     
@@ -532,6 +550,12 @@ def analyze_video_tags(title, description, fixed_tags):
         for tag in fixed_tags:
             detected_keywords.add(tag)
 
+    if fixed_tags:
+        for tag in fixed_tags:
+            detected_keywords.add(tag)
+
+    return detected_category, list(detected_keywords)
+
     # 8. 追加要件: ゲーム名が含まれる場合のカテゴリ処理
     has_game_keyword = False
     games_set = set(KEYWORD_GROUPS["GAMES"])
@@ -552,9 +576,64 @@ def get_uploads_playlist_id(youtube, channel_id):
     try:
         resp = youtube.channels().list(part='contentDetails', id=channel_id).execute()
         return resp['items'][0]['contentDetails']['relatedPlaylists']['uploads']
+    except Exception:
+        return None
+
+def get_uploads_playlist_id(youtube, channel_id):
+    try:
+        resp = youtube.channels().list(part='contentDetails', id=channel_id).execute()
+        return resp['items'][0]['contentDetails']['relatedPlaylists']['uploads']
     except Exception as e:
         print(f"❌ Error getting playlist ID for {channel_id}: {e}")
         return None
+
+def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
+    videos = []
+    next_page_token = None
+    page_count = 0
+    
+    while page_count < MAX_PAGES_TO_FETCH:
+        try:
+            request = youtube.playlistItems().list(
+                part='snippet,contentDetails', playlistId=playlist_id,
+                maxResults=50, pageToken=next_page_token
+            )
+            response = request.execute()
+            items = response.get('items', [])
+            if not items: break
+                
+            for item in items:
+                snippet = item['snippet']
+                published_at = snippet.get('publishedAt')
+                if not published_at: continue
+                
+                dt = datetime.strptime(published_at[:10], '%Y-%m-%d')
+                published_date = dt.strftime('%Y-%m-%d')
+                video_id = item['contentDetails']['videoId']
+                video_title = snippet['title']
+                video_description = snippet.get('description', '')
+                
+                category, keywords = analyze_video_tags(video_title, video_description, fixed_tags)
+                
+                videos.append({
+                    "youtubeId": video_id,
+                    "title": video_title,
+                    "channel": channel_name,
+                    "date": published_date,
+                    "thumbnail": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg",
+                    "category": [category] if isinstance(category, str) else category, # 配列に統一
+                    "keywords": keywords,
+                    "songs": []
+                })
+            
+            next_page_token = response.get('nextPageToken')
+            page_count += 1
+            if not next_page_token: break
+        except Exception as e:
+            print(f"Error: {e}")
+            break
+    return videos
+
 
 def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
     videos = []
@@ -764,8 +843,28 @@ def main():
 if __name__ == "__main__":
     main()
 
+def main():
+    if not YOUTUBE_API_KEY or not GITHUB_TOKEN:
+        print("Error: API Key or Token missing.")
+        return
 
+    youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
+    all_videos = []
 
+    for ch in CHANNELS:
+        pid = get_uploads_playlist_id(youtube, ch['id'])
+        if pid:
+            vids = fetch_videos_from_playlist(youtube, pid, ch['name'], ch.get('fixed_tags', []))
+            all_videos.extend(vids)
+    
+    # 日付順にソート
+    all_videos.sort(key=lambda x: x['date'], reverse=True)
+    
+    if all_videos:
+        overwrite_github_json(all_videos)
+
+if __name__ == "__main__":
+    main()
 
 
 
