@@ -179,7 +179,7 @@ TAG_CONVERSION_MAP = {
     "APEX": "Apex Legends",
     "エペ": "Apex Legends",
     "ポケポケ":"Pokémon Trading Card Game Pocket",
-    "にじイカ祭り":"にじさんじイカ祭り"
+    "にじイカ祭り":"にじさんじイカ祭り",
     "歌枠": "歌配信",
     "歌って": "歌動画",
     "歌ってみた": "歌動画",
@@ -550,6 +550,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
