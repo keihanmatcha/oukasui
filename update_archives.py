@@ -134,7 +134,7 @@ TAG_CONVERSION_MAP = {
     "マリオカート8デラックス": "マリオカート8DX",
     "にじばろカスタム":"にじさんじVALORANTカスタム",
     "スプラ": "Splatoon",
-    "Golf it":"Golf It!"
+    "Golf it":"Golf It!",
     "モンハンワイルズ":"モンスターハンターワイルズ",
     "スプラトゥーン": "Splatoon",
     "Pokemon LEGENDS アルセウス":"Pokémon LEGENDS アルセウス",
@@ -550,6 +550,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
