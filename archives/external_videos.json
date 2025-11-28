@@ -1398,18 +1398,26 @@
     "date": "2023-12-06",
     "thumbnail": "https://i.ytimg.com/vi/NXArfAzEN0Y/mqdefault.jpg",
     "category": ["雑談","歌配信"],
-    "keywords": ["Petra Gurin","たい変"]
+    "keywords": ["Petra Gurin","たい変"],
+    "songs":[
+    {"title":"ゲスト","artist":"Petra Gurin","start":8060},
+    {"title":"KICK BACK","artist":"米津玄師","start":8374},
+    {"title":"ハレハレヤ","artist":"羽生まゐご","start":9126},
+    ]
   },
   {
     "youtubeId": "5ESXILcf1j4",
-    "title": "【【歌枠】100曲歌いきるまでスタジオから帰れません‼【にじさんじ | 緑仙】",
+    "title": "【歌枠】100曲歌いきるまでスタジオから帰れません‼【にじさんじ | 緑仙】",
     "channel": "緑仙",
     "date": "2023-10-28",
     "thumbnail": "https://i.ytimg.com/vi/5ESXILcf1j4/mqdefault.jpg",
     "category": ["歌配信","雑談"],
     "keywords": ["緑仙","弦月藤士郎"],
     "songs":[
-      {"title":"助っ人","artist":["緑仙","弦月藤士郎"],"start":18478}
+      {"title":"助っ人","artist":["緑仙","弦月藤士郎"],"start":18420},
+      {"title":"魔法の絨毯","artist":["川崎鷹也"],"start":19233},
+      {"title":"ヴィラン","artist":["てにをは"],"start":20104},
+      {"title":"ドライフラワーwith緑仙＆弦月","artist":["優里"],"start":20962}
     ]
   },
   {
