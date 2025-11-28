@@ -3449,7 +3449,7 @@
     "channel": "長尾景",
     "date": "2025-02-15",
     "thumbnail": "https://i.ytimg.com/vi/45hDZYg2lqA/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [
       { "title": "ドライフラワー", "artist": "優里", "start":409 },
@@ -3469,7 +3469,7 @@
     "channel": "長尾景",
     "date": "2024-10-11",
     "thumbnail": "https://i.ytimg.com/vi/dipDd1JZrAA/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [
       { "title": "Rolling star", "artist": "YUI", "start":349  },
@@ -3488,7 +3488,7 @@
     "channel": "長尾景",
     "date": "2024-07-03",
     "thumbnail": "https://i.ytimg.com/vi/TBsNnpQKeYw/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [
 
@@ -3516,7 +3516,7 @@
     "channel": "長尾景",
     "date": "2024-05-30",
     "thumbnail": "https://i.ytimg.com/vi/hq2dr8cGFb0/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [
       { "title": "ドライフラワー", "artist": "優里", "start":186 },
@@ -3535,7 +3535,7 @@
     "channel": "長尾景",
     "date": "2024-02-24",
     "thumbnail": "https://i.ytimg.com/vi/Ot7naD7jiMg/mqdefault.jpg",
-    "category": "未分類",
+    "category": ["歌配信","雑談"],
     "keywords": [],
     "songs": [{ "title": "Pretender ", "artist": "Official髭男dism", "start":642 },
 
@@ -3558,17 +3558,7 @@
     "channel": "長尾景",
     "date": "2024-02-23",
     "thumbnail": "https://i.ytimg.com/vi/sm7KVjHsmIA/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "UEm_4ObbkXw",
-    "title": "【スプラトゥーン3】完　全　初　見【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-02-22",
-    "thumbnail": "https://i.ytimg.com/vi/UEm_4ObbkXw/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌動画",
     "keywords": [],
     "songs": []
   },
@@ -3578,34 +3568,12 @@
     "channel": "VΔLZ",
     "date": "2024-02-22",
     "thumbnail": "https://i.ytimg.com/vi/Ca4KfqGrYMQ/mqdefault.jpg",
-    "category": "未分類",
+    "category": "桜魔皇国",
     "keywords": [
       "甲斐田晴",
       "弦月藤士郎",
       "VΔLZ"
     ],
-    "songs": []
-  },
-  {
-    "youtubeId": "mFBqgmU_Kiw",
-    "title": "【雀魂】おなが雀傑珍道中【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-02-20",
-    "thumbnail": "https://i.ytimg.com/vi/mFBqgmU_Kiw/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "雀魂"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "9jGb0VCXev0",
-    "title": "【PSO2NGS】ケイナガオ実装！？？【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-02-20",
-    "thumbnail": "https://i.ytimg.com/vi/9jGb0VCXev0/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
     "songs": []
   },
   {
@@ -3614,23 +3582,11 @@
     "channel": "VΔLZ",
     "date": "2024-02-20",
     "thumbnail": "https://i.ytimg.com/vi/jsgQdJGWzVc/mqdefault.jpg",
-    "category": "未分類",
+    "category": "桜魔皇国",
     "keywords": [
       "甲斐田晴",
       "弦月藤士郎",
       "VΔLZ"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "Xh3N_gfp9Qk",
-    "title": "【ツイステッドワンダーランド】クロウリーガチャ！！引くべ！！！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-02-19",
-    "thumbnail": "https://i.ytimg.com/vi/Xh3N_gfp9Qk/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "ツイステッドワンダーランド"
     ],
     "songs": []
   },
@@ -3640,22 +3596,10 @@
     "channel": "VΔLZ",
     "date": "2024-02-19",
     "thumbnail": "https://i.ytimg.com/vi/_rqzy2DTcsE/mqdefault.jpg",
-    "category": "未分類",
+    "category": "桜魔皇国",
     "keywords": [
       "甲斐田晴",
       "弦月藤士郎",
-      "VΔLZ"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "yARyA_UPhdg",
-    "title": "【Party Animals】年明け初ばるつ！あけましておめでとう？？【VΔLZ/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-02-18",
-    "thumbnail": "https://i.ytimg.com/vi/yARyA_UPhdg/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
       "VΔLZ"
     ],
     "songs": []
@@ -3666,7 +3610,7 @@
     "channel": "VΔLZ",
     "date": "2024-02-18",
     "thumbnail": "https://i.ytimg.com/vi/1jxXMUPmngs/mqdefault.jpg",
-    "category": "未分類",
+    "category": ["桜魔皇国","プロモーション"],
     "keywords": [
       "甲斐田晴",
       "弦月藤士郎",
@@ -3680,25 +3624,11 @@
     "channel": "VΔLZ",
     "date": "2024-02-17",
     "thumbnail": "https://i.ytimg.com/vi/_ZZSXbl8kGg/mqdefault.jpg",
-    "category": "未分類",
+    "category": ["桜魔皇国","プロモーション"],
     "keywords": [
       "甲斐田晴",
       "弦月藤士郎",
       "VΔLZ"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "ZtyDsJG311Y",
-    "title": "VΔLZ - No Reason.（「にじさんじフェス2023 前夜祭」Special Edit Ver.）",
-    "channel": "VΔLZ",
-    "date": "2024-02-16",
-    "thumbnail": "https://i.ytimg.com/vi/ZtyDsJG311Y/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "VΔLZ",
-      "甲斐田晴",
-      "弦月藤士郎"
     ],
     "songs": []
   },
@@ -3708,33 +3638,11 @@
     "channel": "VΔLZ",
     "date": "2024-02-09",
     "thumbnail": "https://i.ytimg.com/vi/8KQ1TmYkX0w/mqdefault.jpg",
-    "category": "未分類",
+    "category": ["桜魔皇国","プロモーション"],
     "keywords": [
       "甲斐田晴",
       "弦月藤士郎",
       "VΔLZ"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "mu_w1PbmrzI",
-    "title": "#３【モンハンワールド】2nd Gはここですか？【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-02-08",
-    "thumbnail": "https://i.ytimg.com/vi/mu_w1PbmrzI/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "CgEvY6djXhU",
-    "title": "【雀魂】雀傑2いくぞおおおお！！！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-02-06",
-    "thumbnail": "https://i.ytimg.com/vi/CgEvY6djXhU/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "雀魂"
     ],
     "songs": []
   },
@@ -3744,292 +3652,11 @@
     "channel": "VΔLZ",
     "date": "2024-02-06",
     "thumbnail": "https://i.ytimg.com/vi/Z47aEeKzahY/mqdefault.jpg",
-    "category": "未分類",
+    "category": ["桜魔皇国","プロモーション"],
     "keywords": [
       "甲斐田晴",
       "弦月藤士郎",
       "VΔLZ"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "KpADZNjioeE",
-    "title": "【#にじさんじ共通テスト】共テって何ですか？センター試験ですよね？？【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-02-05",
-    "thumbnail": "https://i.ytimg.com/vi/KpADZNjioeE/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "RoM6Ld5zJ9Y",
-    "title": "【雀魂】雀傑初陣！！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-02-03",
-    "thumbnail": "https://i.ytimg.com/vi/RoM6Ld5zJ9Y/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "雀魂"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "Gtkt7Flv1p8",
-    "title": "【#おながのおへや】配信部屋お披露目配信【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-02-02",
-    "thumbnail": "https://i.ytimg.com/vi/Gtkt7Flv1p8/mqdefault.jpg",
-    "category": "お披露目配信",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "bYRzh0Z0ObY",
-    "title": "【ツイステッドワンダーランド】ヴィル様！自分もやれます！！5章続き！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-02-02",
-    "thumbnail": "https://i.ytimg.com/vi/bYRzh0Z0ObY/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "ツイステッドワンダーランド"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "ldmp36kYzB8",
-    "title": "VΔLZ - ミックスナッツ(『にじさんじユニット歌謡祭2022』Special Edit Ver.)",
-    "channel": "VΔLZ",
-    "date": "2024-02-02",
-    "thumbnail": "https://i.ytimg.com/vi/ldmp36kYzB8/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "VΔLZ",
-      "にじさんじユニット歌謡祭2022",
-      "甲斐田晴",
-      "弦月藤士郎"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "8b5bk_s8jRI",
-    "title": "【スプラトゥーン3】プラべべべべべべべべ【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-31",
-    "thumbnail": "https://i.ytimg.com/vi/8b5bk_s8jRI/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "Av6xtcLaNJs",
-    "title": "【Lethal Company】めにまにめにまにかんぱにー【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-30",
-    "thumbnail": "https://i.ytimg.com/vi/Av6xtcLaNJs/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "めにまにかんぱにー"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "MmvS9gc2oME",
-    "title": "#２【モンハンワールド】2nd Gはここですか？【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-29",
-    "thumbnail": "https://i.ytimg.com/vi/MmvS9gc2oME/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "Vl1srHibdj4",
-    "title": "【雀魂】筋トレ麻雀ってなんだ？？【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-29",
-    "thumbnail": "https://i.ytimg.com/vi/Vl1srHibdj4/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "雀魂"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "lJlFSnjD11o",
-    "title": "#１【モンハンワールド】2nd Gはここですか？【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-27",
-    "thumbnail": "https://i.ytimg.com/vi/lJlFSnjD11o/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "GWCS04evHRU",
-    "title": "【刀剣乱舞無双】久々の出陣！！暴れるぞーーー！！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-23",
-    "thumbnail": "https://i.ytimg.com/vi/GWCS04evHRU/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "刀剣乱舞"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "0JGCRnwWIrs",
-    "title": "【切り抜き】どんな無茶ぶりにも応える長尾景【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-22",
-    "thumbnail": "https://i.ytimg.com/vi/0JGCRnwWIrs/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "える"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "W_LUfweid6c",
-    "title": "【雀魂】雀傑雀傑雀傑雀傑雀傑雀傑雀傑雀傑　#のんでりず雀傑並走バトル 【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-21",
-    "thumbnail": "https://i.ytimg.com/vi/W_LUfweid6c/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "雀魂"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "ETkAyyyuqzs",
-    "title": "【MV】#VΔLZ - 扉",
-    "channel": "VΔLZ",
-    "date": "2024-01-19",
-    "thumbnail": "https://i.ytimg.com/vi/ETkAyyyuqzs/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "VΔLZ",
-      "甲斐田晴",
-      "弦月藤士郎"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "6lcZxot8FLU",
-    "title": "【雀魂】雀傑目指して猛進！！！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-18",
-    "thumbnail": "https://i.ytimg.com/vi/6lcZxot8FLU/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "雀魂"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "uagKmOl09kk",
-    "title": "【#恋と深空】完　全　初　見【長尾景／にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-18",
-    "thumbnail": "https://i.ytimg.com/vi/uagKmOl09kk/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "YYL3WS-Zp-A",
-    "title": "【スプラトゥーン3】なんでここにホコ君が！？？【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-17",
-    "thumbnail": "https://i.ytimg.com/vi/YYL3WS-Zp-A/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "s8g5mTAJJNo",
-    "title": "【ツイステッドワンダーランド】5章！オンボロ寮合宿開始！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-16",
-    "thumbnail": "https://i.ytimg.com/vi/s8g5mTAJJNo/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "ツイステッドワンダーランド"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "anh2-D7qHDQ",
-    "title": "【雀魂】にじ麻雀杯準優勝の俺なら41万人達成前に雀傑いけないわけｗｗｗｗ【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-15",
-    "thumbnail": "https://i.ytimg.com/vi/anh2-D7qHDQ/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "雀魂"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "fWE3QIXwWG8",
-    "title": "【切り抜き】嘘だろ母ちゃん!?長尾母の面白エピソード【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-13",
-    "thumbnail": "https://i.ytimg.com/vi/fWE3QIXwWG8/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "VGhF8KJ6OJU",
-    "title": "【#にじエペさい2024】ほ　ん　ば　ん　おなが支店【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-12",
-    "thumbnail": "https://i.ytimg.com/vi/VGhF8KJ6OJU/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "km4xGBbSZAs",
-    "title": "【APEX】前シーズン総試合合計数6試合でリーダー！？？【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-11",
-    "thumbnail": "https://i.ytimg.com/vi/km4xGBbSZAs/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "P66vXC-S5Ho",
-    "title": "【APEX】突発ユン君カスタム乗り込み【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-10",
-    "thumbnail": "https://i.ytimg.com/vi/P66vXC-S5Ho/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "TS7dTq_P8Co",
-    "title": "【APEX】どうも、浦島景太郎です【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-10",
-    "thumbnail": "https://i.ytimg.com/vi/TS7dTq_P8Co/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "RS0VDcZ7S58",
-    "title": "【ツイステッドワンダーランド】新年初ツイステ！！5章突入～～～！！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-10",
-    "thumbnail": "https://i.ytimg.com/vi/RS0VDcZ7S58/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "ツイステッドワンダーランド"
     ],
     "songs": []
   },
@@ -4039,7 +3666,7 @@
     "channel": "長尾景",
     "date": "2024-01-08",
     "thumbnail": "https://i.ytimg.com/vi/atxSCnGHqug/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "ドライフラワー", "artist": "優里", "start":227 },
 
@@ -4058,366 +3685,16 @@
       { "title": "READY STEADY GO", "artist": "L'Arc~en~Ciel", "start":3330  }]
   },
   {
-    "youtubeId": "fy_2OE6rFaY",
-    "title": "【#にじさんじ麻雀杯2024】決勝！！？？？？？？【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-07",
-    "thumbnail": "https://i.ytimg.com/vi/fy_2OE6rFaY/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "Z8LMJ88xKBc",
-    "title": "【#にじさんじ麻雀杯2024】2年連続準決・強豪おみくじのケイナガオ【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-07",
-    "thumbnail": "https://i.ytimg.com/vi/Z8LMJ88xKBc/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "nQedTTQ2XBM",
-    "title": "【#にじさんじ麻雀杯2024】今年も予選突破ぁ？？？【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-07",
-    "thumbnail": "https://i.ytimg.com/vi/nQedTTQ2XBM/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "J4Br60tK1xI",
-    "title": "【#にじさんじ麻雀杯2024】予選I卓 ふぁんたじすた長尾！！参る！！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-06",
-    "thumbnail": "https://i.ytimg.com/vi/J4Br60tK1xI/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "XbKDoR-uqhU",
-    "title": "【雀魂】大会前日麻雀練習【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-05",
-    "thumbnail": "https://i.ytimg.com/vi/XbKDoR-uqhU/mqdefault.jpg",
-    "category": "大会",
-    "keywords": [
-      "雀魂"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "5Pgpp8T5USI",
-    "title": "【雀魂】年末年始雑談しながら麻雀練習【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-04",
-    "thumbnail": "https://i.ytimg.com/vi/5Pgpp8T5USI/mqdefault.jpg",
-    "category": "雑談",
-    "keywords": [
-      "雀魂"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "g_23n6fo698",
-    "title": "【スーパーマリオブラザーズ ワンダー】ケイナガオ22年ぶりマリオブラザーズ　＃3【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-04",
-    "thumbnail": "https://i.ytimg.com/vi/g_23n6fo698/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "スーパーマリオブラザーズ"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "hDf7OlUZIsk",
-    "title": "【歌ってみた】Overdose / なとり【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-03",
-    "thumbnail": "https://i.ytimg.com/vi/hDf7OlUZIsk/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "Xh8rhxX7wWI",
-    "title": "【#おなが新衣装】お　と　し　だ　ま【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-01-03",
-    "thumbnail": "https://i.ytimg.com/vi/Xh8rhxX7wWI/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "Bi7OPSYrxHo",
-    "title": "【歌って踊ってみた】ロケットサイダー【長尾景/相羽ういは/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-28",
-    "thumbnail": "https://i.ytimg.com/vi/Bi7OPSYrxHo/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "相羽ういは"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "6R3ywgJ5ARU",
-    "title": "【雑談】2023年配信納め雑談【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-27",
-    "thumbnail": "https://i.ytimg.com/vi/6R3ywgJ5ARU/mqdefault.jpg",
-    "category": "雑談",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "RUSJz5AeKSA",
-    "title": "【雑談】にじフェス振り返りーーーー！！！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-26",
-    "thumbnail": "https://i.ytimg.com/vi/RUSJz5AeKSA/mqdefault.jpg",
-    "category": "雑談",
-    "keywords": [
-      "にじフェス"
-    ],
-    "songs": []
-  },
-  {
     "youtubeId": "mqo7OP994yg",
     "title": "『桜魔大戦譚　〜相対するモノたちへ〜』　ティザー映像",
     "channel": "VΔLZ",
     "date": "2023-12-22",
     "thumbnail": "https://i.ytimg.com/vi/mqo7OP994yg/mqdefault.jpg",
-    "category": "未分類",
+    "category": ["桜魔皇国","プロモーション"],
     "keywords": [
       "甲斐田晴",
       "弦月藤士郎",
       "VΔLZ"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "a8-yOzYjpBs",
-    "title": "【歌ってみた】天樂 covered by VΔLZ(弦月藤士郎)",
-    "channel": "VΔLZ",
-    "date": "2023-12-20",
-    "thumbnail": "https://i.ytimg.com/vi/a8-yOzYjpBs/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "弦月藤士郎",
-      "VΔLZ",
-      "甲斐田晴"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "2QTGo5E24qE",
-    "title": "【雑談】フェス前最終雑談【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-17",
-    "thumbnail": "https://i.ytimg.com/vi/2QTGo5E24qE/mqdefault.jpg",
-    "category": "雑談",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "TSuuGhXutIk",
-    "title": "【8番出口】二人羽織8番出口 #フ景罪【長尾景/フミ/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-17",
-    "thumbnail": "https://i.ytimg.com/vi/TSuuGhXutIk/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "フミ",
-      "フ景罪"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "wOu2ltgcxww",
-    "title": "【マイクラ】#けいあい 俺たちの戦いはこれからだ【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-16",
-    "thumbnail": "https://i.ytimg.com/vi/wOu2ltgcxww/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "けいあい"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "qg1AfGwmiOs",
-    "title": "【ツイステッドワンダーランド】ドッカーン！！4章クライマックス！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-15",
-    "thumbnail": "https://i.ytimg.com/vi/qg1AfGwmiOs/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "ツイステッドワンダーランド"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "C63DY2ulTIY",
-    "title": "【スプラトゥーン3】ケイナガオ主催プラべ＃∞回目【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-15",
-    "thumbnail": "https://i.ytimg.com/vi/C63DY2ulTIY/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "SizA1IJGOco",
-    "title": "【 #にじらす 】ソロらすと時々めにまに【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-14",
-    "thumbnail": "https://i.ytimg.com/vi/SizA1IJGOco/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "Df54haWKTS8",
-    "title": "【#ベルさんあんね】飲酒雑談コラボ【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-13",
-    "thumbnail": "https://i.ytimg.com/vi/Df54haWKTS8/mqdefault.jpg",
-    "category": "雑談",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "WOyvY04L4kk",
-    "title": "【ツイステッドワンダーランド】4章最後まで？いけるかな？？＆ウルトラグルーヴィタイム【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-10",
-    "thumbnail": "https://i.ytimg.com/vi/WOyvY04L4kk/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "ツイステッドワンダーランド"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "s-u9uq2stb4",
-    "title": "【#クリアバー応援団】俺たち、団長になって応援合戦するぞー【長尾景／にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-09",
-    "thumbnail": "https://i.ytimg.com/vi/s-u9uq2stb4/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "6bV69YVH5J4",
-    "title": "【 #にじらす 】Rust初上陸！！おしえて！りつきんしゃちょーーー！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-09",
-    "thumbnail": "https://i.ytimg.com/vi/6bV69YVH5J4/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "SL0eyNQzROw",
-    "title": "【切り抜き】クリスマスプレゼントの思い出【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-08",
-    "thumbnail": "https://i.ytimg.com/vi/SL0eyNQzROw/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "iPnZp9yk2Zs",
-    "title": "【８番出口】8番出口ガチRTAちゃんねる【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-07",
-    "thumbnail": "https://i.ytimg.com/vi/iPnZp9yk2Zs/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "xswI6KIDyM4",
-    "title": "【８番出口】1本道で迷子とかｗｗｗｗｗｗｗ【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-04",
-    "thumbnail": "https://i.ytimg.com/vi/xswI6KIDyM4/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "trww3zv11KI",
-    "title": "【スプラトゥーン3】新　要　素　お　も　ろ【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-03",
-    "thumbnail": "https://i.ytimg.com/vi/trww3zv11KI/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "nrN53TiN8jY",
-    "title": "【ツイステッドワンダーランド】4章突入ーーー！！また推し増えるカナ！？【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-02",
-    "thumbnail": "https://i.ytimg.com/vi/nrN53TiN8jY/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "える",
-      "ツイステッドワンダーランド"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "cacTc3KhVtY",
-    "title": "【スプラトゥーン3】チャクチ？チャクチ！？チャクチ！！チャクチ！！！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-12-01",
-    "thumbnail": "https://i.ytimg.com/vi/cacTc3KhVtY/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "p8c6gIyQWP4",
-    "title": "【スーパーマリオブラザーズ ワンダー】ケイナガオ22年ぶりマリオブラザーズ　＃2【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-11-30",
-    "thumbnail": "https://i.ytimg.com/vi/p8c6gIyQWP4/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "スーパーマリオブラザーズ"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "ZUoj5kK3IG0",
-    "title": "【OW２】圧　倒　的　姫　枠【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-11-27",
-    "thumbnail": "https://i.ytimg.com/vi/ZUoj5kK3IG0/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "2qC4QqyXkQc",
-    "title": "【ツイステッドワンダーランド】3章クライマックス！？？？【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-11-26",
-    "thumbnail": "https://i.ytimg.com/vi/2qC4QqyXkQc/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "ツイステッドワンダーランド"
     ],
     "songs": []
   },
@@ -4427,7 +3704,7 @@
     "channel": "長尾景",
     "date": "2023-11-24",
     "thumbnail": "https://i.ytimg.com/vi/uE0tR7WaCcs/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "カタオモイ", "artist": "Aimer", "start":336  },
 
@@ -4450,7 +3727,7 @@
     "channel": "長尾景",
     "date": "2023-07-24",
     "thumbnail": "https://i.ytimg.com/vi/WuWZy_Pg__M/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "ドライフラワー", "artist": "優里", "start":140  },
 
@@ -4473,7 +3750,7 @@
     "channel": "長尾景",
     "date": "2023-04-29",
     "thumbnail": "https://i.ytimg.com/vi/kZhHqkemVHQ/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "ドライフラワー", "artist": "優里", "start":513  },
 
@@ -4497,7 +3774,7 @@
     "channel": "長尾景",
     "date": "2023-02-05",
     "thumbnail": "https://i.ytimg.com/vi/JqZyxHyqPAI/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "猫", "artist": "DISH//", "start":465  },
 
@@ -4522,7 +3799,7 @@
     "channel": "長尾景",
     "date": "2022-12-26",
     "thumbnail": "https://i.ytimg.com/vi/zxfurvTtZyk/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [ { "title": "魔法の絨毯", "artist": "川崎鷹也", "start":476     },
 
@@ -4546,8 +3823,8 @@
     "channel": "長尾景",
     "date": "2022-08-28",
     "thumbnail": "https://i.ytimg.com/vi/T-GuyFVlcYk/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
+    "category": "歌配信",
+    "keywords": ["NIJIMelodyTime"],
     "songs": [{ "title": "猫", "artist": "DISH//", "start":122  },
 
       { "title": "愛をこめて花束を", "artist": "superfly", "start":526  },
@@ -4564,7 +3841,7 @@
     "channel": "長尾景",
     "date": "2022-07-23",
     "thumbnail": "https://i.ytimg.com/vi/haDhtRPMu9Y/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "Pretender", "artist": "Official髭男dism", "start":311  },
 
@@ -4583,7 +3860,7 @@
     "channel": "長尾景",
     "date": "2022-05-11",
     "thumbnail": "https://i.ytimg.com/vi/dYjNIKv-eK8/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "ロストマン", "artist": "BUMP OF CHICKEN", "start":170  },
 
@@ -4609,7 +3886,7 @@
     "channel": "長尾景",
     "date": "2022-04-24",
     "thumbnail": "https://i.ytimg.com/vi/ANCfaZrXU44/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "桜坂", "artist": "福山雅治", "start":365  },
 
@@ -4627,7 +3904,7 @@
     "channel": "長尾景",
     "date": "2022-04-07",
     "thumbnail": "https://i.ytimg.com/vi/dL9Kw4q1krk/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [ { "title": "GO!!!", "artist": "FLOW", "start":362  },
 
@@ -4649,32 +3926,12 @@
 ]
   },
   {
-    "youtubeId": "Rjlr4DNqOPA",
-    "title": "【マイクラ】倉庫進めろ【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2022-04-05",
-    "thumbnail": "https://i.ytimg.com/vi/Rjlr4DNqOPA/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "ASx55LlwRbU",
-    "title": "【雑談)2年経っちゃった！！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2022-04-04",
-    "thumbnail": "https://i.ytimg.com/vi/ASx55LlwRbU/mqdefault.jpg",
-    "category": "雑談",
-    "keywords": [],
-    "songs": []
-  },
-  {
     "youtubeId": "VeYz54TAkLU",
     "title": "【歌枠】突発歌枠【長尾景/にじさんじ】",
     "channel": "長尾景",
     "date": "2022-04-02",
     "thumbnail": "https://i.ytimg.com/vi/VeYz54TAkLU/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "サウダージ", "artist": "ポルノグラフィティ", "start":360  },
 
@@ -4695,7 +3952,7 @@
     "channel": "長尾景",
     "date": "2022-03-27",
     "thumbnail": "https://i.ytimg.com/vi/SmxEJbnlwXM/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "カルマ", "artist": "BUMP OF CHICKEN", "start":543  },
 
@@ -4729,7 +3986,7 @@
     "channel": "長尾景",
     "date": "2022-03-22",
     "thumbnail": "https://i.ytimg.com/vi/uFbjG2NYVgA/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "丸の内サディスティック", "artist": "椎名林檎", "start":365  },
 
@@ -4754,7 +4011,7 @@
     "channel": "長尾景",
     "date": "2022-03-12",
     "thumbnail": "https://i.ytimg.com/vi/gRRvY-RaVCU/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "カタオモイ", "artist": "Aimer", "start":1583  },
 
@@ -4769,7 +4026,7 @@
   {
     "youtubeId": "HWFvMk-e1LQ",
     "title": "【歌枠】100日後に歌が上手くなるケイナガオ　56日目【長尾景/にじさんじ】",
-    "channel": "長尾景",
+    "channel": "歌配信",
     "date": "2022-03-02",
     "thumbnail": "https://i.ytimg.com/vi/HWFvMk-e1LQ/mqdefault.jpg",
     "category": "未分類",
@@ -4794,7 +4051,7 @@
     "channel": "長尾景",
     "date": "2022-02-19",
     "thumbnail": "https://i.ytimg.com/vi/zsQHps_IGU8/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "歌うたいのバラッド", "artist": "斉藤和義", "start":184  },
 
@@ -4819,7 +4076,7 @@
     "channel": "長尾景",
     "date": "2022-02-11",
     "thumbnail": "https://i.ytimg.com/vi/BeG_139HogE/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "DADDY!DADDY!DO!", "artist": "鈴木雅之", "start":160  },
 
@@ -4834,11 +4091,11 @@
       { "title": "One more time,One more chance", "artist": "山崎まさよし", "start":3422  }]
   },
   {
-    "youtubeId": "FsEjRjksfMo",
-    "title": "【マイクラ】あっとほーむな職場です【長尾景/にじさんじ】",
+    "youtubeId": "atxSCnGHqug",
+    "title": "【歌枠】新年初歌枠　～縦型配信出来るカナ？～【長尾景/にじさんじ】",
     "channel": "長尾景",
     "date": "2022-02-08",
-    "thumbnail": "https://i.ytimg.com/vi/FsEjRjksfMo/mqdefault.jpg",
+    "thumbnail": "https://i.ytimg.com/vi/atxSCnGHqug/mqdefault.jpg",
     "category": "未分類",
     "keywords": [],
     "songs": [{ "title": "アイネクライネ", "artist": "米津玄師", "start":237  },
@@ -4866,7 +4123,7 @@
     "channel": "長尾景",
     "date": "2022-02-06",
     "thumbnail": "https://i.ytimg.com/vi/z84fi8rL1T8/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "メリッサ", "artist": "ポルノグラフィティ", "start":862  },
 
@@ -4891,7 +4148,7 @@
     "channel": "長尾景",
     "date": "2021-12-29",
     "thumbnail": "https://i.ytimg.com/vi/c7kqiIt0Ocw/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "花の名", "artist": " BUMP OF CHICKEN", "start":240  },
 
@@ -4924,7 +4181,7 @@
     "channel": "長尾景",
     "date": "2021-12-03",
     "thumbnail": "https://i.ytimg.com/vi/-ZEXqdlyk68/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "香水", "artist": "瑛人", "start":120  },
 
@@ -4949,7 +4206,7 @@
     "channel": "長尾景",
     "date": "2021-11-27",
     "thumbnail": "https://i.ytimg.com/vi/2qFA36tadE8/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "KING", "artist": "Kanaria", "start":314  },
 
@@ -4977,7 +4234,7 @@
     "channel": "長尾景",
     "date": "2021-10-22",
     "thumbnail": "https://i.ytimg.com/vi/aV3-dQ1pVIE/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "ひまわりの約束", "artist": "秦基博", "start":338  },
 
@@ -5000,7 +4257,7 @@
     "channel": "長尾景",
     "date": "2021-10-09",
     "thumbnail": "https://i.ytimg.com/vi/qdknpJ7cydY/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "フレンド・ライク・ミー", "artist": "アラジン", "start":132  },
 
@@ -5028,8 +4285,8 @@
     "channel": "長尾景",
     "date": "2021-09-23",
     "thumbnail": "https://i.ytimg.com/vi/RD1xVD_L71E/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
+    "category": "歌配信",
+    "keywords": ["にじ歌DAY"],
     "songs": [{ "title": "怪物", "artist": "YOASOBI", "start":120  },
 
       { "title": "ラフ・メイカー", "artist": "BUMP OF CHICKEN", "start":395  },
@@ -5046,7 +4303,7 @@
     "channel": "長尾景",
     "date": "2021-08-22",
     "thumbnail": "https://i.ytimg.com/vi/Icldua5Nyuc/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "丸の内サディスティック", "artist": "椎名林檎", "start":249  },
 
@@ -5069,7 +4326,7 @@
     "channel": "長尾景",
     "date": "2021-08-01",
     "thumbnail": "https://i.ytimg.com/vi/z82F2KZhZUw/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "GO!!!", "artist": "FLOW", "start":312  },
 
@@ -5092,7 +4349,7 @@
     "channel": "長尾景",
     "date": "2021-07-24",
     "thumbnail": "https://i.ytimg.com/vi/bYhxcQGvx0o/mqdefault.jpg",
-    "category": "未分類",
+    "category": ["歌配信","ライブ・イベント"]
     "keywords": [],
     "songs": [{ "title": "夜空ノムコウ", "artist": "SMAP", "start":319  },
 
@@ -5119,7 +4376,7 @@
     "channel": "長尾景",
     "date": "2021-06-24",
     "thumbnail": "https://i.ytimg.com/vi/yKb9xfnBh2I/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "うっせえわ", "artist": "Ado", "start":160  },
 
@@ -5139,7 +4396,7 @@
     "channel": "長尾景",
     "date": "2021-05-19",
     "thumbnail": "https://i.ytimg.com/vi/puhsbGKtQkQ/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "ひこうき雲", "artist": "荒井由実・松任谷由美", "start":335  },
 
@@ -5165,7 +4422,7 @@
     "channel": "長尾景",
     "date": "2021-04-24",
     "thumbnail": "https://i.ytimg.com/vi/cDzG8ncA9tU/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "うっせえわ", "artist": "Ado", "start":326  },
 
@@ -5191,7 +4448,7 @@
     "channel": "長尾景",
     "date": "2021-04-18",
     "thumbnail": "https://i.ytimg.com/vi/G7lKf-uVFJE/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "SHAMROCK", "artist": "UVERworld", "start":292  },
 
@@ -5240,7 +4497,7 @@
     "channel": "長尾景",
     "date": "2021-04-06",
     "thumbnail": "https://i.ytimg.com/vi/nMaahBlnSgc/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "Pretender ", "artist": "Official髭男dism", "start":503  },
 
@@ -5271,7 +4528,7 @@
     "channel": "長尾景",
     "date": "2021-03-27",
     "thumbnail": "https://i.ytimg.com/vi/fD-OKYlervQ/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [      { "title": "サムライハート", "artist": "SPYAIR", "start":888  },
 
@@ -5286,24 +4543,12 @@
       { "title": "前前前世", "artist": "RADWIMPS", "start":2264  }]
   },
   {
-    "youtubeId": "Q_rYR_Zu4qo",
-    "title": "【ドキドキ文芸部】熱いライムを刻め！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2021-03-17",
-    "thumbnail": "https://i.ytimg.com/vi/Q_rYR_Zu4qo/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "ドキドキ文芸部"
-    ],
-    "songs": []
-  },
-  {
     "youtubeId": "84fyq6ZOB74",
     "title": "【歌枠】おひるのおうた【長尾景/にじさんじ】",
     "channel": "長尾景",
     "date": "2021-03-17",
     "thumbnail": "https://i.ytimg.com/vi/84fyq6ZOB74/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "ひまわりの約束", "artist": "秦基博", "start":405  },
 
@@ -5326,7 +4571,7 @@
     "channel": "長尾景",
     "date": "2021-03-02",
     "thumbnail": "https://i.ytimg.com/vi/aJBOrXhVKaM/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "前前前世", "artist": "RADWIMPS", "start":208  },
 
@@ -5347,7 +4592,7 @@
     "channel": "長尾景",
     "date": "2021-02-16",
     "thumbnail": "https://i.ytimg.com/vi/rYczPZeTxXI/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "フライイングゲット", "artist": "AKB48", "start":104  },
 
@@ -5372,7 +4617,7 @@
     "channel": "長尾景",
     "date": "2021-02-06",
     "thumbnail": "https://i.ytimg.com/vi/vEWLEMwSLZ0/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "丸の内サディスティック", "artist": "椎名林檎", "start":325  },
 
@@ -5392,7 +4637,7 @@
     "channel": "長尾景",
     "date": "2021-01-19",
     "thumbnail": "https://i.ytimg.com/vi/Qfmee3rbGfg/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "小さな恋のうた", "artist": "MONGOL800", "start":114  },
 
@@ -5418,7 +4663,7 @@
     "channel": "長尾景",
     "date": "2020-12-25",
     "thumbnail": "https://i.ytimg.com/vi/5Tz9Umvsp2w/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "フライングゲット", "artist": "AKB48", "start":156  },
 
@@ -5442,7 +4687,7 @@
     "channel": "長尾景",
     "date": "2020-12-19",
     "thumbnail": "https://i.ytimg.com/vi/YrJ_cMxS5Q4/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談","歌配信"],
     "keywords": [],
     "songs": [{ "title": "Pretender ", "artist": "Official髭男dism", "start":1135  },
 
@@ -5461,7 +4706,7 @@
     "channel": "長尾景",
     "date": "2020-11-21",
     "thumbnail": "https://i.ytimg.com/vi/0_5KnRILhg0/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [
       "える",
       "弦月藤士郎"
@@ -5492,19 +4737,19 @@
     "channel": "長尾景",
     "date": "2020-09-27",
     "thumbnail": "https://i.ytimg.com/vi/UQDv7FMUtro/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": [{ "title": "フレンド・ライク・ミー- アラジン", "artist": "アラジン", "start":65  },
+    "category": ["歌配信","企画"],
+    "keywords": ["三枝明那","弦月藤士郎","甲斐田晴","神田笑一","ジョー・力一","加賀美ハヤト","不破湊","夢追翔"],
+    "songs": [{ "title": "フレンド・ライク・ミー- アラジン", "artist": "アラジン", "start":65},
 
-      { "title": "メリッサ", "artist": "ポルノグラフィティ", "start":230  },
+      { "title": "メリッサ", "artist": "ポルノグラフィティ", "start":230},
 
-      { "title": "SHAMROCK", "artist": "UVERworld", "start":574  },
+      { "title": "SHAMROCK", "artist": "UVERworld", "start":574},
 
-      { "title": "I LOVE YOU", "artist": "尾崎豊", "start":906  },
+      { "title": "I LOVE YOU", "artist": "尾崎豊", "start":906},
 
-      { "title": "リライト", "artist": "ASIAN KUNG-FU GENERATION", "start":1260  },
+      { "title": "リライト", "artist": "ASIAN KUNG-FU GENERATION", "start":1260},
 
-      { "title": "サイレントマジョリティー", "artist": "欅坂46", "start":1565  }]
+      { "title": "サイレントマジョリティー", "artist": "欅坂46", "start":1565}]
   },
   {
     "youtubeId": "mEu8UZK3teM",
@@ -5512,7 +4757,7 @@
     "channel": "長尾景",
     "date": "2020-08-10",
     "thumbnail": "https://i.ytimg.com/vi/mEu8UZK3teM/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "青いベンチ", "artist": "サスケ", "start":99   },
 
@@ -5532,7 +4777,7 @@
     "channel": "長尾景",
     "date": "2020-07-24",
     "thumbnail": "https://i.ytimg.com/vi/1h_GzdgyOOA/mqdefault.jpg",
-    "category": "未分類",
+    "category": ["歌配信","記念配信"],
     "keywords": [
       "甲斐田晴",
       "弦月藤士郎"
@@ -5562,7 +4807,7 @@
     "channel": "長尾景",
     "date": "2020-07-12",
     "thumbnail": "https://i.ytimg.com/vi/5UJcAmXxKG8/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [
       "甲斐田晴",
       "弦月藤士郎",
@@ -5607,7 +4852,7 @@
     "channel": "長尾景",
     "date": "2020-07-08",
     "thumbnail": "https://i.ytimg.com/vi/NF7Bg5sgY3Q/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "sailing day", "artist": "BUMP OF CHICKEN", "start":92  },
 
@@ -5635,7 +4880,7 @@
     "channel": "長尾景",
     "date": "2020-06-24",
     "thumbnail": "https://i.ytimg.com/vi/6-1Humhrlx4/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "3月9日", "artist": "レミオロメン", "start":382  },
 
@@ -5662,7 +4907,7 @@
     "channel": "長尾景",
     "date": "2020-06-14",
     "thumbnail": "https://i.ytimg.com/vi/JlN2ycCVrnM/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "青いベンチ", "artist": "サスケ", "start":107  },
 
@@ -5677,23 +4922,12 @@
       { "title": "夜空ノムコウ", "artist": "SMAP", "start":2544  }]
   },
   {
-    "youtubeId": "awIIqve_Mgo",
-    "title": "【スプラトゥーン２】急遽スプラ！！！ガチマ！！！！【にじさんじ/長尾景】",
-    "channel": "長尾景",
-    "date": "2020-06-12",
-    "thumbnail": "https://i.ytimg.com/vi/awIIqve_Mgo/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [],
-    "songs": []
-  },
-
-  {
     "youtubeId": "MLPDffuJEMg",
     "title": "【歌枠】うたうたうううううう！！！選曲ちょい古いかもおおお！！【長尾景】",
     "channel": "長尾景",
     "date": "2020-06-06",
     "thumbnail": "https://i.ytimg.com/vi/MLPDffuJEMg/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "Butter-Fly", "artist": "和田光司", "start":109  },
 
@@ -5715,20 +4949,8 @@
     "channel": "長尾景",
     "date": "2020-06-05",
     "thumbnail": "https://i.ytimg.com/vi/GoYBLHRaqLY/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "mLx8UkQeInA",
-    "title": "【Apex Legends】キルの味を知ってしまった........【にじさんじ/長尾景】",
-    "channel": "長尾景",
-    "date": "2020-06-03",
-    "thumbnail": "https://i.ytimg.com/vi/mLx8UkQeInA/mqdefault.jpg",
-    "category": "未分類",
-    "keywords": [
-      "Apex Legends"
-    ],
     "songs": []
   },
   {
@@ -5737,7 +4959,7 @@
     "channel": "長尾景",
     "date": "2020-06-02",
     "thumbnail": "https://i.ytimg.com/vi/jYtpvqeczHM/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌動画",
     "keywords": [],
     "songs": []
   },
@@ -5747,7 +4969,7 @@
     "channel": "長尾景",
     "date": "2020-06-02",
     "thumbnail": "https://i.ytimg.com/vi/WohbwlAbmfE/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "白日", "artist": "King Gnu", "start":2655  },
 
@@ -5760,7 +4982,7 @@
     "channel": "長尾景",
     "date": "2020-05-27",
     "thumbnail": "https://i.ytimg.com/vi/OMYjV78O8vo/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "リライト", "artist": "ASIAN KUNG-FU GENERATION", "start":55  },
 
@@ -5784,7 +5006,7 @@
     "channel": "長尾景",
     "date": "2020-05-27",
     "thumbnail": "https://i.ytimg.com/vi/vzUFgOWaESk/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "ウィーアー!", "artist": "きただにひろし", "start":977  },
 
@@ -5801,7 +5023,7 @@
     "channel": "長尾景",
     "date": "2020-05-17",
     "thumbnail": "https://i.ytimg.com/vi/gMkVRZwbld0/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [
       "弦月藤士郎"
     ],
@@ -5826,7 +5048,7 @@
     "channel": "長尾景",
     "date": "2020-04-29",
     "thumbnail": "https://i.ytimg.com/vi/tySmlS6pD50/mqdefault.jpg",
-    "category": "未分類",
+    "category": "歌配信",
     "keywords": [],
     "songs": [{ "title": "ドラえもんのうた", "artist": "山野さと子", "start":273  },
 
@@ -5854,7 +5076,7 @@
     "channel": "長尾景",
     "date": "2020-04-22",
     "thumbnail": "https://i.ytimg.com/vi/Y8--3cgL9G8/mqdefault.jpg",
-    "category": "記念配信",
+    "category": ["記念配信","歌配信"],
     "keywords": [],
     "songs": [{ "title": "光", "artist": "宇多田ヒカル", "start":124  },
 
