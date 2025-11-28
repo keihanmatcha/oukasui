@@ -1226,7 +1226,10 @@
     "category": ["歌配信"],
     "keywords": ["緑仙"],
     "songs":[
-      {"title":"助っ人","artist":"緑仙","start":13828}
+      {"title":"助っ人","artist":"緑仙","start":13828},
+      {"title":"酔いどれ知らず","artist":"Kanaria","start":13891},
+      {"title":"シャルル","artist":"バルーン/須田景凪","start":14131},
+      {"title":"ロキ","artist":"みきとP","start":14833},
     ]
   },
   {
