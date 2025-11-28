@@ -190,12 +190,16 @@
   },
   {
     "youtubeId": "CBI-Ox7r0Jw",
-    "title": "フェレス ／covered by 白雪巴×ジョー・力一×長尾景×森中花咲",
+    "title": "【3D】Concept Live『Chic！』【#森中花咲3Dコンセプトライブ】",
     "channel": "森中花咲",
     "date": "2024-05-25",
     "thumbnail": "https://i.ytimg.com/vi/CBI-Ox7r0Jw/mqdefault.jpg",
     "category": ["歌配信"],
-    "keywords": ["白雪巴", "ジョー・力一", "森中花咲"]
+    "keywords": ["白雪巴", "ジョー・力一", "森中花咲"],
+    "songs":[
+        {"tile":"月光with森中花咲","artist":"はるまきごはん","start":1331},
+        {"tile":"フェレス","artist":"栗山夕璃/蜂屋ななし with #GABULI - Hatsune Miku＆MEIKO","start":4738}
+    ]
   },
   {
     "youtubeId": "-rtjgOwBWnk",
