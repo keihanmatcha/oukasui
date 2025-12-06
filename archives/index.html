@@ -149,6 +149,22 @@
     .is-float { position: fixed !important; bottom: 10px; right: 10px; z-index: 1000; width: min(calc(100vw - 20px), 320px); box-shadow: 0 4px 12px rgba(0,0,0,.2); transform: none !important; }
     .is-float .player-head { display: none; }
     .has-float { padding-bottom: 150px; }
+    @media (max-width: 900px) {
+    /* グリッド本体の余白を強制削除 */
+    #grid {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* リスト部分の余白も強制削除 */
+    .list-col, .list {
+        width: 100% !important;
+        margin: 0 !important;
+        padding-left: 0 !important; /* リスト左の隙間を消す */
+        padding-right: 0 !important; /* リスト右の隙間を消す */
+    }
+}
 </style>
 </head>
 <body>
@@ -953,6 +969,7 @@
   </script>
 </body>
 </html>
+
 
 
 
