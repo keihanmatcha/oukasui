@@ -207,7 +207,7 @@
     "keywords": ["白雪巴", "ジョー・力一", "森中花咲"],
     "songs":[
         {"tile":"月光with森中花咲","artist":"はるまきごはん","start":1331},
-        {"tile":"フェレス","artist":"栗山夕璃/蜂屋ななし with #GABULI - Hatsune Miku＆MEIKO","start":4738}
+        {"title":"フェレス","artist":"栗山夕璃/蜂屋ななし with #GABULI - Hatsune Miku＆MEIKO","start":4738}
     ]
   },
   {
@@ -333,9 +333,9 @@
     "category": "歌配信",
     "keywords": ["町田ちま"],
     "songs": [
-      { "title": "ゲスト", "artist":["町田ちま"], "start": 1975 },
-    　{ "title": "ビートDEトーヒ", "artist": "meiyo【ハマいく】", "start":2194  },
-      { "title": "宿命", "artist": "Official髭男dism", "start":2593  }
+        { "title": "ゲスト", "artist":["町田ちま"], "start": 1975 },
+        { "title": "ビートDEトーヒ","artist": "meiyo【ハマいく】", "start":2194  },
+        { "title": "宿命", "artist": "Official髭男dism", "start":2593  }
     ]
   },
   {
