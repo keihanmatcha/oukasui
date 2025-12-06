@@ -333,7 +333,9 @@
     "category": "歌配信",
     "keywords": ["町田ちま"],
     "songs": [
-      { "title": "ゲスト", "artist":["町田ちま"], "start": 1975 }
+      { "title": "ゲスト", "artist":["町田ちま"], "start": 1975 },
+    　{ "title": "ビートDEトーヒ", "artist": "meiyo【ハマいく】", "start":2194  },
+      { "title": "宿命", "artist": "Official髭男dism", "start":2593  }
     ]
   },
   {
