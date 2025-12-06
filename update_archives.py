@@ -223,7 +223,7 @@ TAG_CONVERSION_MAP = {
 }
 
 HANDLE_TO_NAME_MAP = {
-    "@KaidaHaru": "甲斐田晴", "@GenzukiTojiro": "弦月藤士郎", "@NagaoKei": "長尾景", "@valz_ch": "VΔLZ", "@Fumi": "フミ",
+    "@KaidaHaru": "甲斐田晴", "@GenzukiTojiro": "弦月藤士郎","@valz_ch": "VΔLZ", "@Fumi": "フミ",
     "@HoshikawaSara": "星川サラ", "@YamagamiKaruta": "山神カルタ", "@TodoKohaku": "東堂コハク", "@OliverEvans": "オリバー・エバンス",
     "@HarusakiAir": "春崎エアル", "@NishizonoChigusa": "西園チグサ", "@LainPaterson": "レイン・パターソン",
     "@SeraphDazzlegarden": "セラフ・ダズルガーデン", "@ShibuyaHajime": "渋谷ハジメ", "@YuhiRiri": "夕陽リリ", "@Elu": "える",
@@ -550,6 +550,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
