@@ -390,7 +390,8 @@
         });
 
         div.querySelector('.song').addEventListener('click', (e)=> { e.stopPropagation(); fillSearch(r.song); });
-        div.querySelector('.artist').addEventListener('click', (e)=> { e.stopPropagation(); fillSearch(r.artist); });
+        // .link.artist クラスを持つボタン（文字部分のみ）に限定する
+        div.querySelector('.link.artist').addEventListener('click', (e)=> { e.stopPropagation(); fillSearch(r.artist); });
         
         const rowTagBox = div.querySelector('.tags-row');
         const tags = (VIDEO_MAP.get(r.youtubeId)?.tags)||r.tags||[];
@@ -517,3 +518,4 @@
   </script>
 </body>
 </html>
+
