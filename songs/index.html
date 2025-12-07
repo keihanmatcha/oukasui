@@ -133,38 +133,6 @@
         .player-head { padding: 12px; }
         .player-foot { overflow-y: auto; flex: 1; } /* セットリストをスクロール可能に */
     }
-    /* スマホ・タブレット（900px以下）向けのスタイルまとめ */
-@media (max-width: 900px){
-  /* === リストのレイアウト === */
-  /* グリッドを1列にして縦積みにする */
-  .row {
-    grid-template-columns: 1fr;
-    align-items: start;
-    gap: 8px; /* 要素の間隔 */
-  }
-
-  /* 日付を左寄せにする */
-  .date {
-    justify-self: start;
-    font-size: 11px;
-    color: #888;
-    margin-bottom: 2px;
-  }
-
-  /* 動画タイトルの位置調整 */
-  .videotitle {
-    margin-top: -4px;
-  }
-}
-
-/* === 検索結果ゼロの表示（画面サイズ関係なく共通） === */
-.nothing {
-  color: var(--muted);
-  text-align: center;
-  padding: 20px;
-  border: 1px dashed var(--border);
-  border-radius: 12px;
-}
 
   </style>
 </head>
@@ -503,4 +471,3 @@
   </script>
 </body>
 </html>
-
