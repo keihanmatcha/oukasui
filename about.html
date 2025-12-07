@@ -18,23 +18,65 @@
     :root{ --fg:#222; --muted:#4b5563; --accent:#625DA1; --bg:#fff; --border:#e5e7eb; --panel:#f8f8ff; }
     html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,sans-serif;line-height:1.7;}
     
-    header {
-    position: sticky;
-    top: 0;
-    /* 色コードの後ろに2桁足して透明度(約85%)を指定しています */
-    background: linear-gradient(90deg, #B43246D9, #4DD7E3D9);
-    
-    backdrop-filter: saturate(1.2) blur(6px);
-    border-bottom: 1px solid var(--border);
-    z-index: 10;
-　　}
+    header{position:sticky;top:0;background:#ccccff;backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--border); z-index: 10;}
     .wrap{max-width:800px;margin-inline:auto;padding:20px 16px;}
     
     /* ナビゲーション */
     .nav-header { display: flex; justify-content: space-between; align-items: center; height: 50px; }
-    .brand { font-weight:700; color:#4c46a6; text-decoration: none; font-size: 18px; }
-    .nav-links a { font-size: 14px; color: var(--muted); text-decoration: none; margin-left: 16px; }
-    .nav-links a:hover { color: var(--accent); }
+    
+    .brand { 
+        font-weight: 800; 
+        color: #fff; /* グラデ背景の上なので白文字に変更 */
+        text-decoration: none; 
+        font-size: 20px; 
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    /* リンクのベーススタイル */
+    .nav-links { display: flex; gap: 12px; }
+    
+    .nav-links a { 
+        position: relative;
+        font-size: 13px; 
+        font-weight: 700;
+        color: #fff; 
+        text-decoration: none; 
+        padding: 6px 16px;
+        margin-left: 0;
+        z-index: 1;
+        transition: transform 0.2s;
+    }
+    
+    /* 変形する枠を作るための共通設定 */
+    .nav-links a::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        transform: skewX(-20deg); /* 平行四辺形（▲のニュアンス） */
+        border-radius: 4px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        transition: opacity 0.2s, transform 0.2s;
+    }
+
+    /* 動画を探す：#B43246 (赤系) */
+    .nav-links a[href*="archives"]::before {
+        background: #B43246;
+    }
+
+    /* 曲を探す：#4DD7E3 (青緑系) */
+    .nav-links a[href="index.html"]::before {
+        background: #4DD7E3;
+    }
+    
+    /* ホバー時の動き */
+    .nav-links a:hover {
+        transform: translateY(-2px);
+    }
+    .nav-links a:hover::before {
+        opacity: 0.9;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
 
     /* コンテンツ */
     h1 { font-size: 24px; margin: 40px 0 20px; color: var(--accent); text-align: center; }
