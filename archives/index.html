@@ -38,9 +38,102 @@
     .toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap; justify-content: space-between;}
     .searchbar{display:flex;gap:10px;align-items:center;flex:1}
     .searchbar input{flex:1;padding:10px 12px;border:1px solid var(--border);border-radius:10px;font-size:16px}
+  　/* ナビゲーション */
+
+    .nav-header { display: flex; justify-content: space-between; align-items: center; height: 50px; }
+
+    
+
+    .brand { 
+
+        font-weight: 800; 
+
+        color: #fff; /* グラデ背景の上なので白文字に変更 */
+
+        text-decoration: none; 
+
+        font-size: 20px; 
+
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    }
+
+
+
+    /* リンクのベーススタイル */
+
+    .nav-links { display: flex; gap: 12px; }
+
+    
+
+    .nav-links a { 
+
+        position: relative;
+
+        font-size: 13px; 
+
+        font-weight: 700;
+
+        color: #fff; 
+
+        text-decoration: none; 
+
+        padding: 6px 16px;
+
+        margin-left: 0;
+
+        z-index: 1;
+
+        transition: transform 0.2s;
+
+    }
+
+    
+
+    /* 変形する枠を作るための共通設定 */
+
+    .nav-links a::before {
+
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        z-index: -1;
+
+        transform: skewX(-20deg); /* 平行四辺形（▲のニュアンス） */
+
+        border-radius: 4px;
+
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+
+        transition: opacity 0.2s, transform 0.2s;
+
+    }
+    /* 曲を探す：#4DD7E3 (青緑系) */
+
+    .nav-links a[href*="songs"]::before {
+
+        background: #4DD7E3;
+
+    }
+    /* ホバー時の動き */
+
+    .nav-links a:hover {
+
+        transform: translateY(-2px);
+
+    }
+    .nav-links a:hover::before {
+
+        opacity: 0.9;
+
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
 
     /* フィルタリングパネル */
-    .filter-panel-wrapper { background: #fdfdff; border-bottom: 1px solid var(--border); padding: 16px 0; margin-top: -1px; }
+    .filter-panel-wrapper { background: #625DA1; border-bottom: 1px solid var(--border); padding: 16px 0; margin-top: -1px; }
     .filter-group { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
     .filter-group:first-child { margin-top: 0; }
     .filter-group dt { font-weight: 700; font-size: 14px; color: var(--accent); border-bottom: 2px solid #e5dfff; padding-bottom: 4px; margin-bottom: 5px; }
@@ -976,3 +1069,4 @@
   </script>
 </body>
 </html>
+
