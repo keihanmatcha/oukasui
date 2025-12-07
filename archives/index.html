@@ -28,18 +28,26 @@
     :root{ --fg:#222; --muted:#4b5563; --accent:#625DA1; --bg:#fff; --border:#e5e7eb; --panel:#f8f8ff; }
     html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif}
     
-    /* ===== ヘッダー (Aboutページのデザイン + 検索機能) ===== */
-  　header{position:sticky;top:0;background:#625DA1;backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--border); z-index: 10;}
-    
+    /* ===== ヘッダー (Aboutページのデザイン + 検索機能統合) ===== */
+    header {
+        position: sticky;
+        top: 0;
+        /* グラデーション背景 */
+        background: linear-gradient(90deg, #B43246D9, #4DD7E3D9);
+        backdrop-filter: saturate(1.2) blur(6px);
+        border-bottom: 1px solid var(--border);
+        z-index: 100;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
     header .wrap {
-        max-width: 1200px; margin-inline: auto; padding: 10px 16px;
+        max-width: 1200px; margin-inline: auto; padding: 12px 16px;
         display: flex; flex-direction: column; gap: 12px; /* 上段と下段の間隔 */
     }
 
     /* 上段：ナビゲーション */
     .nav-header { 
         display: flex; justify-content: space-between; align-items: center; 
-        width: 100%; height: 40px;
+        width: 100%; height: 32px;
     }
     
     .brand { 
@@ -58,7 +66,6 @@
         color: #fff; 
         text-decoration: none; 
         padding: 6px 14px;
-        margin-left: 0;
         z-index: 1;
         transition: transform 0.2s;
     }
@@ -70,6 +77,8 @@
         box-shadow: 0 2px 6px rgba(0,0,0,0.15);
         transition: opacity 0.2s, transform 0.2s;
     }
+    /* 動画を探す：#B43246 (赤系) - 現在地 */
+    .nav-links a.link-video::before { background: #B43246; border: 1px solid rgba(255,255,255,0.6); }
     /* 曲を探す：#4DD7E3 (青緑系) */
     .nav-links a.link-song::before { background: #4DD7E3; }
     
@@ -83,33 +92,33 @@
     }
     .searchbar { display: flex; gap: 8px; align-items: center; flex: 1; }
     
-    /* 検索入力欄 (グラデーション上で見やすく) */
+    /* 検索入力欄 (グラデーション上で見やすく白ベースに) */
     .searchbar input {
         flex: 1;
         padding: 10px 14px;
         border: 0;
         border-radius: 10px;
         font-size: 16px;
-        background: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         color: #333;
     }
-    .searchbar input::placeholder { color: #888; }
+    .searchbar input::placeholder { color: #666; }
     .searchbar input:focus { outline: 2px solid #fff; background: #fff; }
 
-    /* ヘッダー内のボタン (白ベースにして視認性確保) */
+    /* ヘッダー内のボタン */
     .header-btn { 
         appearance: none; border: 0; cursor: pointer; 
         padding: 10px 14px; border-radius: 10px; 
         font-weight: 700; font-size: 13px;
-        background: rgba(255, 255, 255, 0.9); 
+        background: rgba(255, 255, 255, 0.85); 
         color: var(--accent); 
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         transition: .15s ease;
         white-space: nowrap;
     }
     .header-btn:hover { background: #fff; transform: translateY(-1px); }
-    .header-btn.reset { color: #B43246; } /* リセットは赤系で区別 */
+    .header-btn.reset { color: #B43246; } /* リセットは赤系 */
 
 
     /* フィルタリングパネル */
@@ -134,8 +143,8 @@
     .grid.player-left{grid-template-columns:.8fr 1.2fr;grid-template-areas:"player list"}
     
     @media (min-width: 901px){
-      /* ヘッダーの高さ分を考慮して追従位置を調整 */
-      .player-col{ position: sticky; top: 120px; align-self:start; height: fit-content; z-index: 5; }
+      /* ヘッダーが高くなったので追従位置を調整 */
+      .player-col{ position: sticky; top: 140px; align-self:start; height: fit-content; z-index: 5; }
       .player-panel{ position: static; }
     }
     .list-col{grid-area:list}
@@ -174,7 +183,7 @@
     .meta-line{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
     .warn{margin-top:8px;padding:10px 12px;color:#92400e;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px}
 
-    /* セットリスト (2列グリッド) */
+    /* セットリスト */
     .setlist { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); border-radius: 10px; margin-top: 8px; max-height: 420px; overflow: auto; }
     .set-item { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-top: none !important; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); background: #fafafa; cursor: pointer; }
     .set-item:nth-child(2n + 1) { border-right: none; }
@@ -194,7 +203,7 @@
         /* コンテンツ幅を画面端まで広げる */
         main.wrap, #filterPanel .wrap { padding-left: 0 !important; padding-right: 0 !important; }
         /* ヘッダーは余白維持 */
-        header .wrap { padding: 10px 12px; }
+        header .wrap { padding: 10px 12px; gap: 8px; }
         
         /* モバイルヘッダー調整 */
         .brand { font-size: 18px; }
@@ -222,7 +231,7 @@
         .video-card .date { margin-left: 0; }
         .video-card .meta { padding: 8px; }
         
-        /* モバイルでもセットリストの縦線・下線を調整 (2列維持) */
+        /* モバイルでもセットリストの縦線・下線を調整 */
         .set-item { border-right: 1px solid var(--border); }
         .set-item:nth-child(2n + 1) { border-right: none; }
     }
@@ -258,18 +267,20 @@
       <div class="nav-header">
         <a href="../index.html" class="brand">桜華水</a>
         <nav class="nav-links">
+          <a href="./index.html" class="link-video">動画を探す</a>
           <a href="../songs/index.html" class="link-song">曲を探す</a>
         </nav>
       </div>
       <div class="toolbar">
         <div class="searchbar">
-          <input id="q" type="search" placeholder="タイトル・チャンネル・キーワード" autocomplete="off" />
+          <input id="q" type="search" placeholder="動画タイトル・チャンネル名・キーワード" autocomplete="off" />
           <button id="resetSearch" class="header-btn reset" type="button">リセット</button>
         </div>
         <button id="toggleFilter" class="header-btn" type="button">▼ 絞り込み</button>
       </div>
     </div>
   </header>
+
 
   <div id="filterPanel" class="filter-panel-wrapper" style="display:none;">
     <div class="wrap">
@@ -1056,6 +1067,7 @@
   </script>
 </body>
 </html>
+
 
 
 
