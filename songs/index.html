@@ -445,8 +445,6 @@
       if(!rows.length){ $empty.style.display='block'; return; }
       $empty.style.display='none';
       
-      const displayRows = rows.slice(0, 100);
-      
       for(const r of displayRows){
         const songKey = `${r.youtubeId}-${r.start}`;
         const div=document.createElement('div');
@@ -624,5 +622,6 @@
   </script>
 </body>
 </html>
+
 
 
