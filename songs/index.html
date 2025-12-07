@@ -32,7 +32,7 @@
     header {
         position: sticky;
         top: 0;
-        /* グラデーション背景 */
+        /* グラデーション背景に変更 */
         background:#625DA1;
         backdrop-filter: saturate(1.2) blur(6px);
         border-bottom: 1px solid var(--border);
@@ -41,7 +41,7 @@
     }
     header .wrap {
         max-width: 1200px; margin-inline: auto; padding: 12px 16px;
-        display: flex; flex-direction: column; gap: 12px; /* 上段と下段の間隔 */
+        display: flex; flex-direction: column; gap: 12px;
     }
 
     /* 上段：ナビゲーション */
@@ -110,7 +110,7 @@
     .filterbar .label { font-size:12px; color:rgba(255,255,255,0.9); font-weight: bold; text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
     .filter-tags { display:flex; gap:8px; flex-wrap:wrap; }
     
-    /* タグボタン (白ベースにして視認性確保) */
+    /* タグボタン (白ベース) */
     .chip-tag {
         font-size: 12px; line-height: 1; padding: 8px 12px; 
         border: 0; border-radius: 999px;
@@ -130,7 +130,6 @@
         cursor: pointer;
     }
     .chip-clear:hover { background: rgba(255,255,255,0.1); }
-
 
     /* レイアウト（PC基準） */
     .grid{display:grid;gap:16px;align-items:start;grid-template-columns:1.2fr .8fr;grid-template-areas:"list player"}
@@ -268,6 +267,7 @@
         <a href="../index.html" class="brand">桜華水</a>
         <nav class="nav-links">
           <a href="../archives/index.html" class="link-video">動画を探す</a>
+          <a href="./index.html" class="link-song">曲を探す</a>
         </nav>
       </div>
       <div class="toolbar">
@@ -357,6 +357,7 @@
     function loadVideo(id, start=0){
       $warn.style.display='none';
       const startSec = toSeconds(start);
+      // PCではautoplay=1、スマホモーダルでもautoplay=1で再生開始
       const url = `https://www.youtube.com/embed/${id}?start=${startSec}&autoplay=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
 
       if(apiReady){
@@ -444,6 +445,9 @@
       $list.innerHTML='';
       if(!rows.length){ $empty.style.display='block'; return; }
       $empty.style.display='none';
+      
+      // ★修正: 100件制限を撤廃して全件表示（変数定義の復活）
+      const displayRows = rows;
       
       for(const r of displayRows){
         const songKey = `${r.youtubeId}-${r.start}`;
@@ -622,6 +626,3 @@
   </script>
 </body>
 </html>
-
-
-
