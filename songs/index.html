@@ -159,33 +159,8 @@
      color: #fff;
    }
 
-  @media (max-width: 720px){ 
-     .row{ grid-template-columns:1fr; align-items:start; gap: 8px; } /* gapを少し詰める */
-     .date{ justify-self:start; font-size: 11px; color: #888; margin-bottom: 2px; } 
-     
-     /* 曲名をより目立たせる */
-     .songtitle .link.song { font-size: 16px; }
-
-     /* 動画タイトルを「補足情報」らしく小さくする */
-     .videotitle { margin-top: 0; }
-     .videotitle button {
-       font-size: 11px;       /* 文字を小さく */
-       color: #6b7280;        /* 色をグレーに（薄く） */
-       line-height: 1.4;      /* 行間を詰める */
-       white-space: normal;   /* 折り返しを許可 */
-       display: -webkit-box;
-       -webkit-line-clamp: 2; /* 2行まで表示してあとは...にする */
-       -webkit-box-orient: vertical;
-       overflow: hidden;
-       text-align: left;
-     }
-     /* スマホでは .ellipsis クラスの強制1行表示を解除 */
-     .videotitle .ellipsis {
-       white-space: normal; 
-       overflow: visible;
-     }
-   }
-
+  @media (max-width: 720px){ .row{grid-template-columns:1fr;align-items:start} .date{justify-self:start} .videotitle{margin-top:-4px} }
+   .nothing{color:var(--muted);text-align:center;padding:20px;border:1px dashed var(--border);border-radius:12px}
    /* ===== プレイヤー ===== */
    .player-panel{position:sticky;top:84px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--panel)}
    .player-head{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#f0f1ff;border-bottom:1px solid var(--border)}
@@ -670,4 +645,5 @@
  </body>
 
  </html>
+
 
