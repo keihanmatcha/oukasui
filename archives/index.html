@@ -27,113 +27,93 @@
     /* ===== 基本スタイル ===== */
     :root{ --fg:#222; --muted:#4b5563; --accent:#625DA1; --bg:#fff; --border:#e5e7eb; --panel:#f8f8ff; }
     html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif}
-    header{position:sticky;top:0;background:#fffcc;backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--border); z-index: 10;}
-    .wrap{max-width:1200px;margin-inline:auto;padding:14px 16px}
     
-    /* ヘッダーレイアウト */
+    /* ===== ヘッダー (Aboutページのデザイン + 検索機能) ===== */
+  　header{position:sticky;top:0;background:#625DA1;backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--border); z-index: 10;padding-bottom: 8px; /* 下段の余白 */}
+    
     header .wrap {
-        display: flex; align-items: center; justify-content: space-between; gap: 20px;
+        max-width: 1200px; margin-inline: auto; padding: 10px 16px;
+        display: flex; flex-direction: column; gap: 12px; /* 上段と下段の間隔 */
     }
-    h1{margin:0 0 8px;font-size:20px}
-    .toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap; justify-content: space-between;}
-    .searchbar{display:flex;gap:10px;align-items:center;flex:1}
-    .searchbar input{flex:1;padding:10px 12px;border:1px solid var(--border);border-radius:10px;font-size:16px}
-  　/* ナビゲーション */
 
-    .nav-header { display: flex; justify-content: space-between; align-items: center; height: 50px; }
-
+    /* 上段：ナビゲーション */
+    .nav-header { 
+        display: flex; justify-content: space-between; align-items: center; 
+        width: 100%; height: 40px;
+    }
     
-
     .brand { 
-
         font-weight: 800; 
-
-        color: #fff; /* グラデ背景の上なので白文字に変更 */
-
-        text-decoration: none; 
-
-        font-size: 20px; 
-
-        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-
-    }
-
-
-
-    /* リンクのベーススタイル */
-
-    .nav-links { display: flex; gap: 12px; }
-
-    
-
-    .nav-links a { 
-
-        position: relative;
-
-        font-size: 13px; 
-
-        font-weight: 700;
-
         color: #fff; 
-
         text-decoration: none; 
-
-        padding: 6px 16px;
-
-        margin-left: 0;
-
-        z-index: 1;
-
-        transition: transform 0.2s;
-
+        font-size: 20px; 
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
+    .nav-links { display: flex; gap: 10px; }
+    .nav-links a { 
+        position: relative;
+        font-size: 13px; 
+        font-weight: 700;
+        color: #fff; 
+        text-decoration: none; 
+        padding: 6px 14px;
+        margin-left: 0;
+        z-index: 1;
+        transition: transform 0.2s;
+    }
     
-
-    /* 変形する枠を作るための共通設定 */
-
+    /* 変形する枠 (Aboutページ共通) */
     .nav-links a::before {
-
-        content: "";
-
-        position: absolute;
-
-        inset: 0;
-
-        z-index: -1;
-
-        transform: skewX(-20deg); /* 平行四辺形（▲のニュアンス） */
-
-        border-radius: 4px;
-
+        content: ""; position: absolute; inset: 0; z-index: -1;
+        transform: skewX(-20deg); border-radius: 4px;
         box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-
         transition: opacity 0.2s, transform 0.2s;
-
     }
     /* 曲を探す：#4DD7E3 (青緑系) */
+    .nav-links a.link-song::before { background: #4DD7E3; }
+    
+    .nav-links a:hover { transform: translateY(-2px); }
+    .nav-links a:hover::before { opacity: 0.9; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
 
-    .nav-links a[href*="songs"]::before {
-
-        background: #4DD7E3;
-
+    /* 下段：検索ツールバー */
+    .toolbar {
+        display: flex; gap: 10px; align-items: center; flex-wrap: wrap; 
+        justify-content: space-between; width: 100%;
     }
-    /* ホバー時の動き */
-
-    .nav-links a:hover {
-
-        transform: translateY(-2px);
-
+    .searchbar { display: flex; gap: 8px; align-items: center; flex: 1; }
+    
+    /* 検索入力欄 (グラデーション上で見やすく) */
+    .searchbar input {
+        flex: 1;
+        padding: 10px 14px;
+        border: 0;
+        border-radius: 10px;
+        font-size: 16px;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        color: #333;
     }
-    .nav-links a:hover::before {
+    .searchbar input::placeholder { color: #888; }
+    .searchbar input:focus { outline: 2px solid #fff; background: #fff; }
 
-        opacity: 0.9;
-
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    /* ヘッダー内のボタン (白ベースにして視認性確保) */
+    .header-btn { 
+        appearance: none; border: 0; cursor: pointer; 
+        padding: 10px 14px; border-radius: 10px; 
+        font-weight: 700; font-size: 13px;
+        background: rgba(255, 255, 255, 0.9); 
+        color: var(--accent); 
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        transition: .15s ease;
+        white-space: nowrap;
     }
+    .header-btn:hover { background: #fff; transform: translateY(-1px); }
+    .header-btn.reset { color: #B43246; } /* リセットは赤系で区別 */
+
 
     /* フィルタリングパネル */
-    .filter-panel-wrapper { background: #625DA1; border-bottom: 1px solid var(--border); padding: 16px 0; margin-top: -1px; }
+    .filter-panel-wrapper { background: #fdfdff; border-bottom: 1px solid var(--border); padding: 16px 0; margin-top: 0; margin-bottom: 20px; }
     .filter-group { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
     .filter-group:first-child { margin-top: 0; }
     .filter-group dt { font-weight: 700; font-size: 14px; color: var(--accent); border-bottom: 2px solid #e5dfff; padding-bottom: 4px; margin-bottom: 5px; }
@@ -154,7 +134,8 @@
     .grid.player-left{grid-template-columns:.8fr 1.2fr;grid-template-areas:"player list"}
     
     @media (min-width: 901px){
-      .player-col{ position: sticky; top: 84px; align-self:start; height: fit-content; z-index: 5; }
+      /* ヘッダーの高さ分を考慮して追従位置を調整 */
+      .player-col{ position: sticky; top: 120px; align-self:start; height: fit-content; z-index: 5; }
       .player-panel{ position: static; }
     }
     .list-col{grid-area:list}
@@ -172,10 +153,14 @@
     .video-card .meta { padding: 12px; }
     .video-card .title { font-weight: 700; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 8px; color: #111; font-size: 15px; }
     .video-card .info { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
+    .video-card .channel { z-index: 2; position: relative; }
+    .video-card .channel:hover { color: var(--accent); text-decoration: underline; }
     .video-card .date { font-variant-numeric: tabular-nums; margin-left: auto; }
     .video-card .tags-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); }
-    .category-badge { font-size: 11px; line-height: 1; padding: 4px 8px; border-radius: 999px; background: var(--accent); color: #fff; }
-    .keyword-badge { font-size: 11px; line-height: 1; padding: 4px 8px; border-radius: 999px; background: #f2efff; color: #4c46a6; border: 1px solid #e5dfff; }
+    .category-badge { font-size: 11px; line-height: 1; padding: 4px 8px; border-radius: 999px; background: var(--accent); color: #fff; z-index: 2; position: relative; }
+    .category-badge:hover { filter: brightness(1.1); }
+    .keyword-badge { font-size: 11px; line-height: 1; padding: 4px 8px; border-radius: 999px; background: #f2efff; color: #4c46a6; border: 1px solid #e5dfff; z-index: 2; position: relative; }
+    .keyword-badge:hover { background: #e5dfff; }
 
     /* プレイヤーパネル */
     .player-panel{position:sticky;top:84px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--panel)}
@@ -203,15 +188,25 @@
 
     /* ★★★ モバイル・スマホ対応 (900px以下) ★★★ */
     @media (max-width: 900px) {
-        .grid{grid-template-columns:1fr; grid-template-areas:"player" "list"} 
+        .grid{ display: block; } 
         .filter-group .archive__sort__select__label { grid-template-columns: repeat(2, 1fr); gap: 8px 10px; }
         
         /* コンテンツ幅を画面端まで広げる */
         main.wrap, #filterPanel .wrap { padding-left: 0 !important; padding-right: 0 !important; }
         /* ヘッダーは余白維持 */
-        header .wrap { padding-left: 16px; padding-right: 16px; }
+        header .wrap { padding: 10px 12px; }
+        
+        /* モバイルヘッダー調整 */
+        .brand { font-size: 18px; }
+        .nav-links a { padding: 4px 10px; font-size: 11px; }
+        .searchbar input { font-size: 14px; padding: 8px 10px; }
+        .header-btn { padding: 8px 12px; font-size: 12px; }
+
         /* リストの左右余白 */
         .list { padding-left: 1px; padding-right: 1px; }
+        
+        .list-col, .list { width: 100% !important; margin: 0 !important; }
+        .player-col { display: none; } /* 通常時は非表示 */
     }
 
     /* ★★★ スマホ（狭い画面）対応 (560px以下) ★★★ */
@@ -233,53 +228,45 @@
     }
 
     /* ★★★ モーダル再生画面 ★★★ */
+    body.player-active { overflow: hidden; }
     .player-active .list-col, .player-active header { display: none !important; }
     .player-active .wrap { padding: 0 !important; }
-    .player-active .player-col { position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.8); display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .player-active .player-panel { width: 95%; max-width: 600px; max-height: 90vh; background: #fff; border-radius: 12px; display: flex; flex-direction: column; box-shadow: 0 20px 50px rgba(0,0,0,0.5); overflow-y: auto; }
-
-    /* フローティング (PC) */
-    .is-float { position: fixed !important; bottom: 10px; right: 10px; z-index: 1000; width: min(calc(100vw - 20px), 320px); box-shadow: 0 4px 12px rgba(0,0,0,.2); transform: none !important; }
-    .is-float .player-head { display: none; }
-    .has-float { padding-bottom: 150px; }
-  @media (max-width: 900px) {
-    /* ID指定(#grid)と!importantを使って、PC用の2列設定を確実に上書きする */
-    #grid {
-        /* レイアウトを縦並び（1列）に強制変更 */
-        grid-template-columns: 100% !important;
-        grid-template-areas: 
-            "player" 
-            "list" !important;
-        
-        /* 余白を削除 */
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
+    
+    .player-active .player-col { 
+        display: flex !important;
+        position: fixed; top: 0; left: 0; z-index: 9999; 
+        width: 100%; height: 100vh; 
+        background: rgba(0, 0, 0, 0.85); 
+        align-items: center; justify-content: center; 
     }
-
-    /* リスト部分の余白も強制削除 */
-    .list-col, .list {
-        width: 100% !important;
-        margin: 0 !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+    .player-active .player-panel { 
+        position: relative; top: auto;
+        width: 95%; max-width: 600px; max-height: 90vh; 
+        background: #fff; border-radius: 12px; 
+        display: flex; flex-direction: column; 
+        box-shadow: 0 20px 50px rgba(0,0,0,0.5); 
     }
-}
+    .player-active .player-head { padding: 12px; }
+    .player-active .player-foot { overflow-y: auto; flex: 1; }
+    .player-active .setlist { max-height: none; border: none; }
+
 </style>
 </head>
 <body>
   <header>
     <div class="wrap">
-      <a href="../index.html" class="brand" aria-label="HOME">
-        <span style="font-weight:700;color:#4c46a6">HOME</span>
-      </a>
-      <h1>動画検索</h1>
+      <div class="nav-header">
+        <a href="../index.html" class="brand">桜華水</a>
+        <nav class="nav-links">
+          <a href="../songs/index.html" class="link-song">曲を探す</a>
+        </nav>
+      </div>
       <div class="toolbar">
         <div class="searchbar">
-          <input id="q" type="search" placeholder="動画タイトル・チャンネル名・キーワードで検索" autocomplete="off" />
-          <button id="resetSearch" class="btn secondary" type="button" style="padding: 10px 16px; border-radius: 10px; font-weight: 700; margin-left: 10px;">リセット</button>
+          <input id="q" type="search" placeholder="タイトル・チャンネル・キーワード" autocomplete="off" />
+          <button id="resetSearch" class="header-btn reset" type="button">リセット</button>
         </div>
-        <button id="toggleFilter" class="btn secondary" type="button" style="padding: 10px 16px; border-radius: 10px; font-weight: 700;">絞り込みフィルターを開く</button>
+        <button id="toggleFilter" class="header-btn" type="button">▼ 絞り込み</button>
       </div>
     </div>
   </header>
@@ -1069,4 +1056,5 @@
   </script>
 </body>
 </html>
+
 
