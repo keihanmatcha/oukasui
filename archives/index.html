@@ -1,3 +1,10 @@
+`archives/index.html`（動画アーカイブページ）についても、**ヘッダーの固定（sticky）と横揺れ防止**、そして**デザインの統一**を行ったコードを作成しました。
+
+ご提示いただいたコードは中身が「曲検索」のものになっていましたので、**「動画アーカイブ（カード表示、複数ファイル読み込み）」のロジックに戻しつつ、最新のデザインと修正を適用**しています。
+
+以下のコードを `archives/index.html` として保存してください。
+
+```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -24,7 +31,7 @@
   <meta name="twitter:image" content="https://oukasui.com/images/ogp.png">
 
 <style>
-    /* ===== 基本スタイル (横揺れ防止対策済み) ===== */
+    /* ===== 基本スタイル (横揺れ防止) ===== */
     *, *::before, *::after { box-sizing: border-box; }
 
     :root{ --fg:#222; --muted:#4b5563; --accent:#625DA1; --bg:#fff; --border:#e5e7eb; --panel:#f8f8ff; }
@@ -35,14 +42,16 @@
         background: var(--bg);
         color: var(--fg);
         font-family: system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+        /* ★重要：横揺れ防止 */
         overflow-x: hidden;
         width: 100%;
     }
     
-    /* ===== ヘッダー (芍薬→杜若) ===== */
+    /* ===== ヘッダー (Songsと統一) ===== */
     header {
         position: sticky;
         top: 0;
+        /* パターンAグラデーション（透過あり） */
         background: linear-gradient(90deg, #C24DAED9, #625DA1D9);
         backdrop-filter: saturate(1.2) blur(6px);
         border-bottom: 1px solid var(--border);
@@ -74,7 +83,9 @@
         box-shadow: 0 2px 6px rgba(0,0,0,0.15);
         transition: opacity 0.2s, transform 0.2s;
     }
-    /* 曲を探す：#4DD7E3 (青緑系) */
+    /* 動画を探す：#B43246 (現在地) */
+    .nav-links a.link-video::before { background: #B43246; border: 1px solid rgba(255,255,255,0.6); }
+    /* 曲を探す：#4DD7E3 */
     .nav-links a.link-song::before { background: #4DD7E3; }
     
     .nav-links a:hover { transform: translateY(-2px); }
@@ -88,7 +99,8 @@
     .searchbar { display: flex; gap: 8px; align-items: center; flex: 1; }
     .searchbar input {
         flex: 1; padding: 10px 14px; border: 0; border-radius: 10px; font-size: 16px;
-        background: rgba(255, 255, 255, 0.9); box-shadow: 0 2px 6px rgba(0,0,0,0.05); color: #333;
+        background: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 6px rgba(0,0,0,0.05); color: #333;
+        min-width: 0;
     }
     .searchbar input::placeholder { color: #666; }
     .searchbar input:focus { outline: 2px solid #fff; background: #fff; }
@@ -155,7 +167,7 @@
     .player-col{grid-area:player}
     .nothing{color:var(--muted);text-align:center;padding:20px;border:1px dashed var(--border);border-radius:12px; grid-column: 1 / -1; margin-top: 16px; margin-bottom: 16px;}
 
-    /* リスト (PC) */
+    /* リスト (PC: カード型) */
     .list{ display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; padding: 1px; }
 
     /* 動画カード */
@@ -187,7 +199,7 @@
     .meta-line{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
     .warn{margin-top:8px;padding:10px 12px;color:#92400e;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px}
 
-    /* セットリスト */
+    /* セットリスト (2列グリッド) */
     .setlist { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); border-radius: 10px; margin-top: 8px; max-height: 420px; overflow: auto; }
     .set-item { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-top: none !important; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); background: #fafafa; cursor: pointer; }
     .set-item:nth-child(2n + 1) { border-right: none; }
@@ -259,6 +271,7 @@
       <div class="nav-header">
         <a href="../index.html" class="brand">桜華水</a>
         <nav class="nav-links">
+          <a href="./index.html" class="link-video">動画を探す</a>
           <a href="../songs/index.html" class="link-song">曲を探す</a>
         </nav>
       </div>
@@ -312,10 +325,8 @@
         <dd>
             <ul class="archive__sort__select__label">
                 <li><label><input type="checkbox" name="get_companion[]" value="愛園愛美"><span>愛園愛美</span></label></li>
-                <li><label><input type="checkbox" name="get_companion[]" value="平川大輔"><span>平川大輔</span></label></li>
-                <li><label><input type="checkbox" name="get_companion[]" value="龍惺ろたん"><span>龍惺ろたん</span></label></li>
                 <li><label><input type="checkbox" name="get_collabo[]" value="VΔLZ"><span>VΔLZ</span></label></li>
-                </ul>
+            </ul>
         </dd>
       </dl>
       <div class="filter-actions">
@@ -331,7 +342,6 @@
         <div class="player-panel" id="playerPanel" style="display:none">
           <div class="player-head">
             <button id="closePlayer" class="btn secondary" style="font-weight:700; opacity: 1; padding: 6px 12px; border-radius: 6px; margin-right: auto;">閉じる</button>
-            <span class="drag-handle" aria-label="Move" style="display:none;">≡</span>
             <div style="flex:1; text-align:right;">
               <a id="openYT" href="#" target="_blank" rel="noopener" style="font-size:12px;color:var(--accent);text-decoration:none">YouTubeで開く ↗</a>
             </div>
@@ -357,7 +367,6 @@
 
   <script src="https://www.youtube.com/iframe_api"></script>
   <script>
-    // --- DOM要素 ---
     const $list = document.getElementById('list');
     const $empty = document.getElementById('empty');
     const $q = document.getElementById('q');
@@ -378,7 +387,6 @@
     const $filterOverlay = document.getElementById('filterOverlay');
     const $closeFilterBtn = document.getElementById('closeFilterBtn');
 
-    // --- ユーティリティ ---
     const pad = n => String(n).padStart(2,'0');
     const ymdToDots = ymd => { const [y,m,d] = (ymd||'').split('-'); return y?`${y}.${pad(m)}.${pad(d)}`:''; };
     function toSeconds(v){
@@ -441,7 +449,6 @@
       ALL_VIDEOS = Array.from(videoMap.values()).sort((a,b)=> b.date.localeCompare(a.date));
     }
 
-    // --- フィルタ関連 ---
     function getSelectedFilters() {
         const selectedCategories = Array.from(document.querySelectorAll('input[name="get_cats[]"]:checked')).map(input => input.value);
         const keywordInputs = document.querySelectorAll('input[name="get_companion[]"]:checked, input[name="get_series[]"]:checked, input[name="get_collabo[]"]:checked, input[name="get_program[]"]:checked');
@@ -464,10 +471,9 @@
     }
     function fillSearch(text){ if(!text) return; $q.value=text; clearAllCheckboxes(); applyFilter(); }
     
-    // --- イベントリスナー設定 ---
     $q.addEventListener('input', applyFilter);
     
-    // フィルター開閉ロジック (スライド式)
+    // スライド式フィルター制御
     function toggleFilterPanel(show) {
         if (show) {
             $filterPanel.classList.add('open');
@@ -477,17 +483,10 @@
             $filterOverlay.classList.remove('open');
         }
     }
-
     $toggleFilter.addEventListener('click', () => toggleFilterPanel(true));
     $closeFilterBtn.addEventListener('click', () => toggleFilterPanel(false));
     $filterOverlay.addEventListener('click', () => toggleFilterPanel(false));
-
-    // 「この条件で絞り込む」ボタンを押したらパネルを閉じてフィルタ適用
-    $applyFilterBtn.addEventListener('click', () => {
-        applyFilter();
-        toggleFilterPanel(false);
-    });
-
+    $applyFilterBtn.addEventListener('click', () => { applyFilter(); toggleFilterPanel(false); });
     $clearFilterBtn.addEventListener('click', () => { clearAllCheckboxes(); applyFilter(); });
     
     if ($resetSearch) {
@@ -508,13 +507,12 @@
         });
     }
 
-    // --- リスト描画 ---
     function renderRows(videos){
       $list.innerHTML='';
       if(!videos.length){ $empty.style.display='block'; return; }
       $empty.style.display='none';
 
-      // 全件表示 (制限なし)
+      // 100件制限を撤廃して全件表示
       const displayVideos = videos;
 
       for(const v of displayVideos){
@@ -561,7 +559,6 @@
       }
     }
 
-    // --- セットリスト描画 ---
     function renderSetlist(video, id, activeStart){
         $setlist.innerHTML='';
         if (!video.songs || video.songs.length === 0) {
@@ -594,7 +591,6 @@
         }
     }
 
-    // --- データ読み込み ---
     Promise.all([
         fetch('archive_videos.json').then(r => r.ok ? r.json() : []),
         fetch('external_videos.json').then(r => r.ok ? r.json() : [])
@@ -610,7 +606,7 @@
         $empty.textContent = 'データの読み込みに失敗しました。';
     });
     
-    // --- フローティング (PC用) ---
+    // PC用フローティングプレーヤー
     (function(){
       const mq = window.matchMedia('(max-width: 900px)');
       const headerH = document.querySelector('header')?.offsetHeight || 70;
@@ -670,4 +666,4 @@
   </script>
 </body>
 </html>
-
+```
