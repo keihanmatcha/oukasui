@@ -36,8 +36,12 @@
         color: var(--fg);
         font-family: system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
         /* ★重要：横揺れ防止 */
-        overflow-x: hidden;
+        /* overflow-x: hidden;*/
         width: 100%;
+    }
+  　/* フィルターパネルの横揺れ防止のため、ここに追加 */
+    body {
+        overflow-x: clip; /* hiddenの代わりにclipを使うとstickyが効く場合がありますが、ブラウザ互換性のため削除推奨 */
     }
     
     /* ===== ヘッダー (Songsと統一) ===== */
@@ -1066,6 +1070,7 @@
 </body>
 </html>
 ```
+
 
 
 
