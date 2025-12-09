@@ -9,43 +9,50 @@
   <link rel="apple-touch-icon" href="../images/Nagao-icon.png">
   <link rel="canonical" href="https://oukasui.com/song/">
 
-  <meta property="og:site_name" content="桜華水｜長尾景非公式ファンサイト">
+  <meta property="og:site_name" content="桜華水｜長尾景非公式ファンサイト　曲検索">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="桜華水｜長尾景非公式ファンサイト">
-  <meta property="og:description" content="長尾景の曲・動画を検索。曲名・アーティスト・動画タイトル・タグから素早く探せます。">
+  <meta property="og:title" content="桜華水｜長尾景非公式ファンサイト　曲検索">
+  <meta property="og:description" content="長尾景の曲アーカイブを横断検索。曲名・アーティスト・動画タイトル・タグから素早く探せます。">
   <meta property="og:url" content="https://oukasui.com/">
   <meta property="og:image" content="https://oukasui.com/images/ogp.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="桜華水｜長尾景非公式ファンサイト">
-  <meta name="twitter:description" content="長尾景の曲・動画を検索。曲名・アーティスト・動画タイトル・タグから素早く探せます。">
+  <meta name="twitter:title" content="桜華水｜長尾景非公式ファンサイト　曲検索">
+  <meta name="twitter:description" content="長尾景の曲アーカイブを横断検索。曲名・アーティスト・動画タイトル・タグから素早く探せます。">
   <meta name="twitter:image" content="https://oukasui.com/images/ogp.png">
 
   <style>
-    /* ===== 基本スタイル ===== */
+    /* ===== 基本スタイル (修正済み) ===== */
+    /* 全要素のサイズ計算を統一（横揺れ防止の要） */
     *, *::before, *::after { box-sizing: border-box; }
+
     :root{ --fg:#222; --muted:#4b5563; --accent:#625DA1; --bg:#fff; --border:#e5e7eb; --panel:#f8f8ff; }
-    html,body{margin:0;
-              background:var(--bg);color:var(--fg);
-              font-family:system-ui,-apple-system,Segoe UI,Roboto,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
-              /*overflow-x: hidden;*/
-              overflow-x: clip;
-        　　　width: 100%;}
-    /* ===== ヘッダー (Archivesページとデザイン統一) ===== */
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+        
+        /* ★重要修正★: stickyを効かせるため overflow-x 指定を削除 */
+        /* overflow-x: clip;  <-- これを削除 */
+        width: 100%;
+        max-width: 100%; /* 横揺れ防止の代替策 */
+    }
+    
+    /* ===== ヘッダー (パターンA：芍薬→杜若) ===== */
     header {
-      　position:sticky;
-      　top:0;
-      　z-index:10;
-        /* グラデーション背景に変更 */
-        background:linear-gradient(90deg, #C24DAED9, #625DA1D9);
+        position: sticky;
+        top: 0;
+        background: linear-gradient(90deg, #C24DAED9, #625DA1D9);
         backdrop-filter: saturate(1.2) blur(6px);
         border-bottom: 1px solid var(--border);
         z-index: 100;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    
     header .wrap {
         max-width: 1200px; margin-inline: auto; padding: 12px 16px;
         display: flex; flex-direction: column; gap: 12px;
@@ -56,37 +63,24 @@
         display: flex; justify-content: space-between; align-items: center; 
         width: 100%; height: 32px;
     }
-    
     .brand { 
-        font-weight: 800; 
-        color: #fff; 
-        text-decoration: none; 
-        font-size: 20px; 
+        font-weight: 800; color: #fff; text-decoration: none; font-size: 20px; 
         text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-
     .nav-links { display: flex; gap: 10px; }
     .nav-links a { 
-        position: relative;
-        font-size: 13px; 
-        font-weight: 700;
-        color: #fff; 
-        text-decoration: none; 
-        padding: 6px 14px;
-        margin-left: 0;
-        z-index: 1;
-        transition: transform 0.2s;
+        position: relative; font-size: 13px; font-weight: 700; color: #fff; text-decoration: none; 
+        padding: 6px 14px; margin-left: 0; z-index: 1; transition: transform 0.2s;
     }
-    
-    /* 変形する枠 */
     .nav-links a::before {
         content: ""; position: absolute; inset: 0; z-index: -1;
         transform: skewX(-20deg); border-radius: 4px;
         box-shadow: 0 2px 6px rgba(0,0,0,0.15);
         transition: opacity 0.2s, transform 0.2s;
     }
-    /* 動画を探す：#B43246 (赤系) */
+    /* 動画を探す：#B43246 */
     .nav-links a.link-video::before { background: #B43246; }
+
     
     .nav-links a:hover { transform: translateY(-2px); }
     .nav-links a:hover::before { opacity: 0.9; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
@@ -97,17 +91,10 @@
         width: 100%;
     }
     .searchbar { display: flex; gap: 8px; align-items: center; flex: 1; min-width: 280px; }
-    
-    /* 検索入力欄 (白ベース) */
     .searchbar input {
-        flex: 1;
-        padding: 10px 14px;
-        border: 0;
-        border-radius: 10px;
-        font-size: 16px;
-        background: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-        color: #333;
+        flex: 1; padding: 10px 14px; border: 0; border-radius: 10px; font-size: 16px;
+        background: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 6px rgba(0,0,0,0.05); color: #333;
+        min-width: 0;
     }
     .searchbar input::placeholder { color: #666; }
     .searchbar input:focus { outline: 2px solid #fff; background: #fff; }
@@ -117,15 +104,12 @@
     .filterbar .label { font-size:12px; color:rgba(255,255,255,0.9); font-weight: bold; text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
     .filter-tags { display:flex; gap:8px; flex-wrap:wrap; }
     
-    /* タグボタン (白ベース) */
     .chip-tag {
         font-size: 12px; line-height: 1; padding: 8px 12px; 
         border: 0; border-radius: 999px;
-        background: rgba(255, 255, 255, 0.85); 
-        color: var(--accent);
+        background: rgba(255, 255, 255, 0.85); color: var(--accent);
         cursor: pointer; font-weight: 600;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        transition: .15s;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: .15s;
     }
     .chip-tag:hover { background: #fff; transform: translateY(-1px); }
     .chip-tag.active { background: var(--accent); color: #fff; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); }
@@ -133,10 +117,10 @@
     .chip-clear {
         font-size: 12px; padding: 6px 12px; 
         border: 1px solid rgba(255,255,255,0.6); border-radius: 999px; 
-        background: transparent; color: #fff; 
-        cursor: pointer;
+        background: transparent; color: #fff; cursor: pointer;
     }
     .chip-clear:hover { background: rgba(255,255,255,0.1); }
+
 
     /* レイアウト（PC基準） */
     .grid{display:grid;gap:16px;align-items:start;grid-template-columns:1.2fr .8fr;grid-template-areas:"list player"}
@@ -177,7 +161,7 @@
     .videotitle button:hover{color:var(--accent);text-decoration:underline}
     .ellipsis{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-    /* タグ行 (リスト内) */
+    /* タグ行 */
     .tags-row{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:2px; padding-top:6px; border-top:1px dashed var(--border); }
     .tags-row::before{ content:"タグ"; font-size:11px; color:var(--muted); margin-right:4px; padding:2px 6px; border:1px solid var(--border); border-radius:999px; background:#fff; }
     .tag-badge { appearance:none; border:0; cursor:pointer; font-size:12px; line-height:1; padding:8px 12px; border-radius:999px; background:#f2efff; color:#4c46a6; border:1px solid #e5dfff; display:inline-flex; gap:6px; align-items:center; }
@@ -215,20 +199,16 @@
     .list-col{grid-area:list}
     .player-col{grid-area:player}
 
-    /* PCでの追従位置調整（ヘッダー高さ分） */
     @media (min-width: 901px){
       .player-col{ position: sticky; top: 140px; align-self:start; height: fit-content; z-index: 5; }
       .player-panel{ position: static; }
     }
 
-    /* =========================================
-       ★★★ モバイル・スマホ対応 (900px以下) ★★★ 
-       ========================================= */
+    /* ★★★ モバイル・スマホ対応 (900px以下) ★★★ */
     @media (max-width: 900px) {
         .grid { display: block; }
         .list-col, .list { width: 100%; padding: 0; }
 
-        /* ヘッダー調整 */
         header .wrap { padding: 10px 12px; gap: 8px; }
         .brand { font-size: 18px; }
         .nav-links a { padding: 4px 10px; font-size: 11px; }
@@ -238,7 +218,8 @@
         .row{ grid-template-columns:1fr; align-items:start; gap: 8px; }
         .date{ justify-self:start; font-size: 11px; color: #888; margin-bottom: 2px; }
         .videotitle{ margin-top: -4px; }
-        
+        .videotitle button { font-size: 11px; color: #6b7280; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
         .player-col { display: none; }
 
         body.player-active { overflow: hidden; }
@@ -363,7 +344,6 @@
     function loadVideo(id, start=0){
       $warn.style.display='none';
       const startSec = toSeconds(start);
-      // PCではautoplay=1、スマホモーダルでもautoplay=1で再生開始
       const url = `https://www.youtube.com/embed/${id}?start=${startSec}&autoplay=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
 
       if(apiReady){
@@ -381,7 +361,6 @@
       $yt.src = url;
     }
 
-    // ===== データ整形 =====
     function normalizeVideos(videos){
       const map = new Map();
       for(const raw of videos){
@@ -427,7 +406,6 @@
       localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
     }
 
-    // ===== タグフィルタ UI =====
     function renderFilterTags(){
       const favorites = getFavorites();
       $filterFavorites.style.display = favorites.length > 0 ? '' : 'none';
@@ -446,13 +424,11 @@
     }
     $clearTags.addEventListener('click', ()=>{ SELECTED_TAGS.clear(); filterByFavorites = false; renderFilterTags(); applyFilter(); });
 
-    // ===== リスト描画 =====
     function renderRows(rows){
       $list.innerHTML='';
       if(!rows.length){ $empty.style.display='block'; return; }
       $empty.style.display='none';
       
-      // ★修正: 100件制限を撤廃して全件表示（変数定義の復活）
       const displayRows = rows;
       
       for(const r of displayRows){
@@ -632,11 +608,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
