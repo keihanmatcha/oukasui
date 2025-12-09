@@ -101,8 +101,26 @@ body{
     }
     .wrap{ max-width:960px; margin-inline:auto; padding:14px 16px }
     .row{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
-    .brand{ display:flex; align-items:center; color: #fff; gap:10px; text-decoration:none; color:inherit }
-    .logo{ width:28px; height:28px; border-radius:8px; background:#e9e7ff; display:inline-block }
+    .brand { 
+        display: flex; align-items: center; gap: 10px; /* アイコンと文字の間隔 */
+        font-weight: 800; 
+        color: #fff; 
+        text-decoration: none; 
+        font-size: 20px; 
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    /* ロゴ画像（アイコン）のスタイル */
+    .logo-icon {
+        width: 32px; 
+        height: 32px; 
+        border-radius: 8px; /* 角丸 */
+        object-fit: cover;
+        background: #fff; /* アイコン背景（透過PNG対策） */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+     /* .brand{ display:flex; align-items:center; color: #fff; gap:10px; text-decoration:none; color:inherit }*/
+     /*.logo{ width:28px; height:28px; border-radius:8px; background:#e9e7ff; display:inline-block }*/
     .brand span{ font-weight:800; letter-spacing:.2px }
     nav a{ text-decoration:none; color:#4b5563; padding:8px 12px; border-radius:999px }
     nav a:hover{ background:#f3f4ff; color:#312e81 }
@@ -979,6 +997,7 @@ footer{
   </script>
 </body>
 </html>
+
 
 
 
