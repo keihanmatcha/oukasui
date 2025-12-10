@@ -66,7 +66,7 @@ KEYWORD_GROUPS = {
         "Kyoran Meloco", "Kaelix Debonair", "Sonny Brisko", "Selen Tatsuki", "Torahime Kotoka", "Petra Gurin", "Pomu Rainpuff",
         "Maria Marionette", "Millie Parfait", "Shu Yamino", "Luca Kaneshiro", "Ren Zotto", "星弥", "Noor",
         # 外部・声優・その他
-        "字ぴろぱる", "歌衣メイカ", "渋谷ハル", "熊谷タクマ", "かなえ先生", "天開司", "浅沼晋太郎", "伊東健人", "デンジャーD",
+        "字ぴろぱる", "歌衣メイカ", "渋谷ハル", "熊谷タクマ", "かなえ先生", "天開司", "浅沼晋太郎", "伊東健人", "デンジャーD","こばやん",
         "てんぐ・横山ミル", "ヤースー", "藤川Q", "寺島惇太", "百花繚乱", "ぽんぽこ", "ピーナッツくん", "ばあちゃる", "英リサ",
         "兎麹まり", "一ノ瀬うるは", "神威きゅぴ", "橘ひなの", "八雲ぺに", "ゴモリー", "多井隆晴", "松本吉弘", "前野智昭", "土田玲央",
         "平川大輔", "龍惺ろたん"
@@ -571,6 +571,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
