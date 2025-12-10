@@ -1,4 +1,50 @@
 [ {
+    "title": "VΔLZ LIVE TOUR 2024『三華の樂』【仙台公演】",
+    "date": "2024-09-29",
+    "channel": "にじさんじ",
+    "thumbnail": "https://i.ytimg.com/vi/Rz0O68Ejblw/mqdefault.jpg",
+    "songs": [
+      { "title": "ブリキの魂", "artist": "VΔLZ", "start":1649  },
+      { "title": "No Reason.", "artist": "VΔLZ", "start":1877  },
+      { "title": "ムーンウォーカーズ", "artist": "VΔLZ", "start":2054  },
+      { "title": "SOUP", "artist": "VΔLZ", "start":2896  }
+    ],
+    "youtubeId": "Rz0O68Ejblw",
+    "category": ["ライブイベント"],
+    "keywords": ["VΔLZ","VΔLZ2nd 三華の樂","弦月藤士郎","甲斐田晴","園児組","年長組"]
+  },
+  {
+    "title": "VΔLZ LIVE TOUR 2024『三華の樂』【大阪公演】",
+    "date": "2024-09-21",
+    "channel": "にじさんじ",
+    "thumbnail": "https://i.ytimg.com/vi/22GbH8aIKvM/mqdefault.jpg",
+    "songs": [
+      { "title": "アイドルライフスターターパック", "artist": "iLiFE!", "start":1920  },
+      { "title": "天ノ弱", "artist": "164", "start":2598  },
+      { "title": "扉", "artist": "VΔLZ", "start":2798  },
+      { "title": "Treasure Believer", "artist": "VΔLZ", "start":3312  }
+    ],
+    "youtubeId": "22GbH8aIKvM",
+    "category": ["ライブイベント"],
+    "keywords": ["VΔLZ","VΔLZ2nd 三華の樂","弦月藤士郎","甲斐田晴","園児組","年長組"]
+  },
+  {
+    "title": "VΔLZ LIVE TOUR 2024『三華の樂』【横浜公演】",
+    "date": "2024-05-27",
+    "channel": "にじさんじ",
+    "thumbnail": "https://i.ytimg.com/vi/rAQAIGKXtnQ/mqdefault.jpg",
+    "songs": [
+      { "title": "黎明の轍", "artist": "VΔLZ", "start":1602  },
+      { "title": "青春応歌", "artist": "VΔLZ", "start":1808  },
+      { "title": "Treasure Believer", "artist": "VΔLZ", "start":2527  },
+      { "title": "DAY BY DAY", "artist": "VΔLZ", "start":2777  }
+    ],
+    "youtubeId": "rAQAIGKXtnQ",
+    "category": ["ライブイベント"],
+    "keywords": ["VΔLZ","VΔLZ2nd 三華の樂","弦月藤士郎","甲斐田晴","園児組","年長組"]
+  },
+
+    {
     "youtubeId": "T9sp6Zl0qgM",
     "title": "【VΔLZライブ密着】「最高の一日」【#あなたのきっかけは何ですか？】",
     "channel": "にじさんじ",
