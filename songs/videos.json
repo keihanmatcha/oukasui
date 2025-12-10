@@ -1,4 +1,13 @@
 [{
+    "youtubeId": "9E7lMW5J1To",
+    "title": "W/Snow Man【長尾景/にじさんじ】【踊ってみた】",
+    "date": "2025-12-09",
+    "songs": [
+      { "title": "W", "artist": "Snow Man"}
+    ],
+    "tags": ["カバー(ソロ)"]
+  },
+    {
     "youtubeId": "1AMtJ-2Q-pg",
     "title": "【にぎにじたうん！】ダンスを先輩に教えてもらったリハ映像",
     "date": "2025-12-05",
@@ -3164,6 +3173,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
