@@ -49,12 +49,18 @@
         url("../images/washipattern.webp") type("image/webp") 1x,
         url("../images/washipattern@2x.webp") type("image/webp") 2x
       );
-    background-color: rgba(255, 255, 255, 0.8); /* 白色の80%不透明度 */
-    backdrop-filter: blur(5px);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    }
+    body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(2px);
+    z-index: -1; /* コンテンツの後ろに配置 */
     }
     /* おみくじメインエリア */
     .omikuji-container {
