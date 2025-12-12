@@ -553,7 +553,7 @@
           const selected = [...SELECTED_TAGS];
           
           filteredRows = ALL_ROWS.filter(r => {
-              const artistHit = r.artist.toLowerCase().startsWith(q);
+              const artistHit = r.artist.toLowerCase().includes(q);
               
               const textOk = !q || 
                   r.song.toLowerCase().includes(q) || 
@@ -608,3 +608,4 @@
   </script>
 </body>
 </html>
+
