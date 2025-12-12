@@ -1,4 +1,16 @@
-[ {
+[  {
+    "youtubeId": "9tgPpYLp5M0",
+    "title": "【 #セフィナ3D / 3Dお披露目 】あなたのフェアリー3Dになる【にじさんじ | セフィナ 】",
+    "channel": "にじさんじ",
+    "date": "2025-12-12",
+    "thumbnail": "https://i.ytimg.com/vi/9tgPpYLp5M0/mqdefault.jpg",
+    "songs": [
+      { "title": "めにまにカンパニー", "artist": "めにまにカンパニー【弦月藤士郎】", "start":414  }
+    ],
+    "category": ["お披露目配信","3D"],
+    "keywords": ["めにまにカンパニー","세피나（セフィナ）","桜凛月","弦月藤士郎"]
+  },
+    {
     "title": "VΔLZ LIVE TOUR 2024『三華の樂』【仙台公演】",
     "date": "2024-09-29",
     "channel": "にじさんじ",
