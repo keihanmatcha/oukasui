@@ -1609,7 +1609,7 @@
   "title": "【全編無料】にじさんじ歌謡祭2024 Day3 #にじ歌謡祭2024",
   "date": "2024-12-22",
   "songs": [
-    { "title": "めにまにカンパニー", "artist": "桜凛月、長尾景、セフィナ/Seffyna、Nara Haramaung", "start":4359 }
+    { "title": "めにまにカンパニー", "artist": "めにまにカンパニー【弦月藤士郎】", "start":4359 }
   ],
   "youtubeId": "Cj6qVVDU3as",
   "tags": ["オリジナル(ユニット)"]
@@ -1909,7 +1909,7 @@
   "title": "【オリジナルMV】めにまにカンパニー/桜凛月、長尾景、セフィナ/Seffyna、Nara Haramaung【にじさんじ】",
   "date": "2023-08-20",
   "songs": [
-    { "title": "めにまにカンパニー", "artist": "桜凛月、長尾景、セフィナ/Seffyna、Nara Haramaung" }
+    { "title": "めにまにカンパニー", "artist": "めにまにカンパニー【弦月藤士郎】" }
   ],
   "youtubeId": "2azlhiDhp1E",
   "tags": ["オリジナル(ユニット)"]
@@ -3182,6 +3182,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
