@@ -1,11 +1,20 @@
 [{
+    "youtubeId": "RVuazzwizdc",
+    "title": "【3DLIVE】Dance Beyond the Limit【#にじさんじダンス部/にじさんじ】",
+    "channel": "東堂コハク",
+    "date": "2025-12-20",
+    "thumbnail": "https://i.ytimg.com/vi/RVuazzwizdc/mqdefault.jpg",
+    "category": ["3D","ライブイベント","踊り配信"],
+    "keywords": ["にじさんじダンス部", "東堂コハク","山神カルタ","レイン・パターソン","セラフ・ダズルガーデン","倉持めると"]
+  },
+    {
     "youtubeId": "eY2TRu7OhI0",
     "title": "【一致するまで終われまテン!!】告知あり！！一致するまで告知できまテン【にじさんじダンス部】",
     "channel": "山神カルタ",
     "date": "2025-12-15",
     "thumbnail": "https://i.ytimg.com/vi/eY2TRu7OhI0/mqdefault.jpg",
-    "category": ["プロモーション"],
-    "keywords": ["にじさんじダンス部", "東堂コハク","山神カルタ","レイン・パターソン","セラフ・ダズルガーデン","倉持めると"]
+    "category": ["ゲーム実況","プロモーション"],
+    "keywords": ["にじさんじダンス部", "東堂コハク","山神カルタ","レイン・パターソン","セラフ・ダズルガーデン","倉持めると","一致するまで終われまテン!!"]
   },
     {
     "youtubeId": "iGKGK8H25XY",
@@ -1787,7 +1796,7 @@
     "channel": "星川サラ",
     "date": "2023-07-28",
     "thumbnail": "https://i.ytimg.com/vi/WZS9GH2daBE/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画","ゲーム実況"]
     "keywords": ["星川サラ", "フミ","山神カルタ","甲斐田晴","弦月藤士郎","おりひめばるつ","VΔLZ","フ景罪","コードネーム"]
   },
   {
