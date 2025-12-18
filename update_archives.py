@@ -47,7 +47,7 @@ KEYWORD_GROUPS = {
         "魁星", "甲斐田晴", "加賀美ハヤト", "蝸堂みかる", "綺沙良", "鏑木ろこ", "神田笑一", "北小路ヒスイ", "北見遊征", "雲母たまこ",
         "ギルザレンⅢ世", "グウェル・オス・ガール", "葛葉", "倉持めると", "黒井しば", "来栖夏芽", "郡道美玲", "弦月藤士郎", "剣持刀也",
         "梢桃音", "小清水透", "小柳ロウ", "佐伯イッテツ", "早乙女ベリー", "榊ネス", "酒寄颯馬", "桜凛月", "笹木咲", "椎名唯華", "シェリン・バーガンディ",
-        "栞葉るり", "司賀りこ", "四季凪アキラ", "獅子堂あかり", "静凛", "シスター・クレア", "渋谷ハジメ", "篠宮ゆの", "城瀬いすみ", "ジョー・力一",
+        "栞葉るり", "司賀りこ", "四季凪アキラ", "獅子堂あかり", "静凛", "シスター・クレア", "渋谷ハジメ", "篠宮ゆの", "城瀬いすみ", "ジョー・力一","鈴原るる",
         "白雪巴", "周央サンゴ", "健屋花那", "鈴鹿詩子", "皇れお", "鈴木勝", "鈴原るる", "鈴谷アキ", "瀬戸美夜子", "セラフ・ダズルガーデン",
         "ソフィア・ヴァレンタイン", "空星きらめ", "鷹宮リオン", "立伝都々", "珠乃井ナナ", "月ノ美兎", "でびでび・でびる", "東堂コハク",
         "十河ののは", "ドーラ", "轟京子", "名伽尾アズマ", "渚トラウト", "七瀬すず菜", "奈羅花", "成瀬鳴", "西園チグサ", "ニュイ・ソシエール",
@@ -85,7 +85,7 @@ KEYWORD_GROUPS = {
         "Cooking Simulator", "Dead by Daylight", "eFootball ウイニングイレブン", "ウマ娘　プリティダービー", "Ring Fit Adventure",
         "おえかきの森", "Fall Guys", "Getting Over It", "Gartic Phones", "Get To Work", "Golf It!", "Inverted Angel",
         "Fast Food Simulator", "Human: Fall Flat", "Left 4 Dead 2", "maimai", "Nintendo Switch Sports", "PADDLE PADDLE PADDLE",
-        "Operation: Tango", "Overcooked!2", "Overwatch", "Overwatch2", "Papers, Please", "PEAK", "Portal2",
+        "Operation: Tango", "Overcooked!2", "Overwatch", "Overwatch2", "Papers, Please", "PEAK", "Portal2","一致するまで終われまテン!!",
         "PowerWash Simulator", "PUBG", "slither.io/wormax.io", "Stray", "BLEACH", "ラブラブスクールデイズ", "Unpacking",
         "断罪室", "Ultimate Chicken Horse", "UNDERTALE", "Unrailed!", "GeoGuessr", "ito(イト)", "エアホッケー",
         "オバケイドロ!", "くそいサイト", "コードネーム", "にじさんじ共通テスト", "恋愛相談", "Raft", "遊戯王", "閉店事件",
@@ -233,7 +233,7 @@ HANDLE_TO_NAME_MAP = {
     "@HarusakiAir": "春崎エアル", "@NishizonoChigusa": "西園チグサ", "@LainPaterson": "レイン・パターソン",
     "@SeraphDazzlegarden": "セラフ・ダズルガーデン", "@ShibuyaHajime": "渋谷ハジメ", "@YuhiRiri": "夕陽リリ", "@Elu": "える",
     "@SukoyaKana": "健屋花那", "@GweluOsGar": "グウェル・オス・ガール", "@AkagiWen": "赤城ウェン", "@HoshirubeSho": "星導ショウ",
-    "@SakakiNess": "榊ネス", "@FrenELustario": "フレン・E・ルスタリオ", "@PontoNei": "先斗寧", "@SasakiSaku": "笹木咲",
+    "@SakakiNess": "榊ネス", "@FrenELustario": "フレン・E・ルスタリオ", "@PontoNei": "先斗寧", "@SasakiSaku": "笹木咲","‪@LuluSuzuhara‬ ":"鈴原るる",
     "@FuwaMinato": "不破湊", "@YukishiroMahiro": "雪城眞尋", "@OnomachiHaruka": "小野町春香", "@kuramochimerto": "倉持めると",
     "@SaegusaAkina": "三枝明那", "@MayuzumiKai": "黛灰", "@HonmaHimawari": "本間ひまわり", "@TakamiyaRion": "鷹宮リオン",
     "@KurusuNatsume": "来栖夏芽", "@Naraka": "奈羅花", "@WataraiHibari": "渡会雲雀", "@Ryushen": "緑仙", "@HakaseFuyuki": "葉加瀬冬雪",
@@ -577,6 +577,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
