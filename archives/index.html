@@ -196,102 +196,84 @@
     .warn{margin-top:8px;padding:10px 12px;color:#92400e;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px}
 
     /* セットリスト  */
-    .setlist { 
+    setlist { 
         max-height: 420px; 
-        overflow: auto; 
+        overflow-y: auto; 
         border: 1px solid var(--border); 
         border-radius: 10px; 
         margin-top: 8px; 
         display: block; 
+        /* リストの最後に十分な余白をつけて、一番下が隠れるのを防ぐ */
         padding-bottom: 60px !important; 
     }
     .set-item { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-top: 1px solid var(--border); background: #fafafa; cursor: pointer; }
     .set-item:first-child { border-top: none; }
     .set-item:hover { background: #f3f4ff; }
     .set-item.active { background: #e9ecff; }
-    
     .set-title { display: flex; flex-direction: column; }
     .set-song { font-weight: 600; font-size: 14px; }
     .set-artist { font-size: 12px; color: var(--muted); }
     .set-time { font-variant-numeric: tabular-nums; color: #374151; white-space: nowrap; font-size: 13px; }
 
-    /* ★★★ モバイル・スマホ対応 (900px以下) ★★★ */
+    /* スマホ・モバイル対応 */
     @media (max-width: 900px) {
         .grid{ display: block; } 
-        
-        main.wrap { padding-left: 0 !important; padding-right: 0 !important; }
+        main.wrap { padding: 0 !important; }
         header .wrap { padding: 10px 12px; gap: 8px; }
-        
-        .brand { font-size: 18px; }
-        .nav-links a { padding: 4px 10px; font-size: 11px; }
-        .searchbar input { font-size: 14px; padding: 8px 10px; }
-        .header-btn { padding: 8px 12px; font-size: 12px; }
-
-        .list { padding-left: 1px; padding-right: 1px; }
-        .list-col, .list { width: 100% !important; margin: 0 !important; }
+        .list { padding: 0 1px; width: 100% !important; margin: 0 !important; }
         .player-col { display: none; } 
     }
 
-    @media (max-width: 560px) {
-        .list { grid-template-columns: 1fr 1fr; gap: 10px; }
-        .video-card .title { -webkit-line-clamp: 1; height: 1.4em; margin-bottom: 4px; font-size: 13px; }
-        .video-card .tags-row, .category-badge, .keyword-badge { display: none !important; }
-        .video-card .info { justify-content: flex-start; font-size: 11px; }
-        .video-card .info .channel { display: none; }
-        .video-card .date { margin-left: 0; }
-        .video-card .meta { padding: 8px; }
-        .set-item { border-right: 1px solid var(--border); }
-        .set-item:nth-child(2n + 1) { border-right: none; }
-    }
-
-    /* ★★★ モーダル再生画面 ★★★ */
-    /* 背面のリストをスクロールさせない */
-    body.player-active { overflow: hidden; }
-    
-    /* リストやヘッダーを非表示 */
+    /* ▼▼▼ スマホ全画面再生時のスタイル ▼▼▼ */
+    body.player-active { overflow: hidden; } /* 背面固定 */
     .player-active .list-col, .player-active header { display: none !important; }
-    .player-active .wrap { padding: 0 !important; }
     
-    /* コンテナ：ここがスクロール領域になる */
     .player-active .player-col { 
-        display: block !important;
-        position: fixed; 
-        inset: 0; 
-        z-index: 9999; 
-        width: 100%; 
-        height: 100%; 
+        display: flex !important;
+        position: fixed; top: 0; left: 0; z-index: 9999; 
+        width: 100%; height: 100vh; 
         background: rgba(0, 0, 0, 0.85); 
-        overflow-y: auto; /* ★全体スクロールを有効化 */
-        -webkit-overflow-scrolling: touch; /* iOSでの慣性スクロール */
-        padding: 20px 10px 100px 10px; /* 上下の余白（下は大きめに） */
+        align-items: center; justify-content: center; 
     }
     
-    /* パネル本体：高さ制限を撤廃 */
     .player-active .player-panel { 
         position: relative; 
-        width: 100%; 
+        width: 95%; 
         max-width: 600px; 
-        margin: 0 auto; /* 中央寄せ */
-        height: auto !important; /* ★高さ自動調整 */
-        max-height: none !important; 
+        /* ★重要：画面の高さいっぱいに広げる */
+        height: 92vh; 
+        max-height: 92vh; 
         background: #fff; 
         border-radius: 12px; 
+        display: flex; 
+        flex-direction: column; 
         box-shadow: 0 20px 50px rgba(0,0,0,0.5); 
-        display: block; /* Flex解除 */
-    }
-
-    /* フッター（セットリスト含むエリア）：内部スクロール廃止 */
-    .player-active .player-foot { 
-        overflow: visible !important;
-        height: auto !important;
-        flex: none;
     }
     
-    /* セットリスト：全件表示 */
+    /* ヘッダーと動画部分は固定 */
+    .player-active .player-head,
+    .player-active .player-body {
+        flex-shrink: 0; /* 縮ませない */
+    }
+    
+    /* フッター部分（セットリスト含む）を伸縮可能に */
+    .player-active .player-foot { 
+        flex: 1; /* 残りの高さを埋める */
+        display: flex;
+        flex-direction: column;
+        overflow: hidden; /* 二重スクロール防止 */
+        padding-bottom: 0 !important;
+    }
+    
+    /* セットリスト部分だけをスクロールさせる */
     .player-active .setlist { 
+        flex: 1; /* 親要素いっぱいに広げる */
         max-height: none !important; 
-        overflow: visible !important; 
-        border: 1px solid var(--border);
+        overflow-y: auto !important; 
+        -webkit-overflow-scrolling: touch; /* 滑らかスクロール */
+        
+        /* ★ここに大きな余白を入れて、スマホの下バーと被るのを防ぐ */
+        padding-bottom: 100px !important; 
     }
 </style>
 </head>
@@ -1177,6 +1159,7 @@
   </script>
 </body>
 </html>
+
 
 
 
