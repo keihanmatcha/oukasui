@@ -963,7 +963,11 @@
     
     if ($resetSearch) {
         $resetSearch.addEventListener('click', () => {
-            $q.value = ''; clearAllCheckboxes(); applyFilter();
+          $q.value = '';
+          clearAllCheckboxes();
+          $filterYear.value = '';
+          $filterMonth.value = '';
+          applyFilter();
             if (player && typeof player.stopVideo === 'function') { player.stopVideo(); }
             $yt.src = 'about:blank';
             $panel.style.display = 'none';
@@ -1139,6 +1143,7 @@
   </script>
 </body>
 </html>
+
 
 
 
