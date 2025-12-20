@@ -39,7 +39,7 @@ box-shadow: 0 2px 6px rgba(0,0,0,0.15); transition: opacity 0.2s, transform 0.2s
 h1 { font-size: 24px; margin: 40px 0 20px; color: var(--accent); text-align: center; }
 p { margin-bottom: 16px; font-size: 15px; }
 
-/* 推奨サイト用ボックス（修正版） */
+/* ボックススタイル */
 .recommend-box {
 background: #fff;
 border: 2px solid #e5dfff;
@@ -50,12 +50,82 @@ box-shadow: 0 4px 12px rgba(98, 93, 161, 0.05);
 }
 .recommend-title { font-weight: 700; color: var(--accent); margin-bottom: 16px; display: block; font-size: 18px; border-bottom: 1px solid #e5dfff; padding-bottom: 8px; }
 
-/* リストの調整 */
 .link-list { list-style: none; padding: 0; margin: 0; }
 .link-list li { margin-bottom: 12px; padding-left: 1.5em; position: relative; }
 .link-list li::before { content: "▶"; position: absolute; left: 0; color: var(--accent); font-size: 12px; top: 2px; }
 .link-list a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--border); transition: all 0.2s; }
 .link-list a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* =========================================
+   ここから：リール（横スクロール）用スタイル
+   ========================================= */
+.genre-section { margin-bottom: 40px; }
+.genre-header { 
+    display: flex; align-items: center; gap: 10px; margin-bottom: 12px; 
+}
+.genre-title-text {
+    font-size: 18px; font-weight: 700; color: var(--accent);
+}
+.genre-badge {
+    font-size: 11px; background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 20px; font-weight: bold;
+}
+
+/* 横スクロールエリア */
+.reel-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 4px 4px 24px 4px; /* 下のpaddingはスクロールバーとの余白 */
+    scroll-snap-type: x mandatory; /* スクロールがピタッと止まる */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* スクロールバーの装飾 */
+.reel-scroll::-webkit-scrollbar { height: 8px; }
+.reel-scroll::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+.reel-scroll::-webkit-scrollbar-thumb { background: #c4b5fd; border-radius: 4px; }
+.reel-scroll::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* 各カード（動画・ツイートの枠） */
+.reel-item {
+    flex: 0 0 85%; /* スマホでは画面の85%幅（次が見切れるように） */
+    max-width: 340px; /* PCでの最大幅 */
+    scroll-snap-align: center; /* 画面中央で止める場合はcenter, 左端ならstart */
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    .reel-item { 
+        flex: 0 0 45%; /* タブレット以上は2つ並ぶくらいの幅 */
+        scroll-snap-align: start; 
+    }
+}
+
+/* iframeのレスポンシブ対応 */
+.reel-item iframe {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+}
+
+/* ツイート埋め込みの調整 */
+.tweet-wrapper {
+    width: 100%;
+    overflow-y: auto; /* 長いツイートは縦スクロール */
+    max-height: 350px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+}
+.tweet-wrapper blockquote { margin: 0; }
 
 /* フッター */
 footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; font-size: 12px; color: var(--muted); }
@@ -88,54 +158,95 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
 <li><a href="https://magazine.anycolor.co.jp/articles/257827071" target="_blank">VΔLZデビュー5周年記念インタビュー前編：互いを見つめ合う足跡</a></li>
 <li><a href="https://magazine.anycolor.co.jp/articles/1551467056" target="_blank">VΔLZデビュー5周年記念インタビュー後編：始まりの1曲の進化</a></li>
 <li><a href="https://realsound.jp/2024/06/post-1683536.html" target="_blank">RealSound 1万字インタビュー：『三華の樂』制作を語り尽くす</a></li>
-<li><a href="https://realsound.jp/2023/06/post-1355451.html" target="_blank">甲斐田晴・長尾景・弦月藤士郎によるVΔLZ、初単独ライブは発見が満載のステージに　パフォーマンスで提示した無限の可能性</a></li>
-<li><a href="https://realsound.jp/2024/09/post-1790345.html" target="_blank">VΔLZ、3人が作り出す唯一無二の空間　カバー／ダンス／生バンドなど多彩な魅力を見せた初ライブツアー</a></li>
+<li><a href="https://realsound.jp/2023/06/post-1355451.html" target="_blank">甲斐田晴・長尾景・弦月藤士郎によるVΔLZ、初単独ライブは発見が満載のステージに</a></li>
+<li><a href="https://realsound.jp/2024/09/post-1790345.html" target="_blank">VΔLZ、3人が作り出す唯一無二の空間 初ライブツアー</a></li>
 </ul>
 </div>
 </section>
 
-<section>
-<div class="recommend-box">
-<span class="recommend-title">VΔLZ関連動画（公式企画・密着）</span>
-<ul class="link-list">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/T9sp6Zl0qgM?si=R8sGWTnkVyZsiNeC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ha9hCLvx4HQ?si=-55YwRAFMChRcbmI&amp;start=1235" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</ul>
+<section class="genre-section">
+<div class="genre-header">
+<span class="genre-title-text">VΔLZ関連動画</span>
+<span class="genre-badge">公式・密着</span>
+</div>
+<div class="reel-scroll">
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/T9sp6Zl0qgM?si=R8sGWTnkVyZsiNeC" title="YouTube video player" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/Ha9hCLvx4HQ?si=-55YwRAFMChRcbmI&amp;start=1235" title="YouTube video player" allowfullscreen></iframe>
+</div>
 </div>
 </section>
+
+<section class="genre-section">
+<div class="genre-header">
+<span class="genre-title-text">SitR名古屋・ライブパフォーマンス</span>
+<span class="genre-badge">Pick Up</span>
+</div>
+<div class="reel-scroll">
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/hz1jsW_1xKg?si=xTdaYbbB9tH-5iKP&amp;start=4214" title="YouTube video player" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/r3Cv4C421OM?si=Y-fSJ9fg-Fj9H96B&amp;start=6884" title="YouTube video player" allowfullscreen></iframe>
+</div>
+
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">配信ありがとうございましたー！<br>アーカイブあるのでごゆるりどうぞ！<br>名古屋メンバー最高！ 
+<a href="https://t.co/lIBo0KUyis">https://t.co/lIBo0KUyis</a></p>&mdash; ゲッツ (@MASA2Get2) 
+<a href="https://twitter.com/MASA2Get2/status/1937847067319349351?ref_src=twsrc%5Etfw">June 25, 2025</a></blockquote>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">にじさんじにはミュージカルばりにステージできる方もいる！！！奥深い！！ <br>長尾さんのステージが面白い！<a href="https://t.co/qA700rBeb2">https://t.co/qA700rBeb2</a> 
+<a href="https://twitter.com/YouTube?ref_src=twsrc%5Etfw">@YouTube</a>より <a href="https://t.co/LM1X6wp8xu">pic.twitter.com/LM1X6wp8xu</a></p>&mdash; ゲッツ (@MASA2Get2) 
+<a href="https://twitter.com/MASA2Get2/status/1728723014219714706?ref_src=twsrc%5Etfw">November 26, 2023</a></blockquote>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">今月で踊ってみた15周年になりました。<br>記念動画は<br><br>「懺悔参り」踊ってみた！<br><br>にじツアー名古屋で長尾さんがあまりに楽しそうに戦っていたので、<br>構成だけおかりして、<br>僕も好きに楽しくやってみました、天才のアイデア！<br>これからも楽しく自分のペースで踊っていきます！<a href="https://t.co/NOSXco2p2d">https://t.co/NOSXco2p2d</a> <a href="https://t.co/m0QIG5Z2mm">pic.twitter.com/m0QIG5Z2mm</a></p>&mdash; ゲッツ (@MASA2Get2) 
+<a href="https://twitter.com/MASA2Get2/status/1960643515266032101?ref_src=twsrc%5Etfw">August 27, 2025</a></blockquote>
+</div>
+</div>
+</div>
+</section>
+
+<section class="genre-section">
+<div class="genre-header">
+<span class="genre-title-text">3Dアクション・殺陣</span>
+<span class="genre-badge">Movie</span>
+</div>
+<div class="reel-scroll">
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/V8lXn6QUK-Y?si=p0iZf__Ra9bwhBM4&amp;start=4917" title="YouTube video player" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/poODz37n86U?si=KJ9_7-7dBPuSPpXD&amp;start=2837" title="YouTube video player" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/gBUkUgEUxLo?si=bRY6xQ__vryRO93Q&amp;start=5438" title="YouTube video player" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/GGRz4TBX3_4?si=JN0ixLGdkRApSrSk&amp;start=4694" title="YouTube video player" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/Q0fmO-daOiM?si=48U18VzSp7RX5Fl9&amp;start=1320" title="YouTube video player" allowfullscreen></iframe>
+</div>
+</div>
+</section>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <section>
 <div class="recommend-box">
 <span class="recommend-title">長尾景関連記事</span>
 <ul class="link-list">
-<li><a href="https://realsound.jp/tech/2023/09/post-1433874.html" target="_blank">にじさんじ・長尾景に感じる“親近感”の正体とは　フレンドリーかつ現実味のあるパーソナリティが共感を呼ぶ</a></li>
+<li><a href="https://realsound.jp/tech/2023/09/post-1433874.html" target="_blank">にじさんじ・長尾景に感じる“親近感”の正体とは</a></li>
 <li><a href="https://www.youtube.com/live/Ha9hCLvx4HQ" target="_blank">【VALZ音楽談義】みんな何を思って音楽やってんの？</a></li>
-</ul>
-</div>
-</section>
-
-<section>
-<div class="recommend-box">
-<span class="recommend-title">長尾景関連動画</span>
-<ul class="link-list">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hz1jsW_1xKg?si=xTdaYbbB9tH-5iKP&amp;start=4214" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/r3Cv4C421OM?si=Y-fSJ9fg-Fj9H96B&amp;start=6884" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/V8lXn6QUK-Y?si=p0iZf__Ra9bwhBM4&amp;start=4917" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/poODz37n86U?si=KJ9_7-7dBPuSPpXD&amp;start=2837" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gBUkUgEUxLo?si=bRY6xQ__vryRO93Q&amp;start=5438" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GGRz4TBX3_4?si=JN0ixLGdkRApSrSk&amp;start=4694" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Q0fmO-daOiM?si=48U18VzSp7RX5Fl9&amp;start=1320" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">配信ありがとうございましたー！<br>アーカイブあるのでごゆるりどうぞ！<br>名古屋メンバー最高！ 
-  <a href="https://t.co/lIBo0KUyis">https://t.co/lIBo0KUyis</a></p>&mdash; ゲッツ (@MASA2Get2) 
-  <a href="https://twitter.com/MASA2Get2/status/1937847067319349351?ref_src=twsrc%5Etfw">June 25, 2025</a></blockquote> 
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">にじさんじにはミュージカルばりにステージできる方もいる！！！奥深い！！ <br>長尾さんのステージが面白い！<a href="https://t.co/qA700rBeb2">https://t.co/qA700rBeb2</a> 
-  <a href="https://twitter.com/YouTube?ref_src=twsrc%5Etfw">@YouTube</a>より <a href="https://t.co/LM1X6wp8xu">pic.twitter.com/LM1X6wp8xu</a></p>&mdash; ゲッツ (@MASA2Get2) 
-  <a href="https://twitter.com/MASA2Get2/status/1728723014219714706?ref_src=twsrc%5Etfw">November 26, 2023</a></blockquote> 
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">今月で踊ってみた15周年になりました。<br>記念動画は<br><br>「懺悔参り」踊ってみた！<br><br>にじツアー名古屋で長尾さんがあまりに楽しそうに戦っていたので、<br>構成だけおかりして、<br>僕も好きに楽しくやってみました、天才のアイデア！<br>これからも楽しく自分のペースで踊っていきます！<a href="https://t.co/NOSXco2p2d">https://t.co/NOSXco2p2d</a> <a href="https://t.co/m0QIG5Z2mm">pic.twitter.com/m0QIG5Z2mm</a></p>&mdash; ゲッツ (@MASA2Get2) 
-  <a href="https://twitter.com/MASA2Get2/status/1960643515266032101?ref_src=twsrc%5Etfw">August 27, 2025</a></blockquote> 
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </ul>
 </div>
 </section>
