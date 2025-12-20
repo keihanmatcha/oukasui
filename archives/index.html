@@ -195,8 +195,16 @@
     .meta-line{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
     .warn{margin-top:8px;padding:10px 12px;color:#92400e;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px}
 
-    /* セットリスト (2列グリッド) */
-    .setlist { max-height: 420px; overflow: auto; border: 1px solid var(--border); border-radius: 10px; margin-top: 8px; display: block; }
+    /* セットリスト  */
+    .setlist { 
+        max-height: 420px; 
+        overflow: auto; 
+        border: 1px solid var(--border); 
+        border-radius: 10px; 
+        margin-top: 8px; 
+        display: block; 
+        padding-bottom: 60px !important; 
+    }
     .set-item { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-top: 1px solid var(--border); background: #fafafa; cursor: pointer; }
     .set-item:first-child { border-top: none; }
     .set-item:hover { background: #f3f4ff; }
@@ -256,7 +264,11 @@
         box-shadow: 0 20px 50px rgba(0,0,0,0.5); 
     }
     .player-active .player-head { padding: 12px; }
-    .player-active .player-foot { overflow-y: auto; flex: 1; }
+    .player-active .player-foot { 
+        overflow-y: auto; 
+        flex: 1; 
+        padding-bottom: 80px !important; /* タスクバー対策で大きめに */
+    }
     .player-active .setlist { max-height: none; border: none; }
 
 </style>
@@ -1143,6 +1155,7 @@
   </script>
 </body>
 </html>
+
 
 
 
