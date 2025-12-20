@@ -897,7 +897,7 @@
       const sortedYears = Array.from(years).sort().reverse();
     
       // 一旦リセット
-      $filterYear.innerHTML = '<option value="">Year (全て)</option>';
+      $filterYear.innerHTML = '<option value="">年を選択</option>';
       sortedYears.forEach(y => {
         const op = document.createElement('option');
         op.value = y;
@@ -1143,6 +1143,7 @@
   </script>
 </body>
 </html>
+
 
 
 
