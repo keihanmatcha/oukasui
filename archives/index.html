@@ -1065,6 +1065,7 @@
     .then(([autoVideos, manualVideos]) => {
         const combinedVideos = [...autoVideos, ...manualVideos];
         buildVideos(combinedVideos);
+      　initYearOptions();
         applyFilter();
     })
     .catch(err => {
@@ -1133,6 +1134,7 @@
   </script>
 </body>
 </html>
+
 
 
 
