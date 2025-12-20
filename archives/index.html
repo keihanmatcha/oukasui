@@ -954,7 +954,12 @@
     $closeFilterBtn.addEventListener('click', () => toggleFilterPanel(false));
     $filterOverlay.addEventListener('click', () => toggleFilterPanel(false));
     $applyFilterBtn.addEventListener('click', () => { applyFilter(); toggleFilterPanel(false); });
-    $clearFilterBtn.addEventListener('click', () => { clearAllCheckboxes(); applyFilter(); });
+    $clearFilterBtn.addEventListener('click', () => { 
+      clearAllCheckboxes();
+      $filterYear.value = '';
+      $filterMonth.value = '';
+      applyFilter();
+    });
     
     if ($resetSearch) {
         $resetSearch.addEventListener('click', () => {
@@ -1134,6 +1139,7 @@
   </script>
 </body>
 </html>
+
 
 
 
