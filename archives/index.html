@@ -196,16 +196,16 @@
     .warn{margin-top:8px;padding:10px 12px;color:#92400e;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px}
 
     /* セットリスト (2列グリッド) */
-    .setlist { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); border-radius: 10px; margin-top: 8px; max-height: 420px; overflow: auto; }
-    .set-item { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-top: none !important; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); background: #fafafa; cursor: pointer; }
-    .set-item:nth-child(2n + 1) { border-right: none; }
-    .setlist .set-item:nth-last-child(-n + 2) { border-bottom: none !important; }
-    .setlist .set-item:last-child:nth-child(odd) { border-right: none; }
-    .set-title { flex-direction: row; align-items: center; gap: 8px; }
-    .set-song { font-weight: 600; }
-    .set-song::before { content: "🎵 "; font-weight: normal; color: var(--accent); }
-    .set-artist { font-size: 14px; color: var(--fg); opacity: 0.8; }
-    .set-time { font-size: 14px; color: var(--muted); white-space: nowrap; }
+    .setlist { max-height: 420px; overflow: auto; border: 1px solid var(--border); border-radius: 10px; margin-top: 8px; display: block; }
+    .set-item { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-top: 1px solid var(--border); background: #fafafa; cursor: pointer; }
+    .set-item:first-child { border-top: none; }
+    .set-item:hover { background: #f3f4ff; }
+    .set-item.active { background: #e9ecff; }
+    
+    .set-title { display: flex; flex-direction: column; }
+    .set-song { font-weight: 600; font-size: 14px; }
+    .set-artist { font-size: 12px; color: var(--muted); }
+    .set-time { font-variant-numeric: tabular-nums; color: #374151; white-space: nowrap; font-size: 13px; }
 
     /* ★★★ モバイル・スマホ対応 (900px以下) ★★★ */
     @media (max-width: 900px) {
@@ -1052,7 +1052,7 @@
             item.innerHTML=`
                 <div class="set-title">
                     <div class="set-song">${s.title}</div>
-                    <div class="set-artist"> / ${artistName}</div> 
+                    <div class="set-artist">${artistName}</div> 
                 </div>
                 <div class="set-time">${hms(sec)}〜</div>
             `;
@@ -1143,6 +1143,7 @@
   </script>
 </body>
 </html>
+
 
 
 
