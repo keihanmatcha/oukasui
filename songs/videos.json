@@ -1,4 +1,20 @@
 [{
+    "youtubeId": "RVuazzwizdc",
+    "title": "【3DLIVE】Dance Beyond the Limit【#にじさんじダンス部/にじさんじ】",
+    "date": "2025-12-20",
+    "songs": [
+      { "title": "UNDEAD", "artist": "YOASOBI", "start":244  },
+      { "title": "愛♡スクリ～ム！ ", "artist": "AiScReam", "start":775  },
+      { "title": "サラバ、愛しき悲しみたちよ", "artist": " ももいろクローバーZ", "start":1253  },
+      { "title": "世界を照らすテトラッド", "artist": "ワンダーランズ×ショウタイム", "start":1766  },
+      { "title": "アウトサイダー", "artist": "Eve", "start":1858  },
+      { "title": "I wonder", "artist": "Da-iCE", "start":2074  },
+      { "title": "スターマイン", "artist": "Da-iCE", "start":2262  },
+      { "title": "Journey", "artist": "DECO*27", "start":2939  }
+    ],
+    "tags": ["カバー(ユニット)"]
+  },
+    {
     "youtubeId": "xU2kywFGQIQ",
     "title": "チャンカパーナ/NEWS 【長尾景/にじさんじ】【踊ってみた】",
     "date": "2025-12-17",
@@ -3200,6 +3216,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
