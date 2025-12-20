@@ -32,6 +32,7 @@
     "date": "2025-12-20",
     "thumbnail": "https://i.ytimg.com/vi/RVuazzwizdc/mqdefault.jpg",
     "songs": [
+      { "title": "overture", "artist": "ももいろクローバーZ", "start":122  },
       { "title": "UNDEAD", "artist": "YOASOBI", "start":244  },
       { "title": "愛♡スクリ～ム！ ", "artist": "AiScReam", "start":775  },
       { "title": "サラバ、愛しき悲しみたちよ", "artist": " ももいろクローバーZ", "start":1253  },
