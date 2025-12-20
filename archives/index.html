@@ -885,6 +885,26 @@
       }
       ALL_VIDEOS = Array.from(videoMap.values()).sort((a,b)=> b.date.localeCompare(a.date));
     }
+    // 動画リストから存在する「年」を抽出してセレクトボックスにセットする
+    function initYearOptions() {
+        const years = new Set();
+      ALL_VIDEOS.forEach(v => {
+        if (!v.date) return;
+        const y = v.date.split('-')[0];
+        if (y) years.add(y);
+      });
+      // 降順（新しい年順）にソート
+      const sortedYears = Array.from(years).sort().reverse();
+    
+      // 一旦リセット
+      $filterYear.innerHTML = '<option value="">Year (全て)</option>';
+      sortedYears.forEach(y => {
+        const op = document.createElement('option');
+        op.value = y;
+        op.textContent = y + '年';
+        $filterYear.appendChild(op);
+      });
+    }
 
     function getSelectedFilters() {
         const selectedCategories = Array.from(document.querySelectorAll('input[name="get_cats[]"]:checked')).map(input => input.value);
@@ -898,11 +918,21 @@
         const q = ($q.value || '').trim().toLowerCase();
         const { selectedCategories, selectedKeywords } = getSelectedFilters();
         
+        const targetYear = $filterYear.value;
+        const targetMonth = $filterMonth.value;
         const filteredVideos = ALL_VIDEOS.filter(v => {
             const categoryOk = selectedCategories.length === 0 || selectedCategories.some(catValue => v.category === catValue);
             const keywordOk = selectedKeywords.length === 0 || selectedKeywords.every(k => (v.keywords || []).includes(k));
             const textOk = !q || v.searchText.includes(q);
-            return categoryOk && keywordOk && textOk;
+
+            let dateOk = true;
+            if (targetYear || targetMonth) {
+                // date形式が YYYY-MM-DD である前提
+                const [y, m] = (v.date || '').split('-');
+                if (targetYear && y !== targetYear) dateOk = false;
+                if (targetMonth && m !== targetMonth) dateOk = false;
+            }
+            return categoryOk && keywordOk && textOk && dateOk; // dateOkを追加
         });
         renderRows(filteredVideos);
     }
@@ -1103,5 +1133,6 @@
   </script>
 </body>
 </html>
+
 
 
