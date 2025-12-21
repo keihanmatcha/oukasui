@@ -404,14 +404,20 @@ def analyze_video_tags(title, description, fixed_tags, channel_name="", is_short
         elif detected_category != "ゲーム実況":
             detected_keywords.add("ゲーム実況")
             
-    # 【変更点】10. 公式切り抜き判定 (ショート動画 かつ 長尾景)
-    if is_short and "長尾景" in channel_name:
-        detected_category = "公式切り抜き"
+    # 【変更点】10. 公式切り抜き判定
+    # 条件: ショート動画 かつ タイトルまたはチャンネル名に「長尾景」が含まれる
+    # ただし、すでにダンス動画や歌動画などに分類されている場合は上書きしない
+    if is_short and ("長尾景" in channel_name or "長尾景" in title):
+        # 公式切り抜きとして上書きしたくないカテゴリを除外リストに定義
+        exclude_categories = ["踊り動画", "歌動画", "楽器配信・動画", "歌配信", "踊り配信"]
+        
+        if detected_category not in exclude_categories:
+            detected_category = "公式切り抜き"
   
     return detected_category, list(detected_keywords)
 
 # --- 4. YouTube API ---
-# 【変更点】ISO 8601形式のdurationを秒数に変換するヘルパー関数
+# ISO 8601形式のdurationを秒数に変換するヘルパー関数
 def get_duration_seconds(duration_str):
     match = re.match(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?', duration_str)
     if not match:
@@ -446,7 +452,7 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
             items = response.get('items', [])
             if not items: break
             
-            # 【変更点】動画IDのリストを作成し、まとめてdurationを取得
+            # 動画IDのリストを作成し、まとめてdurationを取得
             video_ids = [item['contentDetails']['videoId'] for item in items]
             
             # API: videos().list をコールして duration を取得
@@ -472,12 +478,12 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
 
                 video_id = item['contentDetails']['videoId']
                 
-                # 【変更点】ショート動画判定 (60秒以下をショートとみなす)
+                # ショート動画判定 (60秒以下をショートとみなす)
                 duration_str = durations.get(video_id, "PT0S")
                 seconds = get_duration_seconds(duration_str)
                 is_short = (0 < seconds <= 60)
                 
-                # 【変更点】引数を追加
+                # 引数を追加
                 category, keywords = analyze_video_tags(
                     snippet['title'], 
                     snippet.get('description', ''), 
