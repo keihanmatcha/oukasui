@@ -210,7 +210,22 @@
     　　/* padding-bottomなどは適宜調整 */
      }
 　　}
-    .list-col{grid-area:list;}
+    .list-col {
+        /* 左側と同じ高さ（画面いっぱい）に固定 */
+        height: calc(100vh - 120px);
+        
+        /* スクロール位置の基準を左側と合わせる */
+        position: sticky;
+        top: 100px;
+        
+        /* ★重要：このエリアの中でスクロールさせる */
+        overflow-y: auto;
+        
+        /* スクロールバーがコンテンツに被らないよう少し余白調整 */
+        padding-right: 4px;
+        box-sizing: border-box; 
+      }
+    }
     .player-col{grid-area:player;}
     .nothing{color:var(--muted);text-align:center;padding:20px;border:1px dashed var(--border);border-radius:12px; grid-column: 1 / -1; margin-top: 16px; margin-bottom: 16px;}
 
@@ -1237,6 +1252,7 @@
   </script>
 </body>
 </html>
+
 
 
 
