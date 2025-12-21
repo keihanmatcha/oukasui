@@ -161,16 +161,42 @@
           position: sticky; 
           top: 84px; /* ヘッダーの高さ＋少しの余白 */
           align-self: start; 
-          height: calc(100vh - 100px); /* ★ここが重要：fit-contentをやめて高さを固定 */
-          z-index: 5; 
+          height: calc(100vh - 100px)!important; /* ★ここが重要：fit-contentをやめて高さを固定 */
+       　 max-height: calc(100vh - 100px) !important;
+　　　　　 overflow: hidden; /* はみ出し防止 */
+          /* z-index: 5;*/
       }
       /* パネルは親（player-col）の高さに合わせて100%になるように */
       .player-panel{ 
           position: static; 
-          height: 100%; 
-          max-height: none; /* グローバルの制限を解除 */
+          height: 100%!important; /* auto にならないように強制 */; 
+          max-height: none!important; /* グローバルの制限を解除 */
           display: flex;
           flex-direction: column;
+          overflow: hidden; /* 角丸を維持 */
+      }
+    }
+       /* 3. フッター（セットリストを含むエリア）を伸縮可能にする */
+      .player-foot {
+        flex: 1; /* 残りの高さをすべて埋める */
+        display: flex;
+        flex-direction: column;
+        min-height: 0; /* Flexbox内でスクロールさせるための重要設定 */
+        overflow: hidden;
+        padding-bottom: 0; /* 下部の余白調整 */
+    }
+
+    /* 4. セットリスト自体をスクロール領域にする */
+      .setlist {
+        flex: 1; /* フッター内で残りの高さを埋める */
+        overflow-y: auto !important; /* 縦スクロールを有効化 */
+        
+        height: auto !important;
+        max-height: none !important;
+        
+        /* 見た目の微調整 */
+        margin-bottom: 10px;
+        border-bottom: 1px solid var(--border);
       }
     }
 
@@ -1213,6 +1239,7 @@
   </script>
 </body>
 </html>
+
 
 
 
