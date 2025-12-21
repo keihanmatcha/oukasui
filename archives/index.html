@@ -246,53 +246,72 @@
 
     /* ★★★ モーダル再生画面 ★★★ */
     /* 背面のリストをスクロールさせない */
-    body.player-active { overflow: hidden; }
+    /* ▼▼▼ スマホ全画面再生時のスタイル（完全修正版） ▼▼▼ */
     
-    /* リストやヘッダーを非表示 */
+    /* 背景をスクロールさせない */
+    body.player-active { overflow: hidden; } 
+    
+    /* リスト画面のヘッダーや一覧は非表示 */
     .player-active .list-col, .player-active header { display: none !important; }
-    .player-active .wrap { padding: 0 !important; }
     
-    /* コンテナ：ここがスクロール領域になる */
+    /* 黒背景のオーバーレイ */
     .player-active .player-col { 
-        display: block !important;
-        position: fixed; 
-        inset: 0; 
-        z-index: 9999; 
+        display: flex !important;
+        position: fixed; top: 0; left: 0; z-index: 9999; 
         width: 100%; 
-        height: 100%; 
+        height: 100dvh; /* ★重要: dvhを使うことでスマホのバー伸縮に対応 */
         background: rgba(0, 0, 0, 0.85); 
-        overflow-y: auto; /* ★全体スクロールを有効化 */
-        -webkit-overflow-scrolling: touch; /* iOSでの慣性スクロール */
-        padding: 20px 10px 100px 10px; /* 上下の余白（下は大きめに） */
+        align-items: center; 
+        justify-content: center; 
+        padding: 0;
     }
     
-    /* パネル本体：高さ制限を撤廃 */
+    /* 白いパネル本体 */
     .player-active .player-panel { 
         position: relative; 
         width: 100%; 
         max-width: 600px; 
-        margin: 0 auto; /* 中央寄せ */
-        height: auto !important; /* ★高さ自動調整 */
-        max-height: none !important; 
+        /* 画面いっぱいは使わず、少し余裕を持たせる（誤タップ防止） */
+        height: 95dvh; 
+        max-height: 95dvh; 
         background: #fff; 
-        border-radius: 12px; 
-        box-shadow: 0 20px 50px rgba(0,0,0,0.5); 
-        display: block; /* Flex解除 */
-    }
-
-    /* フッター（セットリスト含むエリア）：内部スクロール廃止 */
-    .player-active .player-foot { 
-        overflow: visible !important;
-        height: auto !important;
-        flex: none;
+        border-radius: 12px 12px 0 0; /* 下側は画面端につけるなら角丸なしでも可 */
+        display: flex; 
+        flex-direction: column; 
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        margin-top: auto; /* 下寄せにする場合 */
+        margin-bottom: 0;
     }
     
-    /* セットリスト：全件表示 */
+    /* ヘッダーと動画部分は高さ固定（縮ませない） */
+    .player-active .player-head,
+    .player-active .player-body {
+        flex-shrink: 0; 
+    }
+    
+    /* フッター（セットリストの親）を残り全ての高さにする */
+    .player-active .player-foot { 
+        flex: 1; /* 残りの高さを埋める */
+        display: flex;
+        flex-direction: column;
+        overflow: hidden; /* ここではスクロールさせない */
+        padding-bottom: 0 !important;
+        min-height: 0; /* ★重要: Flexアイテム内のスクロールに必須 */
+    }
+    
+    /* セットリスト（スクロールする本体） */
     .player-active .setlist { 
+        flex: 1; /* 親の広さいっぱいに広がる */
         max-height: none !important; 
-        overflow: visible !important; 
-        border: 1px solid var(--border);
-        padding-bottom: 300px !important;
+        overflow-y: auto !important; /* ここだけスクロール */
+        -webkit-overflow-scrolling: touch; /* 滑らかスクロール */
+        
+        border-bottom: none;
+        margin-bottom: 0;
+        
+        /* ★ここに巨大な余白を入れることで、最下部が見えるようにする */
+        padding-bottom: 150px !important; 
+        box-sizing: border-box;
     }
 </style>
 </head>
@@ -1178,5 +1197,6 @@
   </script>
 </body>
 </html>
+
 
 
