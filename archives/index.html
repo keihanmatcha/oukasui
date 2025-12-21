@@ -36,13 +36,13 @@
         color: var(--fg);
         font-family: system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
         /* ★重要：横揺れ防止 */
-        overflow-x: hidden;
+        /* overflow-x: hidden;*/
         width: 100%;
     }
-  /* フィルターパネルの横揺れ防止のため、ここに追加 */
-    /* body {
+  　/* フィルターパネルの横揺れ防止のため、ここに追加 */
+    body {
         overflow-x: clip; /* hiddenの代わりにclipを使うとstickyが効く場合がありますが、ブラウザ互換性のため削除推奨 */
-    }*/
+    }
     
     /* ===== ヘッダー (Songsと統一) ===== */
     header {
@@ -156,49 +156,12 @@
     .grid.player-left{grid-template-columns:.8fr 1.2fr;grid-template-areas:"player list"}
     
     @media (min-width: 901px){
-      /* プレイヤーの列自体に「画面の高さからヘッダー分を引いた高さ」を強制指定 */
-      .player-col{ 
-          position: sticky; 
-          top: 84px; /* ヘッダーの高さ＋少しの余白 */
-          align-self: start; 
-          height: calc(100vh - 100px)!important; /* ★ここが重要：fit-contentをやめて高さを固定 */
-       　 max-height: calc(100vh - 100px) !important;
-　　　　　 overflow: hidden; /* はみ出し防止 */
-          /* z-index: 5;*/
-      }
-      /* パネルは親（player-col）の高さに合わせて100%になるように */
-      .player-panel{ 
-          position: static; 
-          height: 100%!important; /* auto にならないように強制 */; 
-          max-height: none!important; /* グローバルの制限を解除 */
-          display: flex;
-          flex-direction: column;
-          overflow: hidden; /* 角丸を維持 */
-      }
+      .player-col{ position: sticky; top: 140px; align-self:start; height: fit-content; z-index: 5; }
+      .player-panel{ position: static; }
     }
-       /* 3. フッター（セットリストを含むエリア）を伸縮可能にする */
-      .player-foot {
-        flex: 1; /* 残りの高さをすべて埋める */
-        display: flex;
-        flex-direction: column;
-        min-height: 0; /* Flexbox内でスクロールさせるための重要設定 */
-        overflow: hidden;
-        padding-bottom: 0; /* 下部の余白調整 */
-    }
-
-    /* 4. セットリスト自体をスクロール領域にする */
-      .setlist {
-        flex: 1; /* フッター内で残りの高さを埋める */
-        overflow-y: auto !important; /* 縦スクロールを有効化 */
-        
-        height: auto !important;
-        max-height: none !important;
-        
-        /* 見た目の微調整 */
-        margin-bottom: 10px;
-        border-bottom: 1px solid var(--border);
-      }
-    }
+    .list-col{grid-area:list}
+    .player-col{grid-area:player}
+    .nothing{color:var(--muted);text-align:center;padding:20px;border:1px dashed var(--border);border-radius:12px; grid-column: 1 / -1; margin-top: 16px; margin-bottom: 16px;}
 
     /* リスト (PC: カード型) */
     .list{ display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; padding: 1px; }
@@ -221,51 +184,26 @@
     .keyword-badge:hover { background: #e5dfff; }
 
     /* プレイヤーパネル */
-    .player-panel{position:sticky;top:84px;max-height: calc(100vh - 110px);border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--panel);display: flex;flex-direction: column;}
+    .player-panel{position:sticky;top:84px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--panel)}
     .player-head{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#f0f1ff;border-bottom:1px solid var(--border)}
     .player-head .drag-handle{font-weight:700;opacity:.5;padding:0 6px;border-radius:6px;}
-    .player-head,
-    .player-title-box, /* タイトル表示エリア */
-    .player-body {
-        flex-shrink: 0; 
-    }
     .player-title{font-size:14px;color:#333;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .player-sub{font-size:12px;color:var(--muted)}
     .player-body{position:relative;aspect-ratio:16/9;width:100%;background:#000}
     .player-body iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-    .player-foot {
-        flex: 1; /* 残りの高さをすべて使う */
-        display: flex;
-        flex-direction: column; /* 中身も縦並び */
-        min-height: 0; /* Flexアイテム内でスクロールさせるための必須設定 */
-        overflow: hidden;   /* ★追加：中身がはみ出さないようにする */
-        padding: 10px 14px;
-        border-top: 1px solid var(--border);
-        background: #fff;
-    }
-    /*.player-foot{padding:10px 14px;border-top:1px solid var(--border);background:#fff}*/
+    .player-foot{padding:10px 14px;border-top:1px solid var(--border);background:#fff}
     .meta-line{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
     .warn{margin-top:8px;padding:10px 12px;color:#92400e;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px}
 
     /* セットリスト  */
-    /*セットリスト本体（ここだけスクロール） */
-  
     .setlist { 
-        flex: 1; /* 親要素（foot）の中で残りの高さを埋める */
-        overflow-y: auto; /* 縦スクロール */
-     　 overscroll-behavior: contain; /* スクロール連鎖防止 */
-        min-height: 0;
-        height: 0;
-        /* 固定高さ(420px)を廃止 */
-        /*max-height: none !important; */
-        
+        max-height: 420px; 
+        overflow: auto; 
         border: 1px solid var(--border); 
         border-radius: 10px; 
         margin-top: 8px; 
         display: block; 
-        
-        padding-bottom: 20px; /* 少し余白 */
-    }
+        padding-bottom: 60px !important; 
     }
     .set-item { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-top: 1px solid var(--border); background: #fafafa; cursor: pointer; }
     .set-item:first-child { border-top: none; }
@@ -670,7 +608,7 @@
                         <li><label><input type="checkbox" name="get_companion[]" value="松本吉弘"><span>松本吉弘</span></label></li>
                         <li><label><input type="checkbox" name="get_companion[]" value="前野智昭"><span>前野智昭</span></label></li>
                         <li><label><input type="checkbox" name="get_companion[]" value="土田玲央"><span>土田玲央</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="平川大輔"><span>平川大輔</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="平川大輔"><span>平川大輔</span></label></li
                         <li><label><input type="checkbox" name="get_companion[]" value="龍惺ろたん"><span>龍惺ろたん</span></label></li>
                         </ul>
         </dd>
@@ -1239,7 +1177,3 @@
   </script>
 </body>
 </html>
-
-
-
-
