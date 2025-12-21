@@ -36,7 +36,7 @@
         color: var(--fg);
         font-family: system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
         /* ★重要：横揺れ防止 */
-        /* overflow-x: hidden;*/
+        overflow-x: hidden;
         width: 100%;
     }
   /* フィルターパネルの横揺れ防止のため、ここに追加 */
@@ -156,12 +156,23 @@
     .grid.player-left{grid-template-columns:.8fr 1.2fr;grid-template-areas:"player list"}
     
     @media (min-width: 901px){
-      .player-col{ position: sticky; top: 140px; align-self:start; height: fit-content; z-index: 5; }
-      .player-panel{ position: static; }
+      /* プレイヤーの列自体に「画面の高さからヘッダー分を引いた高さ」を強制指定 */
+      .player-col{ 
+          position: sticky; 
+          top: 84px; /* ヘッダーの高さ＋少しの余白 */
+          align-self: start; 
+          height: calc(100vh - 100px); /* ★ここが重要：fit-contentをやめて高さを固定 */
+          z-index: 5; 
+      }
+      /* パネルは親（player-col）の高さに合わせて100%になるように */
+      .player-panel{ 
+          position: static; 
+          height: 100%; 
+          max-height: none; /* グローバルの制限を解除 */
+          display: flex;
+          flex-direction: column;
+      }
     }
-    .list-col{grid-area:list}
-    .player-col{grid-area:player}
-    .nothing{color:var(--muted);text-align:center;padding:20px;border:1px dashed var(--border);border-radius:12px; grid-column: 1 / -1; margin-top: 16px; margin-bottom: 16px;}
 
     /* リスト (PC: カード型) */
     .list{ display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; padding: 1px; }
@@ -1198,4 +1209,5 @@
   </script>
 </body>
 </html>
+
 
