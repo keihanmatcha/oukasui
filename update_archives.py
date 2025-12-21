@@ -334,7 +334,8 @@ UNIT_GROUP_MAP = {
 # パフォーマンス最適化: ループ外で小文字化マップを作成
 HANDLE_MAP_LOWER = {k.lower(): v for k, v in HANDLE_TO_NAME_MAP.items()}
 
-def analyze_video_tags(title, description, fixed_tags):
+# 【変更点】引数に channel_name と is_short を追加
+def analyze_video_tags(title, description, fixed_tags, channel_name="", is_short=False):
     detected_category = "未分類"
     detected_keywords = set()
     
@@ -402,10 +403,24 @@ def analyze_video_tags(title, description, fixed_tags):
             detected_category = "ゲーム実況"
         elif detected_category != "ゲーム実況":
             detected_keywords.add("ゲーム実況")
+            
+    # 【変更点】10. 公式切り抜き判定 (ショート動画 かつ 長尾景)
+    if is_short and "長尾景" in channel_name:
+        detected_category = "公式切り抜き"
   
     return detected_category, list(detected_keywords)
 
 # --- 4. YouTube API ---
+# 【変更点】ISO 8601形式のdurationを秒数に変換するヘルパー関数
+def get_duration_seconds(duration_str):
+    match = re.match(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?', duration_str)
+    if not match:
+        return 0
+    h = int(match.group(1) or 0)
+    m = int(match.group(2) or 0)
+    s = int(match.group(3) or 0)
+    return h * 3600 + m * 60 + s
+
 def get_uploads_playlist_id(youtube, channel_id):
     try:
         resp = youtube.channels().list(part='contentDetails', id=channel_id).execute()
@@ -431,6 +446,20 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
             items = response.get('items', [])
             if not items: break
             
+            # 【変更点】動画IDのリストを作成し、まとめてdurationを取得
+            video_ids = [item['contentDetails']['videoId'] for item in items]
+            
+            # API: videos().list をコールして duration を取得
+            vid_response = youtube.videos().list(
+                part='contentDetails',
+                id=','.join(video_ids)
+            ).execute()
+            
+            # 動画IDとdurationのマップを作成
+            durations = {}
+            for v in vid_response.get('items', []):
+                durations[v['id']] = v['contentDetails']['duration']
+
             for item in items:
                 snippet = item['snippet']
                 if not snippet.get('publishedAt'): continue
@@ -443,7 +472,19 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
 
                 video_id = item['contentDetails']['videoId']
                 
-                category, keywords = analyze_video_tags(snippet['title'], snippet.get('description', ''), fixed_tags)
+                # 【変更点】ショート動画判定 (60秒以下をショートとみなす)
+                duration_str = durations.get(video_id, "PT0S")
+                seconds = get_duration_seconds(duration_str)
+                is_short = (0 < seconds <= 60)
+                
+                # 【変更点】引数を追加
+                category, keywords = analyze_video_tags(
+                    snippet['title'], 
+                    snippet.get('description', ''), 
+                    fixed_tags, 
+                    channel_name=channel_name, 
+                    is_short=is_short
+                )
                 
                 videos.append({
                     "youtubeId": video_id,
@@ -577,16 +618,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
