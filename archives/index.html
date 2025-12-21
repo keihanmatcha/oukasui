@@ -155,28 +155,61 @@
     .grid{display:grid;gap:16px;align-items:start;grid-template-columns:1.2fr .8fr;grid-template-areas:"list player"}
     .grid.player-left{grid-template-columns:.8fr 1.2fr;grid-template-areas:"player list"}
     
-    @media (min-width: 901px){
-      .player-col{ position: sticky; top: 100px; align-self:start;  z-index: 5;height:auto; max-height: calc(100vh - 120px);display: flex; flex-direction: column;}
-      .player-panel{ position: static; display: flex;flex-direction: column;max-height: 100%;overflow: hidden; /* パネル自体のはみ出しを防止 */}
-    
-      .player-head,
-      .player-body,
-      .player-panel > div:nth-child(2) { /* タイトル・メタ情報エリア */
-        flex-shrink: 0;
-      }
-      .player-foot {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        min-height: 0; /* Flexアイテム内のスクロールに必須 */
-        overflow: hidden;
-      }
-      
-      /* メタ情報や警告文は縮ませない */
-      .meta-line, .warn {
-          flex-shrink: 0; 
-      }
+    　　　/* PC (901px以上) の場合の挙動を定義 */
+　　　@media (min-width: 901px) {
+     /* ① 外枠：画面の高さからヘッダー分(約120px)引いた高さを「上限」として固定する */
+     .player-col {
+       position: sticky;
+       top: 100px;           /* 上の隙間 */
+       align-self: start;
+       height: auto;
+       max-height: calc(100vh - 120px); /* ★重要：画面からはみ出さないように制限 */
+       display: flex;        /* 中身をFlexで配置 */
+       flex-direction: column;
+       z-index: 5;
+     }
+
+  　　　/* ② パネル本体：親(player-col)の高さに合わせて広げる */
+     .player-panel {
+       position: static;
+       display: flex;
+       flex-direction: column;
+       flex: 1;              /* 縦に伸びる力を与える */
+       min-height: 0;        /* 縮むことを許可 */
+       overflow: hidden;     /* はみ出し防止 */
+     }
+　　　　/* ヘッダーや動画部分は固定サイズ（縮ませない） */
+  　　.player-head,
+  　　.player-body,
+  　　.player-panel > div:nth-child(2) { /* タイトルエリア */
+      flex-shrink: 0;
     }
+
+  　　/* ③ フッターエリア：残りのスペースを全て埋める */
+  　　.player-foot {
+      flex: 1;              /* 余った高さを全て使う */
+      display: flex;
+      flex-direction: column;
+      min-height: 0;        /* 重要：これがないとスクロールしない */
+      overflow: hidden;
+    }
+
+ 　 /* メタ情報などは縮ませない */
+     .meta-line, .warn {
+       flex-shrink: 0;
+     }
+
+  　　/* ④ セットリスト：ここだけスクロールさせる */
+     .setlist {
+       flex: 1;              /* フッター内の余白を全部使う */
+       overflow-y: auto;     /* 縦スクロールを許可 */
+       max-height: none;     /* 420pxの制限を解除 */
+       margin-top: 8px;
+       border: 1px solid var(--border); /* 見た目の維持 */
+       border-radius: 10px;
+    　　/* padding-bottomなどは適宜調整 */
+     }
+　　}
     .list-col{grid-area:list;}
     .player-col{grid-area:player;}
     .nothing{color:var(--muted);text-align:center;padding:20px;border:1px dashed var(--border);border-radius:12px; grid-column: 1 / -1; margin-top: 16px; margin-bottom: 16px;}
@@ -1204,6 +1237,7 @@
   </script>
 </body>
 </html>
+
 
 
 
