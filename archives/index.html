@@ -156,11 +156,29 @@
     .grid.player-left{grid-template-columns:.8fr 1.2fr;grid-template-areas:"player list"}
     
     @media (min-width: 901px){
-      .player-col{ position: sticky; top: 140px; align-self:start; height: fit-content; z-index: 5; }
-      .player-panel{ position: static; }
+      .player-col{ position: sticky; top: 100px; align-self:start;  z-index: 5;height:auto; max-height: calc(100vh - 120px);display: flex; flex-direction: column;}
+      .player-panel{ position: static; display: flex;flex-direction: column;max-height: 100%;overflow: hidden; /* パネル自体のはみ出しを防止 */}
     }
-    .list-col{grid-area:list}
-    .player-col{grid-area:player}
+      .player-head,
+      .player-body,
+      .player-panel > div:nth-child(2) { /* タイトル・メタ情報エリア */
+        flex-shrink: 0;
+      }
+      .player-foot {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 0; /* Flexアイテム内のスクロールに必須 */
+        overflow: hidden;
+      }
+      
+      /* メタ情報や警告文は縮ませない */
+      .meta-line, .warn {
+          flex-shrink: 0; 
+      }
+    }
+    .list-col{grid-area:list;}
+    .player-col{grid-area:player;}
     .nothing{color:var(--muted);text-align:center;padding:20px;border:1px dashed var(--border);border-radius:12px; grid-column: 1 / -1; margin-top: 16px; margin-bottom: 16px;}
 
     /* リスト (PC: カード型) */
@@ -197,13 +215,14 @@
 
     /* セットリスト  */
     .setlist { 
-        max-height: 420px; 
+    /* max-height: 420px;  <-- ★削除（PC側で自動調整するため） */
         overflow: auto; 
         border: 1px solid var(--border); 
         border-radius: 10px; 
         margin-top: 8px; 
         display: block; 
-        padding-bottom: 60px !important; 
+      /*padding-bottom: 60px !important; */
+        padding-bottom: 20px;
     }
     .set-item { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-top: 1px solid var(--border); background: #fafafa; cursor: pointer; }
     .set-item:first-child { border-top: none; }
@@ -214,6 +233,12 @@
     .set-song { font-weight: 600; font-size: 14px; }
     .set-artist { font-size: 12px; color: var(--muted); }
     .set-time { font-variant-numeric: tabular-nums; color: #374151; white-space: nowrap; font-size: 13px; }
+   @media (min-width: 901px) {
+        .setlist {
+            flex: 1;          /* 余った高さを全て使う */
+            max-height: none; /* 固定高さ制限なし */
+        }
+    }
 
     /* ★★★ モバイル・スマホ対応 (900px以下) ★★★ */
     @media (max-width: 900px) {
@@ -1177,3 +1202,4 @@
   </script>
 </body>
 </html>
+
