@@ -1,4 +1,27 @@
 [{
+    "youtubeId": "_hSFqbQB_4E",
+    "title": "KZHCUP RUMBLE in STREET FIGHTER 6 予選【#KZHCUP_RUMBLE】",
+    "channel": "にじさんじ",
+    "date": "2025-12-21",
+    "thumbnail": "https://i.ytimg.com/vi/_hSFqbQB_4E/mqdefault.jpg",
+    "songs": [
+      { "title": "開幕", "artist": "ももいろクローバーZ", "start":153  },
+      { "title": "予選ルール", "artist": "YOASOBI", "start":503  },
+      { "title": "出場チーム紹介・インタビュー【さんたっち】", "artist": "AiScReam", "start":1631  },
+      { "title": "対戦スケジュール", "artist": " ももいろクローバーZ", "start":2767  },
+      { "title": "MATCH2", "artist": "さんたっちvsDr.アクアクリニック", "start":5567  },
+      { "title": "[先鋒]風楽奏斗(Mヴァイパー)vs倉持めると(Mマリーザ)", "artist": "風楽奏斗vs倉持めると", "start":5689  },
+      { "title": "[中堅]長尾景(Mザンギエフ)vsソフィア・ヴァレンタイン(Mブランカ)", "artist": "長尾景vsソフィア・ヴァレンタイン", "start":6235  },
+      { "title": "[大将]オリバー・エバンス(Cベガ)vsイブラヒム(Cジュリ)", "artist": "オリバー・エバンスvsイブラヒム", "start":2262  },
+    　{ "title": "MATCH7", "artist": "さんたっちvsBOしたら坊主", "start":19055  },
+    　{ "title": "[先鋒]風楽奏斗(Mヴァイパー)vs小柳ロウ(C豪鬼)", "artist": "風楽奏斗vs小柳ロウ", "start":19393  },
+      { "title": "[中堅]長尾景(Mザンギエフ)vs神田笑一(CJP)", "artist": "長尾景vs神田笑一", "start":19811  },
+      { "title": "[大将]オリバー・エバンス(Cベガ)vs伊波ライ(Cケン)", "artist": "オリバー・エバンスvs伊波ライ", "start":20331  }
+    ],
+    "category": ["ゲーム実況","ライブイベント","大会"],
+    "keywords": ["葛葉", "KZHCUP","風楽奏斗","オリバー・エバンス","どぐら","倉持めると","ソフィア・ヴァレンタイン","イブラヒム","小柳ロウ","神田笑一","伊波ライ",""]
+  },
+    {
     "youtubeId": "klbtk1zcQsU",
     "title": "リアライズ　歌って踊ってみた｜#にじさんじダンス部",
     "channel": "東堂コハク",
