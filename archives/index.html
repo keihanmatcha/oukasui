@@ -39,7 +39,7 @@
         /* overflow-x: hidden;*/
         width: 100%;
     }
-  　/* フィルターパネルの横揺れ防止のため、ここに追加 */
+  /* フィルターパネルの横揺れ防止のため、ここに追加 */
     body {
         overflow-x: clip; /* hiddenの代わりにclipを使うとstickyが効く場合がありますが、ブラウザ互換性のため削除推奨 */
     }
@@ -184,26 +184,47 @@
     .keyword-badge:hover { background: #e5dfff; }
 
     /* プレイヤーパネル */
-    .player-panel{position:sticky;top:84px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--panel)}
+    .player-panel{position:sticky;top:84px;max-height: calc(100vh - 110px);border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--panel);display: flex;flex-direction: column;}
     .player-head{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#f0f1ff;border-bottom:1px solid var(--border)}
     .player-head .drag-handle{font-weight:700;opacity:.5;padding:0 6px;border-radius:6px;}
+    .player-head,
+    .player-title-box, /* タイトル表示エリア */
+    .player-body {
+        flex-shrink: 0; 
+    }
     .player-title{font-size:14px;color:#333;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .player-sub{font-size:12px;color:var(--muted)}
     .player-body{position:relative;aspect-ratio:16/9;width:100%;background:#000}
     .player-body iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-    .player-foot{padding:10px 14px;border-top:1px solid var(--border);background:#fff}
+    .player-foot {
+        flex: 1; /* 残りの高さをすべて使う */
+        display: flex;
+        flex-direction: column; /* 中身も縦並び */
+        min-height: 0; /* Flexアイテム内でスクロールさせるための必須設定 */
+        padding: 10px 14px;
+        border-top: 1px solid var(--border);
+        background: #fff;
+    }
+    /*.player-foot{padding:10px 14px;border-top:1px solid var(--border);background:#fff}*/
     .meta-line{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
     .warn{margin-top:8px;padding:10px 12px;color:#92400e;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px}
 
     /* セットリスト  */
+    /*セットリスト本体（ここだけスクロール） */
     .setlist { 
-        max-height: 420px; 
-        overflow: auto; 
+        flex: 1; /* 親要素（foot）の中で残りの高さを埋める */
+        overflow-y: auto; /* 縦スクロール */
+        
+        /* 固定高さ(420px)を廃止 */
+        max-height: none !important; 
+        
         border: 1px solid var(--border); 
         border-radius: 10px; 
         margin-top: 8px; 
         display: block; 
-        padding-bottom: 60px !important; 
+        
+        /* 下端が見切れないように余白 */
+        padding-bottom: 40px !important; 
     }
     .set-item { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-top: 1px solid var(--border); background: #fafafa; cursor: pointer; }
     .set-item:first-child { border-top: none; }
@@ -246,72 +267,52 @@
 
     /* ★★★ モーダル再生画面 ★★★ */
     /* 背面のリストをスクロールさせない */
-    /* ▼▼▼ スマホ全画面再生時のスタイル（完全修正版） ▼▼▼ */
+    body.player-active { overflow: hidden; }
     
-    /* 背景をスクロールさせない */
-    body.player-active { overflow: hidden; } 
-    
-    /* リスト画面のヘッダーや一覧は非表示 */
+    /* リストやヘッダーを非表示 */
     .player-active .list-col, .player-active header { display: none !important; }
+    .player-active .wrap { padding: 0 !important; }
     
-    /* 黒背景のオーバーレイ */
+    /* コンテナ：ここがスクロール領域になる */
     .player-active .player-col { 
-        display: flex !important;
-        position: fixed; top: 0; left: 0; z-index: 9999; 
+        display: block !important;
+        position: fixed; 
+        inset: 0; 
+        z-index: 9999; 
         width: 100%; 
-        height: 100dvh; /* ★重要: dvhを使うことでスマホのバー伸縮に対応 */
+        height: 100%; 
         background: rgba(0, 0, 0, 0.85); 
-        align-items: center; 
-        justify-content: center; 
-        padding: 0;
+        overflow-y: auto; /* ★全体スクロールを有効化 */
+        -webkit-overflow-scrolling: touch; /* iOSでの慣性スクロール */
+        padding: 20px 10px 100px 10px; /* 上下の余白（下は大きめに） */
     }
     
-    /* 白いパネル本体 */
+    /* パネル本体：高さ制限を撤廃 */
     .player-active .player-panel { 
         position: relative; 
         width: 100%; 
         max-width: 600px; 
-        /* 画面いっぱいは使わず、少し余裕を持たせる（誤タップ防止） */
-        height: 95dvh; 
-        max-height: 95dvh; 
-        background: #fff; 
-        border-radius: 12px 12px 0 0; /* 下側は画面端につけるなら角丸なしでも可 */
-        display: flex; 
-        flex-direction: column; 
-        box-shadow: 0 0 20px rgba(0,0,0,0.5);
-        margin-top: auto; /* 下寄せにする場合 */
-        margin-bottom: 0;
-    }
-    
-    /* ヘッダーと動画部分は高さ固定（縮ませない） */
-    .player-active .player-head,
-    .player-active .player-body {
-        flex-shrink: 0; 
-    }
-    
-    /* フッター（セットリストの親）を残り全ての高さにする */
-    .player-active .player-foot { 
-        flex: 1; /* 残りの高さを埋める */
-        display: flex;
-        flex-direction: column;
-        overflow: hidden; /* ここではスクロールさせない */
-        padding-bottom: 0 !important;
-        min-height: 0; /* ★重要: Flexアイテム内のスクロールに必須 */
-    }
-    
-    /* セットリスト（スクロールする本体） */
-    .player-active .setlist { 
-        flex: 1; /* 親の広さいっぱいに広がる */
+        margin: 0 auto; /* 中央寄せ */
+        height: auto !important; /* ★高さ自動調整 */
         max-height: none !important; 
-        overflow-y: auto !important; /* ここだけスクロール */
-        -webkit-overflow-scrolling: touch; /* 滑らかスクロール */
-        
-        border-bottom: none;
-        margin-bottom: 0;
-        
-        /* ★ここに巨大な余白を入れることで、最下部が見えるようにする */
-        padding-bottom: 150px !important; 
-        box-sizing: border-box;
+        background: #fff; 
+        border-radius: 12px; 
+        box-shadow: 0 20px 50px rgba(0,0,0,0.5); 
+        display: block; /* Flex解除 */
+    }
+
+    /* フッター（セットリスト含むエリア）：内部スクロール廃止 */
+    .player-active .player-foot { 
+        overflow: visible !important;
+        height: auto !important;
+        flex: none;
+    }
+    
+    /* セットリスト：全件表示 */
+    .player-active .setlist { 
+        max-height: none !important; 
+        overflow: visible !important; 
+        border: 1px solid var(--border);
     }
 </style>
 </head>
@@ -628,7 +629,7 @@
                         <li><label><input type="checkbox" name="get_companion[]" value="松本吉弘"><span>松本吉弘</span></label></li>
                         <li><label><input type="checkbox" name="get_companion[]" value="前野智昭"><span>前野智昭</span></label></li>
                         <li><label><input type="checkbox" name="get_companion[]" value="土田玲央"><span>土田玲央</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="平川大輔"><span>平川大輔</span></label></li
+                        <li><label><input type="checkbox" name="get_companion[]" value="平川大輔"><span>平川大輔</span></label></li>
                         <li><label><input type="checkbox" name="get_companion[]" value="龍惺ろたん"><span>龍惺ろたん</span></label></li>
                         </ul>
         </dd>
@@ -1197,6 +1198,3 @@
   </script>
 </body>
 </html>
-
-
-
