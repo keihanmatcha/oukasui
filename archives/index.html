@@ -233,10 +233,12 @@
     .set-song { font-weight: 600; font-size: 14px; }
     .set-artist { font-size: 12px; color: var(--muted); }
     .set-time { font-variant-numeric: tabular-nums; color: #374151; white-space: nowrap; font-size: 13px; }
-   @media (min-width: 901px) {
+    @media (min-width: 901px) {
         .setlist {
             flex: 1;          /* 余った高さを全て使う */
-            max-height: none; /* 固定高さ制限なし */
+            max-height: none;
+          /* 固定高さ制限なし */
+            min-height: 0;
         }
     }
 
@@ -1202,5 +1204,6 @@
   </script>
 </body>
 </html>
+
 
 
