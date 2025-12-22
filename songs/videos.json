@@ -1,4 +1,13 @@
-[{
+[  {
+    "youtubeId": "YcefJ7RQGSc",
+    "title": "【オリジナル振付】Virtual to Live 踊ってみた【雪城眞尋/長尾景】",
+    "date": "2023-02-02",
+     "songs": [
+      { "title": "Virtual to Live", "artist": "にじさんじ", "start":0  }
+    ],
+    "tags": ["カバー(ユニット)"]
+  },
+    {
     "youtubeId": "_UpyNCQe5L4",
     "title": "【何が好き？】愛♡スクリ～ム！#VΔLZ【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】",
     "date": "2025-06-06",
@@ -3226,6 +3235,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
