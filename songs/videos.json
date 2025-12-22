@@ -3,7 +3,7 @@
     "title": "【オリジナル振付】Virtual to Live 踊ってみた【雪城眞尋/長尾景】",
     "date": "2023-02-02",
      "songs": [
-      { "title": "Virtual to Live", "artist": "にじさんじ", "start":0  }
+      { "title": "Virtual to LIVE", "artist": "にじさんじ", "start":0  }
     ],
     "tags": ["カバー(ユニット)"]
   },
@@ -1368,7 +1368,7 @@
     "title": "【 #VΔLZ3Dライブ 】3人揃って初めての３Dライブ！【長尾景/弦月藤士郎/甲斐田晴】",
     "date": "2022-06-25",
     "songs": [
-      { "title": "Virtual to Live", "artist": "にじさんじ", "start":3243  }
+      { "title": "Virtual to LIVE", "artist": "にじさんじ", "start":3243  }
     ],
     "youtubeId": "C31UYsrAAhQ",
     "tags": ["オリジナル(ユニット)"]
@@ -3235,6 +3235,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
