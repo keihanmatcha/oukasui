@@ -1,4 +1,14 @@
 [{
+    "youtubeId": "hRZCFvNJgtg",
+    "title": "【ドキュメンタリー】ライブまでにVΔLZでセッション出来るようになるケイナガオ【長尾景/にじさんじ】",
+    "date": "2025-04-04",
+     "songs": [
+      { "title": "パラレルノー細胞", "artist": "甲斐田晴", "start":236  },
+       { "title": "mermaid", "artist": "弦月藤士郎", "start":825  }
+    ],
+    "tags": ["オリジナル(ユニット)","弾"]
+    },
+    {
     "youtubeId": "3PutbTPr4TQ",
     "title": "I wonder/Da-iCE【長尾景/にじさんじ】【踊ってみた】",
     "date": "2025-12-22",
@@ -3310,6 +3320,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
