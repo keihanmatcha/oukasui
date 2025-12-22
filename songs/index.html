@@ -24,29 +24,21 @@
   <meta name="twitter:image" content="https://oukasui.com/images/ogp.png">
 
   <style>
-    /* ===== 基本スタイル (修正済み) ===== */
-    /* 全要素のサイズ計算を統一（横揺れ防止の要） */
+    /* ===== 基本スタイル ===== */
     *, *::before, *::after { box-sizing: border-box; }
 
     :root{ --fg:#222; --muted:#4b5563; --accent:#625DA1; --bg:#fff; --border:#e5e7eb; --panel:#f8f8ff; }
     
     html, body {
-        margin: 0;
-        padding: 0;
-        background: var(--bg);
-        color: var(--fg);
+        margin: 0; padding: 0;
+        background: var(--bg); color: var(--fg);
         font-family: system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-        
-        /* ★重要修正★: stickyを効かせるため overflow-x 指定を削除 */
-        /* overflow-x: clip;  <-- これを削除 */
-        width: 100%;
-        max-width: 100%; /* 横揺れ防止の代替策 */
+        width: 100%; max-width: 100%;
     }
     
-    /* ===== ヘッダー (パターンA：芍薬→杜若) ===== */
+    /* ===== ヘッダー ===== */
     header {
-        position: sticky;
-        top: 0;
+        position: sticky; top: 0;
         background: linear-gradient(90deg, #C24DAED9, #625DA1D9);
         backdrop-filter: saturate(1.2) blur(6px);
         border-bottom: 1px solid var(--border);
@@ -58,15 +50,9 @@
         display: flex; flex-direction: column; gap: 12px;
     }
 
-    /* 上段：ナビゲーション */
-    .nav-header { 
-        display: flex; justify-content: space-between; align-items: center; 
-        width: 100%; height: 32px;
-    }
-    .brand { 
-        font-weight: 800; color: #fff; text-decoration: none; font-size: 20px; 
-        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+    /* ナビゲーション */
+    .nav-header { display: flex; justify-content: space-between; align-items: center; width: 100%; height: 32px; }
+    .brand { font-weight: 800; color: #fff; text-decoration: none; font-size: 20px; text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
     .nav-links { display: flex; gap: 10px; }
     .nav-links a { 
         position: relative; font-size: 13px; font-weight: 700; color: #fff; text-decoration: none; 
@@ -75,68 +61,60 @@
     .nav-links a::before {
         content: ""; position: absolute; inset: 0; z-index: -1;
         transform: skewX(-20deg); border-radius: 4px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-        transition: opacity 0.2s, transform 0.2s;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15); transition: opacity 0.2s, transform 0.2s;
     }
-    /* 動画を探す：#B43246 */
     .nav-links a.link-video::before { background: #B43246; }
-
-    
     .nav-links a:hover { transform: translateY(-2px); }
     .nav-links a:hover::before { opacity: 0.9; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
 
-    /* 下段：検索ツールバー */
-    .toolbar {
-        display: flex; gap: 10px; align-items: center; flex-wrap: wrap; 
-        width: 100%;
-    }
+    /* 検索ツールバー */
+    .toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; width: 100%; }
     .searchbar { display: flex; gap: 8px; align-items: center; flex: 1; min-width: 280px; }
     .searchbar input {
         flex: 1; padding: 10px 14px; border: 0; border-radius: 10px; font-size: 16px;
         background: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 6px rgba(0,0,0,0.05); color: #333;
         min-width: 0;
     }
-    .searchbar input::placeholder { color: #666; }
     .searchbar input:focus { outline: 2px solid #fff; background: #fff; }
 
-    /* タグフィルタバー */
+    /* フィルタバー */
     .filterbar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
-    .filterbar .label { font-size:12px; color:rgba(255,255,255,0.9); font-weight: bold; text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
     .filter-tags { display:flex; gap:8px; flex-wrap:wrap; }
     
+    /* === カテゴリボタン === */
+    .cat-group { display: flex; gap: 4px; background: rgba(255,255,255,0.6); padding: 4px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.5); }
+    .cat-btn {
+        appearance: none; border: 0; background: transparent; cursor: pointer;
+        font-size: 13px; font-weight: 700; color: var(--muted); padding: 6px 14px;
+        border-radius: 999px; transition: .2s;
+    }
+    .cat-btn:hover { background: rgba(255,255,255,0.8); color: var(--fg); }
+    .cat-btn.active { background: #fff; color: var(--accent); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    
     .chip-tag {
-        font-size: 12px; line-height: 1; padding: 8px 12px; 
-        border: 0; border-radius: 999px;
-        background: rgba(255, 255, 255, 0.85); color: var(--accent);
-        cursor: pointer; font-weight: 600;
+        font-size: 12px; line-height: 1; padding: 8px 12px; border: 0; border-radius: 999px;
+        background: rgba(255, 255, 255, 0.85); color: var(--accent); cursor: pointer; font-weight: 600;
         box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: .15s;
     }
     .chip-tag:hover { background: #fff; transform: translateY(-1px); }
     .chip-tag.active { background: var(--accent); color: #fff; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); }
     
     .chip-clear {
-        font-size: 12px; padding: 6px 12px; 
-        border: 1px solid rgba(255,255,255,0.6); border-radius: 999px; 
+        font-size: 12px; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.6); border-radius: 999px; 
         background: transparent; color: #fff; cursor: pointer;
     }
     .chip-clear:hover { background: rgba(255,255,255,0.1); }
 
-
-    /* レイアウト（PC基準） */
+    /* レイアウト */
     .grid{display:grid;gap:16px;align-items:start;grid-template-columns:1.2fr .8fr;grid-template-areas:"list player"}
     .grid.player-left{grid-template-columns:.8fr 1.2fr;grid-template-areas:"player list"}
 
-    /* リストスタイル */
+    /* リスト */
     .list{border:1px solid var(--border);border-radius:14px;overflow:hidden}
     .row {
-      display: grid;
-      grid-template-columns: minmax(260px,1.5fr) auto 120px minmax(0,2fr);
-      align-items: center;
-      gap: 12px;
-      padding: 10px 14px;
-      border-top: 1px solid var(--border);
-      background: #fafafa;
-      cursor: pointer;
+      display: grid; grid-template-columns: minmax(260px,1.5fr) auto 120px minmax(0,2fr);
+      align-items: center; gap: 12px; padding: 10px 14px;
+      border-top: 1px solid var(--border); background: #fafafa; cursor: pointer;
     }
     .row:nth-child(odd){background:#f6f6fb}
     .row:first-child{border-top:none}
@@ -144,7 +122,6 @@
     .songcell{display:flex;flex-direction:column}
     .song-meta { display: flex; align-items: center; gap: 8px; }
     .songtitle{ font-weight:600; display:flex; gap:8px; align-items:center }
-    .songtitle .note{font-size:18px}
     .artist{font-size:12px;color:var(--muted)}
     
     .link { all: unset; cursor: pointer; color: inherit; }
@@ -161,33 +138,26 @@
     .videotitle button:hover{color:var(--accent);text-decoration:underline}
     .ellipsis{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-    /* タグ行 */
+    /* タグ */
     .tags-row{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:2px; padding-top:6px; border-top:1px dashed var(--border); }
     .tags-row::before{ content:"タグ"; font-size:11px; color:var(--muted); margin-right:4px; padding:2px 6px; border:1px solid var(--border); border-radius:999px; background:#fff; }
     .tag-badge { appearance:none; border:0; cursor:pointer; font-size:12px; line-height:1; padding:8px 12px; border-radius:999px; background:#f2efff; color:#4c46a6; border:1px solid #e5dfff; display:inline-flex; gap:6px; align-items:center; }
-    .tag-badge::before { content: "#"; font-weight: 700; opacity: .6; }
     .tag-badge:hover { filter: brightness(.97); }
     .tag-badge.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 
     .nothing{color:var(--muted);text-align:center;padding:20px;border:1px dashed var(--border);border-radius:12px}
 
-    /* ===== プレイヤーパネル (PC) ===== */
-    .player-panel{
-      position:sticky;top:84px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--panel)
-    }
+    /* プレイヤー */
+    .player-panel{ position:sticky;top:84px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--panel) }
     .player-head{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#f0f1ff;border-bottom:1px solid var(--border)}
-    
     #closePlayerBtn { display: none; font-size: 24px; cursor: pointer; line-height: 1; padding: 0 8px; }
-
     .player-title{font-size:14px;color:#333;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; max-width: 200px;}
     .player-sub{font-size:12px;color:var(--muted)}
     .player-body{position:relative;aspect-ratio:16/9;width:100%;background:#000}
     .player-body iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
     .player-foot{padding:10px 14px;border-top:1px solid var(--border);background:#fff}
-    .meta-line{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
     .setlist{max-height:420px;overflow:auto;border:1px solid var(--border);border-radius:10px;margin-top:8px}
     .set-item{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border-top:1px solid var(--border);background:#fafafa;cursor:pointer}
-    .set-item:first-child{border-top:none}
     .set-item:hover{background:#f3f4ff}
     .set-item.active{background:#e9ecff}
     .set-title{display:flex;flex-direction:column}
@@ -204,44 +174,39 @@
       .player-panel{ position: static; }
     }
 
-    /* ★★★ モバイル・スマホ対応 (900px以下) ★★★ */
+    /* スマホ対応 */
     @media (max-width: 900px) {
         .grid { display: block; }
         .list-col, .list { width: 100%; padding: 0; }
-
         header .wrap { padding: 10px 12px; gap: 8px; }
         .brand { font-size: 18px; }
         .nav-links a { padding: 4px 10px; font-size: 11px; }
         .searchbar input { font-size: 14px; padding: 8px 10px; }
         .chip-tag { padding: 6px 10px; font-size: 11px; }
+        
+        /* カテゴリボタン調整 */
+        .cat-group { width: 100%; justify-content: space-between; order: 3; margin-top: 4px; }
+        .cat-btn { flex: 1; text-align: center; padding: 6px 4px; font-size: 12px; }
 
         .row{ grid-template-columns:1fr; align-items:start; gap: 8px; }
         .date{ justify-self:start; font-size: 11px; color: #888; margin-bottom: 2px; }
         .videotitle{ margin-top: -4px; }
         .videotitle button { font-size: 11px; color: #6b7280; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-
         .player-col { display: none; }
 
         body.player-active { overflow: hidden; }
-        body.player-active header,
-        body.player-active .list-col { display: none !important; }
+        body.player-active header, body.player-active .list-col { display: none !important; }
         
         body.player-active .player-col {
-            display: flex !important;
-            position: fixed; top: 0; left: 0; z-index: 9999;
-            width: 100%; height: 100vh;
-            background: rgba(0, 0, 0, 0.85);
+            display: flex !important; position: fixed; top: 0; left: 0; z-index: 9999;
+            width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.85);
             align-items: center; justify-content: center;
         }
-
         body.player-active .player-panel {
-            position: relative; top: auto;
-            width: 95%; max-width: 600px; max-height: 90vh;
-            background: #fff; border-radius: 12px;
-            display: flex; flex-direction: column;
+            position: relative; top: auto; width: 95%; max-width: 600px; max-height: 90vh;
+            background: #fff; border-radius: 12px; display: flex; flex-direction: column;
             box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
-
         #closePlayerBtn { display: block; }
         .player-head { padding: 12px; }
         .player-foot { overflow-y: auto; flex: 1; }
@@ -262,6 +227,13 @@
             <input id="q" type="search" placeholder="曲名・アーティスト・動画タイトル・タグで検索" autocomplete="off" />
         </div>
         <div class="filterbar">
+          <div class="cat-group">
+            <button class="cat-btn active" data-cat="all" type="button">すべて</button>
+            <button class="cat-btn" data-cat="song" type="button">歌</button>
+            <button class="cat-btn" data-cat="dance" type="button">踊</button>
+            <button class="cat-btn" data-cat="play" type="button">弾</button>
+          </div>
+
           <div id="filterTags" class="filter-tags"></div>
           <button id="filterFavorites" class="chip-tag" type="button" style="display:none">★ お気に入り</button>
           <button id="clearTags" class="chip-clear" type="button" style="display:none">フィルター解除</button>
@@ -309,7 +281,11 @@
     const $filterTags = document.getElementById('filterTags');
     const $clearTags = document.getElementById('clearTags');
     const $filterFavorites = document.getElementById('filterFavorites');
+    
+    // === カテゴリ関連変数 ===
     let filterByFavorites = false;
+    let currentCat = 'all'; 
+    const $catBtns = document.querySelectorAll('.cat-btn');
 
     const $panel = document.getElementById('playerPanel');
     const $yt = document.getElementById('ytFrame');
@@ -385,40 +361,29 @@
 
     let ALL_ROWS=[]; let VIDEO_MAP=new Map(); let ALL_TAGS=[]; const SELECTED_TAGS=new Set();
     
-    // buildRows関数内のループ部分
+    // === buildRows関数 ===
     function buildRows(videos){
       const merged = normalizeVideos(videos);
       VIDEO_MAP = new Map(merged.map(v => [v.youtubeId, v]));
       ALL_ROWS = [];
       
       for(const v of merged){
-        // 判定用文字列（タグ＋タイトル）を小文字化して結合
         const checkStr = ((v.tags||[]).join(' ') + ' ' + v.title).toLowerCase();
         
-        // ★修正点：if-elseを使わず、各要素を独立してチェックします
-        
         // 1. 踊り判定
-        // 「踊」「ダンス」「dance」などが含まれていればON
-        const isDance = /踊|ダンス|dance|choreography/.test(checkStr);
+        const isDance = /踊|ダンス|dance|3d|choreography/.test(checkStr);
         
         // 2. 弾き（演奏）判定
-        // 「弾」「楽器」「三味線」「ピアノ」「ギター」「inst」などが含まれていればON
         const isPlay  = /弾|楽器|ベース|ギター|演奏|セッション|session/.test(checkStr);
 
         // 3. 歌判定
-        // 「歌」「song」「cover」「mv」などが含まれていればON
-        // ※「歌って踊ってみた」の場合、「歌」と「踊」の両方の文字が入っているため、
-        //   ここで isSong=true, 上で isDance=true となり、両方に分類される
         let isSong = /歌|song|cover|mv|original|vocal/.test(checkStr);
 
-        // 4. フォールバック（救済措置）
-        // どのキーワードにも当てはまらない場合（単なるタイトルのみ等）は
-        // 基本的に「歌」カテゴリとして扱います。
+        // 4. フォールバック
         if (!isDance && !isPlay && !isSong) {
             isSong = true;
         }
 
-        // 該当するタイプをすべてSetに追加
         const types = new Set();
         if(isSong) types.add('song');
         if(isDance) types.add('dance');
@@ -437,6 +402,7 @@
       ALL_TAGS = Array.from(new Set(merged.flatMap(v => v.tags||[]))).sort((a,b)=>a.localeCompare(b,'ja'));
       renderFilterTags();
     }
+
     function getFavorites() {
       const favorites = localStorage.getItem(FAVORITES_KEY);
       return favorites ? JSON.parse(favorites) : [];
@@ -582,6 +548,7 @@
       }
     }
 
+    // === フィルタリング処理 ===
     function applyFilter() {
       let filteredRows = ALL_ROWS;
 
@@ -592,28 +559,30 @@
 
       // 2. お気に入りフィルタ
       if (filterByFavorites) {
-         const favorites = getFavorites();
-         filteredRows = filteredRows.filter(r => favorites.includes(`${r.youtubeId}-${r.start}`));
+          const favorites = getFavorites();
+          filteredRows = filteredRows.filter(r => favorites.includes(`${r.youtubeId}-${r.start}`));
       } 
       // 3. キーワード＆タグフィルタ
       else {
-         const q = ($q.value || '').trim().toLowerCase();
-         const selected = [...SELECTED_TAGS];
-         
-         filteredRows = filteredRows.filter(r => {
-             const artistHit = r.artist.toLowerCase().includes(q);
-             const textOk = !q || 
-                 r.song.toLowerCase().includes(q) || 
-                 artistHit || 
-                 r.videoTitle.toLowerCase().includes(q) || 
-                 (r.tagsText || '').toLowerCase().includes(q);
-                 
-             const tagOk = !selected.length || selected.every(t => (r.tags || []).includes(t));
-             return textOk && tagOk;
-         });
+          const q = ($q.value || '').trim().toLowerCase();
+          const selected = [...SELECTED_TAGS];
+          
+          filteredRows = filteredRows.filter(r => {
+              const artistHit = r.artist.toLowerCase().includes(q);
+              
+              const textOk = !q || 
+                  r.song.toLowerCase().includes(q) || 
+                  artistHit || 
+                  r.videoTitle.toLowerCase().includes(q) || 
+                  (r.tagsText || '').toLowerCase().includes(q);
+                  
+              const tagOk = !selected.length || selected.every(t => (r.tags || []).includes(t));
+              return textOk && tagOk;
+          });
       }
       renderRows(filteredRows);
     }
+
     fetch('videos.json')
       .then(r=>r.json())
       .then(videos=>{ buildRows(videos); applyFilter(); })
@@ -625,6 +594,19 @@
       if (filterByFavorites) SELECTED_TAGS.clear();
       renderFilterTags();
       applyFilter();
+    });
+
+    // === カテゴリボタンのイベントリスナー ===
+    $catBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // 見た目の切り替え
+        $catBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // フィルタ適用
+        currentCat = btn.dataset.cat;
+        applyFilter();
+      });
     });
 
     $closeBtn.onclick = () => {
