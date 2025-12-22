@@ -1,4 +1,34 @@
-[  {
+[{
+    "youtubeId": "CgJa6aqqNdY",
+    "title": "【ベース練習】明日本番、MA？？【長尾景/にじさんじ】",
+    "date": "2023-07-02",
+     "songs": [
+      { "title": "クレマチスの祈り", "artist": "長尾景", "start":267  },
+      { "title": "クレマチスの祈り", "artist": "長尾景", "start":520  },
+      { "title": "クレマチスの祈り", "artist": "長尾景", "start":1823  },
+      { "title": "クレマチスの祈り", "artist": "長尾景", "start":3070  }
+    ],
+    "tags": ["オリジナル（ソロ）","弾","歌"]
+  },
+　{
+    "youtubeId": "CgJa6aqqNdY",
+    "title": "【ベース練習】明日本番、MA？？【長尾景/にじさんじ】",
+    "date": "2023-07-02",
+     "songs": [
+      { "title": "クレマチスの祈り", "artist": "長尾景", "start":120  }
+    ],
+    "tags": ["オリジナル（ソロ）","弾"]
+  },
+　{
+    "youtubeId": "tUwMWiuvHDw",
+    "title": "【ベース練習】なっち先生降臨回【長尾景/にじさんじ】",
+    "date": "2023-07-02",
+     "songs": [
+      { "title": "クレマチスの祈り", "artist": "長尾景", "start":5847  }
+    ],
+    "tags": ["オリジナル（ソロ）"]
+  },
+  {
     "youtubeId": "YcefJ7RQGSc",
     "title": "【オリジナル振付】Virtual to Live 踊ってみた【雪城眞尋/長尾景】",
     "date": "2023-02-02",
@@ -3244,6 +3274,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
