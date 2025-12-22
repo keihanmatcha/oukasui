@@ -1,4 +1,16 @@
 [{
+    "title": "【#える3Dお披露目ライブ】ゲスト多数✨歌ってはしゃぐ3Dライブ！【にじさんじ/える】",
+    "date": "2025-05-25",
+    "channel": "える",
+    "songs": [
+      { "title": "命のユースティティアwithえる", "artist": "Neru", "start":2818  }
+    ],
+    "thumbnail": "https://i.ytimg.com/vi/RjXk9SAAFEI/mqdefault.jpg",
+    "youtubeId": "RjXk9SAAFEI",
+    "category": ["3D","ライブイベント","お披露目配信"],
+    "keywords": ["える", "フレン・E・ルスタリオ"]
+  },
+    {
     "youtubeId": "_hSFqbQB_4E",
     "title": "KZHCUP RUMBLE in STREET FIGHTER 6 予選【#KZHCUP_RUMBLE】",
     "channel": "にじさんじ",
