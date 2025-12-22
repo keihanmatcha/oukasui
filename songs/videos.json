@@ -4,7 +4,7 @@
     "date": "2025-04-04",
      "songs": [
       { "title": "パラレルノー細胞", "artist": "甲斐田晴", "start":236  },
-       { "title": "mermaid", "artist": "弦月藤士郎", "start":825  }
+      { "title": "mermaid", "artist": "弦月藤士郎", "start":825  }
     ],
     "tags": ["オリジナル(ユニット)","弾"]
     },
@@ -3320,6 +3320,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
