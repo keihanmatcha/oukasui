@@ -1410,9 +1410,7 @@
       { "title": "Beyond the Frame", "artist": "VΔLZ", "start":66  },
       { "title": "黎明の轍", "artist": "VΔLZ", "start":282  },
       { "title": "ムーンウォーカーズ", "artist": "VΔLZ", "start":877  },
-      { "title": "パラレルノー細胞", "artist": "甲斐田晴", "start":1704  },
     { "title": "Universe", "artist": "長尾景", "start":2090  },
-     { "title": "mermaid", "artist": "弦月藤士郎", "start":2487  }, 
       { "title": "浮世の演舞", "artist": "VΔLZ", "start":2941  }
     ],
     "youtubeId": "qdQtHY34W08",
@@ -1423,7 +1421,7 @@
     "date": "2025-04-02",
     "songs": [
       { "title": "パラレルノー細胞", "artist": "甲斐田晴", "start":1704  },
-     { "title": "mermaid", "artist": "弦月藤士郎", "start":2487  }, 
+     { "title": "mermaid", "artist": "弦月藤士郎", "start":2487  }
     ],
     "youtubeId": "qdQtHY34W08",
     "tags": ["オリジナル(ユニット)","弾"]
@@ -3246,6 +3244,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
