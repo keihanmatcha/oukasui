@@ -1,4 +1,13 @@
 [{
+    "youtubeId": "3PutbTPr4TQ",
+    "title": "I wonder/Da-iCE【長尾景/にじさんじ】【踊ってみた】",
+    "date": "2025-12-22",
+     "songs": [
+      { "title": "I wonder", "artist": "Da-iCE", "start":0  }
+    ],
+    "tags": ["カバー(ソロ)"]
+     },
+    {
     "youtubeId": "hRZCFvNJgtg",
     "title": "【ベース練習】Aメロ練習突入【長尾景/にじさんじ】",
     "date": "2023-07-06",
@@ -3301,6 +3310,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
