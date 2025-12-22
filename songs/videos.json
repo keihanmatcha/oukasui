@@ -1337,7 +1337,7 @@
       { "title": "Treasure Believer", "artist": "VΔLZ", "start":3312  }
     ],
     "youtubeId": "22GbH8aIKvM",
-    "tags": ["オリジナル(ユニット)"]
+    "tags": ["オリジナル(ユニット)","踊","歌"]
   },
   {
     "title": "VΔLZ LIVE TOUR 2024『三華の樂』【横浜公演】",
@@ -2046,7 +2046,7 @@
     { "title": "ミックスナッツ", "artist": "Official髭男dism" }
   ],
   "youtubeId": "ldmp36kYzB8",
-  "tags": ["カバー(ユニット)"]
+  "tags": ["カバー(ユニット)","踊","歌"]
 },
 {
   "title": "にじさんじユニット歌謡祭2022 無料パート総集編",
@@ -2073,7 +2073,7 @@
        { "title": "ミックスナッツ", "artist": "Official髭男dism", "start":6510 }
   ],
   "youtubeId": "SjuAIIe0Op0",
-  "tags": ["カバー(ユニット)"]
+  "tags": ["カバー(ユニット)","踊","歌"]
 },
 {
   "title": "にじさんじユニット歌謡祭2022 無料パート総集編",
@@ -2436,7 +2436,7 @@
     { "title": "中華料理屋の酢豚が食べたい", "artist": "琳子" } 
   ],
   "youtubeId": "Gw97yK3Dl8E",
-  "tags": ["カバー(ユニット)"]
+  "tags": ["カバー(ユニット)","踊"]
 },   
 {
   "title": "【歌ってみた】おもかげ covered by #VΔLZ",
@@ -2481,7 +2481,7 @@
     { "title": "ココロオドル", "artist": "nobodyknows+" }
   ],
   "youtubeId": "6Mg9KPS7wqo",
-  "tags": ["カバー(ユニット)"]
+  "tags": ["カバー(ユニット)","踊","歌"]
 },
 {
   "title": "【歌ってみた】睡蓮花 covered by #VΔLZ (弦月藤士郎/長尾景/甲斐田晴)",
@@ -2581,7 +2581,7 @@
     { "title": "ミライ", "artist": "有機酸" }
   ],
   "youtubeId": "DYFYLu2ISAM",
-  "tags": ["カバー(ユニット)"]
+  "tags": ["カバー(ユニット)","踊","歌"]
 },
 {
   "title": "魔法少女とチョコレゐト - ピノキオピー / にじさんじ Song+Dance Cover",
@@ -2619,7 +2619,7 @@
     { "title": "フレンズ", "artist": "レベッカ" }
   ],
   "youtubeId": "OJvQ9iYv3eo",
-  "tags": ["カバー(ユニット)"]
+  "tags": ["カバー(ユニット)","弾"]
 },
 {
   "title": "【歌って踊ってみた】potatoになっていく【長尾景/にじさんじ】",
@@ -2674,7 +2674,7 @@
     { "title": "にっこり^^調査隊のテーマ", "artist": "じーざす / Jizasu-P【ワンダーランズ×ショウタイム×初音ミク】" }
   ],
   "youtubeId": "SSGVm2fAf1zg",
-  "tags": ["カバー(ユニット)"]
+  "tags": ["カバー(ユニット)","踊","歌"]
 },
 {
   "title": "【踊ってみた】唱/Ado【長尾景/にじさんじ】",
@@ -2692,7 +2692,7 @@
     { "title": "仮死化", "artist": "遼遼【Vivid BAD SQUAD】" }
   ],
   "youtubeId": "SdzWoKKRiTU",
-  "tags": ["カバー(ユニット)"]
+  "tags": ["カバー(ユニット)","踊","歌"]
 },
 {
   "title": "【踊ってみた】フラジール/ぬゆり feat. GUMI 【長尾景/にじさんじ】",
@@ -3196,7 +3196,7 @@
     { "title": "CEREMONY", "artist": "Stray Kids" }
   ],
   "youtubeId": "LCxhiaJrQZk",
-  "tags": ["カバー(ユニット)"]
+  "tags": ["カバー(ユニット)","踊"]
 },
   {
   "title": "#にぎにぎにじたうん！【長尾景/にじさんじ】【踊ってみた】",
@@ -3223,7 +3223,7 @@
     { "title": "オドループ", "artist": "フレデリック" }
   ],
   "youtubeId": "pY0JNr76ThI",
-  "tags": ["カバー(ユニット)"]
+  "tags": ["カバー(ユニット)","踊"]
 },
 {
   "title": "【Blue Jeans】かっこつけて踊る#VΔLZ 【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】",
@@ -3244,6 +3244,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
