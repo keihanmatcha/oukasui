@@ -583,30 +583,37 @@
     }
 
     function applyFilter() {
-      let filteredRows;
+      let filteredRows = ALL_ROWS;
+
+      // 1. カテゴリフィルタ
+      if(currentCat !== 'all'){
+        filteredRows = filteredRows.filter(r => r.types.has(currentCat));
+      }
+
+      // 2. お気に入りフィルタ
       if (filterByFavorites) {
-          const favorites = getFavorites();
-          filteredRows = ALL_ROWS.filter(r => favorites.includes(`${r.youtubeId}-${r.start}`));
-      } else {
-          const q = ($q.value || '').trim().toLowerCase();
-          const selected = [...SELECTED_TAGS];
-          
-          filteredRows = ALL_ROWS.filter(r => {
-              const artistHit = r.artist.toLowerCase().includes(q);
-              
-              const textOk = !q || 
-                  r.song.toLowerCase().includes(q) || 
-                  artistHit || 
-                  r.videoTitle.toLowerCase().includes(q) || 
-                  (r.tagsText || '').toLowerCase().includes(q);
-                  
-              const tagOk = !selected.length || selected.every(t => (r.tags || []).includes(t));
-              return textOk && tagOk;
-          });
+         const favorites = getFavorites();
+         filteredRows = filteredRows.filter(r => favorites.includes(`${r.youtubeId}-${r.start}`));
+      } 
+      // 3. キーワード＆タグフィルタ
+      else {
+         const q = ($q.value || '').trim().toLowerCase();
+         const selected = [...SELECTED_TAGS];
+         
+         filteredRows = filteredRows.filter(r => {
+             const artistHit = r.artist.toLowerCase().includes(q);
+             const textOk = !q || 
+                 r.song.toLowerCase().includes(q) || 
+                 artistHit || 
+                 r.videoTitle.toLowerCase().includes(q) || 
+                 (r.tagsText || '').toLowerCase().includes(q);
+                 
+             const tagOk = !selected.length || selected.every(t => (r.tags || []).includes(t));
+             return textOk && tagOk;
+         });
       }
       renderRows(filteredRows);
     }
-
     fetch('videos.json')
       .then(r=>r.json())
       .then(videos=>{ buildRows(videos); applyFilter(); })
@@ -647,6 +654,7 @@
   </script>
 </body>
 </html>
+
 
 
 
