@@ -81,16 +81,6 @@
     .filterbar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
     .filter-tags { display:flex; gap:8px; flex-wrap:wrap; }
     
-    /* === カテゴリボタン === */
-    .cat-group { display: flex; gap: 4px; background: rgba(255,255,255,0.6); padding: 4px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.5); }
-    .cat-btn {
-        appearance: none; border: 0; background: transparent; cursor: pointer;
-        font-size: 13px; font-weight: 700; color: var(--muted); padding: 6px 14px;
-        border-radius: 999px; transition: .2s;
-    }
-    .cat-btn:hover { background: rgba(255,255,255,0.8); color: var(--fg); }
-    .cat-btn.active { background: #fff; color: var(--accent); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    
     .chip-tag {
         font-size: 12px; line-height: 1; padding: 8px 12px; border: 0; border-radius: 999px;
         background: rgba(255, 255, 255, 0.85); color: var(--accent); cursor: pointer; font-weight: 600;
@@ -184,10 +174,6 @@
         .searchbar input { font-size: 14px; padding: 8px 10px; }
         .chip-tag { padding: 6px 10px; font-size: 11px; }
         
-        /* カテゴリボタン調整 */
-        .cat-group { width: 100%; justify-content: space-between; order: 3; margin-top: 4px; }
-        .cat-btn { flex: 1; text-align: center; padding: 6px 4px; font-size: 12px; }
-
         .row{ grid-template-columns:1fr; align-items:start; gap: 8px; }
         .date{ justify-self:start; font-size: 11px; color: #888; margin-bottom: 2px; }
         .videotitle{ margin-top: -4px; }
@@ -227,13 +213,6 @@
             <input id="q" type="search" placeholder="曲名・アーティスト・動画タイトル・タグで検索" autocomplete="off" />
         </div>
         <div class="filterbar">
-          <div class="cat-group">
-            <button class="cat-btn active" data-cat="all" type="button">すべて</button>
-            <button class="cat-btn" data-cat="song" type="button">歌</button>
-            <button class="cat-btn" data-cat="dance" type="button">踊</button>
-            <button class="cat-btn" data-cat="play" type="button">弾</button>
-          </div>
-
           <div id="filterTags" class="filter-tags"></div>
           <button id="filterFavorites" class="chip-tag" type="button" style="display:none">★ お気に入り</button>
           <button id="clearTags" class="chip-clear" type="button" style="display:none">フィルター解除</button>
@@ -282,10 +261,9 @@
     const $clearTags = document.getElementById('clearTags');
     const $filterFavorites = document.getElementById('filterFavorites');
     
-    // === カテゴリ関連変数 ===
+    // 変数
     let filterByFavorites = false;
-    let currentCat = 'all'; 
-    const $catBtns = document.querySelectorAll('.cat-btn');
+    // カテゴリ専用変数は削除（タグに統合するため）
 
     const $panel = document.getElementById('playerPanel');
     const $yt = document.getElementById('ytFrame');
@@ -361,44 +339,52 @@
 
     let ALL_ROWS=[]; let VIDEO_MAP=new Map(); let ALL_TAGS=[]; const SELECTED_TAGS=new Set();
     
-    // === buildRows関数 ===
+    // === buildRows関数（自動判定をタグに統合） ===
     function buildRows(videos){
       const merged = normalizeVideos(videos);
       VIDEO_MAP = new Map(merged.map(v => [v.youtubeId, v]));
       ALL_ROWS = [];
       
       for(const v of merged){
+        // 判定用文字列
         const checkStr = ((v.tags||[]).join(' ') + ' ' + v.title).toLowerCase();
         
-        // 1. 踊り判定
-        const isDance = /踊|ダンス|dance|殺陣|choreography/.test(checkStr);
-        
-        // 2. 弾き（演奏）判定
-        const isPlay  = /弾|楽器|ベース|ギター|演奏|セッション|session/.test(checkStr);
+        // 判定ロジック
+        let isDance = /踊|ダンス|dance|choreography|振付|motion/.test(checkStr);
+        let isPlay  = /弾|楽器|ベース|ギター|ドラム|ピアノ|演奏|セッション|session|inst/.test(checkStr);
+        let isSong = /歌|song|cover|mv|original|vocal|カラオケ|アカペラ|chorus/.test(checkStr);
 
-        // 3. 歌判定
-        let isSong = /歌|song|cover|mv|original|vocal/.test(checkStr);
+        // 「弾き語り」は歌と弾くの両方
+        if (/弾き語り/.test(checkStr)) {
+            isPlay = true; isSong = true;
+        }
 
-        // 4. フォールバック
+        // 救済措置
         if (!isDance && !isPlay && !isSong) {
             isSong = true;
         }
 
-        const types = new Set();
-        if(isSong) types.add('song');
-        if(isDance) types.add('dance');
-        if(isPlay) types.add('play');
+        // ★修正点：判定結果を「タグ」として配列に追加（Setで重複排除）
+        const tagsSet = new Set(v.tags || []);
+        if(isSong) tagsSet.add('歌');
+        if(isDance) tagsSet.add('踊');
+        if(isPlay) tagsSet.add('弾');
+        
+        // 更新したタグリストを保存
+        const finalTags = Array.from(tagsSet);
+        v.tags = finalTags; // ビデオデータ自体も更新
 
         for(const s of v.songs){
            ALL_ROWS.push({ 
              song:s.title, artist:s.artist, date:v.date, videoTitle:v.title, 
-             youtubeId:v.youtubeId, start:s.start, tags:v.tags||[], 
-             tagsText:(v.tags||[]).join(' '),
-             types: types // 判定結果を格納
+             youtubeId:v.youtubeId, start:s.start, 
+             tags: finalTags, 
+             tagsText: finalTags.join(' ')
            });
         }
       }
       ALL_ROWS.sort((a,b)=>{ if(a.date!==b.date) return a.date<b.date?1:-1; const s=a.song.localeCompare(b.song,'ja'); if(s) return s; return a.artist.localeCompare(b.artist,'ja'); });
+      // すべてのタグを収集（自動追加された「歌」「踊」「弾」もここに含まれる）
       ALL_TAGS = Array.from(new Set(merged.flatMap(v => v.tags||[]))).sort((a,b)=>a.localeCompare(b,'ja'));
       renderFilterTags();
     }
@@ -484,7 +470,8 @@
         div.querySelector('.link.artist').addEventListener('click', (e)=> { e.stopPropagation(); fillSearch(r.artist); });
         
         const rowTagBox = div.querySelector('.tags-row');
-        const tags = (VIDEO_MAP.get(r.youtubeId)?.tags)||r.tags||[];
+        // 表示用にタグを取得（自動判定タグも含む）
+        const tags = r.tags || [];
         if (tags.length > 0) {
           const t = tags[0];
           const b = document.createElement('button');
@@ -548,21 +535,16 @@
       }
     }
 
-    // === フィルタリング処理 ===
+    // === フィルタリング処理（修正：タグフィルタのみに単純化） ===
     function applyFilter() {
       let filteredRows = ALL_ROWS;
 
-      // 1. カテゴリフィルタ
-      if(currentCat !== 'all'){
-        filteredRows = filteredRows.filter(r => r.types.has(currentCat));
-      }
-
-      // 2. お気に入りフィルタ
+      // 1. お気に入りフィルタ
       if (filterByFavorites) {
           const favorites = getFavorites();
           filteredRows = filteredRows.filter(r => favorites.includes(`${r.youtubeId}-${r.start}`));
       } 
-      // 3. キーワード＆タグフィルタ
+      // 2. キーワード＆タグフィルタ
       else {
           const q = ($q.value || '').trim().toLowerCase();
           const selected = [...SELECTED_TAGS];
@@ -596,19 +578,6 @@
       applyFilter();
     });
 
-    // === カテゴリボタンのイベントリスナー ===
-    $catBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // 見た目の切り替え
-        $catBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        
-        // フィルタ適用
-        currentCat = btn.dataset.cat;
-        applyFilter();
-      });
-    });
-
     $closeBtn.onclick = () => {
        document.body.classList.remove('player-active');
        if(player && player.stopVideo) player.stopVideo();
@@ -636,5 +605,3 @@
   </script>
 </body>
 </html>
-
-
