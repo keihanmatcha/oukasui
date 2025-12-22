@@ -14,7 +14,7 @@
     "songs": [
       { "title": "愛♡スクリ～ム！", "artist": "AiScReam", "start":0  }
     ],
-    "tags": ["カバー(ユニット)"]
+    "tags": ["カバー(ユニット)","踊"]
   },
     {
     "youtubeId": "RVuazzwizdc",
@@ -31,7 +31,7 @@
       { "title": "スターマイン", "artist": "Da-iCE", "start":2262  },
       { "title": "Journey", "artist": "DECO*27", "start":2939  }
     ],
-    "tags": ["カバー(ユニット)"]
+    "tags": ["カバー(ユニット)","歌"]
   },
     {
     "youtubeId": "xU2kywFGQIQ",
@@ -94,7 +94,7 @@
       { "title": "Virtual to LIVE", "artist": "にじさんじ", "start":3632 }
     ],
     "youtubeId": "T823CNA5-54",
-    "tags": ["オリジナル（ソロ）"]
+    "tags": ["オリジナル（ソロ）","歌","弾"]
   },
 {
     "title": "【歌枠】100曲歌いきるまでスタジオから帰れません‼【にじさんじ | 緑仙】",
@@ -3235,6 +3235,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
