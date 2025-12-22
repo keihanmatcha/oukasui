@@ -1,5 +1,14 @@
 [{
-    "youtubeId": "CgJa6aqqNdY",
+    "youtubeId": "hRZCFvNJgtg",
+    "title": "【ベース練習】Aメロ練習突入【長尾景/にじさんじ】",
+    "date": "2023-07-06",
+     "songs": [
+      { "title": "クレマチスの祈り", "artist": "長尾景", "start":270  }
+    ],
+    "tags": ["オリジナル（ソロ）","弾"]
+    },
+    {
+    "youtubeId": "XF3PA5vNYHA",
     "title": "【ベース練習】追い込み期間突入【長尾景/にじさんじ】",
     "date": "2023-07-18",
      "songs": [
@@ -8,7 +17,7 @@
     "tags": ["オリジナル（ソロ）","弾"]
     },
     {
-    "youtubeId": "CgJa6aqqNdY",
+    "youtubeId": "XF3PA5vNYHA",
     "title": "【ベース練習】追い込み期間突入【長尾景/にじさんじ】",
     "date": "2023-07-18",
      "songs": [
@@ -3292,6 +3301,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
