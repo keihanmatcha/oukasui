@@ -385,13 +385,52 @@
 
     let ALL_ROWS=[]; let VIDEO_MAP=new Map(); let ALL_TAGS=[]; const SELECTED_TAGS=new Set();
     
+    // buildRows関数内のループ部分
     function buildRows(videos){
       const merged = normalizeVideos(videos);
       VIDEO_MAP = new Map(merged.map(v => [v.youtubeId, v]));
       ALL_ROWS = [];
+      
       for(const v of merged){
+        // 判定用文字列（タグ＋タイトル）を小文字化して結合
+        const checkStr = ((v.tags||[]).join(' ') + ' ' + v.title).toLowerCase();
+        
+        // ★修正点：if-elseを使わず、各要素を独立してチェックします
+        
+        // 1. 踊り判定
+        // 「踊」「ダンス」「dance」「3d」などが含まれていればON
+        const isDance = /踊|ダンス|dance|3d|choreography/.test(checkStr);
+        
+        // 2. 弾き（演奏）判定
+        // 「弾」「楽器」「三味線」「ピアノ」「ギター」「inst」などが含まれていればON
+        const isPlay  = /弾|楽器|三味線|ピアノ|ギター|演奏|inst|session/.test(checkStr);
+
+        // 3. 歌判定
+        // 「歌」「song」「cover」「mv」などが含まれていればON
+        // ※「歌って踊ってみた」の場合、「歌」と「踊」の両方の文字が入っているため、
+        //   ここで isSong=true, 上で isDance=true となり、両方に分類される
+        let isSong = /歌|song|cover|mv|original|vocal/.test(checkStr);
+
+        // 4. フォールバック（救済措置）
+        // どのキーワードにも当てはまらない場合（単なるタイトルのみ等）は
+        // 基本的に「歌」カテゴリとして扱います。
+        if (!isDance && !isPlay && !isSong) {
+            isSong = true;
+        }
+
+        // 該当するタイプをすべてSetに追加
+        const types = new Set();
+        if(isSong) types.add('song');
+        if(isDance) types.add('dance');
+        if(isPlay) types.add('play');
+
         for(const s of v.songs){
-          ALL_ROWS.push({ song:s.title, artist:s.artist, date:v.date, videoTitle:v.title, youtubeId:v.youtubeId, start:s.start, tags:v.tags||[], tagsText:(v.tags||[]).join(' ') });
+           ALL_ROWS.push({ 
+             song:s.title, artist:s.artist, date:v.date, videoTitle:v.title, 
+             youtubeId:v.youtubeId, start:s.start, tags:v.tags||[], 
+             tagsText:(v.tags||[]).join(' '),
+             types: types // 判定結果を格納
+           });
         }
       }
       ALL_ROWS.sort((a,b)=>{ if(a.date!==b.date) return a.date<b.date?1:-1; const s=a.song.localeCompare(b.song,'ja'); if(s) return s; return a.artist.localeCompare(b.artist,'ja'); });
@@ -608,4 +647,5 @@
   </script>
 </body>
 </html>
+
 
