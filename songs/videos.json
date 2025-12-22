@@ -5,7 +5,7 @@
      "songs": [
       { "title": "Virtual to LIVE", "artist": "にじさんじ", "start":0  }
     ],
-    "tags": ["カバー(ユニット)"]
+    "tags": ["オリジナル(ユニット)"]
   },
     {
     "youtubeId": "_UpyNCQe5L4",
@@ -3235,6 +3235,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
