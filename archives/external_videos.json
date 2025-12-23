@@ -5,8 +5,7 @@
     "thumbnail": "https://i.ytimg.com/vi/cUw1OEtmexQ/mqdefault.jpg",
     "songs": [
       { "title": "レオ", "artist": "家入レオ", "start":4447  },
-      { "title": "トレモロ", "artist": "RADWIMPS", "start":9618  },
-      { "title": "怪獣の花唄", "artist": "Vaundy", "start":10596  }
+      { "title": "トレモロ", "artist": "RADWIMPS", "start":9618  }
     ],
     "youtubeId": "cUw1OEtmexQ",
     "category": ["企画","歌配信"],
@@ -18,7 +17,7 @@
     "channel": "律可",
     "thumbnail": "https://i.ytimg.com/vi/cUw1OEtmexQ/mqdefault.jpg",
     "songs": [
-      { "title": "怪獣の花唄", "artist": "Vaundy", "start":10596  }
+      { "title": "怪獣の花唄withAll", "artist": "Vaundy", "start":10596  }
     ],
     "youtubeId": "cUw1OEtmexQ",
     "category": ["企画","歌配信"],
