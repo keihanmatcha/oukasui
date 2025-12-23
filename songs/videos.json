@@ -1631,8 +1631,7 @@
     "date": "2025-03-02",
     "songs": [
       { "title": "レオ", "artist": "家入レオ", "start":4447  },
-      { "title": "トレモロ", "artist": "RADWIMPS", "start":9618  },
-      { "title": "怪獣の花唄", "artist": "Vaundy", "start":10596  }
+      { "title": "トレモロ", "artist": "RADWIMPS", "start":9618  }
     ],
     "youtubeId": "cUw1OEtmexQ",
     "tags": ["カバー(ソロ)"]
@@ -3311,6 +3310,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
