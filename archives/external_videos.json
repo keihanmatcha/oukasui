@@ -597,9 +597,11 @@
     "thumbnail": "https://i.ytimg.com/vi/JRmnbHTx8S8/mqdefault.jpg",
     "category": ["歌配信"],
     "keywords": ["立伝都々"],
-    "songs":[
-        {"title":"歌","artist":["立伝都々"],"start":4714}
-    ]
+    "songs": [
+    　{ "title": "ゲスト出演", "artist": "立伝都々", "start":4714  },
+      { "title": "DADDY!DADDY!DO!", "artist": "鈴木雅之", "start":4899  },
+      { "title": "Preserved Roses", "artist": "T.M.Revolution×水樹奈々", "start":5323  }
+    ],
   },
   {
     "youtubeId": "Irg4sIu0vI4",
