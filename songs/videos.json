@@ -1674,7 +1674,7 @@
   "title": "RESQ!! / #にじGTA 救急隊オリジナル曲",
   "date": "2024-04-03",
   "songs": [
-    { "title": "RESQ!!", "artist": " #にじGTA 救急隊" }
+    { "title": "RESQ!!", "artist": "にじGTA救急隊" }
   ],
   "youtubeId": "fX3TY4WqvoE",
   "tags": ["オリジナル(ユニット)"]
@@ -1740,7 +1740,7 @@
     { "title": "めにまにカンパニー", "artist": "めにまにカンパニー【弦月藤士郎】", "start":4359 }
   ],
   "youtubeId": "Cj6qVVDU3as",
-  "tags": ["オリジナル(ユニット)"]
+  "tags": ["オリジナル(ユニット)","歌","踊"]
 },
 {
   "title": "【最終回】VΔLZと打ち上げトーク！なのに嘘のツアーレポ紹介！？ラストは名曲を大合唱【Nornis界隈のハナシ #17】 #ノルハナ界隈",
@@ -1758,7 +1758,7 @@
     { "title": "Arc goes oN", "artist": "にじさんじ", "start":1890 }
   ],
   "youtubeId": "uMN9Xt5NdWg",
-  "tags": ["オリジナル(ユニット)"]
+  "tags": ["オリジナル(ユニット)","歌","踊"]
 },
 {
   "title": "【ライブ本編】にじさんじ WORLD TOUR 2025 Singin’ in the Rainbow！名古屋公演 / 無料パート #SitR名古屋",
@@ -1767,7 +1767,7 @@
     { "title": "maindishが足りてない", "artist": "宮守文学", "start":2165 }
   ],
   "youtubeId": "uMN9Xt5NdWg",
-  "tags": ["カバー(ユニット)"]
+  "tags": ["カバー(ユニット)","歌","踊"]
 },
 
   
@@ -3310,6 +3310,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
