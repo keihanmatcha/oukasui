@@ -395,6 +395,79 @@ footer{
 .embed iframe[src*="vimeo.com"]{ aspect-ratio:16/9; height:auto; }
 .embed iframe[src*="open.spotify.com"]{ aspect-ratio:auto; height:352px; }
 
+.intersecting-circles-spinner, .intersecting-circles-spinner * {
+      box-sizing: border-box;
+    }
+
+    .intersecting-circles-spinner {
+      height: 70px;
+      width: 70px;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .intersecting-circles-spinner .spinnerBlock {
+      animation: intersecting-circles-spinners-animation 1200ms linear infinite;
+      transform-origin: center;
+      display: block;
+      height: 35px;
+      width: 35px;
+    }
+
+    .intersecting-circles-spinner .circle {
+      display: block;
+      border: 2px solid #ff1d5e;
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .intersecting-circles-spinner .circle:nth-child(1) {
+      left: 0;
+      top: 0;
+    }
+
+    .intersecting-circles-spinner .circle:nth-child(2) {
+      left: calc(35px * -0.36);
+      top: calc(35px * 0.2);
+    }
+
+    .intersecting-circles-spinner .circle:nth-child(3) {
+      left: calc(35px * -0.36);
+      top: calc(35px * -0.2);
+    }
+
+    .intersecting-circles-spinner .circle:nth-child(4) {
+      left: 0;
+      top: calc(35px * -0.36);
+    }
+
+    .intersecting-circles-spinner .circle:nth-child(5) {
+      left: calc(35px * 0.36);
+      top: calc(35px * -0.2);
+    }
+
+    .intersecting-circles-spinner .circle:nth-child(6) {
+      left: calc(35px * 0.36);
+      top: calc(35px * 0.2);
+    }
+
+    .intersecting-circles-spinner .circle:nth-child(7) {
+      left: 0;
+      top: calc(35px * 0.36);
+    }
+
+    @keyframes intersecting-circles-spinners-animation {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
 /* ローディング画面のスタイル */
 #loading-wrapper {
   position: fixed;
@@ -437,6 +510,17 @@ footer{
 </head>
 <body>
   <div id="loading-wrapper">
+  <div class="intersecting-circles-spinner">
+    <div class="spinnerBlock">
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    </div>
+   </div>
   <div class="spinner"></div>
   </div>
   <header class="site-header">
@@ -462,7 +546,7 @@ footer{
           <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.5 12 4.5 12 4.5s-5.7 0-7.5.6A3 3 0 0 0 2.4 7.2 31 31 0 0 0 1.8 12a31 31 0 0 0 .6 4.8 3 3 0 0 0 2.1 2.1c1.8.6 7.5.6 7.5.6s5.7 0 7.5-.6a3 3 0 0 0 2.1-2.1c.4-1.6.6-3.2.6-4.8s-.2-3.2-.6-4.8ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg>
           <span>YouTube</span>
         </a>
-        <a class="sb-item primary" href="songs/index.html"">
+        <a class="sb-item primary" href="songs/index.html">
           <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-1 5h2v4l3 3-1.4 1.4L11 13.4V8Z"/></svg>
           <span>曲を探す</span>
         </a>
@@ -1050,8 +1134,7 @@ footer{
         btn.setAttribute('aria-expanded', String(open));
       });
     }
-  </script>
-  <script>
+      
   // ページ（画像など含む）の読み込みが完了したら実行
   window.addEventListener('load', function() {
     const loader = document.getElementById('loading-wrapper');
@@ -1073,6 +1156,7 @@ footer{
 </script>
 </body>
 </html>
+
 
 
 
