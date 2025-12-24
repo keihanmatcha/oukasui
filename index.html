@@ -1,27 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <!-- ページの説明文 -->
-  <meta name="description" content=">このサイト「桜華水」は、にじさんじ所属の長尾景さんの楽曲や出演動画を整理した非公式ファンサイトです。">
-  <!-- キーワード（SEOには必須ではないが補助的に） -->
+  <meta name="description" content="このサイト「桜華水」は、にじさんじ所属の長尾景さんの楽曲や出演動画を整理した非公式ファンサイトです。">
   <meta name="keywords" content="長尾景, Vtuber, にじさんじ, 曲検索, 歌, ファンサイト">
-  <!-- 文字コード -->
   <meta charset="UTF-8">
-  <!-- ビューポート（モバイル対応） -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8" />
   <title>桜華水｜長尾景非公式ファンサイト</title>
   <meta name="theme-color" content="#625DA1" />
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://oukasui.com/" />
 
-  <!-- Icons -->
   <link rel="icon" href="images/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="images/Nagao-icon.png" sizes="512x512">
   <link rel="apple-touch-icon" href="images/Nagao-icon.png">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="桜華水｜長尾景非公式ファンサイト">
   <meta property="og:title" content="桜華水｜長尾景非公式ファンサイト">
@@ -31,7 +23,6 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
-  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="桜華水｜長尾景非公式ファンサイト">
   <meta name="twitter:description" content="長尾景の曲・動画検索サイト。曲名・アーティスト・動画タイトル・タグから素早く探せます。">
@@ -39,20 +30,19 @@
   <meta name="twitter:image" content="https://oukasui.com/images/ogp.png">
 
   <link rel="manifest" href="./manifest.json">
-<!-- JSON-LD: WebSite + 検索アクション -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebSite",
-  "name":"桜華水｜長尾景非公式ファンサイト",
-  "url":"https://oukasui.com/",
-  "potentialAction":{
-    "@type":"SearchAction",
-    "target":"https://oukasui.com/song/?q={search_term_string}",
-    "query-input":"required name=search_term_string"
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"桜華水｜長尾景非公式ファンサイト",
+    "url":"https://oukasui.com/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://oukasui.com/song/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
   }
-}
-</script>
+  </script>
 
   <style>
     :root{
@@ -68,28 +58,23 @@
       font-family: system-ui,-apple-system,Segoe UI,Roboto,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
       line-height: 1.65;
     }
-    /* 旧ブラウザ/失敗時用のフォールバック：先に JPG を指定 */
-    /* 背景：まずフォールバック → 次に WebP (1x/2x) を上書き */
-body{
-  background-image: url("images/washipattern.PNG"); /* ← 実ファイル名が大文字PNGならこのまま */
-  background-image: image-set(
-    url("images/washipattern.webp") type("image/webp") 1x,
-    url("images/washipattern@2x.webp") type("image/webp") 2x
-  );
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+    
+    body{
+      background-image: url("images/washipattern.PNG");
+      background-image: image-set(
+        url("images/washipattern.webp") type("image/webp") 1x,
+        url("images/washipattern@2x.webp") type("image/webp") 2x
+      );
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
 
-
-/* モバイルのカクつき回避 */
-@media (max-width: 980px){
-  body{ background-attachment: scroll; }
-}
-
-/* 読みやすさ用オーバーレイ（濃いと模様が消えるので0.72〜0.80で調整） */
-
+    /* モバイルのカクつき回避 */
+    @media (max-width: 980px){
+      body{ background-attachment: scroll; }
+    }
 
     a,button{ transition:.15s ease }
     :focus-visible{ outline:2px solid var(--ring); outline-offset:2px; border-radius:8px }
@@ -104,7 +89,7 @@ body{
     .wrap{ max-width:960px; margin-inline:auto; padding:14px 16px }
     .row{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
     .brand { 
-        display: flex; align-items: center; gap: 10px; /* アイコンと文字の間隔 */
+        display: flex; align-items: center; gap: 10px;
         font-weight: 800; 
         color: #fff; 
         text-decoration: none; 
@@ -112,17 +97,14 @@ body{
         text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     
-    /* ロゴ画像（アイコン）のスタイル */
     .logo-icon {
         width: 32px; 
         height: 32px; 
-        border-radius: 8px; /* 角丸 */
+        border-radius: 8px;
         object-fit: cover;
         background: #C24DAED9; 
         box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
     } 
-    /*.brand{ display:flex; align-items:center; color: #fff; gap:10px; text-decoration:none; color:inherit }*/
-    /*.logo{ width:28px; height:28px; border-radius:8px; background:#e9e7ff; display:inline-block }*/
     .brand span{ font-weight:800; letter-spacing:.2px }
     nav a{ text-decoration:none; color:#4b5563; padding:8px 12px; border-radius:999px }
     nav a:hover{ background:#f3f4ff; color:#312e81 }
@@ -147,18 +129,19 @@ body{
       background:#f2efff; color:#4c46a6; border:1px solid #e5dfff; font-weight:600;
     }
 
-    /* セクション（帯＋本文） */
+    /* セクション */
     .p-section{ margin:40px 0 }
     .p-section .bar{
       padding:10px 16px;
       color:#fff; font-weight:800; position:relative;
       background: linear-gradient(90deg, #6B5FB5, #A58AD3);
+      margin-bottom: 10px;
     }
     .p-section .bar::after{
       content:""; position:absolute; left:0; right:0; bottom:0; height:3px;
       background: linear-gradient(90deg,#d4af37,#f9e076,#d4af37); border-radius:2px;
     }
-    .p-section .bar h2{ margin:0; font-size:20px; letter-spacing:.05em; }
+    .p-section .bar h2{ margin:0; font-size:20px; letter-spacing:.05em; scroll-margin-top: 72px; }
     .p-section .body{ max-width:760px }
     .p-section p{ margin:14px 0; line-height:1.9; font-size:15.5px; color:#222 }
 
@@ -179,28 +162,8 @@ body{
 
     /* 埋め込み */
     .embed { margin: 14px 0; }
-    /* 共通：幅いっぱい＆角丸のみ（高さは個別制御） */
-    .embed iframe{
-      display:block;
-      width:100%;
-      max-width:100%;
-      border:0;
-      border-radius:12px;
-    }
-    /* YouTube/Vimeo は 16:9 自動高さ */
-    .embed iframe[src*="youtube.com"],
-    .embed iframe[src*="youtube-nocookie.com"],
-    .embed iframe[src*="vimeo.com"]{
-      aspect-ratio:16/9;
-      height:auto;
-    }
-    /* Spotify は固定高さ（公式推奨） */
-    .embed iframe[src*="open.spotify.com"]{
-      aspect-ratio:auto;
-      height:352px;
-    }
-
-    /* 2カラムレイアウト */
+    
+    /* Layout */
     .layout{
       display:grid;
       grid-template-columns: 260px 1fr;
@@ -209,7 +172,7 @@ body{
       margin: 0 auto;
       padding: 16px;
     }
-    /* サイドバー */
+    /* Sidebar */
     .sidebar{
       position: sticky; top: 72px; align-self: start;
       height: max-content; padding: 16px;
@@ -229,13 +192,11 @@ body{
     .sb-ic{ width:18px; height:18px; fill: currentColor }
     .sb-note{ margin-top:12px; color:#6b7280; font-size:12.5px; line-height:1.6 }
 
-    /* メイン領域 */
+    /* Main Content */
     .content{ min-width:0 }
     .hero{ padding:24px 0 10px }
-    .title{ font-size:28px; margin:0 0 10px }
-    .lead{ color:var(--muted); margin:0 0 18px }
 
-    /* モバイル：サイドバーをオフキャンバスに */
+    /* Mobile Sidebar */
     .sb-toggle{
       display:none; appearance:none; border:0; background:#fff; font-size:22px;
       padding:6px 10px; border-radius:10px; border:1px solid var(--border);
@@ -247,83 +208,59 @@ body{
         position: fixed; top: 60px; left: 12px; right: 12px;
         transform: translateY(-20px) scale(.98);
         opacity: 0; pointer-events: none; transition: .18s ease; z-index: 50;
-        background:#fff; /* モバイルは白を強めて読みやすく */
+        background:#fff;
       }
       .sidebar.open{ transform:none; opacity:1; pointer-events:auto }
     }
-    /* 背景オーバーレイで本文を読みやすく */
-body::before{
-  content:"";
-  position:fixed; inset:0;
-  background: rgba(255,255,255,.80);
-  backdrop-filter: blur(2px);
-  z-index:-1;
-}
-@media (max-width: 980px){
-  body{ background-attachment: scroll; } /* モバイルでのカクつき回避 */
-}
-
-/* 見出し帯の下余白 */
-.p-section .bar{ margin-bottom: 10px; }
-
-/* H2にアンカー余白（stickyヘッダー対策） */
-.p-section .bar h2{ scroll-margin-top: 72px; }
-
-/* フッター整形 */
-footer{
-  margin-top: 24px;
-  padding: 16px;
-  font-size: 13px;
-  color: #4b5563;
-  border-top: 1px solid var(--border);
-  background: rgba(255,255,255,.85);
-}
-
-/* サイドバー：キーボード操作のフォーカスも見やすく */
-.sb-item:focus-visible{
-  outline: 3px solid rgba(98,93,161,.35);
-  outline-offset: 3px;
-  border-radius: 10px;
-}
-/* --- 追加機能：動画リール（横スクロール） --- */
-    .reel-group { margin-bottom: 32px; }
     
-    /* カテゴリ見出し */
+    /* Background Overlay */
+    body::before{
+      content:"";
+      position:fixed; inset:0;
+      background: rgba(255,255,255,.80);
+      backdrop-filter: blur(2px);
+      z-index:-1;
+    }
+
+    /* Footer */
+    footer{
+      margin-top: 24px;
+      padding: 16px;
+      font-size: 13px;
+      color: #4b5563;
+      border-top: 1px solid var(--border);
+      background: rgba(255,255,255,.85);
+    }
+    .sb-item:focus-visible{
+      outline: 3px solid rgba(98,93,161,.35);
+      outline-offset: 3px;
+      border-radius: 10px;
+    }
+
+    /* Reel (Horizontal Scroll) */
+    .reel-group { margin-bottom: 32px; }
     .reel-cat-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: #2b246b;
-      margin: 0 0 12px 4px;
-      padding-left: 10px;
+      font-size: 18px; font-weight: 700; color: #2b246b;
+      margin: 0 0 12px 4px; padding-left: 10px;
       border-left: 4px solid var(--accent);
       display: flex; align-items: center; gap: 8px;
     }
-    .reel-cat-en {
-      font-size: 13px; color: var(--muted); font-weight: normal; letter-spacing: 0.05em;
-    }
+    .reel-cat-en { font-size: 13px; color: var(--muted); font-weight: normal; letter-spacing: 0.05em; }
 
-    /* 横スクロールコンテナ */
     .reel-scroll {
-      display: flex;
-      gap: 16px;
-      overflow-x: auto;
-      padding: 4px 4px 20px; /* 下部にスクロールバー用の余白 */
+      display: flex; gap: 16px; overflow-x: auto;
+      padding: 4px 4px 20px;
       scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch; /* iOS慣性スクロール */
-      /*align-items: flex-start;*/
+      -webkit-overflow-scrolling: touch; 
+      /* align-items: flex-start; */
     }
-    /* スクロールバーを隠す（お好みで削除可） */
     .reel-scroll::-webkit-scrollbar { height: 6px; }
     .reel-scroll::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
     .reel-scroll::-webkit-scrollbar-track { background: transparent; }
 
-    /* 動画カード */
     .reel-item {
-      flex: 0 0 240px; /* カードの幅固定 */
-      text-decoration: none;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
+      flex: 0 0 240px; text-decoration: none;
+      background: #fff; border: 1px solid var(--border); border-radius: 12px;
       overflow: hidden;
       transition: transform 0.2s, box-shadow 0.2s, color 0.2s;
       display: flex; flex-direction: column;
@@ -334,195 +271,97 @@ footer{
       border-color: var(--accent);
     }
 
-    /* サムネイル */
-    .reel-thumb-wrap {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16/9;
-      background: #000;
-    }
-    .reel-thumb {
-      width: 100%; height: 100%; object-fit: cover;
-      opacity: 0.9; transition: opacity 0.2s;
-    }
+    .reel-thumb-wrap { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; }
+    .reel-thumb { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; transition: opacity 0.2s; }
     .reel-item:hover .reel-thumb { opacity: 1; }
     
-    /* 再生アイコン（装飾） */
     .reel-play {
-      position: absolute; top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 32px; height: 32px;
-      background: rgba(0,0,0,0.6); border-radius: 50%;
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 32px; height: 32px; background: rgba(0,0,0,0.6); border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       color: #fff; pointer-events: none;
     }
 
-    /* テキスト情報 */
-    .reel-info {
-      padding: 10px 12px;
-      flex: 1; display: flex; flex-direction: column;
-    }
+    .reel-info { padding: 10px 12px; flex: 1; display: flex; flex-direction: column; }
     .reel-v-title {
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 1.5;
-      color: var(--fg);
-      /* 2行で省略 */
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      font-size: 14px; font-weight: 700; line-height: 1.5; color: var(--fg);
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
       margin-bottom: 6px;
     }
     .reel-item:hover .reel-v-title { color: var(--accent); }
+    .reel-meta { margin-top: auto; font-size: 11px; color: var(--muted); display: flex; gap: 8px; align-items: center; }
     
-    .reel-meta {
-      margin-top: auto;
-      font-size: 11px;
-      color: var(--muted);
-      display: flex; gap: 8px; align-items: center;
-    }
-    
-    /* スマホ調整：カード幅を少し狭くして見切れさせる */
     @media (max-width: 600px) {
       .reel-item { flex: 0 0 200px; }
       .reel-v-title { font-size: 13px; }
     }
-/* 埋め込みの分岐（必ずCSSの末尾で） */
-.embed iframe{ display:block; width:100%; max-width:100%; border:0; border-radius:12px; }
-.embed iframe[src*="youtube.com"],
-.embed iframe[src*="youtube-nocookie.com"],
-.embed iframe[src*="vimeo.com"]{ aspect-ratio:16/9; height:auto; }
-.embed iframe[src*="open.spotify.com"]{ aspect-ratio:auto; height:352px; }
 
-.intersecting-circles-spinner, .intersecting-circles-spinner * {
+    /* Embed iframe settings */
+    .embed iframe{ display:block; width:100%; max-width:100%; border:0; border-radius:12px; }
+    .embed iframe[src*="youtube.com"],
+    .embed iframe[src*="youtube-nocookie.com"],
+    .embed iframe[src*="vimeo.com"]{ aspect-ratio:16/9; height:auto; }
+    .embed iframe[src*="open.spotify.com"]{ aspect-ratio:auto; height:352px; }
+
+    /* 新しいローディングアニメーション (intersecting-circles-spinner) */
+    .intersecting-circles-spinner, .intersecting-circles-spinner * {
       box-sizing: border-box;
     }
-
     .intersecting-circles-spinner {
-      height: 70px;
-      width: 70px;
+      height: 70px; width: 70px;
       position: relative;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
+      display: flex; flex-direction: row; justify-content: center; align-items: center;
     }
-
     .intersecting-circles-spinner .spinnerBlock {
       animation: intersecting-circles-spinners-animation 1200ms linear infinite;
-      transform-origin: center;
-      display: block;
-      height: 35px;
-      width: 35px;
+      transform-origin: center; display: block; height: 35px; width: 35px;
     }
-
     .intersecting-circles-spinner .circle {
-      display: block;
-      border: 2px solid #ff1d5e;
-      border-radius: 50%;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
+      display: block; border: 2px solid #ff1d5e; border-radius: 50%;
+      height: 100%; width: 100%; position: absolute; left: 0; top: 0;
     }
-
-    .intersecting-circles-spinner .circle:nth-child(1) {
-      left: 0;
-      top: 0;
-    }
-
-    .intersecting-circles-spinner .circle:nth-child(2) {
-      left: calc(35px * -0.36);
-      top: calc(35px * 0.2);
-    }
-
-    .intersecting-circles-spinner .circle:nth-child(3) {
-      left: calc(35px * -0.36);
-      top: calc(35px * -0.2);
-    }
-
-    .intersecting-circles-spinner .circle:nth-child(4) {
-      left: 0;
-      top: calc(35px * -0.36);
-    }
-
-    .intersecting-circles-spinner .circle:nth-child(5) {
-      left: calc(35px * 0.36);
-      top: calc(35px * -0.2);
-    }
-
-    .intersecting-circles-spinner .circle:nth-child(6) {
-      left: calc(35px * 0.36);
-      top: calc(35px * 0.2);
-    }
-
-    .intersecting-circles-spinner .circle:nth-child(7) {
-      left: 0;
-      top: calc(35px * 0.36);
-    }
+    .intersecting-circles-spinner .circle:nth-child(1) { left: 0; top: 0; }
+    .intersecting-circles-spinner .circle:nth-child(2) { left: calc(35px * -0.36); top: calc(35px * 0.2); }
+    .intersecting-circles-spinner .circle:nth-child(3) { left: calc(35px * -0.36); top: calc(35px * -0.2); }
+    .intersecting-circles-spinner .circle:nth-child(4) { left: 0; top: calc(35px * -0.36); }
+    .intersecting-circles-spinner .circle:nth-child(5) { left: calc(35px * 0.36); top: calc(35px * -0.2); }
+    .intersecting-circles-spinner .circle:nth-child(6) { left: calc(35px * 0.36); top: calc(35px * 0.2); }
+    .intersecting-circles-spinner .circle:nth-child(7) { left: 0; top: calc(35px * 0.36); }
 
     @keyframes intersecting-circles-spinners-animation {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
 
-/* ローディング画面のスタイル */
-#loading-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff; /* 背景色（白） */
-  z-index: 9999; /* 他の要素より手前に表示 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.5s, visibility 0.5s; /* 消えるときのアニメーション */
-}
-
-/* くるくる回る円のスタイル */
-.spinner {
-  width: 50px;
-  height: 50px;
-  border: 5px solid #f3f3f3; /* 薄いグレー */
-  border-top: 5px solid #3498db; /* 回転する部分の色（青） */
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-/* 回転アニメーションの定義 */
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* ローディング完了後に適用するクラス（消すための設定） */
-#loading-wrapper.loaded {
-  opacity: 0;
-  visibility: hidden;
-}
-
-
+    /* ローディング画面の枠 */
+    #loading-wrapper {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background-color: #ffffff;
+      z-index: 9999;
+      display: flex; justify-content: center; align-items: center;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+    #loading-wrapper.loaded {
+      opacity: 0; visibility: hidden;
+    }
   </style>
 </head>
 <body>
+  
   <div id="loading-wrapper">
-  <div class="intersecting-circles-spinner">
-    <div class="spinnerBlock">
-    <span class="circle"></span>
-    <span class="circle"></span>
-    <span class="circle"></span>
-    <span class="circle"></span>
-    <span class="circle"></span>
-    <span class="circle"></span>
-    <span class="circle"></span>
+    <div class="intersecting-circles-spinner">
+      <div class="spinnerBlock">
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+      </div>
     </div>
-   </div>
-  <div class="spinner"></div>
   </div>
+
   <header class="site-header">
     <div class="wrap row">
       <a class="brand" href="songs/omikuji.html" aria-label="おみくじを引く">
@@ -534,7 +373,6 @@ footer{
   </header>
 
   <div class="layout">
-    <!-- 左：サイドバー -->
     <aside id="sidebar" class="sidebar" aria-label="サイドバー">
       <div class="sb-title">LINKS</div>
       <nav class="sb-nav">
@@ -570,13 +408,11 @@ footer{
       </div>
     </aside>
 
-    <!-- 右：メイン -->
     <main class="content">
       <section class="hero" aria-labelledby="hero-title">
         <h1 id="hero-title" class="title">曲を検索</h1>
         <p class="lead">曲名・アーティスト・動画タイトル・タグから素早く探せます。</p>
 
-        <!-- GET送信で ?q= を渡す -->
         <form class="search" action="songs/index.html" method="GET" role="search" aria-label="サイト内検索">
           <input id="kw" name="q" type="search" placeholder="例：天体観測 / BUMP OF CHICKEN / 歌枠 / カバー(ユニット)" autocomplete="off" />
           <button class="btn" type="submit">検索</button>
@@ -592,7 +428,6 @@ footer{
         </div>
       </section>
 
-      <!-- Profile -->
       <section id="sec-profile" class="p-section" aria-labelledby="h-profile">
         <div class="bar"><h2 id="h-profile">PROFILE</h2></div>
         <div class="body">
@@ -615,7 +450,6 @@ footer{
         </div>
       </section>
 
-      <!-- Country -->
       <section id="sec-country" class="p-section" aria-labelledby="h-country">
         <div class="bar"><h2 id="h-country">COUNTRY</h2></div>
         <div class="body">
@@ -738,7 +572,6 @@ footer{
         </div>
       </section>
 
-      <!-- Music -->
       <section id="sec-music" class="p-section" aria-labelledby="h-music">
         <div class="bar"><h2 id="h-music">MUSIC</h2></div>
         <div class="body">
@@ -766,7 +599,6 @@ footer{
         </div>
       </section>
 
-      <!-- Other -->
       <section id="sec-other" class="p-section" aria-labelledby="h-other">
         <div class="bar"><h2 id="h-other">OTHER</h2></div>
         <div class="body" style="max-width: 100%;">
@@ -824,7 +656,6 @@ footer{
                   <div class="reel-meta"><span>YouTube</span></div>
                 </div>
               </a>
-
             </div>
           </div>
           <div class="reel-group">
@@ -880,10 +711,9 @@ footer{
                   <div class="reel-meta"><span>YouTube</span></div>
                 </div>
               </a>
-
             </div>
           </div>
-          <p>料理企画「Nagao’s Kitchen」や、海外ライバーとの英語コラボ「Talking in English」など、学びとエンタメを融合した取り組みも魅力のひとつ。初心者向けにゲーム大会のルールを解説する動画や、バラエティ色豊かなコラボ企画など、幅広いジャンルで活躍している。ファンと距離の近いスタイルで、日常的な楽しさと成長の瞬間を共有している。</p>
+          
           <div class="reel-group">
             <h3 class="reel-cat-title">料理<span class="reel-cat-en">Cooking</span></h3>
             <div class="reel-scroll">
@@ -897,7 +727,6 @@ footer{
                   <div class="reel-meta"><span>YouTube</span></div>
                 </div>
               </a>
-
               <a href="https://youtu.be/anRiPxhKl4E" target="_blank" class="reel-item">
                 <div class="reel-thumb-wrap">
                   <img src="https://img.youtube.com/vi/anRiPxhKl4E/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
@@ -908,7 +737,6 @@ footer{
                   <div class="reel-meta"><span>YouTube</span></div>
                 </div>
               </a>
-
               <a href="https://youtu.be/3gfWc0RKPoM" target="_blank" class="reel-item">
                 <div class="reel-thumb-wrap">
                   <img src="https://img.youtube.com/vi/3gfWc0RKPoM/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
@@ -984,7 +812,6 @@ footer{
                   <div class="reel-meta"><span>YouTube</span></div>
                 </div>
               </a>
-
               <a href="https://youtu.be/soGIaoi-los" target="_blank" class="reel-item">
                 <div class="reel-thumb-wrap">
                   <img src="https://img.youtube.com/vi/soGIaoi-los/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
@@ -995,7 +822,6 @@ footer{
                   <div class="reel-meta"><span>YouTube</span></div>
                 </div>
               </a>
-
               <a href="https://youtu.be/IKigqYPc40o" target="_blank" class="reel-item">
                 <div class="reel-thumb-wrap">
                   <img src="https://img.youtube.com/vi/IKigqYPc40o/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
@@ -1026,9 +852,9 @@ footer{
                   <div class="reel-meta"><span>YouTube</span></div>
                 </div>
               </a>
-            　</div>
             </div>
-            <div class="reel-group">
+          </div>
+          <div class="reel-group">
             <h3 class="reel-cat-title">初心者講座<span class="reel-cat-en">Semminer for Beginner</span></h3>
             <div class="reel-scroll">
               <a href="https://youtu.be/WR5In4SR09s" target="_blank" class="reel-item">
@@ -1041,7 +867,6 @@ footer{
                   <div class="reel-meta"><span>YouTube</span></div>
                 </div>
               </a>
-
               <a href="https://youtu.be/P8mFFQtpHrA" target="_blank" class="reel-item">
                 <div class="reel-thumb-wrap">
                   <img src="https://img.youtube.com/vi/P8mFFQtpHrA/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
@@ -1052,7 +877,6 @@ footer{
                   <div class="reel-meta"><span>YouTube</span></div>
                 </div>
               </a>
-
               <a href="https://youtu.be/LTrxxEpy62E" target="_blank" class="reel-item">
                 <div class="reel-thumb-wrap">
                   <img src="https://img.youtube.com/vi/LTrxxEpy62E/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
@@ -1102,14 +926,10 @@ footer{
   </div>
 
   <footer>
-  <p>© <span id="y"></span> 桜華水 (Unofficial). このWebサイトは、にじさんじ所属バーチャルライバー 長尾景を応援する非公式曲検索ファンサイトです。当サイトはリンクフリーです。</p>
-  <p>京阪抹茶が個人で制作・管理しており、ANYCOLOR株式会社様 及び にじさんじプロジェクト、各種関係会社様とは一切関係ございません。</p>
-  <p>サイトに関するご意見・お問い合わせは <a href="https://x.com/RAOW0607" target="_blank"> 京阪抹茶の X（旧Twitter）</a> にてご連絡ください。</p>
-</footer>
-
-
-
-
+    <p>© <span id="y"></span> 桜華水 (Unofficial). このWebサイトは、にじさんじ所属バーチャルライバー 長尾景を応援する非公式曲検索ファンサイトです。当サイトはリンクフリーです。</p>
+    <p>京阪抹茶が個人で制作・管理しており、ANYCOLOR株式会社様 及び にじさんじプロジェクト、各種関係会社様とは一切関係ございません。</p>
+    <p>サイトに関するご意見・お問い合わせは <a href="https://x.com/RAOW0607" target="_blank"> 京阪抹茶の X（旧Twitter）</a> にてご連絡ください。</p>
+  </footer>
 
   <script>
     if ('serviceWorker' in navigator) {
@@ -1134,34 +954,26 @@ footer{
         btn.setAttribute('aria-expanded', String(open));
       });
     }
-      
-  // ページ（画像など含む）の読み込みが完了したら実行
-  window.addEventListener('load', function() {
-    const loader = document.getElementById('loading-wrapper');
     
-    // 少しだけ余韻を持たせてから消す（0.5秒後）
-    // すぐ消したい場合は setTimeoutを外して中の行だけ書いてください
+    // 【修正箇所】scriptの中にあったHTMLタグを削除しました
+    
+    // ページ（画像など含む）の読み込みが完了したら実行
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('loading-wrapper');
+      
+      // 少しだけ余韻を持たせてから消す（0.5秒後）
+      setTimeout(function() {
+        loader.classList.add('loaded');
+      }, 500); 
+    });
+    
+    // 【保険】もし読み込みが長すぎても5秒後には強制的に消す
     setTimeout(function() {
-      loader.classList.add('loaded');
-    }, 500); 
-  });
-  
-  // 【保険】もし読み込みが長すぎても5秒後には強制的に消す
-  setTimeout(function() {
-    const loader = document.getElementById('loading-wrapper');
-    if (loader && !loader.classList.contains('loaded')) {
-      loader.classList.add('loaded');
-    }
-  }, 5000);
-</script>
+      const loader = document.getElementById('loading-wrapper');
+      if (loader && !loader.classList.contains('loaded')) {
+        loader.classList.add('loaded');
+      }
+    }, 5000);
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
