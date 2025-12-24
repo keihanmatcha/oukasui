@@ -310,7 +310,7 @@ footer{
       padding: 4px 4px 20px; /* 下部にスクロールバー用の余白 */
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch; /* iOS慣性スクロール */
-      /*align-items: flex-start;
+      /*align-items: flex-start;*/
     }
     /* スクロールバーを隠す（お好みで削除可） */
     .reel-scroll::-webkit-scrollbar { height: 6px; }
@@ -394,6 +394,43 @@ footer{
 .embed iframe[src*="youtube-nocookie.com"],
 .embed iframe[src*="vimeo.com"]{ aspect-ratio:16/9; height:auto; }
 .embed iframe[src*="open.spotify.com"]{ aspect-ratio:auto; height:352px; }
+
+/* ローディング画面のスタイル */
+#loading-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* 背景色（白） */
+  z-index: 9999; /* 他の要素より手前に表示 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s, visibility 0.5s; /* 消えるときのアニメーション */
+}
+
+/* くるくる回る円のスタイル */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3; /* 薄いグレー */
+  border-top: 5px solid #3498db; /* 回転する部分の色（青） */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* 回転アニメーションの定義 */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ローディング完了後に適用するクラス（消すための設定） */
+#loading-wrapper.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
 
 
   </style>
@@ -1014,8 +1051,29 @@ footer{
       });
     }
   </script>
+  <script>
+  // ページ（画像など含む）の読み込みが完了したら実行
+  window.addEventListener('load', function() {
+    const loader = document.getElementById('loading-wrapper');
+    
+    // 少しだけ余韻を持たせてから消す（0.5秒後）
+    // すぐ消したい場合は setTimeoutを外して中の行だけ書いてください
+    setTimeout(function() {
+      loader.classList.add('loaded');
+    }, 500); 
+  });
+  
+  // 【保険】もし読み込みが長すぎても5秒後には強制的に消す
+  setTimeout(function() {
+    const loader = document.getElementById('loading-wrapper');
+    if (loader && !loader.classList.contains('loaded')) {
+      loader.classList.add('loaded');
+    }
+  }, 5000);
+</script>
 </body>
 </html>
+
 
 
 
