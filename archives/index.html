@@ -399,6 +399,12 @@
 #page-top-btn:hover {
   animation: bounce 0.6s infinite;
 }
+/* 追加：ボタンの中の画像を、枠に合わせて縮小する設定 */
+#page-top-btn img {
+  width: 100%;
+  height: auto;
+  display: block; /* 画像の下の隙間を消す */
+}
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
@@ -1339,4 +1345,5 @@
   </script>
 </body>
 </html>
+
 
