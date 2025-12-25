@@ -368,6 +368,42 @@
         overflow: visible !important; 
         border: 1px solid var(--border);
     }
+  /* 右下のミニキャラボタン */
+#page-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  transition: opacity 0.3s, transform 0.3s;
+  cursor: pointer;
+  /* 画像の幅設定 */
+  width: 80px; 
+  height: auto;
+}
+
+/* 最初は隠しておくクラス */
+#page-top-btn.hide-btn {
+  opacity: 0;
+  pointer-events: none; /* 見えてないときはクリックできないように */
+  transform: translateY(20px); /* 少し下に隠しておく */
+}
+
+/* 表示されたときのクラス */
+#page-top-btn.show-btn {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* ホバーしたときにぴょこんと跳ねるアニメーション */
+#page-top-btn:hover {
+  animation: bounce 0.6s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
 </style>
 </head>
 <body>
@@ -911,6 +947,10 @@
     </div>
   </main>
 
+  <a href="#" id="page-top-btn" class="hide-btn">
+  <img src="../images/mini-nagao-up.png" alt="上へ戻る">
+  </a>
+
   <script src="https://www.youtube.com/iframe_api"></script>
   <script>
     const $list = document.getElementById('list');
@@ -1251,9 +1291,32 @@
       head.addEventListener('mousedown', onDown);
       head.addEventListener('touchstart', onDown, {passive:true});
     })();
+    // スクロールしたらボタンを表示/非表示にする設定
+    const topBtn = document.getElementById('page-top-btn');
+
+    window.addEventListener('scroll', function() {
+   // 300px以上スクロールしたら表示
+   if (window.scrollY > 300) {
+    topBtn.classList.remove('hide-btn');
+    topBtn.classList.add('show-btn');
+    } else {
+    topBtn.classList.remove('show-btn');
+    topBtn.classList.add('hide-btn');
+   }
+   });
+
+   // ボタンを押したら滑らかに上に戻る
+   topBtn.addEventListener('click', function(e) {
+     e.preventDefault(); // 急なジャンプを無効化
+     window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+  });
   </script>
 </body>
 </html>
+
 
 
 
