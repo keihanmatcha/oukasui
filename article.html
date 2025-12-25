@@ -129,9 +129,32 @@ box-shadow: 0 4px 12px rgba(98, 93, 161, 0.05);
 
 /* フッター */
 footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; font-size: 12px; color: var(--muted); }
+#loading-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: #ffffff; /* 背景色（白） */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.8s ease; /* フェードアウトの時間 */
+}
+
+/* 読み込み完了後に消すクラス */
+#loading-wrapper.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 </style>
 </head>
 <body>
+<div id="loading-wrapper">
+  <div id="loader-img-box">
+    <img src="../images/loading-loop.gif" id="loading-character" alt="Loading..." width="150">
+  </div>
+</div>
 
 <header>
 <div class="wrap nav-header">
@@ -244,7 +267,8 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
 <div class="reel-scroll">
 <div class="reel-item">
 <div class="tweet-wrapper">
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【にじさんじダンス部 3Dライブ本日開催✨】<br><br>本日12/20(土)20:00より「Dance Beyond the Limit」をお届けします✨<br><br>感想はぜひ「<a href="https://twitter.com/hashtag/%E3%81%AB%E3%81%98%E3%81%95%E3%82%93%E3%81%98%E3%83%80%E3%83%B3%E3%82%B9%E9%83%A8?src=hash&amp;ref_src=twsrc%5Etfw">#にじさんじダンス部</a>」でポストしてください！ <br><br>▼ライブ会場はこちら(全編無料配信)<a href="https://t.co/PzCSy4DBs2">https://t.co/PzCSy4DBs2</a> <a href="https://t.co/6zUvq3hxtI">pic.twitter.com/6zUvq3hxtI</a></p>&mdash; にじさんじ公式🌈🕒 (@nijisanji_app) <a href="https://twitter.com/nijisanji_app/status/2002320606386438330?ref_src=twsrc%5Etfw">December 20, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【にじさんじダンス部 3Dライブ本日開催✨】<br><br>本日12/20(土)20:00より「Dance Beyond the Limit」をお届けします✨<br><br>感想はぜひ「<a href="https://twitter.com/hashtag/%E3%81%AB%E3%81%98%E3%81%95%E3%82%93%E3%81%98%E3%83%80%E3%83%B3%E3%82%B9%E9%83%A8?src=hash&amp;ref_src=twsrc%5Etfw">#にじさんじダンス部</a>」でポストしてください！ <br><br>▼ライブ会場はこちら(全編無料配信)<a href="https://t.co/PzCSy4DBs2">https://t.co/PzCSy4DBs2</a> <a href="https://t.co/6zUvq3hxtI">pic.twitter.com/6zUvq3hxtI</a></p>&mdash; にじさんじ公式🌈🕒 (@nijisanji_app) <a href="https://twitter.com/nijisanji_app/status/2002320606386438330?ref_src=twsrc%5Etfw">December 20, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+</script>
 </div>
 </div>
 <div class="reel-item">
@@ -368,6 +392,30 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
 </ul>
 </div>
 </section>
+<script>
+   window.addEventListener('load', function() {
+  const loaderWrapper = document.getElementById('loading-wrapper');
+  const characterImg = document.getElementById('loading-character');
+  
+  // 1. 読み込み完了！ -> 画像を「納刀アクション」に切り替える
+  // ※GIFアニメの再生をここからスタートさせるテクニックです
+  characterImg.src = "../images/finish-action.gif"; 
+
+  // 2. 納刀アクションの長さ分だけ待ってから、画面を開く
+  // 例：納刀GIFが「1.5秒」の場合、ここを 1500 にする
+  setTimeout(function() {
+    loaderWrapper.classList.add('loaded');
+  }, 1500); 
+});
+
+// 【保険】もし読み込みが遅すぎても5秒で強制的に開く
+setTimeout(function() {
+    const loader = document.getElementById('loading-wrapper');
+    if (loader && !loader.classList.contains('loaded')) {
+       loader.classList.add('loaded');
+    }
+}, 5000);
+</script>
 
 </main>
 
