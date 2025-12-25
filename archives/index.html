@@ -1225,7 +1225,7 @@
     .then(([autoVideos, manualVideos]) => {
         const combinedVideos = [...autoVideos, ...manualVideos];
         buildVideos(combinedVideos);
-      　initYearOptions();
+        initYearOptions();
         applyFilter();
     })
     .catch(err => {
@@ -1292,30 +1292,55 @@
       head.addEventListener('touchstart', onDown, {passive:true});
     })();
     // スクロールしたらボタンを表示/非表示にする設定
+    / スクロールしたらボタンを表示/非表示にする設定
     const topBtn = document.getElementById('page-top-btn');
+    const listCol = document.querySelector('.list-col'); // PC用のスクロール領域
 
+    // 共通の表示切り替え関数
+    function toggleButton(scrollAmount) {
+        if (scrollAmount > 300) {
+            topBtn.classList.remove('hide-btn');
+            topBtn.classList.add('show-btn');
+        } else {
+            topBtn.classList.remove('show-btn');
+            topBtn.classList.add('hide-btn');
+        }
+    }
+
+    // スマホ用（画面全体のスクロールを監視）
     window.addEventListener('scroll', function() {
-   // 300px以上スクロールしたら表示
-   if (window.scrollY > 300) {
-    topBtn.classList.remove('hide-btn');
-    topBtn.classList.add('show-btn');
-    } else {
-    topBtn.classList.remove('show-btn');
-    topBtn.classList.add('hide-btn');
-   }
-   });
+        toggleButton(window.scrollY);
+    });
 
-   // ボタンを押したら滑らかに上に戻る
-   topBtn.addEventListener('click', function(e) {
-     e.preventDefault(); // 急なジャンプを無効化
-     window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-  });
+    // PC用（リストエリアのスクロールを監視）
+    if (listCol) {
+        listCol.addEventListener('scroll', function() {
+            toggleButton(listCol.scrollTop);
+        });
+    }
+
+    // ボタンを押したら滑らかに上に戻る
+    topBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // スマホ用：画面全体をトップへ
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+        // PC用：リストエリアをトップへ
+        if (listCol) {
+            listCol.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    });
   </script>
 </body>
 </html>
+
 
 
 
