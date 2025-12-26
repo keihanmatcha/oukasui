@@ -1,4 +1,16 @@
-[ {
+[{
+    "youtubeId": "RWxCgDmuVNA",
+    "title": "【ホシミナイト3D】恋愛シチュ対応力チェック！ライバー16人に聞いてみた！【不破湊/星川サラ/にじさんじ】",
+    "channel": "星川サラ",
+    "date": "2025-12-25",
+    "thumbnail": "https://i.ytimg.com/vi/RWxCgDmuVNA/mqdefault.jpg",
+    "category": "企画",
+    "keywords": ["星川サラ","不破湊"],
+    "songs": [
+      { "title": "ゲスト出演", "artist": "星川サラ×不破湊", "start": 3977 }
+    ]
+  },
+    {
     "youtubeId": "QYj0Qa8ieFc",
     "title": "【3D生配信】#ロクフリゲームフェスタ 参加ライバードラフト会議【 #ロクフリにじさんじ 】",
     "channel": "にじさんじ",
