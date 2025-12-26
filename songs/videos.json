@@ -1,4 +1,22 @@
 [{
+    "youtubeId": "pz2TVFuh9qw",
+    "title": "【プチお披露目歌枠】自分プチお披露目いいっすか？【長尾景/にじさんじ】【にじ3D】",
+    "channel": "長尾景",
+    "date": "2025-12-25",
+    "tags": ["カバー(ソロ)"],
+    "songs": [
+      {"title":"猫","artist":DISH//【あいみょん】,"start":87},
+      {"title":"♪まちがいさがし,"artist":["菅田将暉"],"start":819},
+      {"title":"今宵の月のように","artist":["エレファントカシマシ"],"start":1490},
+      {"title":"テレキャスタービーボーイ","artist":["すりぃ"],"start":1800},
+      {"title":"テレキャスタービーボーイ","artist":["すりぃ"],"start":1970},
+      {"title":" プロポーズ","artist":["内緒のピアス"],"start":2504},
+      {"title":" メリッサ","artist":["ポルノグラフィティ"],"start":3388},
+      {"title":"ダーリン","artist":["須田景凪"],"start":3667},
+      {"title":"Wherever you are","artist":["ONE OK ROCK"],"start":3872}
+    ]
+  },
+    {
     "youtubeId": "WFIIoxTeegU",
     "title": "【ドキュメンタリー】ライブまでにVΔLZでセッション出来るようになるケイナガオ【長尾景/にじさんじ】",
     "date": "2025-04-04",
@@ -3310,6 +3328,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
