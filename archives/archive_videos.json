@@ -14,8 +14,8 @@
       "歌配信"
     ],
     "songs": [
-      {"title":"猫","artist":DISH//【あいみょん】,"start":87},
-      {"title":"♪まちがいさがし,"artist":["菅田将暉"],"start":819},
+      {"title":"猫","artist":"DISH//【あいみょん】","start":87},
+      {"title":"まちがいさがし","artist":["菅田将暉"],"start":819},
       {"title":"今宵の月のように","artist":["エレファントカシマシ"],"start":1490},
       {"title":"テレキャスタービーボーイ","artist":["すりぃ"],"start":1800},
       {"title":"テレキャスタービーボーイ","artist":["すりぃ"],"start":1970},
