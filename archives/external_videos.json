@@ -1,4 +1,30 @@
 [{
+    "youtubeId": "pz2TVFuh9qw",
+    "title": "【プチお披露目歌枠】自分プチお披露目いいっすか？【長尾景/にじさんじ】【にじ3D】",
+    "channel": "長尾景",
+    "date": "2025-12-25",
+    "thumbnail": "https://i.ytimg.com/vi/pz2TVFuh9qw/mqdefault.jpg",
+    "category": [
+      "3D",
+      "お披露目配信",
+      "歌配信","雑談"
+    ],
+    "keywords": [
+      "歌配信"
+    ],
+    "songs": [
+      {"title":"猫","artist":"DISH//【あいみょん】","start":87},
+      {"title":"まちがいさがし","artist":"菅田将暉","start":819},
+      {"title":"今宵の月のように","artist":"エレファントカシマシ","start":1490},
+      {"title":"テレキャスタービーボーイ","artist":"すりぃ","start":1800},
+      {"title":"テレキャスタービーボーイ","artist":"すりぃ","start":1970},
+      {"title":" プロポーズ","artist":"内緒のピアス","start":2504},
+      {"title":" メリッサ","artist":"ポルノグラフィティ","start":3388},
+      {"title":"ダーリン","artist":"須田景凪","start":3667},
+      {"title":"Wherever you are","artist":"ONE OK ROCK","start":3872}
+    ]
+  },
+    {
     "youtubeId": "dLtkld3-Yr0",
     "title": "【#にぎにじダンス 踊ってみた】#VΔLZ でにぎにぎにじたうん！ 【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】",
     "channel": "VΔLZ",
