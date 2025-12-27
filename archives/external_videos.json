@@ -1,4 +1,20 @@
 [{
+    "youtubeId": "3PutbTPr4TQ",
+    "title": "I wonder/Da-iCE【長尾景/にじさんじ】【踊ってみた】",
+    "channel": "長尾景",
+    "date": "2025-12-22",
+    "thumbnail": "https://i.ytimg.com/vi/3PutbTPr4TQ/mqdefault.jpg",
+    "category": [
+      "踊り動画"
+    ],
+    "keywords": [
+      "踊り動画"
+    ],
+    "songs": [
+        { "title": "I wonder with", "artist": "Da-iCE", "start":0},
+    ]
+  },
+    {
     "youtubeId": "YAnVDITVHy0",
     "title": "【#ユメオシロ】3D舞台「カタシロReflect」 出演：夢追翔、叶、健屋花那【にじさんじ】",
     "channel": "健屋花那",
