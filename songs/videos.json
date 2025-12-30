@@ -137,7 +137,7 @@
       { "title": "UNDEAD", "artist": "YOASOBI", "start":244  },
       { "title": "愛♡スクリ～ム！", "artist": "AiScReam", "start":775  },
       { "title": "サラバ、愛しき悲しみたちよ", "artist": " ももいろクローバーZ", "start":1253  },
-      { "title": "世界を照らすテトラッド", "artist": "ワンダーランズ×ショウタイム", "start":1766  },
+      { "title": "世界を照らすテトラッド", "artist": "OSTERproject【ワンダーランズ×ショウタイム × 初音ミク】", "start":1766  },
       { "title": "アウトサイダー", "artist": "Eve", "start":1858  },
       { "title": "I wonder", "artist": "Da-iCE", "start":2074  },
       { "title": "スターマイン", "artist": "Da-iCE", "start":2262  },
@@ -3346,6 +3346,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
