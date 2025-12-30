@@ -1,4 +1,22 @@
-[ {
+[{
+    "youtubeId": "K3ryGEHzkLk",
+    "title": "【Rock That Body】#VΔLZ が急接近【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】",
+    "date": "2025-12-30",
+    "tags": ["カバー(ユニット)","踊"],
+    "songs": [
+      {"title":"Rock That Body","artist":"The Black Eyed Peas","start":0}
+    ]
+  },
+    {
+    "youtubeId": "K3ryGEHzkLk",
+    "title": "【超特急逃走中】スピード勝負！踊る #VΔLZ 【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】",
+    "date": "2025-11-28",
+    "tags": ["カバー(ユニット)"],
+    "songs": [
+      {"title":"超特急逃走中","artist":"=LOVE","start":0}
+    ]
+  },
+    {
     "youtubeId": "n3Ocw-sRyRA",
     "title": "【#Klime】すきなことだけでいいです　歌って踊ってみた【長尾景/東堂コハク/山神カルタ/にじさんじ】",
     "channel": "山神カルタ",
@@ -3346,6 +3364,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
