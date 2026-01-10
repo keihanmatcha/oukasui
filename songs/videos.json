@@ -1,4 +1,31 @@
 [{
+    "youtubeId": "14wRE9iG6mE",
+    "title": "【歌って踊ってみた】チューリングラブ【長尾景・フミ/フ景罪/にじさんじ】",
+    "date": "2023-07-29",
+    "tags": ["カバー(ユニット)"],
+    "songs": [
+      {"title":"チューリングラブ","artist":"ナナヲアカリ×Sou","start":0}
+    ]
+  },
+    {
+    "youtubeId": "o28rHP_xbV4",
+    "title": "群青讃歌 / Eve covered by おりひめばるつ",
+    "date": "2023-10-30",
+    "tags": ["カバー(ユニット)"],
+    "songs": [
+      {"title":"群青讃歌","artist":"Eve","start":0}
+    ]
+  },
+ {
+    "youtubeId": "HFxIHwVvgEw",
+    "title": "【歌ってみた】番凩【フミ・長尾景/フ景罪/にじさんじ】",
+    "date": "2020-08-25",
+    "tags": ["カバー(ユニット)"],
+    "songs": [
+      {"title":"番凩","artist":"Hinayukki@仕事してP","start":0}
+    ]
+  },
+    {
     "youtubeId": "N1cnSaHomPY",
     "title": "【Rock That Body】#VΔLZ が急接近【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】",
     "date": "2025-12-30",
@@ -3364,6 +3391,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
