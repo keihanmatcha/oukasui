@@ -1,15 +1,21 @@
 [{
+    "youtubeId": "JnsZdV7T3zs",
+    "title": "【歌ってみた】心拍数♯0822/ 蝶々P 【長尾景cover】【にじさんじ】",
+    "channel": "長尾景",
+    "date": "2021-09-25",
+    "thumbnail": "https://i.ytimg.com/vi/JnsZdV7T3zs/mqdefault.jpg",
+    "tags": ["カバー(ソロ)"],
+    "songs": [
+        {"title":"心拍数♯0822","artist":"蝶々P","start":0}
+    ]
+  },
+    {
     "youtubeId": "rgp16Z8KQaA",
     "title": "【歌枠】ちょっと短め歌枠【長尾景/にじさんじ】",
     "channel": "長尾景",
     "date": "2026-01-18",
     "thumbnail": "https://i.ytimg.com/vi/rgp16Z8KQaA/mqdefault.jpg",
-    "category": [
-      "歌配信"
-    ],
-    "keywords": [
-      "歌配信"
-    ],
+    "tags": ["カバー(ソロ)"],
     "songs": [
       {"title":"丸の内サディスティック","artist":"椎名林檎","start":286},
       {"title":"Pretender","artist":"Official髭男dism","start":1368},
@@ -3411,6 +3417,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
