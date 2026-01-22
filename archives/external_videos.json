@@ -1,4 +1,24 @@
 [{
+    "youtubeId": "rgp16Z8KQaA",
+    "title": "【歌枠】ちょっと短め歌枠【長尾景/にじさんじ】",
+    "channel": "長尾景",
+    "date": "2026-01-18",
+    "thumbnail": "https://i.ytimg.com/vi/rgp16Z8KQaA/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "歌配信"
+    ],
+    "songs": [
+      {"title":"丸の内サディスティック","artist":"椎名林檎","start":286},
+      {"title":"Pretender","artist":"Official髭男dism","start":1368},
+      {"title":"リライト","artist":"ASIAN KUNG-FU GENERATION","start":2208},
+      {"title":"怪物","artist":"YOASOBI","start":3248},
+      {"title":"君の知らない物語","artist":"supercell","start":3478}
+    ]
+  },
+    {
     "youtubeId": "o28rHP_xbV4",
     "title": "群青讃歌 / Eve covered by おりひめばるつ",
     "channel": "フミ",
