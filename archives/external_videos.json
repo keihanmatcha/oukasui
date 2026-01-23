@@ -5,8 +5,12 @@
     "date": "2021-10-24",
     "thumbnail": "https://i.ytimg.com/vi/O7KqNcyMcUA/mqdefault.jpg",
     "category": ["歌動画"],
-    "keywords": ["相羽ういは"]
-  },{
+    "keywords": ["相羽ういは"],
+    "songs": [
+        {"title":"トンデモワンダーズ","artist":"sasakure.‌UK","start":0}
+    ]
+  },
+    {
     "youtubeId": "rgp16Z8KQaA",
     "title": "【歌枠】ちょっと短め歌枠【長尾景/にじさんじ】",
     "channel": "長尾景",
@@ -33,7 +37,10 @@
     "date": "2023-10-30",
     "thumbnail": "https://i.ytimg.com/vi/o28rHP_xbV4/mqdefault.jpg",
     "category": ["歌動画"],
-    "keywords": ["フミ", "星川サラ", "山神カルタ", "甲斐田晴", "弦月藤士郎", "おりひめばるつ", "VΔLZ", "フ景罪"]
+    "keywords": ["フミ", "星川サラ", "山神カルタ", "甲斐田晴", "弦月藤士郎", "おりひめばるつ", "VΔLZ", "フ景罪"],
+    "songs": [
+        {"title":"群青讃歌","artist":"Eve","start":0}
+    ]
   },
     {
     "youtubeId": "HFxIHwVvgEw",
@@ -42,7 +49,10 @@
     "date": "2020-08-25",
     "thumbnail": "https://i.ytimg.com/vi/HFxIHwVvgEw/mqdefault.jpg",
     "category": ["歌動画"],
-    "keywords": ["フミ", "フ景罪"]
+    "keywords": ["フミ", "フ景罪"],
+    "songs": [
+        {"title":"番凩","artist":"Hinayukki@仕事してP","start":0}
+    ]
   },
     {
     "youtubeId": "CZDffwLJ6ho",
@@ -63,7 +73,10 @@
     "date": "2025-07-17",
     "thumbnail": "https://i.ytimg.com/vi/n3Ocw-sRyRA/mqdefault.jpg",
     "category": ["3D","踊り動画","殺陣"],
-    "keywords": ["山神カルタ", "東堂コハク","Klime"]
+    "keywords": ["山神カルタ", "東堂コハク","Klime"],
+    "songs": [
+        {"title":"すきなことだけでいいです","artist":"ピノキオピー","start":0}
+    ]
   },
     {
     "youtubeId": "Eotd07PlW5c",
