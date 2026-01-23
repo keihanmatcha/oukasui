@@ -1,4 +1,14 @@
 [{
+    "youtubeId": "n3Ocw-sRyRA",
+    "title": "【プロセカ】『トンデモワンダーズ』（feat.長尾景） / sasakure.‌UK　歌ってみた【相羽ういは/長尾景/にじさんじ】#けいあい",
+    "channel": "相羽ういは",
+    "date": "2021-10-24",
+    "tags":["カバー(ソロ)"]
+    "songs": [
+        {"title":"トンデモワンダーズ","artist":"sasakure.‌UK","start":0}
+    ]
+  },
+    {
     "youtubeId": "JnsZdV7T3zs",
     "title": "【歌ってみた】心拍数♯0822/ 蝶々P 【長尾景cover】【にじさんじ】",
     "channel": "長尾景",
@@ -3417,6 +3427,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
