@@ -1,4 +1,40 @@
 [{
+    "youtubeId": "8GApxmS4TM8",
+    "title": "【イベント本編】KZHCUP RUMBLE in STREET FIGHTER 6 / 無料パート #KZHCUP_RUMBLE",
+    "channel": "にじさんじ",
+    "date": "2026-01-23",
+    "thumbnail": "https://i.ytimg.com/vi/8GApxmS4TM8/mqdefault.jpg",
+    "songs": [
+    {
+      "title": "前ナレ",
+      "artist": "前野さん",
+      "start": 2393
+    },
+    {
+      "title": "BOしたら坊主チーム",
+      "artist": "小柳ロウ、神田笑一、伊波ライ",
+      "start": 3553
+    },
+    {
+      "title": "サンダーファイヤーパンダータツヤー",
+      "artist": "榊ネス、笹木咲、叢雲カゲツ",
+      "start": 3578
+    },
+    {
+      "title": "さんたっち",
+      "artist": "風楽奏斗、長尾景、オリバー・エバンス",
+      "start": 3604
+    },
+    {
+      "title": "Final Stage Match1",
+      "artist": "さんたっちvsサンダーファイヤーパンダータツヤー",
+      "start": 4303
+    }
+  ]
+    "category": ["ゲーム実況","ライブイベント","大会"],
+    "keywords": ["葛葉", "KZHCUP","ストリートファイター6","風楽奏斗","オリバー・エバンス","どぐら","さんたっち","小柳ロウ","神田笑一","伊波ライ","榊ネス","笹木咲","叢雲カゲツ"]
+   },
+    {
     "youtubeId": "Pk7nnk08LYY",
     "title": "エモクロアTRPG『ロールシャッハシンドローム』長尾景,健屋花那",
     "channel": "ディズム",
