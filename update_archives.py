@@ -110,8 +110,8 @@ KEYWORD_GROUPS = {
     "GAMES": [
         "アイドルマスター SideM", "あつまれどうぶつの森", "Apex Legends", "A Little to the Left", "BUCK SHOT ROULETTE", "ARK",
         "ARK:Survival Ascended", "ARK:Survival Evolved", "ARK-アイランドマップ", "ARK-ラグナロクマップ", "ときめきメモリアル", "AmongUs",
-        "ARK-エクスティンクションマップ", "ARK-クリスタルアイルズマップ", "ASTRONEER", "Blazing Sails", "ドラえもんのどら焼き屋さん物語",
-        "Cooking Simulator", "Dead by Daylight", "eFootball ウイニングイレブン", "ウマ娘　プリティダービー", "Ring Fit Adventure",
+        "ARK-エクスティンクションマップ", "ARK-クリスタルアイルズマップ", "ASTRONEER", "Blazing Sails", "ドラえもんのどら焼き屋さん物語","ダレカレ",
+        "Cooking Simulator", "Dead by Daylight", "eFootball ウイニングイレブン", "ウマ娘　プリティダービー","UMIGARI | ウミガリ","Ring Fit Adventure",
         "おえかきの森", "Fall Guys", "Getting Over It", "Gartic Phones", "Get To Work", "Golf It!", "Inverted Angel",
         "Fast Food Simulator", "Human: Fall Flat", "Left 4 Dead 2", "maimai", "Nintendo Switch Sports", "PADDLE PADDLE PADDLE",
         "Operation: Tango", "Overcooked!2", "Overwatch", "Overwatch2", "Papers, Please", "PEAK", "Portal2","一致するまで終われまテン!!",
@@ -183,6 +183,7 @@ TAG_CONVERSION_MAP = {
     "お絵描きの森": "おえかきの森",
     "ライブ": "ライブ・イベント",
     "姉": "長尾姉上",
+    "KZH CUP": "KZZCUP",
     "SONG": "歌動画",
     "とうらぶ": "刀剣乱舞",
     "にじGTA": "にじさんじGTA",
@@ -666,4 +667,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
