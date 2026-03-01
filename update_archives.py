@@ -203,6 +203,7 @@ TAG_CONVERSION_MAP = {
     "剣盾": "ポケットモンスター-ソード・シールド",
     "L4D2": "Left 4 Dead 2",
     "スト6": "ストリートファイター6",
+    "ザンギ": "ストリートファイター6",
     "Power Wash Simulator": "PowerWash Simulator",
     "Apex": "Apex Legends",
     "APEX": "Apex Legends",
@@ -667,5 +668,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
