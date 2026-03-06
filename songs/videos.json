@@ -1,4 +1,56 @@
 [{
+    "youtubeId": "WCdi26Ajkzw",
+    "title": "A･RA･SHI/ARASHI【長尾景/にじさんじ】",
+    "channel": "長尾景",
+    "date": "2026-03-04",
+    "thumbnail": "https://i.ytimg.com/vi/WCdi26Ajkzw/mqdefault.jpg",
+    "category": [
+      "公式切り抜き","踊り動画"
+    ],
+    "keywords": ["踊り動画"],
+    "tags": ["カバー(ソロ)","踊"],
+    "songs": [
+        {
+      "title": "A･RA･SHI",
+      "artist": "ARASHI/嵐",
+      "start": 0
+    }
+    ]
+  },
+    {
+    "youtubeId": "8CUId_1qbMY",
+    "title": "【歌ってみた】しんでしまうとはなさけない！【長尾景・フミ/フ景罪/にじさんじ】",
+    "channel": "長尾景",
+    "date": "2021-04-11",
+    "thumbnail": "https://i.ytimg.com/vi/8CUId_1qbMY/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": ["歌動画","フミ","フ景罪"],
+    "tags": ["カバー(ユニット)"],
+    "songs": [
+        {
+      "title": "しんでしまうとはなさけない！",
+      "artist": "じーざす / Jizasu-P【WONDERFUL★OPPORTUNITY!】",
+      "start": 0
+    }
+    ]
+  },
+    {
+    "youtubeId": "w0goY02Kn9I",
+    "title": "【 #NJU歌謡祭2022 】 オリジナルダンス&Plus 1 Good Day! 歌って踊ってみた【 にじさんじ / 神田笑一 / 叶 / ベルモンド・バンデラス / 長尾景 】",
+    "channel": "神田笑一",
+    "date": "2026-03-05",
+    "thumbnail": "https://i.ytimg.com/vi/w0goY02Kn9I/mqdefault.jpg",
+    "tags": ["カバー(ユニット)"],
+    "category": ["ライブイベント", "歌配信", "歌動画", "踊り動画"],
+    "keywords": ["にじさんじユニット歌謡祭", "歌動画", "踊り動画","神田笑一","叶","ベルモンド・バンデラス","アイドルマスター SideM GROWING STARS"],
+    "songs": [
+      { "title": "Original instrument", "artist": ["Southern,xxx", "サザンクロス"], "start": 0 },
+      { "title": "Plus 1 Good Day!", "artist": ["FRAME"], "start": 90 }
+    ]
+  },
+    {
     "youtubeId": "iAdMBjLn9v8",
     "title": "それちょっとだけちょうだい？【長尾景/にじさんじ】",
     "channel": "長尾景",
@@ -18,7 +70,7 @@
     ]
   },
     {
-    "youtubeId": "tqoogf2BBtA",
+    "youtubeId": "rjVH7DJQHCQ",
     "title": "【自由型】Kiss Kiss Shy Shy😘 #VΔLZ【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】",
     "channel": "VΔLZ",
     "date": "2026-01-27",
@@ -26,6 +78,7 @@
     "category": [
       "踊り動画"
     ],
+    "tags": ["カバー(ユニット)","踊"],
     "keywords": [
       "VΔLZ",
       "園児組",
@@ -3753,6 +3806,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
