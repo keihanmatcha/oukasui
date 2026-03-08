@@ -46,8 +46,8 @@
     "category": ["ライブイベント", "歌配信", "歌動画", "踊り動画"],
     "keywords": ["にじさんじユニット歌謡祭", "歌動画", "踊り動画","神田笑一","叶","ベルモンド・バンデラス","アイドルマスター SideM GROWING STARS"],
     "songs": [
-      { "title": "Original instrument", "artist": ["Southern,xxx"], "start": 0 },
-      { "title": "Plus 1 Good Day!", "artist": ["FRAME"], "start": 90 }
+      { "title": "Original instrument", "artist":"Southern,xxx", "start": 0 },
+      { "title": "Plus 1 Good Day!", "artist":"FRAME", "start": 90 }
     ]
   },
     {
@@ -3806,6 +3806,7 @@
   "tags": ["カバー(ソロ)"]
 }
 ]
+
 
 
 
