@@ -93,7 +93,7 @@ KEYWORD_GROUPS = {
         "나세라（ナ・セラ）", "하윤（ハ・ユン）", "반하다（バン・ハダ）", "민수하（ミン・スゥーハ）", "양나리（ヤン・ナリ）", "Ike Eveland",
         "Aia Amare", "Yugo Asuma", "Vezalius Bandage", "Uki Violeta", "Enna Alouette", "Elira Pendora", "Endou Reimu", "Fulgur Ovid",
         "Kyoran Meloco", "Kaelix Debonair", "Sonny Brisko", "Selen Tatsuki", "Torahime Kotoka", "Petra Gurin", "Pomu Rainpuff",
-        "Maria Marionette", "Millie Parfait", "Shu Yamino", "Luca Kaneshiro", "Ren Zotto", "星弥", "Noor",
+        "Maria Marionette", "Millie Parfait", "Shu Yamino", "Luca Kaneshiro", "Ren Zotto", "星弥", "Noor","ChroNoiR",
         # 外部・声優・その他
         "字ぴろぱる", "歌衣メイカ", "渋谷ハル", "熊谷タクマ", "かなえ先生", "天開司", "浅沼晋太郎", "伊東健人", "デンジャーD","こばやん",
         "てんぐ・横山ミル", "ヤースー", "藤川Q", "寺島惇太", "百花繚乱", "ぽんぽこ", "ピーナッツくん", "ばあちゃる", "英リサ",
@@ -150,7 +150,7 @@ KEYWORD_GROUPS = {
         "にじさんじイヤホンガンガンゲーム", "おながましろの心霊対談", "ケイナガオの楽屋裏", "NIJIMelodyTime",
         "Nagao's Kitchen", "初心者講座", "たい変", "にじフェス", "視聴者参加型", "にじさんじ麻雀杯",
         "にじさんじのTOYBOX！", "にじさんじのハッピーアワー!!", "にじさんじのB級バラエティ(仮)",
-        "桜魔大戦譚", "にじさんじ大運動会", "にじさんじMIX UP!!", "にじさんじユニット歌謡祭2022", "目隠しポケモン",
+        "桜魔大戦譚", "にじさんじ大運動会", "にじさんじMIX UP!!", "にじさんじユニット歌謡祭2022", "目隠しポケモン","にじポケ1on1",
         "にじさんじ歌謡祭2024", "にじマイクラ占領戦", "全肯定長尾景", "にじクイ", "木10！ろふまお塾", "KZHCUP", "にじさんじVALORANTカスタム",
         "ヤシロ&ササキのレバガチャダイパン", "レバガチャダイパン杯", "にじプロセカ大会", "カラフェス", "にじエペ祭", "神域リーグ", "にじさんじ遊戯王マスターデュエル"
     ]
@@ -246,7 +246,9 @@ TAG_CONVERSION_MAP = {
     "めにまにかんぱにー": "めにまにカンパニー",
     "タメジャナインデス": "タメナンデス",
     "OW": "Overwatch",
-    "OW2": "Overwatch2",
+    "闇ノシュウ": "Shu Yamino",
+    "弦月": "弦月藤士郎",
+    "甲斐田": "甲斐田晴",
     "一唱入魂":"VΔLZ1st 一唱入魂",
     "三華の樂":"VΔLZ2nd 三華の樂",
     "ウマ娘": "ウマ娘　プリティダービー",
@@ -324,6 +326,7 @@ HANDLE_TO_NAME_MAP = {
     "@TakaneLui": "鷹嶺ルイ", "@MoriCalliope": "森カリオペ", "@Inaba_Haneru": "因幡はねる"
 }
 UNIT_GROUP_MAP = {
+    "ChroNoiR":["叶", "葛葉"],
     "VΔLZ": ["甲斐田晴", "弦月藤士郎"],
     "フ景罪": ["フミ"],
     "タメナンデス": ["オリバー・エバンス"],
