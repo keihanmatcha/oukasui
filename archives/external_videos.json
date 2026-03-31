@@ -1,4 +1,70 @@
 [{
+    "youtubeId": "WWccm4rQXfI",
+    "title": "【#FunkyTown】いつも通りの #VΔLZ‪‪【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】",
+    "channel": "VΔLZ",
+    "date": "2026-03-29",
+    "thumbnail": "https://i.ytimg.com/vi/WWccm4rQXfI/mqdefault.jpg",
+    "category": [
+      "踊り動画",
+      "公式切り抜き"
+    ],
+    "keywords": [
+      "踊り動画",
+      "VΔLZ",
+      "園児組",
+      "年長組",
+      "弦月藤士郎",
+      "甲斐田晴"
+    ],
+    "songs": [{
+      "title": "FunkyTown",
+      "artist": "Kathrine White",
+      "start": 0
+    }]
+  },
+  {
+    "youtubeId": "DCaZHbQ8_kw",
+    "title": "【#DameUnGrrr】🐱GRRR...⚠️ #VΔLZ‪‪【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】",
+    "channel": "VΔLZ",
+    "date": "2026-03-27",
+    "thumbnail": "https://i.ytimg.com/vi/DCaZHbQ8_kw/mqdefault.jpg",
+    "category": [
+      "踊り動画",
+      "公式切り抜き"
+    ],
+    "keywords": [
+      "VΔLZ",
+      "園児組",
+      "年長組",
+      "弦月藤士郎",
+      "甲斐田晴"
+    ],
+    "songs": [{
+      "title": "Dame Un Grrr",
+      "artist": "Fantomel",
+      "start": 0
+    }]
+  },
+  {
+    "youtubeId": "KPmqzAsnJ-U",
+    "title": "Grandeur/Snow Man【長尾景/にじさんじ】【踊ってみた】",
+    "channel": "長尾景",
+    "date": "2026-03-26",
+    "thumbnail": "https://i.ytimg.com/vi/KPmqzAsnJ-U/mqdefault.jpg",
+    "category": [
+      "公式切り抜き",
+      "踊り動画"
+    ],
+    "keywords": [
+      "踊り動画"
+    ],
+    "songs": [{
+      "title": "Grandeur",
+      "artist": "Snow Man",
+      "start": 0
+    }]
+  },
+    {
     "youtubeId": "exyTQ9eRs1k",
     "title": "新クトゥルフ神話TRPG『何かが潜んでいる』長尾 景,健屋花那",
     "channel": "ディズム",
