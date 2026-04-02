@@ -42,7 +42,6 @@ jobs:
         # 更新されたアーカイブを元に、songs/videos.json を生成
         # update_songs.py は GitHub API ではなくローカルファイルを書き換えるので push ステップが必要です
         run: python update_songs.py
-
       - name: Commit and Push changes
         run: |
           git config --local user.email "action@github.com"
