@@ -565,11 +565,37 @@
       renderRows(filteredRows);
     }
 
-    fetch('videos.json')
-      .then(r=>r.json())
-      .then(videos=>{ buildRows(videos); applyFilter(); })
-      .catch(err=>{ console.error(err); $empty.style.display='block'; $empty.textContent='videos.json の読み込みに失敗しました。'; });
+    // --- データの読み込みと統合 ---
+async function init() {
+  try {
+    // 1. 両方のファイルを「待機」して同時に取得する
+    const [resMaster, resDraft] = await Promise.all([
+      fetch('videos.json').then(r => r.ok ? r.json() : []).catch(() => []),
+      fetch('draft_songs.json').then(r => r.ok ? r.json() : []).catch(() => [])
+    ]);
 
+    // 2. 「重複を消す」という大事なステップ
+    // すでに確定版(videos.json)にあるIDを覚えておく
+    const masterIds = new Set(resMaster.map(v => v.youtubeId));
+    
+    // 下書き(draft)の中から、まだ確定版にない動画だけを残す
+    const filteredDraft = resDraft.filter(v => !masterIds.has(v.youtubeId));
+
+    // 3. 2つを合体させてから 1回だけリストを構築
+    const allVideos = [...resMaster, ...filteredDraft];
+    
+    buildRows(allVideos);
+    applyFilter();
+
+  } catch (err) {
+    console.error("データの読み込みエラー", err);
+    $empty.style.display = 'block';
+    $empty.textContent = 'データの読み込みに失敗しました。';
+  }
+}
+
+// 最後にこの関数を1回呼ぶだけ！
+init();
     $q.addEventListener('input', applyFilter);
     $filterFavorites.addEventListener('click', () => {
       filterByFavorites = !filterByFavorites;
