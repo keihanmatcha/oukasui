@@ -1,22 +1,19 @@
-name: Update Nagao Archive Data
+name: Update Nagao Data All-in-One
 
 on:
-  # 毎日 日本時間 9:00 (UTC 0:00) に自動実行
   schedule:
-    - cron: '0 0 * * *'
-  # 手動実行を可能にする
-  workflow_dispatch:
+    - cron: '0 0 * * *' # 毎日 9:00 (JST)
+  workflow_dispatch: # 手動実行ボタン
 
 jobs:
-  update_json:
+  update_process:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository code
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # API経由で更新するため通常は不要ですが、プライベートリポジトリ等の場合に備えて設定
           token: ${{ secrets.OUKASUI_TOKEN }}
+          fetch-depth: 0 # 全履歴を取得してpullを安定させる
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -24,41 +21,35 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        # 必要なライブラリをインストール
         run: pip install google-api-python-client requests
 
-      - name: Run Archive Update Script
-        # ここでPythonスクリプトを実行し、API経由で直接更新コミットを行います
+      - name: 1. Run Archive Script
         run: python update_archives.py
         env:
-          # Secretsを環境変数としてスクリプトに渡す
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.OUKASUI_TOKEN }}
-          
-          # スクリプト内のデフォルト値を上書きしたい場合は設定（そのままで良ければ削除可）
-          GITHUB_REPO_OWNER: keihanmatcha
-          GITHUB_REPO_NAME: oukasui
-      - name: Run Songs Sync Script
-        # 更新されたアーカイブを元に、songs/videos.json を生成
-        # update_songs.py は GitHub API ではなくローカルファイルを書き換えるので push ステップが必要です
+
+      - name: 2. Run Songs Script
+        # update_archives.py で新しくなった archive_videos.json を元に処理
         run: python update_songs.py
-      - name: Commit and Push changes
+
+      - name: 3. Commit and Push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
-          # GitHub側ですでに行われた更新（archive_videos.jsonの変更など）を取り込む
-          git pull --rebase origin main
-          
-          # 自分が新しく作った draft_songs.json などをステージング
+          # 手元で更新されたファイルをステージング
           git add archives/archive_videos.json songs/draft_songs.json
           
-          # 変更がある場合のみコミットしてプッシュ
+          # 変更がある場合のみコミット
           if ! git diff --cached --quiet; then
-            git commit -m "Update archive and drafts"
+            git commit -m "Update archive and songs drafts"
+            
+            # 重要：update_archives.py がAPIで更新した分を取り込んでから送る
+            git pull --rebase origin main
             git push origin main
           else
-            echo "No changes to commit"
+            echo "No changes detected."
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.OUKASUI_TOKEN }}
