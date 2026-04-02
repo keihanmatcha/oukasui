@@ -38,3 +38,18 @@ jobs:
           # スクリプト内のデフォルト値を上書きしたい場合は設定（そのままで良ければ削除可）
           GITHUB_REPO_OWNER: keihanmatcha
           GITHUB_REPO_NAME: oukasui
+      - name: Run Songs Sync Script
+        # 更新されたアーカイブを元に、songs/videos.json を生成
+        # update_songs.py は GitHub API ではなくローカルファイルを書き換えるので push ステップが必要です
+        run: python update_songs.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          # videos.json は git add しない（＝絶対に変更されない）
+          git add archives/archive_videos.json songs/draft_songs.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update archive and drafts"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.OUKASUI_TOKEN }}
