@@ -109,6 +109,11 @@ EXTRA_PLAYLISTS = [
         "fixed_tags": ["企画"]
     },
     {
+        "id": "PLCuBbANKdfzu6ElbEC1S-mrOFyAGQRKw1",
+        "name": "長尾景",
+        "fixed_tags": ["企画"]
+    },
+    {
         "id": "PLBp6ycTto5GoNTkdug6HJm8z5dI9QnbIB",
         "name": "長尾景",
         "fixed_tags": ["楽器配信・動画"]
