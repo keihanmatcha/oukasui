@@ -2,6 +2,7 @@ import os
 import json
 import base64
 import re
+import html
 from datetime import datetime
 from googleapiclient.discovery import build
 import requests
@@ -743,12 +744,7 @@ def update_github_json(new_videos):
     else:
         print(f"❌ Failed to update GitHub: {put_res.status_code}")
         print(put_res.text)
-    # 保存処理
-    new_content = json.dumps(final_list, indent=2, ensure_ascii=False).encode('utf-8')
-    commit_data = {"message": f"BOT: Update archive (Add {added_count}, Update {updated_count})", "content": base64.b64encode(new_content).decode('utf-8'), "sha": existing_sha}
-    requests.put(contents_url, headers=headers, json=commit_data)
-    print(f"🚀 GitHub更新完了！ (総数: {len(final_list)}件)")
-
+   
 def main():
     if not YOUTUBE_API_KEY or not GITHUB_TOKEN: return
     youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
