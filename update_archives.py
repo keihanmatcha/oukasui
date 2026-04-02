@@ -640,6 +640,8 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
     videos = []
     next_page_token = None
     page_count = 0
+    print(f"🔍 {channel_name} のプレイリストを取得中... (ID: {playlist_id})")
+    
     while page_count < MAX_PAGES_TO_FETCH:
         try:
             res = youtube.playlistItems().list(part='snippet,contentDetails', playlistId=playlist_id, maxResults=50, pageToken=next_page_token).execute()
@@ -650,10 +652,8 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
             v_res = youtube.videos().list(part='contentDetails,snippet', id=','.join(v_ids)).execute()
             details = {v['id']: v for v in v_res.get('items', [])}
 
-            for item in items:
-                v_id = item['contentDetails']['videoId']
+            for v_id in v_ids:
                 if v_id not in details: continue
-                
                 v_data = details[v_id]
                 snip = v_data['snippet']
                 desc = snip.get('description', '')
@@ -666,18 +666,13 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
                 auto_songs = []
                 cat_set = set(cat)
                 
-                # A. 歌配信の場合：説明欄のセトリ（タイムスタンプ）を取りに行く
                 if "歌配信" in cat_set:
                     auto_songs = parse_setlist_from_text(desc)
-                
-                # B. 歌動画・踊り動画の場合：YouTube公式の「ライセンス情報」を取りに行く
                 elif cat_set.intersection({"歌動画", "踊り動画"}):
-                    # まず説明欄から抽出を試み、なければライセンス情報を探す
-                    # (歌動画でも短いセトリを書く人がいるための予備処理)
-                    elif cat_set.intersection({"歌動画", "踊り動画"}):
-                    # ライセンス情報を優先、なければセトリ
+                    # 公式ライセンス情報を優先、なければセトリ解析
                     auto_songs = extract_music_metadata(desc) or parse_setlist_from_text(desc)
-                # 3. データの登録
+
+                # 3. データの登録 (ここが 1つだけになるように修正)
                 videos.append({
                     "youtubeId": v_id,
                     "title": snip['title'],
@@ -689,6 +684,7 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
                     "tags": auto_tags or [],
                     "songs": auto_songs
                 })
+            
             next_page_token = res.get('nextPageToken')
             if not next_page_token: break
             page_count += 1
