@@ -674,11 +674,9 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
                 elif cat_set.intersection({"歌動画", "踊り動画"}):
                     # まず説明欄から抽出を試み、なければライセンス情報を探す
                     # (歌動画でも短いセトリを書く人がいるための予備処理)
-                    auto_songs = parse_setlist_from_text(desc) or extract_music_metadata(desc)
-                    # 公式情報が載っていない場合のみ、予備として説明欄のテキスト解析(自作セトリ)を試みる
-                    if not auto_songs:
-                        auto_songs = parse_setlist_from_text(desc)
-
+                    elif cat_set.intersection({"歌動画", "踊り動画"}):
+                    # ライセンス情報を優先、なければセトリ
+                    auto_songs = extract_music_metadata(desc) or parse_setlist_from_text(desc)
                 # 3. データの登録
                 videos.append({
                     "youtubeId": v_id,
@@ -691,6 +689,12 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
                     "tags": auto_tags or [],
                     "songs": auto_songs
                 })
+            next_page_token = res.get('nextPageToken')
+            if not next_page_token: break
+            page_count += 1
+        except Exception as e:
+            print(f"⚠️ Error: {e}"); break
+    return videos
     
     
 def update_github_json(new_videos):
