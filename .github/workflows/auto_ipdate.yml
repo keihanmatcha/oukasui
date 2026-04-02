@@ -47,9 +47,19 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          # videos.json は git add しない（＝絶対に変更されない）
+          
+          # GitHub側ですでに行われた更新（archive_videos.jsonの変更など）を取り込む
+          git pull --rebase origin main
+          
+          # 自分が新しく作った draft_songs.json などをステージング
           git add archives/archive_videos.json songs/draft_songs.json
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update archive and drafts"
-          git push
+          
+          # 変更がある場合のみコミットしてプッシュ
+          if ! git diff --cached --quiet; then
+            git commit -m "Update archive and drafts"
+            git push origin main
+          else
+            echo "No changes to commit"
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.OUKASUI_TOKEN }}
