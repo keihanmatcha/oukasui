@@ -695,52 +695,54 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
     
 def update_github_json(new_videos):
     headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
-    contents_url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{JSON_FILE_PATH}"
-
-    # 既存データの読み込み
-    res = requests.get(contents_url, headers=headers)
+    url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{JSON_FILE_PATH}"
+    
+    res = requests.get(url, headers=headers)
     existing_videos, existing_sha = [], None
+    
     if res.status_code == 200:
-        existing_sha = res.json().get('sha')
-        decoded = base64.b64decode(res.json()['content']).decode('utf-8-sig')
-        existing_videos = json.loads(decoded)
+        info = res.json()
+        existing_sha = info['sha']
+        try:
+            # デコードした中身を一旦変数に入れる
+            decoded = base64.b64decode(info['content']).decode('utf-8-sig').strip()
+            # 中身が空でなければJSONとしてパース、空なら空リストにする
+            existing_videos = json.loads(decoded) if decoded else []
+        except json.JSONDecodeError:
+            print("⚠️ 既存のJSONが壊れているか空のため、新規作成として処理します。")
+            existing_videos = []
 
-    # 既存データをマップ化 (管理対象チャンネルのみ)
     managed_map = {v['youtubeId']: v for v in existing_videos if v.get('channel') in MANAGED_CHANNEL_NAMES}
-    preserved_videos = [v for v in existing_videos if v.get('channel') not in MANAGED_CHANNEL_NAMES]
-
-    updated_count, added_count = 0, 0
+    preserved = [v for v in existing_videos if v.get('channel') not in MANAGED_CHANNEL_NAMES]
 
     for nv in new_videos:
-        v_id = nv['youtubeId']
-        if v_id in managed_map:
-            ev = managed_map[v_id]
-            is_changed = False
-            
-            # ★重要★ 手動入力された songs や tags が既存にあれば優先して保持
-            if ev.get('songs') and not nv.get('songs'):
-                nv['songs'] = ev['songs']
-                is_changed = True
-            if ev.get('tags') and not nv.get('tags'):
-                nv['tags'] = ev['tags']
-                is_changed = True
-                
-            # カテゴリとキーワードの統合
-            merged_cat = sorted(list(set(nv['category']) | set(ev.get('category', []))))
-            if "未分類" in merged_cat and len(merged_cat) > 1: merged_cat.remove("未分類")
-            
-            if sorted(ev.get('category', [])) != merged_cat or sorted(ev.get('keywords', [])) != sorted(nv['keywords']):
-                nv['category'] = merged_cat
-                is_changed = True
-            
-            if is_changed: updated_count += 1
-            managed_map[v_id] = nv
+        vid = nv['youtubeId']
+        if vid in managed_map:
+            # 既存の songs/tags を保護
+            if 'songs' in managed_map[vid] and managed_map[vid]['songs'] and not nv.get('songs'):
+                nv['songs'] = managed_map[vid]['songs']
+            if 'tags' in managed_map[vid] and managed_map[vid]['tags'] and not nv.get('tags'):
+                nv['tags'] = managed_map[vid]['tags']
+            managed_map[vid].update(nv)
         else:
-            managed_map[v_id] = nv
-            added_count += 1
+            managed_map[vid] = nv
 
-    final_list = sorted(preserved_videos + list(managed_map.values()), key=lambda x: x.get('date', ''), reverse=True)
-
+    final = sorted(preserved + list(managed_map.values()), key=lambda x: x.get('date', ''), reverse=True)
+    
+    # 書き出し
+    json_text = json.dumps(final, indent=2, ensure_ascii=False)
+    payload = {
+        "message": "BOT: Update archive",
+        "content": base64.b64encode(json_text.encode('utf-8')).decode('utf-8'),
+        "sha": existing_sha
+    }
+    
+    put_res = requests.put(url, headers=headers, json=payload)
+    if put_res.status_code in [200, 201]:
+        print("🚀 Archive updated successfully.")
+    else:
+        print(f"❌ Failed to update GitHub: {put_res.status_code}")
+        print(put_res.text)
     # 保存処理
     new_content = json.dumps(final_list, indent=2, ensure_ascii=False).encode('utf-8')
     commit_data = {"message": f"BOT: Update archive (Add {added_count}, Update {updated_count})", "content": base64.b64encode(new_content).decode('utf-8'), "sha": existing_sha}
