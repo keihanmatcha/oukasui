@@ -1277,7 +1277,7 @@
     "channel": "星川サラ",
     "date": "2025-12-25",
     "thumbnail": "https://i.ytimg.com/vi/RWxCgDmuVNA/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["星川サラ","不破湊"],
     "songs": [
       { "title": "ゲスト出演", "artist": "星川サラ×不破湊", "start": 3977 }
@@ -1297,7 +1297,7 @@
     "channel": "緑仙",
     "date": "2025-06-22",
     "thumbnail": "https://i.ytimg.com/vi/ODSy0ClmSZs/mqdefault.jpg",
-    "category": "公式企画・番組",
+    "category": ["公式企画・番組"],
     "keywords": ["緑仙", "葉加瀬冬雪","渡会雲雀","先斗寧","小清水透","SitR名古屋"]
   },
     {
@@ -1306,7 +1306,7 @@
     "channel": "にじさんじ",
     "date": "2025-06-13",
     "thumbnail": "https://i.ytimg.com/vi/sz9Vn770C40/mqdefault.jpg",
-    "category": "公式企画・番組",
+    "category": ["公式企画・番組"],
     "keywords": ["緑仙", "葉加瀬冬雪","渡会雲雀","先斗寧","小清水透","SitR名古屋"]
   },
     {
@@ -1315,7 +1315,7 @@
     "channel": "にじさんじ",
     "date": "2025-06-19",
     "thumbnail": "https://i.ytimg.com/vi/tcAQyCMxjJ8/mqdefault.jpg",
-    "category": "公式企画・番組",
+    "category": ["公式企画・番組"],
     "keywords": ["緑仙", "葉加瀬冬雪","渡会雲雀","先斗寧","小清水透","SitR名古屋"]
   },
     {
@@ -1894,7 +1894,7 @@
     "channel": "早瀬走",
     "date": "2025-11-08",
     "thumbnail": "https://i.ytimg.com/vi/BZOIw6iX4jY/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["早瀬走"]
   },
   {
@@ -1942,7 +1942,7 @@
     "channel": "甲斐田晴",
     "date": "2025-10-05",
     "thumbnail": "https://i.ytimg.com/vi/4eMfG4CjoBU/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["甲斐田晴", "星川サラ","山神カルタ","フミ","マインクラフト"],
     "songs":[{
       "title":"通話","artist":["甲斐田晴", "星川サラ","山神カルタ","フミ"],"start":12330
@@ -1966,7 +1966,7 @@
     "channel": "舞元啓介",
     "date": "2025-09-27",
     "thumbnail": "https://i.ytimg.com/vi/MvpgtWsAQGM/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["舞元啓介","叶","オリバー・エバンス","ストリートファイター6"]
   },
   {
@@ -1984,7 +1984,7 @@
     "channel": "町田ちま",
     "date": "2025-09-07",
     "thumbnail": "https://i.ytimg.com/vi/FMxOkyJDNrI/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": ["町田ちま"],
     "songs": [
         { "title": "ゲスト", "artist":["町田ちま"], "start": 1975 },
@@ -2016,7 +2016,7 @@
     "channel": "甲斐田晴",
     "date": "2025-07-18",
     "thumbnail": "https://i.ytimg.com/vi/kL-2yPjqBPE/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["甲斐田晴", "フミ","山神カルタ","星川サラ","弦月藤士郎","おりひめばるつ","VΔLZ","フ景罪","マインクラフト"]
   },
   {
@@ -2052,7 +2052,7 @@
     "channel": "にじさんじ",
     "date": "2025-06-28",
     "thumbnail": "https://i.ytimg.com/vi/I5BmqG_KBd8/mqdefault.jpg",
-    "category": "公式企画・番組",
+    "category": ["公式企画・番組"],
     "keywords": ["緑仙", "葉加瀬冬雪","渡会雲雀","先斗寧","小清水透","SitR名古屋"]
   },
   {
@@ -2061,7 +2061,7 @@
     "channel": "星川サラ",
     "date": "2025-06-25",
     "thumbnail": "https://i.ytimg.com/vi/vi2tZ6D0YHs/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["星川サラ","フレン・E・ルスタリオ","五木左京"],
     "songs": [
       { "title": "凸待ち", "artist":["星川サラ","フレン・E・ルスタリオ","五木左京"], "start": 2708 }
@@ -2082,7 +2082,7 @@
     "channel": "にじさんじ",
     "date": "2025-06-22",
     "thumbnail": "https://i.ytimg.com/vi/uMN9Xt5NdWg/mqdefault.jpg",
-    "category": "ライブイベント",
+    "category": ["ライブイベント"],
     "keywords": ["緑仙", "葉加瀬冬雪","渡会雲雀","先斗寧","小清水透","SitR名古屋"],
     "songs": [
     { "title": "Arc goes oN", "artist": "にじさんじ", "start":1890 },
@@ -2095,7 +2095,7 @@
     "channel": "にじさんじ",
     "date": "2025-06-05",
     "thumbnail": "https://i.ytimg.com/vi/TGtKbY6C9iM/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["緑仙", "葉加瀬冬雪","渡会雲雀","先斗寧","小清水透","SitR名古屋"]
   },
   {
@@ -2155,7 +2155,7 @@
     "channel": "倉持めると",
     "date": "2025-05-18",
     "thumbnail": "https://i.ytimg.com/vi/fKvNkUy4VD8/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["倉持めると"],
     "songs": [
       { "title": "凸待ち", "artist": "倉持めると", "start": 14670 }
@@ -2167,7 +2167,7 @@
     "channel": "緑仙",
     "date": "2025-05-06",
     "thumbnail": "https://i.ytimg.com/vi/PBJ_8-YHPMc/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["緑仙", "伏見ガク","にじ飯調査隊","ましろ爻"]
   },
    {
@@ -2194,7 +2194,7 @@
     "channel": "不破湊",
     "date": "2025-04-18",
     "thumbnail": "https://i.ytimg.com/vi/LTvFcj9qnBw/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["不破湊"],
     "songs": [
       { "title": "凸待ち", "artist": "不破湊", "start": 1353 }
@@ -2215,7 +2215,7 @@
     "channel": "月ノ美兎",
     "date": "2025-03-27",
     "thumbnail": "https://i.ytimg.com/vi/XKr7JTMB48E/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["月ノ美兎","北見遊征","Shu Yamino"],
     "songs":[{"title":"※次のコンテンツには自殺や自傷行為のトピックが含まれている可能性があります。","artist":["月ノ美兎","北見遊征","Shu Yamino"],"start":3870}]
   },
@@ -2225,7 +2225,7 @@
     "channel": "西園チグサ",
     "date": "2025-03-18",
     "thumbnail": "https://i.ytimg.com/vi/kwpZ-X6U9-M/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["西園チグサ", "ながおちぐ","原神"]
   },
   {
@@ -2234,7 +2234,7 @@
     "channel": "赤城ウェン",
     "date": "2025-03-09",
     "thumbnail": "https://i.ytimg.com/vi/trHNwZ683c8/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["赤城ウェン", "星導ショウ","榊ネス","ボードゲーム","ゴジモン","教祖爆誕 たった今くだった神託で君を救うよ。"]
   },
   {
@@ -2270,7 +2270,7 @@
     "channel": "浅沼晋太郎・土田玲央 不思議堂【黒い猫】",
     "date": "2024-01-24",
     "thumbnail": "https://i.ytimg.com/vi/4EqV3i6JDGw/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["浅沼晋太郎","土田玲央","前野智昭"]
   },
   {
@@ -2291,7 +2291,7 @@
     "channel": "犬山たまき",
     "date": "2025-01-23",
     "thumbnail": "https://i.ytimg.com/vi/AMY2926e6fM/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["犬山たまき","かなえ先生","渋谷ハル","熊谷タクマ"]
   },
   {
@@ -2333,7 +2333,7 @@
     "channel": "伏見ガク",
     "date": "2025-01-09",
     "thumbnail": "https://i.ytimg.com/vi/iTKUw6Tw5Hc/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["緑仙", "伏見ガク","にじ飯調査隊","える"]
   },
   {
@@ -2342,7 +2342,7 @@
     "channel": "赤城ウェン",
     "date": "2025-01-07",
     "thumbnail": "https://i.ytimg.com/vi/zgRW9zJbj10/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["赤城ウェン","雀魂"]
   },
   {
@@ -2351,7 +2351,7 @@
     "channel": "星川サラ",
     "date": "2024-12-22",
     "thumbnail": "https://i.ytimg.com/vi/krRrjUUUJgA/mqdefault.jpg",
-    "category": "プロモーション",
+    "category": ["プロモーション"],
     "keywords":  ["星川サラ", "フミ","山神カルタ","甲斐田晴","弦月藤士郎","おりひめばるつ","VΔLZ","フ景罪","にじさんじ歌謡祭2024"]
   },
   {
@@ -2372,7 +2372,7 @@
     "channel": "える",
     "date": "2024-12-16",
     "thumbnail": "https://i.ytimg.com/vi/sbpzBOedulY/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["える"]
   },
   {
@@ -2381,7 +2381,7 @@
     "channel": "北小路ヒスイ",
     "date": "2024-12-08",
     "thumbnail": "https://i.ytimg.com/vi/BgOjAX3IjuQ/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["北小路ヒスイ","える","四季アキラ","スーパーマリオパーティジャンボリー"]
   },
   {
@@ -2408,7 +2408,7 @@
     "channel": "鷹宮リオン",
     "date": "2024-11-13",
     "thumbnail": "https://i.ytimg.com/vi/fjbY_22FMvA/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["鷹宮リオン","轟京子","ルンルン","レヴィ・エリファ"]
   },
   {
@@ -2417,7 +2417,7 @@
     "channel": "犬山たまき",
     "date": "2024-11-13",
     "thumbnail": "https://i.ytimg.com/vi/vRmTndyyX44/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["星川サラ","北小路ヒスイ","犬山たまき"]
   },
   {
@@ -2435,7 +2435,7 @@
     "channel": "甲斐田晴",
     "date": "2024-10-30",
     "thumbnail": "https://i.ytimg.com/vi/NA2WbjQadq4/mqdefault.jpg",
-    "category": "プロモーション",
+    "category": ["プロモーション"],
     "keywords": ["星川サラ", "フミ","山神カルタ","甲斐田晴","弦月藤士郎","おりひめばるつ","VΔLZ","フ景罪"]
   },
   {
@@ -2444,7 +2444,7 @@
     "channel": "犬山たまき",
     "date": "2024-10-15",
     "thumbnail": "https://i.ytimg.com/vi/g_n-9fug6Hw/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["犬山たまき", "星川サラ","かなえ先生","渋谷ハル","熊谷タクマ"]
   },
   {
@@ -2453,7 +2453,7 @@
     "channel": "犬山たまき",
     "date": "2024-10-15",
     "thumbnail": "https://i.ytimg.com/vi/vRmTndyyX44/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["星川サラ","北小路ヒスイ","犬山たまき"]
   },
   {
@@ -2462,7 +2462,7 @@
     "channel": "イブラヒム",
     "date": "2024-10-11",
     "thumbnail": "https://i.ytimg.com/vi/oblWZs_OSM8/mqdefault.jpg",
-    "category": "プロモーション",
+    "category": ["プロモーション"],
     "keywords": ["イブラヒム"]
   },
   {
@@ -2471,7 +2471,7 @@
     "channel": "VΔLZ",
     "date": "2024-10-11",
     "thumbnail": "https://i.ytimg.com/vi/Aykkdf0Yyc8/mqdefault.jpg",
-    "category": "記念配信",
+    "category": ["記念配信"],
     "keywords": ["甲斐田晴","弦月藤士郎","VΔLZ","VΔLZ2nd 三華の樂"]
   },
   {
@@ -2480,7 +2480,7 @@
     "channel": "葉加瀬冬雪",
     "date": "2024-10-09",
     "thumbnail": "https://i.ytimg.com/vi/ZPpBKf3M-7U/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["葉加瀬冬雪","花畑チャイカ","舞元啓介","Pokémon Trading Card Game Pocket"]
   },
   {
@@ -2489,7 +2489,7 @@
     "channel": "Nornis",
     "date": "2024-10-09",
     "thumbnail": "https://i.ytimg.com/vi/D5oWHwsnFCc/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["町田ちま","戌亥とこ","甲斐田晴","VΔLZ"]
   },
   {
@@ -2558,7 +2558,7 @@
     "channel": "浅沼晋太郎・土田玲央 不思議堂【黒い猫】",
     "date": "2024-09-03",
     "thumbnail": "https://i.ytimg.com/vi/GB7jAQYg6kw/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["浅沼晋太郎","土田玲央","平川大輔","井上宝"]
   },
    {
@@ -2612,7 +2612,7 @@
     "channel": "ベルモンド・バンデラス",
     "date": "2024-08-11",
     "thumbnail": "https://i.ytimg.com/vi/ydkZWu2guVk/mqdefault.jpg",
-    "category": "記念配信",
+    "category": ["記念配信"],
     "keywords": ["ベルモンド・バンデラス","민수하（ミン・スゥーハ）","나세라（ナ・セラ）","오지유（オ・ジユ）","北小路ヒスイ","にじさんじ甲子園"],
     "songs":[
       {"title":"通話","artist": ["ベルモンド・バンデラス","민수하（ミン・スゥーハ）","나세라（ナ・セラ）","오지유（オ・ジユ）","北小路ヒスイ"],"start":8390}
@@ -2633,7 +2633,7 @@
     "channel": "星川サラ",
     "date": "2024-08-02",
     "thumbnail": "https://i.ytimg.com/vi/qOcJIi9B_H8/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["星川サラ"]
   },
   {
@@ -2690,7 +2690,7 @@
     "channel": "伏見ガク",
     "date": "2024-07-21",
     "thumbnail": "https://i.ytimg.com/vi/7asOdQYleKE/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["伏見ガク","ベルモンド・バンデラス","笹木咲","花畑チャイカ","フレン・E・ルスタリオ","春崎エアル","佐伯イッテツ","にじさんじ放課後ゲーム部"]
   },
   {
@@ -2913,7 +2913,7 @@
     "channel": "星川サラ",
     "date": "2024-03-20",
     "thumbnail": "https://i.ytimg.com/vi/xyHUNNdcKLU/mqdefault.jpg",
-    "category": "プロモーション",
+    "category": ["プロモーション"],
     "keywords": ["星川サラ"]
   },
   {
@@ -2922,7 +2922,7 @@
     "channel": "レオス・ヴィンセント",
     "date": "2024-03-11",
     "thumbnail": "https://i.ytimg.com/vi/i3ZkPy8WS00/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["レオス・ヴィンセント"]
   },
   {
@@ -2940,7 +2940,7 @@
     "channel": "緑仙",
     "date": "2024-02-25",
     "thumbnail": "https://i.ytimg.com/vi/wjHdZ1ugzqE/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["緑仙", "伏見ガク","にじ飯調査隊","でびでび・でびる"]
   },
   {
@@ -2949,7 +2949,7 @@
     "channel": "フミ",
     "date": "2024-01-17",
     "thumbnail": "https://i.ytimg.com/vi/znsekDmJFh8/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["星川サラ", "フミ","フ景罪"]
   },
   {
@@ -2958,7 +2958,7 @@
     "channel": "ジョー・力一",
     "date": "2024-01-05",
     "thumbnail": "https://i.ytimg.com/vi/625zt7aj7xM/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["月ノ美兎","ジョー・力一","リゼ・ヘルエスタ","星川サラ","不破湊","壱百満天原サロメ","渡会雲雀","SYMPHONIA Day2","一致するまで終われまテン!!"]
   },
   {
@@ -2967,7 +2967,7 @@
     "channel": "にじさんじ",
     "date": "2023-12-29",
     "thumbnail": "https://i.ytimg.com/vi/uWruID6HcQA/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["黒井しば"]
   },
   {
@@ -3017,7 +3017,7 @@
     "channel": "にじさんじ",
     "date": "2023-12-20",
     "thumbnail": "https://i.ytimg.com/vi/IcjaiHTHzQU/mqdefault.jpg",
-    "category": "公式企画・番組",
+    "category": ["公式企画・番組"],
     "keywords": ["月ノ美兎","ジョー・力一","リゼ・ヘルエスタ","星川サラ","不破湊","壱百満天原サロメ","渡会雲雀","SYMPHONIA Day2"]
   },
   {
@@ -3026,7 +3026,7 @@
     "channel": "グウェル・オス・ガール",
     "date": "2023-12-02",
     "thumbnail": "https://i.ytimg.com/vi/ZJ-sHesbU8A/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["グウェル・オス・ガール","春崎エアル","소나기（ソ・ナギ）","クソザコトレーナーズ","その他ゲーム"]
   },
   {
@@ -3130,7 +3130,7 @@
     "channel": "夕陽リリ",
     "date": "2023-09-25",
     "thumbnail": "https://i.ytimg.com/vi/WdQkHzLqGzA/mqdefault.jpg",
-    "category": "歌動画",
+    "category": ["歌動画"],
     "keywords": ["夕陽リリ","相羽ういは","セラフ・ダズルガーデン","山神カルタ","天ケ瀬むゆ","にじさんじダンス部"]
   },
   {
@@ -3139,7 +3139,7 @@
     "channel": "四季凪アキラ",
     "date": "2023-09-15",
     "thumbnail": "https://i.ytimg.com/vi/13oik_k_WHY/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["四季凪アキラ","シスター・クレア"],
     "songs":[
       {"title":"この夏どう過ごしたか","artist": ["四季凪アキラ","シスター・クレア"],"start":1100}
@@ -3151,7 +3151,7 @@
     "channel": "星川サラ",
     "date": "2023-09-06",
     "thumbnail": "https://i.ytimg.com/vi/x0_tjuGvGI8/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["星川サラ", "フミ","山神カルタ","甲斐田晴","弦月藤士郎","おりひめばるつ","VΔLZ","フ景罪"]
   },
   {
@@ -3160,7 +3160,7 @@
     "channel": "星川サラ",
     "date": "2023-09-06",
     "thumbnail": "https://i.ytimg.com/vi/egJodKpJIxY/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["星川サラ", "フミ","山神カルタ","甲斐田晴","弦月藤士郎","おりひめばるつ","VΔLZ","フ景罪","マリオパーティ"]
   },
   {
@@ -3178,7 +3178,7 @@
     "channel": "西園チグサ",
     "date": "2023-08-16",
     "thumbnail": "https://i.ytimg.com/vi/bnceSG8ecmY/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["西園チグサ","ながおちぐ"]
   },
   {
@@ -3187,7 +3187,7 @@
     "channel": "ベルモンド・バンデラス",
     "date": "2023-08-11",
     "thumbnail": "https://i.ytimg.com/vi/ydkZWu2guVk/mqdefault.jpg",
-    "category": "記念配信",
+    "category": ["記念配信"],
     "keywords": ["ベルモンド・バンデラス","민수하（ミン・スゥーハ）","神田笑一","オリバー・エバンス","にじさんじ甲子園"],
     "songs":[
       {"title":"通話","artist": ["ベルモンド・バンデラス","민수하（ミン・スゥーハ）","神田笑一","オリバー・エバンス"],"start":23672}
@@ -3199,7 +3199,7 @@
     "channel": "민수하（ミン・スゥーハ）",
     "date": "2023-08-08",
     "thumbnail": "https://i.ytimg.com/vi/qw0Kf4e3pXI/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["민수하（ミン・スゥーハ）","セラフ・ダズルガーデン"]
   },
   {
@@ -3208,7 +3208,7 @@
     "channel": "星川サラ",
     "date": "2023-08-07",
     "thumbnail": "https://i.ytimg.com/vi/pge4c06ZbO0/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["星川サラ"],
     "songs":[
       {"title":"凸待ち","artist": "星川サラ","start":6960}
@@ -3220,7 +3220,7 @@
     "channel": "にじさんじ",
     "date": "2023-08-02",
     "thumbnail": "https://i.ytimg.com/vi/BN4S6ENL_Ys/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["不破湊","渡会雲雀"]
   },
   {
@@ -3229,7 +3229,7 @@
     "channel": "犬山たまき",
     "date": "2023-07-31",
     "thumbnail": "https://i.ytimg.com/vi/nJpegYeqLik/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["犬山たまき","フミ","フ景罪"]
   },
   {
@@ -3247,7 +3247,7 @@
     "channel": "グウェル・オス・ガール",
     "date": "2023-07-28",
     "thumbnail": "https://i.ytimg.com/vi/9ALXwso12a4/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["グウェル・オス・ガール", "伏見ガク","夕陽リリ","鈴木勝","でびでび・でびる","早瀬走","来栖夏芽","オリバー・エバンス","先斗寧","人狼"]
   },
   {
@@ -3265,7 +3265,7 @@
     "channel": "浅沼晋太郎・土田玲央 不思議堂【黒い猫】",
     "date": "2023-07-13",
     "thumbnail": "https://i.ytimg.com/vi/Kd6RKV2d_5U/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["浅沼晋太郎","土田玲央","伊東健人","デンジャーD","てんぐ・横山ミル","ヤースー"]
   },
   {
@@ -3274,7 +3274,7 @@
     "channel": "星川サラ",
     "date": "2023-07-01",
     "thumbnail": "https://i.ytimg.com/vi/UBCNFOmVEt0/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["星川サラ"]
   },
   {
@@ -3283,7 +3283,7 @@
     "channel": "ベルモンド・バンデラス",
     "date": "2023-07-01",
     "thumbnail": "https://i.ytimg.com/vi/gHihFjfOaD8/mqdefault.jpg",
-    "category": "記念配信",
+    "category": ["記念配信"],
     "keywords": ["ベルモンド・バンデラス","エリー・コニファ","오지유（オ・ジユ）","나세라（ナ・セラ）","伏見ガク","Petra Gurin","にじさんじ甲子園"],
     "songs":[
       {"title":"通話","artist": "ベルモンド・バンデラス","start":5750}
@@ -3304,7 +3304,7 @@
     "channel": "天宮こころ",
     "date": "2023-06-24",
     "thumbnail": "https://i.ytimg.com/vi/y5M6OZKhJjI/mqdefault.jpg",
-    "category": "記念配信",
+    "category": ["記念配信"],
     "keywords": ["天宮こころ"],
     "songs":[
       {"title":"通話","artist": "天宮こころ","start":4115}
@@ -3316,7 +3316,7 @@
     "channel": "東堂コハク",
     "date": "2023-06-21",
     "thumbnail": "https://i.ytimg.com/vi/M8kvqVKi760/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["東堂コハク","Splatoon3"],
     "songs":[
       {"title":"ゲスト","artist": "東堂コハク","start":9040}
@@ -3341,7 +3341,7 @@
     "channel": "フミ",
     "date": "2023-06-04",
     "thumbnail": "https://i.ytimg.com/vi/2-srAwh6dCc/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["フミ","フ景罪"]
   },
   {
@@ -3350,7 +3350,7 @@
     "channel": "甲斐田晴",
     "date": "2023-06-10",
     "thumbnail": "https://i.ytimg.com/vi/or9nukkYwrQ/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["星川サラ","甲斐田晴","弦月藤士郎","VΔLZ","フ景罪"]
   },
   {
@@ -3359,7 +3359,7 @@
     "channel": "不破湊",
     "date": "2023-05-30",
     "thumbnail": "https://i.ytimg.com/vi/UqsdRQzJVNw/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["犬山たまき", "フミ","文野環","星川サラ","神田笑一"]
   },
   {
@@ -3368,7 +3368,7 @@
     "channel": "不破湊",
     "date": "2023-05-20",
     "thumbnail": "https://i.ytimg.com/vi/HgQCYuHMDtA/mqdefault.jpg",
-    "category": "プロモーション",
+    "category": ["プロモーション"],
     "keywords": ["不破湊", "アルス・アニマル","天宮こころ","甲斐田晴","弦月藤士郎","VΔLZ"]
   },
   {
@@ -3377,7 +3377,7 @@
     "channel": "セラフ・ダズルガーデン",
     "date": "2023-05-19",
     "thumbnail": "https://i.ytimg.com/vi/JEufBMGf6UU/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["セラフ・ダズルガーデン","夕陽リリ","山神カルタ","天ケ瀬むゆ","にじさんじダンス部"]
   },
   {
@@ -3386,7 +3386,7 @@
     "channel": "でびでび・でびる",
     "date": "2023-05-15",
     "thumbnail": "https://i.ytimg.com/vi/i-Y80gDU7i4/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["でびでび・でびる"]
   },
   {
@@ -3395,7 +3395,7 @@
     "channel": "星川サラ",
     "date": "2023-05-13",
     "thumbnail": "https://i.ytimg.com/vi/MPyulkRDs4g/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["星川サラ", "フミ","山神カルタ","甲斐田晴","弦月藤士郎","おりひめばるつ","VΔLZ","フ景罪","Gartic Phone"]
   },
   {
@@ -3404,7 +3404,7 @@
     "channel": "イブラヒム",
     "date": "2023-05-03",
     "thumbnail": "https://i.ytimg.com/vi/8_uOPEmc6o0/mqdefault.jpg",
-    "category": "プロモーション",
+    "category": ["プロモーション"],
     "keywords": ["イブラヒム", "フレン・E・ルスタリオ","アルス・アルマル"]
   },
   {
@@ -3413,7 +3413,7 @@
     "channel": "伏見ガク",
     "date": "2023-05-02",
     "thumbnail": "https://i.ytimg.com/vi/cPbBqp-HHIc/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["伏見ガク","ゲームボーイアドバンス Nintendo Switch Online"]
   },
   {
@@ -3422,7 +3422,7 @@
     "channel": "Hana Macchia",
     "date": "2023-04-30",
     "thumbnail": "https://i.ytimg.com/vi/2XpuGpAU-7s/mqdefault.jpg",
-    "category": "3D",
+    "category": ["3D"],
     "keywords": ["Hana Macchia","西園チグサ","健屋花那"],
     "songs":[
       {"title":"ゲスト","artist": ["Hana Macchia","西園チグサ","健屋花那"],"start":925}
@@ -3435,7 +3435,7 @@
     "channel": "グウェル・オス・ガール",
     "date": "2023-04-24",
     "thumbnail": "https://i.ytimg.com/vi/3EX71OK4cAY/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["グウェル・オス・ガール","春崎エアル","소나기（ソ・ナギ）","クソザコトレーナーズ","その他ゲーム"]
   },
   {
@@ -3444,7 +3444,7 @@
     "channel": "にじさんじ",
     "date": "2023-04-18",
     "thumbnail": "https://i.ytimg.com/vi/oIFLvanqFhk/mqdefault.jpg",
-    "category": "公式企画・番組",
+    "category": ["公式企画・番組"],
     "keywords": ["Petra Gurin", "たい変","渡会雲雀","Alban Knox"]
   },
   {
@@ -3462,7 +3462,7 @@
     "channel": "にじさんじ",
     "date": "2023-04-18",
     "thumbnail": "https://i.ytimg.com/vi/2bWLXjU1e3o/mqdefault.jpg",
-    "category": "公式企画・番組",
+    "category": ["公式企画・番組"],
     "keywords": ["Petra Gurin", "たい変","天宮こころ","Maria Marionette"]
   },
   {
@@ -3471,7 +3471,7 @@
     "channel": "にじさんじ",
     "date": "2023-04-11",
     "thumbnail": "https://i.ytimg.com/vi/o8_aRToI4BI/mqdefault.jpg",
-    "category": "公式企画・番組",
+    "category": ["公式企画・番組"],
     "keywords": ["Petra Gurin", "たい変","伏見ガク","Elira Pendra"]
   }, 
   {
@@ -3480,7 +3480,7 @@
     "channel": "長尾景",
     "date": "2023-04-07",
     "thumbnail": "https://i.ytimg.com/vi/1aHAxm1rubk/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["緑仙","Fulgur Ovid","大乱闘スマッシュブラザーズSPECIAL"],
     "songs":[
       {"title":"対戦","artist":"緑仙","start":5596},
@@ -3493,7 +3493,7 @@
     "channel": "にじさんじ",
     "date": "2023-04-04",
     "thumbnail": "https://i.ytimg.com/vi/IKigqYPc40o/mqdefault.jpg",
-    "category": "公式企画・番組",
+    "category": ["公式企画・番組"],
     "keywords": ["Petra Gurin", "たい変","西園チグサ","Luca Kaneshiro"]
   },
   {
@@ -3502,7 +3502,7 @@
     "channel": "弦月藤士郎",
     "date": "2023-04-04",
     "thumbnail": "https://i.ytimg.com/vi/Ee1oY5TSqp8/mqdefault.jpg",
-    "category": "3D",
+    "category": ["3D"],
     "keywords": ["弦月藤士郎","園児組"]
   },
   {
@@ -3511,7 +3511,7 @@
     "channel": "桜凛月",
     "date": "2023-04-01",
     "thumbnail": "https://i.ytimg.com/vi/EUIBpgViz7U/mqdefault.jpg",
-    "category": "3D",
+    "category": ["3D"],
     "keywords": ["桜凛月"],
     "songs":[
       {"title":"ゲスト","artist":"桜凛月","start":837}
@@ -3523,7 +3523,7 @@
     "channel": "深町寿成のVバラ！！！",
     "date": "2023-03-28",
     "thumbnail": "https://i.ytimg.com/vi/PdNKvHKs03c/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["深町寿成","小松昌平","柳原哲也"]
   },
   {
@@ -3532,7 +3532,7 @@
     "channel": "グウェル・オス・ガール",
     "date": "2023-03-21",
     "thumbnail": "https://i.ytimg.com/vi/zZfO1myf1kg/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["グウェル・オス・ガール","春崎エアル","소나기（ソ・ナギ）","Gang Beats","クソザコトレーナーズ"]
   },
   {
@@ -3541,7 +3541,7 @@
     "channel": "文野環",
     "date": "2023-03-15",
     "thumbnail": "https://i.ytimg.com/vi/hkzSZdJ4dGI/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["文野環"],
     "songs":[{
       "title":"凸待ち","artist":"文野環","start":15060
@@ -3553,7 +3553,7 @@
     "channel": "先斗寧",
     "date": "2023-03-04",
     "thumbnail": "https://i.ytimg.com/vi/rn435DshtOA/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["先斗寧","Splatoon3"]
   },
   {
@@ -3594,7 +3594,7 @@
     "channel": "オリバー・エバンス",
     "date": "2023-02-17",
     "thumbnail": "https://i.ytimg.com/vi/T8sJd21qjII/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["オリバー・エバンス","タメナンデス"]
   },
   {
@@ -3603,7 +3603,7 @@
     "channel": "雪城眞尋",
     "date": "2023-02-15",
     "thumbnail": "https://i.ytimg.com/vi/9SVsj50MDqc/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["雪城眞尋", "伏見ガク","文野環","ふつまひ"]
   },
   {
@@ -3612,7 +3612,7 @@
     "channel": "にじさんじ",
     "date": "2023-02-03",
     "thumbnail": "https://i.ytimg.com/vi/eXOFUhi32zI/mqdefault.jpg",
-    "category": "公式企画・番組",
+    "category": ["公式企画・番組"],
     "keywords": ["天ケ瀬むゆ", "石神のぞみ","イブラヒム","える","小清水透","椎名唯華","獅子堂あかり","周央サンゴ","花畑チャイカ","樋口楓","伏見ガク","フレン・E・ルスタリオ","Petra Gurin","魔使マオ","緑仙","レオス・ヴィンセント","渡会雲雀"]
   },
   {
@@ -3639,7 +3639,7 @@
     "channel": "星川サラ",
     "date": "2022-12-29",
     "thumbnail": "https://i.ytimg.com/vi/HCtBjFTvcBI/mqdefault.jpg",
-    "category": "記念配信",
+    "category": ["記念配信"],
     "keywords": ["星川サラ", "フミ","山神カルタ","甲斐田晴","弦月藤士郎","おりひめばるつ","VΔLZ","フ景罪","にじさんじユニット歌謡祭"]
   },
   {
@@ -3648,7 +3648,7 @@
     "channel": "星川サラ",
     "date": "2022-12-29",
     "thumbnail": "https://i.ytimg.com/vi/NhND1TZEPnY/mqdefault.jpg",
-    "category": "プロモーション",
+    "category": ["プロモーション"],
     "keywords": ["星川サラ", "イブラヒム","鈴木勝","アルス・アルマル"]
   },
   {
@@ -3732,7 +3732,7 @@
     "channel": "グウェル・オス・ガール",
     "date": "2022-12-12",
     "thumbnail": "https://i.ytimg.com/vi/Bjnx0OSKTpk/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["グウェル・オス・ガール","春崎エアル","소나기（ソ・ナギ）","アルティメットチキンホース","クソザコトレーナーズ"]
   },
   {
@@ -3765,7 +3765,7 @@
     "channel": "オリバー・エバンス",
     "date": "2022-12-05",
     "thumbnail": "https://i.ytimg.com/vi/UtkfcXMtq9c/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["オリバー・エバンス","タメナンデス","マリオカート8DX"]
   },
   {
@@ -3774,7 +3774,7 @@
     "channel": "舞元啓介",
     "date": "2022-12-05",
     "thumbnail": "https://i.ytimg.com/vi/KxNYSL20STU/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["舞元啓介","伏見ガク","成瀬鳴","ベルモンド・バンデラス"]
   },
   {
@@ -3783,7 +3783,7 @@
     "channel": "舞元啓介",
     "date": "2022-12-02",
     "thumbnail": "https://i.ytimg.com/vi/NvevP0qwPz4/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["舞元啓介","伏見ガク","緑仙"]
   },
   {
@@ -3792,7 +3792,7 @@
     "channel": "雪城眞尋",
     "date": "2022-11-28",
     "thumbnail": "https://i.ytimg.com/vi/E44wD2UzuYc/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["雪城眞尋","ふつまひ"]
   },
   {
@@ -3801,7 +3801,7 @@
     "channel": "Miyu Ottavia",
     "date": "2022-11-27",
     "thumbnail": "https://i.ytimg.com/vi/pJIwIwsUfBU/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["歌衣メイカ"],
     "songs":[{"title":"VTR","artist":"歌衣メイカ","start":16172}]
   },
@@ -3811,7 +3811,7 @@
     "channel": "Miyu Ottavia",
     "date": "2022-11-27",
     "thumbnail": "https://i.ytimg.com/vi/rg0yKFg6I4A/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["Miyu Ottavia"],
     "songs":[{"title":"凸待ち","artist":"Miyu Ottavia","start":10197}]
   },
@@ -3821,7 +3821,7 @@
     "channel": "舞元啓介",
     "date": "2022-11-27",
     "thumbnail": "https://i.ytimg.com/vi/7HhS5jUWGns/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["舞元啓介","伏見ガク","成瀬鳴"]
   },
   {
@@ -3830,7 +3830,7 @@
     "channel": "にじさんじ",
     "date": "2022-11-22",
     "thumbnail": "https://i.ytimg.com/vi/IiStxUUhsuc/mqdefault.jpg",
-    "category": "公式企画・番組",
+    "category": ["公式企画・番組"],
     "keywords": ["健屋花那","不破湊","弦月藤士郎","園児組","にじクイ"]
   },
   {
@@ -3839,7 +3839,7 @@
     "channel": "소나기（ソ・ナギ）",
     "date": "2022-11-21",
     "thumbnail": "https://i.ytimg.com/vi/5nPQrv-AQrk/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["소나기（ソ・ナギ）","春崎エアル","グウェル・オス・ガール","ポケットモンスター-スカーレットバイオレット"],
      "songs":[{"title":"通話","artist":["소나기（ソ・ナギ）","春崎エアル","グウェル・オス・ガール"],"start":14824}]
   },
@@ -3859,7 +3859,7 @@
     "channel": "ベルモンド・バンデラス",
     "date": "2022-11-03",
     "thumbnail": "https://i.ytimg.com/vi/eqPaPJhy-Js/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["ベルモンド・バンデラス"],
      "songs":[{"title":"凸待ち","artist":"ベルモンド・バンデラス","start":7200}]
   },
@@ -3878,7 +3878,7 @@
     "channel": "桜凛月",
     "date": "2022-10-17",
     "thumbnail": "https://i.ytimg.com/vi/QVwJc_tjQys/mqdefault.jpg",
-    "category": "記念配信",
+    "category": ["記念配信"],
     "keywords": ["桜凛月","Nara Haramaung","세피나（セフィナ）","めにまにかんぱにー","マインクラフト"]
   },
   {
@@ -3887,7 +3887,7 @@
     "channel": "花畑チャイカ",
     "date": "2022-10-16",
     "thumbnail": "https://i.ytimg.com/vi/s9UfUGUD_HY/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["花畑チャイカ","夕陽リリ","レヴィ・エリファ","하윤（ハ・ユン）","Splatoon3"],
     "songs":[
       {"title":"対戦","artist":["花畑チャイカ","夕陽リリ","レヴィ・エリファ","하윤（ハ・ユン）"],"start":11680},
@@ -3901,7 +3901,7 @@
     "channel": "竜胆尊",
     "date": "2022-10-15",
     "thumbnail": "https://i.ytimg.com/vi/s9UfUGUD_HY/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["竜胆尊","健屋花那","Splatoon3"]
   },
   {
@@ -3937,7 +3937,7 @@
     "channel": "舞元啓介",
     "date": "2022-10-07",
     "thumbnail": "https://i.ytimg.com/vi/xMXqFHXXdnE/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["舞元啓介","樋口楓","社築","レオス・ヴィンセント","える","にじさんじPK対決"]
   },
   {
@@ -3956,7 +3956,7 @@
     "channel": "雪城眞尋",
     "date": "2022-09-30",
     "thumbnail": "https://i.ytimg.com/vi/MMf6oI558Sk/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["雪城眞尋","ふつまひ"]
   },
    {
@@ -3975,7 +3975,7 @@
     "channel": "星川サラ",
     "date": "2022-09-25",
     "thumbnail": "https://i.ytimg.com/vi/AvLzYtLjQbY/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["星川サラ","Splatoon3"]
   },
   {
@@ -4002,7 +4002,7 @@
     "channel": "Shu Yamino",
     "date": "2022-09-07",
     "thumbnail": "https://i.ytimg.com/vi/k1E_y_cqc1k/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["渡会雲雀","Siska Leontyne","Mika Melatika","Yugo Asuma","VALORANT"],
      "songs":[{"title":"VALORANT","artist":["渡会雲雀","Siska Leontyne","Mika Melatika","Yugo Asuma"],"start":6738}]
   },
@@ -4012,7 +4012,7 @@
     "channel": "不破湊",
     "date": "2022-08-31",
     "thumbnail": "https://i.ytimg.com/vi/DMpjAwX2VHI/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["不破湊"]
   },
   {
@@ -4021,7 +4021,7 @@
     "channel": "フミ",
     "date": "2022-08-29",
     "thumbnail": "https://i.ytimg.com/vi/xt29dfRw1Ok/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["フミ","フ景罪"]
   },
   {
@@ -4030,7 +4030,7 @@
     "channel": "浅沼晋太郎・土田玲央 不思議堂【黒い猫】",
     "date": "2022-08-23",
     "thumbnail": "https://i.ytimg.com/vi/7YUrBLlgifE/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["浅沼晋太郎","土田玲央","藤川Q","デンジャーD","寺島惇太"]
   },
   {
@@ -4039,7 +4039,7 @@
     "channel": "にじさんじ",
     "date": "2022-08-12",
     "thumbnail": "https://i.ytimg.com/vi/rn5cqrZb9VA/mqdefault.jpg",
-    "category": "記念配信",
+    "category": ["記念配信"],
     "keywords": ["ベルモンド・バンデラス","오지유（オ・ジユ）","세피나（セフィナ）","나세라（ナ・セラ）","にじさんじ甲子園"],
     "songs":[{"title":"応援","artist":["ベルモンド・バンデラス","오지유（オ・ジユ）","세피나（セフィナ）","나세라（ナ・セラ）"],"start":2120}]
   },
@@ -4049,7 +4049,7 @@
     "channel": "にじさんじ",
     "date": "2022-08-10",
     "thumbnail": "https://i.ytimg.com/vi/68DrBpcq1pU/mqdefault.jpg",
-    "category": "公式企画・番組",
+    "category": ["公式企画・番組"],
     "keywords": ["イブラヒム","早瀬走","周央サンゴ","でびでび・でびる","フレン・E・ルスタリオ","にじさんじのB級バラエティ（仮）"]
   },
     {
@@ -4058,7 +4058,7 @@
     "channel": "不破湊",
     "date": "2022-08-10",
     "thumbnail": "https://i.ytimg.com/vi/NUx2A-zNd0Q/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["不破湊"]
   },
   {
@@ -4067,7 +4067,7 @@
     "channel": "Alban Knox",
     "date": "2022-08-03",
     "thumbnail": "https://i.ytimg.com/vi/UnmP8EgEwTs/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["Alban Knox","Fulgur Ovid"]
   },
   {
@@ -4076,7 +4076,7 @@
     "channel": "グウェル・オス・ガール",
     "date": "2022-07-22",
     "thumbnail": "https://i.ytimg.com/vi/xNOudkbNPRM/mqdefault.jpg",
-    "category": "記念配信",
+    "category": ["記念配信"],
     "keywords": ["グウェル・オス・ガール","安土桃","先斗寧","伏見ガク","黛灰","レヴィ・エリファ","ベルモンド・バンデラス","オリバー・エバンス","오지유（オ・ジユ）","세피나（セフィナ）","나세라（ナ・セラ）"]
   },
   {
@@ -4085,7 +4085,7 @@
     "channel": "グウェル・オス・ガール",
     "date": "2022-07-09",
     "thumbnail": "https://i.ytimg.com/vi/t63ROGw5YV8/mqdefault.jpg",
-    "category": "記念配信",
+    "category": ["記念配信"],
     "keywords": ["グウェル・オス・ガール","세피나（セフィナ）","나세라（ナ・セラ）","にじさんじ甲子園"]
   },
   {
@@ -4157,7 +4157,7 @@
     "channel": "ぽんぽこ",
     "date": "2022-05-08",
     "thumbnail": "https://i.ytimg.com/vi/0Y6YjpvZpU4/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["兎麹まり","ピーナッツくん","舞元啓介","ばあちゃる","橘ひなの","一ノ瀬うるは","英リサ","神威きゅぴ","八雲ぺに"],
      "songs":[
       {"title":"ぽこリーグ","artist":["兎麹まり","ピーナッツくん","舞元啓介","ばあちゃる","橘ひなの","一ノ瀬うるは","英リサ","神威きゅぴ","八雲ぺに"],"start":18850}
@@ -4181,7 +4181,7 @@
     "channel": "フミ",
     "date": "2022-05-06",
     "thumbnail": "https://i.ytimg.com/vi/LldOGHuMPDU/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["フミ","フ景罪"],
      "songs":[
       {"title":"長尾お披露目振り返り","artist":"フミ","start":300}
@@ -4193,7 +4193,7 @@
     "channel": "オリバー・エバンス",
     "date": "2022-05-03",
     "thumbnail": "https://i.ytimg.com/vi/4HyzppeJo-U/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords":["オリバー・エバンス"],
      "songs":[
       {"title":"画面共有","artist":"オリバー・エバンス","start":3369},
@@ -4206,7 +4206,7 @@
     "channel": "甲斐田晴",
     "date": "2022-05-01",
     "thumbnail": "https://i.ytimg.com/vi/RXOqKwAyHWM/mqdefault.jpg",
-    "category": "プロモーション",
+    "category": ["プロモーション"],
     "keywords": ["甲斐田晴","弦月藤士郎","VΔLZ"]
   },
   {
@@ -4215,7 +4215,7 @@
     "channel": "笹木咲",
     "date": "2022-02-23",
     "thumbnail": "https://i.ytimg.com/vi/qrcQBzFk0zI/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["笹木咲","하윤（ハ・ユン）","VALORANT"],
      "songs":[
       {"title":"対戦","artist":["笹木咲","하윤（ハ・ユン）"],"start":7520}
@@ -4227,7 +4227,7 @@
     "channel": "不破湊",
     "date": "2022-02-20",
     "thumbnail": "https://i.ytimg.com/vi/_WrWZ5f1t3U/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["不破湊"],
     "songs": [
       { "title": "雑談", "artist": "不破湊", "start": 7500 }
@@ -4239,7 +4239,7 @@
     "channel": "雪城眞尋",
     "date": "2022-01-19",
     "thumbnail": "https://i.ytimg.com/vi/2AbBtLl3JtA/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["雪城眞尋","ふつまひ","APEX"]
   },
   {
@@ -4248,7 +4248,7 @@
     "channel": "でびでび・でびる",
     "date": "2022-01-03",
     "thumbnail": "https://i.ytimg.com/vi/ZTs7tJITQxg/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["でびでび・でびる","アクシア・クローネ","安土桃","Elira Pendra","剣持刀也","モイラ"]
   },
   {
@@ -4257,7 +4257,7 @@
     "channel": "にじさんじ",
     "date": "2022-01-03",
     "thumbnail": "https://i.ytimg.com/vi/v6BLyPMfM3c/mqdefault.jpg",
-    "category": "公式企画・番組",
+    "category": ["公式企画・番組"],
     "keywords": ["シェリン・バーガンディ","星川サラ","西園チグサ","加賀美ハヤト","にじヌーン"]
   },
   {
@@ -4266,7 +4266,7 @@
     "channel": "雪城眞尋",
     "date": "2021-12-23",
     "thumbnail": "https://i.ytimg.com/vi/nAcs_ql67kY/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["雪城眞尋","ふつまひ","マリオカート8DX"]
   },
   {
@@ -4275,7 +4275,7 @@
     "channel": "フミ",
     "date": "2021-12-11",
     "thumbnail": "https://i.ytimg.com/vi/TN-NWhcYvyc/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["フミ","フ景罪","マリオカート8DX"]
   },
   {
@@ -4284,7 +4284,7 @@
     "channel": "フミ",
     "date": "2021-12-11",
     "thumbnail": "https://i.ytimg.com/vi/-atU2A9jitE/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["フミ","フ景罪","マリオカート8DX"]
   },
   {
@@ -4293,7 +4293,7 @@
     "channel": "春崎エアル",
     "date": "2021-12-05",
     "thumbnail": "https://i.ytimg.com/vi/CMtKMnacpVs/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["春崎エアル","成瀬鳴","弦月藤士郎","マリオパーティ"]
   },
   {
@@ -4314,7 +4314,7 @@
     "channel": "文野環",
     "date": "2021-11-23",
     "thumbnail": "https://i.ytimg.com/vi/_hbEG1QEyVs/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["文野環","フミ","にじさんじロケット団"]
   },
   {
@@ -4335,7 +4335,7 @@
     "channel": "小野町春香",
     "date": "2021-10-31",
     "thumbnail": "https://i.ytimg.com/vi/H2gI34GB16s/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["小野町春香","パワプロ野球"]
   },
   {
@@ -4344,7 +4344,7 @@
     "channel": "舞元啓介",
     "date": "2021-11-09",
     "thumbnail": "https://i.ytimg.com/vi/gmDvi6loFG0/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["舞元啓介"]
   },
   {
@@ -4353,7 +4353,7 @@
     "channel": "甲斐田晴",
     "date": "2021-11-09",
     "thumbnail": "https://i.ytimg.com/vi/4xr5sOZm7p4/mqdefault.jpg",
-    "category": "プロモーション",
+    "category": ["プロモーション"],
     "keywords": ["甲斐田晴","夢追翔","弦月藤士郎","VΔLZ"]
   },
   {
@@ -4362,7 +4362,7 @@
     "channel": "天宮こころ",
     "date": "2021-10-08",
     "thumbnail": "https://i.ytimg.com/vi/iAdmeWHQssI/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["天宮こころ","弦月藤士郎","Splatoon2"],
     "songs":[
       {"title":"応援","artist":"ベルモンド・バンデラス","start":13740}
@@ -4374,7 +4374,7 @@
     "channel": "ベルモンド・バンデラス",
     "date": "2021-10-05",
     "thumbnail": "https://i.ytimg.com/vi/GNrO6f-Leks/mqdefault.jpg",
-    "category": "記念配信",
+    "category": ["記念配信"],
     "keywords": ["ベルモンド・バンデラス","オリバー・エバンス","세피나（セフィナ）","하윤（ハ・ユン）","大乱闘スマッシュブラザーズSPECIAL"],
     "songs":[
       {"title":"長尾の予想","artist":"ベルモンド・バンデラス","start":2245}
@@ -4386,7 +4386,7 @@
     "channel": "雪城眞尋",
     "date": "2021-09-26",
     "thumbnail": "https://i.ytimg.com/vi/xPciGjjfzLo/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["雪城眞尋"],
     "songs":[
       {"title":"練習","artist":"雪城眞尋","start":1220}
@@ -4416,7 +4416,7 @@
     "channel": "フミ",
     "date": "2021-09-21",
     "thumbnail": "https://i.ytimg.com/vi/ylMn4UeAZVk/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["フミ","フ景罪","ポケットモンスター-ユナイト","大乱闘スマッシュブラザーズSPECIAL"]
   },
   {
@@ -4425,7 +4425,7 @@
     "channel": "葛葉",
     "date": "2021-09-11",
     "thumbnail": "https://i.ytimg.com/vi/kxMfIY3g-Xo/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["葛葉","アルス・アルマル","ポケットモンスター-ユナイト"],
     "songs":[
       {"title":"練習","artist":["葛葉","アルス・アルマル"],"start":13873}
@@ -4437,7 +4437,7 @@
     "channel": "本間ひまわり",
     "date": "2021-09-10",
     "thumbnail": "https://i.ytimg.com/vi/XxjEo76WdXY/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["本間ひまわり","ポケットモンスター-ユナイト"],
     "songs":[
       {"title":"練習","artist":"本間ひまわり","start":355}
@@ -4449,7 +4449,7 @@
     "channel": "えま★おうがすと",
     "date": "2021-09-09",
     "thumbnail": "https://i.ytimg.com/vi/TkwERQ9PT94/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["えま★おうがすと"],
     "songs":[
       {"title":"凸待ち","artist":"えま★おうがすと","start":8440}
@@ -4461,7 +4461,7 @@
     "channel": "ベルモンド・バンデラス",
     "date": "2021-08-13",
     "thumbnail": "https://i.ytimg.com/vi/FSbhokNhPE4/mqdefault.jpg",
-    "category": "記念配信",
+    "category": ["記念配信"],
     "keywords": ["ベルモンド・バンデラス","にじさんじ甲子園"],
     "songs":[
       {"title":"応援","artist":"ベルモンド・バンデラス","start":13740}
@@ -4473,7 +4473,7 @@
     "channel": "小野町春香",
     "date": "2021-08-12",
     "thumbnail": "https://i.ytimg.com/vi/O4NIvfEOxw0/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["小野町春香","パワフルプロ野球"]
   },
   {
@@ -4482,7 +4482,7 @@
     "channel": "犬山たまき",
     "date": "2021-08-10",
     "thumbnail": "https://i.ytimg.com/vi/2_YsW5GEIF0/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["犬山たまき"]
   },
   {
@@ -4491,7 +4491,7 @@
     "channel": "北小路ヒスイ",
     "date": "2021-08-08",
     "thumbnail": "https://i.ytimg.com/vi/t7r1VlP0fuI/mqdefault.jpg",
-    "category": "記念配信",
+    "category": ["記念配信"],
     "keywords": ["北小路ヒスイ","三枝明那","加賀美ハヤト","伏見ガク","舞元啓介","渋谷ハル","にじさんじ甲子園"]
   },
   {
@@ -4500,7 +4500,7 @@
     "channel": "加賀美ハヤト",
     "date": "2021-08-08",
     "thumbnail": "https://i.ytimg.com/vi/HX2SJdFiKsk/mqdefault.jpg",
-    "category": "記念配信",
+    "category": ["記念配信"],
     "keywords": ["加賀美ハヤト","不破湊","雪城眞尋","黛灰","神田笑一","フレン・E・ルスタリオ","弦月藤士郎","叶","花畑チャイカ","ルイス・キャミー"]
   },
   {
@@ -4530,7 +4530,7 @@
     "channel": "グウェル・オス・ガール",
     "date": "2021-07-22",
     "thumbnail": "https://i.ytimg.com/vi/XMRvrr1D_MQ/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["グウェル・オス・ガール","叶","神田笑一","鷹宮リオン","ポケットモンスター-ユナイト"],
     "songs":[
        {"title":"ゲーム実況","artist":["グウェル・オス・ガール","叶","神田笑一","鷹宮リオン"],"start":249}
@@ -4542,7 +4542,7 @@
     "channel": "天宮こころ",
     "date": "2021-07-22",
     "thumbnail": "https://i.ytimg.com/vi/ma5yXbDU3bo/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["天宮こころ","愛園愛美","森中花咲","葉山舞鈴","花畑チャイカ","ポケットモンスター-ユナイト"]
   },
   {
@@ -4563,7 +4563,7 @@
     "channel": "フミ",
     "date": "2021-05-23",
     "thumbnail": "https://i.ytimg.com/vi/6EmZDSJ0u9U/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["フミ","文野環","フ景罪","にじさんじロケット団"]
   },
   {
@@ -4584,7 +4584,7 @@
     "channel": "西園チグサ",
     "date": "2021-05-04",
     "thumbnail": "https://i.ytimg.com/vi/ld5tkN6eMiE/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["西園チグサ","ながおちぐ"]
   },
   {
@@ -4593,7 +4593,7 @@
     "channel": "フミ",
     "date": "2021-04-24",
     "thumbnail": "https://i.ytimg.com/vi/djF7TCPXsf4/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["フミ","フ景罪"]
   },
   {
@@ -4602,7 +4602,7 @@
     "channel": "西園チグサ",
     "date": "2021-04-15",
     "thumbnail": "https://i.ytimg.com/vi/Al8V7wdp4k8/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["西園チグサ","ながおちぐ","ウマ娘 プリティーダービー"]
   },
    {
@@ -4637,7 +4637,7 @@
     "channel": "鷹宮リオン",
     "date": "2021-04-01",
     "thumbnail": "https://i.ytimg.com/vi/K_v3_QO2HB0/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["鷹宮リオン","早瀬走","葉加瀬冬雪","ベルモンド・バンデラス","天宮こころ","アルス・アルマル","黛灰","マインクラフト"]
   },
   {
@@ -4694,7 +4694,7 @@
     "channel": "リゼ・ヘルエスタ",
     "date": "2020-12-31",
     "thumbnail": "https://i.ytimg.com/vi/tgPjz4yA4Bw/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["リゼ・ヘルエスタ","月ノ美兎"],
     "songs":[
       {"title":"煩悩","artist":["リゼ・ヘルエスタ","月ノ美兎"],"start":9107}
@@ -4706,7 +4706,7 @@
     "channel": "フミ",
     "date": "2020-12-12",
     "thumbnail": "https://i.ytimg.com/vi/Ui8nltznLts/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["フミ","フ景罪","マリオカート8DX"]
   },
   {
@@ -4715,7 +4715,7 @@
     "channel": "フミ",
     "date": "2020-12-12",
     "thumbnail": "https://i.ytimg.com/vi/wXKuM8yqExM/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["フミ","フ景罪","マリオカート8DX"]
   },
   {
@@ -4846,7 +4846,7 @@
     "channel": "フミ",
     "date": "2020-10-01",
     "thumbnail": "https://i.ytimg.com/vi/M-PZDbBKaNY/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["フミ"],
     "songs":[
       {"title":"凸待ち","artist":"フミ","start":448}
@@ -4858,7 +4858,7 @@
     "channel": "文野環",
     "date": "2020-09-26",
     "thumbnail": "https://i.ytimg.com/vi/eU6ifOgrGSk/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["文野環"]
   },
   {
@@ -4867,7 +4867,7 @@
     "channel": "月ノ美兎",
     "date": "2020-09-13",
     "thumbnail": "https://i.ytimg.com/vi/9CqaQMSNQng/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["月ノ美兎","樋口楓"]
   },
   {
@@ -4876,7 +4876,7 @@
     "channel": "渋谷ハジメ",
     "date": "2020-09-13",
     "thumbnail": "https://i.ytimg.com/vi/_S92SxULqJk/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["渋谷ハジメ"],
     "songs":[
       {"title":"凸待ち","artist":"渋谷ハジメ","start":3787}
@@ -4888,7 +4888,7 @@
     "channel": "える",
     "date": "2020-09-05",
     "thumbnail": "https://i.ytimg.com/vi/Q96dQNyCm4I/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["える","愛園愛美","雪城眞尋"]
   },
   {
@@ -4897,7 +4897,7 @@
     "channel": "ジョー・力一",
     "date": "2020-09-05",
     "thumbnail": "https://i.ytimg.com/vi/uYofA501R9Y/mqdefault.jpg",
-    "category": "企画",
+    "category": ["企画"],
     "keywords": ["ジョー・力一","でびでび・でびる","ギルザレンⅢ世","エリー・コニファー","アンジュ・カトリーナ","える"]
   },
   {
@@ -4906,7 +4906,7 @@
     "channel": "黛灰",
     "date": "2020-08-29",
     "thumbnail": "https://i.ytimg.com/vi/v6ih7AEr0Go/mqdefault.jpg",
-    "category": "雑談",
+    "category": ["雑談"],
     "keywords": ["黛灰"]
   },
   {
@@ -4993,7 +4993,7 @@
     "channel": "イブラヒム",
     "date": "2020-07-18",
     "thumbnail": "https://i.ytimg.com/vi/XIf1zaFbvE4/mqdefault.jpg",
-    "category": "ゲーム実況",
+    "category": ["ゲーム実況"],
     "keywords": ["イブラヒム","フレン・E・ルスタリオ","メリッサ・キンレンカ","不破湊","加賀美ハヤト","エクス・アルビオ","鷹宮リオン","グウェル・オス・ガール","人狼"]
   },
   {
@@ -5125,7 +5125,7 @@
     "channel": "長尾景",
     "date": "2025-02-15",
     "thumbnail": "https://i.ytimg.com/vi/45hDZYg2lqA/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [
       { "title": "ドライフラワー", "artist": "優里", "start":409 },
@@ -5145,7 +5145,7 @@
     "channel": "長尾景",
     "date": "2024-10-11",
     "thumbnail": "https://i.ytimg.com/vi/dipDd1JZrAA/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [
       { "title": "Rolling star", "artist": "YUI", "start":349  },
@@ -5164,7 +5164,7 @@
     "channel": "長尾景",
     "date": "2024-07-03",
     "thumbnail": "https://i.ytimg.com/vi/TBsNnpQKeYw/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [
 
@@ -5192,7 +5192,7 @@
     "channel": "長尾景",
     "date": "2024-05-30",
     "thumbnail": "https://i.ytimg.com/vi/hq2dr8cGFb0/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [
       { "title": "ドライフラワー", "artist": "優里", "start":186 },
@@ -5234,7 +5234,7 @@
     "channel": "長尾景",
     "date": "2024-02-23",
     "thumbnail": "https://i.ytimg.com/vi/sm7KVjHsmIA/mqdefault.jpg",
-    "category": "歌動画",
+    "category": ["歌動画"],
     "keywords": [],
     "songs": []
   },
@@ -5342,7 +5342,7 @@
     "channel": "長尾景",
     "date": "2024-01-08",
     "thumbnail": "https://i.ytimg.com/vi/atxSCnGHqug/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "ドライフラワー", "artist": "優里", "start":227 },
 
@@ -5380,7 +5380,7 @@
     "channel": "長尾景",
     "date": "2023-11-24",
     "thumbnail": "https://i.ytimg.com/vi/uE0tR7WaCcs/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "カタオモイ", "artist": "Aimer", "start":336  },
 
@@ -5403,7 +5403,7 @@
     "channel": "長尾景",
     "date": "2023-07-24",
     "thumbnail": "https://i.ytimg.com/vi/WuWZy_Pg__M/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "ドライフラワー", "artist": "優里", "start":140  },
 
@@ -5426,7 +5426,7 @@
     "channel": "長尾景",
     "date": "2023-04-29",
     "thumbnail": "https://i.ytimg.com/vi/kZhHqkemVHQ/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "ドライフラワー", "artist": "優里", "start":513  },
 
@@ -5450,7 +5450,7 @@
     "channel": "長尾景",
     "date": "2023-02-05",
     "thumbnail": "https://i.ytimg.com/vi/JqZyxHyqPAI/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "猫", "artist": "DISH//", "start":465  },
 
@@ -5475,7 +5475,7 @@
     "channel": "長尾景",
     "date": "2022-12-26",
     "thumbnail": "https://i.ytimg.com/vi/zxfurvTtZyk/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [ { "title": "魔法の絨毯", "artist": "川崎鷹也", "start":476     },
 
@@ -5499,7 +5499,7 @@
     "channel": "長尾景",
     "date": "2022-08-28",
     "thumbnail": "https://i.ytimg.com/vi/T-GuyFVlcYk/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": ["NIJIMelodyTime"],
     "songs": [{ "title": "猫", "artist": "DISH//", "start":122  },
 
@@ -5517,7 +5517,7 @@
     "channel": "長尾景",
     "date": "2022-07-23",
     "thumbnail": "https://i.ytimg.com/vi/haDhtRPMu9Y/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "Pretender", "artist": "Official髭男dism", "start":311  },
 
@@ -5536,7 +5536,7 @@
     "channel": "長尾景",
     "date": "2022-05-11",
     "thumbnail": "https://i.ytimg.com/vi/dYjNIKv-eK8/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "ロストマン", "artist": "BUMP OF CHICKEN", "start":170  },
 
@@ -5562,7 +5562,7 @@
     "channel": "長尾景",
     "date": "2022-04-24",
     "thumbnail": "https://i.ytimg.com/vi/ANCfaZrXU44/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "桜坂", "artist": "福山雅治", "start":365  },
 
@@ -5580,7 +5580,7 @@
     "channel": "長尾景",
     "date": "2022-04-07",
     "thumbnail": "https://i.ytimg.com/vi/dL9Kw4q1krk/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [ { "title": "GO!!!", "artist": "FLOW", "start":362  },
 
@@ -5607,7 +5607,7 @@
     "channel": "長尾景",
     "date": "2022-04-02",
     "thumbnail": "https://i.ytimg.com/vi/VeYz54TAkLU/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "サウダージ", "artist": "ポルノグラフィティ", "start":360  },
 
@@ -5628,7 +5628,7 @@
     "channel": "長尾景",
     "date": "2022-03-27",
     "thumbnail": "https://i.ytimg.com/vi/SmxEJbnlwXM/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "カルマ", "artist": "BUMP OF CHICKEN", "start":543  },
 
@@ -5662,7 +5662,7 @@
     "channel": "長尾景",
     "date": "2022-03-22",
     "thumbnail": "https://i.ytimg.com/vi/uFbjG2NYVgA/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "丸の内サディスティック", "artist": "椎名林檎", "start":365  },
 
@@ -5687,7 +5687,7 @@
     "channel": "長尾景",
     "date": "2022-03-12",
     "thumbnail": "https://i.ytimg.com/vi/gRRvY-RaVCU/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "カタオモイ", "artist": "Aimer", "start":1583  },
 
@@ -5727,7 +5727,7 @@
     "channel": "長尾景",
     "date": "2022-02-19",
     "thumbnail": "https://i.ytimg.com/vi/zsQHps_IGU8/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "歌うたいのバラッド", "artist": "斉藤和義", "start":184  },
 
@@ -5752,7 +5752,7 @@
     "channel": "長尾景",
     "date": "2022-02-11",
     "thumbnail": "https://i.ytimg.com/vi/BeG_139HogE/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "DADDY!DADDY!DO!", "artist": "鈴木雅之", "start":160  },
 
@@ -5799,7 +5799,7 @@
     "channel": "長尾景",
     "date": "2022-02-06",
     "thumbnail": "https://i.ytimg.com/vi/z84fi8rL1T8/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "メリッサ", "artist": "ポルノグラフィティ", "start":862  },
 
@@ -5824,7 +5824,7 @@
     "channel": "長尾景",
     "date": "2021-12-29",
     "thumbnail": "https://i.ytimg.com/vi/c7kqiIt0Ocw/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "花の名", "artist": " BUMP OF CHICKEN", "start":240  },
 
@@ -5857,7 +5857,7 @@
     "channel": "長尾景",
     "date": "2021-12-03",
     "thumbnail": "https://i.ytimg.com/vi/-ZEXqdlyk68/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "香水", "artist": "瑛人", "start":120  },
 
@@ -5882,7 +5882,7 @@
     "channel": "長尾景",
     "date": "2021-11-27",
     "thumbnail": "https://i.ytimg.com/vi/2qFA36tadE8/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "KING", "artist": "Kanaria", "start":314  },
 
@@ -5910,7 +5910,7 @@
     "channel": "長尾景",
     "date": "2021-10-22",
     "thumbnail": "https://i.ytimg.com/vi/aV3-dQ1pVIE/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "ひまわりの約束", "artist": "秦基博", "start":338  },
 
@@ -5933,7 +5933,7 @@
     "channel": "長尾景",
     "date": "2021-10-09",
     "thumbnail": "https://i.ytimg.com/vi/qdknpJ7cydY/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "フレンド・ライク・ミー", "artist": "アラジン", "start":132  },
 
@@ -5961,7 +5961,7 @@
     "channel": "長尾景",
     "date": "2021-09-23",
     "thumbnail": "https://i.ytimg.com/vi/RD1xVD_L71E/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": ["にじ歌DAY"],
     "songs": [{ "title": "怪物", "artist": "YOASOBI", "start":120  },
 
@@ -5979,7 +5979,7 @@
     "channel": "長尾景",
     "date": "2021-08-22",
     "thumbnail": "https://i.ytimg.com/vi/Icldua5Nyuc/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "丸の内サディスティック", "artist": "椎名林檎", "start":249  },
 
@@ -6002,7 +6002,7 @@
     "channel": "長尾景",
     "date": "2021-08-01",
     "thumbnail": "https://i.ytimg.com/vi/z82F2KZhZUw/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "GO!!!", "artist": "FLOW", "start":312  },
 
@@ -6052,7 +6052,7 @@
     "channel": "長尾景",
     "date": "2021-06-24",
     "thumbnail": "https://i.ytimg.com/vi/yKb9xfnBh2I/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "うっせえわ", "artist": "Ado", "start":160  },
 
@@ -6072,7 +6072,7 @@
     "channel": "長尾景",
     "date": "2021-05-19",
     "thumbnail": "https://i.ytimg.com/vi/puhsbGKtQkQ/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "ひこうき雲", "artist": "荒井由実・松任谷由美", "start":335  },
 
@@ -6098,7 +6098,7 @@
     "channel": "長尾景",
     "date": "2021-04-24",
     "thumbnail": "https://i.ytimg.com/vi/cDzG8ncA9tU/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "うっせえわ", "artist": "Ado", "start":326  },
 
@@ -6124,7 +6124,7 @@
     "channel": "長尾景",
     "date": "2021-04-18",
     "thumbnail": "https://i.ytimg.com/vi/G7lKf-uVFJE/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": ["長尾姉上"],
     "songs": [{ "title": "SHAMROCK", "artist": "UVERworld", "start":292  },
 
@@ -6173,7 +6173,7 @@
     "channel": "長尾景",
     "date": "2021-04-06",
     "thumbnail": "https://i.ytimg.com/vi/nMaahBlnSgc/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "Pretender ", "artist": "Official髭男dism", "start":503  },
 
@@ -6204,7 +6204,7 @@
     "channel": "長尾景",
     "date": "2021-03-27",
     "thumbnail": "https://i.ytimg.com/vi/fD-OKYlervQ/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [      { "title": "サムライハート", "artist": "SPYAIR", "start":888  },
 
@@ -6224,7 +6224,7 @@
     "channel": "長尾景",
     "date": "2021-03-17",
     "thumbnail": "https://i.ytimg.com/vi/84fyq6ZOB74/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "ひまわりの約束", "artist": "秦基博", "start":405  },
 
@@ -6247,7 +6247,7 @@
     "channel": "長尾景",
     "date": "2021-03-02",
     "thumbnail": "https://i.ytimg.com/vi/aJBOrXhVKaM/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "前前前世", "artist": "RADWIMPS", "start":208  },
 
@@ -6268,7 +6268,7 @@
     "channel": "長尾景",
     "date": "2021-02-16",
     "thumbnail": "https://i.ytimg.com/vi/rYczPZeTxXI/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "フライイングゲット", "artist": "AKB48", "start":104  },
 
@@ -6293,7 +6293,7 @@
     "channel": "長尾景",
     "date": "2021-02-06",
     "thumbnail": "https://i.ytimg.com/vi/vEWLEMwSLZ0/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "丸の内サディスティック", "artist": "椎名林檎", "start":325  },
 
@@ -6313,7 +6313,7 @@
     "channel": "長尾景",
     "date": "2021-01-19",
     "thumbnail": "https://i.ytimg.com/vi/Qfmee3rbGfg/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "小さな恋のうた", "artist": "MONGOL800", "start":114  },
 
@@ -6339,7 +6339,7 @@
     "channel": "長尾景",
     "date": "2020-12-25",
     "thumbnail": "https://i.ytimg.com/vi/5Tz9Umvsp2w/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "フライングゲット", "artist": "AKB48", "start":156  },
 
@@ -6382,7 +6382,7 @@
     "channel": "長尾景",
     "date": "2020-11-21",
     "thumbnail": "https://i.ytimg.com/vi/0_5KnRILhg0/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [
       "える",
       "弦月藤士郎"
@@ -6433,7 +6433,7 @@
     "channel": "長尾景",
     "date": "2020-08-10",
     "thumbnail": "https://i.ytimg.com/vi/mEu8UZK3teM/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "青いベンチ", "artist": "サスケ", "start":99   },
 
@@ -6483,7 +6483,7 @@
     "channel": "長尾景",
     "date": "2020-07-12",
     "thumbnail": "https://i.ytimg.com/vi/5UJcAmXxKG8/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [
       "甲斐田晴",
       "弦月藤士郎",
@@ -6528,7 +6528,7 @@
     "channel": "長尾景",
     "date": "2020-07-08",
     "thumbnail": "https://i.ytimg.com/vi/NF7Bg5sgY3Q/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "sailing day", "artist": "BUMP OF CHICKEN", "start":92  },
 
@@ -6556,7 +6556,7 @@
     "channel": "長尾景",
     "date": "2020-06-24",
     "thumbnail": "https://i.ytimg.com/vi/6-1Humhrlx4/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "3月9日", "artist": "レミオロメン", "start":382  },
 
@@ -6583,7 +6583,7 @@
     "channel": "長尾景",
     "date": "2020-06-14",
     "thumbnail": "https://i.ytimg.com/vi/JlN2ycCVrnM/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "青いベンチ", "artist": "サスケ", "start":107  },
 
@@ -6603,7 +6603,7 @@
     "channel": "長尾景",
     "date": "2020-06-06",
     "thumbnail": "https://i.ytimg.com/vi/MLPDffuJEMg/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "Butter-Fly", "artist": "和田光司", "start":109  },
 
@@ -6625,7 +6625,7 @@
     "channel": "長尾景",
     "date": "2020-06-05",
     "thumbnail": "https://i.ytimg.com/vi/GoYBLHRaqLY/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": []
   },
@@ -6635,7 +6635,7 @@
     "channel": "長尾景",
     "date": "2020-06-02",
     "thumbnail": "https://i.ytimg.com/vi/jYtpvqeczHM/mqdefault.jpg",
-    "category": "歌動画",
+    "category": ["歌動画"],
     "keywords": [],
     "songs": []
   },
@@ -6645,7 +6645,7 @@
     "channel": "長尾景",
     "date": "2020-06-02",
     "thumbnail": "https://i.ytimg.com/vi/WohbwlAbmfE/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "白日", "artist": "King Gnu", "start":2655  },
 
@@ -6658,7 +6658,7 @@
     "channel": "長尾景",
     "date": "2020-05-27",
     "thumbnail": "https://i.ytimg.com/vi/OMYjV78O8vo/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "リライト", "artist": "ASIAN KUNG-FU GENERATION", "start":55  },
 
@@ -6682,7 +6682,7 @@
     "channel": "長尾景",
     "date": "2020-05-27",
     "thumbnail": "https://i.ytimg.com/vi/vzUFgOWaESk/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "ウィーアー!", "artist": "きただにひろし", "start":977  },
 
@@ -6699,7 +6699,7 @@
     "channel": "長尾景",
     "date": "2020-05-17",
     "thumbnail": "https://i.ytimg.com/vi/gMkVRZwbld0/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [
       "弦月藤士郎"
     ],
@@ -6724,7 +6724,7 @@
     "channel": "長尾景",
     "date": "2020-04-29",
     "thumbnail": "https://i.ytimg.com/vi/tySmlS6pD50/mqdefault.jpg",
-    "category": "歌配信",
+    "category": ["歌配信"],
     "keywords": [],
     "songs": [{ "title": "ドラえもんのうた", "artist": "山野さと子", "start":273  },
 
