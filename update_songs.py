@@ -52,7 +52,15 @@ def main():
             continue
         
         # 歌・踊りに関連する動画かチェック
-        v_tags = v.get('tags', []) + v.get('category', [])
+        def ensure_list(data):
+            if isinstance(data, list):
+                return data
+            if data is None:
+                return []
+            return [data] # 文字列などが来たら [ ] で包む
+
+        v_tags = ensure_list(v.get('tags', [])) + ensure_list(v.get('category', []))
+        
         if any(t in TARGET_TAGS for t in v_tags):
             draft_item = v.copy()
             
