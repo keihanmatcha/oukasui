@@ -22,8 +22,8 @@
     ],
     "songs": [
       {
-        "title": "サカナクション",
-        "artist": "Unknown Artist",
+        "title": "新宝島",
+        "artist": "サカナクション",
         "start": 0
       }
     ]
@@ -50,8 +50,8 @@
     "tags": [],
     "songs": [
       {
-        "title": "サカナクション",
-        "artist": "Unknown Artist",
+        "title": "新宝島",
+        "artist": "サカナクション",
         "start": 0
       }
     ]
@@ -81,8 +81,8 @@
     ],
     "songs": [
       {
-        "title": "サカナクション",
-        "artist": "Unknown Artist",
+        "title": "新宝島",
+        "artist": "サカナクション",
         "start": 0
       }
     ]
@@ -110,8 +110,8 @@
     ],
     "songs": [
       {
-        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
-        "artist": "Unknown Artist",
+        "title": "むてきのおうさま",
+        "artist": "VΔLZ",
         "start": 0
       }
     ]
@@ -170,8 +170,8 @@
     ],
     "songs": [
       {
-        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
-        "artist": "Unknown Artist",
+        "title": "むてきのおうさま",
+        "artist": "VΔLZ",
         "start": 0
       }
     ]
@@ -194,8 +194,8 @@
     ],
     "songs": [
       {
-        "title": "様",
-        "artist": "Unknown Artist",
+        "title": "Lemon",
+        "artist": "米津玄師",
         "start": 0
       }
     ]
@@ -223,8 +223,8 @@
     ],
     "songs": [
       {
-        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
-        "artist": "Unknown Artist",
+        "title": "ライラック",
+        "artist": "Mrs. GREEN APPLE",
         "start": 0
       }
     ]
@@ -258,15 +258,15 @@
       "綺沙良",
       "西園チグサ"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ユニット)",
+      "歌"
+    ],
     "songs": [
       {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
+        "title": "アイデンティティwith猫屋敷",
+        "artist": "Kanaria",
+        "start": 8465
       }
     ]
   },
@@ -287,12 +287,45 @@
       "甲斐田晴",
       "踊り動画"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ユニット)",
+      "踊"
+    ],
     "songs": [
       {
-        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
-        "artist": "Unknown Artist",
+        "title": "I'm fine (KHÔNG SAO CẢ)",
+        "artist": "7dnight",
         "start": 0
+      }
+    ]
+  },
+  {
+    "youtubeId": "kG1xgX_22bQ",
+    "title": "【DanceDanceRevolution】 #にじさんじダンス部 コラボ 3Dで遊びまくってみた！",
+    "channel": "山神カルタ",
+    "date": "2025-11-14",
+    "thumbnail": "https://i.ytimg.com/vi/kG1xgX_22bQ/mqdefault.jpg",
+    "category": [
+      "踊り配信",
+      "3D",
+      "プロモーション"
+    ],
+    "keywords": [
+      "にじさんじダンス部",
+      "東堂コハク",
+      "山神カルタ",
+      "レイン・パターソン",
+      "セラフ・ダズルガーデン",
+      "倉持めると"
+    ],
+    "songs": [
+      {
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
       }
     ]
   },
@@ -316,6 +349,34 @@
         "tags": [
           "要確認(手動修正してください)"
         ]
+      }
+    ]
+  },
+  {
+    "youtubeId": "_Eu4r1RIXnc",
+    "title": "【#オカ研ハロウィンスペシャル】3Dでオカ研集合！ハロウィンの夜に廃校で生放送スペシャル📺【にじさんじオカルト研究部】",
+    "channel": "森中花咲",
+    "date": "2025-10-31",
+    "thumbnail": "https://i.ytimg.com/vi/_Eu4r1RIXnc/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "森中花咲",
+      "伏見ガク",
+      "でびでび・でびる",
+      "ギルザレンⅢ世"
+    ],
+    "songs": [
+      {
+        "title": "ゲスト",
+        "artist": [
+          "森中花咲",
+          "伏見ガク",
+          "でびでび・でびる",
+          "ギルザレンⅢ世"
+        ],
+        "start": 4714
       }
     ]
   },
@@ -512,6 +573,33 @@
     ]
   },
   {
+    "youtubeId": "oLlfeB778eI",
+    "title": "【#Klime3D】ボスを倒せたら告知あり！？3Dで殺陣やってみた【にじさんじ/長尾景/東堂コハク/山神カルタ】",
+    "channel": "山神カルタ",
+    "date": "2025-07-17",
+    "thumbnail": "https://i.ytimg.com/vi/oLlfeB778eI/mqdefault.jpg",
+    "category": [
+      "3D",
+      "踊り配信",
+      "殺陣"
+    ],
+    "keywords": [
+      "山神カルタ",
+      "東堂コハク",
+      "Klime"
+    ],
+    "songs": [
+      {
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
+      }
+    ]
+  },
+  {
     "youtubeId": "YjeE-0BLRKQ",
     "title": "【NG】テレパシ【長尾景/にじさんじ】【踊ってみた】#にじさんじ #vtuber #テレパシ",
     "channel": "長尾景",
@@ -580,6 +668,34 @@
         "tags": [
           "要確認(手動修正してください)"
         ]
+      }
+    ]
+  },
+  {
+    "youtubeId": "8XEzSnSCqHE",
+    "title": "【 #立伝都々3D】やっほ～！た行担当！立伝都々だよ～！【立伝都々/にじさんじ】",
+    "channel": "立伝都々",
+    "date": "2025-05-29",
+    "thumbnail": "https://i.ytimg.com/vi/8XEzSnSCqHE/mqdefault.jpg",
+    "category": [
+      "お披露目配信",
+      "3D",
+      "殺陣"
+    ],
+    "keywords": [
+      "立伝都々",
+      "ソフィア・ヴァレンタイン",
+      "伊波ライ"
+    ],
+    "songs": [
+      {
+        "title": "犬を探せ",
+        "artist": [
+          "立伝都々",
+          "ソフィア・ヴァレンタイン",
+          "伊波ライ"
+        ],
+        "start": 1311
       }
     ]
   },
@@ -698,8 +814,8 @@
     "tags": [],
     "songs": [
       {
-        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
-        "artist": "Unknown Artist",
+        "title": "1％の恋人",
+        "artist": "甲斐田晴",
         "start": 0
       }
     ]
@@ -825,11 +941,14 @@
       "歌動画",
       "甲斐田晴"
     ],
-    "tags": [],
+    "tags": [
+      "オリジナル(ユニット)",
+      "歌"
+    ],
     "songs": [
       {
-        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
-        "artist": "Unknown Artist",
+        "title": "SOUP",
+        "artist": "VΔLZ",
         "start": 0
       }
     ]
@@ -907,11 +1026,14 @@
       "歌動画",
       "甲斐田晴"
     ],
-    "tags": [],
+    "tags": [
+      "オリジナル(ユニット)",
+      "歌"
+    ],
     "songs": [
       {
-        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
-        "artist": "Unknown Artist",
+        "title": "ブリキの魂",
+        "artist": "VΔLZ",
         "start": 0
       }
     ]
@@ -959,11 +1081,14 @@
       "歌動画",
       "甲斐田晴"
     ],
-    "tags": [],
+    "tags": [
+      "オリジナル(ユニット)",
+      "歌"
+    ],
     "songs": [
       {
-        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
-        "artist": "Unknown Artist",
+        "title": "青春応歌",
+        "artist": "VΔLZ",
         "start": 0
       }
     ]
@@ -1032,11 +1157,14 @@
       "歌動画",
       "甲斐田晴"
     ],
-    "tags": [],
+    "tags": [
+      "オリジナル(ユニット)",
+      "歌"
+    ],
     "songs": [
       {
-        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
-        "artist": "Unknown Artist",
+        "title": "黎明の轍",
+        "artist": "VΔLZ",
         "start": 0
       }
     ]
@@ -1591,6 +1719,33 @@
     ]
   },
   {
+    "youtubeId": "xs_Y_fkEBqA",
+    "title": "【クソマロ作曲配信】技術をふんだんに使ってクソマロの歌ってみたを作ってみた。【弦月藤士郎/長尾景/にじさんじ】",
+    "channel": "弦月藤士郎",
+    "date": "2020-11-14",
+    "thumbnail": "https://i.ytimg.com/vi/xs_Y_fkEBqA/mqdefault.jpg",
+    "category": [
+      "企画",
+      "歌配信"
+    ],
+    "keywords": [
+      "弦月藤士郎",
+      "園児組",
+      "フミ",
+      "フ景罪"
+    ],
+    "songs": [
+      {
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
+      }
+    ]
+  },
+  {
     "youtubeId": "5UJcAmXxKG8",
     "title": "【歌枠】VΔLZオフコラボ歌枠！！！【にじさんじ/長尾景/甲斐田晴/弦月藤士郎】【VΔLZ】",
     "channel": "長尾景",
@@ -1600,14 +1755,127 @@
       "歌配信"
     ],
     "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
+      "甲斐田晴",
       "弦月藤士郎",
-      "歌配信",
-      "甲斐田晴"
+      "VΔLZ"
     ],
-    "tags": [],
+    "songs": [
+      {
+        "title": "勇気100%",
+        "artist": "光源氏【忍たま乱太郎】",
+        "start": 41
+      },
+      {
+        "title": "群青日和",
+        "artist": "東京事変",
+        "start": 659
+      },
+      {
+        "title": "プライド革命",
+        "artist": "CHiCO with HoneyWorks",
+        "start": 1110
+      },
+      {
+        "title": "secret base~君がくれたもの~",
+        "artist": "ZONE",
+        "start": 1525
+      },
+      {
+        "title": "地球最後の告白を",
+        "artist": "kemu",
+        "start": 1946
+      },
+      {
+        "title": "カサブタ",
+        "artist": "千綿ヒデノリ",
+        "start": 2419
+      },
+      {
+        "title": "歌うたいのバラッド",
+        "artist": "斉藤和義",
+        "start": 3221
+      },
+      {
+        "title": "いいんですか？",
+        "artist": "RADWIMPS",
+        "start": 3885
+      },
+      {
+        "title": "スパークル",
+        "artist": "RADWIMPS",
+        "start": 4218
+      },
+      {
+        "title": "ハレ晴レユカイ",
+        "artist": "涼宮ハルヒ（CV平野綾),長門有希（CV茅原実里),朝比奈みくる（CV後藤邑子)【涼宮ハルヒの憂鬱】",
+        "start": 5105
+      },
+      {
+        "title": "WINDING ROAD",
+        "artist": " 絢香×コブクロ",
+        "start": 5672
+      },
+      {
+        "title": "硝子の少年",
+        "artist": "Kinki Kids",
+        "start": 6078
+      },
+      {
+        "title": "世界に一つだけの花",
+        "artist": "SMAP",
+        "start": 6441
+      },
+      {
+        "title": "花の名",
+        "artist": "BUMP OF CHICKEN",
+        "start": 7023
+      },
+      {
+        "title": "君の知らない物語",
+        "artist": "supercell",
+        "start": 7420
+      },
+      {
+        "title": "天使にふれたよ!",
+        "artist": "放課後ティータイム/桜高軽音部【けいおん!】",
+        "start": 7960
+      }
+    ]
+  },
+  {
+    "youtubeId": "WUwLEgOyiak",
+    "title": "【歌枠】オフコラボでいくぞ！オフライン歌枠！【弦月藤士郎/長尾景/にじさんじ】",
+    "channel": "弦月藤士郎",
+    "date": "2020-06-27",
+    "thumbnail": "https://i.ytimg.com/vi/WUwLEgOyiak/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "弦月藤士郎",
+      "園児組"
+    ],
+    "songs": [
+      {
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
+      }
+    ]
+  },
+  {
+    "youtubeId": "GoYBLHRaqLY",
+    "title": "【八分音符ちゃん】【ながおぺら】オペラ風歌唱で制す8分音符ちゃん！！【長尾景/にじさんじ】",
+    "channel": "長尾景",
+    "date": "2020-06-05",
+    "thumbnail": "https://i.ytimg.com/vi/GoYBLHRaqLY/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [],
     "songs": [
       {
         "title": "要確認",
