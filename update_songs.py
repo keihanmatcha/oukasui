@@ -56,19 +56,19 @@ def main():
         if any(t in TARGET_TAGS for t in v_tags):
             draft_item = v.copy()
             
-            # 楽曲情報(songs)が未設定の場合、編集しやすいように雛形を入れる
-            if not draft_item.get('songs'):
+            # 1. songsキー自体がない、または None の場合のみ初期化
+            if 'songs' not in draft_item or draft_item['songs'] is None:
+                draft_item['songs'] = []
+
+            # 2. songsが「完全に空のリスト」である場合のみ、雛形を入れる
+            # すでに一つでも曲（修正後のデータ）が入っていれば、ここはスキップされます
+            if len(draft_item['songs']) == 0:
                 draft_item['songs'] = [{
                     "title": "要確認",
                     "artist": "",
                     "start": 0,
                     "tags": ["要確認(手動修正してください)"]
                 }]
-            else:
-                # 既存のsongsがある場合も、念のためタグにメモを残す（任意）
-                for s in draft_item['songs']:
-                    if 'tags' not in s:
-                        s['tags'] = ["要確認"]
             
             new_drafts.append(draft_item)
 
