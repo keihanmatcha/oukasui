@@ -2,49 +2,91 @@ import json
 import os
 
 # --- 設定 ---
-ARCHIVE_FILE = 'archives/archive_videos.json'
-MASTER_SONGS_FILE = 'songs/videos.json'  # 読み込み専用
-DRAFT_SONGS_FILE = 'songs/draft_songs.json' # 書き出し専用（下書き）
+# 1. YouTube API等から自動更新されるファイル
+ARCHIVE_AUTO = 'archives/archive_videos.json'
+# 2. 手動で情報の修正・追加を行うファイル（最優先）
+ARCHIVE_EXT = 'archives/external_videos.json'
+# 3. すでに完成し、サイトに掲載済みのデータ（読み込み専用・保護対象）
+MASTER_SONGS = 'songs/videos.json'
+# 4. これから作業が必要な新着・修正分の出力先
+DRAFT_OUTPUT = 'songs/draft_songs.json'
 
+# 下書きに抽出する対象のカテゴリ・タグ
 TARGET_TAGS = ["歌動画", "歌配信", "楽器配信・動画", "踊り動画", "踊り配信", "殺陣"]
 
-def main():
-    # 1. データの読み込み
-    if not os.path.exists(ARCHIVE_FILE): return
-    with open(ARCHIVE_FILE, 'r', encoding='utf-8') as f:
-        archive_data = json.load(f)
-    
-    # 既存のマスターデータをIDで把握（既にあるものは下書きに入れないため）
-    master_songs = []
-    if os.path.exists(MASTER_SONGS_FILE):
-        with open(MASTER_SONGS_FILE, 'r', encoding='utf-8') as f:
-            master_songs = json.load(f)
-    master_ids = {v['youtubeId'] for v in master_songs}
+def load_json(path):
+    """JSONファイルを安全に読み込む"""
+    if os.path.exists(path):
+        with open(path, 'r', encoding='utf-8') as f:
+            try:
+                data = json.load(f)
+                return data if isinstance(data, list) else []
+            except json.JSONDecodeError:
+                print(f"⚠️ {path} の解析に失敗しました。空リストとして扱います。")
+                return []
+    return []
 
-    # 2. アーカイブから「未登録」かつ「歌系」の動画を抽出
+def main():
+    # 各データの読み込み
+    auto_data = load_json(ARCHIVE_AUTO)
+    ext_data = load_json(ARCHIVE_EXT)
+    master_data = load_json(MASTER_SONGS)
+
+    # すでに本番(videos.json)に存在する動画IDをセットに記録（重複排除用）
+    master_ids = {v['youtubeId'] for v in master_data if 'youtubeId' in v}
+
+    # --- 統合処理 (Externalを優先) ---
+    # まず自動取得分をベースに辞書を作成
+    combined_archives = {v['youtubeId']: v for v in auto_data if 'youtubeId' in v}
+    # External(手動修正分)で上書き、または新規追加
+    for v in ext_data:
+        yid = v.get('youtubeId')
+        if yid:
+            combined_archives[yid] = v
+
+    # --- 抽出処理 ---
     new_drafts = []
-    for v in archive_data:
-        if v['youtubeId'] in master_ids:
-            continue # すでに videos.json にあるものは無視
+    for yid, v in combined_archives.items():
+        # 重要：すでに本番(videos.json)にある動画は、下書きには入れない
+        if yid in master_ids:
+            continue
         
+        # 歌・踊りに関連する動画かチェック
         v_tags = v.get('tags', []) + v.get('category', [])
         if any(t in TARGET_TAGS for t in v_tags):
-            # アーティスト名から「仮」のタグを振る（あとで人間が直す前提）
-            # ここではあえて「要確認」などのタグを付けても良いかもしれません
-            draft_v = v.copy()
-            for song in draft_v.get('songs', []):
-                song['tags'] = ["要確認(手動で修正してください)"]
+            draft_item = v.copy()
             
-            new_drafts.append(draft_v)
+            # 楽曲情報(songs)が未設定の場合、編集しやすいように雛形を入れる
+            if not draft_item.get('songs'):
+                draft_item['songs'] = [{
+                    "title": "要確認",
+                    "artist": "",
+                    "start": 0,
+                    "tags": ["要確認(手動修正してください)"]
+                }]
+            else:
+                # 既存のsongsがある場合も、念のためタグにメモを残す（任意）
+                for s in draft_item['songs']:
+                    if 'tags' not in s:
+                        s['tags'] = ["要確認"]
+            
+            new_drafts.append(draft_item)
 
-    # 3. 下書きファイルとして保存
-    # videos.json には一切影響を与えません
+    # 日付の降順（新しい順）で並び替え
+    new_drafts.sort(key=lambda x: x.get('date', ''), reverse=True)
+
+    # --- 保存処理 ---
+    # videos.json は一切書き換えません（'w'モードで開かない）
     if new_drafts:
-        with open(DRAFT_SONGS_FILE, 'w', encoding='utf-8') as f:
+        with open(DRAFT_OUTPUT, 'w', encoding='utf-8') as f:
             json.dump(new_drafts, f, indent=2, ensure_ascii=False)
-        print(f"📝 新着 {len(new_drafts)} 件の下書きを {DRAFT_SONGS_FILE} に作成しました。")
+        print(f"✨ 処理完了: {len(new_drafts)} 件の未登録動画を {DRAFT_OUTPUT} に書き出しました。")
+        print(f"ℹ️ {MASTER_SONGS} に登録済みの動画はスキップされました。")
     else:
-        print("☕ 新着の歌・踊り動画はありませんでした。")
+        # 新着がない場合は、混乱を避けるため空のリストで上書きするか、メッセージを出す
+        with open(DRAFT_OUTPUT, 'w', encoding='utf-8') as f:
+            json.dump([], f, indent=2, ensure_ascii=False)
+        print("☕ 新しく追加すべき動画（未登録の歌・踊り動画）はありませんでした。")
 
 if __name__ == "__main__":
     main()
