@@ -550,16 +550,26 @@
           const selected = [...SELECTED_TAGS];
           
           filteredRows = filteredRows.filter(r => {
-              const artistHit = r.artist.toLowerCase().includes(q);
-              
-              const textOk = !q || 
-                  r.song.toLowerCase().includes(q) || 
-                  artistHit || 
-                  r.videoTitle.toLowerCase().includes(q) || 
-                  (r.tagsText || '').toLowerCase().includes(q);
-                  
-              const tagOk = !selected.length || selected.every(t => (r.tags || []).includes(t));
-              return textOk && tagOk;
+          // artistが配列の場合はカンマ区切りの文字列に変換、それ以外は文字列化。
+          // その後でtoLowerCaseを実行する。
+            const safeArtist = Array.isArray(r.artist) 
+              ? r.artist.join(', ') 
+              : String(r.artist || '');
+            
+            const artistHit = safeArtist.toLowerCase().includes(q);
+    
+            // 他の項目も同様に安全に処理
+            const safeSong = String(r.song || '').toLowerCase();
+            const safeVideoTitle = String(r.videoTitle || '').toLowerCase();
+            const safeTagsText = String(r.tagsText || '').toLowerCase();
+
+            const textOk = !q || 
+              safeSong.includes(q) || 
+              artistHit || 
+              safeVideoTitle.includes(q) || 
+              safeTagsText.includes(q);
+            const tagOk = !selected.length || selected.every(t => (r.tags || []).includes(t));
+            return textOk && tagOk;
           });
       }
       renderRows(filteredRows);
