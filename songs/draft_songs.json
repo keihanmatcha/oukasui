@@ -18,11 +18,15 @@
       "歌動画",
       "甲斐田晴"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ユニット)",
+      "歌",
+      "弾"
+    ],
     "songs": [
       {
-        "title": "サカナクション",
-        "artist": "Unknown Artist",
+        "title": "新宝島",
+        "artist": "サカナクション",
         "start": 0
       }
     ]
@@ -46,11 +50,15 @@
       "歌動画",
       "甲斐田晴"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ユニット)",
+      "歌",
+      "弾"
+    ],
     "songs": [
       {
-        "title": "サカナクション",
-        "artist": "Unknown Artist",
+        "title": "新宝島",
+        "artist": "サカナクション",
         "start": 0
       }
     ]
@@ -71,15 +79,40 @@
       "渚トラウト",
       "綺沙良"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ユニット)",
+      "歌"
+    ],
     "songs": [
       {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
+        "title": "GO!!!with渚",
+        "artist": "FLOW",
+        "start": 399
+      },
+      {
+        "title": "君の神様になりたい。",
+        "artist": "カンザキイオリ",
+        "start": 2078
+      },
+      {
+        "title": "ロンリー・チャップリンwith綺沙良",
+        "artist": "鈴木聖美 with Rats&Star",
+        "start": 3018
+      },
+      {
+        "title": "シンデレラボーイ",
+        "artist": "Saucy Dog",
+        "start": 3901
+      },
+      {
+        "title": "水流のロックwith戌亥",
+        "artist": "日食なつこ",
+        "start": 5503
+      },
+      {
+        "title": "サマータイムレコードwith all",
+        "artist": "じん",
+        "start": 6544
       }
     ]
   },
@@ -153,8 +186,8 @@
     ],
     "songs": [
       {
-        "title": "様",
-        "artist": "Unknown Artist",
+        "title": "KICKBACK",
+        "artist": "米津玄師",
         "start": 0
       }
     ]
