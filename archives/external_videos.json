@@ -1,4 +1,28 @@
 [{
+    "youtubeId": "vgjveurEYvQ",
+    "title": "KICKBACK/米津玄師【長尾景/にじさんじ】【歌ってみた】",
+    "channel": "長尾景",
+    "date": "2026-04-09",
+    "thumbnail": "https://i.ytimg.com/vi/vgjveurEYvQ/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "歌動画"
+    ],
+    "tags": [
+      "カバー(ソロ)",
+      "歌"
+    ],
+    "songs": [
+      {
+        "title": "KICKBACK",
+        "artist": "米津玄師",
+        "start": 0
+      }
+    ]
+  },
+    {
     "youtubeId": "WZqVpg6p4NY",
     "title": "【歌って弾いてみた】新宝島 covered by #VΔLZ",
     "channel": "VΔLZ",
@@ -17,7 +41,10 @@
       "歌動画",
       "甲斐田晴"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ユニット)",
+      "歌","弾"
+    ],
     "songs": [
       {
         "title": "新宝島",
@@ -45,7 +72,10 @@
       "歌動画",
       "甲斐田晴"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ユニット)",
+      "歌","弾"
+    ],
     "songs": [
       {
         "title": "新宝島",
@@ -70,7 +100,10 @@
       "渚トラウト",
       "綺沙良"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ユニット)",
+      "歌"
+    ],
     "songs": [
     {
       "title": "GO!!!with渚",
