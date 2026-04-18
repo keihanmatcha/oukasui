@@ -1,8 +1,45 @@
 [
   {
+    "youtubeId": "xwAY9AEZUkc",
+    "title": "【大乱闘スマッシュブラザーズSP】なぜか突然やりたくなった【長尾景/にじさんじ】",
+    "channel": "長尾景",
+    "date": "2026-04-17",
+    "thumbnail": "https://i.ytimg.com/vi/xwAY9AEZUkc/mqdefault.jpg",
+    "category": [
+      "ゲーム実況"
+    ],
+    "keywords": [
+      "大乱闘スマッシュブラザーズ",
+      "大乱闘スマッシュブラザーズSPECIAL"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "IWs5oAC_1EI",
+    "title": "爆裂愛してる/M!LK【長尾景/にじさんじ】【踊ってみた】#爆裂愛してる",
+    "channel": "長尾景",
+    "date": "2026-04-17",
+    "thumbnail": "https://i.ytimg.com/vi/IWs5oAC_1EI/mqdefault.jpg",
+    "category": [
+      "踊り動画"
+    ],
+    "keywords": [
+      "踊り動画"
+    ],
+    "tags": [],
+    "songs": [
+      {
+        "title": "様",
+        "artist": "Unknown Artist",
+        "start": 0
+      }
+    ]
+  },
+  {
     "youtubeId": "6PlDzclBnYI",
     "title": "【#にぎにぎにじたうん】#VΔLZ 踊ってみた【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】",
-    "channel": "VΔLZ",
+    "channel": "長尾景",
     "date": "2026-04-17",
     "thumbnail": "https://i.ytimg.com/vi/6PlDzclBnYI/mqdefault.jpg",
     "category": [
@@ -16,7 +53,10 @@
       "甲斐田晴",
       "踊り動画"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ユニット)",
+      "踊"
+    ],
     "songs": [
       {
         "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
