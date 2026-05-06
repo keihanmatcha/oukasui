@@ -21,12 +21,9 @@
     ],
     "songs": [
       {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
+        "title": "インザバックルーム",
+        "artist": "Syudou",
+        "start": 0
       }
     ]
   },
@@ -45,8 +42,8 @@
     "tags": [],
     "songs": [
       {
-        "title": "様",
-        "artist": "Unknown Artist",
+        "title": "最初はキュン",
+        "artist": "中島健人",
         "start": 0
       }
     ]
@@ -69,8 +66,8 @@
     ],
     "songs": [
       {
-        "title": "様",
-        "artist": "Unknown Artist",
+        "title": "トンツカタンタン",
+        "artist": "クレイジーウォウウォ!!",
         "start": 0
       }
     ]
