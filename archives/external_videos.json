@@ -1,4 +1,26 @@
 [{
+    "youtubeId": "btv6qW3yOOk",
+    "title": "ぷりきゅきゅ/CUTIE STREET【長尾景/にじさんじ】【#踊ってみた】#きゅーすと",
+    "channel": "長尾景",
+    "date": "2026-05-05",
+    "thumbnail": "https://i.ytimg.com/vi/btv6qW3yOOk/mqdefault.jpg",
+    "category": [
+      "踊り動画"
+    ],
+    "keywords": [
+      "踊り動画"
+    ],
+    "tags": ["カバー(ソロ)",
+      "踊"],
+    "songs": [
+      {
+        "title": "ぷりきゅきゅ",
+        "artist": "CUTIE STREET",
+        "start": 0
+      }
+    ]
+  },
+    {
     "youtubeId": "aogo_Sg_kYs",
     "title": "【歌ってみた】インザバックルーム / 赤城ウェン、榊ネス、長尾景、星導ショウ【情報差分組 / にじさんじ】",
     "channel": "長尾景",
@@ -38,7 +60,8 @@
     "keywords": [
       "踊り動画"
     ],
-    "tags": [],
+    "tags": ["カバー(ソロ)",
+      "踊"],
     "songs": [
       {
         "title": "最初はキュン",
