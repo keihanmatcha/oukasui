@@ -1,5 +1,29 @@
 [
   {
+    "youtubeId": "fEmdR9C8qok",
+    "title": "【MV】怪談/長尾景",
+    "channel": "長尾景",
+    "date": "2026-05-15",
+    "thumbnail": "https://i.ytimg.com/vi/fEmdR9C8qok/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "歌動画"
+    ],
+    "tags": [
+      "オリジナル（ソロ）",
+      "歌"
+    ],
+    "songs": [
+      {
+        "title": "奏音69",
+        "artist": "Unknown Artist",
+        "start": 0
+      }
+    ]
+  },
+  {
     "youtubeId": "ayDI0ObTnOo",
     "title": "フライディ・チャイナタウン【長尾景/にじさんじ】【踊ってみた】",
     "channel": "長尾景",
@@ -151,6 +175,25 @@
       "一橋綾人",
       "卯月コウ",
       "戌亥とこ"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "QjX_o-MCi-g",
+    "title": "【#にじフェス2026】#Uncharted_Spheres 5月15日(金)開催！",
+    "channel": "長尾景",
+    "date": "2026-05-08",
+    "thumbnail": "https://i.ytimg.com/vi/QjX_o-MCi-g/mqdefault.jpg",
+    "category": [
+      "プロモーション",
+      "企画",
+      "公式企画・番組",
+      "公式切り抜き"
+    ],
+    "keywords": [
+      "にじフェス",
+      "プロモーション"
     ],
     "tags": [],
     "songs": []
