@@ -1,4 +1,89 @@
 [{
+    "youtubeId": "1Yzp77KkPTE",
+    "title": "カーテンコール/優里【長尾景/にじさんじ】【歌ってみた】",
+    "channel": "長尾景",
+    "date": "2026-05-27",
+    "thumbnail": "https://i.ytimg.com/vi/1Yzp77KkPTE/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "歌動画"
+    ],
+    "tags": [
+      "カバー(ソロ)",
+      "歌"
+    ],
+    "songs": [
+      {
+        "title": "カーテンコール",
+        "artist": "優里",
+        "start": 0
+      }
+    ]
+  },
+    {
+    "youtubeId": "4WNOeih1hE0",
+    "title": "【歌枠】音響メガシンカ歌枠【長尾景/にじさんじ】",
+    "channel": "長尾景",
+    "date": "2026-05-29",
+    "thumbnail": "https://i.ytimg.com/vi/4WNOeih1hE0/mqdefault.jpg",
+    "category": [
+      "歌動画",
+      "歌配信"
+    ],
+    "keywords": [
+      "歌動画",
+      "歌配信"
+    ],
+    "tags": [
+      "カバー(ソロ)",
+      "歌"
+    ],
+    "songs": [
+    {
+      "title": "猫",
+      "artist": "DISH//",
+      "start": 579
+    },
+    {
+      "title": "鬼の宴",
+      "artist": "友成空",
+      "start": 1259
+    },
+    {
+      "title": "シャルル",
+      "artist": "バルーン",
+      "start": 2138
+    },
+    {
+      "title": "晩餐歌",
+      "artist": "tuki.",
+      "start": 2944
+    },
+    {
+      "title": "ダーリン",
+      "artist": "須田景凪",
+      "start": 3166
+    },
+    {
+      "title": "シンデレラボーイ",
+      "artist": "Saucy Dog",
+      "start": 4024
+    },
+    {
+      "title": "シンデレラボーイ",
+      "artist": "Saucy Dog",
+      "start": 4697
+    },
+    {
+      "title": "カーテンコール",
+      "artist": "優里",
+      "start": 5335
+    }
+  ]
+  },
+    {
     "youtubeId": "IWs5oAC_1EI",
     "title": "爆裂愛してる/M!LK サビ【長尾景/にじさんじ】【踊ってみた】#爆裂愛してる",
     "channel": "長尾景",
