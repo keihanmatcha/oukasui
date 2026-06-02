@@ -1,4 +1,52 @@
 [{
+    "youtubeId": "blYDKE9PJ2A",
+    "title": "Virtual to LIVE (Classical Arrangement)",
+    "channel": "長尾景",
+    "date": "2026-05-15",
+    "thumbnail": "https://i.ytimg.com/vi/blYDKE9PJ2A/mqdefault.jpg",
+    "category": [
+      "ライブイベント",
+      "歌動画"
+    ],
+    "keywords": [
+      "歌動画"
+    ],
+    "tags": [
+      "カバー(ユニット)",
+      "歌"
+    ],
+    "songs": [
+      {
+        "title": "Virtual to LIVE",
+        "artist": "にじさんじ",
+        "start": 0
+      }
+    ]
+  },
+  {
+    "youtubeId": "ayDI0ObTnOo",
+    "title": "フライディ・チャイナタウン【長尾景/にじさんじ】【踊ってみた】",
+    "channel": "長尾景",
+    "date": "2026-05-14",
+    "thumbnail": "https://i.ytimg.com/vi/ayDI0ObTnOo/mqdefault.jpg",
+    "category": [
+      "踊り動画"
+    ],
+    "keywords": [
+      "踊り動画"
+    ],
+    "tags": [
+        "カバー(ソロ)","歌"
+    ],
+    "songs": [
+      {
+        "title": "フライディ・チャイナタウン",
+        "artist": "泰葉",
+        "start": 0
+      }
+    ]
+  },
+    {
     "youtubeId": "0s9xvT0ThAM",
     "title": "【ライブ本編】Uncharted Spheres / 無料パート #Uncharted_Spheres",
     "channel": "長尾景",
@@ -6,7 +54,9 @@
     "thumbnail": "https://i.ytimg.com/vi/0s9xvT0ThAM/mqdefault.jpg",
     "category": [
       "ライブイベント",
-      "歌配信"
+      "歌配信",
+      "カバー(ユニット)",
+      "歌"
     ],
     "keywords": [
       "ジョー・力一",
@@ -16,7 +66,9 @@
       "早乙女ベリー",
       "東堂コハク",
       "歌配信",
-      "社築"
+      "社築",
+      "カバー(ユニット)",
+      "歌"
     ],
     "tags": [
       "カバー(ユニット)",
