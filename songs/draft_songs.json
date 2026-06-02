@@ -6,20 +6,57 @@
     "date": "2026-05-29",
     "thumbnail": "https://i.ytimg.com/vi/4WNOeih1hE0/mqdefault.jpg",
     "category": [
+      "歌動画",
       "歌配信"
     ],
     "keywords": [
+      "歌動画",
       "歌配信"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ソロ)",
+      "歌"
+    ],
     "songs": [
       {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
+        "title": "猫",
+        "artist": "DISH//",
+        "start": 579
+      },
+      {
+        "title": "鬼の宴",
+        "artist": "友成空",
+        "start": 1259
+      },
+      {
+        "title": "シャルル",
+        "artist": "バルーン",
+        "start": 2138
+      },
+      {
+        "title": "晩餐歌",
+        "artist": "tuki.",
+        "start": 2944
+      },
+      {
+        "title": "ダーリン",
+        "artist": "須田景凪",
+        "start": 3166
+      },
+      {
+        "title": "シンデレラボーイ",
+        "artist": "Saucy Dog",
+        "start": 4024
+      },
+      {
+        "title": "シンデレラボーイ",
+        "artist": "Saucy Dog",
+        "start": 4697
+      },
+      {
+        "title": "カーテンコール",
+        "artist": "優里",
+        "start": 5335
       }
     ]
   },
@@ -35,11 +72,14 @@
     "keywords": [
       "歌動画"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ソロ)",
+      "歌"
+    ],
     "songs": [
       {
-        "title": "様",
-        "artist": "Unknown Artist",
+        "title": "カーテンコール",
+        "artist": "優里",
         "start": 0
       }
     ]
@@ -76,7 +116,9 @@
     "thumbnail": "https://i.ytimg.com/vi/0s9xvT0ThAM/mqdefault.jpg",
     "category": [
       "ライブイベント",
-      "歌配信"
+      "歌配信",
+      "カバー(ユニット)",
+      "歌"
     ],
     "keywords": [
       "ジョー・力一",
@@ -86,7 +128,9 @@
       "早乙女ベリー",
       "東堂コハク",
       "歌配信",
-      "社築"
+      "社築",
+      "カバー(ユニット)",
+      "歌"
     ],
     "tags": [
       "カバー(ユニット)",
@@ -94,9 +138,14 @@
     ],
     "songs": [
       {
-        "title": "がございます。",
-        "artist": "Unknown Artist",
-        "start": 0
+        "title": "蒼穹のファンファーレ withジョー,伊波,戌亥,早乙女,東堂,社",
+        "artist": "FictionJunction",
+        "start": 2549
+      },
+      {
+        "title": "RPG withジョー,伊波",
+        "artist": "SEKAI NO OWARI",
+        "start": 3306
       }
     ]
   },
@@ -119,12 +168,9 @@
     ],
     "songs": [
       {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
+        "title": "Virtual to LIVE",
+        "artist": "にじさんじ",
+        "start": 0
       }
     ]
   },
@@ -140,11 +186,14 @@
     "keywords": [
       "踊り動画"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ソロ)",
+      "歌"
+    ],
     "songs": [
       {
-        "title": "様",
-        "artist": "Unknown Artist",
+        "title": "フライディ・チャイナタウン",
+        "artist": "泰葉",
         "start": 0
       }
     ]
