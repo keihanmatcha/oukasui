@@ -1,5 +1,39 @@
 [
   {
+    "youtubeId": "th4MP11u5gk",
+    "title": "【#にじ鯖夏祭り2026】インフラ整備【長尾景/にじさんじ】【マイクラ】",
+    "channel": "長尾景",
+    "date": "2026-06-01",
+    "thumbnail": "https://i.ytimg.com/vi/th4MP11u5gk/mqdefault.jpg",
+    "category": [
+      "ゲーム実況",
+      "企画",
+      "公式企画・番組"
+    ],
+    "keywords": [
+      "にじ鯖夏祭り",
+      "マインクラフト"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "8fUmQ0WNoW4",
+    "title": "【チョロい】バレンタイン胸キュン確変演出【長尾景】/春崎エアル/にじさんじ】",
+    "channel": "長尾景",
+    "date": "2026-06-01",
+    "thumbnail": "https://i.ytimg.com/vi/8fUmQ0WNoW4/mqdefault.jpg",
+    "category": [
+      "公式切り抜き"
+    ],
+    "keywords": [
+      "エア景",
+      "春崎エアル"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
     "youtubeId": "R66dH87L0bY",
     "title": "【クソガキ】誰にだって甘やかされたい長尾景【長尾景/桜凛月/渚トラウト/にじさんじ】",
     "channel": "長尾景",
@@ -67,12 +101,17 @@
     "date": "2026-05-29",
     "thumbnail": "https://i.ytimg.com/vi/4WNOeih1hE0/mqdefault.jpg",
     "category": [
+      "歌動画",
       "歌配信"
     ],
     "keywords": [
+      "歌動画",
       "歌配信"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ソロ)",
+      "歌"
+    ],
     "songs": []
   },
   {
@@ -149,7 +188,10 @@
     "keywords": [
       "歌動画"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ソロ)",
+      "歌"
+    ],
     "songs": [
       {
         "title": "様",
