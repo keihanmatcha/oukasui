@@ -245,7 +245,7 @@ KEYWORD_GROUPS = {
         "その他ホラーゲーム", "カードゲーム", "その他ゲーム", "Five Nights at Freddy's", "Getting Over It", "V最協", "V祭協"
     ],
     "PROGRAMS": [
-        "SYMPHONIA Day2", "LOCK ON FLEEK", "にじ鯖夏祭り", "VTuberエンジョイカジュアル交流戦",
+        "SYMPHONIA Day2", "LOCK ON FLEEK", "にじ鯖夏祭り", "VTuberエンジョイカジュアル交流戦","Uncharted Spheres",
         "ベース", "歳の差バラエティ(?)", "VΔLZ1st 一唱入魂", "VΔLZ2nd 三華の樂", "にじ漢歌祭り","にじベイブレード",
         "にじメンメドレー", "VTuber最協決定戦", "V祭協", "VTuberのあそびば", "くろのわーるがなんかやる",
         "Talking in English Collab", "ゲームる？ゲームる！", "だいさんじ甲子園", "にじさんじ甲子園",
@@ -352,6 +352,7 @@ TAG_CONVERSION_MAP = {
     "タメジャナインデス": "タメナンデス",
     "OW": "Overwatch",
     "闇ノシュウ": "Shu Yamino",
+    "Uncharted_Spheres":"Uncharted Spheres",
     "弦月": "弦月藤士郎",
     "甲斐田": "甲斐田晴",
     "一唱入魂":"VΔLZ1st 一唱入魂",
