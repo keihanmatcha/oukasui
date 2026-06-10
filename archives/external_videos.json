@@ -1,4 +1,28 @@
 [{
+    "youtubeId": "zoXtgOkXX64",
+    "title": "シンデレラボーイ/Saucy Dog【長尾景/にじさんじ】【歌ってみた】",
+    "channel": "長尾景",
+    "date": "2026-06-09",
+    "thumbnail": "https://i.ytimg.com/vi/zoXtgOkXX64/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "歌動画"
+    ],
+    "tags": [
+      "カバー(ソロ)",
+      "歌"
+    ],
+    "songs": [
+      {
+        "title": "シンデレラボーイ",
+        "artist": "Saucy Dog",
+        "start": 0
+      }
+    ]
+  },
+    {
     "youtubeId": "9eYbN7ItS70",
     "title": "#OBF ぶんぶん踊る長尾景",
     "channel": "長尾景",
