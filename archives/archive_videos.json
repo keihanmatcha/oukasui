@@ -1,5 +1,72 @@
 [
   {
+    "youtubeId": "69RvBqfVtVw",
+    "title": "雑談からのワールドカップ 日本VSチュニジア戦 同時視聴【長尾景/にじさんじ】【#ながおしゃべり】",
+    "channel": "長尾景",
+    "date": "2026-06-21",
+    "thumbnail": "https://i.ytimg.com/vi/69RvBqfVtVw/mqdefault.jpg",
+    "category": [
+      "ゲーム実況",
+      "企画",
+      "公式企画・番組",
+      "雑談"
+    ],
+    "keywords": [
+      "ながおしゃべり",
+      "同時視聴"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "0jfugmXSakw",
+    "title": "【スプラトゥーン3】にじさんじのみなさんと【長尾景/にじさんじ】",
+    "channel": "長尾景",
+    "date": "2026-06-20",
+    "thumbnail": "https://i.ytimg.com/vi/0jfugmXSakw/mqdefault.jpg",
+    "category": [
+      "ゲーム実況"
+    ],
+    "keywords": [
+      "Splatoon",
+      "Splatoon3",
+      "エア景",
+      "五十嵐梨花",
+      "春崎エアル"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "SEhRh9nfVM0",
+    "title": "【長尾景決死のダイブ】エリトラをつけ忘れて飛ぼうとする長尾景【長尾景/にじさんじ】",
+    "channel": "長尾景",
+    "date": "2026-06-20",
+    "thumbnail": "https://i.ytimg.com/vi/SEhRh9nfVM0/mqdefault.jpg",
+    "category": [
+      "未分類"
+    ],
+    "keywords": [],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "QpJvS2s6Rtw",
+    "title": "リスナー「長尾の配信ってノスタルジアキッチンだよなぁw」【長尾景/にじさんじ】【#ながおしゃべり】",
+    "channel": "長尾景",
+    "date": "2026-06-20",
+    "thumbnail": "https://i.ytimg.com/vi/QpJvS2s6Rtw/mqdefault.jpg",
+    "category": [
+      "企画",
+      "公式企画・番組"
+    ],
+    "keywords": [
+      "ながおしゃべり"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
     "youtubeId": "BbZsy3s2HTA",
     "title": "【スプラトゥーン3】壺商人たちスプラ【長尾景/にじさんじ】",
     "channel": "長尾景",
@@ -111,17 +178,45 @@
     "songs": []
   },
   {
+    "youtubeId": "Jlawpkru_Mg",
+    "title": "カメラマン誰でしょうか📸召喚.ᐟ‪‪‬.ᐟ‪‪‬【星川サラ/にじさんじ】#shorts",
+    "channel": "長尾景",
+    "date": "2026-06-16",
+    "thumbnail": "https://i.ytimg.com/vi/Jlawpkru_Mg/mqdefault.jpg",
+    "category": [
+      "企画",
+      "公式切り抜き"
+    ],
+    "keywords": [
+      "企画",
+      "星川サラ"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
     "youtubeId": "nuvZbs4kHCY",
     "title": "ほんまやで☆なんでやねん☆しらんけど/モナキ【長尾景/にじさんじ】",
     "channel": "長尾景",
     "date": "2026-06-15",
     "thumbnail": "https://i.ytimg.com/vi/nuvZbs4kHCY/mqdefault.jpg",
     "category": [
-      "公式切り抜き"
+      "踊り動画"
     ],
-    "keywords": [],
-    "tags": [],
-    "songs": []
+    "keywords": [
+      "踊り動画"
+    ],
+    "tags": [
+      "カバー(ソロ)",
+      "踊"
+    ],
+    "songs": [
+      {
+        "title": "様",
+        "artist": "Unknown Artist",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "5qlVirVA3ig",
@@ -1524,6 +1619,27 @@
       "カバー(ユニット)",
       "歌"
     ],
+    "songs": []
+  },
+  {
+    "youtubeId": "EBBLWjTy_MI",
+    "title": "【Super Bunny Man】告知あり！情報差分組の完璧？バニーマン！with 榊ネス、長尾景3、星導ショウ【にじさんじ / 赤城ウェン】",
+    "channel": "長尾景",
+    "date": "2026-05-03",
+    "thumbnail": "https://i.ytimg.com/vi/EBBLWjTy_MI/mqdefault.jpg",
+    "category": [
+      "プロモーション",
+      "企画"
+    ],
+    "keywords": [
+      "プロモーション",
+      "企画",
+      "情報差分組",
+      "星導ショウ",
+      "榊ネス",
+      "赤城ウェン"
+    ],
+    "tags": [],
     "songs": []
   },
   {
