@@ -3,16 +3,18 @@
     "youtubeId": "zHwgfvmPfSM",
     "title": "【重大告知あり！！】リクエストでいただいた楽曲を3Dでゲストのみなさんと歌う！【戌亥とこ/にじさんじ】",
     "channel": "長尾景",
-    "date": "2026-06-24",
+    "date": "2026-06-27",
     "thumbnail": "https://i.ytimg.com/vi/zHwgfvmPfSM/mqdefault.jpg",
     "category": [
       "3D",
       "プロモーション",
       "歌動画",
-      "歌配信"
+      "歌配信",
+      "踊り動画"
     ],
     "keywords": [
       "プロモーション",
+      "踊り動画",
       "戌亥とこ",
       "早乙女ベリー",
       "榊ネス",
@@ -21,14 +23,14 @@
       "珠乃井ナナ"
     ],
     "tags": [
-      "カバー(ユニット)",
-      "歌"
+      "カバー(ソロ)",
+      "踊"
     ],
     "songs": [
       {
-        "title": "の歌唱に協力してくれるみなさん🔽",
-        "artist": "Unknown Artist",
-        "start": 0
+        "title": "盛れ！ミ・アモーレ with戌亥,榊,珠乃井,早乙女",
+        "artist": "Juice=Juice",
+        "start": 4234
       }
     ]
   },
@@ -42,10 +44,12 @@
       "踊り動画"
     ],
     "keywords": [
-      "Overwatch",
       "踊り動画"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ソロ)",
+      "踊"
+    ],
     "songs": [
       {
         "title": "BANG!!",
@@ -72,8 +76,8 @@
     ],
     "songs": [
       {
-        "title": "様",
-        "artist": "Unknown Artist",
+        "title": "ほんまやで☆なんでやねん☆しらんけど",
+        "artist": "モナキ",
         "start": 0
       }
     ]
@@ -2092,12 +2096,9 @@
     "tags": [],
     "songs": [
       {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
+        "title": "最上級にかわいいの！",
+        "artist": "超ときめき♡宣伝部",
+        "start": 0
       }
     ]
   },
@@ -2221,6 +2222,7 @@
       "企画",
       "踊り動画"
     ],
+    "tags": [],
     "keywords": [
       "Klime",
       "セラフ・ダズルガーデン",
@@ -2230,15 +2232,11 @@
       "東堂コハク",
       "踊り動画"
     ],
-    "tags": [],
     "songs": [
       {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
+        "title": "Ready Steady",
+        "artist": "Giga【Vivid BAD SQUAD】",
+        "start": 0
       }
     ]
   },
@@ -2336,33 +2334,6 @@
     "keywords": [
       "ベース",
       "楽器配信・動画"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "_JMpYpWuL3I",
-    "title": "【プロセカ】既に2曲踊ってるコンテンツ初見プレイ【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-01-09",
-    "thumbnail": "https://i.ytimg.com/vi/_JMpYpWuL3I/mqdefault.jpg",
-    "category": [
-      "ゲーム実況",
-      "踊り動画"
-    ],
-    "keywords": [
-      "プロジェクトセカイ カラフルステージ！ feat. 初音ミク",
-      "プロセカ",
-      "踊り動画"
     ],
     "tags": [],
     "songs": [
