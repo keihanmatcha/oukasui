@@ -65,7 +65,6 @@
     ],
     "keywords": [
       "歌動画",
-      "記念配信",
       "歌配信"
     ],
     "tags": [
@@ -74,304 +73,12 @@
     ],
     "songs": [
       {
-        "title": "怪物",
-        "artist": "YOASOBI",
-        "start": 290
-      },
-      {
-        "title": "丸の内サディスティック",
-        "artist": "椎名林檎",
-        "start": 506
-      },
-      {
-        "title": "アイネクライネ",
-        "artist": "米津玄師",
-        "start": 719
-      },
-      {
-        "title": "曇天",
-        "artist": "DOES",
-        "start": 1612
-      },
-      {
-        "title": "小さな恋のうた",
-        "artist": "MONGOL800",
-        "start": 1806
-      },
-      {
-        "title": "ジターバグ",
-        "artist": "ELLEGARDEN",
-        "start": 2091
-      },
-      {
-        "title": "まちがいさがし",
-        "artist": "菅田将暉",
-        "start": 2302
-      },
-      {
-        "title": "テレキャスタービーボーイ",
-        "artist": "すりぃ",
-        "start": 2575
-      },
-      {
-        "title": "バンザイ～好きでよかった〜",
-        "artist": "ウルフルズ",
-        "start": 3201
-      },
-      {
-        "title": "フライングゲット",
-        "artist": "AKB48",
-        "start": 3499
-      },
-      {
-        "title": "シルエット",
-        "artist": "KANA-BOON",
-        "start": 3752
-      },
-      {
-        "title": "ダーリン",
-        "artist": "須田景凪",
-        "start": 4036
-      },
-      {
-        "title": "メリッサ",
-        "artist": "ポルノグラフィティ",
-        "start": 4181
-      },
-      {
-        "title": "SHAMROCK",
-        "artist": "UVERworld",
-        "start": 4449
-      },
-      {
-        "title": "カサブタ",
-        "artist": "千綿偉功",
-        "start": 5120
-      },
-      {
-        "title": "天体観測",
-        "artist": "BUMP OF CHICKEN",
-        "start": 5462
-      },
-      {
-        "title": "sailing day",
-        "artist": "BUMP OF CHICKEN",
-        "start": 5718
-      },
-      {
-        "title": "ダンデライオン",
-        "artist": "BUMP OF CHICKEN",
-        "start": 5948
-      },
-      {
-        "title": "カルマ",
-        "artist": "BUMP OF CHICKEN",
-        "start": 6156
-      },
-      {
-        "title": "花の名",
-        "artist": "BUMP OF CHICKEN",
-        "start": 6361
-      },
-      {
-        "title": "ラフ・メイカー",
-        "artist": "BUMP OF CHICKEN",
-        "start": 6717
-      },
-      {
-        "title": "ドライフラワー",
-        "artist": "優里",
-        "start": 7985
-      },
-      {
-        "title": "インフェルノ",
-        "artist": "Mrs. GREEN APPLE",
-        "start": 8265
-      },
-      {
-        "title": "ボクノート",
-        "artist": "スキマスイッチ",
-        "start": 8484
-      },
-      {
-        "title": "青のすみか",
-        "artist": "キタニタツヤ",
-        "start": 8814
-      },
-      {
-        "title": "花の名",
+        "title": "要確認",
         "artist": "",
-        "start": 9407
-      },
-      {
-        "title": "曇天",
-        "artist": "",
-        "start": 9433
-      },
-      {
-        "title": "リライト",
-        "artist": "ASIAN KUNG-FU GENERATION",
-        "start": 10977
-      },
-      {
-        "title": "残響散歌",
-        "artist": "Aimer",
-        "start": 11204
-      },
-      {
-        "title": "Pretender",
-        "artist": "Official髭男dism",
-        "start": 11504
-      },
-      {
-        "title": "ピースサイン",
-        "artist": "米津玄師",
-        "start": 11826
-      },
-      {
-        "title": "ギラギラ",
-        "artist": "Ado",
-        "start": 12096
-      },
-      {
-        "title": "鬼の宴",
-        "artist": "友成空",
-        "start": 12375
-      },
-      {
-        "title": "修羅",
-        "artist": "DOES",
-        "start": 13135
-      },
-      {
-        "title": "3月9日",
-        "artist": "レミオロメン",
-        "start": 13333
-      },
-      {
-        "title": "I wonder",
-        "artist": "Da-iCE",
-        "start": 13606
-      },
-      {
-        "title": "Wherever you are",
-        "artist": "ONE OK ROCK",
-        "start": 13792
-      },
-      {
-        "title": "猫/ DISH/",
-        "artist": "",
-        "start": 14087
-      },
-      {
-        "title": "Rolling star",
-        "artist": "YUI",
-        "start": 15284
-      },
-      {
-        "title": "カタオモイ",
-        "artist": "Aimer",
-        "start": 15481
-      },
-      {
-        "title": "踊",
-        "artist": "Ado",
-        "start": 15717
-      },
-      {
-        "title": "灰色と青",
-        "artist": "米津玄師、菅田将暉",
-        "start": 15936
-      },
-      {
-        "title": "KICKBACK",
-        "artist": "米津玄師",
-        "start": 16336
-      },
-      {
-        "title": "プロポーズ",
-        "artist": "内緒のピアス",
-        "start": 16701
-      },
-      {
-        "title": "シンデレラボーイ",
-        "artist": "Saucy Dog",
-        "start": 16941
-      },
-      {
-        "title": "CITRUS",
-        "artist": "Da-iCE",
-        "start": 17204
-      },
-      {
-        "title": "バクチ・ダンサー",
-        "artist": "DOES",
-        "start": 17467
-      },
-      {
-        "title": "カーテンコール",
-        "artist": "優里",
-        "start": 17644
-      },
-      {
-        "title": "KING",
-        "artist": "Kanaria",
-        "start": 18657
-      },
-      {
-        "title": "歌うたいのバラッド",
-        "artist": "斉藤和義",
-        "start": 18812
-      },
-      {
-        "title": "君の知らない物語",
-        "artist": "supercell",
-        "start": 19200
-      },
-      {
-        "title": "シャルル",
-        "artist": "バルーン",
-        "start": 19553
-      },
-      {
-        "title": "レオ",
-        "artist": "優里",
-        "start": 19794
-      },
-      {
-        "title": "レオ",
-        "artist": "優里(オケを上げてやり直し)",
-        "start": 19914
-      },
-      {
-        "title": "ただ君に晴れ",
-        "artist": "ヨルシカ",
-        "start": 20430
-      },
-      {
-        "title": "晩餐歌",
-        "artist": "tuki.",
-        "start": 20683
-      },
-      {
-        "title": "Lemon",
-        "artist": "米津玄師",
-        "start": 20903
-      },
-      {
-        "title": "プライド革命",
-        "artist": "CHICO with HoneyWorks",
-        "start": 21186
-      },
-      {
-        "title": "雫",
-        "artist": "スキマスイッチ",
-        "start": 21276
-      },
-      {
-        "title": "怪談",
-        "artist": "長尾景",
-        "start": 21931
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
       }
     ]
   },
@@ -393,8 +100,8 @@
     ],
     "songs": [
       {
-        "title": "盛れ！ミ・アモーレ",
-        "artist": "Juice=Juice",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -426,34 +133,9 @@
     ],
     "songs": [
       {
-        "title": "IRIS OUTwith戌亥,榊,珠乃井,早乙女",
-        "artist": "米津玄師",
-        "start": 512
-      },
-      {
-        "title": "灰色と青with戌亥",
-        "artist": "米津玄師・菅田将暉",
-        "start": 1506
-      },
-      {
-        "title": "アイネクライネwith戌亥,榊,珠乃井,早乙女",
-        "artist": "米津玄師",
-        "start": 2514
-      },
-      {
-        "title": "ray with戌亥,榊",
-        "artist": "BUMP OF CHICKEN with戌亥,榊,珠乃井,早乙女",
-        "start": 3271
-      },
-      {
-        "title": "ずうっといっしょ！with戌亥,榊,珠乃井,早乙女",
-        "artist": "キタニタツヤ",
-        "start": 3931
-      },
-      {
-        "title": "盛れ！ミ・アモーレ with戌亥,榊,珠乃井,早乙女",
-        "artist": "Juice=Juice",
-        "start": 4234
+        "title": "の歌唱に協力してくれるみなさん🔽",
+        "artist": "Unknown Artist",
+        "start": 0
       }
     ]
   },
@@ -464,19 +146,18 @@
     "date": "2026-06-21",
     "thumbnail": "https://i.ytimg.com/vi/WpndROPTIm8/mqdefault.jpg",
     "category": [
+      "ゲーム実況",
       "踊り動画"
     ],
     "keywords": [
+      "Overwatch",
       "踊り動画"
     ],
-    "tags": [
-      "カバー(ソロ)",
-      "踊"
-    ],
+    "tags": [],
     "songs": [
       {
-        "title": "BANG!!",
-        "artist": "Snow Man",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -499,8 +180,8 @@
     ],
     "songs": [
       {
-        "title": "ほんまやで☆なんでやねん☆しらんけど",
-        "artist": "モナキ",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -523,8 +204,8 @@
     ],
     "songs": [
       {
-        "title": "夜の踊り子",
-        "artist": "サカナクション",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -547,8 +228,8 @@
     ],
     "songs": [
       {
-        "title": "シンデレラボーイ",
-        "artist": "Saucy Dog",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -571,8 +252,8 @@
     ],
     "songs": [
       {
-        "title": "OBF",
-        "artist": "ジョー・力一",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -597,44 +278,12 @@
     ],
     "songs": [
       {
-        "title": "猫",
-        "artist": "DISH//",
-        "start": 579
-      },
-      {
-        "title": "鬼の宴",
-        "artist": "友成空",
-        "start": 1259
-      },
-      {
-        "title": "シャルル",
-        "artist": "バルーン",
-        "start": 2138
-      },
-      {
-        "title": "晩餐歌",
-        "artist": "tuki.",
-        "start": 2944
-      },
-      {
-        "title": "ダーリン",
-        "artist": "須田景凪",
-        "start": 3166
-      },
-      {
-        "title": "シンデレラボーイ",
-        "artist": "Saucy Dog",
-        "start": 4024
-      },
-      {
-        "title": "シンデレラボーイ",
-        "artist": "Saucy Dog",
-        "start": 4697
-      },
-      {
-        "title": "カーテンコール",
-        "artist": "優里",
-        "start": 5335
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
       }
     ]
   },
@@ -656,8 +305,8 @@
     ],
     "songs": [
       {
-        "title": "カーテンコール",
-        "artist": "優里",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -721,11 +370,12 @@
     "thumbnail": "https://i.ytimg.com/vi/0s9xvT0ThAM/mqdefault.jpg",
     "category": [
       "ライブイベント",
-      "歌配信",
-      "カバー(ユニット)",
-      "歌"
+      "企画",
+      "公式企画・番組",
+      "歌配信"
     ],
     "keywords": [
+      "Uncharted Spheres",
       "ジョー・力一",
       "ライブ・イベント",
       "伊波ライ",
@@ -733,9 +383,7 @@
       "早乙女ベリー",
       "東堂コハク",
       "歌配信",
-      "社築",
-      "カバー(ユニット)",
-      "歌"
+      "社築"
     ],
     "tags": [
       "カバー(ユニット)",
@@ -743,14 +391,9 @@
     ],
     "songs": [
       {
-        "title": "蒼穹のファンファーレ withジョー,伊波,戌亥,早乙女,東堂,社",
-        "artist": "FictionJunction",
-        "start": 2549
-      },
-      {
-        "title": "RPG withジョー,伊波",
-        "artist": "SEKAI NO OWARI",
-        "start": 3306
+        "title": "がございます。",
+        "artist": "Unknown Artist",
+        "start": 0
       }
     ]
   },
@@ -773,9 +416,12 @@
     ],
     "songs": [
       {
-        "title": "Virtual to LIVE",
-        "artist": "にじさんじ",
-        "start": 0
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
       }
     ]
   },
@@ -791,14 +437,11 @@
     "keywords": [
       "踊り動画"
     ],
-    "tags": [
-      "カバー(ソロ)",
-      "歌"
-    ],
+    "tags": [],
     "songs": [
       {
-        "title": "フライディ・チャイナタウン",
-        "artist": "泰葉",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -815,14 +458,11 @@
     "keywords": [
       "踊り動画"
     ],
-    "tags": [
-      "カバー(ソロ)",
-      "踊"
-    ],
+    "tags": [],
     "songs": [
       {
-        "title": "ぷりきゅきゅ",
-        "artist": "CUTIE STREET",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -849,9 +489,12 @@
     ],
     "songs": [
       {
-        "title": "インザバックルーム",
-        "artist": "Syudou",
-        "start": 0
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
       }
     ]
   },
@@ -873,9 +516,12 @@
     ],
     "songs": [
       {
-        "title": "怪談",
-        "artist": "長尾景",
-        "start": 0
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
       }
     ]
   },
@@ -891,14 +537,11 @@
     "keywords": [
       "踊り動画"
     ],
-    "tags": [
-      "カバー(ソロ)",
-      "踊"
-    ],
+    "tags": [],
     "songs": [
       {
-        "title": "最初はキュン",
-        "artist": "中島健人",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -921,8 +564,8 @@
     ],
     "songs": [
       {
-        "title": "トンツカタンタン",
-        "artist": "クレイジーウォウウォ!!",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -942,8 +585,8 @@
     "tags": [],
     "songs": [
       {
-        "title": "ケバブのダンス",
-        "artist": "ハヤシユウ",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -963,8 +606,8 @@
     "tags": [],
     "songs": [
       {
-        "title": "爆裂愛してる",
-        "artist": "M!LK",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -981,14 +624,11 @@
     "keywords": [
       "踊り動画"
     ],
-    "tags": [
-      "カバー(ソロ)",
-      "踊"
-    ],
+    "tags": [],
     "songs": [
       {
-        "title": "爆裂愛してる",
-        "artist": "M!LK",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1016,8 +656,8 @@
     ],
     "songs": [
       {
-        "title": "にぎにぎにじたうん！",
-        "artist": "周央サンゴ×にじさんじ",
+        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1041,15 +681,11 @@
       "歌動画",
       "甲斐田晴"
     ],
-    "tags": [
-      "カバー(ユニット)",
-      "歌",
-      "弾"
-    ],
+    "tags": [],
     "songs": [
       {
-        "title": "新宝島",
-        "artist": "サカナクション",
+        "title": "サカナクション",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1073,15 +709,11 @@
       "歌動画",
       "甲斐田晴"
     ],
-    "tags": [
-      "カバー(ユニット)",
-      "歌",
-      "弾"
-    ],
+    "tags": [],
     "songs": [
       {
-        "title": "新宝島",
-        "artist": "サカナクション",
+        "title": "サカナクション",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1102,40 +734,15 @@
       "渚トラウト",
       "綺沙良"
     ],
-    "tags": [
-      "カバー(ユニット)",
-      "歌"
-    ],
+    "tags": [],
     "songs": [
       {
-        "title": "GO!!!with渚",
-        "artist": "FLOW",
-        "start": 399
-      },
-      {
-        "title": "君の神様になりたい。",
-        "artist": "カンザキイオリ",
-        "start": 2078
-      },
-      {
-        "title": "ロンリー・チャップリンwith綺沙良",
-        "artist": "鈴木聖美 with Rats&Star",
-        "start": 3018
-      },
-      {
-        "title": "シンデレラボーイ",
-        "artist": "Saucy Dog",
-        "start": 3901
-      },
-      {
-        "title": "水流のロックwith戌亥",
-        "artist": "日食なつこ",
-        "start": 5503
-      },
-      {
-        "title": "サマータイムレコードwith all",
-        "artist": "じん",
-        "start": 6544
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
       }
     ]
   },
@@ -1159,8 +766,8 @@
     "tags": [],
     "songs": [
       {
-        "title": "むてきのおうさま",
-        "artist": "VΔLZ",
+        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1185,8 +792,8 @@
     "tags": [],
     "songs": [
       {
-        "title": "むてきのおうさま",
-        "artist": "VΔLZ",
+        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1209,8 +816,8 @@
     ],
     "songs": [
       {
-        "title": "KICKBACK",
-        "artist": "米津玄師",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1238,8 +845,8 @@
     ],
     "songs": [
       {
-        "title": "新宝島",
-        "artist": "サカナクション",
+        "title": "サカナクション",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1266,8 +873,8 @@
     "tags": [],
     "songs": [
       {
-        "title": "新宝島",
-        "artist": "サカナクション",
+        "title": "サカナクション",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1297,8 +904,8 @@
     ],
     "songs": [
       {
-        "title": "新宝島",
-        "artist": "サカナクション",
+        "title": "サカナクション",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1326,8 +933,8 @@
     ],
     "songs": [
       {
-        "title": "むてきのおうさま",
-        "artist": "VΔLZ",
+        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1386,8 +993,8 @@
     ],
     "songs": [
       {
-        "title": "むてきのおうさま",
-        "artist": "VΔLZ",
+        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1410,8 +1017,8 @@
     ],
     "songs": [
       {
-        "title": "Lemon",
-        "artist": "米津玄師",
+        "title": "様",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1439,8 +1046,8 @@
     ],
     "songs": [
       {
-        "title": "ライラック",
-        "artist": "Mrs. GREEN APPLE",
+        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1474,15 +1081,15 @@
       "綺沙良",
       "西園チグサ"
     ],
-    "tags": [
-      "カバー(ユニット)",
-      "歌"
-    ],
+    "tags": [],
     "songs": [
       {
-        "title": "アイデンティティwith猫屋敷",
-        "artist": "Kanaria",
-        "start": 8465
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
       }
     ]
   },
@@ -1503,14 +1110,11 @@
       "甲斐田晴",
       "踊り動画"
     ],
-    "tags": [
-      "カバー(ユニット)",
-      "踊"
-    ],
+    "tags": [],
     "songs": [
       {
-        "title": "I'm fine (KHÔNG SAO CẢ)",
-        "artist": "7dnight",
+        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1543,36 +1147,6 @@
     ]
   },
   {
-    "youtubeId": "kG1xgX_22bQ",
-    "title": "【DanceDanceRevolution】 #にじさんじダンス部 コラボ 3Dで遊びまくってみた！",
-    "channel": "山神カルタ",
-    "date": "2025-11-14",
-    "thumbnail": "https://i.ytimg.com/vi/kG1xgX_22bQ/mqdefault.jpg",
-    "category": [
-      "踊り配信",
-      "3D",
-      "プロモーション"
-    ],
-    "keywords": [
-      "にじさんじダンス部",
-      "東堂コハク",
-      "山神カルタ",
-      "レイン・パターソン",
-      "セラフ・ダズルガーデン",
-      "倉持めると"
-    ],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
     "youtubeId": "guBM1ckejJk",
     "title": "ダンス＆殺陣ショート解説してみた【長尾景/にじさんじ/にじ3D】",
     "channel": "長尾景",
@@ -1592,34 +1166,6 @@
         "tags": [
           "要確認(手動修正してください)"
         ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "_Eu4r1RIXnc",
-    "title": "【#オカ研ハロウィンスペシャル】3Dでオカ研集合！ハロウィンの夜に廃校で生放送スペシャル📺【にじさんじオカルト研究部】",
-    "channel": "森中花咲",
-    "date": "2025-10-31",
-    "thumbnail": "https://i.ytimg.com/vi/_Eu4r1RIXnc/mqdefault.jpg",
-    "category": [
-      "歌配信"
-    ],
-    "keywords": [
-      "森中花咲",
-      "伏見ガク",
-      "でびでび・でびる",
-      "ギルザレンⅢ世"
-    ],
-    "songs": [
-      {
-        "title": "ゲスト",
-        "artist": [
-          "森中花咲",
-          "伏見ガク",
-          "でびでび・でびる",
-          "ギルザレンⅢ世"
-        ],
-        "start": 4714
       }
     ]
   },
@@ -1816,33 +1362,6 @@
     ]
   },
   {
-    "youtubeId": "oLlfeB778eI",
-    "title": "【#Klime3D】ボスを倒せたら告知あり！？3Dで殺陣やってみた【にじさんじ/長尾景/東堂コハク/山神カルタ】",
-    "channel": "山神カルタ",
-    "date": "2025-07-17",
-    "thumbnail": "https://i.ytimg.com/vi/oLlfeB778eI/mqdefault.jpg",
-    "category": [
-      "3D",
-      "踊り配信",
-      "殺陣"
-    ],
-    "keywords": [
-      "山神カルタ",
-      "東堂コハク",
-      "Klime"
-    ],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
     "youtubeId": "YjeE-0BLRKQ",
     "title": "【NG】テレパシ【長尾景/にじさんじ】【踊ってみた】#にじさんじ #vtuber #テレパシ",
     "channel": "長尾景",
@@ -1911,34 +1430,6 @@
         "tags": [
           "要確認(手動修正してください)"
         ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "8XEzSnSCqHE",
-    "title": "【 #立伝都々3D】やっほ～！た行担当！立伝都々だよ～！【立伝都々/にじさんじ】",
-    "channel": "立伝都々",
-    "date": "2025-05-29",
-    "thumbnail": "https://i.ytimg.com/vi/8XEzSnSCqHE/mqdefault.jpg",
-    "category": [
-      "お披露目配信",
-      "3D",
-      "殺陣"
-    ],
-    "keywords": [
-      "立伝都々",
-      "ソフィア・ヴァレンタイン",
-      "伊波ライ"
-    ],
-    "songs": [
-      {
-        "title": "犬を探せ",
-        "artist": [
-          "立伝都々",
-          "ソフィア・ヴァレンタイン",
-          "伊波ライ"
-        ],
-        "start": 1311
       }
     ]
   },
@@ -2057,8 +1548,8 @@
     "tags": [],
     "songs": [
       {
-        "title": "1％の恋人",
-        "artist": "甲斐田晴",
+        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -2184,14 +1675,11 @@
       "歌動画",
       "甲斐田晴"
     ],
-    "tags": [
-      "オリジナル(ユニット)",
-      "歌"
-    ],
+    "tags": [],
     "songs": [
       {
-        "title": "SOUP",
-        "artist": "VΔLZ",
+        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -2269,14 +1757,11 @@
       "歌動画",
       "甲斐田晴"
     ],
-    "tags": [
-      "オリジナル(ユニット)",
-      "歌"
-    ],
+    "tags": [],
     "songs": [
       {
-        "title": "ブリキの魂",
-        "artist": "VΔLZ",
+        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -2324,14 +1809,11 @@
       "歌動画",
       "甲斐田晴"
     ],
-    "tags": [
-      "オリジナル(ユニット)",
-      "歌"
-    ],
+    "tags": [],
     "songs": [
       {
-        "title": "青春応歌",
-        "artist": "VΔLZ",
+        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -2400,14 +1882,11 @@
       "歌動画",
       "甲斐田晴"
     ],
-    "tags": [
-      "オリジナル(ユニット)",
-      "歌"
-    ],
+    "tags": [],
     "songs": [
       {
-        "title": "黎明の轍",
-        "artist": "VΔLZ",
+        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
+        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -2516,15 +1995,15 @@
     "keywords": [
       "踊り動画"
     ],
-    "tags": [
-      "カバー(ソロ)",
-      "踊"
-    ],
+    "tags": [],
     "songs": [
       {
-        "title": "最上級にかわいいの！",
-        "artist": "超ときめき♡宣伝部",
-        "start": 0
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
       }
     ]
   },
@@ -2648,7 +2127,6 @@
       "企画",
       "踊り動画"
     ],
-    "tags": [],
     "keywords": [
       "Klime",
       "セラフ・ダズルガーデン",
@@ -2658,11 +2136,15 @@
       "東堂コハク",
       "踊り動画"
     ],
+    "tags": [],
     "songs": [
       {
-        "title": "Ready Steady",
-        "artist": "Giga【Vivid BAD SQUAD】",
-        "start": 0
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
       }
     ]
   },
@@ -2760,6 +2242,33 @@
     "keywords": [
       "ベース",
       "楽器配信・動画"
+    ],
+    "tags": [],
+    "songs": [
+      {
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
+      }
+    ]
+  },
+  {
+    "youtubeId": "_JMpYpWuL3I",
+    "title": "【プロセカ】既に2曲踊ってるコンテンツ初見プレイ【長尾景/にじさんじ】",
+    "channel": "長尾景",
+    "date": "2023-01-09",
+    "thumbnail": "https://i.ytimg.com/vi/_JMpYpWuL3I/mqdefault.jpg",
+    "category": [
+      "ゲーム実況",
+      "踊り動画"
+    ],
+    "keywords": [
+      "プロジェクトセカイ カラフルステージ！ feat. 初音ミク",
+      "プロセカ",
+      "踊り動画"
     ],
     "tags": [],
     "songs": [
@@ -2932,33 +2441,6 @@
     ]
   },
   {
-    "youtubeId": "xs_Y_fkEBqA",
-    "title": "【クソマロ作曲配信】技術をふんだんに使ってクソマロの歌ってみたを作ってみた。【弦月藤士郎/長尾景/にじさんじ】",
-    "channel": "弦月藤士郎",
-    "date": "2020-11-14",
-    "thumbnail": "https://i.ytimg.com/vi/xs_Y_fkEBqA/mqdefault.jpg",
-    "category": [
-      "企画",
-      "歌配信"
-    ],
-    "keywords": [
-      "弦月藤士郎",
-      "園児組",
-      "フミ",
-      "フ景罪"
-    ],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
     "youtubeId": "5UJcAmXxKG8",
     "title": "【歌枠】VΔLZオフコラボ歌枠！！！【にじさんじ/長尾景/甲斐田晴/弦月藤士郎】【VΔLZ】",
     "channel": "長尾景",
@@ -2968,127 +2450,14 @@
       "歌配信"
     ],
     "keywords": [
-      "甲斐田晴",
+      "VΔLZ",
+      "園児組",
+      "年長組",
       "弦月藤士郎",
-      "VΔLZ"
+      "歌配信",
+      "甲斐田晴"
     ],
-    "songs": [
-      {
-        "title": "勇気100%",
-        "artist": "光源氏【忍たま乱太郎】",
-        "start": 41
-      },
-      {
-        "title": "群青日和",
-        "artist": "東京事変",
-        "start": 659
-      },
-      {
-        "title": "プライド革命",
-        "artist": "CHiCO with HoneyWorks",
-        "start": 1110
-      },
-      {
-        "title": "secret base~君がくれたもの~",
-        "artist": "ZONE",
-        "start": 1525
-      },
-      {
-        "title": "地球最後の告白を",
-        "artist": "kemu",
-        "start": 1946
-      },
-      {
-        "title": "カサブタ",
-        "artist": "千綿ヒデノリ",
-        "start": 2419
-      },
-      {
-        "title": "歌うたいのバラッド",
-        "artist": "斉藤和義",
-        "start": 3221
-      },
-      {
-        "title": "いいんですか？",
-        "artist": "RADWIMPS",
-        "start": 3885
-      },
-      {
-        "title": "スパークル",
-        "artist": "RADWIMPS",
-        "start": 4218
-      },
-      {
-        "title": "ハレ晴レユカイ",
-        "artist": "涼宮ハルヒ（CV平野綾),長門有希（CV茅原実里),朝比奈みくる（CV後藤邑子)【涼宮ハルヒの憂鬱】",
-        "start": 5105
-      },
-      {
-        "title": "WINDING ROAD",
-        "artist": " 絢香×コブクロ",
-        "start": 5672
-      },
-      {
-        "title": "硝子の少年",
-        "artist": "Kinki Kids",
-        "start": 6078
-      },
-      {
-        "title": "世界に一つだけの花",
-        "artist": "SMAP",
-        "start": 6441
-      },
-      {
-        "title": "花の名",
-        "artist": "BUMP OF CHICKEN",
-        "start": 7023
-      },
-      {
-        "title": "君の知らない物語",
-        "artist": "supercell",
-        "start": 7420
-      },
-      {
-        "title": "天使にふれたよ!",
-        "artist": "放課後ティータイム/桜高軽音部【けいおん!】",
-        "start": 7960
-      }
-    ]
-  },
-  {
-    "youtubeId": "WUwLEgOyiak",
-    "title": "【歌枠】オフコラボでいくぞ！オフライン歌枠！【弦月藤士郎/長尾景/にじさんじ】",
-    "channel": "弦月藤士郎",
-    "date": "2020-06-27",
-    "thumbnail": "https://i.ytimg.com/vi/WUwLEgOyiak/mqdefault.jpg",
-    "category": [
-      "歌配信"
-    ],
-    "keywords": [
-      "弦月藤士郎",
-      "園児組"
-    ],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "GoYBLHRaqLY",
-    "title": "【八分音符ちゃん】【ながおぺら】オペラ風歌唱で制す8分音符ちゃん！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2020-06-05",
-    "thumbnail": "https://i.ytimg.com/vi/GoYBLHRaqLY/mqdefault.jpg",
-    "category": [
-      "歌配信"
-    ],
-    "keywords": [],
+    "tags": [],
     "songs": [
       {
         "title": "要確認",
