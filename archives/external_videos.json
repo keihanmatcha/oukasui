@@ -1,4 +1,26 @@
 [{
+    "youtubeId": "lOj9pgY87AA",
+    "title": "mosi mosi?/楽音【長尾景/にじさんじ】【踊ってみた】",
+    "channel": "長尾景",
+    "date": "2026-07-14",
+    "thumbnail": "https://i.ytimg.com/vi/lOj9pgY87AA/mqdefault.jpg",
+    "category": [
+      "踊り動画"
+    ],
+    "keywords": [
+      "踊り動画"
+    ],
+    "tags": [
+      "カバー(ソロ)",
+      "踊"
+    ],
+    "songs": [{
+        "title": "mosi mosi?",
+        "artist": "楽音",
+        "start": 626
+      }]
+  },
+    {
     "youtubeId": "G1fbvfswdbg",
     "title": "【歌枠】自枠は久々？コラボ歌枠【長尾景/にじさんじ】",
     "channel": "長尾景",
@@ -13,26 +35,26 @@
       "緑仙",
       "葉加瀬冬雪"
     ],
-    "tags": [],
+    "tags": ["カバー(ユニット)","歌"],
     "songs": [
       {
-        "title": "スターマイン",
-        "artist": "Da-iCE  ‪📿🍔‬☯️",
+        "title": "スターマイン with 北見",
+        "artist": "Da-iCE",
         "start": 626
       },
       {
-        "title": "Mela!",
-        "artist": "緑黄色社会  ☯️⚗",
+        "title": "Mela! with 葉加瀬",
+        "artist": "緑黄色社会",
         "start": 2708
       },
       {
-        "title": "好きすぎて滅！",
-        "artist": "M!LK  ☯️🐼",
+        "title": "好きすぎて滅！ with 緑仙",
+        "artist": "M!LK",
         "start": 4939
       },
       {
-        "title": "天ノ弱",
-        "artist": "164  全員‬",
+        "title": "天ノ弱 with 緑仙,葉加瀬,北見",
+        "artist": "164‬",
         "start": 6761
       }
     ]
@@ -52,18 +74,8 @@
       "緑仙",
       "葉加瀬冬雪"
     ],
-    "tags": [],
+    "tags": [ "カバー(ソロ)","歌"],
     "songs":[ 
-      {
-        "title": "ナイスだね",
-        "artist": "CUTIE STREET  ⚗🐼",
-        "start": 290
-      },
-      {
-        "title": "スターマイン",
-        "artist": "Da-iCE  ‪📿🍔‬☯️",
-        "start": 626
-      },
       {
         "title": "インフェルノ",
         "artist": "Mrs. GREEN APPLE  ☯️",
