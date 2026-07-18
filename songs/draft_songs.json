@@ -14,18 +14,11 @@
       "緑仙",
       "葉加瀬冬雪"
     ],
-    "tags": [],
+    "tags": [
+      "カバー(ソロ)",
+      "歌"
+    ],
     "songs": [
-      {
-        "title": "ナイスだね",
-        "artist": "CUTIE STREET  ⚗🐼",
-        "start": 290
-      },
-      {
-        "title": "スターマイン",
-        "artist": "Da-iCE  ‪📿🍔‬☯️",
-        "start": 626
-      },
       {
         "title": "インフェルノ",
         "artist": "Mrs. GREEN APPLE  ☯️",
@@ -61,12 +54,9 @@
     ],
     "songs": [
       {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
+        "title": "mosi mosi?",
+        "artist": "楽音",
+        "start": 626
       }
     ]
   },
@@ -217,12 +207,12 @@
       },
       {
         "title": "花の名",
-        "artist": "",
+        "artist": "BUMP OF CHICKEN",
         "start": 9407
       },
       {
         "title": "曇天",
-        "artist": "",
+        "artist": "DOES",
         "start": 9433
       },
       {
