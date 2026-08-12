@@ -1,4 +1,28 @@
 [{
+    "youtubeId": "IkEiizNfG0U",
+    "title": "【歌ってみた】君の神様になりたい。【長尾景/にじさんじ】",
+    "channel": "長尾景",
+    "date": "2026-07-24",
+    "thumbnail": "https://i.ytimg.com/vi/IkEiizNfG0U/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "歌動画"
+    ],
+    "tags": [
+      "カバー(ソロ)",
+      "歌"
+    ],
+    "songs": [
+      {
+        "title": "君の神様になりたい。",
+        "artist": "カンザキイオリ",
+        "start": 0
+      }
+    ]
+  },
+    {
     "youtubeId": "lOj9pgY87AA",
     "title": "mosi mosi?/楽音【長尾景/にじさんじ】【踊ってみた】",
     "channel": "長尾景",
