@@ -48,30 +48,6 @@
     ]
   },
   {
-    "youtubeId": "lOj9pgY87AA",
-    "title": "mosi mosi?/楽音【長尾景/にじさんじ】【踊ってみた】",
-    "channel": "長尾景",
-    "date": "2026-07-14",
-    "thumbnail": "https://i.ytimg.com/vi/lOj9pgY87AA/mqdefault.jpg",
-    "category": [
-      "踊り動画"
-    ],
-    "keywords": [
-      "踊り動画"
-    ],
-    "tags": [
-      "カバー(ソロ)",
-      "踊"
-    ],
-    "songs": [
-      {
-        "title": "mosi mosi?",
-        "artist": "楽音",
-        "start": 626
-      }
-    ]
-  },
-  {
     "youtubeId": "G1fbvfswdbg",
     "title": "【歌枠】自枠は久々？コラボ歌枠【長尾景/にじさんじ】",
     "channel": "長尾景",
@@ -105,6 +81,30 @@
         "title": "God knows...",
         "artist": "涼宮ハルヒ",
         "start": 5412
+      }
+    ]
+  },
+  {
+    "youtubeId": "lOj9pgY87AA",
+    "title": "mosi mosi?/楽音【長尾景/にじさんじ】【踊ってみた】",
+    "channel": "長尾景",
+    "date": "2026-07-14",
+    "thumbnail": "https://i.ytimg.com/vi/lOj9pgY87AA/mqdefault.jpg",
+    "category": [
+      "踊り動画"
+    ],
+    "keywords": [
+      "踊り動画"
+    ],
+    "tags": [
+      "カバー(ソロ)",
+      "踊"
+    ],
+    "songs": [
+      {
+        "title": "mosi mosi?",
+        "artist": "楽音",
+        "start": 626
       }
     ]
   },
@@ -769,6 +769,30 @@
     ]
   },
   {
+    "youtubeId": "fEmdR9C8qok",
+    "title": "【MV】怪談/長尾景",
+    "channel": "長尾景",
+    "date": "2026-05-15",
+    "thumbnail": "https://i.ytimg.com/vi/fEmdR9C8qok/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "歌動画"
+    ],
+    "tags": [
+      "オリジナル（ソロ）",
+      "歌"
+    ],
+    "songs": [
+      {
+        "title": "奏音69",
+        "artist": "Unknown Artist",
+        "start": 0
+      }
+    ]
+  },
+  {
     "youtubeId": "0s9xvT0ThAM",
     "title": "【ライブ本編】Uncharted Spheres / 無料パート #Uncharted_Spheres",
     "channel": "長尾景",
@@ -830,30 +854,6 @@
       {
         "title": "Virtual to LIVE",
         "artist": "にじさんじ",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "fEmdR9C8qok",
-    "title": "【MV】怪談/長尾景",
-    "channel": "長尾景",
-    "date": "2026-05-15",
-    "thumbnail": "https://i.ytimg.com/vi/fEmdR9C8qok/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "歌動画"
-    ],
-    "tags": [
-      "オリジナル（ソロ）",
-      "歌"
-    ],
-    "songs": [
-      {
-        "title": "奏音69",
-        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -1049,6 +1049,30 @@
     ]
   },
   {
+    "youtubeId": "IWs5oAC_1EI",
+    "title": "爆裂愛してる/M!LK サビ【長尾景/にじさんじ】【踊ってみた】#爆裂愛してる",
+    "channel": "長尾景",
+    "date": "2026-04-17",
+    "thumbnail": "https://i.ytimg.com/vi/IWs5oAC_1EI/mqdefault.jpg",
+    "category": [
+      "踊り動画"
+    ],
+    "keywords": [
+      "踊り動画"
+    ],
+    "tags": [
+      "カバー(ソロ)",
+      "踊"
+    ],
+    "songs": [
+      {
+        "title": "爆裂愛してる",
+        "artist": "M!LK",
+        "start": 0
+      }
+    ]
+  },
+  {
     "youtubeId": "6PlDzclBnYI",
     "title": "【#にぎにぎにじたうん】#VΔLZ 踊ってみた【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】",
     "channel": "長尾景",
@@ -1073,30 +1097,6 @@
       {
         "title": "にぎにぎにじたうん！",
         "artist": "周央サンゴ×にじさんじ",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "IWs5oAC_1EI",
-    "title": "爆裂愛してる/M!LK サビ【長尾景/にじさんじ】【踊ってみた】#爆裂愛してる",
-    "channel": "長尾景",
-    "date": "2026-04-17",
-    "thumbnail": "https://i.ytimg.com/vi/IWs5oAC_1EI/mqdefault.jpg",
-    "category": [
-      "踊り動画"
-    ],
-    "keywords": [
-      "踊り動画"
-    ],
-    "tags": [
-      "カバー(ソロ)",
-      "踊"
-    ],
-    "songs": [
-      {
-        "title": "爆裂愛してる",
-        "artist": "M!LK",
         "start": 0
       }
     ]
@@ -1166,58 +1166,6 @@
     ]
   },
   {
-    "youtubeId": "wvkFdtitbHY",
-    "title": "#VΔLZ - むてきのおうさま【オリジナル楽曲】",
-    "channel": "VΔLZ",
-    "date": "2026-04-11",
-    "thumbnail": "https://i.ytimg.com/vi/wvkFdtitbHY/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "むてきのおうさま",
-        "artist": "VΔLZ",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "9lVGZAX1ekA",
-    "title": "#VΔLZ - むてきのおうさま【オリジナル楽曲】",
-    "channel": "VΔLZ",
-    "date": "2026-04-11",
-    "thumbnail": "https://i.ytimg.com/vi/9lVGZAX1ekA/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "むてきのおうさま",
-        "artist": "VΔLZ",
-        "start": 0
-      }
-    ]
-  },
-  {
     "youtubeId": "1_lO_Ou3wuQ",
     "title": "【歌枠】にじさんじの皆さんと歌いたい【長尾景/戌亥とこ/綺沙良/渚トラウト/にじさんじ】",
     "channel": "長尾景",
@@ -1267,6 +1215,58 @@
         "title": "サマータイムレコードwith all",
         "artist": "じん",
         "start": 6544
+      }
+    ]
+  },
+  {
+    "youtubeId": "wvkFdtitbHY",
+    "title": "#VΔLZ - むてきのおうさま【オリジナル楽曲】",
+    "channel": "VΔLZ",
+    "date": "2026-04-11",
+    "thumbnail": "https://i.ytimg.com/vi/wvkFdtitbHY/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "VΔLZ",
+      "園児組",
+      "年長組",
+      "弦月藤士郎",
+      "歌動画",
+      "甲斐田晴"
+    ],
+    "tags": [],
+    "songs": [
+      {
+        "title": "むてきのおうさま",
+        "artist": "VΔLZ",
+        "start": 0
+      }
+    ]
+  },
+  {
+    "youtubeId": "9lVGZAX1ekA",
+    "title": "#VΔLZ - むてきのおうさま【オリジナル楽曲】",
+    "channel": "VΔLZ",
+    "date": "2026-04-11",
+    "thumbnail": "https://i.ytimg.com/vi/9lVGZAX1ekA/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "VΔLZ",
+      "園児組",
+      "年長組",
+      "弦月藤士郎",
+      "歌動画",
+      "甲斐田晴"
+    ],
+    "tags": [],
+    "songs": [
+      {
+        "title": "むてきのおうさま",
+        "artist": "VΔLZ",
+        "start": 0
       }
     ]
   },
