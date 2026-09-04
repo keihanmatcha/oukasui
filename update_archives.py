@@ -959,11 +959,9 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
         return []
     text = html.unescape(text)
 
-    # 厳密なタイムスタンプ抽出パターン (HH:MM:SS を MM:SS より優先)
-    # 前後に空白がなくても次のタイムスタンプの手前までを最短一致で取得
+    # タイムスタンプ抽出パターン (HH:MM:SS を MM:SS より優先)
     ts_regex = r'(?:(?<=\s)|^|\b)(\d{1,2}:\d{2}:\d{2}|\d{1,2}:\d{2})(?!\d)'
     
-    # タイムスタンプの位置をすべて検索
     matches = list(re.finditer(ts_regex, text))
     if len(matches) < 3:
         return []
@@ -983,15 +981,9 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
     has_owner_symbol = False
     has_any_symbol = False
 
-    # フォールバック用メンバー（動画メタデータのキーワード等から）
-    if fallback_members:
-        for m in fallback_members:
-            if m != channel_owner and m in KEYWORD_GROUPS.get("MEMBERS", []):
-                all_collab_livers.add(m)
-
+    # コメント文から絵文字を走査
     for _, raw_text in raw_entries:
         line = raw_text.split('\n')[0]
-        # LIVER_EMOJI_MAP を長い順に照合
         for mark in sorted(LIVER_EMOJI_MAP.keys(), key=len, reverse=True):
             liver_name = LIVER_EMOJI_MAP[mark]
             if mark in line and liver_name != "全員":
@@ -1001,6 +993,12 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
                 else:
                     all_collab_livers.add(liver_name)
 
+    # コメントから他ライバーが取れなかった場合、動画メタデータのキーワードから補完
+    if fallback_members:
+        for m in fallback_members:
+            if m != channel_owner and m in KEYWORD_GROUPS.get("MEMBERS", []):
+                all_collab_livers.add(m)
+
     other_members = [m for m in all_collab_livers if m != channel_owner]
 
     # ========================================================
@@ -1009,7 +1007,6 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
     songs = []
 
     for ts_str, raw_text in raw_entries:
-        # 1行目のみ対象
         clean_text = raw_text.split('\n')[0].strip()
         if not clean_text:
             continue
@@ -1022,12 +1019,10 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
         singers = []
         is_all = False
 
-        # 「全員」の判定
         if "全員" in clean_text:
             is_all = True
             clean_text = clean_text.replace("全員", "")
 
-        # 絵文字から歌唱ライバー特定（長いキー優先）
         for mark in sorted(LIVER_EMOJI_MAP.keys(), key=len, reverse=True):
             liver_name = LIVER_EMOJI_MAP[mark]
             if mark in clean_text:
@@ -1039,15 +1034,14 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
 
         singers = list(dict.fromkeys(singers))
 
-        # 【フィルタリング】長尾景が歌っていない曲のスキップ
-        # ※長尾の記号がコメント全体で一度でも確認できた場合のみフィルタを有効化（全滅事故を防止）
+        # 【全滅防止】長尾景の記号がコメント全体で一度でも確認できた場合のみ除外フィルタを適用
+        # （絵文字欠落時などに全曲消えてしまう事故を防ぐ）
         if has_any_symbol and has_owner_symbol:
             if not is_all and (channel_owner not in singers):
                 continue
 
-        # ゴミ除去: 先頭の記号・数字・コロン
+        # クレンジング
         clean_text = re.sub(r'^[:\s♪・\-\d\.\]】）)／/|｜￤~～]+', '', clean_text).strip()
-        # 残ったカッコの残骸（例: "(、)", "(,)", "()")
         clean_text = re.sub(r'[\(（][\s,、️‍]*[\)）]', '', clean_text).strip()
         clean_text = re.sub(r'\s*[~～]+$', '', clean_text).strip()
         clean_text = re.sub(r'\s*[\(（]?http.*$', '', clean_text).strip()
@@ -1073,13 +1067,13 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
             if collab_partners:
                 t = f"{t} with {','.join(sorted(collab_partners))}"
 
-        # 過去DBからアーティスト自動補完
+        # 過去DBから自動補完
         if not a and GLOBAL_ARTIST_DB:
             pure_t = re.sub(r'\s+with\s+.*$', '', t).strip()
             if pure_t in GLOBAL_ARTIST_DB:
                 a = GLOBAL_ARTIST_DB[pure_t]
 
-        # タイムスタンプ秒変換
+        # 秒変換
         parts = list(map(int, ts_str.split(':')))
         if len(parts) == 3:
             sec = parts[0] * 3600 + parts[1] * 60 + parts[2]
@@ -1096,6 +1090,7 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
 
     songs.sort(key=lambda x: x["start"])
     return songs
+
 
 def parse_cover_or_shorts(title, desc, is_short=False):
     """Shorts音源および歌ってみたの単曲メタデータ抽出"""
