@@ -1,5 +1,24 @@
 [
   {
+    "youtubeId": "UgIYGOicjEc",
+    "title": "秋のコラボ歌枠【長尾景/セラフ・ダズルガーデン/猫屋敷美紅/水面まどか/にじさんじ】【supported by DAM】",
+    "channel": "長尾景",
+    "date": "2026-09-04",
+    "thumbnail": "https://i.ytimg.com/vi/UgIYGOicjEc/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "セラフ・ダズルガーデン",
+      "歌配信",
+      "水面まどか",
+      "猫屋敷美紅",
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
     "youtubeId": "bjI_C6a2gRA",
     "title": "【公式切り抜き】初見R.E.P.O.に誘った先輩が怪異以上にヤバかった…!?【長尾景/夢追翔/戌亥とこ/山神カルタ/レイン・パターソン/渚トラウト/にじさんじ】",
     "channel": "長尾景",
@@ -84,6 +103,31 @@
       "長尾景"
     ],
     "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "yxfHiphbrBc",
+    "title": "【3Dカラオケ】ショートでよく聞く歌カラオケコラボ❤️‍🔥【長尾景/七瀬すず菜/町田ちま/ミラン・ケストレル/レイン・パターソン/にじさんじ】",
+    "channel": "長尾景",
+    "date": "2026-09-01",
+    "thumbnail": "https://i.ytimg.com/vi/yxfHiphbrBc/mqdefault.jpg",
+    "category": [
+      "3D",
+      "歌動画",
+      "歌配信"
+    ],
+    "keywords": [
+      "ミラン・ケストレル",
+      "レイン・パターソン",
+      "七瀬すず菜",
+      "歌動画",
+      "町田ちま",
+      "長尾景"
+    ],
+    "tags": [
+      "カバー(ユニット)",
+      "歌"
+    ],
     "songs": []
   },
   {
@@ -1165,7 +1209,7 @@
     "date": "2026-08-07",
     "thumbnail": "https://i.ytimg.com/vi/dH0ejW0Vfxc/mqdefault.jpg",
     "category": [
-      "公式切り抜き"
+      "歌配信"
     ],
     "keywords": [
       "長尾景"
@@ -8061,7 +8105,7 @@
     "date": "2026-02-21",
     "thumbnail": "https://i.ytimg.com/vi/FYiAJ9rF_7g/mqdefault.jpg",
     "category": [
-      "未分類"
+      "歌配信"
     ],
     "keywords": [
       "VΔLZ",
@@ -8072,7 +8116,63 @@
       "長尾景"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "GO!!!",
+        "artist": "",
+        "start": 316
+      },
+      {
+        "title": "カーテンコール",
+        "artist": "",
+        "start": 655
+      },
+      {
+        "title": "ピースサイン",
+        "artist": "",
+        "start": 1002
+      },
+      {
+        "title": "ALONES",
+        "artist": "",
+        "start": 1307
+      },
+      {
+        "title": "恥ずかしいか青春は",
+        "artist": "",
+        "start": 1791
+      },
+      {
+        "title": "CITRUS",
+        "artist": "",
+        "start": 2415
+      },
+      {
+        "title": "初めての恋が終わる時",
+        "artist": "",
+        "start": 2787
+      },
+      {
+        "title": "サウダージ",
+        "artist": "",
+        "start": 3578
+      },
+      {
+        "title": "ずうっといっしょ！",
+        "artist": "",
+        "start": 3969
+      },
+      {
+        "title": "ここにしか咲かない花",
+        "artist": "",
+        "start": 4268
+      },
+      {
+        "title": "シュガーソングとビターステップ",
+        "artist": "",
+        "start": 4806
+      }
+    ]
   },
   {
     "youtubeId": "80rNyHfHa5E",
