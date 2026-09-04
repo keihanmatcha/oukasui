@@ -16,6 +16,8 @@ GITHUB_REPO_NAME = "oukasui"
 JSON_FILE_PATH = "archives/archive_videos.json"
 MAX_PAGES_TO_FETCH = 100
 
+OWNER_NAME = "長尾景"
+
 CHANNELS = [
     {
         "id": "UCXW4MqCQn-jCaxlX-nn-BYg",
