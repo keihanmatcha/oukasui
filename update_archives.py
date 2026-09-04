@@ -1130,46 +1130,61 @@ def parse_cover_or_shorts(title, desc, is_short=False):
 
     return []
 
-def fetch_setlist_from_comments(youtube, video_id):
+def fetch_setlist_from_comments(youtube, video_id, fallback_members=None):
     """概要欄にセトリがない場合、コメント欄から取得"""
+    best_songs = []
+    
     try:
+        # 1. 高評価・関連度順（上位30件を走査）
         res = youtube.commentThreads().list(
             part="snippet",
             videoId=video_id,
             order="relevance",
-            maxResults=20,
+            maxResults=30,
             textFormat="plainText"
         ).execute()
 
-        best_songs = []
         for item in res.get("items", []):
             text = item["snippet"]["topLevelComment"]["snippet"]["textDisplay"]
             if re.search(r'\d{1,2}:\d{2}', text):
-                songs = parse_setlist_from_text(text)
+                songs = parse_setlist_from_text(text, fallback_members=fallback_members)
                 if len(songs) > len(best_songs):
                     best_songs = songs
 
-        if best_songs:
+        # 充分な曲数が取れていれば早期リターン
+        if len(best_songs) >= 3:
             return best_songs
 
-        search_res = youtube.commentThreads().list(
-            part="snippet",
-            videoId=video_id,
-            searchTerms="セトリ",
-            maxResults=5,
-            textFormat="plainText"
-        ).execute()
+        # 2. キーワード検索（「セトリ」「セットリスト」「タイムスタンプ」に対応）
+        search_terms = ["セットリスト", "セトリ", "タイムスタンプ"]
+        for term in search_terms:
+            try:
+                search_res = youtube.commentThreads().list(
+                    part="snippet",
+                    videoId=video_id,
+                    searchTerms=term,
+                    maxResults=5,
+                    textFormat="plainText"
+                ).execute()
 
-        for item in search_res.get("items", []):
-            text = item["snippet"]["topLevelComment"]["snippet"]["textDisplay"]
-            songs = parse_setlist_from_text(text)
-            if len(songs) > len(best_songs):
-                best_songs = songs
+                for item in search_res.get("items", []):
+                    text = item["snippet"]["topLevelComment"]["snippet"]["textDisplay"]
+                    if re.search(r'\d{1,2}:\d{2}', text):
+                        songs = parse_setlist_from_text(text, fallback_members=fallback_members)
+                        if len(songs) > len(best_songs):
+                            best_songs = songs
+
+                if len(best_songs) >= 3:
+                    break
+            except Exception:
+                continue
 
         return best_songs
-    except Exception:
-        return []
 
+    except Exception as e:
+        # コメント欄が無効化されている場合やAPIエラー時のログ出力
+        print(f"⚠️ [{video_id}] コメント取得エラー: {e}")
+        return best_songs
 
     
 def get_duration_seconds(duration_str):
