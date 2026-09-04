@@ -948,61 +948,88 @@ def extract_music_metadata(desc):
         auto_songs.append({"title": s_title, "artist": s_artist, "start": 0})
     return auto_songs
     
-def parse_setlist_from_text(text, channel_owner=OWNER_NAME):
+def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=None):
     """
     概要欄やコメントからセトリを抽出。
-    - 登場ライバーを事前走査し、「全員」を他ライバー名に展開
-    - ライバー識別記号がある場合、channel_ownerが歌っていない曲はスキップ
-    - アーティストが空ならGLOBAL_ARTIST_DBから自動補完
+    - 1:04:05 (H:M:S) と 2:00 (M:S) が混在しても正確に秒数変換
+    - タイムスタンプが改行なしで連結していても安全に分割
+    - カッコ内の絵文字からライバーを抽出し、(全員) を展開
     """
     if not text:
         return []
     text = html.unescape(text)
 
-    pattern = r'(\d{1,2}:\d{2}(?::\d{2})?)(.*?)(?=\d{1,2}:\d{2}(?::\d{2})?|$)'
-    matches = re.findall(pattern, text, re.DOTALL)
-
+    # 厳密なタイムスタンプ抽出パターン (HH:MM:SS を MM:SS より優先)
+    # 前後に空白がなくても次のタイムスタンプの手前までを最短一致で取得
+    ts_regex = r'(?:(?<=\s)|^|\b)(\d{1,2}:\d{2}:\d{2}|\d{1,2}:\d{2})(?!\d)'
+    
+    # タイムスタンプの位置をすべて検索
+    matches = list(re.finditer(ts_regex, text))
     if len(matches) < 3:
         return []
 
+    raw_entries = []
+    for i in range(len(matches)):
+        ts_str = matches[i].group(1)
+        start_idx = matches[i].end()
+        end_idx = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+        content = text[start_idx:end_idx].strip()
+        raw_entries.append((ts_str, content))
+
+    # ========================================================
     # 1. 登場ライバーの事前収集
+    # ========================================================
     all_collab_livers = set()
+    has_owner_symbol = False
     has_any_symbol = False
 
-    for _, raw_text in matches:
-        line = raw_text.strip().split('\n')[0]
-        for mark, liver_name in LIVER_EMOJI_MAP.items():
+    # フォールバック用メンバー（動画メタデータのキーワード等から）
+    if fallback_members:
+        for m in fallback_members:
+            if m != channel_owner and m in KEYWORD_GROUPS.get("MEMBERS", []):
+                all_collab_livers.add(m)
+
+    for _, raw_text in raw_entries:
+        line = raw_text.split('\n')[0]
+        # LIVER_EMOJI_MAP を長い順に照合
+        for mark in sorted(LIVER_EMOJI_MAP.keys(), key=len, reverse=True):
+            liver_name = LIVER_EMOJI_MAP[mark]
             if mark in line and liver_name != "全員":
-                all_collab_livers.add(liver_name)
                 has_any_symbol = True
-        for handle_key, liver_name in HANDLE_TO_NAME_MAP.items():
-            if handle_key in line and liver_name != "全員":
-                all_collab_livers.add(liver_name)
-                has_any_symbol = True
+                if liver_name == channel_owner:
+                    has_owner_symbol = True
+                else:
+                    all_collab_livers.add(liver_name)
 
     other_members = [m for m in all_collab_livers if m != channel_owner]
 
-    # 2. 各曲のパース
+    # ========================================================
+    # 2. 各曲の解析
+    # ========================================================
     songs = []
-    for ts_str, raw_text in matches:
-        clean_text = re.sub(r'<[^>]+>', '', raw_text).strip()
-        clean_text = clean_text.split('\n')[0].strip()
 
+    for ts_str, raw_text in raw_entries:
+        # 1行目のみ対象
+        clean_text = raw_text.split('\n')[0].strip()
         if not clean_text:
             continue
 
+        # 除外キーワード判定（自己紹介、感想など）
         clean_upper = clean_text.upper()
         if any(x in clean_upper for x in EXCLUDE_SETLIST_KEYWORDS):
             continue
 
-        # ライバー特定
         singers = []
         is_all = False
+
+        # 「全員」の判定
         if "全員" in clean_text:
             is_all = True
             clean_text = clean_text.replace("全員", "")
 
-        for mark, liver_name in LIVER_EMOJI_MAP.items():
+        # 絵文字から歌唱ライバー特定（長いキー優先）
+        for mark in sorted(LIVER_EMOJI_MAP.keys(), key=len, reverse=True):
+            liver_name = LIVER_EMOJI_MAP[mark]
             if mark in clean_text:
                 if liver_name == "全員":
                     is_all = True
@@ -1010,21 +1037,18 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME):
                     singers.append(liver_name)
                 clean_text = clean_text.replace(mark, "")
 
-        for handle_key, liver_name in HANDLE_TO_NAME_MAP.items():
-            if handle_key in clean_text:
-                singers.append(liver_name)
-                clean_text = clean_text.replace(handle_key, "")
-
         singers = list(dict.fromkeys(singers))
 
-        # 記号による歌い分けがある場合、長尾景が歌っていない曲を除外
-        if has_any_symbol:
+        # 【フィルタリング】長尾景が歌っていない曲のスキップ
+        # ※長尾の記号がコメント全体で一度でも確認できた場合のみフィルタを有効化（全滅事故を防止）
+        if has_any_symbol and has_owner_symbol:
             if not is_all and (channel_owner not in singers):
                 continue
 
-        # クレンジング
+        # ゴミ除去: 先頭の記号・数字・コロン
         clean_text = re.sub(r'^[:\s♪・\-\d\.\]】）)／/|｜￤~～]+', '', clean_text).strip()
-        clean_text = re.sub(r'[\(（][,\s]*[\)）]', '', clean_text).strip()
+        # 残ったカッコの残骸（例: "(、)", "(,)", "()")
+        clean_text = re.sub(r'[\(（][\s,、️‍]*[\)）]', '', clean_text).strip()
         clean_text = re.sub(r'\s*[~～]+$', '', clean_text).strip()
         clean_text = re.sub(r'\s*[\(（]?http.*$', '', clean_text).strip()
 
@@ -1043,22 +1067,31 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME):
         # with 〇〇 の付与
         if is_all:
             if other_members:
-                t = f"{t} with {','.join(other_members)}"
+                t = f"{t} with {','.join(sorted(other_members))}"
         else:
             collab_partners = [s for s in singers if s != channel_owner]
             if collab_partners:
-                t = f"{t} with {','.join(collab_partners)}"
+                t = f"{t} with {','.join(sorted(collab_partners))}"
 
-        # アーティスト名の逆引き補完
+        # 過去DBからアーティスト自動補完
         if not a and GLOBAL_ARTIST_DB:
             pure_t = re.sub(r'\s+with\s+.*$', '', t).strip()
             if pure_t in GLOBAL_ARTIST_DB:
                 a = GLOBAL_ARTIST_DB[pure_t]
 
+        # タイムスタンプ秒変換
+        parts = list(map(int, ts_str.split(':')))
+        if len(parts) == 3:
+            sec = parts[0] * 3600 + parts[1] * 60 + parts[2]
+        elif len(parts) == 2:
+            sec = parts[0] * 60 + parts[1]
+        else:
+            sec = 0
+
         songs.append({
             "title": t,
             "artist": a,
-            "start": timestamp_to_seconds(ts_str)
+            "start": sec
         })
 
     songs.sort(key=lambda x: x["start"])
