@@ -469,11 +469,315 @@ UNIT_GROUP_MAP = {
     "にじ漢歌祭り": ["北見遊征", "セラフ・ダズルガーデン", "酒寄颯馬", "榊ネス", "伊波ライ", "ミラン・ケストレル", "風楽奏斗", "ジョー・力一", "甲斐田晴", "宇佐美リト", "緋八マナ", "渚トラウト"],
     "だいさんじ甲子園": ["緑仙", "グウェル・オス・ガール", "榊ネス"]
 }
+# 絵文字 / 記号 → ライバー名 変換辞書
+# 絵文字 / 記号 → ライバー名 変換辞書
+LIVER_EMOJI_MAP = {
+    # --- 4絵文字 ---
+    "♥️♠️♦️♣️": "物述有栖",
+    "♥♠♦♣": "物述有栖",
+
+    # --- 3絵文字 ---
+    "🥼🌱😺": "レオス・ヴィンセント",
+
+    # --- 2絵文字（異字体セレクタ等のゆれ含む） ---
+    "🎀💙": "勇気ちひろ",
+    "🏰🌕️": "ギルザレンIII世",
+    "🏰🌕": "ギルザレンIII世",
+    "竜胆尊": "竜胆尊",
+    "🍶⚜️": "竜胆尊",
+    "🍶⚜": "竜胆尊",
+    "🚪👿": "でびでび・でびる",
+    "🎑💊": "月見しずく",
+    "🐕🐾": "黒井しば",
+    "🐺🍎": "童田明治",
+    "📷💚": "瀬戸美夜子",
+    "🏰🕛": "御伽原江良",
+    "🌐💫": "雪城眞尋",
+    "🍃🗻": "葉山舞鈴",
+    "🎩🐤": "夜見れな",
+    "💻💙": "黛灰",
+    "🍮💎": "相羽ういは",
+    "🐻💎": "ラトナ・プティ",
+    "🏃‍♀️💨": "早瀬走",
+    "💉💘": "健屋花那",
+    "❤️🦋": "ルイス・キャミー",
+    "❤🦋": "ルイス・キャミー",
+    "💥衝突": "魔使マオ",
+    "🥂✨": "不破湊",
+    "👠⛓": "白雪巴",
+    "👠⛓️": "白雪巴",
+    "✖🍳": "奈羅花",
+    "🐏🎵": "来栖夏芽",
+    "🎻🛵": "弦月藤士郎",
+    "🦖🎖": "朝日南アカネ",
+    "🦖🎖️": "朝日南アカネ",
+    "💞🦩": "周央サンゴ",
+    "🐬🌱": "西園チグサ",
+    "🗝💸": "ローレン・イロアス",
+    "💯🦂": "壱百満天原サロメ",
+    "🍝🍷": "風楽奏斗",
+    "♦☕": "渡会雲雀",
+    "♦️☕": "渡会雲雀",
+    "🦉🎻": "セラフ・ダズルガーデン",
+    "🦦✌️": "Miyu Ottavia",
+    "🦦✌": "Miyu Ottavia",
+    "😈💥": "Riksa Dhirendra",
+    "🕰🌺": "Layla Alstroemeria",
+    "🌋🍔": "Etna Crimson",
+    "🔦🦁": "Siska Leontyne",
+    "🐥🍭": "Nagisa Arcinia",
+    "🌒☁": "Reza Avanluna",
+    "🌒☁️": "Reza Avanluna",
+    "🐾🏵": "Hyona Elatiora",
+    "🐾🏵️": "Hyona Elatiora",
+    "⚗️🎼": "Xia Ekavira",
+    "⚗🎼": "Xia Ekavira",
+    "👻📌": "Mika Melatika",
+    "🎀🧸": "ユ・ルリ",
+    "🌛🌱": "シン・ユヤ",
+    "🦴🔔": "カエン",
+    "🌑🦋": "ハン・チホ",
+    "☁️🌫️": "ハクレン",
+    "☁🌫": "ハクレン",
+    "🌹💛": "チェ・アラ",
+    "❄💜": "ヌン・ボラ",
+    "❄️💜": "ヌン・ボラ",
+    "💗🌕️": "セフィナ",
+    "💗🌕": "セフィナ",
+    "🐈‍⬛🔪": "コ・ヤミ",
+    "🐈‍⬛🔪️": "コ・ヤミ",
+    "🎮️🦭": "ハ・ユン",
+    "🎮🦭": "ハ・ユン",
+    "🌸🌙": "ナ・セラ",
+    "🐱💫": "獅子堂あかり",
+    "🍕🎢": "鏑木ろこ",
+    "⚾🧡": "五十嵐梨花",
+    "🐰🗞": "ソフィア・ヴァレンタイン",
+    "🧸🌙": "倉持めると",
+    "🍱🦖": "赤城ウェン",
+    "🌩🦒": "宇佐美リト",
+    "🌩️🦒": "宇佐美リト",
+    "🐝🤣": "緋八マナ",
+    "🐙🌟": "星導ショウ",
+    "🥷🔫": "叢雲カゲツ",
+    "👻🔪": "小柳ロウ",
+    "🪓🎀": "立伝都々",
+    "🚓🐾": "栞葉るり",
+    "🦋⏳": "ミラン・ケストレル",
+    "📿🍔": "北見遊征",
+    "🔑🐍": "魁星",
+    "🫖🌿": "榊ネス",
+    "🍰🧁": "早乙女ベリー",
+    "🐣📛": "雲母たまこ",
+    "🐟🍴": "渚トラウト",
+    "📚🗣": "一橋綾人",
+    "📚🗣️": "一橋綾人",
+    "💼📊": "五木左京",
+    "♫🐌": "蝸堂みかる",
+    "♫💮": "夜牛詩乃",
+    "♫🦎": "十河ののは",
+    "♫💐": "猫屋敷美紅",
+    "👑🌸": "皇れお",
+    "💍📘": "篠宮ゆの",
+    "🏰🍬": "城瀬いすみ",
+    "🧢🪽": "花籠つばさ",
+    "🏖️🫶": "白砂あやね",
+    "🏖🫶": "白砂あやね",
+    "🪟🫶": "水面まどか",
+    "👊🐯": "男虎",
+    "🧰✂️": "九里詠太",
+    "🧰✂": "九里詠太",
+    "🫧🐬": "小々波いるか",
+    "💜🗯️": "千凛あゆむ",
+    "💜🗯": "千凛あゆむ",
+    "🗡🐼": "塚原大地",
+    "🦈✦": "Rei7",
+    "🎮️🥇": "レヨン",
+    "🎮🥇": "レヨン",
+    "🍮💌": "ぷりん・らら・もーど",
+    "🌠👊": "ぽめろ・ぱんち",
+    "🐅🎻": "神永タイガ",
+    "⛰️🎹": "山田龍一郎",
+    "⛰🎹": "山田龍一郎",
+
+    # --- 1絵文字 / 単一記号 ---
+    "🐰": "月ノ美兎",
+    "🗼": "える",
+    "🍁": "樋口楓",
+    "🥦": "静凛",
+    "💜": "静凛",
+    "🌱": "渋谷ハジメ",
+    "🐈": "鈴谷アキ",
+    "🎶": "鈴鹿詩子",
+    "🍓": "宇志海いちご",
+    "🌷": "家長むぎ",
+    "🌇": "夕陽リリ",
+    "🐟": "文野環",
+    "✌️": "伏見ガク",
+    "✌": "伏見ガク",
+    "🦊": "伏見ガク",
+    "⚔️": "剣持刀也",
+    "⚔": "剣持刀也",
+    "🌼": "森中花咲",
+    "🐻": "森中花咲",
+    "🔫": "叶",
+    "💀": "赤羽葉子",
+    "🎋": "笹木咲",
+    "🍜": "闇夜乃モルル",
+    "🌻": "本間ひまわり",
+    "🍼": "魔界ノりりむ",
+    "❄️": "雪汝",
+    "❄": "雪汝",
+    "👻": "椎名唯華",
+    "🔥": "ドーラ",
+    "⛩️": "海夜叉神",
+    "⛩": "海夜叉神",
+    "☀️": "名伽尾アズマ",
+    "🦑": "出雲霞",
+    "🐐": "轟京子",
+    "🔔": "シスター・クレア",
+    "🌵": "花畑チャイカ",
+    "🖥️": "社築",
+    "🖥": "社築",
+    "🍑": "安土桃",
+    "☪️": "鈴木勝",
+    "☪": "鈴木勝",
+    "🐼": "緑仙",
+    "🌙": "卯月コウ",
+    "🍊": "八朔ゆず",
+    "🔪": "神田笑一",
+    "🍅": "神田笑一",
+    "🐤": "飛鳥ひな",
+    "🍭": "春崎エアル",
+    "☂️": "雨森小夜",
+    "☔️": "雨森小夜",
+    "☂": "雨森小夜",
+    "☔": "雨森小夜",
+    "🦅": "鷹宮リオン",
+    "👨‍🌾": "舞元啓介",
+    "🌸": "桜凛月",
+    "🐹": "町田ちま",
+    "🤡": "ジョー・力一",
+    "🎈": "ジョー・力一",
+    "🍬": "遠北千南",
+    "🎙️": "成瀬鳴",
+    "🎙": "成瀬鳴",
+    "🥃": "ベルモンド・バンデラス",
+    "🌽": "矢車りね",
+    "🎤": "夢追翔",
+    "🧠": "久遠千歳",
+    "🐽": "郡道美玲",
+    "🌖": "夢月ロア",
+    "♨️": "小野町春香",
+    "♨": "小野町春香",
+    "🧂": "語部紡",
+    "📘": "語部紡",
+    "🍹": "戌亥とこ",
+    "⚖️": "アンジュ・カトリーナ",
+    "⚖": "アンジュ・カトリーナ",
+    "👑": "リゼ・ヘルエスタ",
+    "🌶️": "三枝明那",
+    "🌶": "三枝明那",
+    "💕": "愛園愛美",
+    "🎨": "鈴原るる",
+    "🛡️": "エクス・アルビオ",
+    "🛡": "エクス・アルビオ",
+    "🔲": "レヴィ・エリファ",
+    "🎃": "ニュイ・ソシエール",
+    "⚗️": "葉加瀬冬雪",
+    "⚗": "葉加瀬冬雪",
+    "🏢": "加賀美ハヤト",
+    "📕": "アルス・アルマル",
+    "🎐": "天宮こころ",
+    "🌲": "エリー・コニファー",
+    "🚴‍♀️": "早瀬走",
+    "🧐": "シェリン・バーガンディ",
+    "🔖": "フミ",
+    "🌟": "星川サラ",
+    "🎴": "山神カルタ",
+    "★": "えま★おうがすと",
+    "😎": "グウェル・オス・ガール",
+    "🧷": "ましろ爻",
+    "🎠": "フレン・E・ルスタリオ",
+    "🐝": "メリッサ・キンレンカ",
+    "💧": "イブラヒム",
+    "☯️": "長尾景",
+    "☯": "長尾景",
+    "🌞": "甲斐田晴",
+    "🌌": "空星きらめ",
+    "🍯": "東堂コハク",
+    "❇️": "北小路ヒスイ",
+    "❇": "北小路ヒスイ",
+    "🐈‍⬛": "アクシア・クローネ",
+    "🍵": "オリバー・エバンス",
+    "❤️‍🔥": "レイン・パターソン",
+    "❤‍🔥": "レイン・パターソン",
+    "💭": "天ヶ瀬むゆ",
+    "🫐": "先斗寧",
+    "🍀": "海妹四葉",
+    "📄": "四季凪アキラ",
+    "🥩": "Taka Radjiman",
+    "🔶": "ZEA Cornelia",
+    "☕": "Hana Macchia",
+    "🚨": "Rai Galilei",
+    "🐧": "Amicia Michella",
+    "👽": "Azura Cecillia",
+    "🐯": "Nara Haramaung",
+    "🎣": "Bonnivier Pranaja",
+    "🎁": "Derem Kado",
+    "📶": "ウィフィ",
+    "🌊": "ミン・スゥーハ",
+    "👔": "ガオン",
+    "🎵": "ローロー",
+    "🌧": "ソ・ナギ",
+    "🌧️": "ソ・ナギ",
+    "🐾": "イ・シウ",
+    "😸": "明楽レイ",
+    "🚀": "イ・ロハ",
+    "📌": "ヤン・ナリ",
+    "👁‍🗨": "リュ・ハリ",
+    "🌫️": "シン・ギル",
+    "🌫": "シン・ギル",
+    "⚜️": "オ・ジユ",
+    "⚜": "オ・ジユ",
+    "🍡": "ソン・ミア",
+    "🏴‍☠️": "バン・ハダ",
+    "🏴‍☠": "バン・ハダ",
+    "🍰": "イ・オン",
+    "🫧": "小清水透",
+    "❤️‍🩹": "石神のぞみ",
+    "❤‍🩹": "石神のぞみ",
+    "🤝": "佐伯イッテツ",
+    "💡": "伊波ライ",
+    "📒": "司賀りこ",
+    "🛼": "珠乃井ナナ",
+    "🪞": "綺沙良",
+    "🪷": "梢桃音",
+    "🥨": "ルンルン",
+    "🥗": "七瀬すず菜",
+    "🍇": "酒寄颯馬",
+    "🥢": "御子神琴音",
+
+    # --- 予約語・全体歌唱 ---
+    "全員": "全員"
+}
+# セトリパース時の除外単語
+EXCLUDE_SETLIST_KEYWORDS = [
+    "開始", "セトリ", "SETLIST", "本編", "待機", "挨拶",
+    "MC", "トーク", "自己紹介", "感想", "告知", "お披露目",
+    "OP", "ED", "スパチャ", "振り返り"
+]
+# キャッシュ辞書
+GLOBAL_ARTIST_DB: Dict[str, str] = {}
+HANDLE_MAP_LOWER = {k.lower(): v for k, v in HANDLE_TO_NAME_MAP.items()}
+
 # --- 3. タグ判定関数 (リスト形式へ変更) ---
 # パフォーマンス最適化: ループ外で小文字化マップを作成
 HANDLE_MAP_LOWER = {k.lower(): v for k, v in HANDLE_TO_NAME_MAP.items()}
 
-
+# ==============================================================================
+# 2. タグ & メタデータ判定関数
+# ==============================================================================
 
 def analyze_video_tags(title, description, fixed_tags, channel_name="", is_short=False):
     detected_categories = set()
@@ -556,6 +860,10 @@ def analyze_video_tags(title, description, fixed_tags, channel_name="", is_short
         detected_categories.add("未分類")
 
     return sorted(list(detected_categories)), sorted(list(detected_keywords))
+
+# ==============================================================================
+# 4. YouTube 巡回 & GitHub 連携
+# ==============================================================================
 # --- 4. YouTube API ---
 def get_uploads_playlist_id(youtube, channel_id):
     try:
@@ -567,6 +875,10 @@ def timestamp_to_seconds(ts_str):
     if len(parts) == 2: return int(parts[0]) * 60 + int(parts[1])
     if len(parts) == 3: return int(parts[0]) * 3600 + int(parts[1]) * 60 + int(parts[2])
     return 0
+
+# ==============================================================================
+# 3. 楽曲抽出 & セトリパース処理
+# ==============================================================================
 def extract_music_metadata(desc):
     auto_songs = []
     # 日本語・英語両方のパターンに対応
@@ -581,56 +893,196 @@ def extract_music_metadata(desc):
         auto_songs.append({"title": s_title, "artist": s_artist, "start": 0})
     return auto_songs
     
-def parse_setlist_from_text(text):
-    
-    if not text: return []
+def parse_setlist_from_text(text, channel_owner=OWNER_NAME):
+    """
+    概要欄やコメントからセトリを抽出。
+    - 登場ライバーを事前走査し、「全員」を他ライバー名に展開
+    - ライバー識別記号がある場合、channel_ownerが歌っていない曲はスキップ
+    - アーティストが空ならGLOBAL_ARTIST_DBから自動補完
+    """
+    if not text:
+        return []
     text = html.unescape(text)
 
-    # タイムスタンプ(ts)と、次のタイムスタンプが来るまでのテキスト(raw)をペアで抽出
     pattern = r'(\d{1,2}:\d{2}(?::\d{2})?)(.*?)(?=\d{1,2}:\d{2}(?::\d{2})?|$)'
     matches = re.findall(pattern, text, re.DOTALL)
-    
-    if len(matches) < 4: return []
 
+    if len(matches) < 3:
+        return []
+
+    # 1. 登場ライバーの事前収集
+    all_collab_livers = set()
+    has_any_symbol = False
+
+    for _, raw_text in matches:
+        line = raw_text.strip().split('\n')[0]
+        for mark, liver_name in LIVER_EMOJI_MAP.items():
+            if mark in line and liver_name != "全員":
+                all_collab_livers.add(liver_name)
+                has_any_symbol = True
+        for handle_key, liver_name in HANDLE_TO_NAME_MAP.items():
+            if handle_key in line and liver_name != "全員":
+                all_collab_livers.add(liver_name)
+                has_any_symbol = True
+
+    other_members = [m for m in all_collab_livers if m != channel_owner]
+
+    # 2. 各曲のパース
     songs = []
-    # 除外したい単語リスト
-    exclude_keywords = ["開始", "セトリ", "SETLIST", "本編", "待機", "挨拶", "MC", "トーク"]
-
     for ts_str, raw_text in matches:
-        # 1. HTMLタグ除去とクリーニング
         clean_text = re.sub(r'<[^>]+>', '', raw_text).strip()
-        
-        # 2. 曲名の前後にある不要な記号（♪、・、数字、カッコ、~ など）を徹底除去
-        clean_text = re.sub(r'^[:\s♪・\-\d\.\]】）)／/|｜￤]+', '', clean_text).strip()
-        # 末尾の「~」や「～」を削除
-        clean_text = re.sub(r'\s*[~～]+$', '', clean_text).strip()
-        # 行末のURLやカッコ内を掃除
-        clean_text = re.sub(r'\s*[\(（]?http.*$', '', clean_text).strip()
+        clean_text = clean_text.split('\n')[0].strip()
 
-        # 3. 除外ワード判定（大文字に変換してからチェック）
         if not clean_text:
             continue
-            
-        clean_text_upper = clean_text.upper()
-        if any(x in clean_text_upper for x in exclude_keywords):
+
+        clean_upper = clean_text.upper()
+        if any(x in clean_upper for x in EXCLUDE_SETLIST_KEYWORDS):
             continue
 
-        # 4. アーティスト名の分割
+        # ライバー特定
+        singers = []
+        is_all = False
+        if "全員" in clean_text:
+            is_all = True
+            clean_text = clean_text.replace("全員", "")
+
+        for mark, liver_name in LIVER_EMOJI_MAP.items():
+            if mark in clean_text:
+                if liver_name == "全員":
+                    is_all = True
+                else:
+                    singers.append(liver_name)
+                clean_text = clean_text.replace(mark, "")
+
+        for handle_key, liver_name in HANDLE_TO_NAME_MAP.items():
+            if handle_key in clean_text:
+                singers.append(liver_name)
+                clean_text = clean_text.replace(handle_key, "")
+
+        singers = list(dict.fromkeys(singers))
+
+        # 記号による歌い分けがある場合、長尾景が歌っていない曲を除外
+        if has_any_symbol:
+            if not is_all and (channel_owner not in singers):
+                continue
+
+        # クレンジング
+        clean_text = re.sub(r'^[:\s♪・\-\d\.\]】）)／/|｜￤~～]+', '', clean_text).strip()
+        clean_text = re.sub(r'[\(（][,\s]*[\)）]', '', clean_text).strip()
+        clean_text = re.sub(r'\s*[~～]+$', '', clean_text).strip()
+        clean_text = re.sub(r'\s*[\(（]?http.*$', '', clean_text).strip()
+
+        if not clean_text:
+            continue
+
+        # 曲名とアーティストの分離
         t, a = clean_text, ""
-        separators = [' / ', '／', ' - ', ' － ', '：', ' : ', '/','￤']
+        separators = [' / ', '／', ' - ', ' － ', '：', ' : ', '/', '￤']
         for sep in separators:
             if sep in clean_text:
                 parts = clean_text.split(sep, 1)
                 t, a = parts[0].strip(), parts[1].strip()
                 break
-        
+
+        # with 〇〇 の付与
+        if is_all:
+            if other_members:
+                t = f"{t} with {','.join(other_members)}"
+        else:
+            collab_partners = [s for s in singers if s != channel_owner]
+            if collab_partners:
+                t = f"{t} with {','.join(collab_partners)}"
+
+        # アーティスト名の逆引き補完
+        if not a and GLOBAL_ARTIST_DB:
+            pure_t = re.sub(r'\s+with\s+.*$', '', t).strip()
+            if pure_t in GLOBAL_ARTIST_DB:
+                a = GLOBAL_ARTIST_DB[pure_t]
+
         songs.append({
             "title": t,
             "artist": a,
             "start": timestamp_to_seconds(ts_str)
         })
-            
+
+    songs.sort(key=lambda x: x["start"])
     return songs
+
+def parse_cover_or_shorts(title, desc, is_short=False):
+    """Shorts音源および歌ってみたの単曲メタデータ抽出"""
+    if is_short:
+        m = re.search(r'(?:楽曲|Music|音源)[:：\s]+(.*?)(?:\s*[-－/／]\s*)([^\n]+)', desc)
+        if m:
+            return [{"title": m.group(1).strip(), "artist": m.group(2).strip(), "start": 0}]
+
+    meta_songs = extract_music_metadata(desc)
+    if meta_songs and meta_songs[0]["artist"] and meta_songs[0]["artist"] != "Unknown Artist":
+        return meta_songs
+
+    clean_title = re.sub(r'【(?:歌ってみた|COVER|Cover|歌|MV|オリジナルMV)】|\[(?:Cover|MV)\]', '', title, flags=re.I).strip()
+    clean_title = re.sub(r'\/.*(?:にじさんじ|Ch).*$', '', clean_title).strip()
+
+    pattern = r'^(.*?)(?:\s*[/／\-－]\s*)(.*?)(?:\s*[\(（].*covered.*[\)）]|\s*$)'
+    m = re.search(pattern, clean_title, flags=re.I)
+    if m:
+        t, a = m.group(1).strip(), m.group(2).strip()
+        if not a and t in GLOBAL_ARTIST_DB:
+            a = GLOBAL_ARTIST_DB[t]
+        return [{"title": t, "artist": a, "start": 0}]
+
+    for line in desc.split("\n"):
+        if re.search(r'^(?:本家様?|Original|Music)[:：\s]+(.*)', line, re.I):
+            val = re.sub(r'^(?:本家様?|Original|Music)[:：\s]+', '', line).strip()
+            if " / " in val or "／" in val:
+                parts = re.split(r'[/／]', val, 1)
+                return [{"title": parts[0].strip(), "artist": parts[1].strip(), "start": 0}]
+            else:
+                return [{"title": clean_title, "artist": val, "start": 0}]
+
+    return []
+
+def fetch_setlist_from_comments(youtube, video_id):
+    """概要欄にセトリがない場合、コメント欄から取得"""
+    try:
+        res = youtube.commentThreads().list(
+            part="snippet",
+            videoId=video_id,
+            order="relevance",
+            maxResults=20,
+            textFormat="plainText"
+        ).execute()
+
+        best_songs = []
+        for item in res.get("items", []):
+            text = item["snippet"]["topLevelComment"]["snippet"]["textDisplay"]
+            if re.search(r'\d{1,2}:\d{2}', text):
+                songs = parse_setlist_from_text(text)
+                if len(songs) > len(best_songs):
+                    best_songs = songs
+
+        if best_songs:
+            return best_songs
+
+        search_res = youtube.commentThreads().list(
+            part="snippet",
+            videoId=video_id,
+            searchTerms="セトリ",
+            maxResults=5,
+            textFormat="plainText"
+        ).execute()
+
+        for item in search_res.get("items", []):
+            text = item["snippet"]["topLevelComment"]["snippet"]["textDisplay"]
+            songs = parse_setlist_from_text(text)
+            if len(songs) > len(best_songs):
+                best_songs = songs
+
+        return best_songs
+    except Exception:
+        return []
+
+
     
 def get_duration_seconds(duration_str):
     match = re.match(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?', duration_str)
@@ -693,7 +1145,41 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
         except Exception as e:
             print(f"⚠️ Error: {e}"); break
     return videos
-    
+
+def load_artist_db():
+    """リポジトリ内の全曲情報（songs/videos.json, archives/*.json）からアーティストDBを構築"""
+    global GLOBAL_ARTIST_DB
+    headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
+    source_files = [
+        "songs/videos.json",
+        "archives/archive_videos.json",
+        "archives/external_videos.json"
+    ]
+
+    all_data = []
+    for rel_path in source_files:
+        url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{rel_path}"
+        try:
+            r = requests.get(url, headers=headers)
+            if r.status_code == 200:
+                raw_bytes = base64.b64decode(r.json()['content'])
+                text = raw_bytes.decode('utf-8-sig').strip()
+                if text:
+                    all_data.extend(json.loads(text))
+        except Exception:
+            continue
+
+    db = {}
+    for item in all_data:
+        for s in item.get("songs", []):
+            title = s.get("title", "").strip()
+            pure_title = re.sub(r'\s+with\s+.*$', '', title).strip()
+            artist = s.get("artist", "").strip()
+            if pure_title and artist and artist != "Unknown Artist" and pure_title not in db:
+                db[pure_title] = artist
+
+    GLOBAL_ARTIST_DB = db
+    print(f"📚 アーティストDB初期化完了: {len(GLOBAL_ARTIST_DB)} 曲をキャッシュ")
     
 def update_github_json(new_videos):
     headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
@@ -745,7 +1231,10 @@ def update_github_json(new_videos):
     else:
         print(f"❌ Failed to update GitHub: {put_res.status_code}")
         print(put_res.text)
-   
+
+# ==============================================================================
+# 5. エントリーポイント
+# ==============================================================================
 def main():
     if not YOUTUBE_API_KEY or not GITHUB_TOKEN: return
     youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
