@@ -1217,12 +1217,20 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
                 # 2. カテゴリに応じた楽曲情報の自動補完
                 auto_songs = []
                 cat_set = set(cat)
-                
-                if "歌配信" in cat_set:
-                    auto_songs = parse_setlist_from_text(desc)
-                elif cat_set.intersection({"歌動画", "踊り動画"}):
-                    # 公式ライセンス情報を優先、なければセトリ解析
-                    auto_songs = extract_music_metadata(desc) or parse_setlist_from_text(desc)
+                # 歌配信、または歌動画/踊り動画（長尺のカラオケ・ライブコラボなど）
+                if "歌配信" in cat_set or cat_set.intersection({"歌動画", "踊り動画"}):
+                    # まず概要欄からセトリ抽出
+                    auto_songs = parse_setlist_from_text(desc, fallback_members=kw)
+                    # 概要欄になく、5分以上の動画ならコメント欄を探索
+                    if not auto_songs and sec > 300:
+                        print(f"💬 [{v_id}] 概要欄にセトリなし。コメント欄を探索中...")
+                        auto_songs = fetch_setlist_from_comments(youtube, v_id, fallback_members=kw)
+                    # それでも取れず、単曲の歌動画・踊り動画なら公式メタデータまたはタイトルから抽出
+                    if not auto_songs and not is_short:
+                        auto_songs = extract_music_metadata(desc) or parse_cover_or_shorts(snip['title'], desc, is_short=False)
+                elif is_short:
+                    # Shorts 音源の抽出
+                    auto_songs = parse_cover_or_shorts(snip['title'], desc, is_short=True)
 
                 # 3. データの登録 (ここが 1つだけになるように修正)
                 videos.append({
