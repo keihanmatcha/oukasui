@@ -1,25 +1,161 @@
 [
   {
-    "youtubeId": "dH0ejW0Vfxc",
-    "title": "【カラオケ一曲目何歌う？】最初は盛り上げたい切り込み隊長長尾景【長尾景/にじさんじ】",
+    "youtubeId": "UgIYGOicjEc",
+    "title": "秋のコラボ歌枠【長尾景/セラフ・ダズルガーデン/猫屋敷美紅/水面まどか/にじさんじ】【supported by DAM】",
     "channel": "長尾景",
-    "date": "2026-08-07",
-    "thumbnail": "https://i.ytimg.com/vi/dH0ejW0Vfxc/mqdefault.jpg",
+    "date": "2026-09-04",
+    "thumbnail": "https://i.ytimg.com/vi/UgIYGOicjEc/mqdefault.jpg",
     "category": [
       "歌配信"
     ],
     "keywords": [
+      "セラフ・ダズルガーデン",
+      "歌配信",
+      "水面まどか",
+      "猫屋敷美紅",
       "長尾景"
     ],
     "tags": [],
     "songs": [
       {
-        "title": "要確認",
+        "title": "セラフ曰くソロが多い",
+        "artist": "普通に説教かな？って思った",
+        "start": 221
+      },
+      {
+        "title": "IRIS OUT",
+        "artist": "米津玄師",
+        "start": 671
+      },
+      {
+        "title": "IRIS OUT",
+        "artist": "米津玄師",
+        "start": 671
+      },
+      {
+        "title": "みんなお歌が上手いのねぇ",
         "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
+        "start": 1326
+      },
+      {
+        "title": "俺先に心配な曲からやっていい？",
+        "artist": "",
+        "start": 1583
+      },
+      {
+        "title": "俺とセラフちょっとだけ世代が合わなくて…",
+        "artist": "",
+        "start": 1626
+      },
+      {
+        "title": "ダイバー with セラフ・ダズルガーデン",
+        "artist": "KANA-BOON",
+        "start": 1635
+      },
+      {
+        "title": "ダイバー with セラフ・ダズルガーデン",
+        "artist": "KANA-BOON",
+        "start": 1635
+      },
+      {
+        "title": "ray with 水面まどか",
+        "artist": "BUMP OF CHICKEN",
+        "start": 1938
+      },
+      {
+        "title": "ray with 水面まどか",
+        "artist": "BUMP OF CHICKEN",
+        "start": 1938
+      },
+      {
+        "title": "ハモリ覚えてくるとは思ってなかった",
+        "artist": "",
+        "start": 2244
+      },
+      {
+        "title": "すごいさ、歌上手くなったよね(後方腕組みおじさん)",
+        "artist": "",
+        "start": 2870
+      },
+      {
+        "title": "ラフ・メイカー",
+        "artist": "BUMP OF CHICKEN",
+        "start": 2936
+      },
+      {
+        "title": "ラフ・メイカー",
+        "artist": "BUMP OF CHICKEN",
+        "start": 2936
+      },
+      {
+        "title": "「桑田になってるよ！」",
+        "artist": "佳祐やめて",
+        "start": 3181
+      },
+      {
+        "title": "歌えれば楽しいだろうな",
+        "artist": "",
+        "start": 3469
+      },
+      {
+        "title": "しゃくりがいいわ",
+        "artist": "褒められてゴブリンになるまどちゃ",
+        "start": 3514
+      },
+      {
+        "title": "キタニさんだのミセスだの",
+        "artist": "",
+        "start": 4081
+      },
+      {
+        "title": "もう帰りたいもん 帰んないでね with セラフ・ダズルガーデン",
+        "artist": "",
+        "start": 4449
+      },
+      {
+        "title": "ノマド俺も覚えよ",
+        "artist": "布教成功",
+        "start": 4458
+      },
+      {
+        "title": "ダーリン",
+        "artist": "須田景凪",
+        "start": 4519
+      },
+      {
+        "title": "ダーリン",
+        "artist": "須田景凪",
+        "start": 4519
+      },
+      {
+        "title": "これもいいな、これも歌おうかな",
+        "artist": "",
+        "start": 5323
+      },
+      {
+        "title": "お前またじゃねぇかよw",
+        "artist": "",
+        "start": 5446
+      },
+      {
+        "title": "フラジール with 猫屋敷美紅",
+        "artist": "ぬゆり",
+        "start": 5804
+      },
+      {
+        "title": "フラジール with 猫屋敷美紅",
+        "artist": "ぬゆり",
+        "start": 5804
+      },
+      {
+        "title": "Hurrah!! with セラフ・ダズルガーデン,水面まどか,猫屋敷美紅",
+        "artist": "にじさんじ",
+        "start": 6320
+      },
+      {
+        "title": "Hurrah!! with セラフ・ダズルガーデン,水面まどか,猫屋敷美紅",
+        "artist": "にじさんじ",
+        "start": 6320
       }
     ]
   },
@@ -766,58 +902,6 @@
     ]
   },
   {
-    "youtubeId": "SjN7CqQhLrk",
-    "title": "Cinderella Girl",
-    "channel": "長尾景",
-    "date": "2026-05-22",
-    "thumbnail": "https://i.ytimg.com/vi/SjN7CqQhLrk/mqdefault.jpg",
-    "category": [
-      "踊り動画"
-    ],
-    "keywords": [
-      "踊り動画"
-    ],
-    "tags": [
-      "カバー(ソロ)",
-      "踊"
-    ],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "fEmdR9C8qok",
-    "title": "【MV】怪談/長尾景",
-    "channel": "長尾景",
-    "date": "2026-05-15",
-    "thumbnail": "https://i.ytimg.com/vi/fEmdR9C8qok/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "歌動画",
-      "長尾景"
-    ],
-    "tags": [
-      "オリジナル（ソロ）",
-      "歌"
-    ],
-    "songs": [
-      {
-        "title": "奏音69",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
     "youtubeId": "0s9xvT0ThAM",
     "title": "【ライブ本編】Uncharted Spheres / 無料パート #Uncharted_Spheres",
     "channel": "長尾景",
@@ -1408,11 +1492,11 @@
     ]
   },
   {
-    "youtubeId": "5Mjw4VPyASY",
-    "title": "#VΔLZ - むてきのおうさま【オリジナル楽曲】",
+    "youtubeId": "_XI9MzrcHC4",
+    "title": "【MV】#VΔLZ - むてきのおうさま",
     "channel": "長尾景",
     "date": "2026-04-02",
-    "thumbnail": "https://i.ytimg.com/vi/5Mjw4VPyASY/mqdefault.jpg",
+    "thumbnail": "https://i.ytimg.com/vi/_XI9MzrcHC4/mqdefault.jpg",
     "category": [
       "歌動画"
     ],
@@ -1437,42 +1521,11 @@
     ]
   },
   {
-    "youtubeId": "sUDM_h9yrOY",
-    "title": "【歌って弾いてみた】新宝島 covered by #VΔLZ",
+    "youtubeId": "5Mjw4VPyASY",
+    "title": "#VΔLZ - むてきのおうさま【オリジナル楽曲】",
     "channel": "長尾景",
     "date": "2026-04-02",
-    "thumbnail": "https://i.ytimg.com/vi/sUDM_h9yrOY/mqdefault.jpg",
-    "category": [
-      "楽器配信・動画",
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "楽器配信・動画",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [
-      "カバー(ユニット)",
-      "歌"
-    ],
-    "songs": [
-      {
-        "title": "サカナクション",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "_XI9MzrcHC4",
-    "title": "【MV】#VΔLZ - むてきのおうさま",
-    "channel": "長尾景",
-    "date": "2026-04-02",
-    "thumbnail": "https://i.ytimg.com/vi/_XI9MzrcHC4/mqdefault.jpg",
+    "thumbnail": "https://i.ytimg.com/vi/5Mjw4VPyASY/mqdefault.jpg",
     "category": [
       "歌動画"
     ],
@@ -1620,33 +1673,6 @@
     ]
   },
   {
-    "youtubeId": "EEjm76wSwa4",
-    "title": "ぷりきゅきゅ",
-    "channel": "長尾景",
-    "date": "2026-01-09",
-    "thumbnail": "https://i.ytimg.com/vi/EEjm76wSwa4/mqdefault.jpg",
-    "category": [
-      "踊り動画"
-    ],
-    "keywords": [
-      "踊り動画"
-    ],
-    "tags": [
-      "カバー(ソロ)",
-      "踊"
-    ],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
     "youtubeId": "kG1xgX_22bQ",
     "title": "【DanceDanceRevolution】 #にじさんじダンス部 コラボ 3Dで遊びまくってみた！",
     "channel": "山神カルタ",
@@ -1665,31 +1691,6 @@
       "セラフ・ダズルガーデン",
       "倉持めると"
     ],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "guBM1ckejJk",
-    "title": "ダンス＆殺陣ショート解説してみた【長尾景/にじさんじ/にじ3D】",
-    "channel": "長尾景",
-    "date": "2025-11-03",
-    "thumbnail": "https://i.ytimg.com/vi/guBM1ckejJk/mqdefault.jpg",
-    "category": [
-      "3D",
-      "殺陣"
-    ],
-    "keywords": [
-      "長尾景"
-    ],
-    "tags": [],
     "songs": [
       {
         "title": "要確認",
@@ -1730,203 +1731,6 @@
     ]
   },
   {
-    "youtubeId": "kCIEYpspOSw",
-    "title": "【ベース】引き続きVirtual to LIVE弾いてみる【長尾景/にじさんじ】【にじ3D】",
-    "channel": "長尾景",
-    "date": "2025-10-19",
-    "thumbnail": "https://i.ytimg.com/vi/kCIEYpspOSw/mqdefault.jpg",
-    "category": [
-      "3D",
-      "ライブイベント",
-      "企画",
-      "公式企画・番組",
-      "楽器配信・動画"
-    ],
-    "keywords": [
-      "ベース",
-      "楽器配信・動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "DvDVY7nXVco",
-    "title": "【歌ってみた】虹色のPuddle/＃にじ漢歌祭り Cover【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2025-08-24",
-    "thumbnail": "https://i.ytimg.com/vi/DvDVY7nXVco/mqdefault.jpg",
-    "category": [
-      "企画",
-      "公式企画・番組",
-      "歌動画"
-    ],
-    "keywords": [
-      "にじ漢歌祭り",
-      "ジョー・力一",
-      "セラフ・ダズルガーデン",
-      "ミラン・ケストレル",
-      "伊波ライ",
-      "北見遊征",
-      "宇佐美リト",
-      "榊ネス",
-      "歌動画",
-      "渚トラウト",
-      "甲斐田晴",
-      "緋八マナ",
-      "酒寄颯馬",
-      "長尾景",
-      "風楽奏斗"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "diGc4SQ_Rfk",
-    "title": "ルンルンが殺陣するなら何の武器？【長尾景/ルンルン/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2025-08-17",
-    "thumbnail": "https://i.ytimg.com/vi/diGc4SQ_Rfk/mqdefault.jpg",
-    "category": [
-      "公式切り抜き",
-      "殺陣"
-    ],
-    "keywords": [
-      "ルンルン",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "XwLJa6t3fZI",
-    "title": "【歌ってみた】サマータイムレコード covered by #VΔLZ (弦月藤士郎/長尾景/甲斐田晴)",
-    "channel": "VΔLZ",
-    "date": "2025-08-16",
-    "thumbnail": "https://i.ytimg.com/vi/XwLJa6t3fZI/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "#サマータイムレコード #じん",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "4aE-LuNq1w8",
-    "title": "【歌ってみた】シャカビーチ 〜Laka Laka La〜 covered by #VΔLZ (甲斐田晴)",
-    "channel": "VΔLZ",
-    "date": "2025-08-13",
-    "thumbnail": "https://i.ytimg.com/vi/4aE-LuNq1w8/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "#シャカビーチ～Laka Laka La～ #UVERworld #ウーバーワールド",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "w12WmXJ3lq0",
-    "title": "【歌ってみた】若者のすべて covered by #VΔLZ (弦月藤士郎)",
-    "channel": "VΔLZ",
-    "date": "2025-08-11",
-    "thumbnail": "https://i.ytimg.com/vi/w12WmXJ3lq0/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "#若者のすべて #フジファブリック #Fujifabric",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "eLgEQ-9VCnU",
-    "title": "青のすみか【長尾景/にじさんじ】【歌ってみた】",
-    "channel": "長尾景",
-    "date": "2025-07-24",
-    "thumbnail": "https://i.ytimg.com/vi/eLgEQ-9VCnU/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "歌動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "様",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
     "youtubeId": "oLlfeB778eI",
     "title": "【#Klime3D】ボスを倒せたら告知あり！？3Dで殺陣やってみた【にじさんじ/長尾景/東堂コハク/山神カルタ】",
     "channel": "山神カルタ",
@@ -1942,80 +1746,6 @@
       "東堂コハク",
       "Klime"
     ],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "YjeE-0BLRKQ",
-    "title": "【NG】テレパシ【長尾景/にじさんじ】【踊ってみた】#にじさんじ #vtuber #テレパシ",
-    "channel": "長尾景",
-    "date": "2025-06-12",
-    "thumbnail": "https://i.ytimg.com/vi/YjeE-0BLRKQ/mqdefault.jpg",
-    "category": [
-      "踊り動画"
-    ],
-    "keywords": [
-      "踊り動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "様",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "C5epneRlc0Y",
-    "title": "【歌ってみた】モノクロのキス covered by #VΔLZ",
-    "channel": "VΔLZ",
-    "date": "2025-06-02",
-    "thumbnail": "https://i.ytimg.com/vi/C5epneRlc0Y/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "シド",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "1LHNwhzPzq8",
-    "title": "【歌ってみた】からくりピエロ【長尾景/星導ショウ/にじさんじ】short ver",
-    "channel": "長尾景",
-    "date": "2025-05-29",
-    "thumbnail": "https://i.ytimg.com/vi/1LHNwhzPzq8/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "星導ショウ",
-      "歌動画",
-      "長尾景"
-    ],
-    "tags": [],
     "songs": [
       {
         "title": "要確認",
@@ -2056,104 +1786,6 @@
     ]
   },
   {
-    "youtubeId": "nzr-Xpmlo6I",
-    "title": "SEVENTEEN (세븐틴) '손오공'【長尾景/にじさんじ/共通衣装】【踊ってみた】#세븐틴 #손오공#Super  #SVT_Super",
-    "channel": "長尾景",
-    "date": "2025-03-20",
-    "thumbnail": "https://i.ytimg.com/vi/nzr-Xpmlo6I/mqdefault.jpg",
-    "category": [
-      "踊り動画"
-    ],
-    "keywords": [
-      "踊り動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "QyGX7DpfXZ0",
-    "title": "許婚っきゅん【長尾景/にじさんじ】【#踊ってみた】 #許婚っきゅん",
-    "channel": "長尾景",
-    "date": "2025-03-17",
-    "thumbnail": "https://i.ytimg.com/vi/QyGX7DpfXZ0/mqdefault.jpg",
-    "category": [
-      "踊り動画"
-    ],
-    "keywords": [
-      "踊り動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "-Ouxwn0Te2c",
-    "title": "【歌ってみた】シュガーソングとビターステップ covered by #VΔLZ",
-    "channel": "VΔLZ",
-    "date": "2025-02-20",
-    "thumbnail": "https://i.ytimg.com/vi/-Ouxwn0Te2c/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "UNISON SQUARE GARDEN",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "zSCR3R44jOU",
-    "title": "オトノケ【長尾景/にじさんじ】【踊ってみた】",
-    "channel": "長尾景",
-    "date": "2025-02-07",
-    "thumbnail": "https://i.ytimg.com/vi/zSCR3R44jOU/mqdefault.jpg",
-    "category": [
-      "踊り動画"
-    ],
-    "keywords": [
-      "踊り動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "様■",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
     "youtubeId": "BIXMQSe83DQ",
     "title": "【歌ってみた】1％の恋人 covered by #VΔLZ (甲斐田晴)",
     "channel": "VΔLZ",
@@ -2175,111 +1807,6 @@
       {
         "title": "1％の恋人",
         "artist": "甲斐田晴",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "M-eISusykA0",
-    "title": "【歌ってみた】青と夏 covered by #VΔLZ",
-    "channel": "VΔLZ",
-    "date": "2025-01-24",
-    "thumbnail": "https://i.ytimg.com/vi/M-eISusykA0/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "Mrs. GREEN APPLE",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "O6V45k3zd1Y",
-    "title": "【歌ってみた】フラジール covered by #VΔLZ (長尾景)",
-    "channel": "VΔLZ",
-    "date": "2025-01-17",
-    "thumbnail": "https://i.ytimg.com/vi/O6V45k3zd1Y/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "を中心に、新たな表現にも果敢にチャレンジし可能性を広げている。",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "a5FACK_V068",
-    "title": "【歌ってみた】オレンジ covered by #VΔLZ",
-    "channel": "VΔLZ",
-    "date": "2025-01-10",
-    "thumbnail": "https://i.ytimg.com/vi/a5FACK_V068/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "SPYAIR",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "CVM11uBps7g",
-    "title": "【歌ってみた】天樂 covered by #VΔLZ (弦月藤士郎)",
-    "channel": "VΔLZ",
-    "date": "2025-01-03",
-    "thumbnail": "https://i.ytimg.com/vi/CVM11uBps7g/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "https://www.youtube.com/watch?v=wRoA3VuDK4c&t=0s",
-        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -2314,62 +1841,6 @@
     ]
   },
   {
-    "youtubeId": "59qfq6B4_7Y",
-    "title": "【歌ってみた】レゾンデイトル・カレイドスコウプ covered by #VΔLZ",
-    "channel": "VΔLZ",
-    "date": "2024-12-13",
-    "thumbnail": "https://i.ytimg.com/vi/59qfq6B4_7Y/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "https://www.youtube.com/watch?v=BUf2d8t30yE&t=0s",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "mXqAYfb3ya0",
-    "title": "【オリジナル楽曲】 #VΔLZ - ムーンウォーカーズ（VΔLZ LIVE TOUR 2024『三華の樂』Special Edit Ver.）",
-    "channel": "VΔLZ",
-    "date": "2024-12-10",
-    "thumbnail": "https://i.ytimg.com/vi/mXqAYfb3ya0/mqdefault.jpg",
-    "category": [
-      "ライブイベント",
-      "企画",
-      "公式企画・番組",
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "VΔLZ2nd 三華の樂",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "buzzG",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
     "youtubeId": "rjTU827qajs",
     "title": "#VΔLZ - ブリキの魂【オリジナル楽曲】",
     "channel": "VΔLZ",
@@ -2394,32 +1865,6 @@
       {
         "title": "ブリキの魂",
         "artist": "VΔLZ",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "rE0GXQkz5jQ",
-    "title": "【歌ってみた】いーあるふぁんくらぶ covered by #VΔLZ (弦月藤士郎/甲斐田晴)",
-    "channel": "VΔLZ",
-    "date": "2024-11-29",
-    "thumbnail": "https://i.ytimg.com/vi/rE0GXQkz5jQ/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "みきとP",
-        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -2454,55 +1899,6 @@
     ]
   },
   {
-    "youtubeId": "CElUu-3SfY4",
-    "title": "【歌ってみた】おこちゃま戦争 covered by #VΔLZ (甲斐田晴/長尾景)",
-    "channel": "VΔLZ",
-    "date": "2024-11-15",
-    "thumbnail": "https://i.ytimg.com/vi/CElUu-3SfY4/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "【鏡音リン・レン】おこちゃま戦争【オリジナル】",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "ZonG2QwDwTQ",
-    "title": "モエチャッカファイア【長尾景/にじさんじ】【振付踊ってみた】",
-    "channel": "長尾景",
-    "date": "2024-11-12",
-    "thumbnail": "https://i.ytimg.com/vi/ZonG2QwDwTQ/mqdefault.jpg",
-    "category": [
-      "踊り動画"
-    ],
-    "keywords": [
-      "踊り動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "様▼",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
     "youtubeId": "apJ3CEAhoZU",
     "title": "#VΔLZ - 黎明の轍【オリジナル楽曲】",
     "channel": "VΔLZ",
@@ -2532,102 +1928,6 @@
     ]
   },
   {
-    "youtubeId": "RV9utmSbd0I",
-    "title": "【歌ってみた】エル・タンゴ・エゴイスタ covered by #VΔLZ (弦月藤士郎/長尾景)",
-    "channel": "VΔLZ",
-    "date": "2024-11-01",
-    "thumbnail": "https://i.ytimg.com/vi/RV9utmSbd0I/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "nyanyannya feat. KAITO,巡音ルカ",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "obuHnD4ZNmY",
-    "title": "【新録/歌ってみた】ヴァンパイア / DECO*27【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-09-30",
-    "thumbnail": "https://i.ytimg.com/vi/obuHnD4ZNmY/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "歌動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "様",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "9G5h_pQgp7I",
-    "title": "【歌ってみた】死ぬな！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-09-16",
-    "thumbnail": "https://i.ytimg.com/vi/9G5h_pQgp7I/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "歌動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "様",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "beUo4VzOPbs",
-    "title": "【踊ってみた】ベリーベリーベリー - IOI(아이오아이)【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-09-02",
-    "thumbnail": "https://i.ytimg.com/vi/beUo4VzOPbs/mqdefault.jpg",
-    "category": [
-      "踊り動画"
-    ],
-    "keywords": [
-      "踊り動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
     "youtubeId": "WZyYnYz1o5U",
     "title": "【踊ってみた】最上級にかわいいの！【長尾景/にじさんじ】",
     "channel": "長尾景",
@@ -2647,117 +1947,6 @@
       {
         "title": "最上級にかわいいの！",
         "artist": "超ときめき♡宣伝部",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "E2W-6-hxNpM",
-    "title": "【#フ景罪四周年】歌ってみた公開までにフミ様を1位にするテトリス99【長尾景/フミ/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2024-05-16",
-    "thumbnail": "https://i.ytimg.com/vi/E2W-6-hxNpM/mqdefault.jpg",
-    "category": [
-      "ゲーム実況",
-      "歌動画"
-    ],
-    "keywords": [
-      "テトリス99",
-      "フミ",
-      "フ景罪",
-      "歌動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "RpOnPXYoFQM",
-    "title": "【オリジナル楽曲】VΔLZ - SHOOTING DELTA（VΔLZ 1st LIVE「一唱入魂」Special Edit Ver.）",
-    "channel": "VΔLZ",
-    "date": "2024-04-25",
-    "thumbnail": "https://i.ytimg.com/vi/RpOnPXYoFQM/mqdefault.jpg",
-    "category": [
-      "ライブイベント",
-      "企画",
-      "公式企画・番組",
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "VΔLZ1st 一唱入魂",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "SHOOTING DELTA",
-        "artist": "VΔLZ",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "zOohOWdGMwA",
-    "title": "【歌ってみた】いーあるふぁんくらぶ covered by VΔLZ(弦月藤士郎/甲斐田晴)",
-    "channel": "VΔLZ",
-    "date": "2024-04-12",
-    "thumbnail": "https://i.ytimg.com/vi/zOohOWdGMwA/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "みきとP",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "a8-yOzYjpBs",
-    "title": "【歌ってみた】天樂 covered by VΔLZ(弦月藤士郎)",
-    "channel": "VΔLZ",
-    "date": "2023-12-20",
-    "thumbnail": "https://i.ytimg.com/vi/a8-yOzYjpBs/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "天樂",
-        "artist": "Unknown Artist",
         "start": 0
       }
     ]
@@ -2787,281 +1976,6 @@
         "title": "Ready Steady",
         "artist": "Giga【Vivid BAD SQUAD】",
         "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "IB7bt648rS8",
-    "title": "【歌ってみた】1％の恋人 covered by VΔLZ(甲斐田晴)",
-    "channel": "VΔLZ",
-    "date": "2023-09-18",
-    "thumbnail": "https://i.ytimg.com/vi/IB7bt648rS8/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "VΔLZ",
-      "園児組",
-      "年長組",
-      "弦月藤士郎",
-      "歌動画",
-      "甲斐田晴"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "HoneyWorks  feat. 南（CV：豊永利行）",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "9UoA6-lepJE",
-    "title": "【ベース練習】せんせー！！めっちゃ聞きたい事あんねん！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-07-15",
-    "thumbnail": "https://i.ytimg.com/vi/9UoA6-lepJE/mqdefault.jpg",
-    "category": [
-      "企画",
-      "公式企画・番組",
-      "楽器配信・動画"
-    ],
-    "keywords": [
-      "ベース",
-      "楽器配信・動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "npMjdmPEfRQ",
-    "title": "【ベース練習】最後まで一旦完走！！【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-07-13",
-    "thumbnail": "https://i.ytimg.com/vi/npMjdmPEfRQ/mqdefault.jpg",
-    "category": [
-      "企画",
-      "公式企画・番組",
-      "楽器配信・動画"
-    ],
-    "keywords": [
-      "ベース",
-      "楽器配信・動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "lQXexxECZ5Q",
-    "title": "【ベース練習】初練は地味練【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2023-06-29",
-    "thumbnail": "https://i.ytimg.com/vi/lQXexxECZ5Q/mqdefault.jpg",
-    "category": [
-      "企画",
-      "公式企画・番組",
-      "楽器配信・動画"
-    ],
-    "keywords": [
-      "ベース",
-      "楽器配信・動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "lfKXPKDNCgg",
-    "title": "【マルチタスクマリオカート】【歌枠】One Hand ClappingマリオカートASMR歌枠配信【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2022-01-21",
-    "thumbnail": "https://i.ytimg.com/vi/lfKXPKDNCgg/mqdefault.jpg",
-    "category": [
-      "歌配信"
-    ],
-    "keywords": [
-      "歌配信",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "4_f6B7AYGPM",
-    "title": "【歌ってみた】ボトム / 柊キライ【長尾景cover】【にじさんじ】",
-    "channel": "長尾景",
-    "date": "2021-11-14",
-    "thumbnail": "https://i.ytimg.com/vi/4_f6B7AYGPM/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "歌動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "様",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "HhMSjyjPpYc",
-    "title": "【ポケモンユナイト】プクリンのおやすみ歌枠【長尾景/にじさんじ】",
-    "channel": "長尾景",
-    "date": "2021-09-04",
-    "thumbnail": "https://i.ytimg.com/vi/HhMSjyjPpYc/mqdefault.jpg",
-    "category": [
-      "ゲーム実況",
-      "歌配信"
-    ],
-    "keywords": [
-      "ポケットモンスター-ユナイト",
-      "歌配信",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
-      }
-    ]
-  },
-  {
-    "youtubeId": "Ixg5P9QbJWY",
-    "title": "【歌ってみた】ヴァンパイア / DECO*27【長尾景cover】【にじさんじ】",
-    "channel": "長尾景",
-    "date": "2021-07-24",
-    "thumbnail": "https://i.ytimg.com/vi/Ixg5P9QbJWY/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "歌動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "様",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "OKAK0IzIF0s",
-    "title": "【歌ってみた】うっせぇわ/Ado【長尾景cover】【にじさんじ】",
-    "channel": "長尾景",
-    "date": "2021-07-02",
-    "thumbnail": "https://i.ytimg.com/vi/OKAK0IzIF0s/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "歌動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "様",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "IH10EP8xvxE",
-    "title": "【歌ってみた】オートファジー / 柊キライ【長尾景cover】【にじさんじ】",
-    "channel": "長尾景",
-    "date": "2021-05-09",
-    "thumbnail": "https://i.ytimg.com/vi/IH10EP8xvxE/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "歌動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "様",
-        "artist": "Unknown Artist",
-        "start": 0
-      }
-    ]
-  },
-  {
-    "youtubeId": "HHhY2w94Ric",
-    "title": "【歌ってみた】KING-Kanaria / 長尾景(Cover)",
-    "channel": "長尾景",
-    "date": "2021-03-01",
-    "thumbnail": "https://i.ytimg.com/vi/HHhY2w94Ric/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "歌動画",
-      "長尾景"
-    ],
-    "tags": [],
-    "songs": [
-      {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
       }
     ]
   },
