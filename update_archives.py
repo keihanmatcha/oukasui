@@ -1087,9 +1087,18 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
             "artist": a,
             "start": sec
         })
+    
+        songs.sort(key=lambda x: x["start"])
+        # 重複排除処理 (同じ start秒 かつ 同じ title は1つに集約)
+        unique_songs = []
+        seen_keys = set()
+        for s in songs:
+            dedup_key = (s["start"], s["title"])
+            if dedup_key not in seen_keys:
+                seen_keys.add(dedup_key)
+                unique_songs.append(s)
+        return unique_songs
 
-    songs.sort(key=lambda x: x["start"])
-    return songs
 
 
 def parse_cover_or_shorts(title, desc, is_short=False):
