@@ -949,19 +949,11 @@ def extract_music_metadata(desc):
     return auto_songs
     
 def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=None):
-    """
-    概要欄やコメントからセトリを抽出。
-    - 1:04:05 (H:M:S) と 2:00 (M:S) が混在しても正確に秒数変換
-    - タイムスタンプが改行なしで連結していても安全に分割
-    - カッコ内の絵文字からライバーを抽出し、(全員) を展開
-    """
     if not text:
         return []
     text = html.unescape(text)
 
-    # タイムスタンプ抽出パターン (HH:MM:SS を MM:SS より優先)
     ts_regex = r'(?:(?<=\s)|^|\b)(\d{1,2}:\d{2}:\d{2}|\d{1,2}:\d{2})(?!\d)'
-    
     matches = list(re.finditer(ts_regex, text))
     if len(matches) < 3:
         return []
@@ -974,14 +966,11 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
         content = text[start_idx:end_idx].strip()
         raw_entries.append((ts_str, content))
 
-    # ========================================================
     # 1. 登場ライバーの事前収集
-    # ========================================================
     all_collab_livers = set()
     has_owner_symbol = False
     has_any_symbol = False
 
-    # コメント文から絵文字を走査
     for _, raw_text in raw_entries:
         line = raw_text.split('\n')[0]
         for mark in sorted(LIVER_EMOJI_MAP.keys(), key=len, reverse=True):
@@ -993,7 +982,6 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
                 else:
                     all_collab_livers.add(liver_name)
 
-    # コメントから他ライバーが取れなかった場合、動画メタデータのキーワードから補完
     if fallback_members:
         for m in fallback_members:
             if m != channel_owner and m in KEYWORD_GROUPS.get("MEMBERS", []):
@@ -1001,9 +989,7 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
 
     other_members = [m for m in all_collab_livers if m != channel_owner]
 
-    # ========================================================
     # 2. 各曲の解析
-    # ========================================================
     songs = []
 
     for ts_str, raw_text in raw_entries:
@@ -1011,7 +997,6 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
         if not clean_text:
             continue
 
-        # 除外キーワード判定（自己紹介、感想など）
         clean_upper = clean_text.upper()
         if any(x in clean_upper for x in EXCLUDE_SETLIST_KEYWORDS):
             continue
@@ -1034,8 +1019,7 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
 
         singers = list(dict.fromkeys(singers))
 
-        # 【全滅防止】長尾景の記号がコメント全体で一度でも確認できた場合のみ除外フィルタを適用
-        # （絵文字欠落時などに全曲消えてしまう事故を防ぐ）
+        # 長尾景不参加の曲をスキップ（長尾の記号が全体で1度でも見つかった場合のみ適用）
         if has_any_symbol and has_owner_symbol:
             if not is_all and (channel_owner not in singers):
                 continue
@@ -1057,12 +1041,11 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
                 parts = clean_text.split(sep, 1)
                 t, a = parts[0].strip(), parts[1].strip()
                 break
+
         # トーク特有のスラッシュ誤判定を防止
-        # (例: "ノマド俺も覚えよ/布教成功" や "「桑田になってるよ！」/佳祐やめて" など)
         if any(c in t or c in a for c in ["？", "?", "！", "!", "w", "W", "草", "「", "」", "…", "俺","上手","思う","思って","思わ","よね","だろう","いいわ","だの","いいな","かな","布教"]):
             if not any(mark in raw_text for mark in ["♪", "♫"]):
                 continue
-
 
         # with 〇〇 の付与
         if is_all:
@@ -1093,18 +1076,18 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
             "artist": a,
             "start": sec
         })
-    
-        songs.sort(key=lambda x: x["start"])
-        # 重複排除処理 (同じ start秒 かつ 同じ title は1つに集約)
-        unique_songs = []
-        seen_keys = set()
-        for s in songs:
-            dedup_key = (s["start"], s["title"])
-            if dedup_key not in seen_keys:
-                seen_keys.add(dedup_key)
-                unique_songs.append(s)
-        return unique_songs
 
+    # ★ ここから下は for ループの外（重複排除とソート）
+    songs.sort(key=lambda x: x["start"])
+    unique_songs = []
+    seen_keys = set()
+    for s in songs:
+        dedup_key = (s["start"], s["title"])
+        if dedup_key not in seen_keys:
+            seen_keys.add(dedup_key)
+            unique_songs.append(s)
+
+    return unique_songs
 
 
 def parse_cover_or_shorts(title, desc, is_short=False):
@@ -1225,6 +1208,8 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
                 snip = v_data['snippet']
                 desc = snip.get('description', '')
                 sec = get_duration_seconds(v_data['contentDetails']['duration'])
+                
+                is_short = (0 < sec <= 60)
                 
                 # 1. タグ判定
                 cat, kw = analyze_video_tags(snip['title'], desc, fixed_tags, channel_name, (0 < sec <= 60))
