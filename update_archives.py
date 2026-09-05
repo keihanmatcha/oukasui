@@ -1194,49 +1194,64 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
     
     while page_count < MAX_PAGES_TO_FETCH:
         try:
-            res = youtube.playlistItems().list(part='snippet,contentDetails', playlistId=playlist_id, maxResults=50, pageToken=next_page_token).execute()
+            res = youtube.playlistItems().list(
+                part='snippet,contentDetails',
+                playlistId=playlist_id,
+                maxResults=50,
+                pageToken=next_page_token
+            ).execute()
             items = res.get('items', [])
-            if not items: break
+            if not items:
+                break
             
             v_ids = [it['contentDetails']['videoId'] for it in items]
             v_res = youtube.videos().list(part='contentDetails,snippet', id=','.join(v_ids)).execute()
             details = {v['id']: v for v in v_res.get('items', [])}
 
             for v_id in v_ids:
-                if v_id not in details: continue
+                if v_id not in details:
+                    continue
                 v_data = details[v_id]
                 snip = v_data['snippet']
                 desc = snip.get('description', '')
                 sec = get_duration_seconds(v_data['contentDetails']['duration'])
                 
+                # ★ 1. 動画の本来の投稿者名（チャンネル名）を取得
+                uploader_name = snip.get('channelTitle', channel_name)
+                
+                # ★ 2. is_short の安全な定義
                 is_short = (0 < sec <= 60)
                 
-                # 1. タグ判定
-                cat, kw = analyze_video_tags(snip['title'], desc, fixed_tags, channel_name, (0 < sec <= 60))
+                # ★ 3. タグ判定 (本来の投稿者名 uploader_name を渡す)
+                cat, kw = analyze_video_tags(snip['title'], desc, fixed_tags, channel_name=uploader_name, is_short=is_short)
                 
-                # 2. カテゴリに応じた楽曲情報の自動補完
+                # ★ 4. カテゴリに応じた楽曲情報の自動補完
                 auto_songs = []
                 cat_set = set(cat)
+
                 # 歌配信、または歌動画/踊り動画（長尺のカラオケ・ライブコラボなど）
                 if "歌配信" in cat_set or cat_set.intersection({"歌動画", "踊り動画"}):
-                    # まず概要欄からセトリ抽出
+                    # 概要欄からセトリ抽出
                     auto_songs = parse_setlist_from_text(desc, fallback_members=kw)
-                    # 概要欄になく、5分以上の動画ならコメント欄を探索
+                    
+                    # 概要欄になく、5分以上の長尺動画ならコメント欄を探索
                     if not auto_songs and sec > 300:
                         print(f"💬 [{v_id}] 概要欄にセトリなし。コメント欄を探索中...")
                         auto_songs = fetch_setlist_from_comments(youtube, v_id, fallback_members=kw)
+                        
                     # それでも取れず、単曲の歌動画・踊り動画なら公式メタデータまたはタイトルから抽出
                     if not auto_songs and not is_short:
                         auto_songs = extract_music_metadata(desc) or parse_cover_or_shorts(snip['title'], desc, is_short=False)
+                        
                 elif is_short:
                     # Shorts 音源の抽出
                     auto_songs = parse_cover_or_shorts(snip['title'], desc, is_short=True)
 
-                # 3. データの登録 (ここが 1つだけになるように修正)
+                # ★ 5. データの登録 ("channel" に uploader_name をセット)
                 videos.append({
                     "youtubeId": v_id,
                     "title": snip['title'],
-                    "channel": channel_name,
+                    "channel": uploader_name,  # 投稿者名をセット
                     "date": snip['publishedAt'][:10],
                     "thumbnail": f"https://i.ytimg.com/vi/{v_id}/mqdefault.jpg",
                     "category": cat,
@@ -1246,11 +1261,18 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
                 })
             
             next_page_token = res.get('nextPageToken')
-            if not next_page_token: break
+            if not next_page_token:
+                break
             page_count += 1
+            
         except Exception as e:
-            print(f"⚠️ Error: {e}"); break
+            # 404プレイリストやAPIエラー時も全体を止めずに安全に抜ける
+            print(f"⚠️ {channel_name} (ID: {playlist_id}) 取得中にエラー: {e}")
+            break
+            
     return videos
+
+
 
 def load_artist_db():
     """リポジトリ内の全曲情報（songs/videos.json, archives/*.json）からアーティストDBを構築"""
