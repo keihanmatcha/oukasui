@@ -1057,6 +1057,12 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
                 parts = clean_text.split(sep, 1)
                 t, a = parts[0].strip(), parts[1].strip()
                 break
+        # トーク特有のスラッシュ誤判定を防止
+        # (例: "ノマド俺も覚えよ/布教成功" や "「桑田になってるよ！」/佳祐やめて" など)
+        if any(c in t or c in a for c in ["？", "?", "！", "!", "w", "W", "草", "「", "」", "…", "俺","上手","思う","思って","思わ","よね","だろう","いいわ","だの","いいな","かな","布教"]):
+            if not any(mark in raw_text for mark in ["♪", "♫"]):
+                continue
+
 
         # with 〇〇 の付与
         if is_all:
