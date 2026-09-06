@@ -6153,22 +6153,37 @@
     "tags": [],
     "songs": [
       {
-        "title": "君の神様になりたい",
+        "title": "GO!!! with 渚トラウト",
+        "artist": "FLOW",
+        "start": 399
+      },
+      {
+        "title": "君の神様になりたい。",
         "artist": "カンザキイオリ",
-        "start": 2077
+        "start": 2078
+      },
+      {
+        "title": "ロンリー・チャップリン with 綺沙良",
+        "artist": "鈴木聖美 with Rats&Star",
+        "start": 3018
       },
       {
         "title": "シンデレラボーイ",
         "artist": "Saucy Dog",
-        "start": 3908
+        "start": 3901
+      },
+      {
+        "title": "ユいたもん‼️ with 渚トラウト",
+        "artist": "後でポストしといてね",
+        "start": 4534
       },
       {
         "title": "水流のロック with 戌亥とこ",
         "artist": "日食なつこ",
-        "start": 5507
+        "start": 5503
       },
       {
-        "title": "️🍴サマータイムレコード with 戌亥とこ,文野環,綺沙良",
+        "title": "サマータイムレコード with 戌亥とこ,文野環,渚トラウト,綺沙良",
         "artist": "じん",
         "start": 6544
       }
@@ -31987,34 +32002,29 @@
     "tags": [],
     "songs": [
       {
-        "title": "長尾ウインク",
+        "title": "弦月の煽り超盛り上がる好き",
         "artist": "",
-        "start": 43
+        "start": 162
       },
       {
-        "title": "後ろでぴょんぴょんしてて可愛い",
+        "title": "ここの見守ってきた甲斐田から何故か最高音を歌わされる弦月までも大好き",
         "artist": "",
-        "start": 51
+        "start": 199
       },
       {
-        "title": "歌詞似合わせて2人見てる長尾",
+        "title": "(",
         "artist": "",
-        "start": 122
+        "start": 245
       },
       {
-        "title": "めっちゃ手振ってる弦月かわいい",
+        "title": "全力で手を振ってくれるの好き",
         "artist": "",
-        "start": 218
+        "start": 258
       },
       {
-        "title": "弦月回転からのみんな跳ねてる",
+        "title": "スピンからのジャンプ",
         "artist": "",
-        "start": 301
-      },
-      {
-        "title": "甲斐田投げキッス",
-        "artist": "",
-        "start": 319
+        "start": 296
       }
     ]
   },
