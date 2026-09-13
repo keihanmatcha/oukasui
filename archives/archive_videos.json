@@ -1,5 +1,56 @@
 [
   {
+    "youtubeId": "bfq7JYNHqqk",
+    "title": "【#にじ遊戯王祭2026】予選デッキ対策【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-09-12",
+    "thumbnail": "https://i.ytimg.com/vi/bfq7JYNHqqk/mqdefault.jpg",
+    "category": [
+      "ゲーム実況"
+    ],
+    "keywords": [
+      "エア景",
+      "春崎エアル",
+      "遊戯王",
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "qVXAXFhCou0",
+    "title": "martini/綺沙良【長尾景/にじさんじ】#踊ってみた",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-09-12",
+    "thumbnail": "https://i.ytimg.com/vi/qVXAXFhCou0/mqdefault.jpg",
+    "category": [
+      "踊り動画"
+    ],
+    "keywords": [
+      "踊り動画",
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "rccqzYeIuak",
+    "title": "【スプラトゥーン3】ひさびさスプラ【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-09-12",
+    "thumbnail": "https://i.ytimg.com/vi/rccqzYeIuak/mqdefault.jpg",
+    "category": [
+      "ゲーム実況"
+    ],
+    "keywords": [
+      "Splatoon",
+      "Splatoon3",
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
     "youtubeId": "9NRwXyN3q8k",
     "title": "【#にじ遊戯王祭2026】このデッキでみんなと遊んで、おいら友達100人作るんだ！【長尾景/にじさんじ】",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -296,43 +347,78 @@
     "songs": [
       {
         "title": "IRIS OUT",
-        "artist": "米津玄師",
+        "artist": "yonetsu kenshi (Nagao",
         "start": 671
       },
       {
-        "title": "ダイバー with セラフ・ダズルガーデン",
-        "artist": "KANA-BOON",
+        "title": "Aufheben",
+        "artist": "Mrs. GREEN APPLE (Seraph)",
+        "start": 841
+      },
+      {
+        "title": "Suki Suki Zecchou Shou",
+        "artist": "koyori (Miku)",
+        "start": 1111
+      },
+      {
+        "title": "diver",
+        "artist": "KANA-BOON (Seraph and Nagao)",
         "start": 1635
       },
       {
-        "title": "ray with 水面まどか",
-        "artist": "BUMP OF CHICKEN",
+        "title": "ray",
+        "artist": "BUMP OF CHICKEN (Nagao and Madoka)",
         "start": 1938
       },
       {
-        "title": "ラフ・メイカー",
-        "artist": "BUMP OF CHICKEN",
+        "title": "oni no utage",
+        "artist": "tomonari sora (Miku)",
+        "start": 2356
+      },
+      {
+        "title": "Laugh Maker",
+        "artist": "BUMP OF CHICKEN (Nagao)",
         "start": 2936
       },
       {
-        "title": "もう帰りたいもん 帰んないでね with セラフ・ダズルガーデン",
-        "artist": "",
-        "start": 4449
+        "title": "odori",
+        "artist": "Ado (Madoka)",
+        "start": 3243
       },
       {
-        "title": "ダーリン",
-        "artist": "須田景凪",
+        "title": "bubblin",
+        "artist": "HIMEHINA (Miku and Madoka)",
+        "start": 3570
+      },
+      {
+        "title": "night routine",
+        "artist": "kitani tatsuya (Seraph and Miku)",
+        "start": 3841
+      },
+      {
+        "title": "nomad",
+        "artist": "suda keina (Madoka)",
+        "start": 4204
+      },
+      {
+        "title": "Darling",
+        "artist": "suda keina (Nagao)",
         "start": 4519
       },
       {
-        "title": "フラジール with 猫屋敷美紅",
-        "artist": "ぬゆり",
-        "start": 5804
+        "title": "flos",
+        "artist": "R Sound Design (Miku)",
+        "start": 4714
       },
       {
-        "title": "Hurrah!! with セラフ・ダズルガーデン,水面まどか,猫屋敷美紅",
-        "artist": "にじさんじ",
-        "start": 6320
+        "title": "Blue Ambience",
+        "artist": "Mrs. GREEN APPLE feat asmi (Seraph and Madoka)",
+        "start": 5481
+      },
+      {
+        "title": "Fragile",
+        "artist": "nulet (Nagao and Miku)",
+        "start": 5804
       }
     ]
   },
@@ -54773,19 +54859,124 @@
     "tags": [],
     "songs": [
       {
-        "title": "ながみん『フライングゲットですぅ。えーっと、音の確認とともによろしくお願いしますぅ。』",
+        "title": "一曲",
         "artist": "",
-        "start": 96
+        "start": 92
       },
       {
-        "title": "ながみん『あ\"、あ\"、あ\"ー』",
+        "title": "(",
         "artist": "",
-        "start": 107
+        "start": 92
       },
       {
-        "title": "長尾景　歌い出し",
+        "title": "《フライングゲット》",
         "artist": "",
-        "start": 111
+        "start": 104
+      },
+      {
+        "title": "(",
+        "artist": "",
+        "start": 388
+      },
+      {
+        "title": "二曲",
+        "artist": "",
+        "start": 445
+      },
+      {
+        "title": "《粉雪》",
+        "artist": "",
+        "start": 450
+      },
+      {
+        "title": "(",
+        "artist": "",
+        "start": 775
+      },
+      {
+        "title": "三曲",
+        "artist": "",
+        "start": 862
+      },
+      {
+        "title": "《Butter-Fly》",
+        "artist": "",
+        "start": 885
+      },
+      {
+        "title": "(",
+        "artist": "",
+        "start": 1149
+      },
+      {
+        "title": "四曲",
+        "artist": "",
+        "start": 1180
+      },
+      {
+        "title": "《曇天》",
+        "artist": "",
+        "start": 1230
+      },
+      {
+        "title": "(",
+        "artist": "",
+        "start": 1415
+      },
+      {
+        "title": "五曲",
+        "artist": "",
+        "start": 1530
+      },
+      {
+        "title": "《フレンド・ライク・ミー》",
+        "artist": "",
+        "start": 1535
+      },
+      {
+        "title": "お疲れのながみん(おじさん)",
+        "artist": "",
+        "start": 1685
+      },
+      {
+        "title": "六曲",
+        "artist": "",
+        "start": 1820
+      },
+      {
+        "title": "(",
+        "artist": "",
+        "start": 1820
+      },
+      {
+        "title": "《AM11",
+        "artist": "00》",
+        "start": 1870
+      },
+      {
+        "title": "(",
+        "artist": "",
+        "start": 2185
+      },
+      {
+        "title": "七曲",
+        "artist": "",
+        "start": 2305
+      },
+      {
+        "title": "(",
+        "artist": "",
+        "start": 2566
+      },
+      {
+        "title": "八曲",
+        "artist": "",
+        "start": 2635
+      },
+      {
+        "title": "《サイレントマジョリティー》",
+        "artist": "",
+        "start": 2640
       }
     ]
   },
