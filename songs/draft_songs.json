@@ -96,78 +96,43 @@
     "songs": [
       {
         "title": "IRIS OUT",
-        "artist": "yonetsu kenshi (Nagao",
+        "artist": "米津玄師",
         "start": 671
       },
       {
-        "title": "Aufheben",
-        "artist": "Mrs. GREEN APPLE (Seraph)",
-        "start": 841
-      },
-      {
-        "title": "Suki Suki Zecchou Shou",
-        "artist": "koyori (Miku)",
-        "start": 1111
-      },
-      {
-        "title": "diver",
-        "artist": "KANA-BOON (Seraph and Nagao)",
+        "title": "ダイバー with セラフ・ダズルガーデン",
+        "artist": "KANA-BOON",
         "start": 1635
       },
       {
-        "title": "ray",
-        "artist": "BUMP OF CHICKEN (Nagao and Madoka)",
+        "title": "ray with 水面まどか",
+        "artist": "BUMP OF CHICKEN",
         "start": 1938
       },
       {
-        "title": "oni no utage",
-        "artist": "tomonari sora (Miku)",
-        "start": 2356
-      },
-      {
-        "title": "Laugh Maker",
-        "artist": "BUMP OF CHICKEN (Nagao)",
+        "title": "ラフ・メイカー",
+        "artist": "BUMP OF CHICKEN",
         "start": 2936
       },
       {
-        "title": "odori",
-        "artist": "Ado (Madoka)",
-        "start": 3243
+        "title": "もう帰りたいもん 帰んないでね with セラフ・ダズルガーデン",
+        "artist": "",
+        "start": 4449
       },
       {
-        "title": "bubblin",
-        "artist": "HIMEHINA (Miku and Madoka)",
-        "start": 3570
-      },
-      {
-        "title": "night routine",
-        "artist": "kitani tatsuya (Seraph and Miku)",
-        "start": 3841
-      },
-      {
-        "title": "nomad",
-        "artist": "suda keina (Madoka)",
-        "start": 4204
-      },
-      {
-        "title": "Darling",
-        "artist": "suda keina (Nagao)",
+        "title": "ダーリン",
+        "artist": "須田景凪",
         "start": 4519
       },
       {
-        "title": "flos",
-        "artist": "R Sound Design (Miku)",
-        "start": 4714
-      },
-      {
-        "title": "Blue Ambience",
-        "artist": "Mrs. GREEN APPLE feat asmi (Seraph and Madoka)",
-        "start": 5481
-      },
-      {
-        "title": "Fragile",
-        "artist": "nulet (Nagao and Miku)",
+        "title": "フラジール with 猫屋敷美紅",
+        "artist": "ぬゆり",
         "start": 5804
+      },
+      {
+        "title": "Hurrah!! with セラフ・ダズルガーデン,水面まどか,猫屋敷美紅",
+        "artist": "にじさんじ",
+        "start": 6320
       }
     ]
   },
@@ -198,42 +163,47 @@
       {
         "title": "DISCOTHEQUE with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
         "artist": "",
-        "start": 120
+        "start": 127
       },
       {
         "title": "革命デュアリズム with 町田ちま",
         "artist": "",
-        "start": 775
+        "start": 786
       },
       {
         "title": "にじさんじ体操第一 with 七瀬すず菜",
         "artist": "",
-        "start": 1490
+        "start": 1518
       },
       {
-        "title": "ドーナツホール(🦋、⏳)",
+        "title": "マジ！Magic！PEACH！ with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
         "artist": "",
-        "start": 2288
+        "start": 1759
+      },
+      {
+        "title": "ドーナツホール with ミラン・ケストレル",
+        "artist": "",
+        "start": 2321
       },
       {
         "title": "HOT LIMIT with レイン・パターソン",
         "artist": "",
-        "start": 2966
+        "start": 3005
       },
       {
         "title": "きゃわぽっぴんどぅー with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
         "artist": "",
-        "start": 3577
+        "start": 3595
       },
       {
         "title": "アイドルパワー with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
         "artist": "",
-        "start": 3845
+        "start": 3847
       },
       {
         "title": "爆裂愛してる with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
         "artist": "",
-        "start": 4215
+        "start": 4262
       }
     ]
   },
