@@ -1,5 +1,36 @@
 [
   {
+    "youtubeId": "juISICmvmJI",
+    "title": "【#にじ遊戯王祭2026】予選デッキぶつかり稽古【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-09-17",
+    "thumbnail": "https://i.ytimg.com/vi/juISICmvmJI/mqdefault.jpg",
+    "category": [
+      "ゲーム実況"
+    ],
+    "keywords": [
+      "遊戯王",
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "0J2dzKzyQ84",
+    "title": "【認知】コメントの名前が頭に残る条件とは？【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-09-17",
+    "thumbnail": "https://i.ytimg.com/vi/0J2dzKzyQ84/mqdefault.jpg",
+    "category": [
+      "公式切り抜き"
+    ],
+    "keywords": [
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
     "youtubeId": "qEdOC_hu7PY",
     "title": "【 #ぱにきゅーぶ 】PanicQube N 東西戦スペシャル【長尾景/舞元啓介/鏑木ろこ/七瀬すず菜/早瀬走/先斗寧/緋八マナ/にじさんじ】",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -5114,9 +5145,14 @@
     ],
     "songs": [
       {
-        "title": "がございます。",
-        "artist": "Unknown Artist",
-        "start": 0
+        "title": "蒼穹のファンファーレ(ニコ生で) with イ・オン,ジョー・力一,伊波ライ,戌亥とこ,早乙女ベリー,東堂コハク,社築",
+        "artist": "",
+        "start": 2549
+      },
+      {
+        "title": "RPG with ジョー・力一,伊波ライ",
+        "artist": "･ ･",
+        "start": 3306
       }
     ]
   },
@@ -6560,22 +6596,37 @@
     "tags": [],
     "songs": [
       {
-        "title": "君の神様になりたい",
+        "title": "GO!!! with 渚トラウト",
+        "artist": "FLOW",
+        "start": 399
+      },
+      {
+        "title": "君の神様になりたい。",
         "artist": "カンザキイオリ",
-        "start": 2077
+        "start": 2078
+      },
+      {
+        "title": "ロンリー・チャップリン with 綺沙良",
+        "artist": "鈴木聖美 with Rats&Star",
+        "start": 3018
       },
       {
         "title": "シンデレラボーイ",
         "artist": "Saucy Dog",
-        "start": 3908
+        "start": 3901
+      },
+      {
+        "title": "ユいたもん‼️ with 渚トラウト",
+        "artist": "後でポストしといてね",
+        "start": 4534
       },
       {
         "title": "水流のロック with 戌亥とこ",
         "artist": "日食なつこ",
-        "start": 5507
+        "start": 5503
       },
       {
-        "title": "️🍴サマータイムレコード with 戌亥とこ,文野環,綺沙良",
+        "title": "サマータイムレコード with 戌亥とこ,文野環,渚トラウト,綺沙良",
         "artist": "じん",
         "start": 6544
       }
@@ -40403,104 +40454,59 @@
     "tags": [],
     "songs": [
       {
-        "title": "【魔法の絨毯】川崎鷹也",
-        "artist": "",
-        "start": 470
+        "title": "魔法の絨毯",
+        "artist": "川崎鷹也",
+        "start": 476
       },
       {
-        "title": "ボイトレは続けてた",
-        "artist": "",
-        "start": 688
+        "title": "Pretender",
+        "artist": "official髭男dism",
+        "start": 1020
       },
       {
-        "title": "お姉様をパシる",
-        "artist": "",
-        "start": 743
+        "title": "King",
+        "artist": "Kanaria",
+        "start": 1695
       },
       {
-        "title": "今年はいろんなことやった",
-        "artist": "",
-        "start": 865
+        "title": "カタオモイ",
+        "artist": "Aimer",
+        "start": 1934
       },
       {
-        "title": "【Pretender】Official髭男dism",
-        "artist": "",
-        "start": 1015
+        "title": "Kataomoi",
+        "artist": "Aimer",
+        "start": 1934
       },
       {
-        "title": "エモい顔すれば良かった",
-        "artist": "",
-        "start": 1342
+        "title": "丸の内サディスティック",
+        "artist": "椎名林檎",
+        "start": 2576
       },
       {
-        "title": "またお姉様をパシる",
-        "artist": "",
-        "start": 1422
+        "title": "Marunouchi Sadistic",
+        "artist": "Ringo Shiina",
+        "start": 2576
       },
       {
-        "title": "換気扇じゃどうにもならない",
-        "artist": "",
-        "start": 1614
+        "title": "怪物",
+        "artist": "YOASOBI",
+        "start": 2884
       },
       {
-        "title": "【KING】Kanaria",
-        "artist": "",
-        "start": 1692
+        "title": "Kaibutsu",
+        "artist": "YOASOBI",
+        "start": 2884
       },
       {
-        "title": "がなり入れてきてる",
-        "artist": "",
-        "start": 1875
+        "title": "KICK BACK",
+        "artist": "米津玄師",
+        "start": 3183
       },
       {
-        "title": "【カタオモイ】Aimer",
-        "artist": "",
-        "start": 1932
-      },
-      {
-        "title": "毎年リライトしてるから円盤難しい",
-        "artist": "",
-        "start": 2244
-      },
-      {
-        "title": "刀ピーの厄介オタクいるって",
-        "artist": "",
-        "start": 2380
-      },
-      {
-        "title": "まじでいいぞ",
-        "artist": "",
-        "start": 2425
-      },
-      {
-        "title": "化物コンテンツ",
-        "artist": "",
-        "start": 2475
-      },
-      {
-        "title": "【丸の内サディスティック】椎名林檎",
-        "artist": "",
-        "start": 2560
-      },
-      {
-        "title": "刀ピーに時間かけすぎた",
-        "artist": "",
-        "start": 2870
-      },
-      {
-        "title": "【怪物】YOASOBI",
-        "artist": "",
-        "start": 2880
-      },
-      {
-        "title": "【KICK BACK】米津玄師",
-        "artist": "",
-        "start": 3180
-      },
-      {
-        "title": "【ドライフラワー】優里",
-        "artist": "",
-        "start": 3750
+        "title": "ドライフラワー",
+        "artist": "優里",
+        "start": 3755
       }
     ]
   },
@@ -49008,44 +49014,34 @@
     "tags": [],
     "songs": [
       {
-        "title": "香水",
-        "artist": "",
-        "start": 121
+        "title": "『香水",
+        "artist": "瑛人』",
+        "start": 421
       },
       {
-        "title": "I LOVE YOU",
-        "artist": "",
-        "start": 482
+        "title": "『I LOVE YOU",
+        "artist": "尾崎豊』",
+        "start": 713
       },
       {
-        "title": "大切なもの",
-        "artist": "",
-        "start": 769
+        "title": "『大切なもの",
+        "artist": "ロードオブメジャー』",
+        "start": 945
       },
       {
-        "title": "桜坂",
-        "artist": "",
-        "start": 1030
+        "title": "『桜坂",
+        "artist": "福山雅治』",
+        "start": 1301
       },
       {
-        "title": "光",
-        "artist": "",
-        "start": 1353
+        "title": "『光",
+        "artist": "宇多田ヒカル』",
+        "start": 1613
       },
       {
-        "title": "Lemon",
-        "artist": "",
-        "start": 2170
-      },
-      {
-        "title": "スパークル",
-        "artist": "",
-        "start": 2518
-      },
-      {
-        "title": "〆",
-        "artist": "",
-        "start": 2908
+        "title": "『Lemon",
+        "artist": "米津玄師』",
+        "start": 2430
       }
     ]
   },
@@ -54973,124 +54969,19 @@
     "tags": [],
     "songs": [
       {
-        "title": "一曲",
+        "title": "ながみん『フライングゲットですぅ。えーっと、音の確認とともによろしくお願いしますぅ。』",
         "artist": "",
-        "start": 92
+        "start": 96
       },
       {
-        "title": "(",
+        "title": "ながみん『あ\"、あ\"、あ\"ー』",
         "artist": "",
-        "start": 92
+        "start": 107
       },
       {
-        "title": "《フライングゲット》",
+        "title": "長尾景　歌い出し",
         "artist": "",
-        "start": 104
-      },
-      {
-        "title": "(",
-        "artist": "",
-        "start": 388
-      },
-      {
-        "title": "二曲",
-        "artist": "",
-        "start": 445
-      },
-      {
-        "title": "《粉雪》",
-        "artist": "",
-        "start": 450
-      },
-      {
-        "title": "(",
-        "artist": "",
-        "start": 775
-      },
-      {
-        "title": "三曲",
-        "artist": "",
-        "start": 862
-      },
-      {
-        "title": "《Butter-Fly》",
-        "artist": "",
-        "start": 885
-      },
-      {
-        "title": "(",
-        "artist": "",
-        "start": 1149
-      },
-      {
-        "title": "四曲",
-        "artist": "",
-        "start": 1180
-      },
-      {
-        "title": "《曇天》",
-        "artist": "",
-        "start": 1230
-      },
-      {
-        "title": "(",
-        "artist": "",
-        "start": 1415
-      },
-      {
-        "title": "五曲",
-        "artist": "",
-        "start": 1530
-      },
-      {
-        "title": "《フレンド・ライク・ミー》",
-        "artist": "",
-        "start": 1535
-      },
-      {
-        "title": "お疲れのながみん(おじさん)",
-        "artist": "",
-        "start": 1685
-      },
-      {
-        "title": "六曲",
-        "artist": "",
-        "start": 1820
-      },
-      {
-        "title": "(",
-        "artist": "",
-        "start": 1820
-      },
-      {
-        "title": "《AM11",
-        "artist": "00》",
-        "start": 1870
-      },
-      {
-        "title": "(",
-        "artist": "",
-        "start": 2185
-      },
-      {
-        "title": "七曲",
-        "artist": "",
-        "start": 2305
-      },
-      {
-        "title": "(",
-        "artist": "",
-        "start": 2566
-      },
-      {
-        "title": "八曲",
-        "artist": "",
-        "start": 2635
-      },
-      {
-        "title": "《サイレントマジョリティー》",
-        "artist": "",
-        "start": 2640
+        "start": 111
       }
     ]
   },
@@ -59466,39 +59357,89 @@
     "tags": [],
     "songs": [
       {
+        "title": "勇気100%",
+        "artist": "",
+        "start": 41
+      },
+      {
+        "title": "即興BGM",
+        "artist": "",
+        "start": 472
+      },
+      {
+        "title": "群青日和",
+        "artist": "",
+        "start": 659
+      },
+      {
+        "title": "プライド革命",
+        "artist": "",
+        "start": 1110
+      },
+      {
+        "title": "カタオモイ",
+        "artist": "",
+        "start": 1525
+      },
+      {
+        "title": "secret base〜君がくれたもの〜",
+        "artist": "",
+        "start": 1946
+      },
+      {
+        "title": "地球最後の告白を",
+        "artist": "",
+        "start": 2419
+      },
+      {
+        "title": "カサブタ",
+        "artist": "",
+        "start": 2875
+      },
+      {
+        "title": "歌うたいのバラッド",
+        "artist": "",
+        "start": 3221
+      },
+      {
+        "title": "いいんですか",
+        "artist": "",
+        "start": 3855
+      },
+      {
         "title": "スパークル",
         "artist": "",
         "start": 4218
       },
       {
-        "title": "ピアノのリズム気持ち良すぎ",
+        "title": "スパークル3人ver",
         "artist": "",
-        "start": 4455
+        "start": 4828
       },
       {
-        "title": "甲斐田のブレスで息ぴったりなの良",
+        "title": "ハレ晴レユカイ",
         "artist": "",
-        "start": 4483
+        "start": 5105
       },
       {
-        "title": "ピアノthank you",
+        "title": "硝子の少年",
         "artist": "",
-        "start": 4523
+        "start": 6078
       },
       {
-        "title": "サビ入り鳥肌",
+        "title": "世界に一つだけの花",
         "artist": "",
-        "start": 4530
+        "start": 6441
       },
       {
-        "title": "高音意味わからんくて好",
+        "title": "花の名",
         "artist": "",
-        "start": 4583
+        "start": 7023
       },
       {
-        "title": "人ver  優勝",
+        "title": "君の知らない物語",
         "artist": "",
-        "start": 4827
+        "start": 7420
       }
     ]
   },
