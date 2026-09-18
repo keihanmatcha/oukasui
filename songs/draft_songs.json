@@ -1,5 +1,33 @@
 [
   {
+    "youtubeId": "Sqcz78WzAyQ",
+    "title": "Beat it【長尾景/にじさんじ】#踊ってみた",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-09-16",
+    "thumbnail": "https://i.ytimg.com/vi/Sqcz78WzAyQ/mqdefault.jpg",
+    "category": [
+      "踊り動画"
+    ],
+    "keywords": [
+      "踊り動画",
+      "長尾景"
+    ],
+    "tags": [
+      "カバー(ソロ)",
+      "踊"
+    ],
+    "songs": [
+      {
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
+      }
+    ]
+  },
+  {
     "youtubeId": "qVXAXFhCou0",
     "title": "martini/綺沙良【長尾景/にじさんじ】#踊ってみた",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -96,78 +124,43 @@
     "songs": [
       {
         "title": "IRIS OUT",
-        "artist": "yonetsu kenshi (Nagao",
+        "artist": "米津玄師",
         "start": 671
       },
       {
-        "title": "Aufheben",
-        "artist": "Mrs. GREEN APPLE (Seraph)",
-        "start": 841
-      },
-      {
-        "title": "Suki Suki Zecchou Shou",
-        "artist": "koyori (Miku)",
-        "start": 1111
-      },
-      {
-        "title": "diver",
-        "artist": "KANA-BOON (Seraph and Nagao)",
+        "title": "ダイバー with セラフ・ダズルガーデン",
+        "artist": "KANA-BOON",
         "start": 1635
       },
       {
-        "title": "ray",
-        "artist": "BUMP OF CHICKEN (Nagao and Madoka)",
+        "title": "ray with 水面まどか",
+        "artist": "BUMP OF CHICKEN",
         "start": 1938
       },
       {
-        "title": "oni no utage",
-        "artist": "tomonari sora (Miku)",
-        "start": 2356
-      },
-      {
-        "title": "Laugh Maker",
-        "artist": "BUMP OF CHICKEN (Nagao)",
+        "title": "ラフ・メイカー",
+        "artist": "BUMP OF CHICKEN",
         "start": 2936
       },
       {
-        "title": "odori",
-        "artist": "Ado (Madoka)",
-        "start": 3243
+        "title": "もう帰りたいもん 帰んないでね with セラフ・ダズルガーデン",
+        "artist": "",
+        "start": 4449
       },
       {
-        "title": "bubblin",
-        "artist": "HIMEHINA (Miku and Madoka)",
-        "start": 3570
-      },
-      {
-        "title": "night routine",
-        "artist": "kitani tatsuya (Seraph and Miku)",
-        "start": 3841
-      },
-      {
-        "title": "nomad",
-        "artist": "suda keina (Madoka)",
-        "start": 4204
-      },
-      {
-        "title": "Darling",
-        "artist": "suda keina (Nagao)",
+        "title": "ダーリン",
+        "artist": "須田景凪",
         "start": 4519
       },
       {
-        "title": "flos",
-        "artist": "R Sound Design (Miku)",
-        "start": 4714
-      },
-      {
-        "title": "Blue Ambience",
-        "artist": "Mrs. GREEN APPLE feat asmi (Seraph and Madoka)",
-        "start": 5481
-      },
-      {
-        "title": "Fragile",
-        "artist": "nulet (Nagao and Miku)",
+        "title": "フラジール with 猫屋敷美紅",
+        "artist": "ぬゆり",
         "start": 5804
+      },
+      {
+        "title": "Hurrah!! with セラフ・ダズルガーデン,水面まどか,猫屋敷美紅",
+        "artist": "にじさんじ",
+        "start": 6320
       }
     ]
   },
@@ -3001,34 +2994,29 @@
     "tags": [],
     "songs": [
       {
-        "title": "長尾ウインク",
+        "title": "弦月の煽り超盛り上がる好き",
         "artist": "",
-        "start": 43
+        "start": 162
       },
       {
-        "title": "後ろでぴょんぴょんしてて可愛い",
+        "title": "ここの見守ってきた甲斐田から何故か最高音を歌わされる弦月までも大好き",
         "artist": "",
-        "start": 51
+        "start": 199
       },
       {
-        "title": "歌詞似合わせて2人見てる長尾",
+        "title": "(",
         "artist": "",
-        "start": 122
+        "start": 245
       },
       {
-        "title": "めっちゃ手振ってる弦月かわいい",
+        "title": "全力で手を振ってくれるの好き",
         "artist": "",
-        "start": 218
+        "start": 258
       },
       {
-        "title": "弦月回転からのみんな跳ねてる",
+        "title": "スピンからのジャンプ",
         "artist": "",
-        "start": 301
-      },
-      {
-        "title": "甲斐田投げキッス",
-        "artist": "",
-        "start": 319
+        "start": 296
       }
     ]
   },
