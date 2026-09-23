@@ -1,5 +1,20 @@
 [
   {
+    "youtubeId": "ZtIPwTLh-yA",
+    "title": "【何でもできる！？】Vtuberの多様性に驚く長尾景【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-09-22",
+    "thumbnail": "https://i.ytimg.com/vi/ZtIPwTLh-yA/mqdefault.jpg",
+    "category": [
+      "公式切り抜き"
+    ],
+    "keywords": [
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
     "youtubeId": "xgx5bbU-lGA",
     "title": "【#にじ遊戯王祭2026】予　戦【長尾景/にじさんじ】",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -657,43 +672,78 @@
     "songs": [
       {
         "title": "IRIS OUT",
-        "artist": "米津玄師",
+        "artist": "yonetsu kenshi (Nagao",
         "start": 671
       },
       {
-        "title": "ダイバー with セラフ・ダズルガーデン",
-        "artist": "KANA-BOON",
+        "title": "Aufheben",
+        "artist": "Mrs. GREEN APPLE (Seraph)",
+        "start": 841
+      },
+      {
+        "title": "Suki Suki Zecchou Shou",
+        "artist": "koyori (Miku)",
+        "start": 1111
+      },
+      {
+        "title": "diver",
+        "artist": "KANA-BOON (Seraph and Nagao)",
         "start": 1635
       },
       {
-        "title": "ray with 水面まどか",
-        "artist": "BUMP OF CHICKEN",
+        "title": "ray",
+        "artist": "BUMP OF CHICKEN (Nagao and Madoka)",
         "start": 1938
       },
       {
-        "title": "ラフ・メイカー",
-        "artist": "BUMP OF CHICKEN",
+        "title": "oni no utage",
+        "artist": "tomonari sora (Miku)",
+        "start": 2356
+      },
+      {
+        "title": "Laugh Maker",
+        "artist": "BUMP OF CHICKEN (Nagao)",
         "start": 2936
       },
       {
-        "title": "もう帰りたいもん 帰んないでね with セラフ・ダズルガーデン",
-        "artist": "",
-        "start": 4449
+        "title": "odori",
+        "artist": "Ado (Madoka)",
+        "start": 3243
       },
       {
-        "title": "ダーリン",
-        "artist": "須田景凪",
+        "title": "bubblin",
+        "artist": "HIMEHINA (Miku and Madoka)",
+        "start": 3570
+      },
+      {
+        "title": "night routine",
+        "artist": "kitani tatsuya (Seraph and Miku)",
+        "start": 3841
+      },
+      {
+        "title": "nomad",
+        "artist": "suda keina (Madoka)",
+        "start": 4204
+      },
+      {
+        "title": "Darling",
+        "artist": "suda keina (Nagao)",
         "start": 4519
       },
       {
-        "title": "フラジール with 猫屋敷美紅",
-        "artist": "ぬゆり",
-        "start": 5804
+        "title": "flos",
+        "artist": "R Sound Design (Miku)",
+        "start": 4714
       },
       {
-        "title": "Hurrah!! with セラフ・ダズルガーデン,水面まどか,猫屋敷美紅",
-        "artist": "にじさんじ",
-        "start": 6320
+        "title": "Blue Ambience",
+        "artist": "Mrs. GREEN APPLE feat asmi (Seraph and Madoka)",
+        "start": 5481
+      },
+      {
+        "title": "Fragile",
+        "artist": "nulet (Nagao and Miku)",
+        "start": 5804
       }
     ]
   },
@@ -9897,59 +9947,49 @@
     "tags": [],
     "songs": [
       {
-        "title": "魔法の絨毯",
-        "artist": "川崎鷹也",
+        "title": "人コラボの歌枠初めて",
+        "artist": "",
+        "start": 134
+      },
+      {
+        "title": "魔法の絨毯✦川崎鷹也",
+        "artist": "",
         "start": 989
       },
       {
-        "title": "本人3でした",
+        "title": "勇者✦YOASOBI（×） with 町田ちま",
         "artist": "",
-        "start": 1198
+        "start": 1661
       },
       {
-        "title": "勇者 with 町田ちま",
-        "artist": "YOASOBI",
-        "start": 1656
+        "title": "（英語）",
+        "artist": "",
+        "start": 1825
       },
       {
-        "title": "KICK BACK",
-        "artist": "米津玄師",
+        "title": "KICK BACK✦米津玄師",
+        "artist": "",
         "start": 2750
       },
       {
-        "title": "別に歌さえ歌えりゃいいから",
+        "title": "▶踊× with 星導ショウ",
         "artist": "",
-        "start": 3717
+        "start": 3800
       },
       {
-        "title": "踊 with 星導ショウ",
-        "artist": "Ado",
-        "start": 3798
-      },
-      {
-        "title": "晩餐歌",
-        "artist": "tuki.",
-        "start": 4548
-      },
-      {
-        "title": "じゃあゴブリン4お願いします",
+        "title": "踊✦Ado（×🐙）",
         "artist": "",
-        "start": 5008
+        "start": 3812
       },
       {
-        "title": "星導ってプレイリスト作るわ",
+        "title": "晩餐歌✦tuki.",
         "artist": "",
-        "start": 5988
+        "start": 4539
       },
       {
-        "title": "シル・ヴ・プレジデント with 倉持めると",
-        "artist": "P丸様。",
-        "start": 6047
-      },
-      {
-        "title": "DAYBREAK FRONTLINE with 倉持めると,卯月コウ,星導ショウ,星川サラ,町田ちま",
-        "artist": "Orangestar",
-        "start": 6478
+        "title": "シル・ヴ・プレジデント✦P丸様。（🧸×）",
+        "artist": "",
+        "start": 6050
       }
     ]
   },
@@ -55074,19 +55114,124 @@
     "tags": [],
     "songs": [
       {
-        "title": "ながみん『フライングゲットですぅ。えーっと、音の確認とともによろしくお願いしますぅ。』",
+        "title": "一曲",
         "artist": "",
-        "start": 96
+        "start": 92
       },
       {
-        "title": "ながみん『あ\"、あ\"、あ\"ー』",
+        "title": "(",
         "artist": "",
-        "start": 107
+        "start": 92
       },
       {
-        "title": "長尾景　歌い出し",
+        "title": "《フライングゲット》",
         "artist": "",
-        "start": 111
+        "start": 104
+      },
+      {
+        "title": "(",
+        "artist": "",
+        "start": 388
+      },
+      {
+        "title": "二曲",
+        "artist": "",
+        "start": 445
+      },
+      {
+        "title": "《粉雪》",
+        "artist": "",
+        "start": 450
+      },
+      {
+        "title": "(",
+        "artist": "",
+        "start": 775
+      },
+      {
+        "title": "三曲",
+        "artist": "",
+        "start": 862
+      },
+      {
+        "title": "《Butter-Fly》",
+        "artist": "",
+        "start": 885
+      },
+      {
+        "title": "(",
+        "artist": "",
+        "start": 1149
+      },
+      {
+        "title": "四曲",
+        "artist": "",
+        "start": 1180
+      },
+      {
+        "title": "《曇天》",
+        "artist": "",
+        "start": 1230
+      },
+      {
+        "title": "(",
+        "artist": "",
+        "start": 1415
+      },
+      {
+        "title": "五曲",
+        "artist": "",
+        "start": 1530
+      },
+      {
+        "title": "《フレンド・ライク・ミー》",
+        "artist": "",
+        "start": 1535
+      },
+      {
+        "title": "お疲れのながみん(おじさん)",
+        "artist": "",
+        "start": 1685
+      },
+      {
+        "title": "六曲",
+        "artist": "",
+        "start": 1820
+      },
+      {
+        "title": "(",
+        "artist": "",
+        "start": 1820
+      },
+      {
+        "title": "《AM11",
+        "artist": "00》",
+        "start": 1870
+      },
+      {
+        "title": "(",
+        "artist": "",
+        "start": 2185
+      },
+      {
+        "title": "七曲",
+        "artist": "",
+        "start": 2305
+      },
+      {
+        "title": "(",
+        "artist": "",
+        "start": 2566
+      },
+      {
+        "title": "八曲",
+        "artist": "",
+        "start": 2635
+      },
+      {
+        "title": "《サイレントマジョリティー》",
+        "artist": "",
+        "start": 2640
       }
     ]
   },
