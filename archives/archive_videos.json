@@ -1,5 +1,36 @@
 [
   {
+    "youtubeId": "ln_Xso7AiwA",
+    "title": "【にじさんじは縦社会！？】接待ゴルフに勤しむライバーたち【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-09-23",
+    "thumbnail": "https://i.ytimg.com/vi/ln_Xso7AiwA/mqdefault.jpg",
+    "category": [
+      "未分類"
+    ],
+    "keywords": [
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "08ynTa3s9oQ",
+    "title": "【#にじ遊戯王祭2026】決　勝　ト　ナ　メ【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-09-23",
+    "thumbnail": "https://i.ytimg.com/vi/08ynTa3s9oQ/mqdefault.jpg",
+    "category": [
+      "ゲーム実況"
+    ],
+    "keywords": [
+      "遊戯王",
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
     "youtubeId": "ZtIPwTLh-yA",
     "title": "【何でもできる！？】Vtuberの多様性に驚く長尾景【長尾景/にじさんじ】",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -672,78 +703,43 @@
     "songs": [
       {
         "title": "IRIS OUT",
-        "artist": "yonetsu kenshi (Nagao",
+        "artist": "米津玄師",
         "start": 671
       },
       {
-        "title": "Aufheben",
-        "artist": "Mrs. GREEN APPLE (Seraph)",
-        "start": 841
-      },
-      {
-        "title": "Suki Suki Zecchou Shou",
-        "artist": "koyori (Miku)",
-        "start": 1111
-      },
-      {
-        "title": "diver",
-        "artist": "KANA-BOON (Seraph and Nagao)",
+        "title": "ダイバー with セラフ・ダズルガーデン",
+        "artist": "KANA-BOON",
         "start": 1635
       },
       {
-        "title": "ray",
-        "artist": "BUMP OF CHICKEN (Nagao and Madoka)",
+        "title": "ray with 水面まどか",
+        "artist": "BUMP OF CHICKEN",
         "start": 1938
       },
       {
-        "title": "oni no utage",
-        "artist": "tomonari sora (Miku)",
-        "start": 2356
-      },
-      {
-        "title": "Laugh Maker",
-        "artist": "BUMP OF CHICKEN (Nagao)",
+        "title": "ラフ・メイカー",
+        "artist": "BUMP OF CHICKEN",
         "start": 2936
       },
       {
-        "title": "odori",
-        "artist": "Ado (Madoka)",
-        "start": 3243
+        "title": "もう帰りたいもん 帰んないでね with セラフ・ダズルガーデン",
+        "artist": "",
+        "start": 4449
       },
       {
-        "title": "bubblin",
-        "artist": "HIMEHINA (Miku and Madoka)",
-        "start": 3570
-      },
-      {
-        "title": "night routine",
-        "artist": "kitani tatsuya (Seraph and Miku)",
-        "start": 3841
-      },
-      {
-        "title": "nomad",
-        "artist": "suda keina (Madoka)",
-        "start": 4204
-      },
-      {
-        "title": "Darling",
-        "artist": "suda keina (Nagao)",
+        "title": "ダーリン",
+        "artist": "須田景凪",
         "start": 4519
       },
       {
-        "title": "flos",
-        "artist": "R Sound Design (Miku)",
-        "start": 4714
-      },
-      {
-        "title": "Blue Ambience",
-        "artist": "Mrs. GREEN APPLE feat asmi (Seraph and Madoka)",
-        "start": 5481
-      },
-      {
-        "title": "Fragile",
-        "artist": "nulet (Nagao and Miku)",
+        "title": "フラジール with 猫屋敷美紅",
+        "artist": "ぬゆり",
         "start": 5804
+      },
+      {
+        "title": "Hurrah!! with セラフ・ダズルガーデン,水面まどか,猫屋敷美紅",
+        "artist": "にじさんじ",
+        "start": 6320
       }
     ]
   },
@@ -3651,29 +3647,29 @@
     ],
     "songs": [
       {
-        "title": "IRIS OUT",
+        "title": "声入り",
         "artist": "",
-        "start": 512
+        "start": 116
       },
       {
-        "title": "おやすみ泣き声、さよなら歌姫",
+        "title": "IRIS OUT   （",
         "artist": "",
-        "start": 1136
+        "start": 514
+      },
+      {
+        "title": "私欲",
+        "artist": "",
+        "start": 613
+      },
+      {
+        "title": "おやすみ泣き声、さよなら歌姫   （",
+        "artist": "",
+        "start": 1135
       },
       {
         "title": "灰色と青",
         "artist": "",
-        "start": 1506
-      },
-      {
-        "title": "かわいい時間",
-        "artist": "",
-        "start": 2025
-      },
-      {
-        "title": "気合いを入れるべりなな",
-        "artist": "",
-        "start": 2067
+        "start": 1508
       },
       {
         "title": "人生は夢だらけ",
@@ -3681,39 +3677,19 @@
         "start": 2132
       },
       {
-        "title": "アイネクライネ1回目",
-        "artist": "",
-        "start": 2395
-      },
-      {
-        "title": "アイネクライネ2回目",
-        "artist": "",
-        "start": 2467
-      },
-      {
         "title": "アイネクライネ",
         "artist": "",
-        "start": 2515
+        "start": 2516
       },
       {
-        "title": "とこちゃんに名前を呼んで欲しいみんな",
-        "artist": "",
-        "start": 2804
-      },
-      {
-        "title": "それがあなたの幸せだとしても",
+        "title": "それがあなたの幸せとしても  💫",
         "artist": "",
         "start": 2952
       },
       {
         "title": "ray",
         "artist": "",
-        "start": 3269
-      },
-      {
-        "title": "カラオケの妖精べりなな",
-        "artist": "",
-        "start": 3533
+        "start": 3268
       },
       {
         "title": "セレナーデ",
@@ -3721,79 +3697,9 @@
         "start": 3663
       },
       {
-        "title": "ずうっといっしょ！",
+        "title": "らんにんぐアモーレ",
         "artist": "",
-        "start": 3930
-      },
-      {
-        "title": "担当発表",
-        "artist": "",
-        "start": 4126
-      },
-      {
-        "title": "盛れ！ミ・アモーレ",
-        "artist": "",
-        "start": 4234
-      },
-      {
-        "title": "客降り",
-        "artist": "",
-        "start": 4333
-      },
-      {
-        "title": "客降り2",
-        "artist": "",
-        "start": 4381
-      },
-      {
-        "title": "ダンスパート",
-        "artist": "",
-        "start": 4396
-      },
-      {
-        "title": "ステップ",
-        "artist": "",
-        "start": 4677
-      },
-      {
-        "title": "おめでとうとこちゃん",
-        "artist": "",
-        "start": 5062
-      },
-      {
-        "title": "詳細説明",
-        "artist": "",
-        "start": 5085
-      },
-      {
-        "title": "ありがとうとこちゃん",
-        "artist": "",
-        "start": 5230
-      },
-      {
-        "title": "ななたま",
-        "artist": "",
-        "start": 5336
-      },
-      {
-        "title": "べりちゃん",
-        "artist": "",
-        "start": 5371
-      },
-      {
-        "title": "榊ネス",
-        "artist": "",
-        "start": 5419
-      },
-      {
-        "title": "長尾",
-        "artist": "",
-        "start": 5458
-      },
-      {
-        "title": "ドリブル",
-        "artist": "",
-        "start": 5501
+        "start": 4703
       }
     ]
   },
@@ -9947,49 +9853,59 @@
     "tags": [],
     "songs": [
       {
-        "title": "人コラボの歌枠初めて",
-        "artist": "",
-        "start": 134
-      },
-      {
-        "title": "魔法の絨毯✦川崎鷹也",
-        "artist": "",
+        "title": "魔法の絨毯",
+        "artist": "川崎鷹也",
         "start": 989
       },
       {
-        "title": "勇者✦YOASOBI（×） with 町田ちま",
+        "title": "本人3でした",
         "artist": "",
-        "start": 1661
+        "start": 1198
       },
       {
-        "title": "（英語）",
-        "artist": "",
-        "start": 1825
+        "title": "勇者 with 町田ちま",
+        "artist": "YOASOBI",
+        "start": 1656
       },
       {
-        "title": "KICK BACK✦米津玄師",
-        "artist": "",
+        "title": "KICK BACK",
+        "artist": "米津玄師",
         "start": 2750
       },
       {
-        "title": "▶踊× with 星導ショウ",
+        "title": "別に歌さえ歌えりゃいいから",
         "artist": "",
-        "start": 3800
+        "start": 3717
       },
       {
-        "title": "踊✦Ado（×🐙）",
-        "artist": "",
-        "start": 3812
+        "title": "踊 with 星導ショウ",
+        "artist": "Ado",
+        "start": 3798
       },
       {
-        "title": "晩餐歌✦tuki.",
-        "artist": "",
-        "start": 4539
+        "title": "晩餐歌",
+        "artist": "tuki.",
+        "start": 4548
       },
       {
-        "title": "シル・ヴ・プレジデント✦P丸様。（🧸×）",
+        "title": "じゃあゴブリン4お願いします",
         "artist": "",
-        "start": 6050
+        "start": 5008
+      },
+      {
+        "title": "星導ってプレイリスト作るわ",
+        "artist": "",
+        "start": 5988
+      },
+      {
+        "title": "シル・ヴ・プレジデント with 倉持めると",
+        "artist": "P丸様。",
+        "start": 6047
+      },
+      {
+        "title": "DAYBREAK FRONTLINE with 倉持めると,卯月コウ,星導ショウ,星川サラ,町田ちま",
+        "artist": "Orangestar",
+        "start": 6478
       }
     ]
   },
@@ -59682,39 +59598,89 @@
     "tags": [],
     "songs": [
       {
+        "title": "勇気100%",
+        "artist": "",
+        "start": 41
+      },
+      {
+        "title": "即興BGM",
+        "artist": "",
+        "start": 472
+      },
+      {
+        "title": "群青日和",
+        "artist": "",
+        "start": 659
+      },
+      {
+        "title": "プライド革命",
+        "artist": "",
+        "start": 1110
+      },
+      {
+        "title": "カタオモイ",
+        "artist": "",
+        "start": 1525
+      },
+      {
+        "title": "secret base〜君がくれたもの〜",
+        "artist": "",
+        "start": 1946
+      },
+      {
+        "title": "地球最後の告白を",
+        "artist": "",
+        "start": 2419
+      },
+      {
+        "title": "カサブタ",
+        "artist": "",
+        "start": 2875
+      },
+      {
+        "title": "歌うたいのバラッド",
+        "artist": "",
+        "start": 3221
+      },
+      {
+        "title": "いいんですか",
+        "artist": "",
+        "start": 3855
+      },
+      {
         "title": "スパークル",
         "artist": "",
         "start": 4218
       },
       {
-        "title": "ピアノのリズム気持ち良すぎ",
+        "title": "スパークル3人ver",
         "artist": "",
-        "start": 4455
+        "start": 4828
       },
       {
-        "title": "甲斐田のブレスで息ぴったりなの良",
+        "title": "ハレ晴レユカイ",
         "artist": "",
-        "start": 4483
+        "start": 5105
       },
       {
-        "title": "ピアノthank you",
+        "title": "硝子の少年",
         "artist": "",
-        "start": 4523
+        "start": 6078
       },
       {
-        "title": "サビ入り鳥肌",
+        "title": "世界に一つだけの花",
         "artist": "",
-        "start": 4530
+        "start": 6441
       },
       {
-        "title": "高音意味わからんくて好",
+        "title": "花の名",
         "artist": "",
-        "start": 4583
+        "start": 7023
       },
       {
-        "title": "人ver  優勝",
+        "title": "君の知らない物語",
         "artist": "",
-        "start": 4827
+        "start": 7420
       }
     ]
   },
