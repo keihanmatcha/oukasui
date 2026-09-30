@@ -1018,7 +1018,8 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
     if not text:
         return []
     text = html.unescape(text)
-    ts_regex = r'(?:(?<=\s)|^|\b)(\d{1,2}:\d{1,2}:\d{2}|\d{1,2}:\d{2})(?!\d)'
+
+    ts_regex = r'(?:(?<=\s)|^|\b)(\d{1,2}:\d{2}:\d{2}|\d{1,2}:\d{2})(?!\d)'
     matches = list(re.finditer(ts_regex, text))
     if len(matches) < 3:
         return []
@@ -1031,40 +1032,129 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
         content = text[start_idx:end_idx].strip()
         raw_entries.append((ts_str, content))
 
+    # 1. 登場ライバーの事前収集
+    all_collab_livers = set()
+    has_owner_symbol = False
+    has_any_symbol = False
+
+    for _, raw_text in raw_entries:
+        line = raw_text.split('\n')[0]
+        for mark in sorted(LIVER_EMOJI_MAP.keys(), key=len, reverse=True):
+            liver_name = LIVER_EMOJI_MAP[mark]
+            if mark in line and liver_name != "全員":
+                has_any_symbol = True
+                if liver_name == channel_owner:
+                    has_owner_symbol = True
+                else:
+                    all_collab_livers.add(liver_name)
+
+    if fallback_members:
+        for m in fallback_members:
+            if m != channel_owner and m in KEYWORD_GROUPS.get("MEMBERS", []):
+                all_collab_livers.add(m)
+
+    other_members = [m for m in all_collab_livers if m != channel_owner]
+
+    # 2. 各曲の解析
     songs = []
+
     for ts_str, raw_text in raw_entries:
         clean_text = raw_text.split('\n')[0].strip()
-        if not clean_text or any(x in clean_text.upper() for x in EXCLUDE_SETLIST_KEYWORDS):
+        if not clean_text:
             continue
 
-        clean_text = re.sub(r'^[:\s♪・\-\.\]】）)／/|｜￤~～]+', '', clean_text).strip("  ")
-        clean_text = re.sub(r'\s*[\(（]?http.*$', '', clean_text).strip("  ")
-        if not clean_text: continue
+        clean_upper = clean_text.upper()
+        if any(x in clean_upper for x in EXCLUDE_SETLIST_KEYWORDS):
+            continue
 
-        t = clean_text
-        a = ""
-        for sep in [' / ', '／', ' - ', ' － ', '：', ' : ', '￤']:
+        singers = []
+        is_all = False
+
+        if "全員" in clean_text:
+            is_all = True
+            clean_text = clean_text.replace("全員", "")
+
+        for mark in sorted(LIVER_EMOJI_MAP.keys(), key=len, reverse=True):
+            liver_name = LIVER_EMOJI_MAP[mark]
+            if mark in clean_text:
+                if liver_name == "全員":
+                    is_all = True
+                else:
+                    singers.append(liver_name)
+                clean_text = clean_text.replace(mark, "")
+
+        singers = list(dict.fromkeys(singers))
+
+        # 長尾景不参加の曲をスキップ（長尾の記号が全体で1度でも見つかった場合のみ適用）
+        if has_any_symbol and has_owner_symbol:
+            if not is_all and (channel_owner not in singers):
+                continue
+
+        # クレンジング
+        clean_text = re.sub(r'^[:\s♪・\-\d\.\]】）)／/|｜￤~～]+', '', clean_text).strip()
+        clean_text = re.sub(r'[\(（][\s,、️‍]*[\)）]', '', clean_text).strip()
+        clean_text = re.sub(r'\s*[~～]+$', '', clean_text).strip()
+        clean_text = re.sub(r'\s*[\(（]?http.*$', '', clean_text).strip()
+
+        if not clean_text:
+            continue
+
+        # 曲名とアーティストの分離
+        t, a = clean_text, ""
+        separators = [' / ', '／', ' - ', ' － ', '：', ' : ', '/', '￤']
+        for sep in separators:
             if sep in clean_text:
                 parts = clean_text.split(sep, 1)
-                t, a = parts[0].strip("  "), parts[1].strip("  ")
+                t, a = parts[0].strip(), parts[1].strip()
                 break
 
-        if not a:
-            a = resolve_artist_name(t)
+        # トーク特有のスラッシュ誤判定を防止
+        if any(c in t or c in a for c in ["？", "?", "！", "!", "w", "W", "草", "「", "」", "…", "俺","上手","思う","思って","思わ","よね","だろう","いいわ","だの","いいな","かな","布教"]):
+            if not any(mark in raw_text for mark in ["♪", "♫"]):
+                continue
 
+        # with 〇〇 の付与
+        if is_all:
+            if other_members:
+                t = f"{t} with {','.join(sorted(other_members))}"
+        else:
+            collab_partners = [s for s in singers if s != channel_owner]
+            if collab_partners:
+                t = f"{t} with {','.join(sorted(collab_partners))}"
+
+        # 過去DBから自動補完
+        if not a and GLOBAL_ARTIST_DB:
+            pure_t = re.sub(r'\s+with\s+.*$', '', t).strip()
+            if pure_t in GLOBAL_ARTIST_DB:
+                a = GLOBAL_ARTIST_DB[pure_t]
+
+        # 秒変換
         parts = list(map(int, ts_str.split(':')))
-        sec = parts[0] * 3600 + parts[1] * 60 + parts[2] if len(parts) == 3 else parts[0] * 60 + parts[1] if len(parts) == 2 else 0
+        if len(parts) == 3:
+            sec = parts[0] * 3600 + parts[1] * 60 + parts[2]
+        elif len(parts) == 2:
+            sec = parts[0] * 60 + parts[1]
+        else:
+            sec = 0
 
-        songs.append({"title": t, "artist": a, "start": sec})
+        songs.append({
+            "title": t,
+            "artist": a,
+            "start": sec
+        })
 
+    # ★ ここから下は for ループの外（重複排除とソート）
     songs.sort(key=lambda x: x["start"])
     unique_songs = []
-    seen = set()
+    seen_keys = set()
     for s in songs:
-        if (s["start"], s["title"]) not in seen:
-            seen.add((s["start"], s["title"]))
+        dedup_key = (s["start"], s["title"])
+        if dedup_key not in seen_keys:
+            seen_keys.add(dedup_key)
             unique_songs.append(s)
+
     return unique_songs
+
 
 # ★ コメント欄からセトリを取得する関数
 def fetch_setlist_from_comments(youtube, video_id, fallback_members=None):
