@@ -17,7 +17,7 @@ JSON_FILE_PATH = "archives/archive_videos.json"
 MAX_PAGES_TO_FETCH = 100
 
 OWNER_NAME = "長尾景"
-TARGET_X_USER = "midori_2434"
+TARGET_X_USER = "kei_nagao2434"
 MANUAL_SONG_ARTIST_MAP = {
     "セレナーデ": "なとり",
     "分かっちゃいないね": "monet"
