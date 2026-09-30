@@ -1,5 +1,40 @@
 [
   {
+    "youtubeId": "HxMd0fi965Q",
+    "title": "【雑談】ひるざつだん【長尾景/にじさんじ】【#ながおしゃべり】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-09-30",
+    "thumbnail": "https://i.ytimg.com/vi/HxMd0fi965Q/mqdefault.jpg",
+    "category": [
+      "企画",
+      "公式企画・番組",
+      "雑談"
+    ],
+    "keywords": [
+      "ながおしゃべり",
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "j42CGpZEVGg",
+    "title": "【盗難！？】甲斐田から奪った馬を自慢する長尾景【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-09-29",
+    "thumbnail": "https://i.ytimg.com/vi/j42CGpZEVGg/mqdefault.jpg",
+    "category": [
+      "公式切り抜き"
+    ],
+    "keywords": [
+      "年長組",
+      "甲斐田晴",
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
     "youtubeId": "PgmbTi5YsAw",
     "title": "【妹に運転を教える】と始まる前は思ってたんや...【長尾景/にじさんじ】",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -6968,22 +7003,37 @@
     "tags": [],
     "songs": [
       {
-        "title": "君の神様になりたい",
+        "title": "GO!!! with 渚トラウト",
+        "artist": "FLOW",
+        "start": 399
+      },
+      {
+        "title": "君の神様になりたい。",
         "artist": "カンザキイオリ",
-        "start": 2077
+        "start": 2078
+      },
+      {
+        "title": "ロンリー・チャップリン with 綺沙良",
+        "artist": "鈴木聖美 with Rats&Star",
+        "start": 3018
       },
       {
         "title": "シンデレラボーイ",
         "artist": "Saucy Dog",
-        "start": 3908
+        "start": 3901
+      },
+      {
+        "title": "ユいたもん‼️ with 渚トラウト",
+        "artist": "後でポストしといてね",
+        "start": 4534
       },
       {
         "title": "水流のロック with 戌亥とこ",
         "artist": "日食なつこ",
-        "start": 5507
+        "start": 5503
       },
       {
-        "title": "️🍴サマータイムレコード with 戌亥とこ,文野環,綺沙良",
+        "title": "サマータイムレコード with 戌亥とこ,文野環,渚トラウト,綺沙良",
         "artist": "じん",
         "start": 6544
       }
@@ -55346,124 +55396,19 @@
     "tags": [],
     "songs": [
       {
-        "title": "一曲",
+        "title": "ながみん『フライングゲットですぅ。えーっと、音の確認とともによろしくお願いしますぅ。』",
         "artist": "",
-        "start": 92
+        "start": 96
       },
       {
-        "title": "(",
+        "title": "ながみん『あ\"、あ\"、あ\"ー』",
         "artist": "",
-        "start": 92
+        "start": 107
       },
       {
-        "title": "《フライングゲット》",
+        "title": "長尾景　歌い出し",
         "artist": "",
-        "start": 104
-      },
-      {
-        "title": "(",
-        "artist": "",
-        "start": 388
-      },
-      {
-        "title": "二曲",
-        "artist": "",
-        "start": 445
-      },
-      {
-        "title": "《粉雪》",
-        "artist": "",
-        "start": 450
-      },
-      {
-        "title": "(",
-        "artist": "",
-        "start": 775
-      },
-      {
-        "title": "三曲",
-        "artist": "",
-        "start": 862
-      },
-      {
-        "title": "《Butter-Fly》",
-        "artist": "",
-        "start": 885
-      },
-      {
-        "title": "(",
-        "artist": "",
-        "start": 1149
-      },
-      {
-        "title": "四曲",
-        "artist": "",
-        "start": 1180
-      },
-      {
-        "title": "《曇天》",
-        "artist": "",
-        "start": 1230
-      },
-      {
-        "title": "(",
-        "artist": "",
-        "start": 1415
-      },
-      {
-        "title": "五曲",
-        "artist": "",
-        "start": 1530
-      },
-      {
-        "title": "《フレンド・ライク・ミー》",
-        "artist": "",
-        "start": 1535
-      },
-      {
-        "title": "お疲れのながみん(おじさん)",
-        "artist": "",
-        "start": 1685
-      },
-      {
-        "title": "六曲",
-        "artist": "",
-        "start": 1820
-      },
-      {
-        "title": "(",
-        "artist": "",
-        "start": 1820
-      },
-      {
-        "title": "《AM11",
-        "artist": "00》",
-        "start": 1870
-      },
-      {
-        "title": "(",
-        "artist": "",
-        "start": 2185
-      },
-      {
-        "title": "七曲",
-        "artist": "",
-        "start": 2305
-      },
-      {
-        "title": "(",
-        "artist": "",
-        "start": 2566
-      },
-      {
-        "title": "八曲",
-        "artist": "",
-        "start": 2635
-      },
-      {
-        "title": "《サイレントマジョリティー》",
-        "artist": "",
-        "start": 2640
+        "start": 111
       }
     ]
   },
@@ -59567,9 +59512,84 @@
     "tags": [],
     "songs": [
       {
-        "title": "【誕生日歌枠】今日は俺が主役！！！！歌っちゃうよ～～～～！！！【にじさんじ",
-        "artist": "長尾景/甲斐田晴/弦月藤士郎】【コラボ】",
-        "start": 0
+        "title": "光",
+        "artist": "",
+        "start": 300
+      },
+      {
+        "title": "去年の誕生日",
+        "artist": "",
+        "start": 1253
+      },
+      {
+        "title": "Hey Jude",
+        "artist": "",
+        "start": 1429
+      },
+      {
+        "title": "お手紙が届きました",
+        "artist": "",
+        "start": 1674
+      },
+      {
+        "title": "サムライハート",
+        "artist": "",
+        "start": 1993
+      },
+      {
+        "title": "VΔLZてえてえ",
+        "artist": "",
+        "start": 2219
+      },
+      {
+        "title": "バクチ・ダンサー",
+        "artist": "",
+        "start": 2313
+      },
+      {
+        "title": "ひとりぼっちじゃない",
+        "artist": "",
+        "start": 2754
+      },
+      {
+        "title": "仕込みのアレ",
+        "artist": "",
+        "start": 3170
+      },
+      {
+        "title": "誕生日ボイス",
+        "artist": "",
+        "start": 3266
+      },
+      {
+        "title": "長尾は年下の恋人",
+        "artist": "",
+        "start": 3813
+      },
+      {
+        "title": "愛のかたまり",
+        "artist": "",
+        "start": 3912
+      },
+      {
+        "title": "リスナーへ",
+        "artist": "",
+        "start": 4260
+      },
+      {
+        "title": "長尾の昔話",
+        "artist": "",
+        "start": 4335
+      },
+      {
+        "title": "サイレントマジョリティー",
+        "artist": "",
+        "start": 4642
+      },
+      {
+        "title": "締め",
+        "artist": "",
+        "start": 5274
       }
     ]
   },
@@ -59839,89 +59859,39 @@
     "tags": [],
     "songs": [
       {
-        "title": "勇気100%",
-        "artist": "",
-        "start": 41
-      },
-      {
-        "title": "即興BGM",
-        "artist": "",
-        "start": 472
-      },
-      {
-        "title": "群青日和",
-        "artist": "",
-        "start": 659
-      },
-      {
-        "title": "プライド革命",
-        "artist": "",
-        "start": 1110
-      },
-      {
-        "title": "カタオモイ",
-        "artist": "",
-        "start": 1525
-      },
-      {
-        "title": "secret base〜君がくれたもの〜",
-        "artist": "",
-        "start": 1946
-      },
-      {
-        "title": "地球最後の告白を",
-        "artist": "",
-        "start": 2419
-      },
-      {
-        "title": "カサブタ",
-        "artist": "",
-        "start": 2875
-      },
-      {
-        "title": "歌うたいのバラッド",
-        "artist": "",
-        "start": 3221
-      },
-      {
-        "title": "いいんですか",
-        "artist": "",
-        "start": 3855
-      },
-      {
         "title": "スパークル",
         "artist": "",
         "start": 4218
       },
       {
-        "title": "スパークル3人ver",
+        "title": "ピアノのリズム気持ち良すぎ",
         "artist": "",
-        "start": 4828
+        "start": 4455
       },
       {
-        "title": "ハレ晴レユカイ",
+        "title": "甲斐田のブレスで息ぴったりなの良",
         "artist": "",
-        "start": 5105
+        "start": 4483
       },
       {
-        "title": "硝子の少年",
+        "title": "ピアノthank you",
         "artist": "",
-        "start": 6078
+        "start": 4523
       },
       {
-        "title": "世界に一つだけの花",
+        "title": "サビ入り鳥肌",
         "artist": "",
-        "start": 6441
+        "start": 4530
       },
       {
-        "title": "花の名",
+        "title": "高音意味わからんくて好",
         "artist": "",
-        "start": 7023
+        "start": 4583
       },
       {
-        "title": "君の知らない物語",
+        "title": "人ver  優勝",
         "artist": "",
-        "start": 7420
+        "start": 4827
       }
     ]
   },
