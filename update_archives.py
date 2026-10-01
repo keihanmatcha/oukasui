@@ -5,7 +5,7 @@ import json
 import os
 import re
 import sys
-from typing import Dict, Optional
+from typing import Dict, Optional, List
 import unicodedata
 import urllib.parse
 import xml.etree.ElementTree as ET
@@ -19,6 +19,7 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 GITHUB_REPO_OWNER = "keihanmatcha"
 GITHUB_REPO_NAME = "oukasui"
 JSON_FILE_PATH = "archives/archive_videos.json"
+
 MAX_PAGES_TO_FETCH = 100
 
 OWNER_NAME = "長尾景"
@@ -954,8 +955,11 @@ def load_artist_db():
                             continue
                         pure_title = re.sub(r'\s+with\s+.*$', '', raw_title).strip("  ")
                         norm_key = normalize_title(pure_title)
+                        if pure_title and pure_title not in db:
+                            db[pure_title] = raw_artist
                         if norm_key and norm_key not in db:
                             db[norm_key] = raw_artist
+                        
         except Exception:
             continue
     GLOBAL_ARTIST_DB = db
@@ -1241,7 +1245,7 @@ def fetch_setlist_from_comments(youtube, video_id, fallback_members=None):
         return best_songs
 
 # ★ YouTube Shorts のHTMLから公式音源クレジットを抽出する関数
-def コメント(video_id: str) -> Optional[dict]:
+def fetch_shorts_audio_credit(video_id: str) -> Optional[dict]:
     try:
         url = f"https://www.youtube.com/shorts/{video_id}"
         headers = {
@@ -1305,7 +1309,7 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
 
     # 4. ★ Shorts かつ概要欄に情報がない場合にWebから公式音源取得
     if is_short and video_id:
-        credit = コメント(video_id)
+        credit = fetch_shorts_audio_credit(video_id)
         if credit and credit.get("title") and credit["title"] not in ["1.0", "1.0x", "登録", "再生"]:
             if not credit.get("artist"):
                 credit["artist"] = resolve_artist_name(credit["title"])
@@ -1349,7 +1353,7 @@ def fetch_quoted_tweet_text(tweet_url: str) -> str:
         pass
     return ""
 
-def fetch_youtube_ids_from_midori_x() -> List[str]:
+def fetch_youtube_ids_from_x() -> List[str]:
     endpoints = [
         f"https://rsshub.app/twitter/user/{TARGET_X_USER}",
         f"https://nitter.net/{TARGET_X_USER}/rss",
@@ -1554,7 +1558,7 @@ def update_github_json(new_videos, target_file_path=JSON_FILE_PATH, commit_msg="
         for s in v.get("songs", []):
             t = s.get("title", "")
             a = s.get("artist", "")
-            if not any(bad in t.lower() or bad in a.lower() for bad in ["http", "channel", "@", "%e7%b7%91%e4%bb%99"]):
+            if not any(bad in t.lower() or bad in a.lower() for bad in ["http", "channel", "@", "%E9%95%B7%E5%B0%BE%E6%99%AF"]):
                 if t not in ["1.0", "1.0x"]:
                     cleaned_songs.append(s)
         v["songs"] = cleaned_songs
@@ -1627,7 +1631,7 @@ def main():
 
     # 3. @midori_2434 のポスト & 引用ポストから動画を自動取得
     print(f"\n🐦 @{TARGET_X_USER} のXポストから告知・引用動画を探索中...")
-    x_video_ids = fetch_youtube_ids_from_midori_x()
+    x_video_ids = fetch_youtube_ids_from_x()
     fetched_external_videos = []
     if x_video_ids:
         print(f"🔍 検出された {len(x_video_ids)} 件の動画をYouTubeから取得・解析中...")
