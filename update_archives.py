@@ -1,12 +1,17 @@
-import os
-import json
 import base64
-import re
-import html
 from datetime import datetime
-from googleapiclient.discovery import build
-import requests
+import html
+import json
+import os
+import re
 import sys
+from typing import Dict, Optional
+import unicodedata
+import urllib.parse
+import xml.etree.ElementTree as ET
+from googleapiclient.discovery import build
+
+import requests
 
 # --- 1. 設定値 ---
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
