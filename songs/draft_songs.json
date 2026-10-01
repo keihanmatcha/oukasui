@@ -190,12 +190,12 @@
     "songs": [
       {
         "title": "DISCOTHEQUE with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
-        "artist": "",
+        "artist": "SOLIDIO",
         "start": 127
       },
       {
         "title": "革命デュアリズム with 町田ちま",
-        "artist": "",
+        "artist": "レフティーモンスターP, たるとP",
         "start": 786
       },
       {
@@ -210,12 +210,12 @@
       },
       {
         "title": "ドーナツホール with ミラン・ケストレル",
-        "artist": "",
+        "artist": "ハチ",
         "start": 2321
       },
       {
         "title": "HOT LIMIT with レイン・パターソン",
-        "artist": "",
+        "artist": "T.M.Revolution",
         "start": 3005
       },
       {
@@ -230,7 +230,7 @@
       },
       {
         "title": "爆裂愛してる with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
-        "artist": "",
+        "artist": "M!LK",
         "start": 4262
       }
     ]
@@ -1019,12 +1019,9 @@
     ],
     "songs": [
       {
-        "title": "要確認",
+        "title": "Cinderella Girl",
         "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
+        "start": 0
       }
     ]
   },
@@ -1048,7 +1045,7 @@
     "songs": [
       {
         "title": "奏音69",
-        "artist": "Unknown Artist",
+        "artist": "",
         "start": 0
       }
     ]
@@ -1698,7 +1695,7 @@
     "songs": [
       {
         "title": "サカナクション",
-        "artist": "Unknown Artist",
+        "artist": "",
         "start": 0
       }
     ]
@@ -1874,7 +1871,7 @@
     "songs": [
       {
         "title": "ぷりきゅきゅ",
-        "artist": "Publisher: ASOBIMUSIC Co., Ltd.",
+        "artist": "CUTIE STREET",
         "start": 0
       }
     ]
@@ -1971,8 +1968,6 @@
     "category": [
       "3D",
       "ライブイベント",
-      "企画",
-      "公式企画・番組",
       "楽器配信・動画"
     ],
     "keywords": [
@@ -1999,8 +1994,6 @@
     "date": "2025-08-24",
     "thumbnail": "https://i.ytimg.com/vi/DvDVY7nXVco/mqdefault.jpg",
     "category": [
-      "企画",
-      "公式企画・番組",
       "歌動画"
     ],
     "keywords": [
@@ -2023,12 +2016,9 @@
     "tags": [],
     "songs": [
       {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
+        "title": "虹色のPuddle",
+        "artist": "＃にじ漢歌祭り 【長尾景/にじさんじ】",
+        "start": 0
       }
     ]
   },
@@ -2039,7 +2029,6 @@
     "date": "2025-08-17",
     "thumbnail": "https://i.ytimg.com/vi/diGc4SQ_Rfk/mqdefault.jpg",
     "category": [
-      "公式切り抜き",
       "殺陣"
     ],
     "keywords": [
@@ -2049,12 +2038,9 @@
     "tags": [],
     "songs": [
       {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
+        "title": "ルンルンが殺陣するなら何の武器？【長尾景",
+        "artist": "ルンルン/にじさんじ】",
+        "start": 0
       }
     ]
   },
@@ -2619,8 +2605,6 @@
     "thumbnail": "https://i.ytimg.com/vi/mXqAYfb3ya0/mqdefault.jpg",
     "category": [
       "ライブイベント",
-      "企画",
-      "公式企画・番組",
       "歌動画"
     ],
     "keywords": [
@@ -2636,7 +2620,7 @@
     "songs": [
       {
         "title": "buzzG",
-        "artist": "Unknown Artist",
+        "artist": "",
         "start": 0
       }
     ]
@@ -2948,7 +2932,6 @@
     "date": "2024-05-16",
     "thumbnail": "https://i.ytimg.com/vi/E2W-6-hxNpM/mqdefault.jpg",
     "category": [
-      "ゲーム実況",
       "歌動画"
     ],
     "keywords": [
@@ -2961,12 +2944,9 @@
     "tags": [],
     "songs": [
       {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
+        "title": "【#フ景罪四周年】公開までにフミ様を1位にするテトリス99【長尾景",
+        "artist": "フミ/にじさんじ】",
+        "start": 0
       }
     ]
   },
@@ -2978,8 +2958,6 @@
     "thumbnail": "https://i.ytimg.com/vi/RpOnPXYoFQM/mqdefault.jpg",
     "category": [
       "ライブイベント",
-      "企画",
-      "公式企画・番組",
       "歌動画"
     ],
     "keywords": [
@@ -3005,7 +2983,7 @@
       },
       {
         "title": "(",
-        "artist": "",
+        "artist": "全てを騙る時雨に。",
         "start": 245
       },
       {
@@ -3041,7 +3019,7 @@
     "songs": [
       {
         "title": "みきとP",
-        "artist": "Unknown Artist",
+        "artist": "みきとP",
         "start": 0
       }
     ]
@@ -3067,7 +3045,7 @@
     "songs": [
       {
         "title": "天樂",
-        "artist": "Unknown Artist",
+        "artist": "ゆうゆ",
         "start": 0
       }
     ]
@@ -3121,7 +3099,7 @@
     "songs": [
       {
         "title": "HoneyWorks  feat. 南（CV：豊永利行）",
-        "artist": "Unknown Artist",
+        "artist": "",
         "start": 0
       }
     ]
@@ -3133,8 +3111,6 @@
     "date": "2023-07-15",
     "thumbnail": "https://i.ytimg.com/vi/9UoA6-lepJE/mqdefault.jpg",
     "category": [
-      "企画",
-      "公式企画・番組",
       "楽器配信・動画"
     ],
     "keywords": [
@@ -3161,8 +3137,6 @@
     "date": "2023-07-13",
     "thumbnail": "https://i.ytimg.com/vi/npMjdmPEfRQ/mqdefault.jpg",
     "category": [
-      "企画",
-      "公式企画・番組",
       "楽器配信・動画"
     ],
     "keywords": [
@@ -3189,8 +3163,6 @@
     "date": "2023-06-29",
     "thumbnail": "https://i.ytimg.com/vi/lQXexxECZ5Q/mqdefault.jpg",
     "category": [
-      "企画",
-      "公式企画・番組",
       "楽器配信・動画"
     ],
     "keywords": [
@@ -3297,7 +3269,7 @@
       },
       {
         "title": "歌枠",
-        "artist": "",
+        "artist": "筑紫 椿",
         "start": 1320
       },
       {
@@ -3412,7 +3384,7 @@
       },
       {
         "title": "〆",
-        "artist": "",
+        "artist": "全て非力の所為です。",
         "start": 2975
       }
     ]
@@ -3434,7 +3406,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "Unknown Artist",
+        "artist": "未来電波基地",
         "start": 0
       }
     ]
@@ -3446,7 +3418,6 @@
     "date": "2021-09-04",
     "thumbnail": "https://i.ytimg.com/vi/HhMSjyjPpYc/mqdefault.jpg",
     "category": [
-      "ゲーム実況",
       "歌配信"
     ],
     "keywords": [
@@ -3498,7 +3469,7 @@
       },
       {
         "title": "→",
-        "artist": "",
+        "artist": "あお",
         "start": 4328
       },
       {
@@ -3513,7 +3484,7 @@
       },
       {
         "title": "終了",
-        "artist": "",
+        "artist": "失いP",
         "start": 7313
       },
       {
@@ -3550,7 +3521,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "Unknown Artist",
+        "artist": "未来電波基地",
         "start": 0
       }
     ]
@@ -3572,7 +3543,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "Unknown Artist",
+        "artist": "未来電波基地",
         "start": 0
       }
     ]
@@ -3594,7 +3565,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "Unknown Artist",
+        "artist": "未来電波基地",
         "start": 0
       }
     ]
@@ -3616,7 +3587,7 @@
     "songs": [
       {
         "title": "KING",
-        "artist": "Kanaria / 長尾景(Cover)",
+        "artist": "Kanaria / 長尾景",
         "start": 0
       }
     ]
