@@ -1602,62 +1602,57 @@ def update_github_json(new_videos, target_file_path=JSON_FILE_PATH, commit_msg="
 # ==============================================================================
 # 5. エントリーポイント
 # ==============================================================================
+# ==============================================================================
+# 5. エントリーポイント
+# ==============================================================================
 def main():
     if not YOUTUBE_API_KEY or not GITHUB_TOKEN:
         print("❌ APIキーまたはGITHUB_TOKENが設定されていません。")
         return
 
+    # アーティスト辞書の構築（custom_known_songs, external_videos はここで参照のみ行われる）
     print("📚 アーティスト辞書を構築中...")
     load_artist_db()
 
     youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
-    fetched_official_videos = []
+    all_target_videos = []
 
     # 1. 公式チャンネル通常アップロード
     for ch in CHANNELS:
         pid = get_uploads_playlist_id(youtube, ch['id'])
         if pid:
-            fetched_official_videos.extend(fetch_videos_from_playlist(youtube, pid, ch['name'], ch.get('fixed_tags', [])))
+            all_target_videos.extend(fetch_videos_from_playlist(youtube, pid, ch['name'], ch.get('fixed_tags', [])))
 
     # 2. 特殊プレイリスト
     for pl in EXTRA_PLAYLISTS:
         try:
             pl_name = pl.get('name', OWNER_NAME)
-            fetched_official_videos.extend(fetch_videos_from_playlist(
+            all_target_videos.extend(fetch_videos_from_playlist(
                 youtube, pl['id'], pl_name, pl.get('fixed_tags', []), auto_tags=pl.get('auto_tags')
             ))
         except Exception as e:
             print(f"⚠️ プレイリストスキップ: {e}")
 
-    # 3. @midori_2434 のポスト & 引用ポストから動画を自動取得
+    # 3. @kei_nagao2434 のポスト & 引用ポストから告知動画を自動取得して追加
     print(f"\n🐦 @{TARGET_X_USER} のXポストから告知・引用動画を探索中...")
     x_video_ids = fetch_youtube_ids_from_x()
-    fetched_external_videos = []
     if x_video_ids:
         print(f"🔍 検出された {len(x_video_ids)} 件の動画をYouTubeから取得・解析中...")
-        fetched_external_videos = fetch_videos_by_ids(
+        fetched_external = fetch_videos_by_ids(
             youtube, x_video_ids, fixed_tags=["外部動画", "告知"], source_label="Twitter告知"
         )
+        all_target_videos.extend(fetched_external)
 
-    # 4. それぞれ適切なJSONファイルへ保存
-    if fetched_official_videos:
+    # 4. 公式・外部すべてまとめて archive_videos.json のみ更新
+    if all_target_videos:
         print("\n💾 公式アーカイブ (archive_videos.json) を更新中...")
         update_github_json(
-            fetched_official_videos,
+            all_target_videos,
             target_file_path=JSON_FILE_PATH,
-            commit_msg="BOT: Update official archive"
-        )
-
-    if fetched_external_videos:
-        print(f"\n💾 外部連携動画 ({FINAL_JSON_PATH}) を更新中...")
-        update_github_json(
-            fetched_external_videos,
-            target_file_path=FINAL_JSON_PATH,
-            commit_msg=f"BOT: Update external videos from @{TARGET_X_USER}"
+            commit_msg=f"BOT: Update archive (official & @{TARGET_X_USER})"
         )
 
     print("\n✅ 全処理が完了しました。")
 
 if __name__ == "__main__":
     main()
-      
