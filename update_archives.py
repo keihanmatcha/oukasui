@@ -1019,6 +1019,41 @@ def resolve_artist_name(raw_title: str) -> str:
 
     return artist
 
+def determine_auto_tags(title, keywords, categories, base_tags=None, owner_name=OWNER_NAME):
+    tags = list(base_tags or [])
+    title_lower = title.lower()
+
+    is_dance = "踊ってみた" in title or "踊り動画" in categories or "踊り配信" in categories
+    is_sing = "歌ってみた" in title or "歌動画" in categories or "歌配信" in categories or "cover" in title_lower
+
+    # 1. 踊 / 歌 の判定
+    if is_dance and "踊" not in tags:
+        tags.append("踊")
+    if is_sing and "歌" not in tags:
+        tags.append("歌")
+
+    # 2. カバー(ソロ) / カバー(ユニット) の判定
+    # タイトルやカテゴリがカバー・踊ってみた・歌ってみた対象の場合
+    if is_dance or is_sing or "カバー曲" in categories:
+        # チャンネル主以外のメンバーがキーワードに含まれているか判定
+        other_members = [
+            k for k in keywords 
+            if k in KEYWORD_GROUPS.get("MEMBERS", []) and k != owner_name
+        ]
+        
+        # ユニットタグ（VΔLZなど）が含まれている場合もユニット扱い
+        has_unit = any(k in KEYWORD_GROUPS.get("UNITS", []) for k in keywords)
+
+        if other_members or has_unit:
+            tag_type = "カバー(ユニット)"
+        else:
+            tag_type = "カバー(ソロ)"
+
+        if tag_type not in tags:
+            tags.append(tag_type)
+
+    return sorted(list(dict.fromkeys(tags)))
+
 def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=None):
     if not text:
         return []
@@ -1247,10 +1282,14 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
             if " / " in val or "／" in val:
                 parts = re.split(r"[/／]", val, 1)
                 return [{"title": parts[0].strip("  "), "artist": parts[1].strip("  "), "start": 0}]
-
-    # 2. タイトル形式 (曲名 / アーティスト)
-    clean_title = re.sub(r"[\(（\[【][^\)）\]】]*(?:covered|cover|歌ってみた|歌|mv|オリジナル)[^\)）\]】]*[\)）\]】]", "", title, flags=re.I)
-    clean_title = re.sub(r"(?:歌ってみた|COVER|Cover|MV)", "", clean_title, flags=re.I).strip("   /／-－_・")
+    # 2. タイトルのクレンジング
+    # (1) ハッシュタグの除去 (#踊ってみた など)
+    clean_title = re.sub(r'#\S+', '', title)
+    # (2) 【〇〇/にじさんじ】や【踊ってみた】などの角括弧・丸括弧を除去
+    clean_title = re.sub(r'【[^】]*】|\[[^\]]*\]|\([^\)]*\)|（[^）]*）', '', clean_title)
+    # (3) 余分なキーワードを除去
+    clean_title = re.sub(r'(?:歌ってみた|踊ってみた|COVER|Cover|MV|オリジナルMV)', '', clean_title, flags=re.I)
+    clean_title = clean_title.strip("  /／-－_・#")
 
     pattern = r"^(.*?)(?:\s*[/／\-－]\s*)(.*?)$"
     m = re.search(pattern, clean_title, flags=re.I)
@@ -1463,7 +1502,13 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
                 elif is_short:
                     # Shorts 音源の抽出 (video_id を確実に渡す)
                     auto_songs = parse_cover_or_shorts(snip['title'], desc, is_short=True, video_id=v_id)
-
+                final_tags = determine_auto_tags(
+                    title=snip['title'],
+                    keywords=kw,
+                    categories=cat,
+                    base_tags=auto_tags,
+                    owner_name=OWNER_NAME
+                )
                 videos.append({
                     "youtubeId": v_id,
                     "title": snip['title'],
@@ -1472,7 +1517,7 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
                     "thumbnail": f"https://i.ytimg.com/vi/{v_id}/mqdefault.jpg",
                     "category": cat,
                     "keywords": kw,
-                    "tags": auto_tags or [],
+                    "tags": final_tags,# ★ 自動判定した tags を格納
                     "songs": auto_songs
                 })
 
