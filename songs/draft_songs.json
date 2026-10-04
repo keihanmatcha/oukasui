@@ -229,49 +229,54 @@
     ],
     "songs": [
       {
-        "title": "DISCOTHEQUE with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
-        "artist": "SOLIDIO",
-        "start": 127
-      },
-      {
-        "title": "革命デュアリズム with 町田ちま",
-        "artist": "レフティーモンスターP, たるとP",
-        "start": 786
-      },
-      {
-        "title": "にじさんじ体操第一 with 七瀬すず菜",
+        "title": "DISCOTHEQUE",
         "artist": "",
+        "start": 126
+      },
+      {
+        "title": "Kakumei Duelism",
+        "artist": "",
+        "start": 783
+      },
+      {
+        "title": "IRIS OUT",
+        "artist": "",
+        "start": 1085
+      },
+      {
+        "title": "MoeChakkaFire",
+        "artist": "",
+        "start": 1300
+      },
+      {
+        "title": "Njisanji Taisō Daiichi",
+        "artist": "Nijisanji Calisthenics no.1",
         "start": 1518
       },
       {
-        "title": "マジ！Magic！PEACH！ with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
+        "title": "Ai Kudasai Mase",
         "artist": "",
-        "start": 1759
+        "start": 2004
       },
       {
-        "title": "ドーナツホール with ミラン・ケストレル",
-        "artist": "ハチ",
-        "start": 2321
+        "title": "Donut Hole",
+        "artist": "",
+        "start": 2320
       },
       {
-        "title": "HOT LIMIT with レイン・パターソン",
+        "title": "Tori no Uta",
+        "artist": "",
+        "start": 2571
+      },
+      {
+        "title": "HOT LIMIT",
         "artist": "T.M.Revolution",
-        "start": 3005
+        "start": 3004
       },
       {
-        "title": "きゃわぽっぴんどぅー with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
+        "title": "Bakuretsu Aishiteru",
         "artist": "",
-        "start": 3595
-      },
-      {
-        "title": "アイドルパワー with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
-        "artist": "",
-        "start": 3847
-      },
-      {
-        "title": "爆裂愛してる with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
-        "artist": "M!LK",
-        "start": 4262
+        "start": 4260
       }
     ]
   },
@@ -377,53 +382,58 @@
     ],
     "songs": [
       {
-        "title": "スターマイン📿",
-        "artist": "",
-        "start": 625
+        "title": "スターマイン with 北見遊征",
+        "artist": "Da-iCE  ‪‬",
+        "start": 626
       },
       {
-        "title": "一昨日55曲耐久やったんですよ",
+        "title": "乗り越えた",
         "artist": "",
-        "start": 957
+        "start": 853
       },
       {
         "title": "インフェルノ",
         "artist": "Mrs. GREEN APPLE",
-        "start": 983
+        "start": 982
       },
       {
-        "title": "Mela！ with 葉加瀬冬雪",
+        "title": "Mela! with 葉加瀬冬雪",
         "artist": "緑黄色社会",
-        "start": 2709
+        "start": 2708
+      },
+      {
+        "title": "これは布石です",
+        "artist": "",
+        "start": 3005
       },
       {
         "title": "魔法の絨毯",
         "artist": "川崎鷹也",
-        "start": 3074
+        "start": 3073
       },
       {
-        "title": "結局何もないじゃんって思っちゃう",
+        "title": "エモ→結局何もないじゃんって思っちゃう",
         "artist": "",
         "start": 3281
       },
       {
         "title": "好きすぎて滅！ with 緑仙",
         "artist": "M!LK",
-        "start": 4937
+        "start": 4939
       },
       {
-        "title": "お手洗い行ってきていいですか",
+        "title": "‪‬戻り with 北見遊征",
         "artist": "",
-        "start": 5174
+        "start": 5331
       },
       {
-        "title": "God knows•••",
-        "artist": "",
-        "start": 5413
+        "title": "God knows...",
+        "artist": "涼宮ハルヒ",
+        "start": 5412
       },
       {
-        "title": "天ノ弱📿 with 緑仙,葉加瀬冬雪",
-        "artist": "",
+        "title": "天ノ弱 with 北見遊征,天ヶ瀬むゆ,緑仙,葉加瀬冬雪",
+        "artist": "164",
         "start": 6761
       }
     ]
@@ -477,19 +487,69 @@
     ],
     "songs": [
       {
-        "title": "プロポーズ",
-        "artist": "内緒のピアス",
-        "start": 16701
-      },
-      {
-        "title": "シンデレラボーイ",
-        "artist": "Saucy Dog",
-        "start": 16940
-      },
-      {
-        "title": "怪談 生歌唱",
+        "title": "自分で全部管理すんのえぐい",
         "artist": "",
-        "start": 21932
+        "start": 1487
+      },
+      {
+        "title": "また出てきた",
+        "artist": "",
+        "start": 2502
+      },
+      {
+        "title": "なげぇな",
+        "artist": "",
+        "start": 3937
+      },
+      {
+        "title": "ラストじじいメドレーになっちゃうから",
+        "artist": "",
+        "start": 7884
+      },
+      {
+        "title": "(新しい曲)入れなよ景くん",
+        "artist": "",
+        "start": 12873
+      },
+      {
+        "title": "ドライフラワーはまだまだ新しいでしょ",
+        "artist": "",
+        "start": 12918
+      },
+      {
+        "title": "ワシが若い頃は歌えたから",
+        "artist": "",
+        "start": 13100
+      },
+      {
+        "title": "じじい撃墜できてるな",
+        "artist": "",
+        "start": 14428
+      },
+      {
+        "title": "カーテンコールで締まったやんけ",
+        "artist": "",
+        "start": 18180
+      },
+      {
+        "title": "歌おもろいな‼️",
+        "artist": "",
+        "start": 19705
+      },
+      {
+        "title": "海月と山桜桃梅は読めません",
+        "artist": "",
+        "start": 20455
+      },
+      {
+        "title": "ありがとね",
+        "artist": "Arikasan",
+        "start": 20891
+      },
+      {
+        "title": "ごめん、忘れた",
+        "artist": "",
+        "start": 21240
       }
     ]
   },
@@ -549,12 +609,12 @@
     "songs": [
       {
         "title": "IRIS OUT",
-        "artist": "Urchin-P",
+        "artist": "",
         "start": 512
       },
       {
         "title": "おやすみ泣き声、さよなら歌姫",
-        "artist": "TakoyakiKZY",
+        "artist": "",
         "start": 1136
       },
       {
@@ -574,7 +634,7 @@
       },
       {
         "title": "人生は夢だらけ",
-        "artist": "霧島",
+        "artist": "",
         "start": 2132
       },
       {
@@ -604,7 +664,7 @@
       },
       {
         "title": "ray",
-        "artist": "宮沢もよよ",
+        "artist": "",
         "start": 3269
       },
       {
@@ -649,7 +709,7 @@
       },
       {
         "title": "ステップ",
-        "artist": "ゆらり",
+        "artist": "",
         "start": 4677
       },
       {
@@ -991,9 +1051,14 @@
     ],
     "songs": [
       {
-        "title": "がございます。",
+        "title": "蒼穹のファンファーレ(ニコ生で) with イ・オン,ジョー・力一,伊波ライ,戌亥とこ,早乙女ベリー,東堂コハク,社築",
         "artist": "",
-        "start": 0
+        "start": 2549
+      },
+      {
+        "title": "RPG with ジョー・力一,伊波ライ",
+        "artist": "･ ･",
+        "start": 3306
       }
     ]
   },
@@ -1804,7 +1869,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 1118
       },
       {
@@ -1824,7 +1889,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 1989
       },
       {
@@ -1844,7 +1909,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 2860
       },
       {
@@ -1864,7 +1929,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 3711
       },
       {
@@ -1879,7 +1944,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 4665
       },
       {
@@ -1894,7 +1959,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 5569
       },
       {
@@ -1909,7 +1974,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 6608
       },
       {
@@ -1929,7 +1994,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 7584
       },
       {
@@ -1944,7 +2009,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 8465
       },
       {
@@ -1979,7 +2044,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 10080
       },
       {
@@ -1994,7 +2059,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 11080
       },
       {
@@ -2009,7 +2074,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 11875
       },
       {
@@ -2024,7 +2089,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 12755
       },
       {
@@ -2044,7 +2109,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 13616
       },
       {
@@ -2064,7 +2129,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 14457
       },
       {
@@ -2084,7 +2149,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 15300
       },
       {
@@ -2099,7 +2164,7 @@
       },
       {
         "title": "アイデンティティ",
-        "artist": "芳川ヨシノ",
+        "artist": "",
         "start": 16466
       },
       {
@@ -3270,29 +3335,24 @@
     ],
     "songs": [
       {
-        "title": "弦月の煽り超盛り上がる好き",
+        "title": "みんなお待ちかね長尾ウインク",
+        "artist": "",
+        "start": 42
+      },
+      {
+        "title": "弦月最高の煽り",
         "artist": "",
         "start": 162
       },
       {
-        "title": "ここの見守ってきた甲斐田から何故か最高音を歌わされる弦月までも大好き",
+        "title": "弦月のおててふりふり(高音えぐい)",
         "artist": "",
-        "start": 199
+        "start": 217
       },
       {
-        "title": "(",
-        "artist": "全てを騙る時雨に。",
-        "start": 245
-      },
-      {
-        "title": "全力で手を振ってくれるの好き",
+        "title": "甲斐田の投げキッス←運営さん入れてくれてありがとうございます🙏🏻",
         "artist": "",
-        "start": 258
-      },
-      {
-        "title": "スピンからのジャンプ",
-        "artist": "",
-        "start": 296
+        "start": 318
       }
     ]
   },
@@ -3320,7 +3380,7 @@
     "songs": [
       {
         "title": "みきとP",
-        "artist": "みきとP",
+        "artist": "",
         "start": 0
       }
     ]
@@ -3349,7 +3409,7 @@
     "songs": [
       {
         "title": "天樂",
-        "artist": "ゆうゆ",
+        "artist": "",
         "start": 0
       }
     ]
@@ -3535,12 +3595,12 @@
     "songs": [
       {
         "title": "ゲームスタート",
-        "artist": "菅野祐悟",
+        "artist": "",
         "start": 285
       },
       {
         "title": "難しい",
-        "artist": "kanekoayano",
+        "artist": "",
         "start": 488
       },
       {
@@ -3715,7 +3775,7 @@
       },
       {
         "title": "ガチャ",
-        "artist": "紅鶴音楽隊",
+        "artist": "",
         "start": 6605
       },
       {
@@ -3895,7 +3955,7 @@
       },
       {
         "title": "歌枠",
-        "artist": "筑紫 椿",
+        "artist": "",
         "start": 1320
       },
       {
@@ -4101,7 +4161,7 @@
       },
       {
         "title": "→",
-        "artist": "SILENT SIREN",
+        "artist": "",
         "start": 4328
       },
       {
@@ -4116,7 +4176,7 @@
       },
       {
         "title": "終了",
-        "artist": "失いP",
+        "artist": "",
         "start": 7313
       },
       {
