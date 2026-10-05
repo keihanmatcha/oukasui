@@ -1,5 +1,35 @@
 [
   {
+    "youtubeId": "t_UGnU64R_8",
+    "title": "アイスブレイクブレイカー / 甲斐田晴【長尾景/にじさんじ】#踊ってみた",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-10-03",
+    "thumbnail": "https://i.ytimg.com/vi/t_UGnU64R_8/mqdefault.jpg",
+    "category": [
+      "踊り動画"
+    ],
+    "keywords": [
+      "年長組",
+      "甲斐田晴",
+      "踊り動画",
+      "長尾景"
+    ],
+    "tags": [
+      "カバー(ユニット)",
+      "踊"
+    ],
+    "songs": [
+      {
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
+      }
+    ]
+  },
+  {
     "youtubeId": "hxVaPXxi1o0",
     "title": "#にじたうんでまちあわせ  【長尾景/にじさんじ】#踊ってみた",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -163,44 +193,24 @@
     ],
     "songs": [
       {
-        "title": "IRIS OUT",
-        "artist": "米津玄師",
-        "start": 671
+        "title": "アウフヘーベン",
+        "artist": "Mrs. GREEN APPLE",
+        "start": 841
       },
       {
-        "title": "ダイバー with セラフ・ダズルガーデン",
-        "artist": "KANA-BOON",
-        "start": 1635
+        "title": "flos",
+        "artist": "R Sound Design",
+        "start": 4714
       },
       {
-        "title": "ray with 水面まどか",
-        "artist": "BUMP OF CHICKEN",
-        "start": 1938
+        "title": "ブルーアンビエンス",
+        "artist": "Mrs. GREEN APPLE",
+        "start": 5480
       },
       {
-        "title": "ラフ・メイカー",
-        "artist": "BUMP OF CHICKEN",
-        "start": 2936
-      },
-      {
-        "title": "もう帰りたいもん 帰んないでね with セラフ・ダズルガーデン",
+        "title": "フラジールめちゃめちゃ良すぎた✨",
         "artist": "",
-        "start": 4449
-      },
-      {
-        "title": "ダーリン",
-        "artist": "須田景凪",
-        "start": 4519
-      },
-      {
-        "title": "フラジール with 猫屋敷美紅",
-        "artist": "ぬゆり",
         "start": 5804
-      },
-      {
-        "title": "Hurrah!! with セラフ・ダズルガーデン,水面まどか,猫屋敷美紅",
-        "artist": "にじさんじ",
-        "start": 6320
       }
     ]
   },
@@ -229,54 +239,49 @@
     ],
     "songs": [
       {
-        "title": "DISCOTHEQUE",
+        "title": "DISCOTHEQUE with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
         "artist": "",
-        "start": 126
+        "start": 127
       },
       {
-        "title": "Kakumei Duelism",
+        "title": "革命デュアリズム with 町田ちま",
         "artist": "",
-        "start": 783
+        "start": 786
       },
       {
-        "title": "IRIS OUT",
+        "title": "にじさんじ体操第一 with 七瀬すず菜",
         "artist": "",
-        "start": 1085
-      },
-      {
-        "title": "MoeChakkaFire",
-        "artist": "",
-        "start": 1300
-      },
-      {
-        "title": "Njisanji Taisō Daiichi",
-        "artist": "Nijisanji Calisthenics no.1",
         "start": 1518
       },
       {
-        "title": "Ai Kudasai Mase",
+        "title": "マジ！Magic！PEACH！ with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
         "artist": "",
-        "start": 2004
+        "start": 1759
       },
       {
-        "title": "Donut Hole",
+        "title": "ドーナツホール with ミラン・ケストレル",
         "artist": "",
-        "start": 2320
+        "start": 2321
       },
       {
-        "title": "Tori no Uta",
-        "artist": "",
-        "start": 2571
-      },
-      {
-        "title": "HOT LIMIT",
+        "title": "HOT LIMIT with レイン・パターソン",
         "artist": "T.M.Revolution",
-        "start": 3004
+        "start": 3005
       },
       {
-        "title": "Bakuretsu Aishiteru",
+        "title": "きゃわぽっぴんどぅー with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
         "artist": "",
-        "start": 4260
+        "start": 3595
+      },
+      {
+        "title": "アイドルパワー with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
+        "artist": "",
+        "start": 3847
+      },
+      {
+        "title": "爆裂愛してる with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
+        "artist": "M!LK",
+        "start": 4262
       }
     ]
   },
@@ -382,58 +387,53 @@
     ],
     "songs": [
       {
-        "title": "スターマイン with 北見遊征",
-        "artist": "Da-iCE  ‪‬",
-        "start": 626
+        "title": "スターマイン📿",
+        "artist": "",
+        "start": 625
       },
       {
-        "title": "乗り越えた",
+        "title": "一昨日55曲耐久やったんですよ",
         "artist": "",
-        "start": 853
+        "start": 957
       },
       {
         "title": "インフェルノ",
         "artist": "Mrs. GREEN APPLE",
-        "start": 982
+        "start": 983
       },
       {
-        "title": "Mela! with 葉加瀬冬雪",
+        "title": "Mela！ with 葉加瀬冬雪",
         "artist": "緑黄色社会",
-        "start": 2708
-      },
-      {
-        "title": "これは布石です",
-        "artist": "",
-        "start": 3005
+        "start": 2709
       },
       {
         "title": "魔法の絨毯",
         "artist": "川崎鷹也",
-        "start": 3073
+        "start": 3074
       },
       {
-        "title": "エモ→結局何もないじゃんって思っちゃう",
+        "title": "結局何もないじゃんって思っちゃう",
         "artist": "",
         "start": 3281
       },
       {
         "title": "好きすぎて滅！ with 緑仙",
         "artist": "M!LK",
-        "start": 4939
+        "start": 4937
       },
       {
-        "title": "‪‬戻り with 北見遊征",
+        "title": "お手洗い行ってきていいですか",
         "artist": "",
-        "start": 5331
+        "start": 5174
       },
       {
-        "title": "God knows...",
-        "artist": "涼宮ハルヒ",
-        "start": 5412
+        "title": "God knows•••",
+        "artist": "",
+        "start": 5413
       },
       {
-        "title": "天ノ弱 with 北見遊征,天ヶ瀬むゆ,緑仙,葉加瀬冬雪",
-        "artist": "164",
+        "title": "天ノ弱📿 with 緑仙,葉加瀬冬雪",
+        "artist": "",
         "start": 6761
       }
     ]
@@ -487,69 +487,19 @@
     ],
     "songs": [
       {
-        "title": "自分で全部管理すんのえぐい",
-        "artist": "",
-        "start": 1487
+        "title": "プロポーズ",
+        "artist": "内緒のピアス",
+        "start": 16701
       },
       {
-        "title": "また出てきた",
-        "artist": "",
-        "start": 2502
+        "title": "シンデレラボーイ",
+        "artist": "Saucy Dog",
+        "start": 16940
       },
       {
-        "title": "なげぇな",
+        "title": "怪談 生歌唱",
         "artist": "",
-        "start": 3937
-      },
-      {
-        "title": "ラストじじいメドレーになっちゃうから",
-        "artist": "",
-        "start": 7884
-      },
-      {
-        "title": "(新しい曲)入れなよ景くん",
-        "artist": "",
-        "start": 12873
-      },
-      {
-        "title": "ドライフラワーはまだまだ新しいでしょ",
-        "artist": "",
-        "start": 12918
-      },
-      {
-        "title": "ワシが若い頃は歌えたから",
-        "artist": "",
-        "start": 13100
-      },
-      {
-        "title": "じじい撃墜できてるな",
-        "artist": "",
-        "start": 14428
-      },
-      {
-        "title": "カーテンコールで締まったやんけ",
-        "artist": "",
-        "start": 18180
-      },
-      {
-        "title": "歌おもろいな‼️",
-        "artist": "",
-        "start": 19705
-      },
-      {
-        "title": "海月と山桜桃梅は読めません",
-        "artist": "",
-        "start": 20455
-      },
-      {
-        "title": "ありがとね",
-        "artist": "Arikasan",
-        "start": 20891
-      },
-      {
-        "title": "ごめん、忘れた",
-        "artist": "",
-        "start": 21240
+        "start": 21932
       }
     ]
   },
@@ -1462,22 +1412,37 @@
     ],
     "songs": [
       {
-        "title": "君の神様になりたい",
+        "title": "GO!!! with 渚トラウト",
+        "artist": "FLOW",
+        "start": 399
+      },
+      {
+        "title": "君の神様になりたい。",
         "artist": "カンザキイオリ",
-        "start": 2077
+        "start": 2078
+      },
+      {
+        "title": "ロンリー・チャップリン with 綺沙良",
+        "artist": "鈴木聖美 with Rats&Star",
+        "start": 3018
       },
       {
         "title": "シンデレラボーイ",
         "artist": "Saucy Dog",
-        "start": 3908
+        "start": 3901
+      },
+      {
+        "title": "ユいたもん‼️ with 渚トラウト",
+        "artist": "後でポストしといてね",
+        "start": 4534
       },
       {
         "title": "水流のロック with 戌亥とこ",
         "artist": "日食なつこ",
-        "start": 5507
+        "start": 5503
       },
       {
-        "title": "️🍴サマータイムレコード with 戌亥とこ,文野環,綺沙良",
+        "title": "サマータイムレコード with 戌亥とこ,文野環,渚トラウト,綺沙良",
         "artist": "じん",
         "start": 6544
       }
@@ -3335,24 +3300,29 @@
     ],
     "songs": [
       {
-        "title": "みんなお待ちかね長尾ウインク",
-        "artist": "",
-        "start": 42
-      },
-      {
-        "title": "弦月最高の煽り",
+        "title": "弦月の煽り超盛り上がる好き",
         "artist": "",
         "start": 162
       },
       {
-        "title": "弦月のおててふりふり(高音えぐい)",
+        "title": "ここの見守ってきた甲斐田から何故か最高音を歌わされる弦月までも大好き",
         "artist": "",
-        "start": 217
+        "start": 199
       },
       {
-        "title": "甲斐田の投げキッス←運営さん入れてくれてありがとうございます🙏🏻",
+        "title": "(",
         "artist": "",
-        "start": 318
+        "start": 245
+      },
+      {
+        "title": "全力で手を振ってくれるの好き",
+        "artist": "",
+        "start": 258
+      },
+      {
+        "title": "スピンからのジャンプ",
+        "artist": "",
+        "start": 296
       }
     ]
   },
@@ -3440,29 +3410,29 @@
     ],
     "songs": [
       {
-        "title": "音あり通し",
+        "title": "疲労",
         "artist": "",
-        "start": 1129
+        "start": 1250
       },
       {
-        "title": "回目 本番収録",
+        "title": "ぴょんぴょんコハック",
         "artist": "",
-        "start": 1392
+        "start": 1257
       },
       {
-        "title": "回目 本番収録",
+        "title": "かっけぇコハック",
         "artist": "",
-        "start": 2131
+        "start": 2858
       },
       {
-        "title": "回目本番収録",
+        "title": "かっけぇやま",
         "artist": "",
-        "start": 2703
+        "start": 3159
       },
       {
-        "title": "回目 本番収録",
+        "title": "ジャンプ",
         "artist": "",
-        "start": 3140
+        "start": 3207
       }
     ]
   },
@@ -3625,7 +3595,7 @@
       },
       {
         "title": "かわいい",
-        "artist": "SHISHAMO",
+        "artist": "",
         "start": 960
       },
       {
@@ -3860,7 +3830,7 @@
       },
       {
         "title": "〆",
-        "artist": "MATSUBA",
+        "artist": "",
         "start": 9340
       }
     ]
@@ -4070,7 +4040,7 @@
       },
       {
         "title": "〆",
-        "artist": "MATSUBA",
+        "artist": "",
         "start": 2975
       }
     ]
