@@ -1,5 +1,91 @@
 [
   {
+    "youtubeId": "ALICDNZ1Cyk",
+    "title": "【歌枠】歌モチベ爆上げ歌枠　～告知あり～【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-10-10",
+    "thumbnail": "https://i.ytimg.com/vi/ALICDNZ1Cyk/mqdefault.jpg",
+    "category": [
+      "プロモーション",
+      "歌配信"
+    ],
+    "keywords": [
+      "プロモーション",
+      "歌配信",
+      "長尾景"
+    ],
+    "tags": [
+      "カバー(ソロ)",
+      "歌"
+    ],
+    "songs": [
+      {
+        "title": "人で歌う曲じゃねぇんだよな〜",
+        "artist": "",
+        "start": 387
+      },
+      {
+        "title": "割れる曲からやればいいのか",
+        "artist": "",
+        "start": 462
+      },
+      {
+        "title": "後で見ようと思います",
+        "artist": "",
+        "start": 1502
+      },
+      {
+        "title": "この状態でお散歩行くと降ってくるんだよな",
+        "artist": "",
+        "start": 2916
+      },
+      {
+        "title": "(教えてくれて)ありがとういすみゃ",
+        "artist": "",
+        "start": 3624
+      },
+      {
+        "title": "これも輸入ですね、とこ歌枠からの",
+        "artist": "",
+        "start": 4363
+      },
+      {
+        "title": "いすみゃ、とこさんありがとう",
+        "artist": "",
+        "start": 4386
+      }
+    ]
+  },
+  {
+    "youtubeId": "y9RFulRbwY0",
+    "title": "〜↑↑ -KARAAGE- / 赤城ウェン【長尾景/にじさんじ】#踊ってみた",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-10-10",
+    "thumbnail": "https://i.ytimg.com/vi/y9RFulRbwY0/mqdefault.jpg",
+    "category": [
+      "踊り動画"
+    ],
+    "keywords": [
+      "赤城ウェン",
+      "踊り動画",
+      "長尾景"
+    ],
+    "tags": [
+      "カバー(ユニット)",
+      "踊"
+    ],
+    "songs": [
+      {
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
+      }
+    ]
+  },
+  {
     "youtubeId": "t_UGnU64R_8",
     "title": "アイスブレイクブレイカー / 甲斐田晴【長尾景/にじさんじ】#踊ってみた",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -238,144 +324,54 @@
     ],
     "songs": [
       {
-        "title": "開幕",
-        "artist": "桜華P",
-        "start": 117
-      },
-      {
-        "title": "┃",
+        "title": "DISCOTHEQUE",
         "artist": "",
-        "start": 363
+        "start": 126
       },
       {
-        "title": "┃",
+        "title": "Kakumei Duelism",
         "artist": "",
-        "start": 725
+        "start": 783
       },
       {
-        "title": "┃",
+        "title": "IRIS OUT",
         "artist": "",
-        "start": 1050
+        "start": 1085
       },
       {
-        "title": "┃",
+        "title": "MoeChakkaFire",
         "artist": "",
-        "start": 1235
+        "start": 1300
       },
       {
-        "title": "┃",
+        "title": "Njisanji Taisō Daiichi",
+        "artist": "Nijisanji Calisthenics no.1",
+        "start": 1518
+      },
+      {
+        "title": "Ai Kudasai Mase",
         "artist": "",
-        "start": 1485
+        "start": 2004
       },
       {
-        "title": "┃",
+        "title": "Donut Hole",
         "artist": "",
-        "start": 1730
+        "start": 2320
       },
       {
-        "title": "┃",
+        "title": "Tori no Uta",
         "artist": "",
-        "start": 1813
+        "start": 2571
       },
       {
-        "title": "┃",
+        "title": "HOT LIMIT",
+        "artist": "T.M.Revolution",
+        "start": 3004
+      },
+      {
+        "title": "Bakuretsu Aishiteru",
         "artist": "",
-        "start": 1985
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 2170
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 2260
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 2295
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 2487
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 2548
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 2882
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 2950
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 3038
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 3225
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 3375
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 3575
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 3676
-      },
-      {
-        "title": "▼",
-        "artist": "青栗鼠",
-        "start": 3768
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 3860
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 3964
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 4105
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 4165
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 4220
-      },
-      {
-        "title": "┃",
-        "artist": "",
-        "start": 4414
+        "start": 4260
       }
     ]
   },
@@ -3185,7 +3181,7 @@
       },
       {
         "title": "(",
-        "artist": "全てを騙る時雨に。",
+        "artist": "",
         "start": 245
       },
       {
@@ -3224,7 +3220,7 @@
     "songs": [
       {
         "title": "みきとP",
-        "artist": "みきとP",
+        "artist": "",
         "start": 0
       }
     ]
@@ -3253,7 +3249,7 @@
     "songs": [
       {
         "title": "天樂",
-        "artist": "ゆうゆ",
+        "artist": "",
         "start": 0
       }
     ]
@@ -3483,7 +3479,7 @@
       },
       {
         "title": "歌枠",
-        "artist": "筑紫 椿",
+        "artist": "",
         "start": 1320
       },
       {
@@ -3598,7 +3594,7 @@
       },
       {
         "title": "〆",
-        "artist": "全て非力の所為です。",
+        "artist": "MATSUBA",
         "start": 2975
       }
     ]
@@ -3648,9 +3644,79 @@
     ],
     "songs": [
       {
-        "title": "プクリンのおやすみ歌枠",
+        "title": "概要欄が歌枠の理由",
         "artist": "",
-        "start": 0
+        "start": 202
+      },
+      {
+        "title": "うるさい睡眠導入",
+        "artist": "",
+        "start": 1175
+      },
+      {
+        "title": "(風といっしょに)",
+        "artist": "",
+        "start": 1356
+      },
+      {
+        "title": "あるスキンが好きな長尾→",
+        "artist": "",
+        "start": 2420
+      },
+      {
+        "title": "ポルノ―サウダージ",
+        "artist": "THE FIRST TAKE の話",
+        "start": 2823
+      },
+      {
+        "title": "お知らせ~ダイヤモンドRTAの話",
+        "artist": "",
+        "start": 3555
+      },
+      {
+        "title": "手のひらくるくる長尾",
+        "artist": "",
+        "start": 3666
+      },
+      {
+        "title": "めっちゃうま",
+        "artist": "",
+        "start": 3790
+      },
+      {
+        "title": "→",
+        "artist": "",
+        "start": 4328
+      },
+      {
+        "title": "たかしって誰やねん",
+        "artist": "",
+        "start": 4380
+      },
+      {
+        "title": "(純恋歌)",
+        "artist": "",
+        "start": 7258
+      },
+      {
+        "title": "終了",
+        "artist": "",
+        "start": 7313
+      },
+      {
+        "title": "メン限スタンプと新メン限の話",
+        "artist": "",
+        "start": 7365
+      },
+      {
+        "title": "明日の配信とパワプロの話",
+        "artist": "",
+        "start": 7404
+      },
+      {
+        "title": "学園祭ボイス 長尾キービジュアル",
+        "artist": "",
+        "start": 7508
       }
     ]
   },
