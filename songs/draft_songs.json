@@ -37,12 +37,12 @@
       {
         "title": "この状態でお散歩行くと降ってくるんだよな",
         "artist": "",
-        "start": 2916
+        "start": 2915
       },
       {
         "title": "(教えてくれて)ありがとういすみゃ",
         "artist": "",
-        "start": 3624
+        "start": 3622
       },
       {
         "title": "これも輸入ですね、とこ歌枠からの",
@@ -258,44 +258,24 @@
     ],
     "songs": [
       {
-        "title": "IRIS OUT",
-        "artist": "米津玄師",
-        "start": 671
+        "title": "だから僕は音楽を辞めた",
+        "artist": "ヨルシカ",
+        "start": 330
       },
       {
-        "title": "ダイバー with セラフ・ダズルガーデン",
-        "artist": "KANA-BOON",
-        "start": 1635
-      },
-      {
-        "title": "ray with 水面まどか",
+        "title": "ray",
         "artist": "BUMP OF CHICKEN",
-        "start": 1938
+        "start": 1940
       },
       {
-        "title": "ラフ・メイカー",
-        "artist": "BUMP OF CHICKEN",
-        "start": 2936
+        "title": "バブリン",
+        "artist": "HIMEHINA",
+        "start": 3570
       },
       {
-        "title": "もう帰りたいもん 帰んないでね with セラフ・ダズルガーデン",
-        "artist": "",
-        "start": 4449
-      },
-      {
-        "title": "ダーリン",
-        "artist": "須田景凪",
-        "start": 4519
-      },
-      {
-        "title": "フラジール with 猫屋敷美紅",
-        "artist": "ぬゆり",
-        "start": 5804
-      },
-      {
-        "title": "Hurrah!! with セラフ・ダズルガーデン,水面まどか,猫屋敷美紅",
-        "artist": "にじさんじ",
-        "start": 6320
+        "title": "ナイトルーティーン",
+        "artist": "キタニタツヤ",
+        "start": 3840
       }
     ]
   },
@@ -324,54 +304,49 @@
     ],
     "songs": [
       {
-        "title": "DISCOTHEQUE",
-        "artist": "",
-        "start": 126
+        "title": "DISCOTHEQUE with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
+        "artist": "SOLIDIO",
+        "start": 127
       },
       {
-        "title": "Kakumei Duelism",
-        "artist": "",
-        "start": 783
+        "title": "革命デュアリズム with 町田ちま",
+        "artist": "レフティーモンスターP, たるとP",
+        "start": 786
       },
       {
-        "title": "IRIS OUT",
+        "title": "にじさんじ体操第一 with 七瀬すず菜",
         "artist": "",
-        "start": 1085
-      },
-      {
-        "title": "MoeChakkaFire",
-        "artist": "",
-        "start": 1300
-      },
-      {
-        "title": "Njisanji Taisō Daiichi",
-        "artist": "Nijisanji Calisthenics no.1",
         "start": 1518
       },
       {
-        "title": "Ai Kudasai Mase",
+        "title": "マジ！Magic！PEACH！ with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
         "artist": "",
-        "start": 2004
+        "start": 1759
       },
       {
-        "title": "Donut Hole",
-        "artist": "",
-        "start": 2320
+        "title": "ドーナツホール with ミラン・ケストレル",
+        "artist": "ハチ",
+        "start": 2321
       },
       {
-        "title": "Tori no Uta",
-        "artist": "",
-        "start": 2571
-      },
-      {
-        "title": "HOT LIMIT",
+        "title": "HOT LIMIT with レイン・パターソン",
         "artist": "T.M.Revolution",
-        "start": 3004
+        "start": 3005
       },
       {
-        "title": "Bakuretsu Aishiteru",
+        "title": "きゃわぽっぴんどぅー with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
         "artist": "",
-        "start": 4260
+        "start": 3595
+      },
+      {
+        "title": "アイドルパワー with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
+        "artist": "",
+        "start": 3847
+      },
+      {
+        "title": "爆裂愛してる with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
+        "artist": "M!LK",
+        "start": 4262
       }
     ]
   },
@@ -3181,7 +3156,7 @@
       },
       {
         "title": "(",
-        "artist": "",
+        "artist": "全てを騙る時雨に。",
         "start": 245
       },
       {
@@ -3220,7 +3195,7 @@
     "songs": [
       {
         "title": "みきとP",
-        "artist": "",
+        "artist": "みきとP",
         "start": 0
       }
     ]
@@ -3249,7 +3224,7 @@
     "songs": [
       {
         "title": "天樂",
-        "artist": "",
+        "artist": "ゆうゆ",
         "start": 0
       }
     ]
@@ -3479,7 +3454,7 @@
       },
       {
         "title": "歌枠",
-        "artist": "",
+        "artist": "筑紫 椿",
         "start": 1320
       },
       {
@@ -3594,7 +3569,7 @@
       },
       {
         "title": "〆",
-        "artist": "MATSUBA",
+        "artist": "全て非力の所為です。",
         "start": 2975
       }
     ]
@@ -3685,7 +3660,7 @@
       },
       {
         "title": "→",
-        "artist": "",
+        "artist": "あお",
         "start": 4328
       },
       {
@@ -3700,7 +3675,7 @@
       },
       {
         "title": "終了",
-        "artist": "",
+        "artist": "失いP",
         "start": 7313
       },
       {
