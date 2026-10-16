@@ -874,6 +874,11 @@ def analyze_video_tags(title, description, fixed_tags, channel_name="", is_short
         if slang.lower() in title_lower:
             detected_keywords.add(formal_tag)
 
+    # ゲーム名が含まれていれば「ゲーム実況」を追加
+    games_set = set(KEYWORD_GROUPS["GAMES"])
+    if not detected_keywords.isdisjoint(games_set):
+        detected_categories.add("ゲーム実況")
+
     if re.search(r'【[^】]*える[^】]*】', title):
         detected_keywords.add("える")
     if re.search(r'【[^】]*叶[^】]*】', title):
