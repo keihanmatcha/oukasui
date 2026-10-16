@@ -1,5 +1,20 @@
 [
   {
+    "youtubeId": "d2jmvAK03jU",
+    "title": "【画伯】最強のドラゴンが思ったのと違った長尾景【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-10-15",
+    "thumbnail": "https://i.ytimg.com/vi/d2jmvAK03jU/mqdefault.jpg",
+    "category": [
+      "未分類"
+    ],
+    "keywords": [
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
     "youtubeId": "N2dNvz1cbAc",
     "title": "【悲報】エリートライバー自己紹介が出来ない【長尾景/にじさんじ】#ケイナガオの學",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -198,6 +213,25 @@
     ],
     "keywords": [
       "公式切り抜き",
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "k-H_nANajNo",
+    "title": "【#にじぱずぎり】刀剣乱舞を教えて！審神者先輩と新人絵巻守の初出陣【イブラヒム/長尾景/ルンルン】",
+    "channel": "イブラヒム【にじさんじ】",
+    "date": "2026-10-09",
+    "thumbnail": "https://i.ytimg.com/vi/k-H_nANajNo/mqdefault.jpg",
+    "category": [
+      "企画"
+    ],
+    "keywords": [
+      "イブラヒム",
+      "ルンルン",
+      "企画",
+      "刀剣乱舞",
       "長尾景"
     ],
     "tags": [],
@@ -1421,24 +1455,44 @@
     ],
     "songs": [
       {
-        "title": "アウフヘーベン",
-        "artist": "Mrs. GREEN APPLE",
-        "start": 841
+        "title": "IRIS OUT",
+        "artist": "米津玄師",
+        "start": 671
       },
       {
-        "title": "flos",
-        "artist": "R Sound Design",
-        "start": 4714
+        "title": "ダイバー with セラフ・ダズルガーデン",
+        "artist": "KANA-BOON",
+        "start": 1635
       },
       {
-        "title": "ブルーアンビエンス",
-        "artist": "Mrs. GREEN APPLE",
-        "start": 5480
+        "title": "ray with 水面まどか",
+        "artist": "BUMP OF CHICKEN",
+        "start": 1938
       },
       {
-        "title": "フラジールめちゃめちゃ良すぎた✨",
+        "title": "ラフ・メイカー",
+        "artist": "BUMP OF CHICKEN",
+        "start": 2936
+      },
+      {
+        "title": "もう帰りたいもん 帰んないでね with セラフ・ダズルガーデン",
         "artist": "",
+        "start": 4449
+      },
+      {
+        "title": "ダーリン",
+        "artist": "須田景凪",
+        "start": 4519
+      },
+      {
+        "title": "フラジール with 猫屋敷美紅",
+        "artist": "ぬゆり",
         "start": 5804
+      },
+      {
+        "title": "Hurrah!! with セラフ・ダズルガーデン,水面まどか,猫屋敷美紅",
+        "artist": "にじさんじ",
+        "start": 6320
       }
     ]
   },
@@ -2359,13 +2413,7 @@
       "レイン・パターソン"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【告知PV】2026年8月「束縛ボイス Vol.2」 @nijisanji 2 か月前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "yoH5OnPlzHo",
@@ -3764,19 +3812,69 @@
     ],
     "songs": [
       {
-        "title": "プロポーズ",
-        "artist": "内緒のピアス",
-        "start": 16701
-      },
-      {
-        "title": "シンデレラボーイ",
-        "artist": "Saucy Dog",
-        "start": 16940
-      },
-      {
-        "title": "怪談 生歌唱",
+        "title": "自分で全部管理すんのえぐい",
         "artist": "",
-        "start": 21932
+        "start": 1487
+      },
+      {
+        "title": "また出てきた",
+        "artist": "",
+        "start": 2502
+      },
+      {
+        "title": "なげぇな",
+        "artist": "",
+        "start": 3937
+      },
+      {
+        "title": "ラストじじいメドレーになっちゃうから",
+        "artist": "",
+        "start": 7884
+      },
+      {
+        "title": "(新しい曲)入れなよ景くん",
+        "artist": "",
+        "start": 12873
+      },
+      {
+        "title": "ドライフラワーはまだまだ新しいでしょ",
+        "artist": "",
+        "start": 12918
+      },
+      {
+        "title": "ワシが若い頃は歌えたから",
+        "artist": "",
+        "start": 13100
+      },
+      {
+        "title": "じじい撃墜できてるな",
+        "artist": "",
+        "start": 14428
+      },
+      {
+        "title": "カーテンコールで締まったやんけ",
+        "artist": "",
+        "start": 18180
+      },
+      {
+        "title": "歌おもろいな‼️",
+        "artist": "",
+        "start": 19705
+      },
+      {
+        "title": "海月と山桜桃梅は読めません",
+        "artist": "",
+        "start": 20455
+      },
+      {
+        "title": "ありがとね",
+        "artist": "Arikasan",
+        "start": 20891
+      },
+      {
+        "title": "ごめん、忘れた",
+        "artist": "",
+        "start": 21240
       }
     ]
   },
@@ -4261,149 +4359,19 @@
     ],
     "songs": [
       {
-        "title": "IRIS OUT",
-        "artist": "Urchin-P",
-        "start": 512
-      },
-      {
         "title": "おやすみ泣き声、さよなら歌姫",
         "artist": "TakoyakiKZY",
-        "start": 1136
-      },
-      {
-        "title": "灰色と青",
-        "artist": "米津玄師、菅田将暉",
-        "start": 1506
-      },
-      {
-        "title": "かわいい時間",
-        "artist": "",
-        "start": 2025
-      },
-      {
-        "title": "気合いを入れるべりなな",
-        "artist": "",
-        "start": 2067
-      },
-      {
-        "title": "人生は夢だらけ",
-        "artist": "霧島",
-        "start": 2132
-      },
-      {
-        "title": "アイネクライネ1回目",
-        "artist": "",
-        "start": 2395
-      },
-      {
-        "title": "アイネクライネ2回目",
-        "artist": "",
-        "start": 2467
+        "start": 1135
       },
       {
         "title": "アイネクライネ",
         "artist": "米津玄師",
-        "start": 2515
-      },
-      {
-        "title": "とこちゃんに名前を呼んで欲しいみんな",
-        "artist": "",
-        "start": 2804
-      },
-      {
-        "title": "それがあなたの幸せだとしても",
-        "artist": "",
-        "start": 2952
+        "start": 2514
       },
       {
         "title": "ray",
         "artist": "BUMP OF CHICKEN",
-        "start": 3269
-      },
-      {
-        "title": "カラオケの妖精べりなな",
-        "artist": "",
-        "start": 3533
-      },
-      {
-        "title": "セレナーデ",
-        "artist": "なとり",
-        "start": 3663
-      },
-      {
-        "title": "ずうっといっしょ！",
-        "artist": "キタニタツヤ",
-        "start": 3930
-      },
-      {
-        "title": "担当発表",
-        "artist": "",
-        "start": 4126
-      },
-      {
-        "title": "盛れ！ミ・アモーレ",
-        "artist": "Juice=Juice",
-        "start": 4234
-      },
-      {
-        "title": "客降り",
-        "artist": "",
-        "start": 4333
-      },
-      {
-        "title": "客降り2",
-        "artist": "",
-        "start": 4381
-      },
-      {
-        "title": "ダンスパート",
-        "artist": "",
-        "start": 4396
-      },
-      {
-        "title": "ステップ",
-        "artist": "ゆらり",
-        "start": 4677
-      },
-      {
-        "title": "おめでとうとこちゃん",
-        "artist": "",
-        "start": 5062
-      },
-      {
-        "title": "詳細説明",
-        "artist": "",
-        "start": 5085
-      },
-      {
-        "title": "ありがとうとこちゃん",
-        "artist": "",
-        "start": 5230
-      },
-      {
-        "title": "ななたま",
-        "artist": "",
-        "start": 5336
-      },
-      {
-        "title": "べりちゃん",
-        "artist": "",
-        "start": 5371
-      },
-      {
-        "title": "榊ネス",
-        "artist": "",
-        "start": 5419
-      },
-      {
-        "title": "長尾",
-        "artist": "",
-        "start": 5458
-      },
-      {
-        "title": "ドリブル",
-        "artist": "",
-        "start": 5501
+        "start": 3271
       }
     ]
   },
@@ -6009,13 +5977,7 @@
       "ライブ・イベント"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【#にじフェス2026】NGを連発してしまい惑星ライブの告知ができないライバーたち #shorts #にじさんじ #vtuber #Uncharted_Spheres @YashiroKizuku 5 か月前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "YQVnOuXwNk8",
@@ -6178,13 +6140,7 @@
       "プロモーション"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【#にじフェス2026】#Uncharted_Spheres 5月15日(金)開催！ @nijisanji 5 か月前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "GZNaH-WaGtc",
@@ -10694,49 +10650,24 @@
     ],
     "songs": [
       {
-        "title": "人コラボの歌枠初めて",
-        "artist": "",
-        "start": 134
+        "title": "宇宙の季節",
+        "artist": "Lanndo",
+        "start": 1941
       },
       {
-        "title": "魔法の絨毯✦川崎鷹也",
-        "artist": "",
-        "start": 989
+        "title": "夜撫でるメノウ",
+        "artist": "Ayase",
+        "start": 2390
       },
       {
-        "title": "勇者✦YOASOBI（×） with 町田ちま",
-        "artist": "",
-        "start": 1661
+        "title": "キティ",
+        "artist": "25時、ナイトコードで。",
+        "start": 5063
       },
       {
-        "title": "（英語）",
-        "artist": "",
-        "start": 1825
-      },
-      {
-        "title": "KICK BACK✦米津玄師",
-        "artist": "",
-        "start": 2750
-      },
-      {
-        "title": "▶踊× with 星導ショウ",
-        "artist": "",
-        "start": 3800
-      },
-      {
-        "title": "踊✦Ado（×🐙）",
-        "artist": "",
-        "start": 3812
-      },
-      {
-        "title": "晩餐歌✦tuki.",
-        "artist": "",
-        "start": 4539
-      },
-      {
-        "title": "シル・ヴ・プレジデント✦P丸様。（🧸×）",
-        "artist": "",
-        "start": 6050
+        "title": "D(evil)",
+        "artist": "DEAN",
+        "start": 5728
       }
     ]
   },
@@ -12617,39 +12548,29 @@
     ],
     "songs": [
       {
-        "title": "猫",
-        "artist": "DISH//",
-        "start": 87
+        "title": "にじさんじ学院みんな見て、おもろいよ",
+        "artist": "",
+        "start": 719
       },
       {
-        "title": "まちがいさがし",
-        "artist": "菅田将暉",
-        "start": 821
+        "title": "社さん楽しみにしてます",
+        "artist": "",
+        "start": 2329
       },
       {
-        "title": "今宵の月のように",
-        "artist": "エレファントカシマシ",
-        "start": 1493
+        "title": "ｷｬｯｷｬ",
+        "artist": "",
+        "start": 3065
       },
       {
-        "title": "テレキャスタービーボーイ",
-        "artist": "すりぃ",
-        "start": 1802
+        "title": "ソロライブやるならモニタリングとかいいね",
+        "artist": "",
+        "start": 3164
       },
       {
-        "title": "プロポーズ",
-        "artist": "内緒のピアス",
-        "start": 2506
-      },
-      {
-        "title": "メリッサ",
-        "artist": "ポルノグラフィティ",
-        "start": 3396
-      },
-      {
-        "title": "ダーリン",
-        "artist": "須田景凪",
-        "start": 3668
+        "title": "客席にお人形さんとか落としたいね",
+        "artist": "",
+        "start": 3298
       }
     ]
   },
@@ -19108,13 +19029,7 @@
       "長尾景"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【#VΔLZ 衣装紹介】甲斐田の衣装おすすめポイント！【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "eLgEQ-9VCnU",
@@ -19432,13 +19347,7 @@
       "長尾景"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【一番◯◯な人は？】褒められると照れちゃう #VΔLZ 【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "ENIHDbx4TDk",
@@ -19937,13 +19846,7 @@
       "長尾景"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【#VΔLZ 衣装紹介】弦月の衣装おすすめポイント！【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "YX4LSKIwc7c",
@@ -20420,13 +20323,7 @@
       "長尾景"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【以心伝心ゲーム】#VΔLZ で心を一つに！【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "tOQwnUAqMMY",
@@ -21278,13 +21175,7 @@
       "長尾景"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【◯◯な人に回します】最後はそこのあなた！ #VΔLZ 【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "1LHNwhzPzq8",
@@ -21465,13 +21356,7 @@
       "長尾景"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【究極の2択】もし時が止まるなら最高 #VΔLZ 【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "yJyU4qrKtPI",
@@ -21673,13 +21558,7 @@
       "長尾景"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【究極の2択】ガチビンタ？するわけないよ #VΔLZ 【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "GAjojRzDK00",
@@ -21838,13 +21717,7 @@
       "長尾景"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【究極の2択】メンバーとハグ？ #VΔLZ 【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "GU0JPNXhZdw",
@@ -22036,13 +21909,7 @@
       "長尾景"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【究極の2択】告白は漢気見せていけ #VΔLZ 【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "F1ZAOj6-68c",
@@ -22306,13 +22173,7 @@
       "長尾景"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【NGシーン】ｴｯﾎｴｯﾎも妥協しない #VΔLZ　【弦月藤士郎/長尾景/甲斐田晴/にじさんじ】 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "zt-Sz912fMM",
@@ -23040,13 +22901,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "#VΔLZ が5周年って伝えなきゃ…！ #VΔLZ5周年 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "XeSRDQ8-zxo",
@@ -23274,13 +23129,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "#VΔLZ - 浮世の演舞【3D LIVE ver.】 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "1c-mm87jat4",
@@ -23565,13 +23414,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "#VΔLZ - No Reason.【3D LIVE ver.】 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "nzr-Xpmlo6I",
@@ -23807,13 +23650,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "#VΔLZ - SHOOTING DELTA【3D LIVE ver.】 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "u5UODAnaa7k",
@@ -24036,13 +23873,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "#VΔLZ - ムーンウォーカーズ【3D LIVE ver.】 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "CSJ46zpdNxY",
@@ -24894,13 +24725,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【告知PV shorts】#VΔLZ LIVE TOUR 2024『三華の樂』【3月12日 Blu-ray 発売】 @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "IjYv4MjlDrY",
@@ -27699,13 +27524,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "#AGF2024 明日も開催中！ #VΔLZ #にじさんじ @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "1fPnu3fnRWY",
@@ -28342,13 +28161,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "#VΔLZ - Beyond the Frame MV 公開中！ #VΔLZ_BtF 個人ver @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "-0HLBmKHdvg",
@@ -28386,13 +28199,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "#VΔLZ - Beyond the Frame MV 公開中！ #VΔLZ_BtF @VALZ_ch 1 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "osVxwY7iW0s",
@@ -29054,13 +28861,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "#VΔLZ_ライブツアー2024 仙台公演明日開催！#VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "vR8yqyYsc58",
@@ -29299,13 +29100,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "#VΔLZ_ライブツアー2024 大阪公演明日開催！#VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "20u0PU5iy3o",
@@ -29571,13 +29366,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "#VΔLZ_ライブツアー2024 横浜公演明日開催！#VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "Jw66lhe3gYY",
@@ -29722,13 +29511,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "#VΔLZ_ライブツアー2024 開催間近！ #甲斐田晴 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "dPJAUk7U1AY",
@@ -29749,13 +29532,7 @@
       "長尾景"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "#VΔLZ_ライブツアー2024 開催間近！#長尾景 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "orPD6FqSQB4",
@@ -29775,13 +29552,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "#VΔLZ_ライブツアー2024 開催間近！#弦月藤士郎 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "A_MsWpV746o",
@@ -30057,13 +29828,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "#VΔLZ_ライブツアー2024の楽しみ方！ #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "z9OpNXgfsE8",
@@ -31450,13 +31215,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "同期仲良しシーンまとめ #桜魔大戦譚  #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "vt8CF08Crfo",
@@ -31497,13 +31256,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "甲斐田ハルダサ名付けシーンまとめ #桜魔大戦譚  #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "RQ62P7V7X-I",
@@ -31556,13 +31309,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "甲斐田ハル詠唱シーンまとめ #桜魔大戦譚  #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "nPZ0pIhvWGE",
@@ -31602,13 +31349,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "長尾ケイギャップまとめ #桜魔大戦譚  #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "W6GmninyA9g",
@@ -31663,13 +31404,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "弦月トウジロウ毒舌シーンまとめ #桜魔大戦譚  #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "QtFi7B5Kn9w",
@@ -31706,13 +31441,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【キャラクター紹介】冷泉リヒト #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "kIxrYKBI1Tk",
@@ -31748,13 +31477,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【キャラクター紹介】椿ヒナタ #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "YPTHpP93smg",
@@ -31842,13 +31565,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【キャラクター紹介】西園寺マサムネ #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "A8UPCiXSmtI",
@@ -31868,13 +31585,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【キャラクター紹介】二階堂シュウゲツ #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "G3JY8l3DkI4",
@@ -31946,13 +31657,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【キャラクター紹介】甲斐田ハル #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "JQtuXIzZAho",
@@ -31992,13 +31697,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【キャラクター紹介】長尾ケイ #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "32iuMaIO0_o",
@@ -32034,13 +31733,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "【キャラクター紹介】弦月トウジロウ #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "XMjo7ZNHuLo",
@@ -35122,13 +34815,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "『桜魔大戦譚 〜相対するモノたちへ〜』スタートまであと1日！ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "yARyA_UPhdg",
@@ -35167,13 +34854,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "『桜魔大戦譚 〜相対するモノたちへ〜』スタートまであと2日！ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "_ZZSXbl8kGg",
@@ -35193,13 +34874,7 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "『桜魔大戦譚 〜相対するモノたちへ〜』スタートまであと3日！ #shorts @VALZ_ch 2 年前",
-        "artist": "",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "ZtyDsJG311Y",
@@ -35791,7 +35466,7 @@
       },
       {
         "title": "〜",
-        "artist": "ptf boi",
+        "artist": "",
         "start": 1044
       },
       {
@@ -37483,29 +37158,29 @@
     ],
     "songs": [
       {
-        "title": "音あり通し",
-        "artist": "",
-        "start": 1129
+        "title": "疲労",
+        "artist": "Sei",
+        "start": 1250
       },
       {
-        "title": "回目 本番収録",
+        "title": "ぴょんぴょんコハック",
         "artist": "",
-        "start": 1392
+        "start": 1257
       },
       {
-        "title": "回目 本番収録",
+        "title": "かっけぇコハック",
         "artist": "",
-        "start": 2131
+        "start": 2858
       },
       {
-        "title": "回目本番収録",
+        "title": "かっけぇやま",
         "artist": "",
-        "start": 2703
+        "start": 3159
       },
       {
-        "title": "回目 本番収録",
-        "artist": "",
-        "start": 3140
+        "title": "ジャンプ",
+        "artist": "むみそ",
+        "start": 3207
       }
     ]
   },
@@ -38249,38 +37924,48 @@
     "songs": [
       {
         "title": "ドライフラワー",
-        "artist": "優里",
-        "start": 140
+        "artist": "優里様",
+        "start": 139
       },
       {
         "title": "雫",
-        "artist": "スキマスイッチ",
-        "start": 708
+        "artist": "スキマスイッチ様",
+        "start": 707
+      },
+      {
+        "title": "新情報",
+        "artist": "",
+        "start": 920
       },
       {
         "title": "カタオモイ",
-        "artist": "Aimer",
-        "start": 1278
+        "artist": "Aimer様",
+        "start": 1334
       },
       {
         "title": "レオ",
-        "artist": "優里",
-        "start": 1544
+        "artist": "優里様",
+        "start": 1543
+      },
+      {
+        "title": "不安な長尾(30)",
+        "artist": "",
+        "start": 1869
       },
       {
         "title": "KICK BACK",
-        "artist": "米津玄師",
-        "start": 2186
+        "artist": "米津玄師様",
+        "start": 2185
       },
       {
         "title": "怪物",
-        "artist": "YOASOBI",
-        "start": 2399
+        "artist": "YOASOBI様",
+        "start": 2398
       },
       {
         "title": "猫",
-        "artist": "DISH//",
-        "start": 2736
+        "artist": "DISH//様",
+        "start": 2734
       }
     ]
   },
@@ -40964,34 +40649,49 @@
     ],
     "songs": [
       {
-        "title": "猫(DISH",
-        "artist": "/)",
-        "start": 465
+        "title": "猫",
+        "artist": "DISH//",
+        "start": 753
       },
       {
-        "title": "KICK BACK(米津玄師)",
+        "title": "KICK BACK",
         "artist": "米津玄師",
-        "start": 1433
+        "start": 1628
       },
       {
-        "title": "色彩(yama)",
+        "title": "色彩",
         "artist": "yama",
-        "start": 1669
+        "start": 1862
       },
       {
-        "title": "ギラギラ(Ado)",
+        "title": "【上着脱ぎタイム】",
+        "artist": "",
+        "start": 1919
+      },
+      {
+        "title": "ギラギラ",
         "artist": "Ado",
-        "start": 1999
+        "start": 2272
       },
       {
-        "title": "レオ(優里)",
+        "title": "【雑談】",
+        "artist": "",
+        "start": 2939
+      },
+      {
+        "title": "レオ",
         "artist": "優里",
-        "start": 3262
+        "start": 3497
       },
       {
-        "title": "ピースサイン(米津玄師)",
+        "title": "ピースサイン",
         "artist": "米津玄師",
-        "start": 3532
+        "start": 3768
+      },
+      {
+        "title": "【雑談(〆)】",
+        "artist": "",
+        "start": 3779
       }
     ]
   },
@@ -41307,7 +41007,7 @@
       },
       {
         "title": "かわいい",
-        "artist": "Esp feЯ",
+        "artist": "SHISHAMO",
         "start": 960
       },
       {
@@ -46167,7 +45867,7 @@
       },
       {
         "title": "ハイ",
-        "artist": "シズクノメ",
+        "artist": "",
         "start": 1245
       },
       {
@@ -46614,7 +46314,7 @@
       },
       {
         "title": "青い人達",
-        "artist": "戸渡陽太",
+        "artist": "",
         "start": 2258
       },
       {
@@ -48046,12 +47746,12 @@
       },
       {
         "title": "NO MORE CRY",
-        "artist": "ジキルP",
+        "artist": "D-51",
         "start": 3872
       },
       {
         "title": "レイニーブルー",
-        "artist": "德永英明",
+        "artist": "ちょむP",
         "start": 3895
       },
       {
@@ -48066,7 +47766,7 @@
       },
       {
         "title": "卒業式の思い出",
-        "artist": "ヌル",
+        "artist": "aika",
         "start": 4300
       },
       {
@@ -48234,7 +47934,7 @@
     "songs": [
       {
         "title": "ロゴ",
-        "artist": "yamashiro keisaku",
+        "artist": "",
         "start": 155
       },
       {
@@ -48259,7 +47959,7 @@
       },
       {
         "title": "楽しい",
-        "artist": "赤い公園",
+        "artist": "Za",
         "start": 1188
       },
       {
@@ -48706,7 +48406,7 @@
       },
       {
         "title": "恋のヒメヒメぺったんこ",
-        "artist": "",
+        "artist": "姫野湖鳥(CV:田村ゆかり)",
         "start": 3251
       },
       {
@@ -49651,8 +49351,8 @@
     "tags": [],
     "songs": [
       {
-        "title": "シックス",
-        "artist": "フラッグス、乗客が投げ出されたジェットコースター",
+        "title": "グウェル",
+        "artist": "オス・ガール / Gwelu Os Gar 【にじさんじ】",
         "start": 0
       }
     ]
@@ -50425,12 +50125,12 @@
       },
       {
         "title": "チチをもげ",
-        "artist": "ちょいワルP",
+        "artist": "rese",
         "start": 3165
       },
       {
         "title": "ベリーメロン",
-        "artist": "",
+        "artist": "IOSYS",
         "start": 3204
       },
       {
@@ -51138,7 +50838,7 @@
     "songs": [
       {
         "title": "一石二鳥",
-        "artist": "",
+        "artist": "靉靉靉",
         "start": 148
       },
       {
@@ -51153,7 +50853,7 @@
       },
       {
         "title": "【カサブタ】バラード",
-        "artist": "白ひげP",
+        "artist": "ケツメイシ",
         "start": 879
       },
       {
@@ -51163,7 +50863,7 @@
       },
       {
         "title": "【やさしさに包まれたなら】冒頭",
-        "artist": "",
+        "artist": "Shing02",
         "start": 1388
       },
       {
@@ -51188,7 +50888,7 @@
       },
       {
         "title": "【キュートなカノジョ】アカペラ",
-        "artist": "平沢栄司",
+        "artist": "ペンタゴン",
         "start": 2010
       },
       {
@@ -51537,7 +51237,7 @@
       },
       {
         "title": "青春",
-        "artist": "47",
+        "artist": "ウルフルズ",
         "start": 3945
       },
       {
@@ -52891,7 +52591,7 @@
       },
       {
         "title": "は",
-        "artist": "HALKA",
+        "artist": "クリープハイプ",
         "start": 200
       },
       {
@@ -53601,12 +53301,12 @@
       },
       {
         "title": "曲-",
-        "artist": "",
+        "artist": "千葉雄喜 & BABYWOODROSE",
         "start": 390
       },
       {
         "title": "曲-",
-        "artist": "",
+        "artist": "千葉雄喜 & BABYWOODROSE",
         "start": 500
       },
       {
@@ -53626,12 +53326,12 @@
       },
       {
         "title": "曲-",
-        "artist": "",
+        "artist": "千葉雄喜 & BABYWOODROSE",
         "start": 900
       },
       {
         "title": "曲-",
-        "artist": "",
+        "artist": "千葉雄喜 & BABYWOODROSE",
         "start": 2290
       },
       {
@@ -53661,7 +53361,7 @@
       },
       {
         "title": "曲-",
-        "artist": "",
+        "artist": "千葉雄喜 & BABYWOODROSE",
         "start": 3360
       },
       {
@@ -54022,7 +53722,7 @@
       },
       {
         "title": "一曲",
-        "artist": "",
+        "artist": "旺仔小乔",
         "start": 335
       },
       {
@@ -54032,7 +53732,7 @@
       },
       {
         "title": "遺伝",
-        "artist": "",
+        "artist": "斉藤和義",
         "start": 578
       },
       {
@@ -54107,7 +53807,7 @@
       },
       {
         "title": "九曲",
-        "artist": "",
+        "artist": "子弥",
         "start": 4330
       },
       {
@@ -54471,7 +54171,7 @@
       },
       {
         "title": "一曲",
-        "artist": "",
+        "artist": "旺仔小乔",
         "start": 326
       },
       {
@@ -54556,7 +54256,7 @@
       },
       {
         "title": "九曲",
-        "artist": "",
+        "artist": "子弥",
         "start": 3553
       },
       {
@@ -55200,7 +54900,7 @@
       },
       {
         "title": "一曲",
-        "artist": "",
+        "artist": "旺仔小乔",
         "start": 870
       },
       {
@@ -55476,7 +55176,7 @@
       },
       {
         "title": "一曲",
-        "artist": "",
+        "artist": "旺仔小乔",
         "start": 382
       },
       {
@@ -55833,7 +55533,7 @@
       },
       {
         "title": "一曲",
-        "artist": "",
+        "artist": "旺仔小乔",
         "start": 205
       },
       {
@@ -56155,124 +55855,19 @@
     ],
     "songs": [
       {
-        "title": "一曲",
+        "title": "ながみん『フライングゲットですぅ。えーっと、音の確認とともによろしくお願いしますぅ。』",
         "artist": "",
-        "start": 92
+        "start": 96
       },
       {
-        "title": "(",
-        "artist": "全てを騙る時雨に。",
-        "start": 92
-      },
-      {
-        "title": "《フライングゲット》",
+        "title": "ながみん『あ\"、あ\"、あ\"ー』",
         "artist": "",
-        "start": 104
+        "start": 107
       },
       {
-        "title": "(",
-        "artist": "全てを騙る時雨に。",
-        "start": 388
-      },
-      {
-        "title": "二曲",
+        "title": "長尾景　歌い出し",
         "artist": "",
-        "start": 445
-      },
-      {
-        "title": "《粉雪》",
-        "artist": "",
-        "start": 450
-      },
-      {
-        "title": "(",
-        "artist": "全てを騙る時雨に。",
-        "start": 775
-      },
-      {
-        "title": "三曲",
-        "artist": "",
-        "start": 862
-      },
-      {
-        "title": "《Butter-Fly》",
-        "artist": "",
-        "start": 885
-      },
-      {
-        "title": "(",
-        "artist": "全てを騙る時雨に。",
-        "start": 1149
-      },
-      {
-        "title": "四曲",
-        "artist": "",
-        "start": 1180
-      },
-      {
-        "title": "《曇天》",
-        "artist": "",
-        "start": 1230
-      },
-      {
-        "title": "(",
-        "artist": "全てを騙る時雨に。",
-        "start": 1415
-      },
-      {
-        "title": "五曲",
-        "artist": "",
-        "start": 1530
-      },
-      {
-        "title": "《フレンド・ライク・ミー》",
-        "artist": "",
-        "start": 1535
-      },
-      {
-        "title": "お疲れのながみん(おじさん)",
-        "artist": "",
-        "start": 1685
-      },
-      {
-        "title": "六曲",
-        "artist": "",
-        "start": 1820
-      },
-      {
-        "title": "(",
-        "artist": "全てを騙る時雨に。",
-        "start": 1820
-      },
-      {
-        "title": "《AM11",
-        "artist": "00》",
-        "start": 1870
-      },
-      {
-        "title": "(",
-        "artist": "全てを騙る時雨に。",
-        "start": 2185
-      },
-      {
-        "title": "七曲",
-        "artist": "",
-        "start": 2305
-      },
-      {
-        "title": "(",
-        "artist": "全てを騙る時雨に。",
-        "start": 2566
-      },
-      {
-        "title": "八曲",
-        "artist": "",
-        "start": 2635
-      },
-      {
-        "title": "《サイレントマジョリティー》",
-        "artist": "",
-        "start": 2640
+        "start": 111
       }
     ]
   },
@@ -57472,7 +57067,7 @@
       },
       {
         "title": "(♪)チチをもげ(サビのみ)",
-        "artist": "ちょいワルP",
+        "artist": "rese",
         "start": 1195
       },
       {
@@ -58223,7 +57818,7 @@
     "songs": [
       {
         "title": "アイコンタクト",
-        "artist": "co",
+        "artist": "とけた電球",
         "start": 280
       },
       {
@@ -61190,7 +60785,7 @@
       },
       {
         "title": "話",
-        "artist": "荷戸眠しーた",
+        "artist": "日食なつこ",
         "start": 710
       },
       {
@@ -61200,7 +60795,7 @@
       },
       {
         "title": "話",
-        "artist": "荷戸眠しーた",
+        "artist": "日食なつこ",
         "start": 879
       },
       {
@@ -61958,49 +61553,24 @@
     ],
     "songs": [
       {
-        "title": "リライト(ASIAN KUNG-FU GENERATION)",
-        "artist": "ASIAN KUNG-FU GENERATION",
-        "start": 55
+        "title": "CHE.R.RY",
+        "artist": "yksb",
+        "start": 669
       },
       {
-        "title": "Rolling star(YUI)",
-        "artist": "YUI",
-        "start": 444
+        "title": "さくらんぼ",
+        "artist": "大塚愛",
+        "start": 712
       },
       {
-        "title": "長尾式ハナミズキを聞く心構えレクチャー）",
-        "artist": "",
-        "start": 942
+        "title": "ふわふわ時間",
+        "artist": "放課後ティータイム/桜高軽音部【けいおん!!】",
+        "start": 740
       },
       {
-        "title": "ハナミズキ(一青窈)",
-        "artist": "RAM RIDER",
-        "start": 989
-      },
-      {
-        "title": "メリッサ(ポルノグラフィティ)",
-        "artist": "ポルノグラフィティ",
-        "start": 1501
-      },
-      {
-        "title": "ブルーバード(いきものがかり)オケ大きめ注意",
-        "artist": "",
-        "start": 1956
-      },
-      {
-        "title": "ラフメイカー(BUMP OF CHICKEN)",
-        "artist": "BUMP OF CHICKEN",
-        "start": 2495
-      },
-      {
-        "title": "天体観測(BUMP OF CHICKEN)",
-        "artist": "BUMP OF CHICKEN",
-        "start": 2763
-      },
-      {
-        "title": "Pretender (Official髭男dism)",
-        "artist": "Official髭男dism",
-        "start": 3210
+        "title": "ベリーメロン",
+        "artist": "IOSYS",
+        "start": 2313
       }
     ]
   },
