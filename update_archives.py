@@ -416,6 +416,7 @@ TAG_CONVERSION_MAP = {
     "Uncharted_Spheres":"Uncharted Spheres",
     "弦月": "弦月藤士郎",
     "甲斐田": "甲斐田晴",
+    "レインパターソン":"レイン・パターソン",
     "エリートライバー": "五木左京",
     "一唱入魂":"VΔLZ1st 一唱入魂",
     "三華の樂":"VΔLZ2nd 三華の樂",
