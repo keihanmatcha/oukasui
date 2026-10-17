@@ -1,62 +1,5 @@
 [
   {
-    "youtubeId": "ALICDNZ1Cyk",
-    "title": "【歌枠】歌モチベ爆上げ歌枠　～告知あり～【長尾景/にじさんじ】",
-    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
-    "date": "2026-10-10",
-    "thumbnail": "https://i.ytimg.com/vi/ALICDNZ1Cyk/mqdefault.jpg",
-    "category": [
-      "プロモーション",
-      "歌配信"
-    ],
-    "keywords": [
-      "プロモーション",
-      "歌配信",
-      "長尾景"
-    ],
-    "tags": [
-      "カバー(ソロ)",
-      "歌"
-    ],
-    "songs": [
-      {
-        "title": "人で歌う曲じゃねぇんだよな〜",
-        "artist": "",
-        "start": 387
-      },
-      {
-        "title": "割れる曲からやればいいのか",
-        "artist": "",
-        "start": 462
-      },
-      {
-        "title": "後で見ようと思います",
-        "artist": "",
-        "start": 1502
-      },
-      {
-        "title": "この状態でお散歩行くと降ってくるんだよな",
-        "artist": "",
-        "start": 2915
-      },
-      {
-        "title": "(教えてくれて)ありがとういすみゃ",
-        "artist": "",
-        "start": 3622
-      },
-      {
-        "title": "これも輸入ですね、とこ歌枠からの",
-        "artist": "",
-        "start": 4363
-      },
-      {
-        "title": "いすみゃ、とこさんありがとう",
-        "artist": "",
-        "start": 4386
-      }
-    ]
-  },
-  {
     "youtubeId": "y9RFulRbwY0",
     "title": "〜↑↑ -KARAAGE- / 赤城ウェン【長尾景/にじさんじ】#踊ってみた",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -71,17 +14,14 @@
       "長尾景"
     ],
     "tags": [
-      "カバー(ソロ)",
+      "カバー(ユニット)",
       "踊"
     ],
     "songs": [
       {
-        "title": "要確認",
-        "artist": "",
-        "start": 0,
-        "tags": [
-          "要確認(手動修正してください)"
-        ]
+        "title": "〜↑↑ -KARAAGE-",
+        "artist": "赤城ウェン",
+        "start": 0
       }
     ]
   },
@@ -267,29 +207,44 @@
     ],
     "songs": [
       {
-        "title": "アウフヘーベン",
-        "artist": "Mrs. GREEN APPLE",
-        "start": 840
+        "title": "IRIS OUT",
+        "artist": "米津玄師",
+        "start": 671
       },
       {
-        "title": "ダイバー",
+        "title": "ダイバー with セラフ・ダズルガーデン",
         "artist": "KANA-BOON",
         "start": 1635
       },
       {
-        "title": "ナイトルーティーン",
-        "artist": "キタニタツヤ",
-        "start": 3840
+        "title": "ray with 水面まどか",
+        "artist": "BUMP OF CHICKEN",
+        "start": 1938
       },
       {
-        "title": "天使と悪魔",
-        "artist": "GRe4N BOYZ",
-        "start": 5046
+        "title": "ラフ・メイカー",
+        "artist": "BUMP OF CHICKEN",
+        "start": 2936
       },
       {
-        "title": "ブルーアンビエンス",
-        "artist": "Mrs. GREEN APPLE",
-        "start": 5481
+        "title": "もう帰りたいもん 帰んないでね with セラフ・ダズルガーデン",
+        "artist": "",
+        "start": 4449
+      },
+      {
+        "title": "ダーリン",
+        "artist": "須田景凪",
+        "start": 4519
+      },
+      {
+        "title": "フラジール with 猫屋敷美紅",
+        "artist": "ぬゆり",
+        "start": 5804
+      },
+      {
+        "title": "Hurrah!! with セラフ・ダズルガーデン,水面まどか,猫屋敷美紅",
+        "artist": "にじさんじ",
+        "start": 6320
       }
     ]
   },
@@ -320,47 +275,42 @@
       {
         "title": "DISCOTHEQUE with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
         "artist": "SOLIDIO",
-        "start": 127
+        "start": 120
       },
       {
         "title": "革命デュアリズム with 町田ちま",
         "artist": "レフティーモンスターP, たるとP",
-        "start": 786
+        "start": 775
       },
       {
         "title": "にじさんじ体操第一 with 七瀬すず菜",
         "artist": "",
-        "start": 1518
+        "start": 1490
       },
       {
-        "title": "マジ！Magic！PEACH！ with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
-        "artist": "",
-        "start": 1759
-      },
-      {
-        "title": "ドーナツホール with ミラン・ケストレル",
+        "title": "ドーナツホール(🦋、⏳)",
         "artist": "ハチ",
-        "start": 2321
+        "start": 2288
       },
       {
         "title": "HOT LIMIT with レイン・パターソン",
         "artist": "T.M.Revolution",
-        "start": 3005
+        "start": 2966
       },
       {
         "title": "きゃわぽっぴんどぅー with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
         "artist": "",
-        "start": 3595
+        "start": 3577
       },
       {
         "title": "アイドルパワー with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
         "artist": "",
-        "start": 3847
+        "start": 3845
       },
       {
         "title": "爆裂愛してる with ドーラ,ミラン・ケストレル,レイン・パターソン,七瀬すず菜,町田ちま",
         "artist": "M!LK",
-        "start": 4262
+        "start": 4215
       }
     ]
   },
@@ -3175,34 +3125,29 @@
     ],
     "songs": [
       {
-        "title": "長尾ウインク",
+        "title": "弦月の煽り超盛り上がる好き",
         "artist": "",
-        "start": 43
+        "start": 162
       },
       {
-        "title": "後ろでぴょんぴょんしてて可愛い",
+        "title": "ここの見守ってきた甲斐田から何故か最高音を歌わされる弦月までも大好き",
         "artist": "",
-        "start": 51
+        "start": 199
       },
       {
-        "title": "歌詞似合わせて2人見てる長尾",
-        "artist": "",
-        "start": 122
+        "title": "(",
+        "artist": "全てを騙る時雨に。",
+        "start": 245
       },
       {
-        "title": "めっちゃ手振ってる弦月かわいい",
+        "title": "全力で手を振ってくれるの好き",
         "artist": "",
-        "start": 218
+        "start": 258
       },
       {
-        "title": "弦月回転からのみんな跳ねてる",
+        "title": "スピンからのジャンプ",
         "artist": "",
-        "start": 301
-      },
-      {
-        "title": "甲斐田投げキッス",
-        "artist": "",
-        "start": 319
+        "start": 296
       }
     ]
   },
@@ -3604,7 +3549,7 @@
       },
       {
         "title": "〆",
-        "artist": "匿名ゲルマ",
+        "artist": "全て非力の所為です。",
         "start": 2975
       }
     ]
