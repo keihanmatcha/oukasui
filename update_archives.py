@@ -10,6 +10,7 @@ import unicodedata
 import urllib.parse
 import xml.etree.ElementTree as ET
 from googleapiclient.discovery import build
+from datetime import datetime, timedelta, timezone
 
 import requests
 
@@ -1444,8 +1445,6 @@ def fetch_youtube_ids_from_x() -> List[str]:
 
     print(f"🐦 @{TARGET_X_USER} のポスト（引用含む）から {len(found_video_ids)} 件のYouTube動画IDを検知")
     return list(found_video_ids)
-
-from datetime import datetime, timedelta, timezone
 
 
 def should_check_setlist(
