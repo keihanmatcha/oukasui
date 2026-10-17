@@ -1,5 +1,62 @@
 [
   {
+    "youtubeId": "ALICDNZ1Cyk",
+    "title": "【歌枠】歌モチベ爆上げ歌枠　～告知あり～【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-10-10",
+    "thumbnail": "https://i.ytimg.com/vi/ALICDNZ1Cyk/mqdefault.jpg",
+    "category": [
+      "プロモーション",
+      "歌配信"
+    ],
+    "keywords": [
+      "プロモーション",
+      "歌配信",
+      "長尾景"
+    ],
+    "tags": [
+      "カバー(ソロ)",
+      "歌"
+    ],
+    "songs": [
+      {
+        "title": "人で歌う曲じゃねぇんだよな〜",
+        "artist": "",
+        "start": 387
+      },
+      {
+        "title": "割れる曲からやればいいのか",
+        "artist": "",
+        "start": 462
+      },
+      {
+        "title": "後で見ようと思います",
+        "artist": "",
+        "start": 1502
+      },
+      {
+        "title": "この状態でお散歩行くと降ってくるんだよな",
+        "artist": "",
+        "start": 2915
+      },
+      {
+        "title": "(教えてくれて)ありがとういすみゃ",
+        "artist": "",
+        "start": 3622
+      },
+      {
+        "title": "これも輸入ですね、とこ歌枠からの",
+        "artist": "",
+        "start": 4363
+      },
+      {
+        "title": "いすみゃ、とこさんありがとう",
+        "artist": "",
+        "start": 4386
+      }
+    ]
+  },
+  {
     "youtubeId": "y9RFulRbwY0",
     "title": "〜↑↑ -KARAAGE- / 赤城ウェン【長尾景/にじさんじ】#踊ってみた",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -210,44 +267,29 @@
     ],
     "songs": [
       {
-        "title": "IRIS OUT",
-        "artist": "米津玄師",
-        "start": 671
+        "title": "アウフヘーベン",
+        "artist": "Mrs. GREEN APPLE",
+        "start": 840
       },
       {
-        "title": "ダイバー with セラフ・ダズルガーデン",
+        "title": "ダイバー",
         "artist": "KANA-BOON",
         "start": 1635
       },
       {
-        "title": "ray with 水面まどか",
-        "artist": "BUMP OF CHICKEN",
-        "start": 1938
+        "title": "ナイトルーティーン",
+        "artist": "キタニタツヤ",
+        "start": 3840
       },
       {
-        "title": "ラフ・メイカー",
-        "artist": "BUMP OF CHICKEN",
-        "start": 2936
+        "title": "天使と悪魔",
+        "artist": "GRe4N BOYZ",
+        "start": 5046
       },
       {
-        "title": "もう帰りたいもん 帰んないでね with セラフ・ダズルガーデン",
-        "artist": "",
-        "start": 4449
-      },
-      {
-        "title": "ダーリン",
-        "artist": "須田景凪",
-        "start": 4519
-      },
-      {
-        "title": "フラジール with 猫屋敷美紅",
-        "artist": "ぬゆり",
-        "start": 5804
-      },
-      {
-        "title": "Hurrah!! with セラフ・ダズルガーデン,水面まどか,猫屋敷美紅",
-        "artist": "にじさんじ",
-        "start": 6320
+        "title": "ブルーアンビエンス",
+        "artist": "Mrs. GREEN APPLE",
+        "start": 5481
       }
     ]
   },
@@ -3086,6 +3128,7 @@
     "date": "2024-05-16",
     "thumbnail": "https://i.ytimg.com/vi/E2W-6-hxNpM/mqdefault.jpg",
     "category": [
+      "ゲーム実況",
       "歌動画"
     ],
     "keywords": [
@@ -3132,29 +3175,34 @@
     ],
     "songs": [
       {
-        "title": "弦月の煽り超盛り上がる好き",
+        "title": "長尾ウインク",
         "artist": "",
-        "start": 162
+        "start": 43
       },
       {
-        "title": "ここの見守ってきた甲斐田から何故か最高音を歌わされる弦月までも大好き",
+        "title": "後ろでぴょんぴょんしてて可愛い",
         "artist": "",
-        "start": 199
+        "start": 51
       },
       {
-        "title": "(",
-        "artist": "全てを騙る時雨に。",
-        "start": 245
+        "title": "歌詞似合わせて2人見てる長尾",
+        "artist": "",
+        "start": 122
       },
       {
-        "title": "全力で手を振ってくれるの好き",
+        "title": "めっちゃ手振ってる弦月かわいい",
         "artist": "",
-        "start": 258
+        "start": 218
       },
       {
-        "title": "スピンからのジャンプ",
+        "title": "弦月回転からのみんな跳ねてる",
         "artist": "",
-        "start": 296
+        "start": 301
+      },
+      {
+        "title": "甲斐田投げキッス",
+        "artist": "",
+        "start": 319
       }
     ]
   },
@@ -3556,7 +3604,7 @@
       },
       {
         "title": "〆",
-        "artist": "全て非力の所為です。",
+        "artist": "匿名ゲルマ",
         "start": 2975
       }
     ]
@@ -3593,6 +3641,7 @@
     "date": "2021-09-04",
     "thumbnail": "https://i.ytimg.com/vi/HhMSjyjPpYc/mqdefault.jpg",
     "category": [
+      "ゲーム実況",
       "歌配信"
     ],
     "keywords": [
