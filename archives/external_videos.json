@@ -1,4 +1,30 @@
 [{
+    "youtubeId": "t_UGnU64R_8",
+    "title": "アイスブレイクブレイカー / 甲斐田晴【長尾景/にじさんじ】#踊ってみた",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-10-03",
+    "thumbnail": "https://i.ytimg.com/vi/t_UGnU64R_8/mqdefault.jpg",
+    "category": [
+      "踊り動画"
+    ],
+    "keywords": [
+      "年長組",
+      "甲斐田晴",
+      "踊り動画"
+    ],
+    "tags": [
+      "カバー(ソロ)",
+      "踊"
+    ],
+    "songs": [
+      {
+        "title": "アイスブレイクブレイカー",
+        "artist": "甲斐田晴",
+        "start": 0
+      }
+    ]
+  },
+    {
     "youtubeId": "y9RFulRbwY0",
     "title": "〜↑↑ -KARAAGE- / 赤城ウェン【長尾景/にじさんじ】#踊ってみた",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -13,7 +39,7 @@
       "長尾景"
     ],
     "tags": [
-      "カバー(ユニット)",
+      "カバー(ソロ)",
       "踊"
     ],
     "songs": [
