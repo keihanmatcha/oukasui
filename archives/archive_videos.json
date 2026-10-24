@@ -1,5 +1,46 @@
 [
   {
+    "youtubeId": "Bq6tZZUGeHM",
+    "title": "【キーボードパズル】配信者なら余裕！？バラバラになったキーボードを元に戻せ！【長尾景/先斗寧/佐伯イッテツ/水面まどか/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-10-23",
+    "thumbnail": "https://i.ytimg.com/vi/Bq6tZZUGeHM/mqdefault.jpg",
+    "category": [
+      "ゲーム実況"
+    ],
+    "keywords": [
+      "キーボードパズル",
+      "佐伯イッテツ",
+      "先斗寧",
+      "水面まどか",
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "QOGVxamLOCY",
+    "title": "【こわぁい；；】ポンコツ長尾とキレキレミラン【長尾景/ミラン・ケストレル/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-10-23",
+    "thumbnail": "https://i.ytimg.com/vi/QOGVxamLOCY/mqdefault.jpg",
+    "category": [
+      "未分類"
+    ],
+    "keywords": [
+      "ミラン・ケストレル",
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": [
+      {
+        "title": "【こわぁい；；】ポンコツ長尾とキレキレミラン【長尾景/ミラン",
+        "artist": "ケストレル/にじさんじ】",
+        "start": 0
+      }
+    ]
+  },
+  {
     "youtubeId": "xzW708K13Y8",
     "title": "【妹に運転教わる！？】教えるゲームのはずが立場が逆転している全肯定長尾景【長尾景/にじさんじ】【公式切り抜き】",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -4308,13 +4349,7 @@
       "長尾景"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "我真的特别爱你（为什么你会流泪）",
-        "artist": "pop",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "2NvWjBTs-rU",
@@ -5169,8 +5204,8 @@
     ],
     "songs": [
       {
-        "title": "OBF",
-        "artist": "Joe Rikiichi",
+        "title": "急上昇",
+        "artist": "OBF · Joe Rikiichi",
         "start": 0
       }
     ]
@@ -11499,8 +11534,8 @@
     "tags": [],
     "songs": [
       {
-        "title": "急上昇",
-        "artist": "犬とバカ猫 · Secondbacker",
+        "title": "犬とバカ猫",
+        "artist": "Secondbacker",
         "start": 0
       }
     ]
@@ -46215,8 +46250,8 @@
     "tags": [],
     "songs": [
       {
-        "title": "グウェル",
-        "artist": "オス・ガール / Gwelu Os Gar 【にじさんじ】",
+        "title": "もうすぐオリバー教授が三十路を迎えることにウキウキになる長尾景【長尾景/オリバー",
+        "artist": "エバンス/にじさんじ切り抜き】",
         "start": 0
       }
     ]
