@@ -1,5 +1,59 @@
 [
   {
+    "youtubeId": "NdTAMP73tmY",
+    "title": "【Japanese Ramen Simulator】好きなカップラーメンは蒙古タンメン中本【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-10-25",
+    "thumbnail": "https://i.ytimg.com/vi/NdTAMP73tmY/mqdefault.jpg",
+    "category": [
+      "未分類"
+    ],
+    "keywords": [
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "FPll9W04__I",
+    "title": "【遊戯王】劇場版クシャトリラサイボーグ　復活の「K」【長尾景/春崎エアル/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-10-24",
+    "thumbnail": "https://i.ytimg.com/vi/FPll9W04__I/mqdefault.jpg",
+    "category": [
+      "ゲーム実況"
+    ],
+    "keywords": [
+      "エア景",
+      "春崎エアル",
+      "遊戯王",
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "FPk3Zxcp-DY",
+    "title": "【やると思った！？】事故フラグを華麗に回収する長尾景【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-10-24",
+    "thumbnail": "https://i.ytimg.com/vi/FPk3Zxcp-DY/mqdefault.jpg",
+    "category": [
+      "未分類"
+    ],
+    "keywords": [
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": [
+      {
+        "title": "【こわぁい；；】ポンコツ長尾とキレキレミラン【長尾景/ミラン",
+        "artist": "ケストレル/にじさんじ】",
+        "start": 0
+      }
+    ]
+  },
+  {
     "youtubeId": "Bq6tZZUGeHM",
     "title": "【キーボードパズル】配信者なら余裕！？バラバラになったキーボードを元に戻せ！【長尾景/先斗寧/佐伯イッテツ/水面まどか/にじさんじ】",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -402,19 +456,9 @@
     ],
     "songs": [
       {
-        "title": "アイネクライネ",
-        "artist": "米津玄師",
-        "start": 761
-      },
-      {
-        "title": "シンデレラボーイ",
-        "artist": "Saucy Dog",
-        "start": 3248
-      },
-      {
-        "title": "バクチダンサー",
-        "artist": "DOES",
-        "start": 3664
+        "title": "歌モチベ爆上げ歌枠　～告知あり～",
+        "artist": "",
+        "start": 0
       }
     ]
   },
@@ -2595,7 +2639,13 @@
       "レイン・パターソン"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【告知PV】2026年8月「束縛ボイス Vol.2」 @nijisanji 2 か月前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "yoH5OnPlzHo",
@@ -3573,7 +3623,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -5204,8 +5254,8 @@
     ],
     "songs": [
       {
-        "title": "急上昇",
-        "artist": "OBF · Joe Rikiichi",
+        "title": "OBF",
+        "artist": "Joe Rikiichi",
         "start": 0
       }
     ]
@@ -6042,7 +6092,13 @@
       "ライブ・イベント"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【#にじフェス2026】NGを連発してしまい惑星ライブの告知ができないライバーたち #shorts #にじさんじ #vtuber #Uncharted_Spheres @YashiroKizuku 5 か月前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "YQVnOuXwNk8",
@@ -6205,7 +6261,13 @@
       "プロモーション"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【#にじフェス2026】#Uncharted_Spheres 5月15日(金)開催！ @nijisanji 5 か月前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "GZNaH-WaGtc",
@@ -8427,7 +8489,7 @@
     "songs": [
       {
         "title": "Funky Town",
-        "artist": "Baby Land",
+        "artist": "AMP",
         "start": 0
       }
     ]
@@ -9084,7 +9146,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -18641,7 +18703,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -20873,7 +20935,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -23280,7 +23342,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -24717,7 +24779,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -27561,7 +27623,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -27708,7 +27770,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "#VΔLZ - Beyond the Frame MV 公開中！ #VΔLZ_BtF @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "osVxwY7iW0s",
@@ -28333,7 +28401,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "#VΔLZ_ライブツアー2024 仙台公演明日開催！#VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "vR8yqyYsc58",
@@ -28573,7 +28647,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "#VΔLZ_ライブツアー2024 大阪公演明日開催！#VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "20u0PU5iy3o",
@@ -28841,7 +28921,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "#VΔLZ_ライブツアー2024 横浜公演明日開催！#VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "Jw66lhe3gYY",
@@ -28987,7 +29073,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "#VΔLZ_ライブツアー2024 開催間近！ #甲斐田晴 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "dPJAUk7U1AY",
@@ -29008,7 +29100,13 @@
       "長尾景"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "#VΔLZ_ライブツアー2024 開催間近！#長尾景 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "orPD6FqSQB4",
@@ -29028,7 +29126,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "#VΔLZ_ライブツアー2024 開催間近！#弦月藤士郎 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "A_MsWpV746o",
@@ -29307,7 +29411,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "#VΔLZ_ライブツアー2024の楽しみ方！ #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "z9OpNXgfsE8",
@@ -29999,7 +30109,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -30697,7 +30807,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "同期仲良しシーンまとめ #桜魔大戦譚  #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "vt8CF08Crfo",
@@ -30738,7 +30854,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "甲斐田ハルダサ名付けシーンまとめ #桜魔大戦譚  #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "RQ62P7V7X-I",
@@ -30791,7 +30913,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "甲斐田ハル詠唱シーンまとめ #桜魔大戦譚  #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "nPZ0pIhvWGE",
@@ -30831,7 +30959,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "長尾ケイギャップまとめ #桜魔大戦譚  #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "W6GmninyA9g",
@@ -30886,7 +31020,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "弦月トウジロウ毒舌シーンまとめ #桜魔大戦譚  #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "QtFi7B5Kn9w",
@@ -30923,7 +31063,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【キャラクター紹介】冷泉リヒト #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "kIxrYKBI1Tk",
@@ -30959,7 +31105,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【キャラクター紹介】椿ヒナタ #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "YPTHpP93smg",
@@ -31047,7 +31199,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【キャラクター紹介】西園寺マサムネ #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "A8UPCiXSmtI",
@@ -31067,7 +31225,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【キャラクター紹介】二階堂シュウゲツ #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "G3JY8l3DkI4",
@@ -31139,7 +31303,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【キャラクター紹介】甲斐田ハル #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "JQtuXIzZAho",
@@ -31179,7 +31349,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【キャラクター紹介】長尾ケイ #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "32iuMaIO0_o",
@@ -31215,7 +31391,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【キャラクター紹介】弦月トウジロウ #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "XMjo7ZNHuLo",
@@ -32721,7 +32903,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -34052,7 +34234,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -34180,7 +34362,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "『桜魔大戦譚 〜相対するモノたちへ〜』スタートまであと1日！ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "yARyA_UPhdg",
@@ -34219,7 +34407,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "『桜魔大戦譚 〜相対するモノたちへ〜』スタートまであと2日！ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "_ZZSXbl8kGg",
@@ -34239,7 +34433,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "『桜魔大戦譚 〜相対するモノたちへ〜』スタートまであと3日！ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "ZtyDsJG311Y",
@@ -34921,7 +35121,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -34966,7 +35166,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -35022,8 +35222,8 @@
     "tags": [],
     "songs": [
       {
-        "title": "【妹に運転を教える】にじさんじ男子ライバー",
-        "artist": "ポンコツ妹への反応ちがいまとめ【切り抜き/山田龍一郎/神永タイガ/社築/イブラヒム/宇佐美リト/叶/長尾景/不破湊/剣持刀也/卯月コウ/魁星ほか】",
+        "title": "OW大会顔合わせ！チーム01で可愛い",
+        "artist": "癒し枠とコメントで言われまくったのはおじさんの男虎！？ｗ【男虎/御子神琴音/夕陽リリ/風楽奏斗/星導ショウ/ろろみや/切り抜き】【にじさんじ】",
         "start": 0
       }
     ]
@@ -35643,7 +35843,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -36016,7 +36216,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -36207,7 +36407,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -46250,8 +46450,8 @@
     "tags": [],
     "songs": [
       {
-        "title": "もうすぐオリバー教授が三十路を迎えることにウキウキになる長尾景【長尾景/オリバー",
-        "artist": "エバンス/にじさんじ切り抜き】",
+        "title": "FPS切り抜きボット【ローレン",
+        "artist": "イロアス】",
         "start": 0
       }
     ]
@@ -46989,7 +47189,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -47913,7 +48113,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -48987,7 +49187,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -49318,7 +49518,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -49966,7 +50166,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -50348,7 +50548,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
@@ -53795,7 +53995,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "未来電波基地",
+        "artist": "",
         "start": 0
       }
     ]
