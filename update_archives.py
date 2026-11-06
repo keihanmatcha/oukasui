@@ -2121,31 +2121,33 @@ def parse_setlist_from_text(
       if pure_t in GLOBAL_ARTIST_DB:
         a = GLOBAL_ARTIST_DB[pure_t]
 
-    # 3. ★ 音楽DB実在チェックによるフィルタリング
-    # 3. ★ 音楽DB実在チェックによるフィルタリング
+    # 3. ★ 音楽DB実在チェックによるフィルタリング（バリデーション緩和）
     if not a:
       # スラッシュ等がなく曲名のみの場合はDB検索
       a = resolve_artist_name(t)
     else:
-      # スラッシュで分割された場合でも、曲名側でDB検索してみて確認する（誤爆防止）
-      # ※ 手動辞書にあるか、iTunes/VocaDBでヒットするか
+      # スラッシュで分割されている場合
       verified_artist = resolve_artist_name(t)
       if verified_artist:
-        # DBに曲が存在した場合は、DBの正式アーティスト名を採用（または既存aを維持）
+        # DBに曲が存在した場合は正式アーティスト名を採用
         a = verified_artist
-      elif a in KEYWORD_GROUPS.get(
-          "MEMBERS", []
-      ) or a in KEYWORD_GROUPS.get("UNITS", []):
-        # ライバー名やユニット名が後ろに書かれていた場合は有効とみなす
+      elif a in KEYWORD_GROUPS.get("MEMBERS", []) or a in KEYWORD_GROUPS.get("UNITS", []):
+        # ライバー名やユニット名が後ろに書かれている場合
         pass
       else:
-        # スラッシュで区切られていても音楽DBにもライバー名にも引っかからない場合
-        # → 「喉の調子がいい/ボイトレの成果...」のようなトーク区切りの可能性が高いので除外
-        if not any(mark in raw_text for mark in ["♪", "♫"]):
-          continue
+        # 【緩和】DBやライバー名になくても、「スラッシュで区切られており、明らかにトークや雑談でない場合」は許可する
+        # トーク特有の怪しいキーワードが含まれていないかチェック
+        suspicious_keywords = ["ありがとう", "草", "w", "お疲れ", "次回", "告知", "感想", "質問", "アーカイブ"]
+        if any(kw in t or kw in a for kw in suspicious_keywords):
+          if not any(mark in raw_text for mark in ["♪", "♫"]):
+            continue
 
-    # アーティストが取れず、外部音楽DBでも見つからない行はトークとみなして除外
+    # アーティストがどうしても取れない場合のフォールバック（曲名のみでDB検索を再試行）
     if not a:
+      a = resolve_artist_name(t)
+
+    # それでもアーティスト名が空で、かつスラッシュもない場合はトークとみなして除外
+    if not a and not any(sep in clean_text for sep in [" / ", "／", " - ", " － ", "：", " : ", "￤"]):
       continue
 
     # 秒数変換
