@@ -1986,7 +1986,7 @@ def parse_setlist_from_text(
     return []
   text = html.unescape(text)
 
-  ts_regex = r"(?:(?<=\s)|^|\b)(\d{1,2}:\d{2}:\d{2}|\d{1,2}:\d{2})(?!\d)"
+  ts_regex = r"(?:[♪♫🫶️\s]*)(\d{1,2}:\d{2}:\d{2}|\d{1,2}:\d{2})(?!\d)"
   matches = list(re.finditer(ts_regex, text))
   if len(matches) < 3:
     return []
@@ -1997,6 +1997,7 @@ def parse_setlist_from_text(
     start_idx = matches[i].end()
     end_idx = matches[i + 1].start() if i + 1 < len(matches) else len(text)
     content = text[start_idx:end_idx].strip()
+    content = re.sub(r"^[♪♫🫶️\s・]+", "", content).strip()
     raw_entries.append((ts_str, content))
 
   all_collab_livers = set()
