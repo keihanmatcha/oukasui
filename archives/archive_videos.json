@@ -1,5 +1,89 @@
 [
   {
+    "youtubeId": "7TyVzXU422A",
+    "title": "【スト6】グルグルどっかーん【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-11-22",
+    "thumbnail": "https://i.ytimg.com/vi/7TyVzXU422A/mqdefault.jpg",
+    "category": [
+      "ゲーム実況"
+    ],
+    "keywords": [
+      "ストリートファイター6",
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "8ztlZKPJQEA",
+    "title": "【混乱】キャラメルフラペチーノのキャラメル抜き！？【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-11-21",
+    "thumbnail": "https://i.ytimg.com/vi/8ztlZKPJQEA/mqdefault.jpg",
+    "category": [
+      "未分類"
+    ],
+    "keywords": [
+      "長尾景"
+    ],
+    "tags": [],
+    "songs": [
+      {
+        "title": "【うおw】ギャルの情報量に思わず冷笑する長尾景【長尾景/レイン",
+        "artist": "パターソン/弦月藤士郎にじさんじ】",
+        "start": 0
+      }
+    ]
+  },
+  {
+    "youtubeId": "AfQLtnp1NT8",
+    "title": "【歌枠】めにまにな5人でカラオケオフコラボ!✨ 告知も有り!【にじさんじ | 桜凛月, 長尾景, セフィナ, 渚トラウト, 一橋綾人】",
+    "channel": "セフィナ / Seffyna【にじさんじ】",
+    "date": "2026-11-21",
+    "thumbnail": "https://i.ytimg.com/vi/AfQLtnp1NT8/mqdefault.jpg",
+    "category": [
+      "プロモーション",
+      "歌動画",
+      "歌配信"
+    ],
+    "keywords": [
+      "Nara Haramaung",
+      "めにまにカンパニー",
+      "ケイトララ",
+      "セフィナ",
+      "プロモーション",
+      "一橋綾人",
+      "桜凛月",
+      "歌動画",
+      "歌配信",
+      "渚トラウト",
+      "長尾景",
+      "세피나（セフィナ）"
+    ],
+    "tags": [
+      "カバー(ユニット)",
+      "歌"
+    ],
+    "songs": [
+      {
+        "title": "ハレ晴レユカイ",
+        "artist": "涼宮ハルヒ（CV平野綾),長門有希（CV茅原実里),朝比奈みくる（CV後藤邑子)【涼宮ハルヒの憂鬱】",
+        "start": 3243
+      },
+      {
+        "title": "羞恥心",
+        "artist": "羞恥心",
+        "start": 4223
+      },
+      {
+        "title": "パジャマパーティーズのうた",
+        "artist": "パジャマパーティーズ みどり(CV. 諸星すみれ)、ぴんく(CV. 長縄まりあ)、しろ(CV. 篠原侑)、むらさき(CV. 内山茉莉)",
+        "start": 5067
+      }
+    ]
+  },
+  {
     "youtubeId": "jcqSmquYk6w",
     "title": "【キーボードパズル】大混乱！？？キーボードパズルでプロフィールを打ったら酷い有様に...【長尾景/先斗寧/佐伯イッテツ/水面まどか/にじさんじ】",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -3452,7 +3536,13 @@
       "レイン・パターソン"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【告知PV】2026年8月「束縛ボイス Vol.2」 @nijisanji 3 か月前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "yoH5OnPlzHo",
@@ -6899,7 +6989,13 @@
       "ライブ・イベント"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【#にじフェス2026】NGを連発してしまい惑星ライブの告知ができないライバーたち #shorts #にじさんじ #vtuber #Uncharted_Spheres @YashiroKizuku 6 か月前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "YQVnOuXwNk8",
@@ -7062,7 +7158,13 @@
       "プロモーション"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【#にじフェス2026】#Uncharted_Spheres 5月15日(金)開催！ @nijisanji 6 か月前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "GZNaH-WaGtc",
@@ -9284,7 +9386,7 @@
     "songs": [
       {
         "title": "Funky Town",
-        "artist": "AMP",
+        "artist": "Disco Fever",
         "start": 0
       }
     ]
@@ -10673,8 +10775,13 @@
       },
       {
         "title": "ALONES",
-        "artist": "Alfyn Li-Wolfe",
+        "artist": "Aqua Timez",
         "start": 1307
+      },
+      {
+        "title": "恥ずかしいか青春は",
+        "artist": "緑黄色社会",
+        "start": 1791
       },
       {
         "title": "CITRUS",
@@ -18028,13 +18135,7 @@
       "長尾景"
     ],
     "tags": [],
-    "songs": [
-      {
-        "title": "オタクくんに厳しい長尾と伊波【長尾景/伊波ライ/ソフィア",
-        "artist": "ヴァレンタイン/にじさんじ】【ギャル短歌】【#ケイナガオの楽屋裏】",
-        "start": 0
-      }
-    ]
+    "songs": []
   },
   {
     "youtubeId": "oFFB9_SUQwg",
@@ -31991,7 +32092,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【キャラクター紹介】甲斐田ハル #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "JQtuXIzZAho",
@@ -32031,7 +32138,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【キャラクター紹介】長尾ケイ #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "32iuMaIO0_o",
@@ -32067,7 +32180,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "【キャラクター紹介】弦月トウジロウ #桜魔大戦譚 #VΔLZ #ヴァルツ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "XMjo7ZNHuLo",
@@ -35032,7 +35151,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "『桜魔大戦譚 〜相対するモノたちへ〜』スタートまであと1日！ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "yARyA_UPhdg",
@@ -35071,7 +35196,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "『桜魔大戦譚 〜相対するモノたちへ〜』スタートまであと2日！ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "_ZZSXbl8kGg",
@@ -35091,7 +35222,13 @@
       "甲斐田晴"
     ],
     "tags": [],
-    "songs": []
+    "songs": [
+      {
+        "title": "『桜魔大戦譚 〜相対するモノたちへ〜』スタートまであと3日！ #shorts @VALZ_ch 2 年前",
+        "artist": "",
+        "start": 0
+      }
+    ]
   },
   {
     "youtubeId": "ZtyDsJG311Y",
@@ -47102,8 +47239,8 @@
     "tags": [],
     "songs": [
       {
-        "title": "もうすぐオリバー教授が三十路を迎えることにウキウキになる長尾景【長尾景/オリバー",
-        "artist": "エバンス/にじさんじ切り抜き】",
+        "title": "【理想の上司は？】社築への信頼が厚すぎるリゼ様/イブラヒムとしぃしぃが上司なのは嫌すぎるらんねーちゃん【リゼ",
+        "artist": "ヘルエスタ/早瀬走/フレン/椎名唯華/るんるん/にじさんじ切り抜き】",
         "start": 0
       }
     ]
