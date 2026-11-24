@@ -1,5 +1,33 @@
 [
   {
+    "youtubeId": "EOGSlaeWolM",
+    "title": "様子のおかしいアンパンマンマーチ【長尾景/にじさんじ】踊ってみた？",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-11-22",
+    "thumbnail": "https://i.ytimg.com/vi/EOGSlaeWolM/mqdefault.jpg",
+    "category": [
+      "踊り動画"
+    ],
+    "keywords": [
+      "踊り動画",
+      "長尾景"
+    ],
+    "tags": [
+      "カバー(ソロ)",
+      "踊"
+    ],
+    "songs": [
+      {
+        "title": "要確認",
+        "artist": "",
+        "start": 0,
+        "tags": [
+          "要確認(手動修正してください)"
+        ]
+      }
+    ]
+  },
+  {
     "youtubeId": "AfQLtnp1NT8",
     "title": "【歌枠】めにまにな5人でカラオケオフコラボ!✨ 告知も有り!【にじさんじ | 桜凛月, 長尾景, セフィナ, 渚トラウト, 一橋綾人】",
     "channel": "セフィナ / Seffyna【にじさんじ】",
@@ -3486,7 +3514,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "",
+        "artist": "未来電波基地",
         "start": 0
       }
     ]
@@ -3538,7 +3566,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "",
+        "artist": "未来電波基地",
         "start": 0
       }
     ]
@@ -3563,7 +3591,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "",
+        "artist": "未来電波基地",
         "start": 0
       }
     ]
@@ -3588,7 +3616,7 @@
     "songs": [
       {
         "title": "様",
-        "artist": "",
+        "artist": "未来電波基地",
         "start": 0
       }
     ]
