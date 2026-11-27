@@ -1692,292 +1692,197 @@ HANDLE_MAP_LOWER = {k.lower(): v for k, v in HANDLE_TO_NAME_MAP.items()}
 # 2. タグ & 楽曲解析ロジック
 # ==============================================================================
 
+def analyze_video_tags(title, description, fixed_tags, channel_name="", is_short=False):
+    detected_categories = set()
+    detected_keywords = set()
+    
+    title_lower = str(title).lower()
+    description_lower = str(description).lower() if description else ""
 
-def analyze_video_tags(
-    title, description, fixed_tags, channel_name="", is_short=False
-):
-  detected_categories = set()
-  detected_keywords = set()
+    for cat in CATEGORY_LIST:
+        if cat in title:
+            detected_categories.add(cat)
 
-  title_lower = str(title).lower()
-  description_lower = str(description).lower() if description else ""
+    for group_name, keyword_list in KEYWORD_GROUPS.items():
+        for keyword in keyword_list:
+            if keyword.lower() in title_lower:
+                detected_keywords.add(keyword)
 
-  for cat in CATEGORY_LIST:
-    if cat in title:
-      detected_categories.add(cat)
+    for phrase, forced_cat in FORCE_CATEGORY_MAP.items():
+        if phrase in title:
+            detected_categories.add(forced_cat)
 
-  for group_name, keyword_list in KEYWORD_GROUPS.items():
-    for keyword in keyword_list:
-      if keyword.lower() in title_lower:
-        detected_keywords.add(keyword)
+    for slang, formal_tag in TAG_CONVERSION_MAP.items():
+        if slang.lower() in title_lower:
+            detected_keywords.add(formal_tag)
 
-  for phrase, forced_cat in FORCE_CATEGORY_MAP.items():
-    if phrase in title:
-      detected_categories.add(forced_cat)
+    if re.search(r'【[^】]*える[^】]*】', title):
+        detected_keywords.add("える")
+    if re.search(r'【[^】]*叶[^】]*】', title):
+        detected_keywords.add("叶")
 
-  for slang, formal_tag in TAG_CONVERSION_MAP.items():
-    if slang.lower() in title_lower:
-      detected_keywords.add(formal_tag)
 
-  games_set = set(KEYWORD_GROUPS["GAMES"])
-  if not detected_keywords.isdisjoint(games_set):
-    detected_categories.add("ゲーム実況")
+    found_handles = re.findall(r'(@[\w\.\-]+)', description_lower)
+    for handle in found_handles:
+        h_lower = handle.lower()
+        if h_lower in HANDLE_MAP_LOWER:
+            detected_keywords.add(HANDLE_MAP_LOWER[h_lower])
 
-  if re.search(r"【[^】]*える[^】]*】", title):
-    detected_keywords.add("える")
-  if re.search(r"【[^】]*叶[^】]*】", title):
-    detected_keywords.add("叶")
+    for unit_name, members in UNIT_GROUP_MAP.items():
+        if unit_name in detected_keywords:
+            for member in members:
+                detected_keywords.add(member)
+        if set(members).issubset(detected_keywords):
+            detected_keywords.add(unit_name)
 
-  found_handles = re.findall(r"(@[\w\.\-]+)", description_lower)
-  for handle in found_handles:
-    h_lower = handle.lower()
-    if h_lower in HANDLE_MAP_LOWER:
-      detected_keywords.add(HANDLE_MAP_LOWER[h_lower])
+    if fixed_tags:
+        for tag in fixed_tags:
+            detected_keywords.add(tag)
+            if tag in CATEGORY_LIST:
+                detected_categories.add(tag)
 
-  for unit_name, members in UNIT_GROUP_MAP.items():
-    if unit_name in detected_keywords:
-      for member in members:
-        detected_keywords.add(member)
-    if set(members).issubset(detected_keywords):
-      detected_keywords.add(unit_name)
+    if not detected_categories:
+        detected_categories.add("未分類")
 
-  if fixed_tags:
-    for tag in fixed_tags:
-      detected_keywords.add(tag)
-      if tag in CATEGORY_LIST:
-        detected_categories.add(tag)
-
-  if not detected_categories:
-    detected_categories.add("未分類")
-
-  return sorted(list(detected_categories)), sorted(list(detected_keywords))
-
+    return sorted(list(detected_categories)), sorted(list(detected_keywords))
 
 def get_duration_seconds(duration_str):
-  match = re.match(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", duration_str)
-  if not match:
-    return 0
-  h, m, s = [int(match.group(i) or 0) for i in range(1, 4)]
-  return h * 3600 + m * 60 + s
-
+    match = re.match(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?', duration_str)
+    if not match: return 0
+    h, m, s = [int(match.group(i) or 0) for i in range(1, 4)]
+    return h * 3600 + m * 60 + s
 
 def extract_music_metadata(desc):
-  if not desc:
-    return []
-  clean_lines = [
-      line.strip()
-      for line in desc.split("\n")
-      if not any(
-          bad in line.lower()
-          for bad in ["http", "channel", "/@", "music.apple", "spotify"]
-      )
-  ]
-  clean_desc = "\n".join(clean_lines)
+    if not desc:
+        return []
+    clean_lines = [
+        line.strip() for line in desc.split("\n")
+        if not any(bad in line.lower() for bad in ["http", "channel", "/@", "music.apple", "spotify"])
+    ]
+    clean_desc = "\n".join(clean_lines)
 
-  auto_songs = []
-  song_m = re.search(r"(?:Song|曲|楽曲)\s*[:：\-]?\s*(.+)", clean_desc, re.IGNORECASE)
-  artist_m = re.search(
-      r"(?:Artist|アーティスト)\s*[:：\-]?\s*(.+)", clean_desc, re.IGNORECASE
-  )
+    auto_songs = []
+    song_m = re.search(r"(?:Song|曲|楽曲)\s*[:：\-]?\s*(.+)", clean_desc, re.IGNORECASE)
+    artist_m = re.search(r"(?:Artist|アーティスト)\s*[:：\-]?\s*(.+)", clean_desc, re.IGNORECASE)
 
-  if song_m:
-    s_title = song_m.group(1).strip(" ")
-    s_artist = artist_m.group(1).strip(" ") if artist_m else "Unknown Artist"
-    s_artist = re.split(r"\(on behalf of", s_artist)[0].strip(" ")
-    if not any(
-        bad in s_title.lower() or bad in s_artist.lower()
-        for bad in ["http", "channel", "@"]
-    ):
-      auto_songs.append({"title": s_title, "artist": s_artist, "start": 0})
+    if song_m:
+        s_title = song_m.group(1).strip("  ")
+        s_artist = artist_m.group(1).strip("  ") if artist_m else "Unknown Artist"
+        s_artist = re.split(r'\(on behalf of', s_artist)[0].strip("  ")
+        if not any(bad in s_title.lower() or bad in s_artist.lower() for bad in ["http", "channel", "@"]):
+            auto_songs.append({"title": s_title, "artist": s_artist, "start": 0})
 
-  return auto_songs
-
+    return auto_songs
 
 def normalize_title(title: str) -> str:
-  t = unicodedata.normalize("NFKC", str(title)).lower()
-  t = re.sub(r"[\(（\[【][^\)）\]】]*[\)）\]】]", "", t)
-  t = re.sub(r"[\s\-_・/／:：~～!?！？♪· ]", "", t)
-  return t.strip()
-
+    t = unicodedata.normalize('NFKC', str(title)).lower()
+    t = re.sub(r'[\(（\[【][^\)）\]】]*[\)）\]】]', '', t)
+    t = re.sub(r'[\s\-_・/／:：~～!?！？♪· ]', '', t)
+    return t.strip()
 
 def load_artist_db():
-  global GLOBAL_ARTIST_DB
-  headers = {
-      "Authorization": f"token {GITHUB_TOKEN}",
-      "Accept": "application/vnd.github.v3+json",
-  }
-  source_files = [
-      "archives/custom_known_songs.json",
-      "songs/videos.json",
-      "archives/archive_videos.json",
-      "archives/external_videos.json",
-  ]
-  db = {}
-  for rel_path in source_files:
-    url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{rel_path}"
-    try:
-      r = requests.get(url, headers=headers, timeout=5)
-      if r.status_code == 200:
-        raw_bytes = base64.b64decode(r.json()["content"])
-        text = raw_bytes.decode("utf-8-sig").strip()
-        if not text:
-          continue
-        data = json.loads(text)
-        for item in data:
-          for s in item.get("songs", []):
-            raw_title = s.get("title", "").strip()
-            raw_artist = s.get("artist", "").strip()
-            if (
-                not raw_title
-                or not raw_artist
-                or raw_artist in ["Unknown Artist", ""]
-            ):
-              continue
-            pure_title = re.sub(r"\s+with\s+.*$", "", raw_title).strip(" ")
-            norm_key = normalize_title(pure_title)
-            if pure_title and pure_title not in db:
-              db[pure_title] = raw_artist
-            if norm_key and norm_key not in db:
-              db[norm_key] = raw_artist
-    except Exception:
-      continue
-  GLOBAL_ARTIST_DB = db
-  print(
-      f"📚 アーティストDB初期化完了: {len(GLOBAL_ARTIST_DB)} 曲をキャッシュ"
-  )
+    """リポジトリ内の全曲情報からアーティストDBを構築"""
+    global GLOBAL_ARTIST_DB
+    headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
+    source_files = [
+        "archives/external_videos.json",
+        "archives/custom_known_songs.json"  # ★ 追加
+    ]
 
+    all_data = []
+    for rel_path in source_files:
+        url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{rel_path}"
+        try:
+            r = requests.get(url, headers=headers)
+            if r.status_code == 200:
+                raw_bytes = base64.b64decode(r.json()['content'])
+                text = raw_bytes.decode('utf-8-sig').strip()
+                if text:
+                    data = json.loads(text)
+                    if isinstance(data, list):
+                        all_data.extend(data)
+        except Exception:
+            continue
 
-def should_check_setlist(
-    published_at_str: str, existing_songs: list = None
-) -> bool:
-  """セトリ抽出処理を実行すべき動画かどうか判定する（直近14日以内、またはセトリ未取得）"""
-  if existing_songs and len(existing_songs) > 0:
-    return False
+    db = {}
+    for item in all_data:
+        # パターンA: {"songs": [{"title": ..., "artist": ...}]} の形式
+        song_list = item.get("songs", [])
+        
+        # パターンB: custom_known_songs.json が [{"title": ..., "artist": ...}] の直接リスト形式の場合
+        if not song_list and "title" in item and "artist" in item:
+            song_list = [item]
 
-  try:
-    pub_date = datetime.fromisoformat(published_at_str.replace("Z", "+00:00"))
-    now = datetime.now(timezone.utc)
-    if now - pub_date <= timedelta(days=14):
-      return True
-  except Exception:
-    pass
-
-  return False
-
+        for s in song_list:
+            title = s.get("title", "").strip()
+            pure_title = re.sub(r'\s+with\s+.*$', '', title).strip()
+            artist = s.get("artist", "").strip()
+            if pure_title and artist and artist != "Unknown Artist":
+                norm_t = normalize_title(pure_title)
+                if norm_t not in db:
+                    db[norm_t] = artist
+                if pure_title not in db:
+                    db[pure_title] = artist
+    GLOBAL_ARTIST_DB = db
+    print(f"📚 アーティストDB初期化完了: {len(GLOBAL_ARTIST_DB)} 曲をキャッシュ")
 
 def fetch_artist_from_itunes(title: str) -> str:
-  clean_title = re.sub(r"[\(（\[【].*?[\)）\]】]", "", title).strip(" ")
-  if not clean_title:
+    clean_title = re.sub(r'[\(（\[【].*?[\)）\]】]', '', title).strip("  ")
+    if not clean_title: return ""
+    url = f"https://itunes.apple.com/search?term={urllib.parse.quote(clean_title)}&entity=song&country=JP&limit=5"
+    try:
+        res = requests.get(url, timeout=3)
+        if res.status_code == 200:
+            for item in res.json().get("results", []):
+                if normalize_title(item.get("trackName", "")) == normalize_title(clean_title):
+                    return item.get("artistName", "").strip()
+    except Exception:
+        pass
     return ""
-  url = f"https://itunes.apple.com/search?term={urllib.parse.quote(clean_title)}&entity=song&country=JP&limit=5"
-  try:
-    res = requests.get(url, timeout=3)
-    if res.status_code == 200:
-      for item in res.json().get("results", []):
-        if normalize_title(item.get("trackName", "")) == normalize_title(
-            clean_title
-        ):
-          return item.get("artistName", "").strip()
-  except Exception:
-    pass
-  return ""
-
 
 def fetch_artist_from_vocadb(title: str) -> str:
-  clean_title = re.sub(r"[\(（\[【][^\)）\]】]*[\)）\]】]", "", title).strip(" ")
-  if not clean_title:
+    clean_title = re.sub(r'[\(（\[【][^\)）\]】]*[\)）\]】]', '', title).strip("  ")
+    if not clean_title: return ""
+    url = "https://vocadb.net/api/songs"
+    params = {"query": clean_title, "preferAccurateMatches": "true", "maxResults": 3, "lang": "Japanese"}
+    try:
+        res = requests.get(url, params=params, headers={"User-Agent": "VTuberArchiveBot/1.0"}, timeout=4)
+        if res.status_code == 200:
+            for item in res.json().get("items", []):
+                if normalize_title(item.get("name", "")) == normalize_title(clean_title):
+                    return re.split(r'\s+(?:feat\.|ft\.|/)\s*', item.get("artistString", ""), 1)[0].strip()
+    except Exception:
+        pass
     return ""
-  url = "https://vocadb.net/api/songs"
-  params = {
-      "query": clean_title,
-      "preferAccurateMatches": "true",
-      "maxResults": 3,
-      "lang": "Japanese",
-  }
-  try:
-    res = requests.get(
-        url,
-        params=params,
-        headers={"User-Agent": "VTuberArchiveBot/1.0"},
-        timeout=4,
-    )
-    if res.status_code == 200:
-      for item in res.json().get("items", []):
-        if normalize_title(item.get("name", "")) == normalize_title(
-            clean_title
-        ):
-          return re.split(
-              r"\s+(?:feat\.|ft\.|/)\s*", item.get("artistString", ""), 1
-          )[0].strip()
-  except Exception:
-    pass
-  return ""
-
 
 def resolve_artist_name(raw_title: str) -> str:
-  if not raw_title:
-    return ""
-  pure_t = re.sub(r"\s+with\s+.*$", "", raw_title).strip(" ")
-  norm_key = normalize_title(pure_t)
+    if not raw_title:
+        return ""
+    pure_t = re.sub(r'\s+with\s+.*$', '', raw_title).strip("  ")
+    norm_key = normalize_title(pure_t)
 
-  if pure_t in MANUAL_SONG_ARTIST_MAP:
-    return MANUAL_SONG_ARTIST_MAP[pure_t]
-  norm_manual = {normalize_title(k): v for k, v in MANUAL_SONG_ARTIST_MAP.items()}
-  if norm_key in norm_manual:
-    return norm_manual[norm_key]
+    # 1. 手動確定辞書（最優先）
+    if pure_t in MANUAL_SONG_ARTIST_MAP:
+        return MANUAL_SONG_ARTIST_MAP[pure_t]
+    norm_manual = {normalize_title(k): v for k, v in MANUAL_SONG_ARTIST_MAP.items()}
+    if norm_key in norm_manual:
+        return norm_manual[norm_key]
 
-  if norm_key in GLOBAL_ARTIST_DB:
-    return GLOBAL_ARTIST_DB[norm_key]
+    # 2. 内部DB（過去データ・手動確定ファイル）
+    if norm_key in GLOBAL_ARTIST_DB:
+        return GLOBAL_ARTIST_DB[norm_key]
 
-  artist = fetch_artist_from_itunes(pure_t)
-  if not artist:
-    artist = fetch_artist_from_vocadb(pure_t)
+    # 3. iTunes API（J-POP・メジャー曲を優先判定）
+    artist = fetch_artist_from_itunes(pure_t)
 
-  if artist:
-    GLOBAL_ARTIST_DB[norm_key] = artist
+    # 4. VocaDB（ボカロ曲フォールバック）
+    if not artist:
+        artist = fetch_artist_from_vocadb(pure_t)
 
-  return artist
+    if artist:
+        GLOBAL_ARTIST_DB[norm_key] = artist
 
-
-def determine_auto_tags(
-    title, keywords, categories, base_tags=None, owner_name=OWNER_NAME
-):
-  tags = list(base_tags or [])
-  title_lower = title.lower()
-
-  is_dance = (
-      "踊ってみた" in title or "踊り動画" in categories or "踊り配信" in categories
-  )
-  is_sing = (
-      "歌ってみた" in title
-      or "歌動画" in categories
-      or "歌配信" in categories
-      or "cover" in title_lower
-  )
-
-  if is_dance and "踊" not in tags:
-    tags.append("踊")
-  if is_sing and "歌" not in tags:
-    tags.append("歌")
-
-  if is_dance or is_sing or "カバー曲" in categories:
-    other_members = [
-        k
-        for k in keywords
-        if k in KEYWORD_GROUPS.get("MEMBERS", []) and k != owner_name
-    ]
-    has_unit = any(k in KEYWORD_GROUPS.get("UNITS", []) for k in keywords)
-
-    if other_members or has_unit:
-      tag_type = "カバー(ユニット)"
-    else:
-      tag_type = "カバー(ソロ)"
-
-    if tag_type not in tags:
-      tags.append(tag_type)
-
-  return sorted(list(dict.fromkeys(tags)))
-
+    return artist
 
 def parse_setlist_from_text(
     text, channel_owner=OWNER_NAME, fallback_members=None
@@ -1986,7 +1891,8 @@ def parse_setlist_from_text(
     return []
   text = html.unescape(text)
 
-  ts_regex = r"(?:[♪♫🫶️\s]*)(\d{1,2}:\d{2}:\d{2}|\d{1,2}:\d{2})(?!\d)"
+  # タイムスタンプの正規表現
+  ts_regex = r"(?:(?<=\s)|^|\b)(\d{1,2}:\d{1,2}:\d{2}|\d{1,2}:\d{2})(?!\d)"
   matches = list(re.finditer(ts_regex, text))
   if len(matches) < 3:
     return []
@@ -1997,161 +1903,108 @@ def parse_setlist_from_text(
     start_idx = matches[i].end()
     end_idx = matches[i + 1].start() if i + 1 < len(matches) else len(text)
     content = text[start_idx:end_idx].strip()
-    content = re.sub(r"^[♪♫🫶️\s・]+", "", content).strip()
     raw_entries.append((ts_str, content))
 
-  all_collab_livers = set()
-  has_owner_symbol = False
-  has_any_symbol = False
-
-  for _, raw_text in raw_entries:
-    line = raw_text.split("\n")[0]
-    for mark in sorted(LIVER_EMOJI_MAP.keys(), key=len, reverse=True):
-      liver_name = LIVER_EMOJI_MAP[mark]
-      if mark in line and liver_name != "全員":
-        has_any_symbol = True
-        if liver_name == channel_owner:
-          has_owner_symbol = True
-        else:
-          all_collab_livers.add(liver_name)
-
+  # この動画に関係するライバー一覧を作成（fallback_members や KEYWORD_GROUPS から）
+  all_known_livers = set(KEYWORD_GROUPS.get("MEMBERS", []))
   if fallback_members:
-    for m in fallback_members:
-      if m != channel_owner and m in KEYWORD_GROUPS.get("MEMBERS", []):
-        all_collab_livers.add(m)
+    all_known_livers.update(fallback_members)
 
-  other_members = [m for m in all_collab_livers if m != channel_owner]
+  # セトリ全体のなかに「長尾景」の名前または絵文字が歌唱者表記として存在するか確認
+  has_owner_mention = any(
+      channel_owner in raw_text or "☯️" in raw_text
+      for _, raw_text in raw_entries
+  )
+
   songs = []
-
   for ts_str, raw_text in raw_entries:
     clean_text = raw_text.split("\n")[0].strip()
+    clean_upper = clean_text.upper()
+
+    # 除外ワード（挨拶・お礼・トーク等）
+    if not clean_text or any(
+        x in clean_upper
+        for x in EXCLUDE_SETLIST_KEYWORDS + ["ありがとう", "見に来て"]
+    ):
+      continue
+
+    # 装飾記号を除去
+    clean_text = re.sub(
+        r"^[:\s♪・\-\.\]】）)／/|｜￤~～]+", "", clean_text
+    ).strip("  ")
+    clean_text = re.sub(r"\s*[\(（]?http.*$", "", clean_text).strip("  ")
     if not clean_text:
       continue
 
-    clean_upper = clean_text.upper()
-    if any(x in clean_upper for x in EXCLUDE_SETLIST_KEYWORDS):
-      continue
+    t = clean_text
+    right_part = ""
 
+    # スラッシュやハイフン、コロンで左右に分割（スペースなしの半角スラッシュにも対応）
+    # 優先順位: スペースあり -> 全角 -> スペースなし半角
+    matched = False
+    for sep in [" / ", "／", " - ", " － ", "：", " : ", "￤", "/"]:
+      if sep in clean_text:
+        parts = clean_text.split(sep, 1)
+        t, right_part = parts[0].strip("  "), parts[1].strip("  ")
+        matched = True
+        break
+
+    # 歌唱者（ライバー）の特定
     singers = []
     is_all = False
 
-    if "全員" in clean_text:
+    # 右側に「全員」またはライバー名が書かれているかチェック（例: '緑仙、レヴィ・エリファ'）
+    if "全員" in right_part:
       is_all = True
-      clean_text = clean_text.replace("全員", "")
+    for liver in all_known_livers:
+      if liver in right_part:
+        singers.append(liver)
 
-    for mark in sorted(LIVER_EMOJI_MAP.keys(), key=len, reverse=True):
-      liver_name = LIVER_EMOJI_MAP[mark]
-      if mark in clean_text:
+    # 絵文字による歌唱者判定も併用
+    for mark, liver_name in LIVER_EMOJI_MAP.items():
+      if mark in clean_text or mark in right_part:
         if liver_name == "全員":
           is_all = True
-        else:
+        elif liver_name != "全員":
           singers.append(liver_name)
-        clean_text = clean_text.replace(mark, "")
 
     singers = list(dict.fromkeys(singers))
 
-    # チャンネル主不参加の曲をスキップ
-    if has_any_symbol and has_owner_symbol:
+    # ★ 緑仙アーカイブとしてのフィルタリング:
+    # セトリ内に歌唱者表記があり、かつ緑仙が含まれていない曲は除外
+    if has_owner_mention:
       if not is_all and (channel_owner not in singers):
-        continue
+        # 右側にライバー名が検出されていて、そこに緑仙がいない場合は他ライバーのソロ/コラボ曲なのでスキップ
+        if singers:
+          continue
 
-    # クレンジング（記号等の除去）
-    clean_text = re.sub(
-        r"^[:\s♪・\-\d\.\]】）)／/|｜￤~～]+", "", clean_text
-    ).strip()
-    clean_text = re.sub(r"[\(（][\s,、️‍]*[\)）]", "", clean_text).strip()
-    clean_text = re.sub(r"\s*[~～]+$", "", clean_text).strip()
-    clean_text = re.sub(r"\s*[\(（]?http.*$", "", clean_text).strip()
-
-    if not clean_text:
-      continue
-
-    # 1. 区切り文字（スラッシュ等）があるかチェック
-    t, a = clean_text, ""
-    separators = [" / ", "／", " - ", " － ", "：", " : ", "￤"]
-    for sep in separators:
-      if sep in clean_text:
-        parts = clean_text.split(sep, 1)
-        t, a = parts[0].strip(), parts[1].strip()
-        break
-
-    # 2. トーク・感想特有のキーワードを含む行の除外（音符記号がない場合）
-    talk_keywords = [
-        "？",
-        "?",
-        "！",
-        "!",
-        "w",
-        "W",
-        "草",
-        "ありがと",
-        "だよな",
-        "思います",
-        "「",
-        "」",
-        "…",
-        "俺",
-        "上手",
-        "思う",
-        "思って",
-        "思わ",
-        "よね",
-        "だろう",
-        "いいわ",
-        "だの",
-        "いいな",
-        "かな",
-        "布教",
-    ]
-    if any(c in t or c in a for c in talk_keywords):
-      if not any(mark in raw_text for mark in ["♪", "♫"]):
-        continue
-
-    # with 〇〇 の付与
-    if is_all:
-      if other_members:
-        t = f"{t} with {','.join(sorted(other_members))}"
-    else:
-      collab_partners = [s for s in singers if s != channel_owner]
-      if collab_partners:
-        t = f"{t} with {','.join(sorted(collab_partners))}"
-
-    # 過去DBから自動補完
-    if not a and GLOBAL_ARTIST_DB:
-      pure_t = re.sub(r"\s+with\s+.*$", "", t).strip()
-      if pure_t in GLOBAL_ARTIST_DB:
-        a = GLOBAL_ARTIST_DB[pure_t]
-
-    # 3. ★ 音楽DB実在チェックによるフィルタリング（バリデーション緩和）
-    if not a:
-      # スラッシュ等がなく曲名のみの場合はDB検索
-      a = resolve_artist_name(t)
-    else:
-      # スラッシュで分割されている場合
-      verified_artist = resolve_artist_name(t)
-      if verified_artist:
-        # DBに曲が存在した場合は正式アーティスト名を採用
-        a = verified_artist
-      elif a in KEYWORD_GROUPS.get("MEMBERS", []) or a in KEYWORD_GROUPS.get("UNITS", []):
-        # ライバー名やユニット名が後ろに書かれている場合
-        pass
+    # アーティスト名と曲名（with 表記）の決定
+    a = ""
+    # 右側がライバー名だった場合:
+    if is_all or singers:
+      # with 〇〇 を付与
+      if is_all:
+        collab_partners = [
+            m
+            for m in fallback_members or []
+            if m != channel_owner and m in all_known_livers
+        ]
+        if collab_partners:
+          t = f"{t} with {','.join(sorted(collab_partners))}"
       else:
-        # 【緩和】DBやライバー名になくても、「スラッシュで区切られており、明らかにトークや雑談でない場合」は許可する
-        # トーク特有の怪しいキーワードが含まれていないかチェック
-        suspicious_keywords = ["ありがとう", "草", "w", "お疲れ", "次回", "告知", "感想", "質問", "アーカイブ"]
-        if any(kw in t or kw in a for kw in suspicious_keywords):
-          if not any(mark in raw_text for mark in ["♪", "♫"]):
-            continue
+        collab_partners = [s for s in singers if s != channel_owner]
+        if collab_partners:
+          t = f"{t} with {','.join(sorted(collab_partners))}"
 
-    # アーティストがどうしても取れない場合のフォールバック（曲名のみでDB検索を再試行）
-    if not a:
+      # 右側は歌唱者名だったので、本家アーティスト名は外部API/辞書から取得
       a = resolve_artist_name(t)
+    else:
+      # 右側がライバー名ではない場合（通常の「曲名 / 本家アーティスト」形式）
+      a = right_part
+      if not a:
+        a = resolve_artist_name(t)
 
-    # それでもアーティスト名が空で、かつスラッシュもない場合はトークとみなして除外
-    if not a and not any(sep in clean_text for sep in [" / ", "／", " - ", " － ", "：", " : ", "￤"]):
-      continue
-
-    # 秒数変換
+    # タイムスタンプの秒換算
     parts = list(map(int, ts_str.split(":")))
     sec = (
         parts[0] * 3600 + parts[1] * 60 + parts[2]
@@ -2166,185 +2019,143 @@ def parse_setlist_from_text(
   # 重複排除とソート
   songs.sort(key=lambda x: x["start"])
   unique_songs = []
-  seen_keys = set()
+  seen = set()
   for s in songs:
-    dedup_key = (s["start"], s["title"])
-    if dedup_key not in seen_keys:
-      seen_keys.add(dedup_key)
+    key = (s["start"], s["title"])
+    if key not in seen:
+      seen.add(key)
       unique_songs.append(s)
 
   return unique_songs
-
+    
 
 # ★ コメント欄からセトリを取得する関数
 def fetch_setlist_from_comments(youtube, video_id, fallback_members=None):
-  """概要欄にセトリがない場合、コメント欄から取得"""
-  best_songs = []
-  try:
-    res = (
-        youtube.commentThreads()
-        .list(
-            part="snippet",
-            videoId=video_id,
-            order="relevance",
-            maxResults=30,
-            textFormat="plainText",
-        )
-        .execute()
-    )
+    """概要欄にセトリがない場合、コメント欄から取得"""
+    best_songs = []
+    try:
+        # 1. 関連度順（上位30件）
+        res = youtube.commentThreads().list(
+            part="snippet", videoId=video_id, order="relevance",
+            maxResults=30, textFormat="plainText"
+        ).execute()
 
-    for item in res.get("items", []):
-      text = item["snippet"]["topLevelComment"]["snippet"]["textDisplay"]
-      if re.search(r"\d{1,2}:\d{2}", text):
-        songs = parse_setlist_from_text(
-            text, fallback_members=fallback_members
-        )
-        if len(songs) > len(best_songs):
-          best_songs = songs
+        for item in res.get("items", []):
+            text = item["snippet"]["topLevelComment"]["snippet"]["textDisplay"]
+            if re.search(r'\d{1,2}:\d{2}', text):
+                songs = parse_setlist_from_text(text, fallback_members=fallback_members)
+                if len(songs) > len(best_songs):
+                    best_songs = songs
 
-    if len(best_songs) >= 3:
-      return best_songs
-
-    for term in ["セットリスト", "セトリ", "タイムスタンプ"]:
-      try:
-        search_res = (
-            youtube.commentThreads()
-            .list(
-                part="snippet",
-                videoId=video_id,
-                searchTerms=term,
-                maxResults=5,
-                textFormat="plainText",
-            )
-            .execute()
-        )
-        for item in search_res.get("items", []):
-          text = item["snippet"]["topLevelComment"]["snippet"]["textDisplay"]
-          if re.search(r"\d{1,2}:\d{2}", text):
-            songs = parse_setlist_from_text(
-                text, fallback_members=fallback_members
-            )
-            if len(songs) > len(best_songs):
-              best_songs = songs
         if len(best_songs) >= 3:
-          break
-      except Exception:
-        continue
+            return best_songs
 
-    return best_songs
-  except Exception as e:
-    print(f"⚠️ [{video_id}] コメント取得エラー: {e}")
-    return best_songs
+        # 2. キーワード検索（セトリ、セットリスト、タイムスタンプ）
+        for term in ["セットリスト", "セトリ", "タイムスタンプ"]:
+            try:
+                search_res = youtube.commentThreads().list(
+                    part="snippet", videoId=video_id, searchTerms=term,
+                    maxResults=5, textFormat="plainText"
+                ).execute()
+                for item in search_res.get("items", []):
+                    text = item["snippet"]["topLevelComment"]["snippet"]["textDisplay"]
+                    if re.search(r'\d{1,2}:\d{2}', text):
+                        songs = parse_setlist_from_text(text, fallback_members=fallback_members)
+                        if len(songs) > len(best_songs):
+                            best_songs = songs
+                if len(best_songs) >= 3:
+                    break
+            except Exception:
+                continue
 
+        return best_songs
+    except Exception as e:
+        print(f"⚠️ [{video_id}] コメント取得エラー: {e}")
+        return best_songs
 
+# ★ YouTube Shorts のHTMLから公式音源クレジットを抽出する関数
 def fetch_shorts_audio_credit(video_id: str) -> Optional[dict]:
-  try:
-    url = f"https://www.youtube.com/shorts/{video_id}"
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-            " (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        ),
-        "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
-    }
-    res = requests.get(url, headers=headers, timeout=5)
-    if res.status_code != 200:
-      return None
+    try:
+        url = f"https://www.youtube.com/shorts/{video_id}"
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept-Language": "ja,en-US;q=0.9,en;q=0.8"
+        }
+        res = requests.get(url, headers=headers, timeout=5)
+        if res.status_code != 200:
+            return None
 
-    html_text = res.text
-    m_credit = re.search(
-        r'"content"\s*:\s*"([^"]+?)\s*[·・]\s*([^"]+?)"', html_text
-    )
-    if m_credit:
-      title = m_credit.group(1).strip(" ")
-      artist = m_credit.group(2).strip(" ")
-      return {"title": title, "artist": artist, "start": 0}
+        html_text = res.text
+        # 「曲名 · アーティスト名」の中黒区切りパターン
+        m_credit = re.search(r'"content"\s*:\s*"([^"]+?)\s*[·・]\s*([^"]+?)"', html_text)
+        if m_credit:
+            title = m_credit.group(1).strip("  ")
+            artist = m_credit.group(2).strip("  ")
+            return {"title": title, "artist": artist, "start": 0}
 
-    m_label = re.search(r'"label"\s*:\s*"([^"]+?)"', html_text)
-    if m_label:
-      return {"title": m_label.group(1).strip(" "), "artist": "", "start": 0}
+        # 中黒区切りがない場合のフォールバック（曲名のみ）
+        m_label = re.search(r'"label"\s*:\s*"([^"]+?)"', html_text)
+        if m_label:
+            return {"title": m_label.group(1).strip("  "), "artist": "", "start": 0}
 
-  except Exception as e:
-    print(f"⚠️ [{video_id}] 音源抽出エラー: {e}")
+    except Exception as e:
+        print(f"⚠️ [{video_id}] 音源抽出エラー: {e}")
 
-  return None
-
+    return None
 
 def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
-  if not desc:
-    desc = ""
-  clean_lines = [
-      l.strip()
-      for l in desc.split("\n")
-      if not any(b in l.lower() for b in ["http", "channel", "@", "spotify"])
-  ]
+    """Shorts音源および歌ってみたの単曲メタデータ抽出"""
+    if not desc: desc = ""
+    clean_lines = [l.strip() for l in desc.split("\n") if not any(b in l.lower() for b in ["http", "channel", "@", "spotify"])]
 
-  for line in clean_lines:
-    if re.search(r"^(?:本家様?|Original|Music|音源|楽曲)[:：\s]+(.*)", line, re.I):
-      val = re.sub(
-          r"^(?:本家様?|Original|Music|音源|楽曲)[:：\s]+", "", line
-      ).strip(" ")
-      if " / " in val or "／" in val:
-        parts = re.split(r"[/／]", val, 1)
-        return [{
-            "title": parts[0].strip(" "),
-            "artist": parts[1].strip(" "),
-            "start": 0,
-        }]
+    # 1. 概要欄キーワード（本家 / Original / Music / 音源）
+    for line in clean_lines:
+        if re.search(r"^(?:本家様?|Original|Music|音源|楽曲)[:：\s]+(.*)", line, re.I):
+            val = re.sub(r"^(?:本家様?|Original|Music|音源|楽曲)[:：\s]+", "", line).strip("  ")
+            if " / " in val or "／" in val:
+                parts = re.split(r"[/／]", val, 1)
+                return [{"title": parts[0].strip("  "), "artist": parts[1].strip("  "), "start": 0}]
 
-  clean_title = re.sub(r"#\S+", "", title)
-  clean_title = re.sub(
-      r"【[^】]*】|\[[^\]]*\]|\([^\)]*\)|（[^）]*）", "", clean_title
-  )
-  clean_title = re.sub(
-      r"(?:歌ってみた|踊ってみた|COVER|Cover|MV|オリジナルMV)",
-      "",
-      clean_title,
-      flags=re.I,
-  )
-  clean_title = clean_title.strip("  /／-－_・#")
+    # 2. タイトル形式 (曲名 / アーティスト)
+    clean_title = re.sub(r"[\(（\[【][^\)）\]】]*(?:covered|cover|歌ってみた|歌|mv|オリジナル)[^\)）\]】]*[\)）\]】]", "", title, flags=re.I)
+    clean_title = re.sub(r"(?:歌ってみた|COVER|Cover|MV)", "", clean_title, flags=re.I).strip("   /／-－_・")
 
-  pattern = r"^(.*?)(?:\s*[/／\-－]\s*)(.*?)$"
-  m = re.search(pattern, clean_title, flags=re.I)
-  if m:
-    t, a = m.group(1).strip(" "), m.group(2).strip(" ")
-    if not a:
-      a = resolve_artist_name(t)
-    return [{"title": t, "artist": a, "start": 0}]
+    pattern = r"^(.*?)(?:\s*[/／\-－]\s*)(.*?)$"
+    m = re.search(pattern, clean_title, flags=re.I)
+    if m:
+        t, a = m.group(1).strip("  "), m.group(2).strip("  ")
+        if not a: a = resolve_artist_name(t)
+        return [{"title": t, "artist": a, "start": 0}]
 
-  if clean_title and not is_short:
-    clean_title = clean_title.strip(" ")
-    return [{
-        "title": clean_title,
-        "artist": resolve_artist_name(clean_title),
-        "start": 0,
-    }]
+    # 3. 単曲歌動画でタイトルから取得
+    if clean_title and not is_short:
+        clean_title = clean_title.strip("  ")
+        return [{"title": clean_title, "artist": resolve_artist_name(clean_title), "start": 0}]
 
-  if is_short and video_id:
-    credit = fetch_shorts_audio_credit(video_id)
-    if (
-        credit
-        and credit.get("title")
-        and credit["title"] not in ["1.0", "1.0x", "登録", "再生"]
-    ):
-      if not credit.get("artist"):
-        credit["artist"] = resolve_artist_name(credit["title"])
-      return [credit]
+    # 4. ★ Shorts かつ概要欄に情報がない場合にWebから公式音源取得
+    if is_short and video_id:
+        credit = fetch_shorts_audio_credit(video_id)
+        if credit and credit.get("title") and credit["title"] not in ["1.0", "1.0x", "登録", "再生"]:
+            if not credit.get("artist"):
+                credit["artist"] = resolve_artist_name(credit["title"])
+            return [credit]
 
-  return []
-
+    return []
 
 # ==============================================================================
 # 3. X (Twitter) 連携処理
 # ==============================================================================
 
-
 def extract_youtube_ids_from_text(text: str) -> List[str]:
   if not text:
     return []
-  pattern = r"(?:https?:\/\/)?(?:(?:www|m)\.)?(?:youtube\.com\/(?:watch\?v=|shorts\/|live\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})"
+
+  # watch?v=, shorts/, live/, youtu.be/ すべてを網羅
+  pattern = r'(?:https?:\/\/)?(?:(?:www|m)\.)?(?:youtube\.com\/(?:watch\?v=|shorts\/|live\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})'
+
   yt_ids = re.findall(pattern, text)
   return list(dict.fromkeys(yt_ids))
+
 
 
 def expand_url(short_url: str) -> str:
@@ -2354,6 +2165,7 @@ def expand_url(short_url: str) -> str:
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
         )
     }
+    # HEADではなくGET + stream=True にすることでt.coのリダイレクト先Locationを確実に追跡
     res = requests.get(
         short_url, headers=headers, allow_redirects=True, stream=True, timeout=5
     )
@@ -2361,9 +2173,17 @@ def expand_url(short_url: str) -> str:
   except Exception:
     return short_url
 
+def fetch_quoted_tweet_text(tweet_url: str) -> str:
+  # FxTwitter API経由で取得するため、この関数は不要またはフォールバック用になります
+  return ""
 
-def fetch_youtube_ids_from_x() -> List[str]:
+
+def fetch_youtube_ids_from_midori_x() -> List[str]:
+  """FxTwitter (FixTweet) API を利用して最新ポストおよび引用ポストから動画URLを抽出"""
   found_video_ids = set()
+
+  # FixTweetのユーザー最新ツイート取得エンドポイント
+  # (公式プロキシやNitterと違い、JSON形式で安定して取得可能)
   url = f"https://api.fxtwitter.com/{TARGET_X_USER}"
   headers = {"User-Agent": "VTuberArchiveBot/1.0"}
 
@@ -2371,11 +2191,13 @@ def fetch_youtube_ids_from_x() -> List[str]:
     res = requests.get(url, headers=headers, timeout=10)
     if res.status_code == 200:
       data = res.json()
+      # tweets配列 または 単一tweetの取得
       tweets = data.get("tweets", [])
       if not tweets and "tweet" in data:
         tweets = [data["tweet"]]
 
       for tw in tweets:
+        # 1. 自身のポスト本文を探索
         self_text = tw.get("text", "")
         found_video_ids.update(extract_youtube_ids_from_text(self_text))
         for tco in set(re.findall(r"https?:\/\/t\.co\/[a-zA-Z0-9]+", self_text)):
@@ -2383,6 +2205,7 @@ def fetch_youtube_ids_from_x() -> List[str]:
               extract_youtube_ids_from_text(expand_url(tco))
           )
 
+        # 2. ★ 引用ポスト（quote）が存在する場合、引用元の本文も探索
         quote = tw.get("quote")
         if quote:
           quote_text = quote.get("text", "")
@@ -2393,8 +2216,9 @@ def fetch_youtube_ids_from_x() -> List[str]:
             found_video_ids.update(
                 extract_youtube_ids_from_text(expand_url(q_tco))
             )
+
   except Exception as e:
-    print(f"⚠️ X取得エラー: {e}")
+    print(f"⚠️ FixTweet API取得エラー: {e}")
 
   print(
       f"🐦 @{TARGET_X_USER} のポスト（引用含む）から"
@@ -2403,352 +2227,326 @@ def fetch_youtube_ids_from_x() -> List[str]:
   return list(found_video_ids)
 
 
-def fetch_videos_by_ids(
-    youtube, video_ids: List[str], fixed_tags=None, source_label="X告知"
-):
-  if not video_ids:
-    return []
-  videos = []
-  unique_ids = list(dict.fromkeys(video_ids))
 
-  for i in range(0, len(unique_ids), 50):
-    chunk = unique_ids[i : i + 50]
-    try:
-      res = (
-          youtube.videos()
-          .list(part="snippet,contentDetails", id=",".join(chunk))
-          .execute()
-      )
-    except Exception as e:
-      print(f"⚠️ YouTube APIエラー: {e}")
-      continue
+# def fetch_quoted_tweet_text(tweet_url: str) -> str:
+#     m = re.search(r'(?:twitter\.com|x\.com)\/[^/]+\/status\/(\d+)', tweet_url)
+#     if not m: return ""
+#     status_id = m.group(1)
+#     oembed_url = f"https://publish.twitter.com/oembed?url=https://twitter.com/i/status/{status_id}&omit_script=true"
+#     try:
+#         res = requests.get(oembed_url, timeout=5)
+#         if res.status_code == 200:
+#             return html.unescape(res.json().get("html", ""))
+#     except Exception:
+#         pass
+#     return ""
 
-    for v_data in res.get("items", []):
-      v_id = v_data["id"]
-      snip = v_data["snippet"]
-      desc = snip.get("description", "")
-      sec = get_duration_seconds(v_data["contentDetails"]["duration"])
-      uploader_name = snip.get("channelTitle", "")
-      title = snip["title"]
-      is_short = 0 < sec <= 60
+# def fetch_youtube_ids_from_midori_x() -> List[str]:
+#   """RSSプロキシに依存せず、X公式の埋め込みタイムラインAPIから最新ポストを取得・抽出"""
+#   found_video_ids = set()
 
-      cat, kw = analyze_video_tags(
-          title,
-          desc,
-          fixed_tags or [],
-          channel_name=uploader_name,
-          is_short=is_short,
-      )
+#   # X公式の埋め込みタイムライン取得エンドポイント
+#   url = f"https://syndication.twitter.com/srv/timeline-profile/screen-name/{TARGET_X_USER}"
+#   headers = {
+#       "User-Agent": (
+#           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,"
+#           " like Gecko) Chrome/120.0.0.0 Safari/537.36"
+#       ),
+#       "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
+#   }
 
-      combined = (title + desc + uploader_name).lower()
-      if OWNER_NAME.lower() not in combined and not any(
-          m.lower() in combined for m in kw
-      ):
-        continue
+#   try:
+#     res = requests.get(url, headers=headers, timeout=10)
+#     if res.status_code == 200:
+#       html_text = res.text
 
-      auto_songs = []
-      cat_set = set(cat)
-      if "歌配信" in cat_set or cat_set.intersection({"歌動画", "踊り動画"}):
-        auto_songs = parse_setlist_from_text(desc, fallback_members=kw)
-        # ★ 投稿14日以内の動画のみコメント欄探索を実行
-        if not auto_songs and sec > 300:
-          if should_check_setlist(snip["publishedAt"]):
-            print(
-                f"💬 [{v_id}] 投稿から14日以内のため、コメント欄からセトリ探索を実行..."
-            )
-            auto_songs = fetch_setlist_from_comments(
-                youtube, v_id, fallback_members=kw
-            )
-        if not auto_songs and not is_short:
-          auto_songs = extract_music_metadata(
-              desc
-          ) or parse_cover_or_shorts(
-              title, desc, is_short=False, video_id=v_id
-          )
-      elif is_short:
-        auto_songs = parse_cover_or_shorts(
-            title, desc, is_short=True, video_id=v_id
-        )
+#       # 1. 本文から直のYouTubeリンクを探索
+#       found_video_ids.update(extract_youtube_ids_from_text(html_text))
 
-      videos.append({
-          "youtubeId": v_id,
-          "title": title,
-          "channel": uploader_name,
-          "date": snip["publishedAt"][:10],
-          "thumbnail": f"https://i.ytimg.com/vi/{v_id}/mqdefault.jpg",
-          "category": cat,
-          "keywords": kw,
-          "tags": [source_label],
-          "songs": auto_songs,
-      })
+#       # 2. t.co 短縮URLを抽出して展開
+#       tco_links = set(re.findall(r"https?:\/\/t\.co\/[a-zA-Z0-9]+", html_text))
+#       for tco in tco_links:
+#         expanded = expand_url(tco)
+#         found_video_ids.update(extract_youtube_ids_from_text(expanded))
 
-  return videos
+#         # 3. 引用ポスト（twitter.com / x.com /status/ID）がある場合、その引用先もoEmbed経由で取得
+#         if re.search(r"(?:twitter\.com|x\.com)\/[^/]+\/status\/\d+", expanded):
+#           quoted_html = fetch_quoted_tweet_text(expanded)
+#           if quoted_html:
+#             found_video_ids.update(extract_youtube_ids_from_text(quoted_html))
+#             for q_tco in set(
+#                 re.findall(r"https?:\/\/t\.co\/[a-zA-Z0-9]+", quoted_html)
+#             ):
+#               found_video_ids.update(
+#                   extract_youtube_ids_from_text(expand_url(q_tco))
+#               )
 
+#   except Exception as e:
+#     print(f"⚠️ Xタイムライン取得エラー: {e}")
+
+#   print(
+#       f"🐦 @{TARGET_X_USER} のポスト（引用含む）から"
+#       f" {len(found_video_ids)} 件のYouTube動画IDを検知"
+#   )
+#   return list(found_video_ids)
+
+
+def fetch_videos_by_ids(youtube, video_ids: List[str], fixed_tags=None, source_label="X告知"):
+    if not video_ids: return []
+    videos = []
+    unique_ids = list(dict.fromkeys(video_ids))
+
+    for i in range(0, len(unique_ids), 50):
+        chunk = unique_ids[i:i + 50]
+        try:
+            res = youtube.videos().list(part='snippet,contentDetails', id=','.join(chunk)).execute()
+        except Exception as e:
+            print(f"⚠️ YouTube APIエラー: {e}")
+            continue
+
+        for v_data in res.get('items', []):
+            v_id = v_data['id']
+            snip = v_data['snippet']
+            desc = snip.get('description', '')
+            sec = get_duration_seconds(v_data['contentDetails']['duration'])
+            uploader_name = snip.get('channelTitle', '')
+            title = snip['title']
+            is_short = (0 < sec <= 60)
+
+            cat, kw = analyze_video_tags(title, desc, fixed_tags or [], channel_name=uploader_name, is_short=is_short)
+
+            combined = (title + desc + uploader_name).lower()
+            if OWNER_NAME.lower() not in combined and not any(m.lower() in combined for m in kw):
+                continue
+
+            auto_songs = []
+            cat_set = set(cat)
+            if "歌配信" in cat_set or cat_set.intersection({"歌動画", "踊り動画"}):
+                auto_songs = parse_setlist_from_text(desc, fallback_members=kw)
+                # ★ コメント欄探索
+                if not auto_songs and sec > 300:
+                    auto_songs = fetch_setlist_from_comments(youtube, v_id, fallback_members=kw)
+                if not auto_songs and not is_short:
+                    auto_songs = extract_music_metadata(desc) or parse_cover_or_shorts(title, desc, is_short=False, video_id=v_id)
+            elif is_short:
+                # ★ Shorts音源探索
+                auto_songs = parse_cover_or_shorts(title, desc, is_short=True, video_id=v_id)
+
+            videos.append({
+                "youtubeId": v_id,
+                "title": title,
+                "channel": uploader_name,
+                "date": snip['publishedAt'][:10],
+                "thumbnail": f"https://i.ytimg.com/vi/{v_id}/mqdefault.jpg",
+                "category": cat,
+                "keywords": kw,
+                "tags": [source_label],
+                "songs": auto_songs
+            })
+
+    return videos
 
 # ==============================================================================
 # 4. YouTube プレイリスト取得 & GitHub JSON 更新
 # ==============================================================================
 
-
 def get_uploads_playlist_id(youtube, channel_id):
-  try:
-    resp = (
-        youtube.channels().list(part="contentDetails", id=channel_id).execute()
-    )
-    return resp["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
-  except Exception:
-    return None
-
-
-def fetch_videos_from_playlist(
-    youtube, playlist_id, channel_name, fixed_tags, auto_tags=None
-):
-  videos = []
-  next_page_token = None
-  page_count = 0
-  print(f"🔍 {channel_name} のプレイリストを取得中... (ID: {playlist_id})")
-
-  while page_count < MAX_PAGES_TO_FETCH:
     try:
-      res = (
-          youtube.playlistItems()
-          .list(
-              part="snippet,contentDetails",
-              playlistId=playlist_id,
-              maxResults=50,
-              pageToken=next_page_token,
-          )
-          .execute()
-      )
-      items = res.get("items", [])
-      if not items:
-        break
-
-      v_ids = [it["contentDetails"]["videoId"] for it in items]
-      v_res = (
-          youtube.videos()
-          .list(part="contentDetails,snippet", id=",".join(v_ids))
-          .execute()
-      )
-      details = {v["id"]: v for v in v_res.get("items", [])}
-
-      for v_id in v_ids:
-        if v_id not in details:
-          continue
-        v_data = details[v_id]
-        snip = v_data["snippet"]
-        desc = snip.get("description", "")
-        sec = get_duration_seconds(v_data["contentDetails"]["duration"])
-        uploader_name = snip.get("channelTitle", channel_name)
-        is_short = 0 < sec <= 60
-
-        cat, kw = analyze_video_tags(
-            snip["title"],
-            desc,
-            fixed_tags,
-            channel_name=uploader_name,
-            is_short=is_short,
-        )
-
-        auto_songs = []
-        cat_set = set(cat)
-        if "歌配信" in cat_set or cat_set.intersection({"歌動画", "踊り動画"}):
-          auto_songs = parse_setlist_from_text(desc, fallback_members=kw)
-          # ★ 投稿14日以内の動画のみコメント欄探索を実行
-          if not auto_songs and sec > 300:
-            if should_check_setlist(snip["publishedAt"]):
-              print(
-                  f"💬 [{v_id}] 投稿から14日以内のため、コメント欄からセトリ探索を実行..."
-              )
-              auto_songs = fetch_setlist_from_comments(
-                  youtube, v_id, fallback_members=kw
-              )
-          if not auto_songs and not is_short:
-            auto_songs = extract_music_metadata(
-                desc
-            ) or parse_cover_or_shorts(
-                snip["title"], desc, is_short=False, video_id=v_id
-            )
-        elif is_short:
-          auto_songs = parse_cover_or_shorts(
-              snip["title"], desc, is_short=True, video_id=v_id
-          )
-
-        final_tags = determine_auto_tags(
-            title=snip["title"],
-            keywords=kw,
-            categories=cat,
-            base_tags=auto_tags,
-            owner_name=OWNER_NAME,
-        )
-
-        videos.append({
-            "youtubeId": v_id,
-            "title": snip["title"],
-            "channel": uploader_name,
-            "date": snip["publishedAt"][:10],
-            "thumbnail": f"https://i.ytimg.com/vi/{v_id}/mqdefault.jpg",
-            "category": cat,
-            "keywords": kw,
-            "tags": final_tags,
-            "songs": auto_songs,
-        })
-
-      next_page_token = res.get("nextPageToken")
-      if not next_page_token:
-        break
-      page_count += 1
-    except Exception as e:
-      print(f"⚠️ {channel_name} (ID: {playlist_id}) 取得エラー: {e}")
-      break
-
-  return videos
-
-
-def update_github_json(
-    new_videos, target_file_path=JSON_FILE_PATH, commit_msg="BOT: Update archive"
-):
-  headers = {
-      "Authorization": f"token {GITHUB_TOKEN}",
-      "Accept": "application/vnd.github.v3+json",
-  }
-  url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{target_file_path}"
-
-  res = requests.get(url, headers=headers)
-  existing_videos, existing_sha = [], None
-
-  if res.status_code == 200:
-    info = res.json()
-    existing_sha = info["sha"]
-    try:
-      decoded = base64.b64decode(info["content"]).decode("utf-8-sig").strip()
-      existing_videos = json.loads(decoded) if decoded else []
+        resp = youtube.channels().list(part='contentDetails', id=channel_id).execute()
+        return resp['items'][0]['contentDetails']['relatedPlaylists']['uploads']
     except Exception:
-      existing_videos = []
+        return None
 
-  video_map = {}
-  for v in existing_videos:
-    vid = v.get("youtubeId")
-    if not vid:
-      continue
-    cleaned_songs = []
-    for s in v.get("songs", []):
-      t = s.get("title", "")
-      a = s.get("artist", "")
-      if not any(
-          bad in t.lower() or bad in a.lower()
-          for bad in ["http", "channel", "@", "%e9%95%b7%e5%b0%be%e6%99%af"]
-      ):
-        if t not in ["1.0", "1.0x"]:
-          cleaned_songs.append(s)
-    v["songs"] = cleaned_songs
-    video_map[vid] = v
+def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, auto_tags=None):
+    videos = []
+    next_page_token = None
+    page_count = 0
+    print(f"🔍 {channel_name} のプレイリストを取得中... (ID: {playlist_id})")
 
-  for nv in new_videos:
-    vid = nv.get("youtubeId")
-    if not vid:
-      continue
-    if vid in video_map:
-      if video_map[vid].get("songs") and not nv.get("songs"):
-        nv["songs"] = video_map[vid]["songs"]
-      if video_map[vid].get("tags") and not nv.get("tags"):
-        nv["tags"] = video_map[vid]["tags"]
-      video_map[vid].update(nv)
+    while page_count < MAX_PAGES_TO_FETCH:
+        try:
+            res = youtube.playlistItems().list(
+                part='snippet,contentDetails', playlistId=playlist_id,
+                maxResults=50, pageToken=next_page_token
+            ).execute()
+            items = res.get('items', [])
+            if not items: break
+
+            v_ids = [it['contentDetails']['videoId'] for it in items]
+            v_res = youtube.videos().list(part='contentDetails,snippet', id=','.join(v_ids)).execute()
+            details = {v['id']: v for v in v_res.get('items', [])}
+
+            for v_id in v_ids:
+                if v_id not in details: continue
+                v_data = details[v_id]
+                snip = v_data['snippet']
+                desc = snip.get('description', '')
+                sec = get_duration_seconds(v_data['contentDetails']['duration'])
+                uploader_name = snip.get('channelTitle', channel_name)
+                is_short = (0 < sec <= 60)
+
+                cat, kw = analyze_video_tags(snip['title'], desc, fixed_tags, channel_name=uploader_name, is_short=is_short)
+
+                # ★ 楽曲解析 & セトリ探索 & Shorts音源探索を確実に配線
+                auto_songs = []
+                cat_set = set(cat)
+                if "歌配信" in cat_set or cat_set.intersection({"歌動画", "踊り動画"}):
+                    auto_songs = parse_setlist_from_text(desc, fallback_members=kw)
+                    # 概要欄になく、5分以上の長尺ならコメント欄を探索
+                    if not auto_songs and sec > 300:
+                        print(f"💬 [{v_id}] 概要欄にセトリなし。コメント欄を探索中...")
+                        auto_songs = fetch_setlist_from_comments(youtube, v_id, fallback_members=kw)
+                    # 単曲歌動画の解析
+                    if not auto_songs and not is_short:
+                        auto_songs = extract_music_metadata(desc) or parse_cover_or_shorts(snip['title'], desc, is_short=False, video_id=v_id)
+                elif is_short:
+                    # Shorts 音源の抽出 (video_id を確実に渡す)
+                    auto_songs = parse_cover_or_shorts(snip['title'], desc, is_short=True, video_id=v_id)
+
+                videos.append({
+                    "youtubeId": v_id,
+                    "title": snip['title'],
+                    "channel": uploader_name,
+                    "date": snip['publishedAt'][:10],
+                    "thumbnail": f"https://i.ytimg.com/vi/{v_id}/mqdefault.jpg",
+                    "category": cat,
+                    "keywords": kw,
+                    "tags": auto_tags or [],
+                    "songs": auto_songs
+                })
+
+            next_page_token = res.get('nextPageToken')
+            if not next_page_token: break
+            page_count += 1
+        except Exception as e:
+            print(f"⚠️ {channel_name} (ID: {playlist_id}) 取得エラー: {e}")
+            break
+
+    return videos
+
+def update_github_json(new_videos, target_file_path=JSON_FILE_PATH, commit_msg="BOT: Update archive"):
+    headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
+    url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{target_file_path}"
+    
+    res = requests.get(url, headers=headers)
+    existing_videos, existing_sha = [], None
+    
+    if res.status_code == 200:
+        info = res.json()
+        existing_sha = info['sha']
+        try:
+            decoded = base64.b64decode(info['content']).decode('utf-8-sig').strip()
+            existing_videos = json.loads(decoded) if decoded else []
+        except Exception:
+            existing_videos = []
+
+    video_map = {}
+    for v in existing_videos:
+        vid = v.get("youtubeId")
+        if not vid: continue
+        cleaned_songs = []
+        for s in v.get("songs", []):
+            t = s.get("title", "")
+            a = s.get("artist", "")
+            if not any(bad in t.lower() or bad in a.lower() for bad in ["http", "channel", "@", "%e7%b7%91%e4%bb%99"]):
+                if t not in ["1.0", "1.0x"]:
+                    cleaned_songs.append(s)
+        v["songs"] = cleaned_songs
+        video_map[vid] = v
+
+    for nv in new_videos:
+        vid = nv.get("youtubeId")
+        if not vid: continue
+        if vid in video_map:
+            if video_map[vid].get("songs") and not nv.get("songs"):
+                nv["songs"] = video_map[vid]["songs"]
+            if video_map[vid].get("tags") and not nv.get("tags"):
+                nv["tags"] = video_map[vid]["tags"]
+            video_map[vid].update(nv)
+        else:
+            video_map[vid] = nv
+
+    all_videos = list(video_map.values())
+    if not all_videos: return
+
+    # アーティスト名の再補完（手動辞書・全体DB）
+    for video in all_videos:
+        for s in video.get("songs", []):
+            current_artist = s.get("artist", "").strip()
+            if not current_artist or current_artist in ["Unknown Artist", "sora"]:
+                raw_title = s.get("title", "").strip()
+                s["artist"] = resolve_artist_name(raw_title)
+
+    final = sorted(all_videos, key=lambda x: x.get('date', ''), reverse=True)
+    payload = {
+        "message": commit_msg,
+        "content": base64.b64encode(json.dumps(final, indent=2, ensure_ascii=False).encode('utf-8')).decode('utf-8'),
+        "sha": existing_sha
+    }
+    put_res = requests.put(url, headers=headers, json=payload)
+    if put_res.status_code in [200, 201]:
+        print(f"🚀 {target_file_path} の更新が完了しました。")
     else:
-      video_map[vid] = nv
-
-  all_videos = list(video_map.values())
-  if not all_videos:
-    return
-
-  for video in all_videos:
-    for s in video.get("songs", []):
-      current_artist = s.get("artist", "").strip()
-      if not current_artist or current_artist in ["Unknown Artist", "sora"]:
-        raw_title = s.get("title", "").strip()
-        s["artist"] = resolve_artist_name(raw_title)
-
-  final = sorted(all_videos, key=lambda x: x.get("date", ""), reverse=True)
-  payload = {
-      "message": commit_msg,
-      "content": base64.b64encode(
-          json.dumps(final, indent=2, ensure_ascii=False).encode("utf-8")
-      ).decode("utf-8"),
-      "sha": existing_sha,
-  }
-  put_res = requests.put(url, headers=headers, json=payload)
-  if put_res.status_code in [200, 201]:
-    print(f"🚀 {target_file_path} の更新が完了しました。")
-  else:
-    print(f"❌ {target_file_path} 更新失敗: {put_res.status_code}")
-
+        print(f"❌ {target_file_path} 更新失敗: {put_res.status_code}")
 
 # ==============================================================================
 # 5. エントリーポイント
 # ==============================================================================
 def main():
-  if not YOUTUBE_API_KEY or not GITHUB_TOKEN:
-    print("❌ APIキーまたはGITHUB_TOKENが設定されていません。")
-    return
+    if not YOUTUBE_API_KEY or not GITHUB_TOKEN:
+        print("❌ APIキーまたはGITHUB_TOKENが設定されていません。")
+        return
 
-  print("📚 アーティスト辞書を構築中...")
-  load_artist_db()
+    print("📚 アーティスト辞書を構築中...")
+    load_artist_db()
 
-  youtube = build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
-  all_target_videos = []
+    youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
+    fetched_official_videos = []
 
-  # 1. 公式チャンネル通常アップロード
-  for ch in CHANNELS:
-    pid = get_uploads_playlist_id(youtube, ch["id"])
-    if pid:
-      all_target_videos.extend(
-          fetch_videos_from_playlist(
-              youtube, pid, ch["name"], ch.get("fixed_tags", [])
-          )
-      )
+    # 1. 公式チャンネル通常アップロード
+    for ch in CHANNELS:
+        pid = get_uploads_playlist_id(youtube, ch['id'])
+        if pid:
+            fetched_official_videos.extend(fetch_videos_from_playlist(youtube, pid, ch['name'], ch.get('fixed_tags', [])))
 
-  # 2. 特殊プレイリスト
-  for pl in EXTRA_PLAYLISTS:
-    try:
-      pl_name = pl.get("name", OWNER_NAME)
-      all_target_videos.extend(
-          fetch_videos_from_playlist(
-              youtube,
-              pl["id"],
-              pl_name,
-              pl.get("fixed_tags", []),
-              auto_tags=pl.get("auto_tags"),
-          )
-      )
-    except Exception as e:
-      print(f"⚠️ プレイリストスキップ: {e}")
+    # 2. 特殊プレイリスト
+    for pl in EXTRA_PLAYLISTS:
+        try:
+            pl_name = pl.get('name', OWNER_NAME)
+            fetched_official_videos.extend(fetch_videos_from_playlist(
+                youtube, pl['id'], pl_name, pl.get('fixed_tags', []), auto_tags=pl.get('auto_tags')
+            ))
+        except Exception as e:
+            print(f"⚠️ プレイリストスキップ: {e}")
 
-  # 3. @kei_nagao2434 のXポストから告知動画を自動取得して追加
-  print(f"\n🐦 @{TARGET_X_USER} のXポストから告知・引用動画を探索中...")
-  x_video_ids = fetch_youtube_ids_from_x()
-  if x_video_ids:
-    print(
-        f"🔍 検出された {len(x_video_ids)} 件の動画をYouTubeから取得・解析中..."
-    )
-    fetched_external = fetch_videos_by_ids(
-        youtube,
-        x_video_ids,
-        fixed_tags=["外部動画", "告知"],
-        source_label="Twitter告知",
-    )
-    all_target_videos.extend(fetched_external)
+    # 3. @midori_2434 のポスト & 引用ポストから動画を自動取得
+    print(f"\n🐦 @{TARGET_X_USER} のXポストから告知・引用動画を探索中...")
+    x_video_ids = fetch_youtube_ids_from_midori_x()
+    fetched_external_videos = []
+    if x_video_ids:
+        print(f"🔍 検出された {len(x_video_ids)} 件の動画をYouTubeから取得・解析中...")
+        fetched_external_videos = fetch_videos_by_ids(
+            youtube, x_video_ids, fixed_tags=["外部動画", "告知"], source_label="Twitter告知"
+        )
 
-  # 4. 公式・外部すべてまとめて archive_videos.json のみ更新
-  if all_target_videos:
-    print("\n💾 公式アーカイブ (archive_videos.json) を更新中...")
-    update_github_json(
-        all_target_videos,
-        target_file_path=JSON_FILE_PATH,
-        commit_msg=f"BOT: Update archive (official & @{TARGET_X_USER})",
-    )
+    # 4. それぞれ適切なJSONファイルへ保存
+    if fetched_official_videos:
+        print("\n💾 公式アーカイブ (archive_videos.json) を更新中...")
+        update_github_json(
+            fetched_official_videos,
+            target_file_path=JSON_FILE_PATH,
+            commit_msg="BOT: Update official archive"
+        )
 
-  print("\n✅ 全処理が完了しました。")
+    if fetched_external_videos:
+        print(f"\n💾 外部連携動画 ({FINAL_JSON_PATH}) を更新中...")
+        update_github_json(
+            fetched_external_videos,
+            target_file_path=FINAL_JSON_PATH,
+            commit_msg=f"BOT: Update external videos from @{TARGET_X_USER}"
+        )
 
+    print("\n✅ 全処理が完了しました。")
 
 if __name__ == "__main__":
-  main()
+    main()
